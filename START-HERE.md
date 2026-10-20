@@ -60,10 +60,10 @@ It configures the selected SSH executable and key only for this repository and o
 The installer is then available in VS Code at:
 
 ```text
-handoff\notebook-r05.3\INSTALL NOTEBOOK R05.3.txt
+handoff\notebook-r05.4\INSTALL NOTEBOOK R05.4.txt
 ```
 
-Copy that entire file when we resume the Fabric installation. The current installer changes the existing `ForecastMaster_Refresh` item and saves a backup; it does not start ingestion or enable a schedule.
+Copy that entire file when we resume the Fabric installation. The current installer changes the existing `ForecastMaster_Refresh` item and saves a backup; it does not start ingestion or enable a schedule. R05.4 preserves imported revisions and disables automatic Delta purging. The original R05.3 package remains available; use R05.4 for the next installation.
 
 ## 6. Exchange updates and screenshots
 

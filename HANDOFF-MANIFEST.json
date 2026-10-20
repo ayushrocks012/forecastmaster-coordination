@@ -152,6 +152,142 @@
     "handoff/notebook-r05.3/validation-unit.xml": {
       "Bytes": 18531,
       "SHA256": "30b1e0248f0fd79cdcf8940f43ee5bca8412f29ced77e539cdc50e8b47a0f404"
+    },
+    "handoff/notebook-r05.4/ForecastMaster_Refresh.ipynb": {
+      "Bytes": 153138,
+      "SHA256": "7df5abe92ba1afaffc295f4b818be81a6a8a9901013b914156b740675d7ab78d"
+    },
+    "handoff/notebook-r05.4/INSTALL NOTEBOOK R05.4.txt": {
+      "Bytes": 50594,
+      "SHA256": "5516eb2a248baa805202d7d1577a31ca46a76b3134ac2d705b4dba26fc0aedbf"
+    },
+    "handoff/notebook-r05.4/PRESERVATION.json": {
+      "Bytes": 1622,
+      "SHA256": "7bc72a52fa264ad7e1c261f95f059c48ad6cc3fff588e16a18fd08cb18c687e2"
+    },
+    "handoff/notebook-r05.4/README.txt": {
+      "Bytes": 3451,
+      "SHA256": "c81ae65a163f45d040f5cdcaff65de424400ac0525c89fc54f37f4024ea4e976"
+    },
+    "handoff/notebook-r05.4/Refresh/Install_Legacy_Metadata_Compatibility.txt": {
+      "Bytes": 3522,
+      "SHA256": "f0e4c875ea33c944c15002cc02e7d4c784f2e0507d0f5e3f25e3c199a82a7639"
+    },
+    "handoff/notebook-r05.4/Refresh/PARENT_SOURCE_HASHES.json": {
+      "Bytes": 1135,
+      "SHA256": "060844dc33c2ce066a2f1fc1d14fae9bb6440d0a7f181090e781b6df62339476"
+    },
+    "handoff/notebook-r05.4/Refresh/ReportMeasureRules.csv": {
+      "Bytes": 1216,
+      "SHA256": "031d9bdfde2f8548a6e4048a22f953382703595a8cc97ea019fff1eb34083c19"
+    },
+    "handoff/notebook-r05.4/Refresh/pytest.ini": {
+      "Bytes": 96,
+      "SHA256": "cdd0412961bef77e8ab4211ca3fbb7eb55c78539e317033028d54f4849680116"
+    },
+    "handoff/notebook-r05.4/Refresh/source/catalog.py": {
+      "Bytes": 6399,
+      "SHA256": "21e307e2fcbe3b32be487cbb2526bf8fb8e03ca6ca3a2b4ec03d33c10b046c87"
+    },
+    "handoff/notebook-r05.4/Refresh/source/confirmed_model.py": {
+      "Bytes": 6948,
+      "SHA256": "3da7d62316eff5359b7e05ae5d6e69bf8732d0ad416af0cab6fc53b63510bd09"
+    },
+    "handoff/notebook-r05.4/Refresh/source/fast_refresh.py": {
+      "Bytes": 29152,
+      "SHA256": "42ddb55c9d83708b2d2daa9743278b00123f662ba401a95c6870de2c31947584"
+    },
+    "handoff/notebook-r05.4/Refresh/source/hourly_worker.py": {
+      "Bytes": 10857,
+      "SHA256": "42199474257558a6cdf019b1f360eb6b23479d7ff933a495a2e7b6d02b299466"
+    },
+    "handoff/notebook-r05.4/Refresh/source/model_refresh.py": {
+      "Bytes": 3094,
+      "SHA256": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278"
+    },
+    "handoff/notebook-r05.4/Refresh/source/reader-preimage.sha256": {
+      "Bytes": 65,
+      "SHA256": "d01d13e4624672da5d8a5592bba5b794bea3bc60d1028fe9f81899b972da02d4"
+    },
+    "handoff/notebook-r05.4/Refresh/source/reader.py": {
+      "Bytes": 22685,
+      "SHA256": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156"
+    },
+    "handoff/notebook-r05.4/Refresh/source/reporting.py": {
+      "Bytes": 19285,
+      "SHA256": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf"
+    },
+    "handoff/notebook-r05.4/Refresh/source/request_worker.py": {
+      "Bytes": 11624,
+      "SHA256": "80338d270298ce7f072f7bfad51bcd2898fab0438509b1ca76cb1b4422ceba90"
+    },
+    "handoff/notebook-r05.4/Refresh/source/run.py": {
+      "Bytes": 3574,
+      "SHA256": "c659e33df5638b34a7cf263b850adb3ae96a060cb8969e9cd82788888b0ecac3"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_confirmed_model.py": {
+      "Bytes": 4674,
+      "SHA256": "fbd7156a5ca12bac937ca483528d1df4fe6f0a8ff5dbc52c3388c53ee940b2f8"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_current_files.py": {
+      "Bytes": 5300,
+      "SHA256": "407c7a3c66df51f1a054d9376d28e2f4f9f35c1abf773014c2804763d41bd58e"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_history_preservation.py": {
+      "Bytes": 3496,
+      "SHA256": "1824fe17b361c9f64dfedb849b07042f05de4011e3c94d358b1dcc37974784f3"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_hourly_installer.py": {
+      "Bytes": 3702,
+      "SHA256": "8c9b885d88a358b58384aab95f35062bbde8c1ec48e04b6d289e9c9887a9d1af"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_hourly_worker.py": {
+      "Bytes": 13918,
+      "SHA256": "dda4642d26fe278cd03661e4809c8a0a865db9afb89516f17acb12329d7b9412"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_legacy_metadata.py": {
+      "Bytes": 7361,
+      "SHA256": "05ef11a0edf65babdffb198f40dc546f725b4467b85096248a8a3f78d0f71c7f"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_refresh.py": {
+      "Bytes": 19497,
+      "SHA256": "b427df21fa63b742992c210a1ae42b6813192cc982a6ae479a13603fa92b2c6b"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_request_worker.py": {
+      "Bytes": 8730,
+      "SHA256": "7a96594be83c4a97d349eeb8bf8e18427a97e9eea113837fda282b928dee4079"
+    },
+    "handoff/notebook-r05.4/Refresh/tests/test_worker_notebook.py": {
+      "Bytes": 3097,
+      "SHA256": "b9fcd6bd72636856cf52414003ce784ac6b68da8f6b790fe89efb4c4b283d7ef"
+    },
+    "handoff/notebook-r05.4/VALIDATION.json": {
+      "Bytes": 2928,
+      "SHA256": "f51aff02092e3fcd6f320c7d86915b29a76f4ebd5ed6d52a7015578bb15d514e"
+    },
+    "handoff/notebook-r05.4/build/build_refresh_notebook.py": {
+      "Bytes": 1549,
+      "SHA256": "94140464dd965993ea83119d870c74a4c0d4e4fa49b630a99220941825d86c73"
+    },
+    "handoff/notebook-r05.4/build/execute_cell.txt": {
+      "Bytes": 2948,
+      "SHA256": "565b57eac80308e0fab7623788ed1367a2e0c0679b02b6d6510578035d581ad6"
+    },
+    "handoff/notebook-r05.4/build/notebook_upgrade.py": {
+      "Bytes": 7107,
+      "SHA256": "2a6ce4c4254720aa45c9b1f6b00d3f9b7aea04414658a8533965a2ee612cd0ac"
+    },
+    "handoff/notebook-r05.4/build/preflight_cell.txt": {
+      "Bytes": 1613,
+      "SHA256": "f993b07a56d7054568e3e135734f52b2b5b7a69e69e6eddd713a41d1ddbd4764"
+    },
+    "handoff/notebook-r05.4/validation-spark.xml": {
+      "Bytes": 365,
+      "SHA256": "3047b1abca1f77b2fec9e2f170c88c217b2f36f0a3e4a3c3f1a2e29c28a18ed2"
+    },
+    "handoff/notebook-r05.4/validation-unit.xml": {
+      "Bytes": 19281,
+      "SHA256": "ff21923d4008a542703a354290a65c7d853b0aee6070f35f62dc753641143354"
     }
   }
 }

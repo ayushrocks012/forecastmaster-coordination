@@ -1,0 +1,81 @@
+# Install after the notebook definition cells and before the FINAL refresh cell.
+# This updates reader compatibility only; it does not edit workbook contents.
+from __future__ import annotations
+import json
+import re
+from datetime import date
+from typing import Any
+
+if CONTRACT not in {
+    "V18-explicit-profile-and-context-v2",
+    "V18-explicit-profile-and-context-v2|legacy-metadata-compat-v1",
+}:
+    raise ValueError("This compatibility patch requires the R03.2 reader")
+CONTRACT = "V18-explicit-profile-and-context-v2|legacy-metadata-compat-v1"
+
+def explicit_metadata(book: Any, cycle: str, folder_profile: str) -> dict[str, str]:
+    """Read saved identities; normalize legacy profile tags while retaining original names."""
+    definitions = {
+        n.attrib["name"]: n.text or ""
+        for n in book.findall("s:definedNames/s:definedName", NS)
+    }
+    named = {}
+    for key, value in definitions.items():
+        literal = value.removeprefix("=")
+        if (
+            key.startswith("Bridge_")
+            and literal.startswith('"')
+            and literal.endswith('"')
+        ):
+            named[key.removeprefix("Bridge_")] = literal[1:-1].replace('""', '"')
+    required = (
+        "Country",
+        "GrowthDriver",
+        "Cycle",
+        "BridgeRevision",
+        "SourceProfile",
+        "PublicationStatus",
+        "ExFactoryActualsThrough",
+        "IMSActualsThrough",
+    )
+    missing = [key for key in required if not named.get(key)]
+    if missing:
+        raise ValueError("Missing explicit workbook metadata: " + ", ".join(missing))
+    raw_profile = named["SourceProfile"]
+    legacy = re.fullmatch(r"V[0-9]+(?P<ext>_Ext)?", raw_profile, re.IGNORECASE)
+    if legacy is not None:
+        named["SourceProfile"] = "Ext" if legacy["ext"] else "Local"
+        if "Bridge_PublicationOrigin" not in definitions:
+            # Explicitly unavailable; this does not manufacture publication provenance.
+            named["PublicationOrigin"] = "NOT_RECORDED"
+    if not named.get("PublicationOrigin"):
+        raise ValueError("Missing explicit workbook metadata: PublicationOrigin")
+    if named["Cycle"] != cycle or named["SourceProfile"] not in {"Local", "Ext"}:
+        raise ValueError("Workbook cycle/profile differs from source scope")
+    if folder_profile and named["SourceProfile"] != folder_profile:
+        raise ValueError("Workbook profile differs from V18/V18_Ext subfolder")
+    for key in ("ExFactoryActualsThrough", "IMSActualsThrough"):
+        date.fromisoformat(named[key])
+        if named[key][:7] >= cycle:
+            raise ValueError("Actuals cutoff is not before the forecast cycle")
+    version = {"DEVELOPMENT": "Dev", "PUBLISHED": "ADS"}.get(
+        named["PublicationStatus"], "UNKNOWN"
+    )
+    return {
+        **named,
+        "DemandCycle": cycle,
+        "Version": version,
+        "Revision": named["BridgeRevision"],
+        "PreviousPublication": named.get("PreviousPublication", ""),
+        "DefinedNamesJson": json.dumps(definitions, ensure_ascii=False),
+        "Contract": CONTRACT,
+    }
+
+# Target only the two failed October files for this retry.
+# For later discovery runs, change this line to REFRESH_MODE = "ALL".
+REFRESH_MODE = "FILES"
+SELECTED_RELATIVE_PATHS = [
+    "2026/10 Oct 26/Bridge Files/UK_Core Oral_Bridge_Oct 26_EF-Sep 26_IMS-Aug 26_ADS.xlsm",
+    "2026/10 Oct 26/Bridge Files/UK_Paed SIP_Bridge_Oct 26_EF-Sep 26_IMS-Aug 26_ADS.xlsm",
+]
+print("Legacy metadata compatibility installed. Run the final refresh cell next.")

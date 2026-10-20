@@ -1,0 +1,63 @@
+{
+  "Release": "R05.4",
+  "RecordedAtUtc": "2026-10-20T16:14:34.711736+00:00",
+  "Installer": "handoff/notebook-r05.4/INSTALL NOTEBOOK R05.4.txt",
+  "Bytes": 50594,
+  "SHA256": "5516eb2a248baa805202d7d1577a31ca46a76b3134ac2d705b4dba26fc0aedbf",
+  "LocalUnitTestsPassed": 131,
+  "LocalSparkDeltaIntegrationTestsPassed": 1,
+  "TestReports": {
+    "validation-unit.xml": {
+      "tests": 131,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "validation-spark.xml": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "RegressionEvidence": "Five distinct imported revisions and 90 history observations remain after successive edits, numeric zero, failed replacement, changed dimensions and source-path removal; current report facts remain 12 for two current paths and 6 after one path is removed. Original 0, blank, 10, 50, 100, 120 and 140 observations remain queryable.",
+  "Checks": [
+    "Ruff check and formatting on changed runtime sources and new tests",
+    "Mypy strict on three changed runtime modules",
+    "Bandit on three changed runtime modules",
+    "Generated installer execution with API stubs, backup, saved-definition read-back and exit",
+    "Notebook cell compilation and source equality",
+    "Original R05.3 handoff manifest preserved"
+  ],
+  "GraphImpact": "UNAVAILABLE/UNKNOWN: repository is not onboarded; F1 impact returned AUTHORITY_DRIFT_BLOCKS_CONCLUSION and quick graph ACTIONABLE_PARTIAL. Exact source callers and regression tests were inspected directly. No complete graph coverage claimed.",
+  "ExistingNotebookID": "e2e0952d-4317-4936-bf0f-2c34698371dc",
+  "StoragePolicy": "RETAIN_IMPORTED_REVISIONS",
+  "ReportSelectionPolicy": "CURRENT_FILE_PER_PATH",
+  "AutomaticSourceHistoryDeletion": false,
+  "AutomaticDeltaVacuum": false,
+  "OriginalR053CompanyInstallation": "Confirmed in operator photos; R05.3 reopened heading observed",
+  "CompanyR054Installation": "PENDING",
+  "CompanyHourlyFirstRun": "PENDING",
+  "CompanyUnchangedGateSkip": "PENDING",
+  "ExistingConnectionAuthenticationAndPermissions": "NOT_INDEPENDENTLY_VERIFIED",
+  "SavedFMMetadataExpressionSuffix": "Photo is truncated; confirm .output.output in the UI",
+  "CloudCallsMadeDuringLocalQualification": false,
+  "SchedulesChangedByAgent": false,
+  "EarlierDeletedHistoryRestored": false,
+  "GraphPostChangeGate": {
+    "Status": "UNAVAILABLE/UNKNOWN",
+    "Scope": "staged",
+    "Blocker": "analysis incomplete: diff-impact run failed (failing closed)",
+    "CompleteImpactCoverageClaimed": false
+  },
+  "DirectScopeCheck": {
+    "ChangedFastRefreshMethods": [
+      "FastRefresh.compact_current_sources",
+      "FastRefresh.maintain_storage",
+      "FastRefresh.summary"
+    ],
+    "HourlyWorkerChange": "CodeVersion only",
+    "NotebookParameterAndControlCells": "Byte-equivalent cell objects",
+    "CurrentReportProjectionModules": "Preserved byte for byte"
+  }
+}

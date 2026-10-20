@@ -1,0 +1,34 @@
+{
+  "Parent": "handoff/notebook-r05.3",
+  "UnchangedModules": {
+    "reader.py": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156",
+    "catalog.py": "21e307e2fcbe3b32be487cbb2526bf8fb8e03ca6ca3a2b4ec03d33c10b046c87",
+    "confirmed_model.py": "3da7d62316eff5359b7e05ae5d6e69bf8732d0ad416af0cab6fc53b63510bd09",
+    "model_refresh.py": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278",
+    "reporting.py": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf",
+    "request_worker.py": "80338d270298ce7f072f7bfad51bcd2898fab0438509b1ca76cb1b4422ceba90"
+  },
+  "ChangedModules": {
+    "fast_refresh.py": {
+      "R053SHA256": "86e499b385cc44a11dc695c00f543dacc5fcfd2e2eaf44ff100ca3b1b53ad44b",
+      "R054SHA256": "42ddb55c9d83708b2d2daa9743278b00123f662ba401a95c6870de2c31947584"
+    },
+    "hourly_worker.py": {
+      "R053SHA256": "e8105881011adb026948c4ae2f6c0854980dfe0906c971147356a3681e8d398c",
+      "R054SHA256": "42199474257558a6cdf019b1f360eb6b23479d7ff933a495a2e7b6d02b299466"
+    },
+    "run.py": {
+      "R053SHA256": "020eae10eba0200248185513b9bb04f59ed085749e7d178eb288095116a3ce8f",
+      "R054SHA256": "c659e33df5638b34a7cf263b850adb3ae96a060cb8969e9cd82788888b0ecac3"
+    }
+  },
+  "UnchangedPipelineParameters": [
+    "FM_RUN_MODE",
+    "FM_METADATA_JSON"
+  ],
+  "OriginalR053HandoffBytes": "All original manifest entries rechecked unchanged",
+  "ExtraLegacyTestInput": {
+    "Source": "ForecastMaster-Notebook-R05-3/Refresh/Install_Legacy_Metadata_Compatibility.txt",
+    "SHA256": "f0e4c875ea33c944c15002cc02e7d4c784f2e0507d0f5e3f25e3c199a82a7639"
+  }
+}

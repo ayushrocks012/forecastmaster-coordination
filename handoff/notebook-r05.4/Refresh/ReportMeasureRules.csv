@@ -1,0 +1,8 @@
+﻿MetricKey,Section,Measure,Unit,Aggregation,CutoffFamily,NumeratorKey,NumeratorSection,NumeratorMeasure,NumeratorManufacturer,NumeratorRequireProduct,DenominatorKey,DenominatorSection,DenominatorMeasure,DenominatorManufacturer,DenominatorRequireProduct,SortIndex
+ims-market-units,IMS / Market,IMS Market Units,Units,SUM,IMS,product-units,Pricing,Product Selling units,*,true,,,,,false,10
+ims-abbott-units,IMS / Market,IMS Abbott Units,Units,SUM,IMS,abbott-units,Pricing,Product Selling units,Abbott,true,,,,,false,20
+ims-volume-share,IMS / Market,IMS Abbott Volume Share,%,RATIO,IMS,abbott-units,Pricing,Product Selling units,Abbott,true,product-units,Pricing,Product Selling units,*,true,30
+ims-market-value,IMS / Market,IMS Market Value,£,SUM,IMS,product-value,Pricing,Product Value £,*,true,,,,,false,40
+ims-value-share,IMS / Market,IMS Abbott Value Share,%,RATIO,IMS,abbott-value,Pricing,Product Value £,Abbott,true,product-value,Pricing,Product Value £,*,true,50
+ef-selling-units,Ex-Factory,Ex-factory Selling Units,Units,SUM,EF,ef-ads-units,Ex-Factory,ADS Selling units,*,false,,,,,false,60
+ef-value,Ex-Factory,Ex-factory Value,£,SUM,EF,ef-ads-value,Ex-Factory,ADS Value £,*,false,,,,,false,70
