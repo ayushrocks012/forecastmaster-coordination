@@ -29,3 +29,14 @@ After installation, update this file with the date, action, output filename, obs
 R05.3's automatic source compaction deletes superseded imported revisions and its maintenance path can vacuum Delta recovery files. The new R05.4 handoff removes those operations. All original R05.3 handoff bytes remain available. Current report selection remains one scenario per saved file path.
 
 Next: receive and install `handoff/notebook-r05.4/INSTALL NOTEBOOK R05.4.txt`, confirm its reopened heading, then verify the saved expression and run one company test with no competing writer. R05.4 company installation and runtime qualification are pending.
+
+## Latest receiving result on 20 October 2026
+
+- The operator reports the R05.4 installer printed the expected success message and the reopened notebook shows R05.4. The installer output was not retained; this milestone is operator-reported.
+- The first hourly attempt reached the Notebook activity after `Check_Demand_Metadata` succeeded. Notebook launch failed with code `2011`: `Failed to get Workspace Identity access token ... PowerBIEntityNotFound`.
+- The operator then created a workspace identity. The photo shows State `Active`, ID `ab5c0278-357c-4e54-b748-e5d9cdd3c57f`, App ID `d920cd74-bfbc-4438-b39f-0e5a591c48f4`.
+- The next Manage access photo confirms the `UK-ANI-Demand` identity has `Contributor` access to the `UK-ANI-Demand` workspace.
+- A subsequent manual attempt again passed the metadata check but failed the Notebook activity with code `2461`, failure type `User configuration issue`: `Failed to get workspace details with http error code - 'Unauthorized'`; nested message `The caller is not authenticated to access this resource`, `isRetriable: false`.
+- The latest photographed pipeline run ID is `7c8e19de-6614-49f2-80d4-c15fb575a132`. No successful hourly notebook execution, baseline advancement, semantic-model confirmation or unchanged-run skip has been observed.
+
+Current next step: inspect the tenant setting `Service principals can call Fabric public APIs` and confirm that its allowed scope includes this newly created workspace identity. Workspace Admin and Fabric administrator are separate roles. The setting, its group scope, connection binding and permission propagation are not yet independently verified. Current notebook code and pipeline parameter values do not need speculative edits for this launch-authentication error. Keep scheduling off until receiving tests pass.
