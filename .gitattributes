@@ -1,0 +1,6 @@
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+# Retain the exact installer bytes recorded by the delivery receipts.
+handoff/** -text
+setup/*.txt -text

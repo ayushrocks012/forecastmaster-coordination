@@ -1,0 +1,157 @@
+{
+  "Purpose": "Exact authorized ForecastMaster handoff script copies",
+  "Files": {
+    "handoff/functions-r05.2/ForecastMaster-Actions-R05-2.txt": {
+      "Bytes": 16854,
+      "SHA256": "125d5251a12535dc93a710c9762c8d5602ca1c3a859f20f900342644e0be2515"
+    },
+    "handoff/functions-r05.2/delivery-receipt.json": {
+      "Bytes": 993,
+      "SHA256": "30af95df15b93981ecdb3d7ecd245d7982cbea6a5b431ccab14619d860aa9abc"
+    },
+    "handoff/functions-r05.2/function_app.py": {
+      "Bytes": 16438,
+      "SHA256": "9f651eae899218cad7716a0745123b58354002e33bd9ec598a79c7a323a76f1a"
+    },
+    "handoff/functions-r05.2/test_function_check.py": {
+      "Bytes": 10322,
+      "SHA256": "9274b4dedc78b91c9107b377e2599b856db6971023f06cf73933c45627a669e2"
+    },
+    "handoff/functions-r05.2/test_metadata_gate.py": {
+      "Bytes": 8461,
+      "SHA256": "b36331b985624a9710abe6c52533905f3d1469c59922d9f19e5e0922f373df1b"
+    },
+    "handoff/functions-r05.2/test_sdk_native_probe.py": {
+      "Bytes": 8966,
+      "SHA256": "b9e094d68afd3f557b8bc91d6f1e49fb2e1cfc9316d9f9543378fab9df40a34e"
+    },
+    "handoff/notebook-r05.3/ForecastMaster_Refresh.ipynb": {
+      "Bytes": 158102,
+      "SHA256": "24880f1563f842d9efae528830518208a6f21aef716bee7783d8aad235e2c8e2"
+    },
+    "handoff/notebook-r05.3/INSTALL NOTEBOOK R05.3.txt": {
+      "Bytes": 51650,
+      "SHA256": "011efaa24ce48064aa4d862ed9e61d2172ab1630837870db1f27fee39fef8c73"
+    },
+    "handoff/notebook-r05.3/PRESERVATION.json": {
+      "Bytes": 895,
+      "SHA256": "cbd4e38e4d04ce91e7b43c521424a70b8f788b69d3633367651738a63faa6246"
+    },
+    "handoff/notebook-r05.3/README.txt": {
+      "Bytes": 3685,
+      "SHA256": "a12994f0d5e3c80e7ff4d44b841ca10346eeac224e7c4adb417df21cc7b5a1bb"
+    },
+    "handoff/notebook-r05.3/Refresh/PARENT_SOURCE_HASHES.json": {
+      "Bytes": 1135,
+      "SHA256": "060844dc33c2ce066a2f1fc1d14fae9bb6440d0a7f181090e781b6df62339476"
+    },
+    "handoff/notebook-r05.3/Refresh/ReportMeasureRules.csv": {
+      "Bytes": 1216,
+      "SHA256": "031d9bdfde2f8548a6e4048a22f953382703595a8cc97ea019fff1eb34083c19"
+    },
+    "handoff/notebook-r05.3/Refresh/pytest.ini": {
+      "Bytes": 96,
+      "SHA256": "cdd0412961bef77e8ab4211ca3fbb7eb55c78539e317033028d54f4849680116"
+    },
+    "handoff/notebook-r05.3/Refresh/source/catalog.py": {
+      "Bytes": 6399,
+      "SHA256": "21e307e2fcbe3b32be487cbb2526bf8fb8e03ca6ca3a2b4ec03d33c10b046c87"
+    },
+    "handoff/notebook-r05.3/Refresh/source/confirmed_model.py": {
+      "Bytes": 6948,
+      "SHA256": "3da7d62316eff5359b7e05ae5d6e69bf8732d0ad416af0cab6fc53b63510bd09"
+    },
+    "handoff/notebook-r05.3/Refresh/source/fast_refresh.py": {
+      "Bytes": 33184,
+      "SHA256": "86e499b385cc44a11dc695c00f543dacc5fcfd2e2eaf44ff100ca3b1b53ad44b"
+    },
+    "handoff/notebook-r05.3/Refresh/source/hourly_worker.py": {
+      "Bytes": 10857,
+      "SHA256": "e8105881011adb026948c4ae2f6c0854980dfe0906c971147356a3681e8d398c"
+    },
+    "handoff/notebook-r05.3/Refresh/source/model_refresh.py": {
+      "Bytes": 3094,
+      "SHA256": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278"
+    },
+    "handoff/notebook-r05.3/Refresh/source/reader-preimage.sha256": {
+      "Bytes": 65,
+      "SHA256": "d01d13e4624672da5d8a5592bba5b794bea3bc60d1028fe9f81899b972da02d4"
+    },
+    "handoff/notebook-r05.3/Refresh/source/reader.py": {
+      "Bytes": 22685,
+      "SHA256": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156"
+    },
+    "handoff/notebook-r05.3/Refresh/source/reporting.py": {
+      "Bytes": 19285,
+      "SHA256": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf"
+    },
+    "handoff/notebook-r05.3/Refresh/source/request_worker.py": {
+      "Bytes": 11624,
+      "SHA256": "80338d270298ce7f072f7bfad51bcd2898fab0438509b1ca76cb1b4422ceba90"
+    },
+    "handoff/notebook-r05.3/Refresh/source/run.py": {
+      "Bytes": 3571,
+      "SHA256": "020eae10eba0200248185513b9bb04f59ed085749e7d178eb288095116a3ce8f"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_confirmed_model.py": {
+      "Bytes": 4674,
+      "SHA256": "fbd7156a5ca12bac937ca483528d1df4fe6f0a8ff5dbc52c3388c53ee940b2f8"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_current_files.py": {
+      "Bytes": 5300,
+      "SHA256": "407c7a3c66df51f1a054d9376d28e2f4f9f35c1abf773014c2804763d41bd58e"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_hourly_installer.py": {
+      "Bytes": 3702,
+      "SHA256": "24db65f99396ddb56c5a5f2475dd526ee086f27875876afc9316ba50a2da63bd"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_hourly_worker.py": {
+      "Bytes": 13918,
+      "SHA256": "dda4642d26fe278cd03661e4809c8a0a865db9afb89516f17acb12329d7b9412"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_legacy_metadata.py": {
+      "Bytes": 7361,
+      "SHA256": "05ef11a0edf65babdffb198f40dc546f725b4467b85096248a8a3f78d0f71c7f"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_refresh.py": {
+      "Bytes": 19239,
+      "SHA256": "3a1e90bbe29bf0d91c7812ac59b86554a07f6a5970e5dbe78491578f78355848"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_request_worker.py": {
+      "Bytes": 8730,
+      "SHA256": "7a96594be83c4a97d349eeb8bf8e18427a97e9eea113837fda282b928dee4079"
+    },
+    "handoff/notebook-r05.3/Refresh/tests/test_worker_notebook.py": {
+      "Bytes": 3097,
+      "SHA256": "b9fcd6bd72636856cf52414003ce784ac6b68da8f6b790fe89efb4c4b283d7ef"
+    },
+    "handoff/notebook-r05.3/VALIDATION.json": {
+      "Bytes": 1066,
+      "SHA256": "b861b96cef5bcc4218c6723de633b857147e07d335c2c7cabc89f2da828269b9"
+    },
+    "handoff/notebook-r05.3/build/build_refresh_notebook.py": {
+      "Bytes": 1549,
+      "SHA256": "dc89134026b3df93c15c254980e35825049ed94baa43563038e900a9c53c3db6"
+    },
+    "handoff/notebook-r05.3/build/execute_cell.txt": {
+      "Bytes": 2948,
+      "SHA256": "565b57eac80308e0fab7623788ed1367a2e0c0679b02b6d6510578035d581ad6"
+    },
+    "handoff/notebook-r05.3/build/notebook_upgrade.py": {
+      "Bytes": 7115,
+      "SHA256": "058f103c483c7a3d77e977e27801a2b457d94a469346670f2d00e079edd2a593"
+    },
+    "handoff/notebook-r05.3/build/preflight_cell.txt": {
+      "Bytes": 1613,
+      "SHA256": "f993b07a56d7054568e3e135734f52b2b5b7a69e69e6eddd713a41d1ddbd4764"
+    },
+    "handoff/notebook-r05.3/validation-spark.xml": {
+      "Bytes": 365,
+      "SHA256": "fbf5b1e87c07e78f99a843e93edbee4cf467d71c659f987beee99251dfb42b57"
+    },
+    "handoff/notebook-r05.3/validation-unit.xml": {
+      "Bytes": 18531,
+      "SHA256": "30b1e0248f0fd79cdcf8940f43ee5bca8412f29ced77e539cdc50e8b47a0f404"
+    }
+  }
+}

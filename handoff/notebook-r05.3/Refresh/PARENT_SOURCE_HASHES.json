@@ -1,0 +1,19 @@
+{
+  "Parent": "/mnt/c/Users/Ayush/Documents/PowerBI-Local-Setup/ForecastMaster-Legacy-Metadata-Fix-2026-10-19",
+  "SourceSHA256": {
+    "catalog.py": "99d796c3a4a93ad88f497cb97deb2260ac264f5cfc4611be53f1f95e0dc6e359",
+    "fast_refresh.py": "8476ce876bb2a0e1613670b58073530196302332ceadd63f1ec4b961bb1b955d",
+    "model_refresh.py": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278",
+    "reader.py": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156",
+    "reporting.py": "7d002210bb21ae0edf6cfbbc7ba6953248d1d6c574e4bb64fd9208d057b4e128",
+    "run.py": "135ce033c8bd898e5103a9fc015fd6270347ff4040e371159bf56a9a655a709d"
+  },
+  "OriginalNotebookCodeCellSHA256": [
+    "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156",
+    "8476ce876bb2a0e1613670b58073530196302332ceadd63f1ec4b961bb1b955d",
+    "99d796c3a4a93ad88f497cb97deb2260ac264f5cfc4611be53f1f95e0dc6e359",
+    "7d002210bb21ae0edf6cfbbc7ba6953248d1d6c574e4bb64fd9208d057b4e128",
+    "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278",
+    "ed569713612f62c8155f8e63d436795ab28a8bdd1d34fdcf9f5ea5f2d29bec05"
+  ]
+}

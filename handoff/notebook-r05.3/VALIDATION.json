@@ -1,0 +1,23 @@
+{
+  "Release": "R05.3",
+  "Installer": "/mnt/c/Users/Ayush/Documents/PowerBI-Local-Setup/ForecastMaster-Notebook-R05-3/INSTALL NOTEBOOK R05.3.txt",
+  "Bytes": 51650,
+  "SHA256": "011efaa24ce48064aa4d862ed9e61d2172ab1630837870db1f27fee39fef8c73",
+  "LocalUnitTestsPassed": 126,
+  "LocalSparkDeltaIntegrationTestsPassed": 1,
+  "Checks": [
+    "Ruff",
+    "Mypy strict",
+    "Bandit",
+    "generated-installer execution against local API stubs",
+    "notebook compilation and payload read-back"
+  ],
+  "GraphImpact": "UNAVAILABLE/UNKNOWN for the external package; MCP authority drift and CLI NOT_FOUND. Direct code and caller inspection used; no complete graph impact claimed.",
+  "ExistingNotebookID": "e2e0952d-4317-4936-bf0f-2c34698371dc",
+  "NativeFunctionAndMetadataGate": "Company R05.2 probes and published checkDemandChangesR05 verified before this release",
+  "CompanyR053Installation": "PENDING",
+  "CompanyHourlyFirstRun": "PENDING",
+  "CompanyUnchangedGateSkip": "PENDING",
+  "HourlyScheduleEnabledByAgent": false,
+  "OnDemandNativeButtonComplete": false
+}

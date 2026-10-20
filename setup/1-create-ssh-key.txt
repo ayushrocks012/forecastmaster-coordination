@@ -1,0 +1,17 @@
+# Paste into the VS Code PowerShell terminal on the Abbott laptop.
+# This generates a laptop-specific key and copies only its public part.
+
+Get-Command git, ssh, ssh-keygen -ErrorAction Stop | Select-Object Name, Source
+$fmSshFolder = Join-Path $env:USERPROFILE '.ssh'
+$fmKey = Join-Path $fmSshFolder 'id_ed25519_forecastmaster'
+New-Item -ItemType Directory -Path $fmSshFolder -Force | Out-Null
+if (-not (Test-Path -LiteralPath $fmKey)) {
+    ssh-keygen -t ed25519 -C 'Abbott laptop - ForecastMaster coordination' -f $fmKey
+    if ($LASTEXITCODE -ne 0) { throw 'SSH key generation failed. Return the error in the chat.' }
+}
+if (-not (Test-Path -LiteralPath ($fmKey + '.pub'))) {
+    throw 'A private key exists without its public-key file. Return this message in the chat.'
+}
+Get-Content -LiteralPath ($fmKey + '.pub') -Raw | Set-Clipboard
+Write-Host 'Public key copied. Open https://github.com/settings/keys as ayushrocks012 and add a new Authentication Key.'
+Write-Host 'Title: Abbott laptop - ForecastMaster'

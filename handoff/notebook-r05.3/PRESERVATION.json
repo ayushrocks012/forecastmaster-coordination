@@ -1,0 +1,19 @@
+{
+  "Parent": "/mnt/c/Users/Ayush/Documents/PowerBI-Local-Setup/ForecastMaster-R04.1-Current-Files-2026-10-19",
+  "UnchangedModules": {
+    "reader.py": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156",
+    "catalog.py": "21e307e2fcbe3b32be487cbb2526bf8fb8e03ca6ca3a2b4ec03d33c10b046c87",
+    "reporting.py": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf",
+    "model_refresh.py": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278",
+    "confirmed_model.py": "3da7d62316eff5359b7e05ae5d6e69bf8732d0ad416af0cab6fc53b63510bd09",
+    "run.py": "020eae10eba0200248185513b9bb04f59ed085749e7d178eb288095116a3ce8f",
+    "request_worker.py": "80338d270298ce7f072f7bfad51bcd2898fab0438509b1ca76cb1b4422ceba90"
+  },
+  "ChangedSource": [
+    "fast_refresh.py"
+  ],
+  "NewSource": [
+    "hourly_worker.py"
+  ],
+  "CompanyR053Qualification": "PENDING"
+}

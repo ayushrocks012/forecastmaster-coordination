@@ -1,0 +1,17 @@
+{
+  "Artifact": "/mnt/c/Users/Ayush/Documents/PowerBI-Local-Setup/ForecastMaster-Actions-R05-2.txt",
+  "Bytes": 16854,
+  "SHA256": "125d5251a12535dc93a710c9762c8d5602ca1c3a859f20f900342644e0be2515",
+  "LocalTestsPassed": 57,
+  "RegressionEvidence": "Real requests.Session.request and SDK RequestsTransport through an in-memory requests adapter reproduce R05.1 unexpected etag TypeError; corrected R05.2 probe completes create, append, flush, read-back, lease acquisition, competing lease rejection, renewal and release. No company services were contacted.",
+  "SDK": "azure-storage-file-datalake 12.26.0",
+  "StaticChecks": [
+    "Ruff",
+    "Mypy strict",
+    "Bandit"
+  ],
+  "ImpactGraph": "UNAVAILABLE: AUTHORITY_DRIFT_BLOCKS_CONCLUSION; source change inspected directly in external staging.",
+  "CompanyTestRequired": "checkNativeStateR05; expected CodeVersion R05.2 and Status NATIVE_STATE_READY",
+  "CompanyR052Test": "NOT_YET_RUN",
+  "HourlyAndOnDemandDeployment": "NOT_YET_COMPLETE"
+}

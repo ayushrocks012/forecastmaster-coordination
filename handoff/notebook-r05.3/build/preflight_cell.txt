@@ -1,0 +1,27 @@
+# Verify the destination and check the queue before loading the ingestion code.
+import notebookutils
+
+worker_context = notebookutils.runtime.context
+if (str(worker_context.get("defaultLakehouseId", "")).lower() != LAKEHOUSE_ID.lower()
+    or str(worker_context.get("defaultLakehouseWorkspaceId", "")).lower() != WORKSPACE_ID.lower()):
+    raise RuntimeError("Attach ForecastMaster as this notebook's default lakehouse, then run again.")
+worker_files_root = f"abfss://{WORKSPACE_ID}@onelake.dfs.fabric.microsoft.com/{LAKEHOUSE_ID}/Files"
+worker_store = OneLakeQueueStore(WORKSPACE_ID, LAKEHOUSE_ID, notebookutils.credentials.getToken)
+fm_mode = str(FM_RUN_MODE).upper()
+if fm_mode not in {"REQUESTS", "HOURLY"}:
+    raise ValueError("FM_RUN_MODE must be REQUESTS or HOURLY.")
+if fm_mode == "HOURLY":
+    fm_hourly_snapshot = parse_hourly_manifest(FM_METADATA_JSON)
+    hourly_worker = HourlyWorker(notebookutils.fs, worker_store, worker_files_root + "/ForecastMasterRefreshState")
+    print("Hourly mode: validated complete metadata snapshot for", len(fm_hourly_snapshot["Files"]), "bridges.", flush=True)
+else:
+    request_worker = RequestWorker(
+        notebookutils.fs, worker_store,
+        worker_files_root + "/Demand/ForecastMaster Refresh Requests",
+        worker_files_root + "/ForecastMasterRefreshState",
+    )
+    waiting = request_worker.pending()
+    print("New refresh requests:", len(waiting), flush=True)
+    if not waiting:
+        print("IDLE: no new request; no bridge discovery or model refresh ran.", flush=True)
+        notebookutils.notebook.exit('{"Status":"IDLE","PendingRequests":0}')

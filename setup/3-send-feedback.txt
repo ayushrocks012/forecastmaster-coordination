@@ -1,0 +1,27 @@
+# Run in the forecastmaster-coordination VS Code terminal after adding feedback.
+
+$fmOrigin = git remote get-url origin
+if ($LASTEXITCODE -ne 0 -or $fmOrigin -ne 'git@github.com:ayushrocks012/forecastmaster-coordination.git') {
+    throw 'Open the forecastmaster-coordination repository terminal before sending feedback.'
+}
+$fmBranch = git branch --show-current
+if ($fmBranch -ne 'main') { throw 'Expected the main branch. Return this message in the chat.' }
+git pull --ff-only
+if ($LASTEXITCODE -ne 0) { throw 'Pull did not complete. Return the Git message; your local files remain in place.' }
+git add -- feedback
+if ($LASTEXITCODE -ne 0) { throw 'Staging feedback did not complete.' }
+git diff --cached --quiet
+$fmStaged = $LASTEXITCODE
+if ($fmStaged -eq 0) { throw 'No new feedback is staged. Save the screenshots or text output in feedback first.' }
+if ($fmStaged -ne 1) { throw 'Cannot inspect the staged feedback. Return the Git message.' }
+$fmStagedPaths = @(git diff --cached --name-only)
+if ($LASTEXITCODE -ne 0) { throw 'Cannot inspect staged filenames. Return the Git message.' }
+if (@($fmStagedPaths | Where-Object { $_ -notlike 'feedback/*' }).Count -gt 0) {
+    throw 'Other files are already staged. Return git status in the chat before committing feedback.'
+}
+git commit -m 'Add Abbott laptop setup feedback'
+if ($LASTEXITCODE -ne 0) { throw 'Commit did not complete. Return the Git message.' }
+git push origin main
+if ($LASTEXITCODE -ne 0) { throw 'Push did not complete. The local commit remains available; return the Git message.' }
+git rev-parse HEAD
+Write-Host 'Send the commit ID above in the chat.'

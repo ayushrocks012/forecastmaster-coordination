@@ -1,0 +1,29 @@
+# Run after adding the public key and successfully testing ssh -T.
+# Repository-local SSH configuration avoids needing an ssh-agent service.
+
+$fmKey = Join-Path $env:USERPROFILE '.ssh\id_ed25519_forecastmaster'
+if (-not (Test-Path -LiteralPath $fmKey)) { throw 'Complete SSH key setup first.' }
+$fmSshExe = (Get-Command ssh -ErrorAction Stop).Source.Replace('\', '/')
+$fmKeyForGit = $fmKey.Replace('\', '/')
+$fmSshCommand = "'" + $fmSshExe + "' -i '" + $fmKeyForGit + "' -o IdentitiesOnly=yes"
+$fmParent = Join-Path $env:USERPROFILE 'source'
+$fmClone = Join-Path $fmParent 'forecastmaster-coordination'
+New-Item -ItemType Directory -Path $fmParent -Force | Out-Null
+if (Test-Path -LiteralPath $fmClone) {
+    throw ('The destination already exists: ' + $fmClone + '. Return this message; this script will not overwrite it.')
+}
+git -c "core.sshCommand=$fmSshCommand" clone 'git@github.com:ayushrocks012/forecastmaster-coordination.git' $fmClone
+if ($LASTEXITCODE -ne 0) { throw 'Clone did not complete. Return the Git error in the chat.' }
+Set-Location -LiteralPath $fmClone
+git config --local core.sshCommand $fmSshCommand
+git config --local user.name 'ayushrocks012'
+git config --local user.email 'ayushrocks012@gmail.com'
+git config --local pull.ff only
+git status --short --branch
+Write-Host ('Repository folder: ' + $fmClone)
+Write-Host 'Installer: handoff\notebook-r05.3\INSTALL NOTEBOOK R05.3.txt'
+if (Get-Command code -ErrorAction SilentlyContinue) {
+    code .
+} else {
+    Write-Host 'In VS Code choose File > Open Folder and select the repository folder above.'
+}
