@@ -1,0 +1,241 @@
+# Run this entire file as ONE cell in a NEW, unscheduled Fabric setup notebook.
+# This updates the existing hourly pipeline. It does not run the refresh worker.
+from __future__ import annotations
+
+import base64
+import copy
+import hashlib
+import json
+import time
+from datetime import datetime, timezone
+from email.utils import format_datetime
+from uuid import UUID, uuid4
+
+WORKSPACE = "f5cb5742-9a7c-4337-a4c0-952706dddf0b"
+NOTEBOOK = "e2e0952d-4317-4936-bf0f-2c34698371dc"
+LAKEHOUSE = "d6e33ebd-67b1-420a-8d84-c3a0d04d8b21"
+PIPELINE_NAME = "ForecastMaster_Hourly"
+ACTIVITY_NAME = "Run_ForecastMaster_Hourly"
+GATE_NAME = "Refresh_only_when_changed"
+METADATA_NAME = "Check_Demand_Metadata"
+METADATA_EXPRESSION = "@activity('Check_Demand_Metadata').output.output"
+BASE = "https://api.fabric.microsoft.com/v1"
+
+
+class Fabric:
+    def __init__(self, http, get_token, sleep=time.sleep):
+        self.http, self.get_token, self.sleep = http, get_token, sleep
+
+    def request(self, method, path, **kwargs):
+        response = self.http.request(
+            method, BASE + path,
+            headers={"Authorization": "Bearer " + self.get_token("pbi")},
+            timeout=60, allow_redirects=False, **kwargs,
+        )
+        if response.status_code not in {200, 202}:
+            raise RuntimeError(
+                f"Fabric {method} {path} failed: HTTP {response.status_code}. "
+                "No alternative item or identity was created. " + response.text
+            )
+        return response
+
+    def call(self, method, path, *, result=True, **kwargs):
+        response = self.request(method, path, **kwargs)
+        if response.status_code == 200:
+            return response.json() if result else None
+        operation = str(UUID(response.headers["x-ms-operation-id"]))
+        for _ in range(30):
+            # Honor the server's polling interval. Never repeat the update POST.
+            self.sleep(max(1, int(response.headers.get("Retry-After", "2"))))
+            response = self.request("GET", "/operations/" + operation)
+            if response.status_code != 200:
+                raise RuntimeError("Operation status unavailable: " + operation)
+            body = response.json()
+            state = body.get("status")
+            if state == "Succeeded":
+                if not result:
+                    return None
+                response = self.request("GET", "/operations/" + operation + "/result")
+                if response.status_code != 200:
+                    raise RuntimeError("Operation result unavailable: " + operation)
+                return response.json()
+            if state in {"Failed", "Cancelled"}:
+                raise RuntimeError("Fabric operation failed: " + json.dumps(body))
+            if state not in {"Running", "NotStarted"}:
+                raise RuntimeError("Unrecognized operation state: " + json.dumps(body))
+        raise RuntimeError("Operation still pending; inspect before retrying: " + operation)
+
+
+def pipeline_item(api):
+    matches, seen, continuation = [], set(), None
+    while True:
+        params = {"continuationToken": continuation} if continuation else {}
+        body = api.call("GET", f"/workspaces/{WORKSPACE}/items", params=params)
+        matches.extend(
+            item for item in body["value"]
+            if item.get("displayName") == PIPELINE_NAME and item.get("type") == "DataPipeline"
+        )
+        continuation = body.get("continuationToken")
+        if not continuation:
+            break
+        if continuation in seen:
+            raise ValueError("Repeated item-list page; nothing updated")
+        seen.add(continuation)
+    if len(matches) != 1:
+        raise ValueError(f"Expected exactly one {PIPELINE_NAME} pipeline; found {len(matches)}")
+    item = matches[0]
+    if item.get("workspaceId", WORKSPACE) != WORKSPACE:
+        raise ValueError("Pipeline workspace mismatch; nothing updated")
+    return str(UUID(item["id"]))
+
+
+def content(definition):
+    parts = definition["parts"]
+    if len({part["path"] for part in parts}) != len(parts):
+        raise ValueError("Duplicate definition part paths; nothing updated")
+    matching = [part for part in parts if part["path"] == "pipeline-content.json"]
+    if len(matching) != 1 or matching[0]["payloadType"] != "InlineBase64":
+        raise ValueError("Expected one InlineBase64 pipeline-content.json; nothing updated")
+    value = json.loads(base64.b64decode(matching[0]["payload"], validate=True))
+    if not isinstance(value, dict):
+        raise ValueError("Pipeline content is not an object; nothing updated")
+    return value
+
+
+def named(activities, name):
+    matches = [activity for activity in activities if activity.get("name") == name]
+    if len(matches) != 1:
+        raise ValueError(f"Expected exactly one activity {name}; found {len(matches)}")
+    return matches[0]
+
+
+def count_named(value, name):
+    if isinstance(value, dict):
+        return int(value.get("name") == name) + sum(count_named(v, name) for v in value.values())
+    if isinstance(value, list):
+        return sum(count_named(v, name) for v in value)
+    return 0
+
+
+def checked_activity(pipeline):
+    activities = pipeline["properties"]["activities"]
+    named(activities, METADATA_NAME)
+    gate = named(activities, GATE_NAME)
+    if gate.get("type") != "IfCondition":
+        raise ValueError("Refresh gate is not an IfCondition; nothing updated")
+    target = named(gate["typeProperties"]["ifTrueActivities"], ACTIVITY_NAME)
+    if count_named(pipeline, ACTIVITY_NAME) != 1 or target.get("type") != "TridentNotebook":
+        raise ValueError("Notebook activity is duplicated or has another type; nothing updated")
+    props = target["typeProperties"]
+    if props.get("workspaceId") != WORKSPACE or props.get("notebookId") != NOTEBOOK:
+        raise ValueError("Notebook or workspace ID differs from the maintained worker; nothing updated")
+    params = props["parameters"]
+    mode, metadata = params["FM_RUN_MODE"], params["FM_METADATA_JSON"]
+    if str(mode.get("type")).lower() != "string" or str(mode.get("value")).upper() != "HOURLY":
+        raise ValueError("Expected FM_RUN_MODE string HOURLY; nothing updated")
+    expression = metadata.get("value")
+    if isinstance(expression, dict):
+        if expression.get("type") != "Expression":
+            raise ValueError("Metadata parameter has an unsupported expression type; nothing updated")
+        expression = expression.get("value")
+    if str(metadata.get("type")).lower() != "string" or expression != METADATA_EXPRESSION:
+        raise ValueError("FM_METADATA_JSON must be exactly " + METADATA_EXPRESSION + "; nothing updated")
+    if "externalReferences" in target:
+        reference = target["externalReferences"]
+        if not isinstance(reference, dict) or set(reference) != {"connection"}:
+            raise ValueError("Unexpected notebook connection structure; nothing updated")
+        UUID(reference["connection"])
+    return target
+
+
+def fingerprint(definition):
+    value = copy.deepcopy(definition)
+    pipeline = content(value)
+    for part in value["parts"]:
+        if part["path"] == "pipeline-content.json":
+            part["payload"] = pipeline
+    value["parts"].sort(key=lambda part: part["path"])
+    return hashlib.sha256(json.dumps(value, sort_keys=True, allow_nan=False).encode()).hexdigest()
+
+
+def backup_definition(http, get_token, pipeline_id, definition):
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    name = f"hourly-user-context-r01-{stamp}-{uuid4()}.json"
+    path = "Files/ForecastMasterRefreshState/upgrades/" + name
+    url = f"https://onelake.blob.fabric.microsoft.com/{WORKSPACE}/{LAKEHOUSE}/" + path
+    value = {
+        "Purpose": "Before removing the hourly notebook activity connection reference",
+        "WorkspaceID": WORKSPACE, "PipelineID": pipeline_id,
+        "Definition": definition, "DefinitionFingerprint": fingerprint(definition),
+    }
+    headers = {
+        "Authorization": "Bearer " + get_token("storage"),
+        "x-ms-version": "2021-06-08", "x-ms-blob-type": "BlockBlob",
+        "x-ms-date": format_datetime(datetime.now(timezone.utc), usegmt=True),
+        "Content-Type": "application/json", "If-None-Match": "*",
+    }
+    response = http.request(
+        "PUT", url, headers=headers, data=json.dumps(value, indent=2).encode(),
+        timeout=60, allow_redirects=False,
+    )
+    if response.status_code != 201:
+        raise RuntimeError(f"Backup not confirmed (HTTP {response.status_code}); pipeline not updated")
+    response = http.request(
+        "GET", url,
+        headers={
+            "Authorization": "Bearer " + get_token("storage"),
+            "x-ms-version": "2021-06-08",
+            "x-ms-date": format_datetime(datetime.now(timezone.utc), usegmt=True),
+        },
+        timeout=60, allow_redirects=False,
+    )
+    if response.status_code != 200 or response.json() != value:
+        raise RuntimeError("Backup readback differs; pipeline not updated. Backup path: " + path)
+    print("Saved and verified backup: " + path)
+    return path
+
+
+def update_hourly(http, get_token, sleep=time.sleep):
+    api = Fabric(http, get_token, sleep)
+    worker = api.call("GET", f"/workspaces/{WORKSPACE}/items/{NOTEBOOK}")
+    if worker.get("id") != NOTEBOOK or worker.get("displayName") != "ForecastMaster_Refresh":
+        raise ValueError("Maintained notebook identity differs; nothing updated")
+    pipeline_id = pipeline_item(api)
+    item_path = f"/workspaces/{WORKSPACE}/items/{pipeline_id}"
+    old = api.call("POST", item_path + "/getDefinition")["definition"]
+    pipeline = content(old)
+    target = checked_activity(pipeline)
+    if "externalReferences" not in target:
+        print("ALREADY SET: ForecastMaster_Hourly has no explicit notebook connection.")
+        return "ALREADY SET"
+    previous_connection = target.pop("externalReferences")["connection"]
+    new = copy.deepcopy(old)
+    for part in new["parts"]:
+        if part["path"] == "pipeline-content.json":
+            part["payload"] = base64.b64encode(json.dumps(pipeline).encode()).decode()
+    backup = backup_definition(http, get_token, pipeline_id, old)
+    latest = api.call("POST", item_path + "/getDefinition")["definition"]
+    if fingerprint(latest) != fingerprint(old):
+        raise RuntimeError("Pipeline changed during setup; no update sent. Retained backup: " + backup)
+    print("Updating only the notebook activity connection reference in " + PIPELINE_NAME)
+    api.call("POST", item_path + "/updateDefinition", result=False, json={"definition": new})
+    saved = api.call("POST", item_path + "/getDefinition")["definition"]
+    if fingerprint(saved) != fingerprint(new):
+        raise RuntimeError("Update readback differs; inspect before retrying. Retained backup: " + backup)
+    checked_activity(content(saved))
+    print("UPDATED: ForecastMaster_Hourly - explicit notebook connection removed and read back.")
+    print("Pipeline ID retained: " + pipeline_id)
+    print("Previous connection ID (retained in backup): " + previous_connection)
+    print("FM_RUN_MODE and FM_METADATA_JSON, metadata function, and branches retained.")
+    print("Next: reopen the pipeline and run one manual test. Company execution is still unverified.")
+    return "UPDATED"
+
+
+if __name__ == "__main__":
+    import notebookutils
+    import requests
+
+    if notebookutils.runtime.context.get("isForPipeline"):
+        raise RuntimeError("Run this setup cell interactively in an unscheduled setup notebook")
+    _fm_setup_result = update_hourly(requests, notebookutils.credentials.getToken)
+    notebookutils.notebook.exit(_fm_setup_result + ": ForecastMaster_Hourly; ready for manual test")

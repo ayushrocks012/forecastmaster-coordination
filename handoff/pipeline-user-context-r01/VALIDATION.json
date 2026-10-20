@@ -1,0 +1,51 @@
+{
+  "Date": "2026-10-20",
+  "Purpose": "Remove only the explicit hourly notebook connection to test default user execution without IT dependency",
+  "LocalQualification": {
+    "Pytest": {
+      "Passed": 29,
+      "Failed": 0,
+      "Receipt": "validation-unit.xml",
+      "Environment": "/tmp/forecastmaster-fast-spark-env/bin/python"
+    },
+    "Ruff": {
+      "Rules": [
+        "E4",
+        "E7",
+        "E9",
+        "F"
+      ],
+      "Source": "passed",
+      "Tests": "passed"
+    },
+    "Network": "Synthetic HTTP responses only; no company call",
+    "GitNexus": "ACTIONABLE_PARTIAL; complete reference coverage and impact remain unknown"
+  },
+  "CompanyInstallation": "PENDING",
+  "CompanyRuntime": "PENDING",
+  "Pending": [
+    "User-context notebook launch",
+    "First baseline and semantic-model confirmation",
+    "Unchanged-run skip",
+    "Hourly schedule",
+    "Native on-demand button"
+  ],
+  "Files": {
+    "SET HOURLY USER CONTEXT.txt": {
+      "Bytes": 11668,
+      "SHA256": "c2cf64b1cbf6d3acb0c4d167e963846a6ede22b1287b54897eb031152373b39b"
+    },
+    "test_pipeline_user_context.py": {
+      "Bytes": 13391,
+      "SHA256": "652e5e2ace1df27f026da7b4913af252d05e81df5dc53f329a7e1c91156caecb"
+    },
+    "README.md": {
+      "Bytes": 5640,
+      "SHA256": "e79b13895ffd6d3906745d17f67843148fb63f2fa51c77afa010bbe3301d8f96"
+    },
+    "validation-unit.xml": {
+      "Bytes": 5110,
+      "SHA256": "75cf4cc17b8b5c0de3e49b0c34036a1c60efc801b4df007d5c62fa7e2662c04c"
+    }
+  }
+}

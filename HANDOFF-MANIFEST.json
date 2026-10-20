@@ -288,6 +288,26 @@
     "handoff/notebook-r05.4/validation-unit.xml": {
       "Bytes": 19281,
       "SHA256": "ff21923d4008a542703a354290a65c7d853b0aee6070f35f62dc753641143354"
+    },
+    "handoff/pipeline-user-context-r01/README.md": {
+      "Bytes": 5640,
+      "SHA256": "e79b13895ffd6d3906745d17f67843148fb63f2fa51c77afa010bbe3301d8f96"
+    },
+    "handoff/pipeline-user-context-r01/SET HOURLY USER CONTEXT.txt": {
+      "Bytes": 11668,
+      "SHA256": "c2cf64b1cbf6d3acb0c4d167e963846a6ede22b1287b54897eb031152373b39b"
+    },
+    "handoff/pipeline-user-context-r01/VALIDATION.json": {
+      "Bytes": 1501,
+      "SHA256": "ff4cf660712e7c4a44250cae9dc769fa3868e36ab5252b54d565bd4d09d59850"
+    },
+    "handoff/pipeline-user-context-r01/test_pipeline_user_context.py": {
+      "Bytes": 13391,
+      "SHA256": "652e5e2ace1df27f026da7b4913af252d05e81df5dc53f329a7e1c91156caecb"
+    },
+    "handoff/pipeline-user-context-r01/validation-unit.xml": {
+      "Bytes": 5110,
+      "SHA256": "75cf4cc17b8b5c0de3e49b0c34036a1c60efc801b4df007d5c62fa7e2662c04c"
     }
   }
 }
