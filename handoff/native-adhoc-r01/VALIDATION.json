@@ -1,0 +1,92 @@
+{
+  "SchemaVersion": 1,
+  "Package": "native-adhoc-r01",
+  "QualifiedOn": "2026-10-20",
+  "Status": "PASS_LOCAL_FOCUSED_SCOPE",
+  "Tests": {
+    "Command": "PYTHONDONTWRITEBYTECODE=1 python -m pytest handoff/native-adhoc-r01/test_native_adhoc_r01.py handoff/notebook-r05.4/Refresh/tests/test_request_worker.py -q -p no:cacheprovider",
+    "Passed": 55,
+    "Failed": 0,
+    "NewNativeCases": 34,
+    "RetainedWorkerCases": 21,
+    "JUnit": "validation-unit.xml"
+  },
+  "StaticChecks": {
+    "NewPythonSources": "Ruff E4,E7,E9,F passed with --isolated --no-cache",
+    "Notebook": "Every code cell compiled; unchanged cross-cell parent source not relinted as independent modules",
+    "OriginalManifestEntriesVerifiedUnchanged": 77,
+    "GitDiffCheck": "passed"
+  },
+  "Coverage": [
+    "Exact pasteable setup cell with synthetic HTTP responses",
+    "Only new items created and read back; name/type/definition conflicts stop without overwrite",
+    "Asynchronous API operations and rerun idempotence",
+    "Original R05.2 function bodies and R05.4 core cells preserved",
+    "Immutable command followed by verified readiness receipt",
+    "Early FileCreated, partial upload, malformed state and body hash mismatch",
+    "Duplicate event and another worker completing between preflight and execution",
+    "Existing shared-lock contention remains queued and fails for bounded retry",
+    "Terminal request failures stay failed on repeated event attempts",
+    "Old SharePoint request receipts retained",
+    "Exact execution dispatcher retains source scope, reader configuration and confirmed-model binding"
+  ],
+  "GitNexus": {
+    "PreChange": "Quick graph unavailable: ENOSPC writing shared F1 state on the full WSL root filesystem",
+    "PostChange": "change_scope failed closed: analysis_incomplete=1, interface_classification_incomplete=1. Reported zero counts do not establish zero impact.",
+    "Fallback": "Bounded direct tracing, unchanged-parent checks, focused worker and installer tests; full graph impact remains UNKNOWN"
+  },
+  "NotExecuted": [
+    "Company Fabric API or Spark execution of the native extension",
+    "Publication of R06 Functions or a report button",
+    "Live OneLake event delivery or Activator action",
+    "First scheduled hourly execution",
+    "New Spark calculation regression; core calculation cells/source retained byte-for-byte"
+  ],
+  "CompanyGates": {
+    "NativeInstallation": "PENDING",
+    "NativeFunctionPublishAndInvocation": "PENDING",
+    "ManualNativeRequest": "PENDING",
+    "DuplicateNativeRequest": "PENDING",
+    "EventRule": "PENDING",
+    "ReportFunctionButton": "PENDING",
+    "AutomaticRequestCompletion": "PENDING"
+  },
+  "BuildFiles": {
+    "ForecastMaster-Actions-R06-native.txt": {
+      "Bytes": 19069,
+      "SHA256": "4c11da12288dfe83b4c12e487f0b2e321c87bd93f0abc9f6920e30d2e8adc090"
+    },
+    "ForecastMaster_Native_Adhoc.ipynb": {
+      "Bytes": 143625,
+      "SHA256": "030114ca4d1fb49c6e4fc93d2d7632cc0f90b58df936c2a6b0f733b2b44933e8"
+    },
+    "SETUP NATIVE ADHOC R01.txt": {
+      "Bytes": 43549,
+      "SHA256": "a5f32f9443f7b0d832ebc27ca1429fb7334d73b2ca582609289a13f15403aea5"
+    },
+    "build_native.py": {
+      "Bytes": 3883,
+      "SHA256": "3533c1ae8525939fd549a67b28a9fb3b823112f94d36a4b8e525111c8703828c"
+    },
+    "install_native.py": {
+      "Bytes": 8424,
+      "SHA256": "67eb54425d4c7f18fc3bb048a72ec686c166f54c93069a92f4a17d698e988a70"
+    },
+    "native_consumer.py": {
+      "Bytes": 4919,
+      "SHA256": "aebbecec89495958c87badf99f29a2fdf539b2d8490082a53c824608a9a82793"
+    },
+    "native_preflight.txt": {
+      "Bytes": 943,
+      "SHA256": "860964682e08abd9e7e90fd9bd85b0676f53e5267089e32e207b22c6c333eb58"
+    },
+    "native_producer.py": {
+      "Bytes": 2127,
+      "SHA256": "0c51d4021d94466f38b2cfd8a53eaa533962e06197ccc572261535af582f3c36"
+    },
+    "test_native_adhoc_r01.py": {
+      "Bytes": 23435,
+      "SHA256": "3b36084f03207f170001d44128b51e1361b49b61a8051dde39737529315f0203"
+    }
+  }
+}

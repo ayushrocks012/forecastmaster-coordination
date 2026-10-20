@@ -1,0 +1,16 @@
+import notebookutils
+
+worker_context = notebookutils.runtime.context
+if (str(worker_context.get("defaultLakehouseId", "")).lower() != LAKEHOUSE_ID.lower()
+    or str(worker_context.get("defaultLakehouseWorkspaceId", "")).lower() != WORKSPACE_ID.lower()):
+    raise RuntimeError("Attach ForecastMaster as this notebook's default lakehouse")
+worker_files_root = f"abfss://{WORKSPACE_ID}@onelake.dfs.fabric.microsoft.com/{LAKEHOUSE_ID}/Files"
+worker_store = OneLakeQueueStore(WORKSPACE_ID, LAKEHOUSE_ID, notebookutils.credentials.getToken)
+fm_mode = "REQUESTS"
+request_worker, native_existing_result = prepare_native_worker(
+    notebookutils.fs, worker_store, worker_files_root, FM_EVENT_SUBJECT,
+)
+if native_existing_result is not None:
+    print(json.dumps(native_existing_result, indent=2), flush=True)
+    notebookutils.notebook.exit(json.dumps(native_existing_result))
+print("Validated native event subject:", FM_EVENT_SUBJECT, flush=True)

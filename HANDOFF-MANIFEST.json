@@ -308,6 +308,58 @@
     "handoff/pipeline-user-context-r01/validation-unit.xml": {
       "Bytes": 5110,
       "SHA256": "75cf4cc17b8b5c0de3e49b0c34036a1c60efc801b4df007d5c62fa7e2662c04c"
+    },
+    "handoff/native-adhoc-r01/ForecastMaster-Actions-R06-native.txt": {
+      "Bytes": 19069,
+      "SHA256": "4c11da12288dfe83b4c12e487f0b2e321c87bd93f0abc9f6920e30d2e8adc090"
+    },
+    "handoff/native-adhoc-r01/ForecastMaster_Native_Adhoc.ipynb": {
+      "Bytes": 143625,
+      "SHA256": "030114ca4d1fb49c6e4fc93d2d7632cc0f90b58df936c2a6b0f733b2b44933e8"
+    },
+    "handoff/native-adhoc-r01/PRESERVATION.json": {
+      "Bytes": 3759,
+      "SHA256": "74b3973deeeff62936256a98536d23d788fc400c25e4dc876c300f4b4fb9f4d8"
+    },
+    "handoff/native-adhoc-r01/README.md": {
+      "Bytes": 9769,
+      "SHA256": "aaabb236a2454153846217df83339514ac15bc1145efc00d1add6397d674bfbe"
+    },
+    "handoff/native-adhoc-r01/SETUP NATIVE ADHOC R01.txt": {
+      "Bytes": 43549,
+      "SHA256": "a5f32f9443f7b0d832ebc27ca1429fb7334d73b2ca582609289a13f15403aea5"
+    },
+    "handoff/native-adhoc-r01/VALIDATION.json": {
+      "Bytes": 4005,
+      "SHA256": "66ec58fd9eaf95d3221d31fb5521bc4be2bf99334ef16b7e3fcef2ecc97edb6b"
+    },
+    "handoff/native-adhoc-r01/build_native.py": {
+      "Bytes": 3883,
+      "SHA256": "3533c1ae8525939fd549a67b28a9fb3b823112f94d36a4b8e525111c8703828c"
+    },
+    "handoff/native-adhoc-r01/install_native.py": {
+      "Bytes": 8424,
+      "SHA256": "67eb54425d4c7f18fc3bb048a72ec686c166f54c93069a92f4a17d698e988a70"
+    },
+    "handoff/native-adhoc-r01/native_consumer.py": {
+      "Bytes": 4919,
+      "SHA256": "aebbecec89495958c87badf99f29a2fdf539b2d8490082a53c824608a9a82793"
+    },
+    "handoff/native-adhoc-r01/native_preflight.txt": {
+      "Bytes": 943,
+      "SHA256": "860964682e08abd9e7e90fd9bd85b0676f53e5267089e32e207b22c6c333eb58"
+    },
+    "handoff/native-adhoc-r01/native_producer.py": {
+      "Bytes": 2127,
+      "SHA256": "0c51d4021d94466f38b2cfd8a53eaa533962e06197ccc572261535af582f3c36"
+    },
+    "handoff/native-adhoc-r01/test_native_adhoc_r01.py": {
+      "Bytes": 23435,
+      "SHA256": "3b36084f03207f170001d44128b51e1361b49b61a8051dde39737529315f0203"
+    },
+    "handoff/native-adhoc-r01/validation-unit.xml": {
+      "Bytes": 7391,
+      "SHA256": "3acdb7d523a87834f927ba9f39fc258b4215e177b6adf0d5495c7fda52a7d0bf"
     }
   }
 }

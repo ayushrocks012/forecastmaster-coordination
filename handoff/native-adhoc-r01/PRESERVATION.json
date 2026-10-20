@@ -1,0 +1,96 @@
+{
+  "SchemaVersion": 1,
+  "ParentFiles": {
+    "handoff/notebook-r05.4/ForecastMaster_Refresh.ipynb": {
+      "Bytes": 153138,
+      "SHA256": "7df5abe92ba1afaffc295f4b818be81a6a8a9901013b914156b740675d7ab78d"
+    },
+    "handoff/functions-r05.2/function_app.py": {
+      "Bytes": 16438,
+      "SHA256": "9f651eae899218cad7716a0745123b58354002e33bd9ec598a79c7a323a76f1a"
+    },
+    "handoff/notebook-r05.4/Refresh/source/catalog.py": {
+      "Bytes": 6399,
+      "SHA256": "21e307e2fcbe3b32be487cbb2526bf8fb8e03ca6ca3a2b4ec03d33c10b046c87"
+    },
+    "handoff/notebook-r05.4/Refresh/source/confirmed_model.py": {
+      "Bytes": 6948,
+      "SHA256": "3da7d62316eff5359b7e05ae5d6e69bf8732d0ad416af0cab6fc53b63510bd09"
+    },
+    "handoff/notebook-r05.4/Refresh/source/fast_refresh.py": {
+      "Bytes": 29152,
+      "SHA256": "42ddb55c9d83708b2d2daa9743278b00123f662ba401a95c6870de2c31947584"
+    },
+    "handoff/notebook-r05.4/Refresh/source/hourly_worker.py": {
+      "Bytes": 10857,
+      "SHA256": "42199474257558a6cdf019b1f360eb6b23479d7ff933a495a2e7b6d02b299466"
+    },
+    "handoff/notebook-r05.4/Refresh/source/model_refresh.py": {
+      "Bytes": 3094,
+      "SHA256": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278"
+    },
+    "handoff/notebook-r05.4/Refresh/source/reader.py": {
+      "Bytes": 22685,
+      "SHA256": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156"
+    },
+    "handoff/notebook-r05.4/Refresh/source/reporting.py": {
+      "Bytes": 19285,
+      "SHA256": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf"
+    },
+    "handoff/notebook-r05.4/Refresh/source/request_worker.py": {
+      "Bytes": 11624,
+      "SHA256": "80338d270298ce7f072f7bfad51bcd2898fab0438509b1ca76cb1b4422ceba90"
+    },
+    "handoff/notebook-r05.4/Refresh/source/run.py": {
+      "Bytes": 3574,
+      "SHA256": "c659e33df5638b34a7cf263b850adb3ae96a060cb8969e9cd82788888b0ecac3"
+    }
+  },
+  "UnchangedNotebookCells": {
+    "2": {
+      "CellType": "code",
+      "SourceSHA256": "189d2e920b625e68b4301ab7830add47dbbfda3e9d7f79e729198035970bd797"
+    },
+    "3": {
+      "CellType": "code",
+      "SourceSHA256": "80338d270298ce7f072f7bfad51bcd2898fab0438509b1ca76cb1b4422ceba90"
+    },
+    "5": {
+      "CellType": "code",
+      "SourceSHA256": "6d992a82bbcbf52c8c2410349a96de61ffdb58a4c7bc6c8f26cd8d5f3e378156"
+    },
+    "6": {
+      "CellType": "code",
+      "SourceSHA256": "42ddb55c9d83708b2d2daa9743278b00123f662ba401a95c6870de2c31947584"
+    },
+    "7": {
+      "CellType": "code",
+      "SourceSHA256": "21e307e2fcbe3b32be487cbb2526bf8fb8e03ca6ca3a2b4ec03d33c10b046c87"
+    },
+    "8": {
+      "CellType": "code",
+      "SourceSHA256": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf"
+    },
+    "9": {
+      "CellType": "code",
+      "SourceSHA256": "d7f5ddc2c8fe7e8a14196b969ca06395a560ac641377cfd06bb4026916ccd278"
+    },
+    "10": {
+      "CellType": "code",
+      "SourceSHA256": "4bfb218e2751f37d69d40aef1d1fc09a87f4fde12e20c8fe9b453d3d2bbda3dc"
+    },
+    "11": {
+      "CellType": "code",
+      "SourceSHA256": "3da7d62316eff5359b7e05ae5d6e69bf8732d0ad416af0cab6fc53b63510bd09"
+    }
+  },
+  "ChangedNotebookCells": {
+    "0": "New worker heading",
+    "1": "FM_EVENT_SUBJECT parameter",
+    "4": "Native readiness and duplicate preflight",
+    "12": "Native dispatcher around unchanged refresh configuration"
+  },
+  "ExistingFunctions": "All three original R05.2 function definitions are retained; producer function appended.",
+  "SharedState": "Existing R05.4 worker.lock, requests.json, batches and latest.json; native requests and readiness receipts in separate subfolders",
+  "Retention": "R05.4 retained imported revisions and disabled automatic Delta purging preserved"
+}

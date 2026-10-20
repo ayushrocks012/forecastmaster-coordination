@@ -52,3 +52,77 @@ Local synthetic qualification: 29 tests passed, including execution of the exact
 Receiving next step: pull the coordination repository, close the hourly pipeline editor, and run the cell in a separate unscheduled notebook named `ForecastMaster_Pipeline_Setup` in `UK-ANI-Demand`. After a verified update, reopen the saved hourly pipeline and test one manual run. Keep the output and backup path. If the current editor requires an explicit connection again, retain its exact message before choosing another route.
 
 Company installation of this pipeline correction, user-context notebook launch, baseline advancement, semantic-model confirmation, unchanged-run skip, hourly schedule and on-demand button remain pending. Definition update success alone does not establish runtime success.
+
+## Current receiving state: late 20 October 2026
+
+This section supersedes earlier pending statements while retaining them as the
+setup chronology. Evidence was supplied directly in chat as screenshots and
+pasted outputs; the raw screenshots have not been copied into this repository.
+
+### Hourly: manual execution and skip confirmed; first scheduled run pending
+
+- User-context correction saved and read back. Pipeline ID retained:
+  `ef3ba5c2-3eef-4c20-bac1-a8399fa5cb20`. Backup:
+  `Files/ForecastMasterRefreshState/upgrades/hourly-user-context-r01-20261020T211449999621Z-269e0b0b-cd30-404c-8a21-7f6fe6a69abf.json`.
+- Manual hourly pipeline run `b92901ad-22cf-4f27-aeb7-9de8dd12aa86` succeeded.
+  Notebook run `1558b8dd-82e3-4a94-88bb-b4629679e877` reported R05.4,
+  Mode HOURLY, Status SUCCESS, batch
+  `06571043-59f9-4f65-a056-2bb465a52e18`. Eight current report files: six
+  SAME_CONTENT and two SUCCEEDED, two updated/decoded files, no StageErrors.
+  ModelRefresh COMPLETED with RequestID
+  `13d59473-1df7-411f-9d54-a4162eecf153`.
+- Baseline fingerprint:
+  `f47fa95c437ace650ada4971984c765b1f7304cdd62dfcd03e33640e4e8c9ae3`.
+  Baseline receipt `metadata-baselines/06571043-59f9-4f65-a056-2bb465a52e18.json`.
+- Second pipeline run `2883d1a2-d510-4b6b-9669-fb2fa5ffb994` succeeded with
+  only the metadata function and If condition. Function invocation
+  `feff52b7-c029-4829-90a3-ddf6b7a5973e` returned UNCHANGED,
+  NeedsRefresh false, CurrentFiles 8, no changed/removed files,
+  WorkbookContentsRead false and the same fingerprint. Notebook correctly skipped.
+- Screenshot confirmed an ACTIVE every-day schedule at 08:00, 09:00, 10:00,
+  11:00, 12:00, 13:00, 14:00, 15:00, 16:00 and 17:00, start 21/10/2026,
+  end 31/12/2099, `(UTC) Dublin, Edinburgh, Lisbon, London`, modified by Ayush
+  Goyal. Next-run countdown matched the next morning. First automatic run is
+  still unverified; keep this working schedule active.
+
+### Ad hoc: existing button plus manual controller confirmed
+
+- Controller notebook settings showed empty Connection, workspace UK-ANI-Demand,
+  notebook ForecastMaster_Refresh and no base parameters (REQUESTS default).
+- Idle manual pipeline `868dd453-c561-4231-b97e-b6d2808c908a` succeeded:
+  Pending_requests ItemsCount 3, FilteredItemsCount 0, Value empty; no Notebook
+  activity ran.
+- One Refresh Demand click produced
+  `refresh-37337f73-89d7-4247-83e4-b6790274ea22.json`. Pending_requests reported
+  ItemsCount 4, FilteredItemsCount 1, containing exactly that filename.
+- Manual controller pipeline `9add1ab8-72cc-43b3-b770-40b6c123c1d0` succeeded;
+  notebook `e422575d-a572-4293-946f-14a8a5ff973d`, batch
+  `2f364f49-fab3-4810-a3dc-742411ea19fb`, request Status SUCCESS, all eight
+  files METADATA_UNCHANGED, UpdatedFiles 0, DecodedChangedFiles 0, no StageErrors.
+  ModelRefresh COMPLETED, RequestID `4caddd54-475e-4cc7-82a0-5c76fb78caa6`.
+- The user rejected recurring five-minute polling because of capacity usage.
+  Controller schedule stays off. Manual button-to-controller success does not
+  establish automatic button pickup. Further chart validation is outside scope.
+
+### Native automatic delivery: package ready locally, all company gates pending
+
+The existing button writes through a SharePoint shortcut. Microsoft documents
+that shortcut changes do not emit OneLake events. The unfinished wizard selects
+FileCreated on native `Files/ForecastMasterRefreshState` and a subject prefix;
+the 23:20 review screenshot truncates the value. Intended exact value is
+`/Files/ForecastMasterRefreshState/native-requests/refresh-`. The outer rule
+still targets the old controller and has not been created.
+
+The new [native extension](../handoff/native-adhoc-r01/README.md) creates a
+separate native worker and pipeline, appends a producer to the existing
+Functions helpers and preserves the hourly and SharePoint items. Fifty-five
+focused local tests passed. No company API or refresh was run by that
+qualification. Company setup, R06 function publication, manual native execution,
+duplicate-request skip, rule activation, Service button binding and automatic
+button-to-completion proof are all pending. The rule must target the new
+ForecastMaster_Adhoc after these setup checks, not ForecastMaster_Controller.
+
+Published Fabric event listener baseline checked on 20 October 2026:
+0.0222 CU-hours/hour (about 0.5328 CU-hours/day), plus event and applicable
+rule/action/refresh consumption. This is an estimate from published rates, not
+a company usage measurement. No claim of free idle event listening is made.
