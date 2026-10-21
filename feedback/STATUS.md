@@ -360,3 +360,23 @@ HTML coverage limitation is retained rather than claiming a complete graph gate.
 Pending: second-page design review, followed by separately authorized live
 implementation, reviewed ADS source binding and actual freshness/performance
 qualification. No application business code or Power BI/Fabric items changed.
+
+## 21 October 2026 — S&OP left/right panel proposal R02
+
+The user requested a floating-style selector on the left with channel and
+subchannel buttons that toggle the graph and table on the right. Period controls
+and shared driver/sector scope now sit above both columns. A Hide/Show selector
+control changes layout without changing data. Buttons toggle independently,
+including parent totals; the panel is the only channel-selection surface.
+
+`design/sop-side-panel-r02/` is separately saved. The numerical fixture and
+business rules remain those of R01. Local checks cover the new click/keyboard
+behavior, placement, hide/show preservation, existing reconciliation and
+responsive behavior, plus raw/formatted parity against R01. The receipt records
+the exact scenarios and counts. All preceding design packages remain preserved.
+
+Microsoft's current button-slicer and bookmark documentation supports the
+anchored-panel design direction. Exact receiving-version selection behavior,
+measure binding, layout reflow and production speed remain unqualified. The
+prototype does not claim a freely draggable Power BI window. No live Power BI
+or application business changes were made.
