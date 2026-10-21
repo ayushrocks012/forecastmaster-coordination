@@ -1,0 +1,64 @@
+<style>
+#fm-connected-review-r14{color-scheme:light dark;--cr-text:light-dark(#182c41,#e7edf5);--cr-panel:light-dark(#fff,#1b2633);--cr-line:light-dark(#dce3eb,#354657);--cr-active:light-dark(#e7f3f4,#203e46);--cr-accent:light-dark(#096b76,#73cbd0);--cr-muted:light-dark(#52667b,#afbed0);font:14px/1.45 'Segoe UI',Arial,sans-serif;color:var(--cr-text)}
+#fm-connected-review-r14 *{box-sizing:border-box}
+#fm-connected-review-r14 [hidden]{display:none!important}
+#fm-connected-review-r14 .cr-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
+#fm-connected-review-r14 .cr-nav button{font:inherit;color:var(--cr-text);background:var(--cr-panel);border:1px solid var(--cr-line);border-radius:4px;padding:8px 12px;min-height:36px}
+#fm-connected-review-r14 .cr-nav button[aria-pressed=true]{background:var(--cr-active);color:var(--cr-accent)}
+#fm-connected-review-r14 .cr-nav span{font-size:12px;color:var(--cr-muted)}
+#fm-connected-review-r14 .cr-source-details{font-size:12px;color:var(--cr-muted);margin:0;min-width:0}
+#fm-connected-review-r14 .cr-source-details summary{width:fit-content;padding:3px 0}
+#fm-connected-review-r14 .cr-source-details ul{padding-left:20px;margin:5px 0}
+#fm-connected-review-r14 .cr-source-details li{overflow-wrap:anywhere;margin:4px 0}
+@media(pointer:coarse){#fm-connected-review-r14 .cr-nav button{min-height:44px}#fm-connected-review-r14 .cr-source-details summary{min-height:44px;padding-top:10px}}
+</style>
+<div id="fm-connected-review-r14" aria-label="Connected ForecastMaster GM review">
+<!-- PLAN_FX -->
+ <nav class="cr-nav" aria-label="Review pages"><button type="button" class="cursor-interaction" id="cr-demand-tab" aria-controls="cr-demand-page" aria-pressed="true">Demand review</button><button type="button" class="cursor-interaction" id="cr-sop-tab" aria-controls="cr-sop-page" aria-pressed="false">Explore in S&amp;OP</button><span id="cr-nav-context" aria-live="polite">Shared review context</span></nav>
+ <section id="cr-demand-page" aria-label="Demand review page">
+<!-- DEMAND_PAGE -->
+ </section>
+ <section id="cr-sop-page" aria-label="S&OP review page" hidden>
+<!-- SOP_PAGE -->
+ </section>
+</div>
+<script>
+(() => {
+ const root=document.getElementById('fm-connected-review-r14');if(!root)return;
+ const $=s=>root.querySelector(s),schema='fm-connected-gm-review-r14',clone=value=>JSON.parse(JSON.stringify(value)),esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const apis={demand:$('#fm-connected-demand-r14').fmDesign,sop:$('#fm-connected-sop-r14').sopDesign};
+ const saved=window.openai?.widgetState?.modelContent;
+ let page=saved?.schema===schema&&saved.state?.page==='sop'?'sop':'demand',snap={demand:apis.demand.getState(),sop:apis.sop.getState()};
+ const sharedKeys=['affiliates','cycles','sectors','monthStart','monthEnd','display'];
+ const scope=state=>Object.fromEntries(sharedKeys.map(key=>[key,clone(state[key])]));
+ const names={oral:'Core Oral',paed:'Paed SIP'};
+ const month=t=>new Date(Date.UTC(2024+Math.floor(t/12),t%12,1)).toLocaleDateString('en-GB',{month:'short',year:'2-digit',timeZone:'UTC'});
+ const index=iso=>(Number(iso.slice(0,4))-2024)*12+Number(iso.slice(5,7))-1;
+ const details={};
+ for(const [kind,anchor]of [['demand','#fm-data-context'],['sop','#sb-cutoffs']]){
+  const element=document.createElement('details');element.className='cr-source-details';element.dataset.sourceDetails=kind;element.innerHTML='<summary class="cursor-interaction">Source details</summary><div data-source-list></div>';$(anchor).after(element);details[kind]=element;
+ }
+ function sources(){const s=snap[page],drivers=[...new Set(apis.demand.sectors.filter(x=>s.sectors.includes(x.id)).map(x=>x.driver))];if(!s.affiliates.includes('uk'))return [];return snap.demand.fileMode==='ads'?apis.demand.adsSelection(s.cycles,apis.demand.files,drivers).files:apis.demand.files.filter(f=>snap.demand.files.includes(f.id)&&s.cycles.includes(f.cycle)&&drivers.includes(f.driver));}
+ function refreshContext(){
+  const s=snap[page],selected=sources(),ims=[...new Set(s.cycles.map(c=>month(index(c)-2)))],ef=[...new Set(s.cycles.map(c=>month(index(c)-1)))],label=(snap.demand.fileMode==='ads'?'ADS automatic':'Custom plan')+' · '+selected.length+' source'+(selected.length===1?'':'s');
+  const text=[label,'IMS through '+(ims.join(' / ')||'—'),'Ex-factory through '+(ef.join(' / ')||'—'),'Sample refresh: 21 Oct 2026, 07:30 UTC'];
+  for(const anchor of ['#fm-data-context','#sb-cutoffs'])$(anchor).innerHTML=text.map(t=>'<span>'+esc(t)+'</span>').join(' · ');
+  const list=selected.length?'<ul>'+selected.map(f=>'<li>'+esc(names[f.driver]+' · '+f.cycle+' · '+f.scenario+' · '+f.name)+'</li>').join('')+'</ul>':'No source is selected for this scope.';
+  Object.values(details).forEach(d=>d.querySelector('[data-source-list]').innerHTML=list);
+  $('#cr-nav-context').textContent=(s.sectors.length+' forecast tiers · '+(s.display==='value'?'Value · '+root.planFX.label():'Units')+' · '+s.cycles.join(' / '));
+ }
+ function persist(){if(window.openai?.setWidgetState)Promise.resolve(window.openai.setWidgetState({modelContent:{schema,state:{page,...snap,fx:root.planFX.getState()}},privateContent:null})).catch(()=>{});}
+ function show(kind,save=true,transfer=true){
+  if(transfer)snap[page]=apis[page].getState();const common=scope(snap[page]);page=kind;
+  $('#cr-demand-page').hidden=kind!=='demand';$('#cr-sop-page').hidden=kind!=='sop';
+  apis[kind].setState(transfer?common:snap[kind],false);snap[kind]=apis[kind].getState();
+  $('#cr-demand-tab').textContent=kind==='demand'?'Demand review':'Back to Demand review';$('#cr-sop-tab').textContent=kind==='sop'?'S&OP review':'Explore in S&OP';
+  $('#cr-demand-tab').setAttribute('aria-pressed',String(kind==='demand'));$('#cr-sop-tab').setAttribute('aria-pressed',String(kind==='sop'));
+  refreshContext();if(save)persist();
+ }
+ root.reviewSession={changed:(kind,state)=>{snap[kind]=clone(state);refreshContext();persist();},fxChanged:()=>{for(const kind of ['demand','sop']){apis[kind].setState({},false);snap[kind]=apis[kind].getState();}refreshContext();persist();},navigate:kind=>show(kind),getState:()=>clone({page,...snap,fx:root.planFX.getState()}),getSources:()=>clone(sources())};
+ $('#cr-demand-tab').addEventListener('click',()=>show('demand'));$('#cr-sop-tab').addEventListener('click',()=>show('sop'));
+ window.addEventListener('openai:set_globals',event=>{const next=event.detail?.globals?.widgetState?.modelContent;if(next?.schema!==schema||!next.state)return;root.planFX.setState(next.state.fx||{},false);for(const kind of ['demand','sop']){apis[kind].setState(next.state[kind]||{},false);snap[kind]=apis[kind].getState();}page=next.state.page==='sop'?'sop':'demand';show(page,false,false);});
+ show(page,false,false);
+})();
+</script>

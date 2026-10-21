@@ -1,0 +1,94 @@
+{
+  "name": "Before plan rates \u2014 Connected GM Review R13",
+  "parentCommit": "473e3727357b9a86cf23e328cb6e87431294283e",
+  "restore": "Open design/connected-gm-review-r13/index.html from the design chooser. Both preceding pages remain byte-preserved.",
+  "pages": {
+    "Demand review and S&OP": "design/connected-gm-review-r13/index.html"
+  },
+  "files": {
+    "design/connected-gm-review-r13/README.md": {
+      "Bytes": 4384,
+      "SHA256": "556b506f8b253c7582c6179e24a66758667065a4c05340828f4dbb3acaa7fa8f"
+    },
+    "design/connected-gm-review-r13/bridge-audit.json": {
+      "Bytes": 4810,
+      "SHA256": "6d3b56f19c2493c17c153d8e454ec897b4b3d0011a3a542013a6f117b05ea7ed"
+    },
+    "design/connected-gm-review-r13/bridge-catalog.json": {
+      "Bytes": 22390,
+      "SHA256": "0acaae2e996443cdea272c11f0911a72abc7c285279c90fbcbbbe8d77644c03f"
+    },
+    "design/connected-gm-review-r13/build.py": {
+      "Bytes": 1129,
+      "SHA256": "1f864215d0811438b7be70218e9a92eb6a54ccffaffc3d9887d827d9ecc1dcc7"
+    },
+    "design/connected-gm-review-r13/check-connected.cjs": {
+      "Bytes": 13751,
+      "SHA256": "7f5d1c7f6578dea4e8ff89ff92522b0cff17cf79b7709d0dc73faa7f4eb15fdb"
+    },
+    "design/connected-gm-review-r13/demand-dark.png": {
+      "Bytes": 156943,
+      "SHA256": "bbf85e71b2b9f5b83d32cbee20e49c89735f21c935430773a35a8b2d64a3263c"
+    },
+    "design/connected-gm-review-r13/demand-final.png": {
+      "Bytes": 155192,
+      "SHA256": "b9d3f30bb5b29edaffc0e349dd60d2fb64fc7681f8a67f7fe63fce9e253bed9e"
+    },
+    "design/connected-gm-review-r13/demand-mobile.png": {
+      "Bytes": 140658,
+      "SHA256": "3c44723059de6784875395c2c4c83c439eaa6666d49de3a34125381ed742a3e0"
+    },
+    "design/connected-gm-review-r13/demand-overview.png": {
+      "Bytes": 150116,
+      "SHA256": "9e83e07da37aa064ba074f420499c42337ec10f2afa515bdb58c8955fcc67ece"
+    },
+    "design/connected-gm-review-r13/demand.fragment.html": {
+      "Bytes": 86626,
+      "SHA256": "def06caac0ff1f0fdbcb02aa370e0256378f28710fe74b9e23ec4e274881ca3b"
+    },
+    "design/connected-gm-review-r13/index.html": {
+      "Bytes": 610905,
+      "SHA256": "f60d298ce037ea75285dec0b9825e0ebf19ddea51201682f0e1adba1015237e8"
+    },
+    "design/connected-gm-review-r13/preservation.json": {
+      "Bytes": 50826,
+      "SHA256": "f7cbbb7db97da85c7610c036da4271415a28e7cfba2024850f83b8c1d9d5f4e6"
+    },
+    "design/connected-gm-review-r13/review.fragment.html": {
+      "Bytes": 462460,
+      "SHA256": "0e6af607108cc624a9840d3139ef125e78929f5b097882796890b84e14322048"
+    },
+    "design/connected-gm-review-r13/shell.fragment.html": {
+      "Bytes": 6566,
+      "SHA256": "b330eab08399712defb4ddc989b8b7119c82b0a07cd5daca147a3d831d621f5a"
+    },
+    "design/connected-gm-review-r13/sop-collapsed.png": {
+      "Bytes": 55189,
+      "SHA256": "cadef2609a293bd3625bf287f28200a415cfc8574a0602b1cd7073927ac5d7ec"
+    },
+    "design/connected-gm-review-r13/sop-dark.png": {
+      "Bytes": 173406,
+      "SHA256": "e2aa859dfa51769009c0700faadc1d2a1eb3a9c9b595eda26dcab4325da5b0e6"
+    },
+    "design/connected-gm-review-r13/sop-mobile.png": {
+      "Bytes": 166670,
+      "SHA256": "80509b90a38fc135831f41de7d0b31d374ea55fb1a68a627facfb4bfd784216d"
+    },
+    "design/connected-gm-review-r13/sop-review.png": {
+      "Bytes": 171744,
+      "SHA256": "7872e672e5f09e3d1514ae2a09f50b82176c713ced770a533c63bbe6ddadf068"
+    },
+    "design/connected-gm-review-r13/sop.fragment.html": {
+      "Bytes": 74560,
+      "SHA256": "23ac5e7b7933652ac3ede2a68cba07d393213c93a8cd7865f2993cafdfc4fb4e"
+    },
+    "design/connected-gm-review-r13/summary-rules.json": {
+      "Bytes": 2450,
+      "SHA256": "1daa86bc8c5ea64085e607cff4108490b9f4c29b891eaafaba5f54c6de7d7856"
+    },
+    "design/connected-gm-review-r13/validation.json": {
+      "Bytes": 1832,
+      "SHA256": "f66501f47d37cba59c1d56f4638cccd21abde75b34dc754e461ebf7031e706d4"
+    }
+  }
+}

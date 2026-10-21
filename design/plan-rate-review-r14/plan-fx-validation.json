@@ -1,0 +1,21 @@
+{
+  "schema": "FM_PLAN_RATE_REVIEW_R14_VALIDATION",
+  "checkedAt": "2026-10-21T21:28:51.378Z",
+  "checks": [
+    "Both Value headers offer local currency/USD and compact Plan rates. Selling units hides FX controls; no business exchange rate is fabricated or source measure preselected.",
+    "576 Demand amounts/trends and 972 S&OP amounts/run-rates/growth observations match saved R13 in Units/GBP, including 2025/2026/2027 business periods.",
+    "Missing FX leaves USD amounts/absolute variances unavailable, with an explicit rate-required message; business variance percentages remain available.",
+    "The entered fixture rate 2 converts all monetary observations exactly once. Selected 2026 rate applies to 2025/2026/2027 amounts despite different stored rates for those years; Units, Share, variance % and business growth remain unchanged (1548 comparisons).",
+    "Currency, selected plan year and affiliate/year rates are shared bidirectionally. Changing 2027 to 3 scales S&OP money/run rates, preserves earlier-year entries, Share/right axis, business growth, explicit measures and both pages’ local choices.",
+    "Invalid/negative/text/Boolean rates cannot replace a valid rate; Cancel/Escape discard edits and return focus. Numeric zero yields monetary zero while Share/growth/variance % remain unchanged. Clearing the rate restores unavailable USD amounts.",
+    "Both value pages and rate panels fit 1080/1024/736/390/320px, with accessible keyboard controls, light/dark themes, dynamic axes/tooltips/table currency, and USD Monthly amounts; monthly run-rate suppression is retained.",
+    "Combined host restore includes currency, plan year and all entered annual rates without saving on restore. Meaningful edits persist one small snapshot. Units/Value and page navigation retain the chosen FX basis, with no script errors or warm network requests."
+  ],
+  "baselineDemandComparisons": 576,
+  "baselineSopComparisons": 972,
+  "usdComparisons": 1548,
+  "errors": [],
+  "warmNetworkRequests": 0,
+  "fixtureRates": "2, 3, 7 and 9 are explicit artificial test inputs, never default business rates.",
+  "scope": "HTML only. UK is the sole actual sample affiliate; future affiliates/currencies require real source metadata. No Power BI, Fabric, application source or workbook was changed."
+}

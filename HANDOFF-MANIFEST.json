@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 12791,
-      "SHA256": "a0e668993e05c7d99a2a2e767881d7d396d8b85f593b75802b22e779f76a9096"
+      "Bytes": 13464,
+      "SHA256": "202d179e57e088eb49dbb7bb80fdc20cd35b476823f3d29d599d5ed01946bac9"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 19746,
-      "SHA256": "8ac59460527bea3d2da0c76f47efe40cb8d5475d7a4499d1c3d1d0d1e34bddd0"
+      "Bytes": 21154,
+      "SHA256": "616946ef33e0bf063ccd771aabc48ff869b803e89569a422c0e59b1d262b13c8"
     },
     "README.md": {
-      "Bytes": 5884,
-      "SHA256": "fa9b3b8325f93797e67d0ec3f31ddfbb6839ef654ec2838c501e8c9ee42733a4"
+      "Bytes": 5237,
+      "SHA256": "839dd36e12501e7fab1938fcad59dccb09b40985ab398221eee928affbd70d3b"
     },
     "feedback/STATUS.md": {
-      "Bytes": 44325,
-      "SHA256": "8d6622fa55a934fcf56747f06e72a26f4193aa544eed908d4617dddca24aab4b"
+      "Bytes": 46701,
+      "SHA256": "3e54f6419e55bd5dff3b042bcda0d4cfe25f2ea486d35396a8da51981ebdca1a"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -1952,6 +1952,134 @@
     "design/connected-gm-review-r13/validation.json": {
       "Bytes": 1832,
       "SHA256": "f66501f47d37cba59c1d56f4638cccd21abde75b34dc754e461ebf7031e706d4"
+    },
+    "design/checkpoints/before-plan-rate-review-r14.json": {
+      "Bytes": 3916,
+      "SHA256": "3f84d4f5bf60372a213384a1c60f667cc00584c50460fbec212e504ee3cfcb68"
+    },
+    "design/plan-rate-review-r14/README.md": {
+      "Bytes": 5354,
+      "SHA256": "365989e3341e8f3ecedd6ab6cf3b0366122a6041ef563082eeed21ba4f14d701"
+    },
+    "design/plan-rate-review-r14/bridge-audit.json": {
+      "Bytes": 4810,
+      "SHA256": "6d3b56f19c2493c17c153d8e454ec897b4b3d0011a3a542013a6f117b05ea7ed"
+    },
+    "design/plan-rate-review-r14/bridge-catalog.json": {
+      "Bytes": 22390,
+      "SHA256": "0acaae2e996443cdea272c11f0911a72abc7c285279c90fbcbbbe8d77644c03f"
+    },
+    "design/plan-rate-review-r14/build.py": {
+      "Bytes": 1195,
+      "SHA256": "26126f24bc32be9554e2b7cf22819ed1ec7e6ba78281d5a1d303a0844dce92b5"
+    },
+    "design/plan-rate-review-r14/check-connected.cjs": {
+      "Bytes": 13751,
+      "SHA256": "fecb1bc1a4f2b75f7c0619b910e91712d14576cc1c5f8a54ce4318f62d7da289"
+    },
+    "design/plan-rate-review-r14/check-plan-fx.cjs": {
+      "Bytes": 17144,
+      "SHA256": "d034fec597ae0754766b88f3aa62ae89b0458f23a7caf294b2cdcd0044313a82"
+    },
+    "design/plan-rate-review-r14/demand-dark.png": {
+      "Bytes": 156943,
+      "SHA256": "1d4e43571874780d5aae767ea666c330abd991194d69eea3020788afc169697c"
+    },
+    "design/plan-rate-review-r14/demand-final.png": {
+      "Bytes": 155191,
+      "SHA256": "dcca2a7a3f1e16c6ac0d418b2ff253788b72ea8af39847f308543095eff21bd0"
+    },
+    "design/plan-rate-review-r14/demand-mobile.png": {
+      "Bytes": 140658,
+      "SHA256": "3c44723059de6784875395c2c4c83c439eaa6666d49de3a34125381ed742a3e0"
+    },
+    "design/plan-rate-review-r14/demand-overview.png": {
+      "Bytes": 150114,
+      "SHA256": "ca1b0b8697c9b56eae8e15c3bf6b8c801e17102e7030cc53d676cd594a15cb2c"
+    },
+    "design/plan-rate-review-r14/demand.fragment.html": {
+      "Bytes": 87492,
+      "SHA256": "78300d9bccbac48f6ff3e05da09c5c0e6eee15e1a4db007449c79cea522ba579"
+    },
+    "design/plan-rate-review-r14/index.html": {
+      "Bytes": 626784,
+      "SHA256": "ebb689d2c0208a31302c19878cea8643b1903d08005711647b2c35aaf4f71662"
+    },
+    "design/plan-rate-review-r14/plan-fx-demand-dark.png": {
+      "Bytes": 168482,
+      "SHA256": "631fb3e4ba46f01064e256e293997960ba4c8715379e9b03428569785e581570"
+    },
+    "design/plan-rate-review-r14/plan-fx-demand-mobile.png": {
+      "Bytes": 145539,
+      "SHA256": "60a8f948247b4a5edca95b659f6f277b40226324ded31ede5bf0b654ba1f6eb5"
+    },
+    "design/plan-rate-review-r14/plan-fx-demand.png": {
+      "Bytes": 156478,
+      "SHA256": "97bf7f327fec8d5137501a6a3198b07cfff26cc19d8e9cb4f231f80a254813a5"
+    },
+    "design/plan-rate-review-r14/plan-fx-editor.png": {
+      "Bytes": 166784,
+      "SHA256": "48d9f22550866bb0d7e73e77c9ab57980346868ddbcf983231a84dda2009b32e"
+    },
+    "design/plan-rate-review-r14/plan-fx-sop-dark.png": {
+      "Bytes": 187028,
+      "SHA256": "328ba27175422d16dc20052377752a4980a1f72b7add0d8e4f87da9a517138d4"
+    },
+    "design/plan-rate-review-r14/plan-fx-sop-mobile.png": {
+      "Bytes": 173485,
+      "SHA256": "218f8ad8b51ede644dd20d1968bb8b5d1223797f5a418087a40535bd954a4bf5"
+    },
+    "design/plan-rate-review-r14/plan-fx-sop.png": {
+      "Bytes": 176760,
+      "SHA256": "a53465dfe12bccecaf41c0b81671ca20d6e04f3635967be81b50937aa327f078"
+    },
+    "design/plan-rate-review-r14/plan-fx-validation.json": {
+      "Bytes": 2305,
+      "SHA256": "2d36bb886946ca0b3b55da5a87fc2d524c44bd4596e5c98a6175f0912ebc1b3d"
+    },
+    "design/plan-rate-review-r14/plan-fx.fragment.html": {
+      "Bytes": 11798,
+      "SHA256": "dc70f5360eb3f98d9be4622392d57b3899086dff6f293fdd17553e35a3986fe5"
+    },
+    "design/plan-rate-review-r14/preservation.json": {
+      "Bytes": 54587,
+      "SHA256": "ba354f2f2812aec223cf047a3de0b26df679f4e0ad25d88f29e1793eed9c638e"
+    },
+    "design/plan-rate-review-r14/review.fragment.html": {
+      "Bytes": 475980,
+      "SHA256": "99e27079a5e55b7aea0bac68a853ac9c2a08b51d0c51228785e615515a387b2d"
+    },
+    "design/plan-rate-review-r14/shell.fragment.html": {
+      "Bytes": 6849,
+      "SHA256": "fa660f315bb28afcd9f918eed0bed4954ce9d4ad951c285c5afa66c7f44505d4"
+    },
+    "design/plan-rate-review-r14/sop-collapsed.png": {
+      "Bytes": 55188,
+      "SHA256": "fae7e81b965c759b93bdc32eeeb201d935a695f82886689d42b95237015e4e5a"
+    },
+    "design/plan-rate-review-r14/sop-dark.png": {
+      "Bytes": 173405,
+      "SHA256": "fadcc10be1bd3b44518f330ffcb084c78c04a58e28497b8b1081fcd737e9abc9"
+    },
+    "design/plan-rate-review-r14/sop-mobile.png": {
+      "Bytes": 166670,
+      "SHA256": "80509b90a38fc135831f41de7d0b31d374ea55fb1a68a627facfb4bfd784216d"
+    },
+    "design/plan-rate-review-r14/sop-review.png": {
+      "Bytes": 171742,
+      "SHA256": "4c5e2c2cf55e4c723417094897d587300243b4d78aa5ee7e1c806c08477a64fc"
+    },
+    "design/plan-rate-review-r14/sop.fragment.html": {
+      "Bytes": 75149,
+      "SHA256": "5aa7b4a98842e48b456d9d0b163a824a5dafcc85518f05fd76da46e682e8541b"
+    },
+    "design/plan-rate-review-r14/summary-rules.json": {
+      "Bytes": 2450,
+      "SHA256": "1daa86bc8c5ea64085e607cff4108490b9f4c29b891eaafaba5f54c6de7d7856"
+    },
+    "design/plan-rate-review-r14/validation.json": {
+      "Bytes": 1832,
+      "SHA256": "8bff1e43ed10ce6310d41e5c2ff2e1745d189e074c59acbd6e0b12ebc4008b9a"
     }
   }
 }

@@ -1,0 +1,92 @@
+<style>
+#fm-connected-review-r14 .cr-header-tools{display:flex;flex-direction:column;align-items:flex-end;gap:6px;min-width:0;max-width:100%;padding-right:70px}
+#fm-connected-review-r14 .cr-header-tools>.fm-preview-label,#fm-connected-review-r14 .cr-header-tools>.sb-preview{padding-right:0}
+#fm-connected-review-r14 .cr-fx{position:relative;min-width:0;max-width:100%}
+#fm-connected-review-r14 .cr-fx-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+#fm-connected-review-r14 .cr-fx-controls label{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--cr-muted)}
+#fm-connected-review-r14 .cr-fx select,#fm-connected-review-r14 .cr-fx button,#fm-connected-review-r14 .cr-fx input{font:inherit;color:var(--cr-text);background:var(--cr-panel);border:1px solid var(--cr-line);border-radius:4px;min-height:32px;padding:5px 8px;max-width:100%}
+#fm-connected-review-r14 .cr-fx button{font-size:12px}
+#fm-connected-review-r14 .cr-fx-warning{font-size:12px;color:var(--cr-accent);margin-top:4px;max-width:300px;text-align:right;overflow-wrap:anywhere}
+#fm-connected-review-r14 .cr-fx-dialog{position:absolute;top:calc(100% + 8px);right:0;width:440px;max-width:calc(100vw - 56px);z-index:100;background:var(--cr-panel);color:var(--cr-text);border:1px solid var(--cr-line);border-radius:6px;box-shadow:0 8px 25px light-dark(#182c4126,#0006);padding:14px;text-align:left}
+#fm-connected-review-r14 .cr-fx-dialog h2{font-size:14px;font-weight:500;margin:0}
+#fm-connected-review-r14 .cr-fx-dialog-head,#fm-connected-review-r14 .cr-fx-year,#fm-connected-review-r14 .cr-fx-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#fm-connected-review-r14 .cr-fx-dialog-head{margin-bottom:8px}
+#fm-connected-review-r14 .cr-fx-dialog-head button{min-width:44px}
+#fm-connected-review-r14 .cr-fx-note{font-size:12px;color:var(--cr-muted);margin:7px 0 12px}
+#fm-connected-review-r14 .cr-fx-year{justify-content:flex-start;margin-bottom:12px;font-size:12px}
+#fm-connected-review-r14 .cr-fx-rates{display:grid;gap:12px}
+#fm-connected-review-r14 .cr-fx-rate-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:10px;align-items:center;border-top:1px solid var(--cr-line);padding-top:12px}
+#fm-connected-review-r14 .cr-fx-affiliate{font-size:12px;overflow-wrap:anywhere}
+#fm-connected-review-r14 .cr-fx-quote{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px}
+#fm-connected-review-r14 .cr-fx-quote input{width:108px;min-width:0;font-variant-numeric:tabular-nums}
+#fm-connected-review-r14 .cr-fx-actions{justify-content:flex-end;margin-top:14px}
+#fm-connected-review-r14 .cr-fx-actions [data-fx-apply]{background:var(--cr-active);color:var(--cr-accent)}
+#fm-connected-review-r14 .cr-fx-error{font-size:12px;color:light-dark(#a32d2d,#ffb6b6);margin-top:10px}
+@media(max-width:900px){#fm-connected-review-r14 .cr-header-tools{padding-right:0}}
+@media(max-width:540px){#fm-connected-review-r14 .cr-header-tools{width:100%;align-items:flex-start}#fm-connected-review-r14 .cr-fx{width:100%}#fm-connected-review-r14 .cr-fx-controls{justify-content:flex-start}#fm-connected-review-r14 .cr-fx-warning{text-align:left}#fm-connected-review-r14 .cr-fx-dialog{left:0;right:auto;width:100%;max-width:100%}#fm-connected-review-r14 .cr-fx-rate-row{grid-template-columns:1fr;gap:6px}}
+@media(pointer:coarse){#fm-connected-review-r14 .cr-fx button,#fm-connected-review-r14 .cr-fx select,#fm-connected-review-r14 .cr-fx input{min-height:44px}#fm-connected-review-r14 .cr-fx input{font-size:16px}}
+</style>
+<script>
+(() => {
+ const root=document.getElementById('fm-connected-review-r14');if(!root)return;
+ const clone=x=>JSON.parse(JSON.stringify(x)),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ // Only actual sample affiliates are exposed. Add future currencies through this catalogue.
+ const affiliates=[{id:'uk',name:'United Kingdom',currency:'GBP',symbol:'£'}],years=Array.from({length:6},(_,i)=>String(2024+i)),controls=new Map();
+ const defaults={currency:'local',planYear:'2026',rates:{}},saved=window.openai?.widgetState?.modelContent;
+ const numeric=x=>typeof x==='number'&&Number.isFinite(x)&&x>=0;
+ const key=(affiliate,year)=>affiliate.id+'|'+affiliate.currency+'|'+year;
+ function normalize(next){
+  const result={currency:next?.currency==='USD'?'USD':'local',planYear:years.includes(String(next?.planYear))?String(next.planYear):defaults.planYear,rates:{}};
+  for(const [name,value]of Object.entries(next?.rates||{}))if(numeric(value)&&affiliates.some(a=>years.some(y=>key(a,y)===name)))result.rates[name]=value;
+  return result;
+ }
+ let state=normalize(saved?.schema==='fm-connected-gm-review-r14'?saved.state?.fx:defaults);
+ const selected=ids=>affiliates.filter(a=>ids.includes(a.id));
+ const rate=(id='uk')=>{const a=affiliates.find(a=>a.id===id),value=a?state.rates[key(a,state.planYear)]:null;return numeric(value)?value:null;};
+ const code=(id='uk')=>state.currency==='USD'?'USD':affiliates.find(a=>a.id===id)?.currency||'Local currency';
+ const symbol=(id='uk')=>state.currency==='USD'?'$':affiliates.find(a=>a.id===id)?.symbol||'';
+ const label=(id='uk')=>state.currency==='USD'?'USD · '+state.planYear+' plan rate':code(id);
+ function convert(value,id='uk'){
+  if(typeof value!=='number'||!Number.isFinite(value))return null;
+  if(state.currency!=='USD')return value;
+  const r=rate(id),converted=r==null?null:value*r;return converted!=null&&Number.isFinite(converted)?converted:null;
+ }
+ function missing(ids){return state.currency==='USD'?selected(ids).filter(a=>rate(a.id)==null):[];}
+ function close(control,focus=false){control.panel.hidden=true;control.button.setAttribute('aria-expanded','false');if(focus)control.button.focus();}
+ function rateRows(control){
+  const list=selected(control.context.affiliates),year=control.year.value;
+  control.rows.innerHTML=list.length?list.map(a=>'<div class="cr-fx-rate-row"><span class="cr-fx-affiliate">'+esc(a.name)+'</span><label class="cr-fx-quote">1 '+esc(a.currency)+' = <input type="text" inputmode="decimal" autocomplete="off" data-fx-rate="'+a.id+'" aria-label="USD per '+a.currency+' for '+esc(a.name)+' in '+year+'" placeholder="Enter rate" value="'+esc(control.draft[key(a,year)]??'')+'"> USD</label></div>').join(''):'<span class="cr-fx-note">Choose an Affiliate first.</span>';
+  control.rows.querySelectorAll('[data-fx-rate]').forEach(input=>input.addEventListener('input',()=>{const a=affiliates.find(a=>a.id===input.dataset.fxRate);control.draft[key(a,control.year.value)]=input.value.trim();input.removeAttribute('aria-invalid');control.error.hidden=true;}));
+ }
+ function mount(header,kind){
+  const tools=document.createElement('div');tools.className='cr-header-tools';const preview=header.querySelector('.fm-preview-label,.sb-preview');if(preview)tools.append(preview);
+  const host=document.createElement('div');host.className='cr-fx';host.dataset.fxControls=kind;host.hidden=true;
+  host.innerHTML='<div class="cr-fx-controls"><label>Currency <select data-fx-currency aria-label="Value currency"><option value="local">GBP</option><option value="USD">USD</option></select></label><button type="button" class="cursor-interaction" data-fx-open aria-expanded="false" aria-controls="cr-fx-dialog-'+kind+'">Plan rates · 2026 ▾</button></div><div class="cr-fx-warning" data-fx-warning role="status" hidden></div><div class="cr-fx-dialog" id="cr-fx-dialog-'+kind+'" role="dialog" aria-labelledby="cr-fx-title-'+kind+'" hidden><div class="cr-fx-dialog-head"><h2 id="cr-fx-title-'+kind+'">Top Line plan rates</h2><button type="button" class="cursor-interaction" data-fx-close aria-label="Close plan rates">Close</button></div><div class="cr-fx-note">USD per 1 local currency · one plan year across the whole review</div><label class="cr-fx-year">Plan year <select data-fx-year aria-label="Plan rate year">'+years.map(y=>'<option>'+y+'</option>').join('')+'</select></label><div class="cr-fx-rates" data-fx-rates></div><div class="cr-fx-error" data-fx-error role="alert" hidden></div><div class="cr-fx-note">Units, share and business growth stay unchanged.</div><div class="cr-fx-actions"><button type="button" class="cursor-interaction" data-fx-cancel>Cancel</button><button type="button" class="cursor-interaction" data-fx-apply>Apply rates</button></div></div>';
+  tools.append(host);header.append(tools);
+  const control={host,context:{display:'units',affiliates:['uk']},panel:host.querySelector('[role=dialog]'),button:host.querySelector('[data-fx-open]'),currency:host.querySelector('[data-fx-currency]'),year:host.querySelector('[data-fx-year]'),rows:host.querySelector('[data-fx-rates]'),error:host.querySelector('[data-fx-error]'),warning:host.querySelector('[data-fx-warning]'),draft:{}};controls.set(kind,control);
+  control.currency.addEventListener('change',()=>setState({currency:control.currency.value}));
+  control.button.addEventListener('click',()=>{const opening=control.panel.hidden;controls.forEach(c=>close(c));if(opening){control.draft=Object.fromEntries(Object.entries(state.rates).map(([k,v])=>[k,String(v)]));control.year.value=state.planYear;control.error.hidden=true;rateRows(control);control.panel.hidden=false;control.button.setAttribute('aria-expanded','true');control.year.focus();}});
+  control.year.addEventListener('change',()=>{control.error.hidden=true;rateRows(control);});
+  for(const selector of ['[data-fx-close]','[data-fx-cancel]'])host.querySelector(selector).addEventListener('click',()=>close(control,true));
+  host.addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.matches('[data-fx-rate]')){event.preventDefault();host.querySelector('[data-fx-apply]').click();}if(event.key==='Escape'&&!control.panel.hidden){event.stopPropagation();close(control,true);}});
+  host.querySelector('[data-fx-apply]').addEventListener('click',event=>{
+   event.preventDefault();const rates={...state.rates};let invalid=false;
+   for(const [name,text]of Object.entries(control.draft)){
+    if(text===''){delete rates[name];continue;}
+    const value=/^(?:\d+(?:\.\d*)?|\.\d+)$/.test(text)?Number(text):NaN;
+    if(!numeric(value)){invalid=true;continue;}rates[name]=value;
+   }
+   if(invalid){control.error.textContent='Enter a non-negative numeric rate, for example 1.25, or leave it blank.';control.error.hidden=false;control.rows.querySelectorAll('input').forEach(input=>{const text=input.value.trim();if(text&&(!/^(?:\d+(?:\.\d*)?|\.\d+)$/.test(text)||!numeric(Number(text))))input.setAttribute('aria-invalid','true');});return;}
+   close(control,true);setState({planYear:control.year.value,rates});
+  });
+ }
+ function render(kind,context){
+  const c=controls.get(kind);if(!c)return;c.context={display:context.display,affiliates:[...context.affiliates]};c.host.hidden=context.display!=='value';if(c.host.hidden)close(c);
+  c.currency.value=state.currency;const currencies=[...new Set(selected(context.affiliates).map(a=>a.currency))];c.currency.options[0].textContent=currencies.length===1?currencies[0]:'Local currency';
+  c.button.textContent='Plan rates · '+state.planYear+' ▾';const absent=missing(context.affiliates);c.warning.hidden=!absent.length;c.warning.textContent=absent.length?'Plan rate required · '+absent.map(a=>a.name).join(', '):'';
+ }
+ function setState(patch,notify=true){state=normalize({...state,...patch});for(const [kind,c]of controls)render(kind,c.context);if(notify)root.reviewSession?.fxChanged();}
+ root.addEventListener('pointerdown',event=>{for(const c of controls.values())if(!c.host.contains(event.target))close(c);});
+ root.planFX={mount,render,convert,rate,code,symbol,label,missing,getState:()=>clone(state),setState,affiliates:clone(affiliates)};
+})();
+</script>

@@ -1,5 +1,42 @@
 # Company setup status
 
+## 21 October 2026 — R14 plan-rate controls on both HTML pages
+
+The user authorized adding plan rates to both HTML pages, preserving the current
+versions and syncing Coordination, with Power BI explicitly unchanged. The new
+package is `design/plan-rate-review-r14/`; open `design/index.html`, select R14
+and choose **Value** to reveal **GBP / USD** and **Plan rates** in the header.
+
+The user chose one selected plan-year rate for the entire review, including
+historical and forecast years. Rates are keyed by Affiliate/local currency/year
+and shared by both pages. No actual business rate or extra affiliate is supplied:
+the only sample Affiliate remains UK/GBP. USD values stay unavailable until a
+numeric rate is entered. Numeric zero remains zero. Units, Share, business
+growth, variance percentages and ranking remain independent of FX. Monetary
+actuals/forecasts/trends/plans/absolute variances/run rates convert once, with
+currency labels updated throughout.
+
+**Before plan rates — Connected GM Review R13** is the saved return point at
+`design/checkpoints/before-plan-rate-review-r14.json`, binding all 21 preceding
+paired-page files. R13 and every earlier saved package remain byte-preserved.
+Open the saved R13 link in the design chooser to revert the preview.
+
+Local FX qualification compares 576 Demand and 972 S&OP observations directly
+with R13 in units/GBP, then performs 1,548 USD/percentage-preservation comparisons
+at explicit artificial test rates. It covers prior/current/future review years,
+different stored annual rates, bidirectional edits, missing/zero/invalid input,
+Apply/Cancel/Escape, monthly amounts, state persistence and light/dark layouts at
+1080/1024/736/390/320px. The inherited interaction check also retains its 1,320
+older-baseline numeric comparisons. See the R14 validation JSON files and saved
+hash receipt for the exact local results. Fixture rates in screenshots/checks
+are illustrative inputs, not official or prefilled business plan rates.
+
+HTML storage is local to the preview; there is no company rate-table write.
+Actual Affiliate/currency metadata, official rate storage/editing, common source
+binding, cross-page numeric reconciliation, refresh/cache checks and measured
+Power BI speed remain live-implementation work. No report, model, visual,
+Function, Fabric rule/pipeline, application source or workbook was changed.
+
 Last confirmed in chat before the office-laptop handoff on 20 October 2026:
 
 - Power BI `ForecastMaster Review`: R04.1 published on the original shared report link.

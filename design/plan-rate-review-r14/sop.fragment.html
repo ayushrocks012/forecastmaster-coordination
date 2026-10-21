@@ -1,0 +1,571 @@
+<script>/* BUNDLED_D3_V7_9_0 */</script>
+<style>
+#fm-connected-sop-r14{color-scheme:light dark;--sb-bg:light-dark(#f5f7fa,#131b25);--sb-panel:light-dark(#fff,#1b2633);--sb-text:light-dark(#182c41,#e7edf5);--sb-muted:light-dark(#52667b,#afbed0);--sb-line:light-dark(#dce3eb,#354657);--sb-soft:light-dark(#edf3f7,#263644);--sb-accent:light-dark(#096b76,#73cbd0);--sb-selected:light-dark(#e7f3f4,#203e46);--sb-hover:light-dark(#f0f6f8,#2a3c4b);--sb-s1:light-dark(#087f83,#6cd1d0);--sb-s2:light-dark(#3268b2,#88b8fa);--sb-s3:light-dark(#a86713,#f0b764);--sb-s4:light-dark(#7b55a6,#c2a0ed);--sb-s5:light-dark(#b34c65,#f19db2);--sb-s6:light-dark(#537c2b,#b2d683);font:14px/1.45 'Segoe UI',Arial,sans-serif;color:var(--sb-text);width:100%}
+#fm-connected-sop-r14 *{box-sizing:border-box}
+#fm-connected-sop-r14 button,#fm-connected-sop-r14 input,#fm-connected-sop-r14 select{font:inherit;color:inherit}
+#fm-connected-sop-r14 button,#fm-connected-sop-r14 select{background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:4px;padding:6px 10px;min-height:32px;max-width:100%}
+#fm-connected-sop-r14 button:hover{background:var(--sb-hover)}
+#fm-connected-sop-r14 input[type=checkbox]{accent-color:var(--sb-accent);width:15px;height:15px;flex:none;margin:0}
+#fm-connected-sop-r14 input[type=month],#fm-connected-sop-r14 input[type=search]{background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:4px;padding:6px 8px;min-height:32px;min-width:0;max-width:100%}
+#fm-connected-sop-r14 h1{font-size:20px;line-height:1.25;font-weight:600;margin:0}
+#fm-connected-sop-r14 h2{font-size:14px;font-weight:600;margin:0}
+#fm-connected-sop-r14 h3{font-size:13px;font-weight:600;margin:0}
+#fm-connected-sop-r14 .sb-shell{background:var(--sb-bg);border:1px solid var(--sb-line);border-radius:8px}
+#fm-connected-sop-r14 .sb-header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:17px 20px;border-bottom:1px solid var(--sb-line);background:var(--sb-panel);border-radius:8px 8px 0 0}
+#fm-connected-sop-r14 .sb-brand{display:flex;align-items:center;gap:12px}
+#fm-connected-sop-r14 .sb-mark{height:32px;width:5px;background:var(--sb-accent)}
+#fm-connected-sop-r14 .sb-sub,#fm-connected-sop-r14 .sb-detail{font-size:12px;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-sub{margin-top:3px}
+#fm-connected-sop-r14 .sb-preview{font-size:12px;color:var(--sb-muted);padding-right:85px}
+#fm-connected-sop-r14 .sb-main{padding:14px 18px 18px;display:grid;gap:13px}
+#fm-connected-sop-r14 .sb-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;min-width:0}
+#fm-connected-sop-r14 .sb-inline{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-width:0}
+#fm-connected-sop-r14 .sb-months{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--sb-muted);max-width:100%}
+#fm-connected-sop-r14 .sb-months label{display:flex;align-items:center;gap:6px}
+#fm-connected-sop-r14 .sb-months input{width:145px}
+#fm-connected-sop-r14 .sb-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px;position:relative;z-index:20}
+#fm-connected-sop-r14 .sb-summary-periods{width:240px;max-width:100%;position:relative;z-index:15}
+#fm-connected-sop-r14 .sb-field{min-width:0;position:relative}
+#fm-connected-sop-r14 .sb-fieldlabel{display:block;font-size:12px;color:var(--sb-muted);margin-bottom:4px}
+#fm-connected-sop-r14 .sb-pick{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;height:35px}
+#fm-connected-sop-r14 .sb-pick span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#fm-connected-sop-r14 .sb-popup{position:absolute;top:calc(100% + 5px);left:0;background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:5px;padding:8px;width:270px;max-width:calc(100vw - 42px);box-shadow:0 8px 22px light-dark(#142c4426,#0005);z-index:30}
+#fm-connected-sop-r14 .sb-popup input[type=search]{width:100%;font-size:13px;margin-bottom:5px}
+#fm-connected-sop-r14 .sb-option{display:flex;align-items:center;gap:8px;padding:6px 4px;font-size:13px;overflow-wrap:anywhere}
+#fm-connected-sop-r14 .sb-option:hover{background:var(--sb-hover)}
+#fm-connected-sop-r14 .sb-panel{background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:5px;min-width:0}
+#fm-connected-sop-r14 .sb-head{padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#fm-connected-sop-r14 .sb-toolbar{padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-toolbar button,#fm-connected-sop-r14 .sb-toolbar select{font-size:12px}
+#fm-connected-sop-r14 .sb-check{display:inline-flex;gap:7px;align-items:center;font-size:13px;min-height:28px;overflow-wrap:anywhere}
+#fm-connected-sop-r14 .sb-scope{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;padding:0 12px 10px}
+#fm-connected-sop-r14 .sb-children{display:flex;gap:4px 18px;flex-wrap:wrap;margin:3px 0 0 22px;padding-left:11px;border-left:2px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-parent{font-weight:600}
+#fm-connected-sop-r14 .sb-caption{padding:0 12px 9px;font-size:12px;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-measure-summary{padding:10px 12px;font-size:13px;min-height:42px}
+#fm-connected-sop-r14 .sb-measure-summary strong{font-weight:600}
+#fm-connected-sop-r14 .sb-measure-summary .sb-detail{margin-left:9px;overflow-wrap:anywhere}
+#fm-connected-sop-r14 .sb-trees{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;padding:10px 12px}
+#fm-connected-sop-r14 .sb-tree-group{min-width:0}
+#fm-connected-sop-r14 .sb-tree-title{padding-bottom:5px;display:flex;justify-content:space-between;gap:6px;align-items:baseline}
+#fm-connected-sop-r14 .sb-tree-path{font-size:11px;color:var(--sb-muted);margin:0 0 5px;overflow-wrap:anywhere}
+#fm-connected-sop-r14 .sb-tree-item{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:13px;min-height:28px}
+#fm-connected-sop-r14 .sb-tree-item[data-depth="1"]{margin-left:22px;padding-left:11px;border-left:2px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-tree-item .sb-small{font-size:11px;color:var(--sb-muted);margin-left:auto}
+#fm-connected-sop-r14 .sb-selection-search{width:230px;font-size:12px!important}
+#fm-connected-sop-r14 .sb-view{display:inline-flex;flex-wrap:wrap}
+#fm-connected-sop-r14 .sb-view button{font-size:12px;border-radius:0}
+#fm-connected-sop-r14 .sb-view button:first-child{border-radius:4px 0 0 4px}
+#fm-connected-sop-r14 .sb-view button:last-child{border-radius:0 4px 4px 0}
+#fm-connected-sop-r14 .sb-view button[aria-pressed=true]{background:var(--sb-selected);color:var(--sb-accent);font-weight:500}
+#fm-connected-sop-r14 .sb-plot-title{font-size:13px;font-weight:600;padding:4px 0}
+#fm-connected-sop-r14 .sb-charts{display:grid;gap:14px;padding:8px 12px 0}
+#fm-connected-sop-r14 .sb-plot{position:relative;min-width:0;height:270px}
+#fm-connected-sop-r14 .sb-plot svg{display:block;width:100%;height:100%;font:12px 'Segoe UI',Arial,sans-serif;overflow:visible}
+#fm-connected-sop-r14 .sb-plot svg text{fill:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-plot .axis-title{fill:var(--sb-text)}
+#fm-connected-sop-r14 .sb-plot .domain,#fm-connected-sop-r14 .sb-plot .tick line{stroke:var(--sb-line)}
+#fm-connected-sop-r14 .sb-plot .tick text{font-size:12px}
+#fm-connected-sop-r14 .sb-plot .sb-grid line{stroke:var(--sb-line)}
+#fm-connected-sop-r14 .sb-tooltip{position:absolute;pointer-events:none;background:var(--sb-panel);color:var(--sb-text);border:1px solid var(--sb-line);border-radius:4px;padding:8px 10px;box-shadow:0 5px 20px light-dark(#142c4426,#0005);font-size:12px;z-index:10;max-width:calc(100% - 8px)}
+#fm-connected-sop-r14 .sb-tooltip div{display:flex;justify-content:space-between;gap:12px;margin-top:3px}
+#fm-connected-sop-r14 .sb-legend{display:flex;gap:6px 15px;flex-wrap:wrap;padding:7px 12px 11px;font-size:12px}
+#fm-connected-sop-r14 .sb-legend button{padding:2px 0;background:transparent;border:0;min-height:25px;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--sb-text)}
+#fm-connected-sop-r14 .sb-swatch{display:inline-block;width:17px;height:3px;background:var(--sb-series)}
+#fm-connected-sop-r14 .sb-tablewrap{width:100%;overflow-x:auto;scrollbar-width:thin}
+#fm-connected-sop-r14 .sb-table{border-collapse:collapse;width:100%;font-size:12px;table-layout:fixed}
+#fm-connected-sop-r14 .sb-table th{padding:8px 10px;background:var(--sb-soft);font-weight:500;text-align:right;border-top:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-table td{padding:8px 10px;border-top:1px solid var(--sb-line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#fm-connected-sop-r14 .sb-table th:first-child,#fm-connected-sop-r14 .sb-table td:first-child{text-align:left;white-space:normal;position:sticky;left:0;z-index:2;background:var(--sb-panel)}
+#fm-connected-sop-r14 .sb-table th:first-child{z-index:3;background:var(--sb-soft)}
+#fm-connected-sop-r14 .sb-table th small{display:block;font-size:11px;font-weight:400;color:var(--sb-muted);margin-top:2px}
+#fm-connected-sop-r14 .sb-table .sb-subtotal td{font-weight:600;background:var(--sb-hover)}
+#fm-connected-sop-r14 .sb-table .sb-total td{font-weight:600;background:var(--sb-selected)}
+#fm-connected-sop-r14 .sb-table .sb-child td:first-child{padding-left:33px}
+#fm-connected-sop-r14 .sb-table .sb-context td{color:var(--sb-muted);background:var(--sb-soft);font-size:11px;text-align:left;padding-top:5px;padding-bottom:5px}
+#fm-connected-sop-r14 .sb-table .sb-group td{font-weight:600;text-align:left;background:var(--sb-soft)}
+#fm-connected-sop-r14 .sb-table .sb-basis{color:var(--sb-muted);font-size:11px;text-align:left}
+#fm-connected-sop-r14 .sb-foot{font-size:11px;color:var(--sb-muted);display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap}
+#fm-connected-sop-r14 .sb-note{font-size:12px;color:var(--sb-muted);padding:8px 12px;border-top:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-empty{padding:20px 12px;text-align:center;font-size:13px;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-workspace{display:grid;grid-template-columns:420px minmax(0,1fr);gap:18px;align-items:start;min-width:0}
+#fm-connected-sop-r14 .sb-workspace.sb-wide-content{grid-template-columns:minmax(0,1fr)}
+#fm-connected-sop-r14 .sb-content{display:grid;gap:13px;min-width:0}
+#fm-connected-sop-r14 .sb-float{position:sticky;top:12px;border:1px solid var(--sb-line);border-radius:10px;background:var(--sb-panel);box-shadow:0 8px 26px light-dark(#153b5719,#0004);min-width:0}
+#fm-connected-sop-r14 .sb-float-head{padding:13px 12px 9px;border-bottom:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-float-head h2{font-size:15px;margin-bottom:3px}
+#fm-connected-sop-r14 .sb-float-head input{width:100%;margin:10px 0 8px;font-size:12px}
+#fm-connected-sop-r14 .sb-float-actions{display:flex;gap:6px;flex-wrap:wrap}
+#fm-connected-sop-r14 .sb-float-actions button{font-size:12px;min-height:29px;padding:4px 8px}
+#fm-connected-sop-r14 .sb-channel-groups{display:grid;gap:12px;padding:11px 10px}
+#fm-connected-sop-r14 .sb-channel-title{display:flex;justify-content:space-between;gap:5px;margin:0 0 6px}
+#fm-connected-sop-r14 .sb-channel-title h3{font-size:12px}
+#fm-connected-sop-r14 .sb-channel-title span{font-size:11px;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-button-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+#fm-connected-sop-r14 .sb-button-children{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;border-left:2px solid var(--sb-line);padding-left:8px;margin-left:2px}
+#fm-connected-sop-r14 button.sb-choose{display:flex;align-items:center;gap:5px;text-align:left;font-size:12px;min-height:36px;line-height:1.3;padding:6px 7px;white-space:normal;overflow-wrap:anywhere;border-radius:5px}
+#fm-connected-sop-r14 button.sb-choose.sb-parent-choice{grid-column:1/-1;font-weight:600}
+#fm-connected-sop-r14 button.sb-choose[aria-pressed=true]{background:var(--sb-accent);color:light-dark(#fff,#10232d);border-color:var(--sb-accent)}
+#fm-connected-sop-r14 button:disabled{opacity:.45;cursor:default;background:var(--sb-soft);color:var(--sb-muted);border-color:var(--sb-line)}
+#fm-connected-sop-r14 .sb-choice-column .sb-measure-heading{font-size:11px;color:var(--sb-muted);font-weight:500;margin-top:4px}
+#fm-connected-sop-r14 .sb-choice-column .sb-measure-heading:not(:first-child){border-top:1px solid var(--sb-line);padding-top:12px;margin-top:8px}
+#fm-connected-sop-r14 .sb-choice-table button.sb-total-target{background:var(--sb-soft)}
+#fm-connected-sop-r14 .sb-choice-table button.sb-total-target[aria-pressed=true]{background:var(--sb-accent)}
+#fm-connected-sop-r14 .sb-cascade-hint{font-size:11px;color:var(--sb-muted);padding:10px 12px;border-bottom:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-inactive-hint{font-size:11px;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-band-off .sb-subchannel-column> :not(.sb-inactive-hint),#fm-connected-sop-r14 .sb-band-off .sb-measure-column> :not(.sb-inactive-hint){display:none}
+#fm-connected-sop-r14 .sb-channel-band.sb-band-off .sb-subchannel-column{border-left:0;padding-left:3px}
+#fm-connected-sop-r14 .sb-choose-state{font-size:12px;width:11px;flex:none}
+#fm-connected-sop-r14 .sb-panelbar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0}
+#fm-connected-sop-r14 .sb-panelbar button{font-size:12px;flex:none}
+#fm-connected-sop-r14 .sb-current-choice{font-size:12px;color:var(--sb-muted);overflow-wrap:anywhere}
+#fm-connected-sop-r14 .sb-current-choice strong{color:var(--sb-text);font-weight:600}
+#fm-connected-sop-r14 .sb-table th:first-child,#fm-connected-sop-r14 .sb-table td:first-child{overflow-wrap:anywhere}
+#fm-connected-sop-r14 .sb-choice-table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:12px}
+#fm-connected-sop-r14 .sb-choice-table th{background:transparent;text-align:left;padding:14px 10px 4px;font-size:11px;font-weight:500;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-choice-table td{padding:20px 10px 22px;vertical-align:top}
+#fm-connected-sop-r14 .sb-choice-table .sb-channel-band+.sb-channel-band td{border-top:1px solid var(--sb-line);padding-top:26px}
+#fm-connected-sop-r14 .sb-choice-table .sb-overall-band td{padding-top:16px;padding-bottom:16px}
+#fm-connected-sop-r14 .sb-choice-table .sb-channel-column{padding-top:0}
+#fm-connected-sop-r14 .sb-choice-table .sb-channel-column button{font-weight:600}
+#fm-connected-sop-r14 .sb-choice-table .sb-subchannel-column{padding-left:3px}
+#fm-connected-sop-r14 .sb-choice-table .sb-subchannel-column:has(button){border-left:2px solid var(--sb-line);padding-left:9px}
+#fm-connected-sop-r14 .sb-choice-table .sb-choice-column{gap:12px}
+#fm-connected-sop-r14 .sb-choice-table .sb-choice-column details>div{gap:12px;margin-top:12px}
+#fm-connected-sop-r14 .sb-choice-table .sb-choice-column summary{padding:4px 0;font-size:11px}
+#fm-connected-sop-r14 .sb-choice-table .sb-choice-column summary:has(+div [aria-pressed=true]){color:var(--sb-accent);font-weight:500}
+#fm-connected-sop-r14 .sb-choice-table .sb-choice-column details{grid-column:1/-1}
+#fm-connected-sop-r14 .sb-factory-control{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-bottom:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-factory-control span.sb-detail{max-width:145px}
+#fm-connected-sop-r14 .sb-factory-control button{font-size:12px;min-height:34px;flex:none}
+#fm-connected-sop-r14 .sb-factory-control button[aria-pressed=true]{background:var(--sb-selected);color:var(--sb-accent);border-color:var(--sb-line)}
+#fm-connected-sop-r14 .sb-choice-table button{width:100%;min-width:0;overflow-wrap:normal;word-break:normal}
+#fm-connected-sop-r14 .sb-choice-table button small{display:block;margin-top:3px;font-size:11px;font-weight:400;opacity:.9}
+#fm-connected-sop-r14 .sb-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+#fm-connected-sop-r14 .sb-choice-grid button{padding:6px 5px;font-size:11px;min-height:35px}
+#fm-connected-sop-r14 .sb-choice-grid .sb-long-choice{grid-column:1/-1}
+#fm-connected-sop-r14 .sb-choice-caption{font-size:11px;color:var(--sb-muted);margin:0 0 6px}
+#fm-connected-sop-r14 .sb-choice-split{border-top:1px solid var(--sb-line);padding-top:7px;margin-top:7px}
+#fm-connected-sop-r14 .sb-choice-total{font-size:11px;color:var(--sb-muted);padding-top:7px}
+#fm-connected-sop-r14 .sb-choice-column{display:grid;gap:10px;align-content:start}
+#fm-connected-sop-r14 .sb-choice-column section{display:grid;gap:6px}
+#fm-connected-sop-r14 .sb-choice-column section+section{border-top:1px solid var(--sb-line);padding-top:10px}
+#fm-connected-sop-r14 .sb-choice-column .sb-choice-caption{margin:0}
+#fm-connected-sop-r14 .sb-choice-column details{font-size:11px;color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-choice-column details summary{padding:5px 0}
+#fm-connected-sop-r14 .sb-choice-column details>div{display:grid;gap:6px;margin-top:4px}
+#fm-connected-sop-r14 .sb-choice-table .sb-reference-note{font-size:11px;color:var(--sb-muted);margin-top:8px}
+#fm-connected-sop-r14 .sb-choice-table button.sb-pending-target[aria-pressed=true]{background:var(--sb-selected);color:var(--sb-accent);border-color:var(--sb-line)}
+#fm-connected-sop-r14 .sb-plot{height:250px}
+#fm-connected-sop-r14 .sb-plot .sb-grid line{opacity:.6}
+#fm-connected-sop-r14 [hidden]{display:none!important}
+@media(max-width:850px){#fm-connected-sop-r14 .sb-workspace{grid-template-columns:minmax(0,1fr)}#fm-connected-sop-r14 .sb-float{position:static}#fm-connected-sop-r14 .sb-channel-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}#fm-connected-sop-r14 .sb-float-head input{width:230px;max-width:100%}#fm-connected-sop-r14 .sb-float-head{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap}#fm-connected-sop-r14 .sb-float-head input{margin:0}}
+@media(max-width:760px){#fm-connected-sop-r14 .sb-main{padding:12px;gap:12px}#fm-connected-sop-r14 .sb-header{padding:14px 13px}#fm-connected-sop-r14 .sb-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#fm-connected-sop-r14 .sb-preview{padding-right:0}#fm-connected-sop-r14 .sb-trees{grid-template-columns:1fr}#fm-connected-sop-r14 .sb-selection-search{max-width:100%}}
+@media(max-width:430px){#fm-connected-sop-r14 .sb-main{padding:9px}#fm-connected-sop-r14 h1{font-size:18px}#fm-connected-sop-r14 .sb-scope{grid-template-columns:1fr}#fm-connected-sop-r14 .sb-months label{flex-wrap:wrap}#fm-connected-sop-r14 .sb-channel-groups{grid-template-columns:1fr}#fm-connected-sop-r14 .sb-panelbar{align-items:start;flex-direction:column}}
+@media(max-width:430px){#fm-connected-sop-r14 .sb-choice-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){#fm-connected-sop-r14 .sb-choice-table,#fm-connected-sop-r14 .sb-choice-table tbody,#fm-connected-sop-r14 .sb-choice-table tr,#fm-connected-sop-r14 .sb-choice-table td{display:block;width:100%}#fm-connected-sop-r14 .sb-choice-table colgroup,#fm-connected-sop-r14 .sb-choice-table thead{display:none}#fm-connected-sop-r14 .sb-choice-table td{padding:8px 12px 12px}#fm-connected-sop-r14 .sb-choice-table .sb-channel-band+.sb-channel-band td{border-top:0;padding-top:8px}#fm-connected-sop-r14 .sb-choice-table .sb-channel-band+.sb-channel-band{border-top:1px solid var(--sb-line);padding-top:18px;margin-top:14px}#fm-connected-sop-r14 .sb-choice-table td:has(>div:empty){display:none}#fm-connected-sop-r14 .sb-choice-table td:not(:has(>div:empty)):before{content:attr(data-column-label);display:block;font-weight:500;color:var(--sb-muted);font-size:11px;margin-bottom:8px}#fm-connected-sop-r14 .sb-channel-column,#fm-connected-sop-r14 .sb-measure-column,#fm-connected-sop-r14 .sb-subchannel-column{grid-template-columns:repeat(2,minmax(0,1fr))}#fm-connected-sop-r14 .sb-choice-caption,#fm-connected-sop-r14 .sb-reference-note{grid-column:1/-1}}
+@media(pointer:coarse){#fm-connected-sop-r14 button,#fm-connected-sop-r14 .sb-check,#fm-connected-sop-r14 .sb-tree-item{min-height:42px}#fm-connected-sop-r14 input[type=search]{font-size:16px!important}}
+#fm-connected-sop-r14 .sb-choice-table .sb-source-context td{padding:20px 10px;vertical-align:top}
+#fm-connected-sop-r14 .sb-choice-table .sb-source-context+.sb-source-context td{border-top:1px solid var(--sb-line);padding-top:22px;padding-bottom:22px}
+#fm-connected-sop-r14 .sb-choice-table .sb-source-channel+.sb-source-channel tr:first-child td{border-top:1px solid var(--sb-line);padding-top:25px}
+#fm-connected-sop-r14 .sb-context-measures{display:grid;gap:11px;align-content:start}
+#fm-connected-sop-r14 .sb-channel-cell .sb-choice-caption{margin-top:10px}
+#fm-connected-sop-r14 .sb-source-context .sb-context-label{display:grid;gap:8px;align-content:start}
+#fm-connected-sop-r14 .sb-context-label .sb-choice-caption{margin:0}
+#fm-connected-sop-r14 .sb-context-measures button{min-height:38px}
+#fm-connected-sop-r14 .sb-source-context .sb-context-measures [data-measure="net"]{margin-top:10px}
+#fm-connected-sop-r14 .sb-channel-continuation{display:block;font-size:12px;font-weight:500;padding-top:8px}
+#fm-connected-sop-r14 .sb-channel-continuation small{display:block;font-size:11px;font-weight:400;color:var(--sb-muted);margin-top:4px}
+#fm-connected-sop-r14 .sb-table tbody th{position:static;background:var(--sb-panel);color:var(--sb-text);text-align:left;font-size:12px;font-weight:400;vertical-align:top;white-space:normal;overflow-wrap:normal;word-break:normal}
+#fm-connected-sop-r14 .sb-table tbody th:first-child{position:static;left:auto}
+#fm-connected-sop-r14 .sb-table tbody th.sb-summary-channel{font-weight:500;background:var(--sb-soft);border-right:1px solid var(--sb-line);overflow-wrap:normal;word-break:normal}
+#fm-connected-sop-r14 .sb-table tbody th.sb-summary-subchannel{color:var(--sb-muted);background:var(--sb-panel);border-right:1px solid var(--sb-line);overflow-wrap:normal;word-break:normal}
+#fm-connected-sop-r14 .sb-table tbody [data-measure-label]{background:var(--sb-panel);overflow-wrap:normal;word-break:normal}
+#fm-connected-sop-r14 .sb-table tbody th.sb-summary-scope{background:var(--sb-soft);border-right:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-table tbody th small{display:block;font-size:11px;font-weight:400;color:var(--sb-muted);margin-top:4px}
+#fm-connected-sop-r14 .sb-table td[data-value]{text-align:right;font-variant-numeric:tabular-nums}
+#fm-connected-sop-r14 .sb-table .sb-context-start>*{border-top:1px solid var(--sb-line)}
+#fm-connected-sop-r14 .sb-table thead th{position:sticky;top:0;font-weight:500}
+#fm-connected-sop-r14 .sb-table thead th:nth-child(-n+3){text-align:left;left:auto}
+#fm-connected-sop-r14 .sb-table .sb-summary-total [data-measure-label],#fm-connected-sop-r14 .sb-table .sb-summary-total td{font-weight:500;background:var(--sb-selected)}
+#fm-connected-sop-r14 .sb-summary-options{display:flex;align-items:center;gap:10px 20px;flex-wrap:wrap;padding:0 12px 10px;font-size:12px}
+#fm-connected-sop-r14 .sb-summary-options label{display:inline-flex;align-items:center;gap:7px;min-height:28px}
+#fm-connected-sop-r14 .sb-summary-options label:has(input:disabled){color:var(--sb-muted)}
+#fm-connected-sop-r14 .sb-section-head{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:8px 10px}
+#fm-connected-sop-r14 .sb-simple-head{grid-template-columns:minmax(0,1fr) auto}
+#fm-connected-sop-r14 .sb-section-toggle{font-size:12px;justify-self:end;grid-column:-2/-1;grid-row:1}
+#fm-connected-sop-r14 .sb-float.sb-collapsed{position:static;box-shadow:none;border-radius:5px}
+#fm-connected-sop-r14 .sb-collapsed .sb-section-head{grid-template-columns:minmax(0,1fr) auto}
+#fm-connected-sop-r14 .sb-selector-intro{padding:0 12px}
+@media(max-width:600px){#fm-connected-sop-r14 .sb-section-head{grid-template-columns:minmax(0,1fr) auto}#fm-connected-sop-r14 .sb-section-head>.sb-view{grid-row:2;grid-column:1/-1;justify-self:end}}
+@media(pointer:coarse){#fm-connected-sop-r14 .sb-section-toggle{min-height:44px;min-width:44px}}
+#fm-connected-sop-r14 .sb-table .sb-summary-derived [data-derived-label],#fm-connected-sop-r14 .sb-table .sb-summary-derived td{color:var(--sb-muted);font-weight:400;background:var(--sb-panel)}
+#fm-connected-sop-r14 .sb-table .sb-summary-derived [data-derived-label]{padding-left:18px}
+#fm-connected-sop-r14 .sb-table .sb-summary-spacer td{height:6px;padding:0;border:0;background:var(--sb-bg);position:static}
+@media(pointer:coarse){#fm-connected-sop-r14 .sb-summary-options label{min-height:44px}}
+@media(max-width:600px){#fm-connected-sop-r14 .sb-choice-table .sb-source-context td{padding:9px 12px 12px}#fm-connected-sop-r14 .sb-choice-table .sb-source-context+.sb-source-context{border-top:1px solid var(--sb-line)}#fm-connected-sop-r14 .sb-choice-table .sb-source-context+.sb-source-context td{border-top:0;padding-top:9px}#fm-connected-sop-r14 .sb-choice-table .sb-source-channel+.sb-source-channel{border-top:1px solid var(--sb-line);margin-top:14px;padding-top:12px}#fm-connected-sop-r14 .sb-choice-table .sb-source-channel+.sb-source-channel tr:first-child td{border-top:0;padding-top:9px}#fm-connected-sop-r14 .sb-context-measures{grid-template-columns:repeat(2,minmax(0,1fr))}#fm-connected-sop-r14 .sb-source-context .sb-context-measures [data-measure="net"]{margin-top:0}}
+#fm-connected-sop-r14 .sb-focus-measure{display:inline;padding:0;border:0;border-radius:0;background:transparent;min-height:28px;text-align:left;font:inherit;color:inherit}
+#fm-connected-sop-r14 .sb-focus-measure:hover{text-decoration:underline;background:transparent}
+#fm-connected-sop-r14 .sb-plot path[data-series]{transition:opacity .1s,stroke-width .1s}
+@media(prefers-reduced-motion:reduce){#fm-connected-sop-r14 .sb-plot path[data-series]{transition:none}}
+@media(pointer:coarse){#fm-connected-sop-r14 .sb-focus-measure{min-height:44px}}
+</style>
+<div id="fm-connected-sop-r14" aria-label="ForecastMaster S&OP build-up design">
+ <div class="sb-shell">
+  <header class="sb-header"><div class="sb-brand"><span class="sb-mark" aria-hidden="true"></span><div><h1>ForecastMaster · S&amp;OP review</h1><div class="sb-sub">Channels on the left · your review on the right</div></div></div><span class="sb-preview">Design preview · sample data</span></header>
+  <main class="sb-main">
+   <div class="sb-row"><span class="sb-detail" id="sb-affiliate-caption">United Kingdom</span><div class="sb-months"><span>Review months</span><label>From <input type="month" id="sb-start" aria-label="First month" value="2026-01" min="2024-01" max="2029-12"></label><label>To <input type="month" id="sb-end" aria-label="Last month" value="2026-12" min="2024-01" max="2029-12"></label></div></div>
+   <div class="sb-filters" id="sb-filters"><div class="sb-field"><label class="sb-fieldlabel" for="sb-units">Display</label><select id="sb-units" style="width:100%"><option value="units">Selling units</option><option value="value">Value</option></select></div></div>
+   <div class="sb-detail" id="sb-cutoffs" aria-live="polite"></div>
+   <section class="sb-panel" aria-label="Growth driver and sector selection"><div class="sb-head"><h2>Growth drivers &amp; sectors</h2><div class="sb-inline"><input type="search" id="sb-scope-search" placeholder="Find driver or sector…" aria-label="Search drivers or sectors"><button type="button" id="sb-all-scope">Select all</button><button type="button" id="sb-clear-scope">Clear all</button></div></div><div class="sb-scope" id="sb-scope"></div><div class="sb-caption" id="sb-scope-caption" aria-live="polite"></div></section>
+   <div class="sb-panelbar"><div class="sb-current-choice" id="sb-measure-summary" aria-live="polite"></div></div>
+   <div class="sb-workspace" id="sb-workspace">
+   <aside class="sb-float" id="sb-channel-panel" aria-label="Cascading channel subchannel and measure selector">
+    <div class="sb-head sb-section-head sb-simple-head"><h2>Build your view</h2><button type="button" class="sb-section-toggle cursor-interaction" id="sb-panel-toggle" aria-label="Hide selector" aria-controls="sb-selector-body" aria-expanded="true">Hide</button></div>
+    <div id="sb-selector-body"><div class="sb-detail sb-selector-intro">Channel → Sub-channel → Measure</div><div class="sb-float-head"><input type="search" id="sb-row-search" placeholder="Find channel, sub-channel or measure…" aria-label="Search measures"><div class="sb-float-actions"><button type="button" id="sb-all-rows">Select all</button><button type="button" id="sb-clear-rows">Clear all</button></div></div><div class="sb-cascade-hint">Choose a channel, a source sub-channel (or blank), and a measure.</div><div id="sb-trees"></div><div class="sb-caption" id="sb-row-caption" aria-live="polite"></div></div>
+   </aside>
+   <div class="sb-content">
+   <section class="sb-panel" id="sb-graph-panel" aria-label="S&OP selected measure graphs">
+    <div class="sb-head sb-section-head"><h2>Trend view</h2><div class="sb-view" id="sb-graph-view" role="group" aria-label="Review presentation"><button type="button" data-grouping="combined" aria-pressed="true">Total</button><button type="button" data-grouping="driver" aria-pressed="false">Drivers</button><button type="button" data-grouping="sector" aria-pressed="false">Sectors</button></div><button type="button" class="sb-section-toggle cursor-interaction" id="sb-graph-toggle" aria-label="Hide graph" aria-controls="sb-graph-body" aria-expanded="true">Hide</button></div>
+    <div id="sb-graph-body"><div class="sb-caption" id="sb-graph-context"></div><div class="sb-charts" id="sb-charts"></div><div class="sb-legend" id="sb-legend"></div><div class="sb-caption" id="sb-chart-reading"></div></div>
+   </section>
+   <section class="sb-panel" id="sb-summary-panel" aria-label="S&OP summary">
+    <div class="sb-head sb-section-head"><h2>S&amp;OP summary</h2><div class="sb-view" id="sb-summary-view" role="group" aria-label="Table columns"><button type="button" data-table="periods" aria-pressed="true">FY / YTD / YTG</button><button type="button" data-table="monthly" aria-pressed="false">Monthly</button></div><button type="button" class="sb-section-toggle cursor-interaction" id="sb-summary-toggle" aria-label="Hide S&OP summary" aria-controls="sb-summary-body" aria-expanded="true">Hide</button></div>
+    <div id="sb-summary-body"><div class="sb-toolbar"><div class="sb-summary-periods" id="sb-summary-periods"></div><span class="sb-detail" id="sb-table-context"></span></div><div class="sb-summary-options"><label data-tooltip="Period amount per month, using each measure’s IMS or Ex-factory cutoff"><input type="checkbox" role="switch" id="sb-show-run-rate">Monthly run rate</label><label data-tooltip="Same-period prior-year growth for Market, Abbott IMS and ADS, matching the bridge summary"><input type="checkbox" role="switch" id="sb-show-growth">Growth vs PY</label></div><div class="sb-tablewrap"><table class="sb-table" id="sb-summary" aria-label="Selected S&OP measures by Channel and Sub-channel"></table></div><div class="sb-note">Source order · Run rate per month · Growth vs the same months last year · Source totals include their sub-channels.</div></div>
+   </section>
+   </div>
+   </div>
+   <footer class="sb-foot"><span>Illustrative data · saved ADS source binding follows the approved review-page design</span><span id="sb-live" aria-live="polite">Local interactions</span></footer>
+  </main>
+ </div>
+</div>
+<script>
+(() => {
+ const root=document.getElementById('fm-connected-sop-r14');if(!root)return;
+ const $=s=>root.querySelector(s),$$=s=>[...root.querySelectorAll(s)],esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const fx=document.getElementById('fm-connected-review-r14').planFX;
+ fx.mount($('.sb-header'),'sop');
+ const drivers={oral:'Core Oral',paed:'Paed SIP'};
+ const bridgeCatalog=/* BRIDGE_MEASURE_CATALOG */;
+ const summaryRules=/* SOP_SUMMARY_RULES */;
+ const sectors=[{id:'compact',name:'Compact',driver:'oral',base:440000,slope:4300,share:.18,price:6.2},{id:'juce',name:'Juce',driver:'oral',base:310000,slope:2300,share:.15,price:5.4},{id:'paed-standard',name:'Paed standard',driver:'paed',base:190000,slope:2300,share:.22,price:7.1},{id:'paed-energy',name:'Paed energy',driver:'paed',base:125000,slope:1400,share:.20,price:8.2}];
+ const leaves=['wholesaler','ni','homecare','hospital','hcl','competitor','nursing','private','internal','retail','unassigned'];
+ const contractLeaves=leaves.slice(2,9),communityLeaves=leaves.slice(0,2);
+ const rows=[
+  {id:'market',name:'IMS Market',group:'community',basis:'ims',color:1},
+  {id:'share',name:'Abbott share',group:'community',basis:'ims',ratio:true,color:2},
+  {id:'abbott',name:'Abbott IMS',group:'community',basis:'ims',color:2},
+  {id:'pi',name:'Parallel imports (PI)',group:'community',basis:'ims',hint:'Deduction from Abbott IMS',color:3},
+  {id:'net',name:'Abbott IMS minus PI',group:'community',basis:'ims',color:4},
+  {id:'community',name:'Community Ex-factory ADS',group:'community',basis:'ef',leafIds:communityLeaves,color:5},
+  {id:'wholesaler',name:'Wholesaler',group:'community',basis:'ef',parent:'community',leafIds:['wholesaler'],color:2},
+  {id:'ni',name:'Northern Ireland',group:'community',basis:'ef',parent:'community',leafIds:['ni'],color:3},
+  {id:'homecare',name:'Homecare',group:'contracts',basis:'ef',parent:'contracts',leafIds:['homecare'],color:1},
+  {id:'hospital',name:'Hospital',group:'contracts',basis:'ef',parent:'contracts',leafIds:['hospital'],color:5},
+  {id:'hcl',name:'Healthcare Logistics',group:'contracts',basis:'ef',parent:'contracts',leafIds:['hcl'],color:6},
+  {id:'competitor',name:'Competitor',group:'contracts',basis:'ef',parent:'contracts',leafIds:['competitor'],color:3},
+  {id:'nursing',name:'Nursing Home',group:'contracts',basis:'ef',parent:'contracts',leafIds:['nursing'],color:2},
+  {id:'private',name:'Private Order',group:'contracts',basis:'ef',parent:'contracts',leafIds:['private'],color:5},
+  {id:'internal',name:'Internal Account',group:'contracts',basis:'ef',parent:'contracts',leafIds:['internal'],color:6},
+  {id:'retail',name:'Retail · Out of Pocket',group:'retail',basis:'ef',leafIds:['retail'],color:6},
+  {id:'unassigned',name:'Unassigned',group:'unassigned',basis:'ef',leafIds:['unassigned'],color:3},
+  {id:'ads',name:'Total ADS · all channels',group:'all',basis:'ef',leafIds:leaves,color:1}
+ ];
+ const families=[{id:'community',name:'Community',parent:'community',total:'—'},{id:'contracts',name:'Contracts',parent:null},{id:'retail',name:'Out of Pocket',parent:'retail',total:'Retail'},{id:'unassigned',name:'Unassigned',parent:'unassigned',total:'Unassigned'},{id:'all',name:'Sector total',parent:'ads',total:'—'}];
+ const targetName=id=>{const b=bridgeCatalog.bindings.find(b=>b.id===id);return b?b.channel+(b.subChannel?' · '+b.subChannel:''):id;};
+ const allRows=rows,rowMap=new Map(rows.map(r=>[r.id,r]));
+ const bridgeOrder=bridgeCatalog.displayOrder;
+ const imsName=id=>({market:['Market units','Market value'],abbott:['Abbott IMS units','Abbott IMS value'],share:['Unit share %','Value share %'],pi:['PI units','PI value'],net:['IMS minus PI units','IMS minus PI value']}[id]||[id,id])[state.display==='value'?1:0];
+ const rowName=row=>row.basis==='ims'?(row.id==='share'?'Abbott '+(state.display==='value'?'value':'unit')+' share':imsName(row.id)):targetName(row.id)+' · ADS '+(state.display==='value'?'value':'units');
+ const contextFor=row=>row.basis==='ims'?'community':row.id;
+ const choiceLabel=row=>row.basis==='ims'?imsName(row.id):'ADS '+(state.display==='value'?'value':'units');
+ const cycles=[{id:'2026-10',name:'October 2026'},{id:'2026-07',name:'July 2026'}];
+ const periods=Array.from({length:6},(_,i)=>2024+i).flatMap(year=>['FY','YTD','YTG'].map(kind=>({id:year+':'+kind,name:year+' '+kind})));
+ const affiliates=[{id:'uk',name:'United Kingdom'}];
+ const defaults={affiliates:['uk'],cycles:['2026-10'],channels:[],targets:[],selectedMeasures:[],sectors:['compact','juce'],display:'units',grouping:'combined',chart:'lines',table:'periods',periods:['2026:FY','2026:YTD','2026:YTG'],monthStart:'2026-01',monthEnd:'2026-12',search:'',scopeSearch:'',panelOpen:true,graphOpen:true,summaryOpen:true,showRunRate:false,showGrowth:false};
+ const schema='fm-connected-gm-review-r14',saved=window.openai?.widgetState?.modelContent;
+ let state={...defaults,...(saved?.schema===schema?saved.state?.sop:{})};
+ for(const key of ['affiliates','cycles','channels','targets','selectedMeasures','sectors','periods'])state[key]=Array.isArray(state[key])?[...state[key]]:[...defaults[key]];
+ const rawCache=new Map(),pickers=new Map(),timings=[];
+ const monthIndex=iso=>(Number(iso.slice(0,4))-2024)*12+Number(iso.slice(5,7))-1;
+ const monthDate=t=>new Date(Date.UTC(2024+Math.floor(t/12),t%12,1));
+ const monthName=t=>monthDate(t).toLocaleDateString('en-GB',{month:'short',year:'2-digit',timeZone:'UTC'});
+ const cut=(cycle,basis)=>monthIndex(cycle)-(basis==='ims'?2:1);
+ const color=row=>getComputedStyle(root).getPropertyValue('--sb-s'+(row.id==='share'?4:row.color)).trim();
+ const sum=values=>values.length&&values.every(v=>typeof v==='number'&&Number.isFinite(v))?values.reduce((a,b)=>a+b,0):null;
+ const ratio=(n,d)=>n==null||d==null||d===0?null:n/d;
+ const numeric=v=>typeof v==='number'&&Number.isFinite(v);
+ const runRate=(value,months)=>numeric(value)&&Number.isInteger(months)&&months>0?value/months:null;
+ const growthRate=(current,prior)=>numeric(current)&&numeric(prior)&&prior!==0&&Number.isFinite(current/prior)?current/prior-1:null;
+ const fmt=(v,kind='amount',full=false)=>v==null||!Number.isFinite(v)?'—':kind==='ratio'?(v*100).toFixed(1)+'%':(state.display==='value'?fx.symbol():'')+(full?Math.round(v).toLocaleString('en-GB'):Math.abs(v)>=1e6?(v/1e6).toFixed(2)+'m':Math.abs(v)>=1e3?(v/1e3).toFixed(1)+'k':Math.round(v).toLocaleString('en-GB'));
+ function source(sector,t,cycle){
+  const key=sector.id+'|'+t+'|'+cycle;if(rawCache.has(key))return rawCache.get(key);
+  if(t<0||t>71)return null;
+  const market=(sector.base+sector.slope*t)*(1+.035*Math.sin((t%12-1)*Math.PI/6)),share=sector.share+.00038*t,abbott=market*share,pi=abbott*.04,net=abbott-pi;
+  const future=t>cut(cycle,'ef'),uplift=sector.driver==='oral'?.10:.06,valueUplift=sector.driver==='oral'?.14:.09;
+  const community=net*(future?1+uplift:1.035),communityValue=net*sector.price*(future?1+valueUplift:1.03);
+  const historicSplit=m=>.87+.012*Math.sin(m/3),past=Array.from({length:12},(_,i)=>cut(cycle,'ef')-11+i);
+  const historicalNet=m=>{const base=(sector.base+sector.slope*m)*(1+.035*Math.sin((m%12-1)*Math.PI/6));return base*(sector.share+.00038*m)*.96*1.035;};
+  const split=future?sum(past.map(m=>historicalNet(m)*historicSplit(m)))/sum(past.map(historicalNet)):historicSplit(t);
+  const contractDelta=future?(sector.driver==='oral'?1600:-350):0,shipment=future&&t%12===9?1200:0;
+  const u={market,abbott,pi,net,community,wholesaler:community*split,ni:community*(1-split),homecare:net*.22+contractDelta+shipment,hospital:net*.18+(future?(sector.driver==='oral'?-700:900):0),hcl:net*.025,competitor:net*.018,nursing:net*.032,private:net*.012,internal:net*.015,retail:net*.035,unassigned:net*.01};
+  u.contracts=sum(contractLeaves.map(id=>u[id]));u.ads=sum(leaves.map(id=>u[id]));
+  const v={};for(const [id,value]of Object.entries(u))v[id]=value*sector.price;
+  v.community=communityValue;v.wholesaler=communityValue*split;v.ni=communityValue*(1-split);
+  for(const id of contractLeaves)v[id]=u[id]*sector.price*1.04;
+  v.contracts=sum(contractLeaves.map(id=>v[id]));v.retail=u.retail*sector.price*.98;v.unassigned=u.unassigned*sector.price;v.ads=sum(leaves.map(id=>v[id]));
+  const result={units:u,value:v};rawCache.set(key,result);return result;
+ }
+ function groups(){
+  const selected=sectors.filter(s=>state.sectors.includes(s.id));
+  if(!selected.length)return [];
+  if(state.grouping==='sector')return selected.map(s=>({id:s.id,name:drivers[s.driver]+' · '+s.name,sectors:[s]}));
+  if(state.grouping==='driver')return Object.keys(drivers).map(id=>({id,name:drivers[id],sectors:selected.filter(s=>s.driver===id)})).filter(g=>g.sectors.length);
+  return [{id:'combined',name:Object.keys(drivers).filter(id=>selected.some(s=>s.driver===id)).map(id=>drivers[id]).join(' + ')+' · selected total',sectors:selected}];
+ }
+ const availableRows=()=>allRows;
+ const activeRows=()=>state.affiliates.includes('uk')?availableRows().filter(r=>state.channels.includes(r.group)&&state.targets.includes(contextFor(r))&&state.selectedMeasures.includes(r.id)).sort((a,b)=>bridgeOrder.indexOf(a.id)-bridgeOrder.indexOf(b.id)):[];
+ function localAmount(row,group,months,cycle){
+  if(!group.sectors.length||!months.length)return null;
+  const collect=id=>sum(group.sectors.flatMap(sector=>months.map(t=>source(sector,t,cycle)?.[state.display]?.[id]??null)));
+  if(row.id==='share')return ratio(collect('abbott'),collect('market'));
+  return collect(row.sourceId||row.id);
+ }
+ function amount(row,group,months,cycle){const value=localAmount(row,group,months,cycle);return state.display==='value'&&!row.ratio?fx.convert(value):value;}
+ function periodMonths(row,id,cycle){
+  const [year,kind]=id.split(':'),first=(Number(year)-2024)*12,month=((cut(cycle,row.basis)%12)+12)%12;
+  const start=kind==='YTG'?month+1:0,end=kind==='YTD'?month:11;
+  return Array.from({length:Math.max(0,end-start+1)},(_,i)=>first+start+i);
+ }
+ function chartMonths(){return Array.from({length:Math.max(0,monthIndex(state.monthEnd)-monthIndex(state.monthStart)+1)},(_,i)=>monthIndex(state.monthStart)+i);}
+ const availablePeriods=()=>periods.filter(p=>Number(p.id.slice(0,4))>=Number(state.monthStart.slice(0,4))&&Number(p.id.slice(0,4))<=Number(state.monthEnd.slice(0,4)));
+ function reconcileSummaryPeriods(){
+  const options=availablePeriods(),before=state.periods,valid=new Set(options.map(p=>p.id));
+  state.periods=before.filter(id=>valid.has(id));
+  if(before.length&&!state.periods.length){const kinds=new Set(before.map(id=>id.split(':')[1]));state.periods=options.filter(p=>kinds.has(p.id.split(':')[1])).map(p=>p.id);}
+ }
+ function persist(){document.getElementById('fm-connected-review-r14')?.reviewSession?.changed('sop',state);}
+ function picker(parent,key,label,options){
+  const currentOptions=()=>typeof options==='function'?options():options;let optionSignature='';
+  const node=document.createElement('div');node.className='sb-field';node.dataset.filter=key;
+  node.innerHTML='<span class="sb-fieldlabel" id="sb-label-'+key+'">'+label+'</span><button type="button" class="sb-pick" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="sb-label-'+key+' sb-value-'+key+'"><span id="sb-value-'+key+'"></span><span aria-hidden="true">▾</span></button><div class="sb-popup" role="dialog" aria-label="'+label+' choices" hidden><input type="search" aria-label="Search '+label.toLowerCase()+'" placeholder="Search…"><div class="sb-options"></div></div>';
+  parent.append(node);const button=node.querySelector('button'),popup=node.querySelector('.sb-popup'),search=node.querySelector('input'),list=node.querySelector('.sb-options');
+  function caption(){const items=currentOptions(),selected=items.filter(o=>state[key].includes(o.id));button.firstElementChild.textContent=key==='periods'&&selected.length?selected.map((o,i)=>i&&selected[i-1].name.slice(0,4)===o.name.slice(0,4)?o.name.slice(5):o.name).join(' · '):selected.length===1?selected[0].name:selected.length===items.length&&items.length?'All '+({affiliates:'affiliates',sections:'sections',cycles:'demand cycles',periods:'summary periods'}[key]||label.toLowerCase()):selected.length?selected.length+' selected':'Choose '+label.toLowerCase();button.dataset.tooltip=selected.map(o=>o.name).join(' · ')||'No selection';const signature=items.map(o=>o.id).join('|');if(!popup.hidden&&signature!==optionSignature)choices();}
+  function choices(){const items=currentOptions(),q=search.value.toLowerCase();optionSignature=items.map(o=>o.id).join('|');list.innerHTML=items.filter(o=>o.name.toLowerCase().includes(q)).map(o=>'<label class="sb-option"><input type="checkbox" value="'+o.id+'" '+(state[key].includes(o.id)?'checked':'')+'>'+esc(o.name)+'</label>').join('')||'<div class="sb-detail">No matching choices</div>';list.querySelectorAll('input').forEach(input=>input.addEventListener('change',()=>{state[key]=input.checked?[...new Set([...state[key],input.value])]:state[key].filter(id=>id!==input.value);update();}));}
+  function close(){popup.hidden=true;button.setAttribute('aria-expanded','false');}
+  button.addEventListener('click',()=>{const open=popup.hidden;pickers.forEach(p=>p.close());if(open){search.value='';choices();popup.hidden=false;button.setAttribute('aria-expanded','true');const rect=node.getBoundingClientRect(),bounds=root.getBoundingClientRect();popup.style.left=rect.left+270>bounds.right?'auto':'0';popup.style.right=rect.left+270>bounds.right?'0':'auto';search.focus();}});
+  node.addEventListener('keydown',event=>{if(event.key==='Escape'){close();button.focus();}});search.addEventListener('input',choices);pickers.set(key,{caption,close,node});caption();
+ }
+ const filterBox=$('#sb-filters');picker(filterBox,'affiliates','Affiliate',affiliates);picker(filterBox,'cycles','Demand cycle',cycles);picker($('#sb-summary-periods'),'periods','Summary periods',availablePeriods);
+ filterBox.prepend(pickers.get('cycles').node);filterBox.prepend(pickers.get('affiliates').node);
+ root.addEventListener('pointerdown',event=>pickers.forEach(p=>{if(!p.node.contains(event.target))p.close();}));
+ function renderScope(){
+  const q=state.scopeSearch.trim().toLowerCase();
+  $('#sb-scope').innerHTML=Object.entries(drivers).filter(([id,name])=>(name+' '+sectors.filter(s=>s.driver===id).map(s=>s.name).join(' ')).toLowerCase().includes(q)).map(([id,name])=>{const children=sectors.filter(s=>s.driver===id),count=children.filter(s=>state.sectors.includes(s.id)).length;return '<div><label class="sb-check sb-parent"><input type="checkbox" data-driver="'+id+'" data-partial="'+(count>0&&count<children.length)+'" '+(count===children.length?'checked':'')+'>'+name+'</label><div class="sb-children">'+children.filter(s=>(name+' '+s.name).toLowerCase().includes(q)).map(s=>'<label class="sb-check"><input type="checkbox" data-sector="'+s.id+'" '+(state.sectors.includes(s.id)?'checked':'')+'>'+s.name+'</label>').join('')+'</div></div>';}).join('')||'<div class="sb-detail">No matching drivers or sectors</div>';
+  $$('[data-driver]').forEach(input=>{input.indeterminate=input.dataset.partial==='true';input.addEventListener('change',()=>{const ids=sectors.filter(s=>s.driver===input.dataset.driver).map(s=>s.id);state.sectors=input.checked?[...new Set([...state.sectors,...ids])]:state.sectors.filter(id=>!ids.includes(id));update();});});
+  $$('[data-sector]').forEach(input=>input.addEventListener('change',()=>{state.sectors=input.checked?[...new Set([...state.sectors,input.dataset.sector])]:state.sectors.filter(id=>id!==input.dataset.sector);update();}));
+  $('#sb-scope-caption').textContent=state.sectors.length+' of '+sectors.length+' sectors selected · graph and table share this scope';
+ }
+ function renderTree(){
+  const q=state.search.trim().toLowerCase(),focused=document.activeElement?.dataset.controlKey;
+  const match=text=>String(text).toLowerCase().includes(q);
+  const choice=(type,id,label,selected,enabled,full)=>'<button type="button" class="sb-choose cursor-interaction" data-'+type+'="'+id+'" data-control-key="'+type+'-'+id+'" aria-pressed="'+Boolean(enabled&&selected)+'" '+(enabled?'':'disabled')+' aria-label="'+esc(label==='—'?'No sub-channel':full||label)+'" data-tooltip="'+esc(label==='—'?'No sub-channel':full||label)+'"><span class="sb-choose-state" aria-hidden="true">'+(enabled&&selected?'✓':'＋')+'</span><span>'+esc(label)+'</span></button>';
+  let bands='';const seenFamilies=new Set(),segments=[];
+  for(const target of bridgeOrder.map(id=>rowMap.get(id)).filter(r=>r.basis==='ef')){const last=segments.at(-1);if(last?.id===target.group)last.targets.push(target);else segments.push({id:target.group,targets:[target]});}
+  for(const segment of segments){
+   const family=families.find(f=>f.id===segment.id),on=state.channels.includes(family.id),targets=segment.targets;
+   const contexts=targets.map(target=>({target,measures:bridgeOrder.map(id=>rowMap.get(id)).filter(r=>contextFor(r)===target.id)})).filter(c=>match(family.name+' '+targetName(c.target.id))||c.measures.some(r=>match(choiceLabel(r))));
+   if(!contexts.length)continue;const continued=seenFamilies.has(family.id);if(!on&&continued)continue;seenFamilies.add(family.id);
+   const visible=on?contexts:[null];let familyHtml='';
+   for(const [index,context]of visible.entries()){
+    const target=context?.target,ready=on&&state.targets.includes(target?.id);
+    const selectedCount=activeRows().filter(r=>r.group===family.id).length;
+    const channelCell=index===0?'<td class="sb-channel-cell" data-column-label="Channel" rowspan="'+visible.length+'">'+(continued?'<span class="sb-channel-continuation">'+esc(family.name)+'<small>continued in source order</small></span>':choice('channel',family.id,family.name,on,true,family.name)+'<div class="sb-choice-caption">'+(on?selectedCount+' selected measures':'Channel off')+'</div>')+'</td>':'';
+    let subchannelCell='<span class="sb-inactive-hint">Choose channel first</span>',measureCell='<span class="sb-inactive-hint">Choose channel first</span>';
+    if(target){
+     const binding=bridgeCatalog.bindings.find(b=>b.id===target.id),label=binding.subChannel??'—';
+     subchannelCell='<div class="sb-context-label">'+choice('target',target.id,label,state.targets.includes(target.id),on,targetName(target.id)+(binding.subChannel==null?' · blank sub-channel':''))+(binding.subChannel==null?'<span class="sb-choice-caption">'+esc(family.id==='community'?family.name+' total':family.name)+'</span>':'')+'</div>';
+     const shown=context.measures.filter(r=>match(family.name+' '+targetName(target.id))||match(choiceLabel(r)));
+     measureCell='<div class="sb-context-measures" data-measures-for="'+target.id+'">'+shown.map(row=>{const binding=bridgeCatalog.bindings.find(b=>b.id===row.id);return choice('measure',row.id,choiceLabel(row),state.selectedMeasures.includes(row.id),ready,targetName(target.id)+' · '+binding[state.display].measure);}).join('')+(!ready?'<span class="sb-choice-caption">Choose this Sub-channel first</span>':'')+'</div>';
+    }
+    familyHtml+='<tr class="sb-source-context" '+(target?'data-source-context="'+target.id+'"':'')+'>'+channelCell+'<td data-column-label="Sub-channel">'+subchannelCell+'</td><td data-column-label="Measure">'+measureCell+'</td></tr>';
+   }
+   bands+='<tbody class="sb-source-channel" data-channel-band="'+family.id+'">'+familyHtml+'</tbody>';
+  }
+  $('#sb-trees').innerHTML='<table class="sb-choice-table" aria-label="Aligned bridge channel subchannel and measure toggles"><colgroup><col style="width:26%"><col style="width:32%"><col style="width:42%"></colgroup><thead><tr><th scope="col">Channel</th><th scope="col">Sub-channel</th><th scope="col">Measure</th></tr></thead>'+bands+'</table>'+(bands?'':'<div class="sb-empty">No matching choices</div>');
+  const toggle=(key,id)=>{state[key]=state[key].includes(id)?state[key].filter(x=>x!==id):[...state[key],id];update();};
+  $$('[data-channel]').forEach(b=>b.addEventListener('click',()=>toggle('channels',b.dataset.channel)));
+  $$('[data-target]').forEach(b=>b.addEventListener('click',()=>toggle('targets',b.dataset.target)));
+  $$('[data-measure]').forEach(b=>b.addEventListener('click',()=>toggle('selectedMeasures',b.dataset.measure)));
+  if(focused)$$('[data-control-key]').find(b=>b.dataset.controlKey===focused&&!b.disabled)?.focus({preventScroll:true});
+  $('#sb-all-rows').textContent=q?'Select matches':'Select all';
+  $('#sb-row-caption').textContent=activeRows().length+' rows shown · Each Measure belongs to the Sub-channel on its row';
+  $('#sb-measure-summary').innerHTML=activeRows().length?'<strong>In your review</strong> · '+esc(activeRows().slice(0,3).map(rowName).join(' · '))+(activeRows().length>3?' · +'+(activeRows().length-3)+' more':''):'<strong>Choose a Channel, source Sub-channel (or blank), and Measure</strong>';
+ }
+ function buildComponents(selected=activeRows()){
+  const selectedEF=selected.filter(r=>r.leafIds),map=new Map();
+  for(const leaf of leaves){const owner=selectedEF.filter(r=>r.leafIds.includes(leaf)).sort((a,b)=>a.leafIds.length-b.leafIds.length)[0];if(!owner)continue;if(!map.has(owner.id))map.set(owner.id,{...owner,assigned:[]});map.get(owner.id).assigned.push(leaf);}
+  return [...map.values()].map(r=>({...r,label:r.name+(r.assigned.length<r.leafIds.length?' · remaining':'')}));
+ }
+ function drawPlot(plot,group,cycle,selected,kind){
+  const width=Math.floor(plot.getBoundingClientRect().width),height=250;if(width<120)return;
+  const hasAmount=selected.some(r=>!r.ratio),hasRatio=selected.some(r=>r.ratio);
+  const months=chartMonths(),m={l:hasAmount?67:24,r:hasRatio?62:18,t:29,b:44},last=months.at(-1),first=months[0];if(first==null)return;
+  const lines=selected.map(row=>({row,points:months.map(t=>({x:t,y:amount(row,group,[t],cycle)}))}));
+  const values=lines.flatMap(s=>s.points.map(p=>p.y)).filter(v=>v!=null&&Number.isFinite(v));
+  if(!values.length){plot.innerHTML='<div class="sb-empty">'+(state.display==='value'&&fx.missing(state.affiliates).length?'Plan rate required for USD · open Plan rates above.':'No complete values for this selection')+'</div>';return;}
+  const scale=ratioRows=>{const extent=d3.extent(lines.filter(s=>Boolean(s.row.ratio)===ratioRows).flatMap(s=>s.points.map(p=>p.y)).filter(v=>v!=null&&Number.isFinite(v)));if(extent[0]==null)return null;const pad=Math.max((extent[1]-extent[0])*.1,Math.abs(extent[1])*.04,.00001);return d3.scaleLinear().domain([extent[0]<0?extent[0]-pad:Math.max(0,extent[0]-pad),extent[1]+pad]).range([height-m.b,m.t]);};
+  const amountY=scale(false),ratioY=scale(true),axisY=amountY||ratioY;
+  const yFor=row=>row.ratio?ratioY:amountY;
+  const inset=4;
+  const x=d3.scaleLinear().domain(first===last?[first-.5,last+.5]:[first,last]).range([m.l+inset,width-m.r-inset]);
+  const svg=d3.create('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',group.name+' · selected S&OP measures'+(hasRatio?' · percentages on right axis':''));
+  svg.append('title').text(group.name+' · selected S&OP measures');
+  svg.append('desc').text('Amounts use the left axis. Share uses the right percentage axis. Solid lines are actuals; dashed lines are forecast. Each series follows its own IMS or EF cutoff.');
+  const clip='sb-clip-'+cycle+'-'+group.id+'-'+kind;
+  svg.append('defs').append('clipPath').attr('id',clip).append('rect').attr('x',m.l).attr('y',m.t).attr('width',width-m.l-m.r).attr('height',height-m.t-m.b);
+  if(amountY)svg.append('text').attr('class','axis-title').attr('data-axis','y').attr('x',m.l).attr('y',15).text(state.display==='value'?(width<400?fx.code():'Value ('+fx.code()+')'):(width<400?'Units':'Selling units'));
+  if(ratioY)svg.append('text').attr('class','axis-title').attr('data-axis','y-right').attr('x',width-m.r).attr('y',15).attr('text-anchor','end').text(width<400?'%':(state.display==='value'?'Value':'Unit')+' share (%)');
+  const ticks=axisY.ticks(4);const grid=svg.append('g').attr('class','sb-grid');ticks.forEach(v=>grid.append('line').attr('x1',m.l).attr('x2',width-m.r).attr('y1',axisY(v)).attr('y2',axisY(v)));
+  if(amountY)svg.append('g').attr('data-value-axis','left').attr('transform',`translate(${m.l},0)`).call(d3.axisLeft(amountY).ticks(4).tickSize(0).tickPadding(8).tickFormat(v=>fmt(v)));
+  if(ratioY)svg.append('g').attr('data-value-axis','right').attr('transform',`translate(${width-m.r},0)`).call(d3.axisRight(ratioY).ticks(4).tickSize(0).tickPadding(8).tickFormat(v=>(v*100).toFixed(1)+'%'));
+  const count=width<400?3:width<700?5:7,xt=[...new Set(Array.from({length:Math.min(count,months.length)},(_,i)=>months[Math.round(i*(months.length-1)/Math.max(1,Math.min(count,months.length)-1))]))];
+  const axis=svg.append('g').attr('transform',`translate(0,${height-m.b})`).call(d3.axisBottom(x).tickValues(xt).tickSize(0).tickPadding(10).tickFormat(monthName));axis.selectAll('.tick text').attr('text-anchor',(t,i)=>i===0?'start':i===xt.length-1?'end':'middle');
+  svg.append('rect').attr('data-chart-frame','').attr('x',m.l).attr('y',m.t).attr('width',width-m.l-m.r).attr('height',height-m.t-m.b).attr('fill','none').attr('stroke','var(--sb-line)');
+  svg.append('text').attr('class','axis-title').attr('data-axis','x').attr('x',(m.l+width-m.r)/2).attr('y',height-3).attr('text-anchor','middle').text('Demand month');
+  const marks=svg.append('g').attr('clip-path',`url(#${clip})`);
+  const cutoffs=[...new Set(selected.map(r=>cut(cycle,r.basis)))];cutoffs.forEach(c=>{if(c>=first&&c<last)marks.append('line').attr('x1',x(c+.5)).attr('x2',x(c+.5)).attr('y1',m.t).attr('y2',height-m.b).attr('stroke','var(--sb-muted)').attr('stroke-dasharray','3 5');});
+  for(const series of lines){const line=d3.line().defined(p=>p.y!=null).x(p=>x(p.x)).y(p=>yFor(series.row)(p.y));for(const forecast of [false,true]){const c=cut(cycle,series.row.basis),points=series.points.map(p=>({...p,y:(forecast?p.x>=c:p.x<=c)?p.y:null}));marks.append('path').datum(points).attr('data-series',series.row.id).attr('data-axis',series.row.ratio?'right':'left').attr('data-kind',forecast?'forecast':'actual').attr('d',line).attr('fill','none').attr('stroke',color(series.row)).attr('stroke-width',1.8).attr('stroke-dasharray',forecast?'6 4':null);}}
+  const hover=svg.append('g').attr('pointer-events','none');
+  const overlay=svg.append('rect').attr('data-chart-hit','').attr('data-chart-hover-overlay','cross-series').attr('x',m.l).attr('y',m.t).attr('width',width-m.l-m.r).attr('height',height-m.t-m.b).attr('fill','transparent');
+  plot.replaceChildren(svg.node());const tip=document.createElement('div');tip.className='sb-tooltip';tip.setAttribute('role','tooltip');tip.hidden=true;plot.append(tip);let pinned=false;
+  function show(event){const rect=plot.getBoundingClientRect(),px=Math.max(m.l,Math.min(width-m.r,event.clientX-rect.left)),t=x.invert(px),i=Math.max(0,Math.min(months.length-1,Math.floor(t-first))),a=t-first-i;hover.selectAll('*').remove();hover.append('line').attr('data-chart-hover-guide','').attr('x1',px).attr('x2',px).attr('y1',m.t).attr('y2',height-m.b).attr('stroke','var(--sb-muted)');const entries=[];
+   for(const s of lines){const one=s.points[i],two=s.points[Math.min(i+1,s.points.length-1)];if(one?.y==null||two?.y==null)continue;const value=one.y+(two.y-one.y)*a;entries.push({name:rowName(s.row)+(s.row.ratio?' · right axis':''),value,ratio:s.row.ratio});hover.append('circle').attr('data-chart-hover-marker',s.row.id).attr('data-axis',s.row.ratio?'right':'left').attr('cx',px).attr('cy',yFor(s.row)(value)).attr('r',3).attr('fill',color(s.row));}
+   tip.innerHTML='<strong>'+monthName(Math.round(t))+'</strong>'+entries.map(e=>'<div><span>'+esc(e.name)+'</span><span>'+fmt(e.value,e.ratio?'ratio':'amount',true)+'</span></div>').join('');tip.hidden=!entries.length;tip.style.left=Math.max(4,Math.min(width-tip.offsetWidth-4,px+12))+'px';tip.style.top=Math.max(22,Math.min(height-tip.offsetHeight-5,event.clientY-rect.top-15))+'px';
+  }
+  overlay.on('pointermove',event=>{if(!pinned)show(event);}).on('pointerleave',()=>{if(!pinned){hover.selectAll('*').remove();tip.hidden=true;}}).on('pointerdown',event=>{pinned=!pinned;show(event);});
+ }
+ function renderCharts(){
+  if(!state.graphOpen||root.closest('[hidden]'))return;
+  const selected=activeRows(),scope=groups(),box=$('#sb-charts');box.replaceChildren();
+  $('#sb-graph-context').textContent=(state.display==='value'?'Value in '+fx.label():'Selling units')+' · '+monthName(monthIndex(state.monthStart))+'–'+monthName(monthIndex(state.monthEnd))+' · Selected totals and sub-channels';
+  if(!selected.length||!scope.length||!state.cycles.length){box.innerHTML='<div class="sb-empty">Choose Affiliate, cycle, driver or sector, then Channel, source Sub-channel (or blank) and Measure.</div>';$('#sb-legend').replaceChildren();return;}
+  for(const cycle of state.cycles)for(const group of scope){
+   const panels=[{kind:selected.some(r=>!r.ratio)?'amount':'ratio',rows:selected,label:'Selected measures'}];
+   for(const panel of panels){if(!panel.rows.length)continue;const block=document.createElement('div');block.className='sb-plot-block';const title=document.createElement('div');title.className='sb-plot-title';title.textContent=panel.label+' · '+group.name+(state.cycles.length>1?' · '+cycle:'');block.append(title);const plot=document.createElement('div');plot.className='sb-plot';plot.dataset.group=group.id;plot.dataset.cycle=cycle;plot.dataset.kind=panel.kind;block.append(plot);box.append(block);drawPlot(plot,group,cycle,panel.rows,panel.kind);}
+  }
+  const legendRows=selected;
+  $('#sb-legend').innerHTML=legendRows.map(row=>'<button type="button" data-toggle-row="'+row.id+'" aria-pressed="true" data-tooltip="'+esc('Turn off '+rowName(row))+'"><span class="sb-swatch" style="--sb-series:'+color(row)+'"></span>'+esc(rowName(row)+(row.ratio?' · right axis':''))+'</button>').join('');
+  $('#sb-chart-reading').textContent='Solid: actuals · Dashed: forecast'+(selected.some(r=>r.ratio)?' · Share: right % axis':'');
+  $$('[data-toggle-row]').forEach(button=>button.addEventListener('click',()=>{state.selectedMeasures=state.selectedMeasures.filter(id=>id!==button.dataset.toggleRow);update();}));
+ }
+ function tableColumns(){return state.table==='monthly'?chartMonths().map(t=>({id:'month:'+t,name:monthName(t),month:t})):availablePeriods().filter(p=>state.periods.includes(p.id));}
+ const summaryMonths=(row,column,cycle)=>column.month!=null?[column.month]:periodMonths(row,column.id,cycle);
+ function summaryValue(row,group,column,cycle,kind='amount'){
+  const months=summaryMonths(row,column,cycle),current=amount(row,group,months,cycle);
+  if(kind==='amount')return current;
+  if(kind==='run-rate')return summaryRules.runRateEligibleIds.includes(row.id)&&state.table!=='monthly'?runRate(current,months.length):null;
+  if(kind==='growth')return summaryRules.growthEligibleIds.includes(row.id)?growthRate(localAmount(row,group,months,cycle),localAmount(row,group,months.map(t=>t-12),cycle)):null;
+  return null;
+ }
+ function summaryEntries(selected){
+  const entries=[];
+  for(const [index,row]of selected.entries()){
+   const binding=bridgeCatalog.bindings.find(b=>b.id===row.id),contextKey=binding.channel+'|'+contextFor(row),channelKey=binding.channel;
+   const kinds=['amount'];
+   if(state.showRunRate&&state.table!=='monthly'&&summaryRules.runRateEligibleIds.includes(row.id))kinds.push('run-rate');
+   if(state.showGrowth&&summaryRules.growthEligibleIds.includes(row.id))kinds.push('growth');
+   kinds.forEach(kind=>entries.push({row,binding,kind,contextKey,channelKey}));
+   const next=selected[index+1];
+   if(next){
+    const nextBinding=bridgeCatalog.bindings.find(b=>b.id===next.id),sameChannel=binding.channel===nextBinding.channel,sameContext=contextFor(row)===contextFor(next);
+    entries.push({spacer:true,boundary:!sameChannel?'channel':!sameContext?'subchannel':'measure',channelKey:sameChannel?channelKey:null,contextKey:sameChannel&&sameContext?contextKey:null});
+   }
+  }
+  return entries;
+ }
+ function renderTable(){
+  const selected=activeRows(),scope=groups(),cols=tableColumns(),table=$('#sb-summary');
+  $('#sb-show-run-rate').checked=state.showRunRate;$('#sb-show-run-rate').disabled=state.table==='monthly';$('#sb-show-run-rate').parentElement.dataset.tooltip=state.table==='monthly'?'Already one month per column':'Period amount per month, using each measure’s IMS or Ex-factory cutoff';$('#sb-show-growth').checked=state.showGrowth;
+  $('#sb-table-context').textContent=(state.table==='monthly'?'Monthly · Review months':'Years follow review months · FY is Jan–Dec')+' · '+(state.display==='value'?fx.label()+'; Share in %':'Selling units; Share in %');
+  const showScope=scope.length>1||state.cycles.length>1;
+  table.style.minWidth=((showScope?102:0)+332+cols.length*78)+'px';
+  let html='<colgroup>'+(showScope?'<col style="width:102px">':'')+'<col style="width:94px"><col style="width:110px"><col style="width:128px">'+cols.map(()=>'<col style="width:78px">').join('')+'</colgroup><thead><tr>'+(showScope?'<th scope="col">Review scope</th>':'')+'<th scope="col">Channel</th><th scope="col">Sub-channel</th><th scope="col">Measure</th>'+cols.map(c=>'<th scope="col">'+esc(c.name)+'</th>').join('')+'</tr></thead><tbody>';
+  let scopeNumber=0;
+  for(const cycle of state.cycles)for(const group of scope){
+   const entries=summaryEntries(selected);
+   const span=(start,key)=>{let end=start+1;while(end<entries.length&&entries[end][key]===entries[start][key])end++;return end-start;};
+   if(scopeNumber++&&selected.length)html+='<tr class="sb-summary-spacer" data-spacing="scope" aria-hidden="true"><td colspan="'+(cols.length+3+(showScope?1:0))+'"></td></tr>';
+   for(const [index,entry]of entries.entries()){
+    if(entry.spacer){const occupied=(showScope?1:0)+(entry.channelKey!=null?1:0)+(entry.contextKey!=null?1:0);html+='<tr class="sb-summary-spacer" data-spacing="'+entry.boundary+'" aria-hidden="true"><td colspan="'+(cols.length+3+(showScope?1:0)-occupied)+'"></td></tr>';continue;}
+    const {row,binding,kind}=entry,previous=entries[index-1],channelStart=!previous||previous.channelKey!==entry.channelKey,contextStart=!previous||previous.contextKey!==entry.contextKey;
+    html+='<tr '+(kind==='amount'?'data-row':'data-derived-row')+'="'+row.id+'" data-summary-kind="'+kind+'" data-group="'+group.id+'" data-cycle="'+cycle+'" data-basis="'+row.basis+'" class="'+(contextStart?'sb-context-start ':'')+(kind==='amount'?(row.id==='ads'?'sb-summary-total':''):'sb-summary-derived')+'">';
+    if(showScope&&index===0)html+='<th class="sb-summary-scope" scope="rowgroup" rowspan="'+entries.length+'">'+esc(group.name)+(state.cycles.length>1?'<small>'+esc(cycle)+'</small>':'')+'</th>';
+    if(channelStart)html+='<th class="sb-summary-channel" scope="rowgroup" rowspan="'+span(index,'channelKey')+'" data-summary-channel="'+esc(binding.channel)+'">'+esc(binding.channel)+'</th>';
+    if(contextStart)html+='<th class="sb-summary-subchannel" scope="rowgroup" rowspan="'+span(index,'contextKey')+'" data-summary-context="'+contextFor(row)+'" data-tooltip="'+esc(binding.subChannel??'No sub-channel')+'">'+esc(binding.subChannel??'—')+'</th>';
+    const label=kind==='amount'?choiceLabel(row):kind==='run-rate'?'Monthly run rate':'Growth vs PY';
+    html+='<th scope="row" '+(kind==='amount'?'data-measure-label':'data-derived-label')+' data-tooltip="'+esc(kind==='amount'?binding[state.display].measure+' · '+(row.basis==='ims'?'IMS':'EF')+' calendar'+(state.display==='value'&&!row.ratio?' · '+fx.label():''):kind==='run-rate'?(state.display==='value'?fx.label():'Selling units')+' per month':'Complete local-currency amount versus the same months last year; independent of FX')+'"><button type="button" class="sb-focus-measure cursor-interaction" data-focus-measure="'+row.id+'" aria-label="'+esc('Highlight '+rowName(row)+' in the graph')+'">'+esc(label)+'</button></th>';
+    for(const col of cols){const months=summaryMonths(row,col,cycle),value=summaryValue(row,group,col,cycle,kind),dates=months.length?monthName(months[0])+'–'+monthName(months.at(-1)):'No months',percentage=kind==='growth'||row.ratio,formatted=(kind==='growth'&&value>0?'+':'')+fmt(value,percentage?'ratio':'amount'),detail=kind==='run-rate'?dates+' · '+months.length+' months · per month':kind==='growth'?dates+' versus '+(months.length?monthName(months[0]-12)+'–'+monthName(months.at(-1)-12):'No prior months'):dates;html+='<td data-column="'+col.id+'" data-value="'+(value==null?'':value)+'" data-tooltip="'+esc(detail+' · '+fmt(value,percentage?'ratio':'amount',true))+'">'+formatted+'</td>';}
+    html+='</tr>';
+   }
+  }
+  if(!selected.length||!scope.length||!cols.length||!state.cycles.length)html+='<tr><td colspan="'+(cols.length+3+(showScope?1:0))+'" class="sb-empty">Select a cycle, driver or sector, measures and summary periods.</td></tr>';
+  table.innerHTML=html+'</tbody>';
+ }
+ const visibilitySections=[
+  {key:'panelOpen',panel:'#sb-channel-panel',body:'#sb-selector-body',button:'#sb-panel-toggle',label:'selector'},
+  {key:'graphOpen',panel:'#sb-graph-panel',body:'#sb-graph-body',button:'#sb-graph-toggle',view:'#sb-graph-view',label:'graph'},
+  {key:'summaryOpen',panel:'#sb-summary-panel',body:'#sb-summary-body',button:'#sb-summary-toggle',view:'#sb-summary-view',label:'S&OP summary'}
+ ];
+ function renderVisibility(){
+  for(const section of visibilitySections){
+   const open=state[section.key]!==false;state[section.key]=open;
+   $(section.body).hidden=!open;$(section.panel).classList.toggle('sb-collapsed',!open);
+   if(section.view)$(section.view).hidden=!open;
+   const button=$(section.button);button.textContent=open?'Hide':'Show';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',(open?'Hide ':'Show ')+section.label);
+  }
+  $('#sb-workspace').classList.toggle('sb-wide-content',!state.panelOpen);
+ }
+ function update(save=true){
+  state.chart='lines';
+  for(const key of ['affiliates','cycles','channels','targets','selectedMeasures','sectors','periods'])state[key]=Array.isArray(state[key])?[...new Set(state[key])]:[...defaults[key]];
+  reconcileSummaryPeriods();
+  state.affiliates=state.affiliates.filter(id=>affiliates.some(a=>a.id===id));
+  fx.render('sop',state);
+  state.showRunRate=Boolean(state.showRunRate);state.showGrowth=Boolean(state.showGrowth);
+  state.channels=state.channels.filter(id=>families.some(f=>f.id===id));state.targets=state.targets.filter(id=>rows.some(r=>r.basis==='ef'&&r.id===id));state.selectedMeasures=state.selectedMeasures.filter(id=>rowMap.has(id));
+  const start=performance.now();pickers.forEach(p=>p.caption());$('#sb-units').value=state.display;$('#sb-start').value=state.monthStart;$('#sb-end').value=state.monthEnd;$('#sb-row-search').value=state.search;$('#sb-scope-search').value=state.scopeSearch;
+  $$('[data-grouping]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.grouping===state.grouping)));
+  renderVisibility();
+  $$('[data-chart]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.chart===state.chart)));$$('[data-table]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.table===state.table)));
+  $('#sb-affiliate-caption').textContent=affiliates.filter(a=>state.affiliates.includes(a.id)).map(a=>a.name).join(' · ')||'Choose an Affiliate';
+  $('#sb-cutoffs').textContent=state.cycles.map(c=>c+' · IMS through '+monthName(cut(c,'ims'))+' · Ex-factory through '+monthName(cut(c,'ef'))).join(' | ')+' · Sample data';
+  renderScope();renderTree();renderCharts();renderTable();$('#sb-live').textContent='Illustrative data · local selections';if(save)persist();timings.push(performance.now()-start);if(timings.length>40)timings.shift();
+ }
+ $('#sb-units').addEventListener('change',e=>{state.display=e.target.value;update();});
+ $('#sb-show-run-rate').addEventListener('change',e=>{state.showRunRate=e.target.checked;renderTable();persist();});
+ $('#sb-show-growth').addEventListener('change',e=>{state.showGrowth=e.target.checked;renderTable();persist();});
+ $$('[data-grouping]').forEach(b=>b.addEventListener('click',()=>{state.grouping=b.dataset.grouping;update();}));
+ $('#sb-all-scope').addEventListener('click',()=>{state.sectors=sectors.map(s=>s.id);update();});$('#sb-clear-scope').addEventListener('click',()=>{state.sectors=[];update();});
+ $('#sb-all-rows').addEventListener('click',()=>{
+  const q=state.search.trim().toLowerCase(),match=text=>String(text).toLowerCase().includes(q),add=(key,id)=>{if(!state[key].includes(id))state[key]=[...state[key],id];};
+  for(const row of availableRows().filter(r=>match(targetName(contextFor(r))+' '+choiceLabel(r)))){add('channels',row.group);add('targets',contextFor(row));add('selectedMeasures',row.id);}
+  update();
+ });$('#sb-clear-rows').addEventListener('click',()=>{state.channels=[];state.targets=[];state.selectedMeasures=[];update();});
+ $('#sb-row-search').addEventListener('input',e=>{state.search=e.target.value;renderTree();persist();});
+ $('#sb-scope-search').addEventListener('input',e=>{state.scopeSearch=e.target.value;renderScope();persist();});
+ for(const section of visibilitySections)$(section.button).addEventListener('click',()=>{
+  state[section.key]=!state[section.key];pickers.forEach(p=>p.close());renderVisibility();
+  if(state.graphOpen&&section.key!=='summaryOpen')renderCharts();
+  $('#sb-live').textContent=section.label+' '+(state[section.key]?'shown':'hidden')+' · selections kept';persist();
+ });
+ $$('[data-chart]').forEach(button=>button.addEventListener('click',()=>{state.chart=button.dataset.chart;update();}));$$('[data-table]').forEach(button=>button.addEventListener('click',()=>{state.table=button.dataset.table;update();}));
+ for(const [id,key,other]of [['#sb-start','monthStart','monthEnd'],['#sb-end','monthEnd','monthStart']])$(id).addEventListener('change',e=>{if(!e.target.value)return;state[key]=e.target.value;if(state.monthStart>state.monthEnd)state[other]=e.target.value;update();});
+ let resizeTimer,observedWidth=root.getBoundingClientRect().width;new ResizeObserver(entries=>{const width=entries[0].contentRect.width;if(Math.abs(width-observedWidth)<.5)return;observedWidth=width;clearTimeout(resizeTimer);resizeTimer=setTimeout(renderCharts,80);}).observe(root);
+ root.sopDesign={getState:()=>JSON.parse(JSON.stringify(state)),setState:(patch,save=true)=>{state={...state,...patch};update(save);},rows:allRows,baseRows:rows,families,bridgeCatalog,summaryRules,affiliates,sectors,leaves,contractLeaves,groups,activeRows,availableRows,availablePeriods,source,amount,localAmount,periodMonths,chartMonths,summaryMonths,summaryValue,summaryEntries,runRate,growthRate,buildComponents,getTimings:()=>timings.slice(),sum,ratio};
+ function focusMeasure(id){const paths=$$('.sb-plot path[data-series]'),has=paths.some(p=>p.dataset.series===id);paths.forEach(p=>{p.style.opacity=has&&p.dataset.series!==id?'.16':'1';p.style.strokeWidth=has&&p.dataset.series===id?'3.4':'1.8';});}
+ for(const type of ['pointerover','focusin'])root.addEventListener(type,e=>{const n=e.target.closest('[data-focus-measure],[data-toggle-row],[data-row],[data-derived-row]');if(n)focusMeasure(n.dataset.focusMeasure||n.dataset.toggleRow||n.dataset.row||n.dataset.derivedRow);});
+ for(const type of ['pointerout','focusout'])root.addEventListener(type,e=>{if(e.target.closest('[data-focus-measure],[data-toggle-row],[data-row],[data-derived-row]')&&!e.relatedTarget?.closest?.('[data-focus-measure],[data-toggle-row],[data-row],[data-derived-row]'))focusMeasure(null);});
+ update(false);
+})();
+</script>
