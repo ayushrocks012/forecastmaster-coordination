@@ -1,0 +1,88 @@
+{
+  "SchemaVersion": 1,
+  "EvidenceDate": "2026-10-21",
+  "TimeZone": "Europe/London",
+  "Source": "Operator-provided company screenshots and output JSON in this chat; no live cloud inspection by this record writer",
+  "Workspace": {
+    "Name": "UK-ANI-Demand",
+    "ID": "f5cb5742-9a7c-4337-a4c0-952706dddf0b"
+  },
+  "NativeNotebookID": "e9ce6cb0-1622-44cd-b83a-4f8680199478",
+  "NativePipelineID": "62dcc460-bbd0-49b7-bcce-8f95885643c3",
+  "FunctionsVersion": "R06-NATIVE-R01",
+  "Function": "submitNativeRefreshR06",
+  "Activator": "ForecastMaster_Adhoc_Events",
+  "Rule": "ForecastMaster_Adhoc_NativeRequests",
+  "RuleObservedState": "Running",
+  "ReportButton": "Refresh Demand (native)",
+  "Gates": {
+    "NativeItemCreationAndReadback": "CONFIRMED",
+    "FunctionsPublishAndQueueAcceptance": "CONFIRMED",
+    "ManualNativeRefreshAndModelCompletion": "CONFIRMED",
+    "ManualDuplicateSkip": "CONFIRMED",
+    "AutomaticFunctionRequestToPipelineAndModel": "CONFIRMED",
+    "SavedReportButtonToAutomaticRefreshAndModel": "CONFIRMED",
+    "BusyLockAutomaticRetryRecovery": "CONFIRMED",
+    "FirstScheduledHourlyRun": "PENDING",
+    "SingleClickEventMultiplicity": "NOT_MEASURED",
+    "CompanyCapacityConsumption": "NOT_MEASURED"
+  },
+  "ManualTest": {
+    "RequestID": "eca394eb-1df7-4f98-aaf5-7a5596afcc51",
+    "BatchID": "48c51892-7c97-45af-a1aa-fdde5eeeb78c",
+    "NotebookRunID": "e484ba4f-d17e-4e95-a3fb-263be1158553",
+    "ModelRefreshRequestID": "79356414-8503-4cf7-b0e4-049425435ed5",
+    "DuplicateNotebookRunID": "650e4940-5ca7-459f-9b7b-c033da38abda",
+    "DuplicateStatus": "ALREADY_PROCESSED"
+  },
+  "AutomaticFunctionTest": {
+    "RequestID": "67c5b6e5-4cdd-4d7a-92f1-cd2daba53c10",
+    "BatchID": "98b28eec-6133-4cdf-9635-4d80d2e696cd",
+    "NotebookRunID": "56a23b89-d23b-4363-a297-de652dc58c80",
+    "ModelRefreshRequestID": "dfe898c8-1d0b-4e7b-8590-6134168b25b4",
+    "BusyAttemptNotebookRunID": "d250e1ce-a009-44a4-9be8-f00574069e9b",
+    "RecoveredAttemptNotebookRunID": "1062fab9-bfb7-47d4-8414-0f4e33fd10bd",
+    "RecoveredStatus": "ALREADY_PROCESSED"
+  },
+  "ReportButtonTest": {
+    "OperatorClickCount": "Operator reported a couple of times or more; exact count unknown",
+    "ObservedPipelineRunsAt0135": 4,
+    "ObservedFinalPipelineStatuses": "All four Succeeded in the supplied run-list screenshot",
+    "BatchID": "e925d0bf-be28-44f1-ac2e-7439df5e58de",
+    "NotebookRunID": "006424d2-ab33-4e03-ac4f-c661e60a9c33",
+    "RequestIDs": [
+      "09dcffab-186e-40d8-9191-73ee6255e68b",
+      "0b656ad4-74dc-4aca-9a88-bd7ae15b1413"
+    ],
+    "RequestStatus": "SUCCESS",
+    "StartedAtUtc": "2026-10-21T00:35:35.314295+00:00",
+    "FinishedAtUtc": "2026-10-21T00:37:03.920095+00:00",
+    "RefreshRunID": "bf224f11-f572-438e-bce7-2531bb2d6cc3",
+    "RefreshStatus": "SUCCESS",
+    "FileResults": {"METADATA_UNCHANGED": 8},
+    "UpdatedFiles": 0,
+    "DecodedChangedFiles": 0,
+    "CurrentReportFiles": 8,
+    "StoragePolicy": "RETAIN_IMPORTED_REVISIONS",
+    "ReportSelectionPolicy": "CURRENT_FILE_PER_PATH",
+    "TableWrites": {"forecast_v18_ingestion_events": 1},
+    "StageErrors": [],
+    "ModelRefresh": {
+      "Status": "COMPLETED",
+      "RequestID": "874383f4-3f2e-44bb-b885-92f242482000",
+      "Confirmation": "RequestID"
+    },
+    "BusyAttemptNotebookRunID": "ace0bf4d-dcba-46fb-8c8e-d72741f1bd58",
+    "RecoveredAttemptNotebookRunID": "9e50d801-e564-4332-8564-9a5992e45f77",
+    "RecoveredStatus": "ALREADY_PROCESSED",
+    "RecoveredReceiptBatchID": "e925d0bf-be28-44f1-ac2e-7439df5e58de"
+  },
+  "HourlySchedulePreviouslyObserved": {
+    "State": "Active",
+    "DailyTimes": ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
+    "StartDate": "2026-10-21",
+    "TimeZoneLabel": "(UTC) Dublin, Edinburgh, Lisbon, London",
+    "FirstScheduledRunEvidence": "PENDING"
+  },
+  "Scope": "Tested operator account; report-button event delivery, coalesced unchanged-source refresh, confirmed model completion and duplicate recovery. This record does not establish all-user permissions, event delivery guarantees or measured capacity cost."
+}

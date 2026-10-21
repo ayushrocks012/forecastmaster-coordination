@@ -126,3 +126,62 @@ Published Fabric event listener baseline checked on 20 October 2026:
 0.0222 CU-hours/hour (about 0.5328 CU-hours/day), plus event and applicable
 rule/action/refresh consumption. This is an estimate from published rates, not
 a company usage measurement. No claim of free idle event listening is made.
+
+## Current receiving state: 21 October 2026, report-button test passed
+
+This section supersedes the native pending gates above. Evidence consists of
+operator-provided company output JSON and screenshots in this chat. The
+structured [acceptance record](logs/2026-10-21-native-adhoc-acceptance.json)
+retains the IDs and observed gates. No cloud action was performed by the local
+documentation update.
+
+- Setup created and read back `ForecastMaster_Native_Adhoc`, notebook ID
+  `e9ce6cb0-1622-44cd-b83a-4f8680199478`, and `ForecastMaster_Adhoc`, pipeline ID
+  `62dcc460-bbd0-49b7-bcce-8f95885643c3`.
+- The operator published Functions R06-NATIVE-R01 and confirmed
+  `submitNativeRefreshR06` alongside the three retained helpers. Direct function
+  invocation returned QUEUED and native request/readiness paths.
+- Manual request `eca394eb-1df7-4f98-aaf5-7a5596afcc51` completed in batch
+  `48c51892-7c97-45af-a1aa-fdde5eeeb78c`; model confirmation RequestID
+  `79356414-8503-4cf7-b0e4-049425435ed5`. Repeating it returned ALREADY_PROCESSED
+  with the same receipt before the refresh code ran.
+- Activator `ForecastMaster_Adhoc_Events` contains the Running rule
+  `ForecastMaster_Adhoc_NativeRequests`. Its Definition screenshot confirmed
+  Run Pipeline -> ForecastMaster_Adhoc, with Type/Subject/Source mapped to the
+  corresponding event values. The empty Controller Rules pane was not evidence
+  of an absent native rule; the Activator itself showed the saved rule.
+- A new function request `67c5b6e5-4cdd-4d7a-92f1-cd2daba53c10` automatically
+  started the native pipeline, completed in batch
+  `98b28eec-6133-4cdf-9635-4d80d2e696cd`, and confirmed model refresh RequestID
+  `dfe898c8-1d0b-4e7b-8590-6134168b25b4`. The overlapping run first returned
+  NATIVE_WRITER_BUSY, then automatically retried and returned ALREADY_PROCESSED
+  with that same successful receipt. The parent pipeline finished Succeeded.
+- The report's Refresh Demand page now has a saved **Refresh Demand (native)**
+  data-function button, linked to submitNativeRefreshR06 and positioned beside
+  the original Power Automate button. The operator tested it in Reading view.
+- The operator later clarified they clicked the native button a couple of times
+  or more. Two requests, `09dcffab-186e-40d8-9191-73ee6255e68b` and
+  `0b656ad4-74dc-4aca-9a88-bd7ae15b1413`, were processed together in batch
+  `e925d0bf-be28-44f1-ac2e-7439df5e58de`, notebook run
+  `006424d2-ab33-4e03-ac4f-c661e60a9c33`. Both request receipts show SUCCESS.
+  There was one Refresh.RunID `bf224f11-f572-438e-bce7-2531bb2d6cc3`, no
+  StageErrors, and ModelRefresh COMPLETED with RequestID
+  `874383f4-3f2e-44bb-b885-92f242482000`. All eight files were METADATA_UNCHANGED;
+  UpdatedFiles and DecodedChangedFiles were zero, as expected for this test.
+- The 01:35 run list showed four automatic pipeline runs eventually Succeeded.
+  One supplied overlapping attempt returned NATIVE_WRITER_BUSY; its retry
+  returned ALREADY_PROCESSED for `09dcffab...` and the original batch e925d0bf.
+  This verifies recovered contention and duplicate handling. It is not a
+  one-click event-count test, nor proof that duplicate starts cost no capacity.
+
+The native report-button path is confirmed for the tested operator and the
+unchanged eight-source inventory. No additional ad hoc test runs are required
+for this gate. Continue normal use with one click and wait for completion.
+
+**Remaining receiving check:** at or after 08:00 London time on 21 October
+2026, inspect ForecastMaster_Hourly run history for its first automatically
+scheduled run. Keep the existing 08:00 through 17:00 schedule active. If sources
+are unchanged, expect metadata UNCHANGED / NeedsRefresh false and a skipped
+notebook. Capture the metadata output and any notebook output if one runs.
+Schedule execution remains unverified until that evidence is supplied. The old
+controller's polling schedule stays off; no new schedule or IT action is needed.
