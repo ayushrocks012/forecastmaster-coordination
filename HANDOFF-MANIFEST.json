@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 10085,
-      "SHA256": "144a395d994ee72695e8bb2c6c1c34429f67cae789791b35b4baf6bd166a8209"
+      "Bytes": 10755,
+      "SHA256": "7a9ee4e48ab04e4408d1392114a34dee1db4f0a3826dd5d93bc9acf0c1f94e3f"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 15510,
-      "SHA256": "c36bb2f501c8f2a6d9686e5c3f0fc5705405c9c94ac67ac23536dc994b41c47b"
+      "Bytes": 16649,
+      "SHA256": "86276cfdcd71627dd78d164dc5ec1517c05d4fd1e16f627d18574281378d7ea7"
     },
     "README.md": {
-      "Bytes": 5387,
-      "SHA256": "428e4cffa7ecccca031b040cf1f9c6f2bbe848f20a78208415a8a01a182295e4"
+      "Bytes": 5407,
+      "SHA256": "440025b0dc51778f3359dbfe0d8d0ceb299d0881a2f19b4b16eca0c02c5045f4"
     },
     "feedback/STATUS.md": {
-      "Bytes": 37132,
-      "SHA256": "b81908aac3c5c0e6ead7774f06d229a9d636696eea6b4d6953982e7d9a74573b"
+      "Bytes": 39230,
+      "SHA256": "d91b230efd53b576d81aaf33db94754b5f49838f9fd53eeca615b8a24af2686e"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -1560,6 +1560,94 @@
     "design/sop-structured-summary-r09/value.png": {
       "Bytes": 155983,
       "SHA256": "e8b7ba9641fff3b5e2b742f6ab2f5ce5a879bf3722868502dd88dde7387268ca"
+    },
+    "design/sop-run-rate-growth-r10/README.md": {
+      "Bytes": 4072,
+      "SHA256": "8336255a4f95bd1fc1f9dabd9481bc0c9015cf6f40e8b11bf11b44058a97c28b"
+    },
+    "design/sop-run-rate-growth-r10/all-contexts.png": {
+      "Bytes": 215487,
+      "SHA256": "ef120202a8416eae6bd1b36d71c747dfd38ba3d3cd17e632a8fde2bc3c70d453"
+    },
+    "design/sop-run-rate-growth-r10/audit_bridge.py": {
+      "Bytes": 6060,
+      "SHA256": "e76ec99798056b2d1db0797c5d3a5071ab8ae17995928a0b0b697b98cd262168"
+    },
+    "design/sop-run-rate-growth-r10/bridge-audit.json": {
+      "Bytes": 4810,
+      "SHA256": "6d3b56f19c2493c17c153d8e454ec897b4b3d0011a3a542013a6f117b05ea7ed"
+    },
+    "design/sop-run-rate-growth-r10/bridge-catalog.json": {
+      "Bytes": 22390,
+      "SHA256": "0acaae2e996443cdea272c11f0911a72abc7c285279c90fbcbbbe8d77644c03f"
+    },
+    "design/sop-run-rate-growth-r10/build.py": {
+      "Bytes": 1037,
+      "SHA256": "db651ecc3a8610143007de0059d4b9ab75c27f324345866bfcca8a11f20c6b78"
+    },
+    "design/sop-run-rate-growth-r10/check-sop.cjs": {
+      "Bytes": 24608,
+      "SHA256": "d04cf16f24b54c963f667b4db8083f4263f324e8ebfa00725b88466070632942"
+    },
+    "design/sop-run-rate-growth-r10/dark.png": {
+      "Bytes": 155847,
+      "SHA256": "2af9d15d1be4bee35c519d6393d40493e06219e244e1a111f4df56806e376fc7"
+    },
+    "design/sop-run-rate-growth-r10/derived.png": {
+      "Bytes": 176552,
+      "SHA256": "2c1cebfadb21917237f7db27a259c877f4ce56ca48f62df6064c216bbc06da87"
+    },
+    "design/sop-run-rate-growth-r10/empty.png": {
+      "Bytes": 106409,
+      "SHA256": "84908a9e3de0e0d821a734228c6da5ffc64c1f8a43e99706bc2964ea4b01fb95"
+    },
+    "design/sop-run-rate-growth-r10/index.html": {
+      "Bytes": 493674,
+      "SHA256": "a345d013491c58b32c185cfa11953ab5a7fb2bc6aa54db5ce4951e8503882f17"
+    },
+    "design/sop-run-rate-growth-r10/mobile.png": {
+      "Bytes": 155339,
+      "SHA256": "f98ed632e6bef79be5e905a92576d2378204c78ceef41afc815e04c2b4132695"
+    },
+    "design/sop-run-rate-growth-r10/multiple-channels.png": {
+      "Bytes": 184347,
+      "SHA256": "54221809dd0520909722cad2fcf9d3f7db12638c5c66afab5d1bddf4d222993d"
+    },
+    "design/sop-run-rate-growth-r10/page.fragment.html": {
+      "Bytes": 71001,
+      "SHA256": "d0ccf9a1685c1373b77926e879ff4619f4de7bf385bfc78b8274a73e790cb0fc"
+    },
+    "design/sop-run-rate-growth-r10/preservation.json": {
+      "Bytes": 37559,
+      "SHA256": "f72f523f06d4ecc4cfd065f48084edfdccffe8e248cc55ab0491edeff8bf1ceb"
+    },
+    "design/sop-run-rate-growth-r10/review.fragment.html": {
+      "Bytes": 365354,
+      "SHA256": "f684f4a99f3d91a675b93ecb1e3cf1910bd85b7239021cc7cfe7d06038e1a16d"
+    },
+    "design/sop-run-rate-growth-r10/selected.png": {
+      "Bytes": 154709,
+      "SHA256": "bff1c8b78c57c051a93122cbf44e13793fd57de1de45b68d06ef402b95cf536b"
+    },
+    "design/sop-run-rate-growth-r10/summary-only.png": {
+      "Bytes": 31570,
+      "SHA256": "dcc4223306b9d1a966f2951de5793d6ad76ff6acfbcaf23c7ed6673b564ad53b"
+    },
+    "design/sop-run-rate-growth-r10/summary-rules.json": {
+      "Bytes": 2050,
+      "SHA256": "39557281284c44afecf9d94fe14a78aaa0e3eaf3b5ed96a62fcaa7d0cefeee80"
+    },
+    "design/sop-run-rate-growth-r10/summary-stats.png": {
+      "Bytes": 54187,
+      "SHA256": "b36f298b5dcf18604e33e700e43e9ba9017161fb71120a8b45080f3ce32354ea"
+    },
+    "design/sop-run-rate-growth-r10/validation.json": {
+      "Bytes": 3590,
+      "SHA256": "6a23c09780c89848d7bb944df8e704c0d2cb7759c0c4f6f9c1427f7b2f934eaa"
+    },
+    "design/sop-run-rate-growth-r10/value.png": {
+      "Bytes": 157229,
+      "SHA256": "3e71cb06cb0bc45bc4e46e29172723112ba9d0777b3d3fae174090d6822596c8"
     }
   }
 }

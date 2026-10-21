@@ -539,3 +539,36 @@ remain preserved. Numbers are synthetic; live workbook/source binding, Power BI
 implementation and performance remain separate pending gates. GitNexus reported
 stale authority; direct retained metadata supplied the audit evidence without
 refreshing a shared index or changing application/workbook/live report content.
+
+## 21 October 2026 — R10 adds bridge-style spacing, run rate and PY growth
+
+The user requested empty-row spacing and independent monthly-run-rate and
+same-period-prior-year-growth switches in the S&OP table. Read-only inspection
+of the current bridge reporting oracle, V18 template, BR-005 period rules and
+S&OP Summary reference analysis confirmed the formulas and eligible blocks.
+`summary-rules.json` records the source hashes and rules; no company workbook
+or numeric source data was opened or copied.
+
+The separately saved R10 adds 8px blank spacing between business blocks, keeping
+Share with Abbott IMS. Optional detail rows sit beneath existing selected
+amounts. Run rate divides a complete period amount by its month count, using
+each measure's IMS or Ex-factory cutoff. Growth divides the complete amount by
+the exact same months last year, minus one. Missing or zero prior stays blank.
+Share remains percentage-only; PI/net IMS have run rate but omit growth, matching
+the bridge. Monthly view hides redundant run rate and remembers its setting;
+monthly growth compares the same month last year. Toggles affect only the
+summary, preserving graph selections and source amount rows.
+
+Local browser checks passed 16 integration groups, 384 independent derived
+fixture comparisons, 216 amount values matching R09 and 64 reconciliations.
+Merged-cell geometry with spacers/detail rows, all source context selections,
+dynamic Units/Value labels, monthly behavior, responsive light/dark layouts,
+hover and zero warm network requests/script errors were checked. R09's source
+catalogue/audit files and all prior saved designs remain byte-preserved.
+
+GitNexus workflow lookup reported stale authority/index; current source and
+canonical business rules supplied the calculation evidence without refreshing
+the index. All displayed values are synthetic. This is not live Excel/Fabric
+source binding, Power BI deployment or measured report-performance evidence.
+The approved first page, application source and workbooks remain unchanged;
+Power BI implementation is still paused for design approval.
