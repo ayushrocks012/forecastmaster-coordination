@@ -1,0 +1,381 @@
+{
+  "schema": "FM_SOP_EXECUTIVE_BRIDGE_CATALOG_R08",
+  "sources": {
+    "core-oral": {
+      "schema": "SDM_V18_MODEL_BINDINGS_V1",
+      "descriptorSHA256": "814ceadd7c96f7d205785cc6e006205d13ab85211324f4c2592573416908d5e8",
+      "kind": "Retained neutral model identities; no forecast values"
+    },
+    "paed-sip": {
+      "schema": "SDM_V18_MODEL_BINDINGS_V1",
+      "descriptorSHA256": "260a0a64e43fd3e456773b88272af4e35c41a97c60fe8d4dd1b574c95f763bf3",
+      "kind": "Retained neutral model identities; no forecast values"
+    }
+  },
+  "sanitization": "Whitelisted Channel/Sub Channel/Section/Measure identities and source row positions only. No workbook cells, values, formulas, products or customers.",
+  "presentationPolicy": "Source contexts have separate aligned selector rows. Community blank: Share, Abbott IMS, Market, PI, IMS minus PI, ADS. Then Wholesaler ADS, Northern Ireland ADS and source contexts. Cur/Pub excluded at user request. No automatic selections.",
+  "displayOrder": [
+    "share",
+    "abbott",
+    "market",
+    "pi",
+    "net",
+    "community",
+    "wholesaler",
+    "ni",
+    "homecare",
+    "hospital",
+    "hcl",
+    "competitor",
+    "nursing",
+    "retail",
+    "private",
+    "internal",
+    "unassigned",
+    "ads"
+  ],
+  "bindings": [
+    {
+      "id": "community",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Community ADS Units",
+        "section": "Ex-Factory",
+        "measure": "Community ADS Selling units",
+        "row": 103
+      },
+      "value": {
+        "role": "Community ADS Value",
+        "section": "Ex-Factory",
+        "measure": "Community ADS Value \u00a3",
+        "row": 108
+      }
+    },
+    {
+      "id": "wholesaler",
+      "channel": "Community",
+      "subChannel": "Wholesaler",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Wholesaler | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 114
+      },
+      "value": {
+        "role": "Wholesaler | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 123
+      }
+    },
+    {
+      "id": "ni",
+      "channel": "Community",
+      "subChannel": "Northern Ireland",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Northern Ireland | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 136
+      },
+      "value": {
+        "role": "Northern Ireland | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 145
+      }
+    },
+    {
+      "id": "homecare",
+      "channel": "Contracts",
+      "subChannel": "Homecare",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Homecare | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 224
+      },
+      "value": {
+        "role": "Homecare | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 236
+      }
+    },
+    {
+      "id": "hospital",
+      "channel": "Contracts",
+      "subChannel": "Hospital",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Hospital | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 276
+      },
+      "value": {
+        "role": "Hospital | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 288
+      }
+    },
+    {
+      "id": "hcl",
+      "channel": "Contracts",
+      "subChannel": "Healthcare Logistics",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Healthcare Logistics | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 307
+      },
+      "value": {
+        "role": "Healthcare Logistics | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 319
+      }
+    },
+    {
+      "id": "competitor",
+      "channel": "Contracts",
+      "subChannel": "Competitor",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Competitor | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 338
+      },
+      "value": {
+        "role": "Competitor | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 350
+      }
+    },
+    {
+      "id": "nursing",
+      "channel": "Contracts",
+      "subChannel": "Nursing Home",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Nursing Home | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 369
+      },
+      "value": {
+        "role": "Nursing Home | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 381
+      }
+    },
+    {
+      "id": "retail",
+      "channel": "Out of Pocket",
+      "subChannel": "Retail",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Retail | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 400
+      },
+      "value": {
+        "role": "Retail | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 412
+      }
+    },
+    {
+      "id": "private",
+      "channel": "Contracts",
+      "subChannel": "Private Order",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Private Order | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 431
+      },
+      "value": {
+        "role": "Private Order | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 443
+      }
+    },
+    {
+      "id": "internal",
+      "channel": "Contracts",
+      "subChannel": "Internal Account",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Internal Account | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 462
+      },
+      "value": {
+        "role": "Internal Account | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 474
+      }
+    },
+    {
+      "id": "unassigned",
+      "channel": "Unassigned",
+      "subChannel": "Unassigned",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Unassigned | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 493
+      },
+      "value": {
+        "role": "Unassigned | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 505
+      }
+    },
+    {
+      "id": "ads",
+      "channel": "Sector total",
+      "subChannel": null,
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Sector | ADS Units",
+        "section": "Sector Total",
+        "measure": "Sector | ADS Selling units",
+        "row": 518
+      },
+      "value": {
+        "role": "Sector | ADS Value",
+        "section": "Sector Total",
+        "measure": "Sector | ADS Value \u00a3",
+        "row": 521
+      }
+    },
+    {
+      "id": "abbott",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "IMS Abbott Units",
+        "section": "Market and Share Working",
+        "measure": "IMS Abbott Selling units",
+        "row": 67
+      },
+      "value": {
+        "role": "IMS Abbott Value",
+        "section": "Market and Share Working",
+        "measure": "IMS Abbott Value \u00a3",
+        "row": 82
+      }
+    },
+    {
+      "id": "market",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "IMS Market Units",
+        "section": "Market and Share Working",
+        "measure": "IMS Market Selling units",
+        "row": 69
+      },
+      "value": {
+        "role": "IMS Market Value",
+        "section": "Market and Share Working",
+        "measure": "IMS Market Value \u00a3",
+        "row": 84
+      }
+    },
+    {
+      "id": "pi",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "PI Units",
+        "section": "Market and Share Working",
+        "measure": "PI Selling units",
+        "row": 77
+      },
+      "value": {
+        "role": "PI Value",
+        "section": "Market and Share Working",
+        "measure": "PI Value \u00a3",
+        "row": 92
+      }
+    },
+    {
+      "id": "share",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "Abbott Volume Share",
+        "section": "Market and Share Working",
+        "measure": "Abbott Volume Share",
+        "row": 66
+      },
+      "value": {
+        "role": "Abbott Value Share",
+        "section": "Market and Share Working",
+        "measure": "Abbott Value Share",
+        "row": 81
+      }
+    },
+    {
+      "id": "net",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "Total IMS minus PI Units",
+        "section": "Ex-Factory",
+        "measure": "Total IMS minus PI Selling units",
+        "row": 102
+      },
+      "value": {
+        "role": "Total IMS minus PI Value",
+        "section": "Ex-Factory",
+        "measure": "IMS minus PI Value \u00a3",
+        "row": 107
+      }
+    }
+  ]
+}

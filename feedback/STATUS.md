@@ -486,3 +486,30 @@ files were verified against their prior manifest hashes. Numeric data remains
 synthetic; this is not full source binding or Power BI speed evidence. No live
 report, Fabric item, workbook or application source was changed. Design approval
 and live implementation remain separate pending gates.
+
+## 21 October 2026 — R08 aligns Sub-channel contexts and simplifies measures
+
+The user removed Section and questioned Selected scope's role, identified the
+misleading vertical alignment between blank-Sub-channel IMS measures and
+Wholesaler, and requested removing Cur/Pub from this executive page. R08 gives
+every source context its own aligned row. Community blank owns Share, Abbott
+IMS, Market, PI, IMS minus PI and ADS; Wholesaler follows below all those measures
+with its own ADS, then Northern Ireland and subsequent contexts. Each ADS
+toggles independently, including its legend entry. Channel/context gates remain
+explicit and the initial graph and table remain empty.
+
+Retained source metadata confirms Share before Abbott IMS in both dimensions
+(units rows 66/67, value rows 81/82); descriptor hashes were checked again.
+The exposed executive catalogue has 18 direct source identities and no Cur/Pub.
+The top contains Affiliate, cycle, Units/Value and visible calendars; shared
+driver/sector scope remains. The former Selected scope dropdown was only a
+presentation control and is now Total/Drivers/Sectors beside the graph. Table
+periods retain their separate role.
+
+Local checks passed 11 integration groups, 216 retained measure/period/cycle/
+dimension fixture comparisons with R07 and 64 reconciliation comparisons.
+Aligned context geometry, independent toggles, source order, dynamic labels,
+responsive light/dark layouts, hover and zero warm network requests/script
+errors were checked. All earlier designs remain preserved. Numbers remain
+synthetic; live binding, Power BI implementation and performance remain pending.
+No application source, workbook, Fabric item or live report was changed.

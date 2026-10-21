@@ -1,0 +1,23 @@
+{
+  "schema": "FM_SOP_ALIGNED_CONTEXTS_R08_VALIDATION",
+  "checkedAt": "2026-10-21T20:33:24.014Z",
+  "checks": [
+    "Section and the top Selected scope filter are removed. Affiliate, cycle, Units/Value, calendars and shared driver/sector scope remain; graph/table start empty.",
+    "Community blank, Wholesaler and Northern Ireland occupy separate aligned rows. Every blank-context measure ends above Wholesaler; each child has its own ADS control and breathing room.",
+    "The 18 exposed measures are direct source identities, with Cur/Pub excluded. Retained bridge positions confirm unit Share 66 before Abbott IMS 67, and value Share 81 before Abbott IMS 82.",
+    "Every context and measure requires explicit selection. Child ADS and legend toggles affect only their own line/table row. Parent/context off removes only dependent results and restores remembered choices on re-enable.",
+    "Units/Value updates Share, Abbott IMS, Market, PI, net IMS and each context ADS label throughout; Share retains the same graph’s right axis.",
+    "Other source Channels follow in their own aligned contexts. Contracts has only real children, each with an independent ADS toggle and no fabricated total or IMS allocation.",
+    "Select matches/all adds only the requested 18 source measures. Affiliate gates results. Total/Drivers/Sectors beside the graph changes presentation without changing included sectors or measures.",
+    "216 retained measure/period/cycle/dimension values match saved R07's synthetic observations exactly.",
+    "64 checks preserve Community/sector totals, weighted Share and FY=YTD+YTG in both dimensions; no arithmetic change accompanies the layout simplification.",
+    "Visible calendar dates, summary periods and Monthly columns retain their separate roles. Hiding the left selector preserves every choice.",
+    "Light/dark responsive layouts fit 1080/1024/736/390/320px, with visible chart labels, cross-series hover, no script errors and no warm network requests."
+  ],
+  "sourceBindings": 18,
+  "retainedValueComparisons": 216,
+  "reconciliationComparisons": 64,
+  "errors": [],
+  "warmNetworkRequests": 0,
+  "note": "Synthetic HTML design qualification only; no live source binding, report deployment or Power BI speed claim."
+}

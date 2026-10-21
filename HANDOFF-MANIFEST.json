@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 8645,
-      "SHA256": "a3b5ede515ef6f29e5dd55f97a449b3bbe03f54824364e1bed7aeb7415fa5f9c"
+      "Bytes": 9339,
+      "SHA256": "944c08d1ab3a2bdaa4de591eab326d55234279da0e40ccd8ff7a947784092758"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 13271,
-      "SHA256": "68aa81fd9084fb5e5352117c72109ac15b74f6418fb00a6156b991cfc9ada9d0"
+      "Bytes": 14333,
+      "SHA256": "3ca4d6a4a9d24574702ebf32c6f5d0ac1ee7189e8b60b3d10e122539ba933ac1"
     },
     "README.md": {
-      "Bytes": 5261,
-      "SHA256": "4cffe91ca916e8d9bb449e055c721180ce56a35e5ff58ec85dac9c6c03b9ee23"
+      "Bytes": 5329,
+      "SHA256": "cae5850ba9955cf588e39ba355db4b2dd33a425ab00f833c175f7d2bfbdb54a7"
     },
     "feedback/STATUS.md": {
-      "Bytes": 33661,
-      "SHA256": "c68bca6615265fcf5e797fc256e58c944839eb5fa99e67f75c380f2a000d0de7"
+      "Bytes": 35374,
+      "SHA256": "67fdf86383e597ba077a88490b45f3ab26057cba6c269924e266745e30c678fc"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -1424,6 +1424,66 @@
     "design/sop-source-only-r07/value.png": {
       "Bytes": 183415,
       "SHA256": "7c52a1606d0f5329e9cb9f5dafdcb526041d1e6f00992abd2a814099cb8de1ae"
+    },
+    "design/sop-aligned-contexts-r08/README.md": {
+      "Bytes": 4352,
+      "SHA256": "2c3b283d381a07ba636687f3f40f3ed78a9739c907f88e4940afadaabc263534"
+    },
+    "design/sop-aligned-contexts-r08/bridge-catalog.json": {
+      "Bytes": 9695,
+      "SHA256": "9fd6f2542ff53c0ea9ac573ad42e1b40640b1816ec92e2d56384cb74b3c19d86"
+    },
+    "design/sop-aligned-contexts-r08/build.py": {
+      "Bytes": 809,
+      "SHA256": "172257e75532790c60e415ee8f340dfb40e05d3a453f81715c157da06d0d09b3"
+    },
+    "design/sop-aligned-contexts-r08/check-sop.cjs": {
+      "Bytes": 14567,
+      "SHA256": "3bf968532bf01743d90c26a8396a66bc593c78e8fe9f95a12d9f39281e7667f9"
+    },
+    "design/sop-aligned-contexts-r08/dark.png": {
+      "Bytes": 163137,
+      "SHA256": "c7734872520cdf4d5b2c6ccef35d5b147bbd33bb473c31ea05b0e38eeed4c542"
+    },
+    "design/sop-aligned-contexts-r08/empty.png": {
+      "Bytes": 106972,
+      "SHA256": "0174bd743e8f5116e17a8103cfb9184d2f5e24fce21bae182e9f9627966e2faa"
+    },
+    "design/sop-aligned-contexts-r08/index.html": {
+      "Bytes": 471560,
+      "SHA256": "9db56c93585b0994ecc5a1ea504f09e091dba9a2c3bf7862b05548cf378355b9"
+    },
+    "design/sop-aligned-contexts-r08/mobile.png": {
+      "Bytes": 164022,
+      "SHA256": "5ef52d7622fc801b626d156a911de620a332523b93275f87652c04b976c3c143"
+    },
+    "design/sop-aligned-contexts-r08/multiple-channels.png": {
+      "Bytes": 190467,
+      "SHA256": "248d273f880fb71e791e18ca270d8460aae162575f27aef59e80885d7324ed21"
+    },
+    "design/sop-aligned-contexts-r08/page.fragment.html": {
+      "Bytes": 63055,
+      "SHA256": "cafd1ce98721ff526b808b7b1c9c78cc08aa9bc687a346b1b6554584d1a44732"
+    },
+    "design/sop-aligned-contexts-r08/preservation.json": {
+      "Bytes": 31406,
+      "SHA256": "72dc934860b3929e2bc2aa328e85b0d7d5353972c62e5b13c91c632e2f3fa564"
+    },
+    "design/sop-aligned-contexts-r08/review.fragment.html": {
+      "Bytes": 349330,
+      "SHA256": "08eddeb9d422700e91b731396d45c71b2f8da4532a2d0699d9a7423b2a9d7bb8"
+    },
+    "design/sop-aligned-contexts-r08/selected.png": {
+      "Bytes": 162304,
+      "SHA256": "dbbe1e6c544d527cb1c6d6a94234c3db2098ed615b8c74f25fe6f3d83704ea05"
+    },
+    "design/sop-aligned-contexts-r08/validation.json": {
+      "Bytes": 2263,
+      "SHA256": "0768446ae61f47b7b7db7e23d90f89254c0db4a692a18d2065c0eebdcbb7572b"
+    },
+    "design/sop-aligned-contexts-r08/value.png": {
+      "Bytes": 164829,
+      "SHA256": "d78eec51a2442ed83711838dd2a6ccfd20ae9b3dea455dde278798c94127057b"
     }
   }
 }
