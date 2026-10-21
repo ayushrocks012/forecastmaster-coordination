@@ -1,0 +1,14 @@
+{
+  "name": "R07 — Driver and Sector Review",
+  "status": "Preserved comparison baseline; not a Power BI deployment",
+  "git_commit": "8358fd61fef4cc30ba31af0fa17c059f3479acf7",
+  "git_tag": "design-driver-sector-r07",
+  "open": "design/executive-review-r07/index.html",
+  "source": "design/executive-review-r07/review.fragment.html",
+  "restore": "Open the R07 index.html to use the preceding design. Its directory remains intact. Future prototype changes can start from its saved source without resetting the repository or affecting other handoffs.",
+  "manifest": "HANDOFF-MANIFEST.json records the byte counts and SHA256 values of every R07 package file.",
+  "sha256": {
+    "design/executive-review-r07/index.html": "ecbeb294355b3929874cf7d7200e19c5b487248f5e067e24bcdfb6bc6cce21e4",
+    "design/executive-review-r07/review.fragment.html": "5271f736505f494c5013bb973b6bb5324eb9ddccf5edce670d192379bc8ede5d"
+  }
+}

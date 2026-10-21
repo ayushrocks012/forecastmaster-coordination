@@ -253,3 +253,23 @@ widths. The receipts and sample screenshots are in the design folder.
 **Pending:** user design approval, production implementation/data binding and
 company performance/business-value validation. These prototype results do not
 install R04.2 or change the company report, refresh system or schedules.
+
+## 21 October 2026 — R08 proposal and named R07 baseline
+
+The user requested seeing the executive improvements while preserving the
+preceding design for comparison or return. **R07 — Driver and Sector Review**
+is saved unchanged at `design/executive-review-r07/`, with the named Git tag
+`design-driver-sector-r07` and checkpoint record in `design/checkpoints/`.
+
+**R08 — Executive Overview** is a separate proposal in
+`design/executive-overview-r08/`. Open `design/index.html` to choose either.
+It adds a dynamic plan/variance observation, offsetting driver movements,
+actuals/YTG/source context, clearer control labels, period dates and graph
+shading, direct combined-chart labels, signed variance bars and explicit ranking.
+R07's selection, Both views, arithmetic and ADS rules are retained.
+
+Local synthetic browser checks passed for both the new executive information
+and the retained hierarchy/source-selection cases. The refresh timestamp in
+R08 is explicitly sample metadata. Neither design constitutes production
+installation, live speed evidence or approval. The report implementation pause
+remains in force while the user reviews the two versions.

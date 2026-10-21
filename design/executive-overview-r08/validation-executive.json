@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Executive plan and variance match the standard table",
+    "Offsetting driver movements are explicit",
+    "Actuals, YTG, source coverage and sample refresh are labelled",
+    "Combined chart lines have direct separated labels",
+    "Signed variance bars retain values and direction",
+    "Ranking follows the explicit period and trend window",
+    "Scope and benchmark update the executive observation",
+    "Ex-factory cutoff and YTG differ correctly from IMS",
+    "FY and YTG carry month boundaries",
+    "Multiple measures and plan cohorts retain distinct units and values",
+    "Responsive executive controls and readout",
+    "Both view declares its independent scales",
+    "Period shading preserves all monthly observations",
+    "Missing source prevents a complete executive total",
+    "No external data requests or JavaScript errors"
+  ],
+  "baseline": {
+    "overview": 16843773.686148662,
+    "table": 16843773.686148662,
+    "overviewDelta": 30025.638178564608,
+    "tableDelta": 30025.638178564608
+  },
+  "oral": {
+    "overview": 12012006.30264727,
+    "table": 12012006.30264727,
+    "overviewDelta": 407779.6467341557,
+    "tableDelta": 407779.6467341557
+  },
+  "six": {
+    "overview": 556255.7325956505,
+    "table": 556255.7325956505
+  },
+  "ytg": {
+    "overview": 5903953.671444935,
+    "table": 5903953.671444935,
+    "overviewDelta": 30025.638178568333,
+    "tableDelta": 30025.638178568333
+  },
+  "rank12": [
+    "compact",
+    "paed-standard",
+    "juce",
+    "paed-energy"
+  ],
+  "rank6": [
+    "compact",
+    "juce",
+    "paed-standard",
+    "paed-energy"
+  ],
+  "dimensions": [
+    {
+      "width": 992,
+      "scroll": 992,
+      "overview": 954
+    },
+    {
+      "width": 704,
+      "scroll": 704,
+      "overview": 678
+    },
+    {
+      "width": 358,
+      "scroll": 358,
+      "overview": 338
+    },
+    {
+      "width": 288,
+      "scroll": 288,
+      "overview": 268
+    }
+  ],
+  "missing": {
+    "plan": "",
+    "context": "Actuals through August 2026YTG Sept–Dec 2026Plan sources 1/2Sample refresh · 21 Oct 2026, 07:30 UTC"
+  },
+  "staticResources": [
+    {
+      "url": "https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js",
+      "type": "script"
+    },
+    {
+      "url": "https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js",
+      "type": "script"
+    },
+    {
+      "url": "https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js",
+      "type": "script"
+    }
+  ]
+}

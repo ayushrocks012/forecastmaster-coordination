@@ -712,6 +712,82 @@
     "handoff/hourly-targeted-r01/validation.json": {
       "Bytes": 1012,
       "SHA256": "e3915b02133f32ad5aae34672b300129d3916c3ad28e3da55f99f4dd0bdec61c"
+    },
+    "design/executive-overview-r08/README.md": {
+      "Bytes": 3895,
+      "SHA256": "05f77bf705eb84b57b501ba6b0a0f4f01f35db21e9aef3d90d96d505278ad34c"
+    },
+    "design/executive-overview-r08/both-dark.png": {
+      "Bytes": 360185,
+      "SHA256": "27fa10568a5ab15ebc9cc0b408bf6348a639f9548a6bbe1dd40216f65ab3dfa8"
+    },
+    "design/executive-overview-r08/both-views.png": {
+      "Bytes": 355008,
+      "SHA256": "72da8cf4f007759230b790b9e6f4e5b4722c2f1a489f06cd390af8e95db00143"
+    },
+    "design/executive-overview-r08/check-ads-default.cjs": {
+      "Bytes": 6544,
+      "SHA256": "4bd76800e42536cc2fc5dc7dedc738ce71cb268776e7b185b278f55ff548d44e"
+    },
+    "design/executive-overview-r08/check-executive.cjs": {
+      "Bytes": 8814,
+      "SHA256": "1bfbde59bf465a5aa8ed2956058b378adc30bc5e6be1d5438e0457d27ccf9711"
+    },
+    "design/executive-overview-r08/check-hierarchy.cjs": {
+      "Bytes": 9742,
+      "SHA256": "3482546c57e29ff993c6d979e52ff9cc629e0e6d398ce2686a3f2192aefb09d4"
+    },
+    "design/executive-overview-r08/dark.png": {
+      "Bytes": 280601,
+      "SHA256": "dd52bf463553c844a91783971aecef3cb7aa1ad9cea16aca84331ce65a334dcd"
+    },
+    "design/executive-overview-r08/executive-dark.png": {
+      "Bytes": 360539,
+      "SHA256": "117923f38cf4baa6a434543adc247b7ed72aeba56c351200fb72804b001df8a0"
+    },
+    "design/executive-overview-r08/fy-and-ytg.png": {
+      "Bytes": 292289,
+      "SHA256": "c25edcb7a3ec8afe3280f42609523c337aee865156cd9516ec2d890c4ce6c923"
+    },
+    "design/executive-overview-r08/index.html": {
+      "Bytes": 172152,
+      "SHA256": "fc0f23cdaf161108ec57d7428eeea218a6a4f345ed71da4646a97845f1d82119"
+    },
+    "design/executive-overview-r08/narrow.png": {
+      "Bytes": 223598,
+      "SHA256": "b04b8cb400fc4c221f2467dad41f9b57381ba9dafbf846f675a5c6dd1af9ff28"
+    },
+    "design/executive-overview-r08/overview.png": {
+      "Bytes": 290708,
+      "SHA256": "1e053e8d12acf82d2d4ab73d86c57ccdcc05bca895edef4fa1f15b3341abd35d"
+    },
+    "design/executive-overview-r08/review.fragment.html": {
+      "Bytes": 75531,
+      "SHA256": "e98bf6106095d3c5cb8757118e0ef0a6dfdc7fbf48f069db92e94f83b69d99a8"
+    },
+    "design/executive-overview-r08/sectors.png": {
+      "Bytes": 278056,
+      "SHA256": "bbff70731ba722f4f9702803c9878411c6fed11c05fcca0694eb8d44e5b7d269"
+    },
+    "design/executive-overview-r08/validation-ads.json": {
+      "Bytes": 2484,
+      "SHA256": "89b26ffc52fc5e71c0f2766dd82daa047de2885c61606d7256a3307f52566d10"
+    },
+    "design/executive-overview-r08/validation-executive.json": {
+      "Bytes": 2497,
+      "SHA256": "78d5c14b10dbd92067754b167e31a80a47b1d3b6cd6a2468a0546bba78c5c981"
+    },
+    "design/executive-overview-r08/validation-hierarchy.json": {
+      "Bytes": 2669,
+      "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
+    },
+    "design/index.html": {
+      "Bytes": 2527,
+      "SHA256": "5184216a5f18253dacb12eb1080adee25b2ad17c62ff4cf69e6b380ea6b6d7a4"
+    },
+    "design/checkpoints/driver-and-sector-review-r07.json": {
+      "Bytes": 920,
+      "SHA256": "6a1d0596abb4398ad9c87afb9c44fd636a2e6268ebffd9ed28ffe34b66a0cfa8"
     }
   }
 }
