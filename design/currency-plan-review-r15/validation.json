@@ -1,0 +1,19 @@
+{
+  "schema": "FM_CONNECTED_GM_REVIEW_R15_VALIDATION",
+  "checkedAt": "2026-10-21T21:41:32.418Z",
+  "checks": [
+    "Demand opens with Total chart, driver summary, 12M comparison and collapsed Matching files; 6M/24M and all four Hide/Show controls remain available.",
+    "Navigation carries Affiliate, cycle, sectors, dates and Units/Value in both directions, while preserving each page’s explicit measures, grouping, periods, derived-row and visibility choices.",
+    "Both calendars limit summary years. Named periods retain full business windows, clear stays clear, and the FY/YTG shortcut follows the chosen year rather than hard-coded 2026.",
+    "Both headers share the same resolved source IDs, IMS/EF cutoffs and explicitly labelled sample refresh. Source details expand without changing the selected plan; ADS precedence retains Plan ADS and highest-numbered fallback.",
+    "Legend/table hover and native keyboard focus highlight matching lines without filtering either page. Share remains on the right axis and true blank Sub-channels display as a dash with an explanatory tooltip.",
+    "Hide/Show works independently on both pages, preserves selections/amounts and restores correctly sized charts.",
+    "672 Demand and 648 S&OP numerical observations match their saved baselines. Independent illustrative models are preserved; live cross-page reconciliation remains pending.",
+    "Both pages fit 1080/1024/736/390/320px in light/dark themes, restore combined host state, and make no warm network requests or script errors."
+  ],
+  "demandComparisons": 672,
+  "sopComparisons": 648,
+  "errors": [],
+  "warmNetworkRequests": 0,
+  "note": "HTML design using preserved independent synthetic models. Live source binding, cross-page numerical reconciliation and Power BI speed remain unexecuted implementation gates."
+}

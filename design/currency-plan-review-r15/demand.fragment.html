@@ -1,0 +1,603 @@
+<style>
+#fm-connected-demand-r15{color-scheme:light dark;--fm-bg:light-dark(#f5f7fa,#131b25);--fm-panel:light-dark(#ffffff,#1b2633);--fm-text:light-dark(#182c41,#e7edf5);--fm-muted:light-dark(#52667b,#afbed0);--fm-line:light-dark(#dce3eb,#354657);--fm-soft:light-dark(#edf3f7,#263644);--fm-accent:light-dark(#096b76,#73cbd0);--fm-selected:light-dark(#e7f3f4,#203e46);--fm-hover:light-dark(#f0f6f8,#2a3c4b);--fm-series1:light-dark(#087f83,#6cd1d0);--fm-series2:light-dark(#3268b2,#88b8fa);--fm-series3:light-dark(#a86713,#f0b764);--fm-series4:light-dark(#7b55a6,#c2a0ed);--fm-series5:light-dark(#b34c65,#f19db2);--fm-series6:light-dark(#537c2b,#b2d683);font:14px/1.45 'Segoe UI',Arial,sans-serif;color:var(--fm-text);width:100%;--fm-rowpad:6px;--fm-chart-height:285px}
+#fm-connected-demand-r15 *{box-sizing:border-box}
+#fm-connected-demand-r15 button,#fm-connected-demand-r15 input,#fm-connected-demand-r15 select{font:inherit;color:inherit}
+#fm-connected-demand-r15 select{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:4px;padding:5px 7px;min-height:31px}
+#fm-connected-demand-r15 button{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:4px;padding:6px 11px;min-height:32px}
+#fm-connected-demand-r15 button:hover{background:var(--fm-hover)}
+#fm-connected-demand-r15 button:focus-visible,#fm-connected-demand-r15 input:focus-visible{outline:2px solid var(--fm-accent);outline-offset:2px}
+#fm-connected-demand-r15 input[type=checkbox]{accent-color:var(--fm-accent);width:15px;height:15px;flex:none;margin:0}
+#fm-connected-demand-r15 input[type=search],#fm-connected-demand-r15 input[type=month]{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:4px;padding:6px 9px;min-height:32px;min-width:0}
+#fm-connected-demand-r15 button:disabled{opacity:.6}
+#fm-connected-demand-r15 .fm-window{background:var(--fm-bg);border:1px solid var(--fm-line);border-radius:8px;overflow:visible}
+#fm-connected-demand-r15 .fm-appbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 20px;background:var(--fm-panel);border-bottom:1px solid var(--fm-line);border-radius:8px 8px 0 0;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-brand{display:flex;align-items:center;gap:11px}
+#fm-connected-demand-r15 .fm-brandmark{width:5px;height:32px;background:var(--fm-accent);border-radius:1px}
+#fm-connected-demand-r15 h1{font-size:20px;font-weight:600;line-height:1.25;margin:0}
+#fm-connected-demand-r15 .fm-subtitle{font-size:12px;color:var(--fm-muted);margin-top:3px}
+#fm-connected-demand-r15 .fm-preview-label{font-size:12px;color:var(--fm-muted);padding-right:85px}
+#fm-connected-demand-r15 .fm-content{padding:14px 18px 18px;display:grid;gap:13px}
+#fm-connected-demand-r15 .fm-scope{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-country{font-size:13px;font-weight:600;display:flex;gap:8px;align-items:center}
+#fm-connected-demand-r15 .fm-country small{color:var(--fm-muted);font-weight:400;font-size:12px}
+#fm-connected-demand-r15 .fm-months{display:flex;gap:7px;align-items:center;color:var(--fm-muted);font-size:12px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-months input{width:148px;font-size:12px}
+#fm-connected-demand-r15 .fm-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 12px;position:relative;z-index:12}
+#fm-connected-demand-r15 .fm-filter{min-width:0;position:relative}
+#fm-connected-demand-r15 .fm-fieldlabel{display:block;font-size:12px;color:var(--fm-muted);margin-bottom:4px}
+#fm-connected-demand-r15 .fm-dropdown{width:100%;display:flex;align-items:center;justify-content:space-between;gap:7px;text-align:left;height:35px;padding:6px 9px}
+#fm-connected-demand-r15 .fm-dropdown span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#fm-connected-demand-r15 .fm-chevron{font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-popover{position:absolute;top:calc(100% + 5px);left:0;min-width:100%;width:265px;max-width:min(330px,calc(100vw - 40px));background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:5px;box-shadow:0 8px 24px light-dark(#142c4426,#0005);padding:8px;z-index:40}
+#fm-connected-demand-r15 .fm-popover[hidden]{display:none}
+#fm-connected-demand-r15 .fm-popover input[type=search]{width:100%;font-size:13px;margin-bottom:5px}
+#fm-connected-demand-r15 .fm-options{display:grid;gap:1px}
+#fm-connected-demand-r15 .fm-option{display:flex;align-items:center;gap:9px;padding:7px 5px;border-radius:3px;font-size:13px;min-height:32px;overflow-wrap:anywhere}
+#fm-connected-demand-r15 .fm-option:hover{background:var(--fm-hover)}
+#fm-connected-demand-r15 .fm-no-options{color:var(--fm-muted);font-size:12px;padding:8px 4px}
+#fm-connected-demand-r15 .fm-panel{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:5px;min-width:0}
+#fm-connected-demand-r15 .fm-panelhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-paneltitle{margin:0;font-weight:600;font-size:14px}
+#fm-connected-demand-r15 .fm-inline{display:flex;align-items:center;gap:9px;flex-wrap:wrap;min-width:0}
+#fm-connected-demand-r15 .fm-detail{font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-file-actions{padding:0 12px 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-file-actions button{font-size:12px;min-height:29px;padding:4px 9px}
+#fm-connected-demand-r15 .fm-file-search{margin-left:auto;width:230px;font-size:12px!important}
+#fm-connected-demand-r15 .fm-check{display:inline-flex;align-items:center;gap:7px;font-size:12px;min-height:28px}
+#fm-connected-demand-r15 .fm-files{width:100%;border-collapse:collapse;font-size:12px}
+#fm-connected-demand-r15 .fm-fileswrap{width:100%;overflow-x:auto}
+#fm-connected-demand-r15 .fm-files thead{background:var(--fm-soft);color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-files th{font-weight:400;text-align:left;padding:5px 10px}
+#fm-connected-demand-r15 .fm-files td{padding:var(--fm-rowpad) 10px;border-top:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-files .fm-file-box{width:30px;padding-right:0}
+#fm-connected-demand-r15 .fm-files tr[data-selected=true]{background:var(--fm-selected)}
+#fm-connected-demand-r15 .fm-file-name{display:block;overflow-wrap:anywhere;font-weight:500}
+#fm-connected-demand-r15 .fm-files .fm-file-when{white-space:nowrap}
+#fm-connected-demand-r15 .fm-file-pagination{display:flex;align-items:center;justify-content:flex-end;gap:9px;padding:6px 11px;font-size:12px;border-top:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-file-pagination:has(button[hidden]){display:none}
+#fm-connected-demand-r15 .fm-file-pagination button{padding:2px 7px;min-height:25px;font-size:12px}
+#fm-connected-demand-r15 .fm-chart-controls{padding:0 12px 9px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-switch{display:inline-flex;gap:0}
+#fm-connected-demand-r15 .fm-switch button{font-size:12px;border-radius:0;min-height:31px}
+#fm-connected-demand-r15 .fm-switch button:first-child{border-radius:4px 0 0 4px}
+#fm-connected-demand-r15 .fm-switch button:last-child{border-radius:0 4px 4px 0;border-left:0}
+#fm-connected-demand-r15 .fm-switch button[aria-pressed=true]{background:var(--fm-selected);color:var(--fm-accent);font-weight:600}
+#fm-connected-demand-r15 .fm-quick-scope{padding:9px 12px 3px;display:flex;gap:7px 16px;align-items:center;flex-wrap:wrap;min-height:38px}
+#fm-connected-demand-r15 .fm-quick-scope .fm-check{font-size:13px}
+#fm-connected-demand-r15 .fm-quick-scope{display:grid;gap:8px;padding-bottom:8px}
+#fm-connected-demand-r15 .fm-quick-row{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-quick-actions{display:inline-flex;gap:5px}
+#fm-connected-demand-r15 .fm-quick-actions button{font-size:12px;min-height:27px;padding:3px 7px}
+#fm-connected-demand-r15 .fm-series-mark{width:13px;height:3px;background:var(--series);display:inline-block}
+#fm-connected-demand-r15 .fm-quick-caption{font-size:12px;color:var(--fm-muted);margin-right:3px}
+#fm-connected-demand-r15 .fm-sector-parent{font-size:12px;color:var(--fm-muted);margin-right:2px}
+#fm-connected-demand-r15 .fm-graph-context{padding:3px 12px 0;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-plots{display:grid;gap:12px;padding:6px 9px 0}
+#fm-connected-demand-r15 .fm-plotblock{min-width:0}
+#fm-connected-demand-r15 .fm-plot-heading{font-weight:600;font-size:13px;margin:4px 0 0 7px}
+#fm-connected-demand-r15 .fm-plot{position:relative;height:var(--fm-chart-height);min-width:0}
+#fm-connected-demand-r15 .fm-plot svg{display:block;width:100%;height:100%;font:12px 'Segoe UI',Arial,sans-serif;overflow:visible}
+#fm-connected-demand-r15 .fm-plot svg text{fill:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-plot svg .fm-axislabel{fill:var(--fm-text);font-size:12px}
+#fm-connected-demand-r15 .fm-plot svg .fm-gridline{stroke:var(--fm-line);stroke-width:1}
+#fm-connected-demand-r15 .fm-plot svg .fm-curve{fill:none;stroke-linecap:round;stroke-linejoin:round}
+#fm-connected-demand-r15 .fm-plot svg .fm-cutoff{stroke:var(--fm-muted);stroke-width:1;stroke-dasharray:3 5}
+#fm-connected-demand-r15 .fm-legend{display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;padding:5px 13px 11px;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-legend-item{display:inline-flex;align-items:center;gap:6px}
+#fm-connected-demand-r15 .fm-legend-line{width:21px;border-top:2px solid var(--series,var(--fm-text));display:inline-block}
+#fm-connected-demand-r15 .fm-tooltip{position:absolute;z-index:10;pointer-events:none;max-width:285px;padding:8px 10px;border:1px solid var(--fm-line);border-radius:4px;background:var(--fm-panel);box-shadow:0 4px 15px light-dark(#142c4424,#0005);font-size:12px;color:var(--fm-text)}
+#fm-connected-demand-r15 .fm-tooltip div{display:flex;justify-content:space-between;gap:20px;margin-top:3px}
+#fm-connected-demand-r15 .fm-tooltip strong{font-weight:600}
+#fm-connected-demand-r15 .fm-summary-controls{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-period-field{width:172px}
+#fm-connected-demand-r15 .fm-summary-controls .fm-fieldlabel{display:block}
+#fm-connected-demand-r15 .fm-trends{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-summary-context{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:0 12px 9px;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-summarywrap{width:100%;overflow-x:auto;border-radius:0 0 5px 5px}
+#fm-connected-demand-r15 .fm-summary{border-collapse:collapse;width:100%;font-size:12px;min-width:570px}
+#fm-connected-demand-r15 .fm-summary th{font-weight:500;padding:7px 10px;white-space:nowrap;background:var(--fm-soft);text-align:right;border-top:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-summary th:first-child{text-align:left}
+#fm-connected-demand-r15 .fm-summary td{padding:8px 10px;border-top:1px solid var(--fm-line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#fm-connected-demand-r15 .fm-summary td:first-child{text-align:left;white-space:normal;min-width:170px}
+#fm-connected-demand-r15 .fm-summary .fm-total td{background:var(--fm-soft);font-weight:600}
+#fm-connected-demand-r15 .fm-summary{table-layout:fixed}
+#fm-connected-demand-r15 .fm-summary thead .fm-period-group{text-align:center;font-weight:600;border-bottom:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-summary thead .fm-trend-group{text-align:center}
+#fm-connected-demand-r15 .fm-summary .fm-period-start{border-left:2px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-summary thead tr:first-child th:first-child,#fm-connected-demand-r15 .fm-summary tbody td:first-child:not([colspan]){position:sticky;left:0;background:var(--fm-panel);z-index:2}
+#fm-connected-demand-r15 .fm-summary thead tr:first-child th:first-child{background:var(--fm-soft);z-index:3}
+#fm-connected-demand-r15 .fm-summary .fm-total td:first-child{background:var(--fm-soft)}
+#fm-connected-demand-r15 .fm-summary .fm-row-toggle{max-width:100%}
+#fm-connected-demand-r15 .fm-local-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px;padding:10px 12px;position:relative;z-index:9}
+#fm-connected-demand-r15 .fm-local-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-tier-parent{display:block;font-size:11px;color:var(--fm-muted);margin-top:2px}
+#fm-connected-demand-r15 .fm-dimension{color:var(--fm-muted);font-size:11px}
+#fm-connected-demand-r15 .fm-table-row td:first-child{font-weight:400}
+#fm-connected-demand-r15 .fm-selection-search{width:215px;font-size:12px!important}
+#fm-connected-demand-r15 .fm-shared-options{display:flex;align-items:center;flex-wrap:wrap;gap:9px 22px}
+#fm-connected-demand-r15 .fm-shared-options .fm-check{font-size:13px}
+#fm-connected-demand-r15 .fm-partial{color:var(--fm-muted);font-size:12px}
+#fm-connected-demand-r15 .fm-selection-caption{padding:0 12px 10px;color:var(--fm-muted);font-size:12px}
+#fm-connected-demand-r15 .fm-hierarchy-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+#fm-connected-demand-r15 .fm-driver-children{display:flex;gap:5px 18px;flex-wrap:wrap;margin:4px 0 0 22px;padding-left:11px;border-left:2px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-parent-choice{font-weight:600}
+#fm-connected-demand-r15 .fm-summary .fm-table-row.fm-sector-row.fm-hierarchy-child td:first-child{padding-left:29px;color:var(--fm-text)}
+#fm-connected-demand-r15 .fm-summary .fm-subtotal td{font-weight:600}
+@media(max-width:560px){#fm-connected-demand-r15 .fm-hierarchy-options{grid-template-columns:1fr}}
+#fm-connected-demand-r15 input[type=radio]{accent-color:var(--fm-accent);width:15px;height:15px;margin:0}
+#fm-connected-demand-r15 .fm-legend svg{width:26px;height:10px;overflow:visible}
+#fm-connected-demand-r15 .fm-choice-summary{font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-data-context{display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap;color:var(--fm-muted);font-size:12px}
+#fm-connected-demand-r15 .fm-readout{background:var(--fm-panel);border:1px solid var(--fm-line);border-left:4px solid var(--fm-accent);border-radius:5px;padding:12px 14px;display:grid;gap:12px}
+#fm-connected-demand-r15 .fm-readout-focus{display:flex;gap:8px 15px;align-items:baseline;justify-content:space-between;flex-wrap:wrap;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-readout-values{display:flex;gap:8px 22px;align-items:baseline;flex-wrap:wrap;margin-top:5px}
+#fm-connected-demand-r15 .fm-plan-value{font-size:24px;font-weight:600;line-height:1.25;font-variant-numeric:tabular-nums}
+#fm-connected-demand-r15 .fm-gap-value{font-size:16px;font-weight:500;font-variant-numeric:tabular-nums}
+#fm-connected-demand-r15 .fm-offsets{display:flex;gap:6px 17px;align-items:center;flex-wrap:wrap;margin-top:7px;font-size:13px}
+#fm-connected-demand-r15 .fm-readout-label{font-size:12px;color:var(--fm-muted);font-weight:400;margin-right:5px}
+#fm-connected-demand-r15 .fm-readout-offset{font-variant-numeric:tabular-nums}
+#fm-connected-demand-r15 .fm-readout{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
+#fm-connected-demand-r15 .fm-plot-context{font-size:12px;color:var(--fm-muted);margin:4px 7px 2px;overflow-wrap:anywhere}
+#fm-connected-demand-r15 .fm-compare-periods{font-size:12px}
+#fm-connected-demand-r15 .fm-period-range{display:block;font-size:11px;color:var(--fm-muted);font-weight:400;margin-top:2px}
+#fm-connected-demand-r15 .fm-period-note{padding:0 12px 7px;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-rank-window{font-size:12px}
+#fm-connected-demand-r15 .fm-table-note{padding:8px 12px;color:var(--fm-muted);font-size:12px;border-top:1px solid var(--fm-line)}
+#fm-connected-demand-r15 .fm-plot svg .fm-review-band{fill:var(--fm-selected);fill-opacity:.65}
+#fm-connected-demand-r15 .fm-plot svg .fm-end-label{fill:var(--fm-text);paint-order:stroke;stroke:var(--fm-panel);stroke-width:4px;stroke-linejoin:round}
+#fm-connected-demand-r15 .fm-switch{flex-wrap:wrap;max-width:100%}
+#fm-connected-demand-r15 .fm-summary .fm-table-row.fm-sector-row td:first-child{padding-left:10px;color:var(--fm-text)}
+@media(max-width:560px){#fm-connected-demand-r15 .fm-local-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#fm-connected-demand-r15 .fm-sort[aria-pressed=true]{background:var(--fm-selected);color:var(--fm-accent)}
+#fm-connected-demand-r15 .fm-tier-check{display:inline-flex;align-items:center;gap:8px}
+#fm-connected-demand-r15 .fm-summary .fm-sector-row td:first-child{padding-left:24px}
+#fm-connected-demand-r15 .fm-summary .fm-subtotal td:first-child{font-weight:600}
+#fm-connected-demand-r15 .fm-summary .fm-sector-row td:first-child{padding-left:39px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-summary .fm-context-row td{background:var(--fm-panel);font-size:12px;color:var(--fm-muted);text-align:left;padding:8px 10px}
+#fm-connected-demand-r15 .fm-row-toggle{border:0!important;background:transparent!important;padding:0 6px 0 0!important;min-height:23px!important;display:inline-flex;align-items:center;gap:7px;text-align:left}
+#fm-connected-demand-r15 .fm-delta-over{color:var(--fm-accent)}
+#fm-connected-demand-r15 .fm-delta-under{color:var(--fm-series3)}
+#fm-connected-demand-r15 .fm-empty{text-align:center;padding:24px 15px;color:var(--fm-muted);font-size:13px}
+#fm-connected-demand-r15 .fm-chart-empty{display:flex;align-items:center;justify-content:center;height:100%;text-align:center;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-foot{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap;color:var(--fm-muted);font-size:11px;padding:0 1px}
+#fm-connected-demand-r15 .fm-live-note{min-width:0}
+#fm-connected-demand-r15 [hidden]{display:none!important}
+@media(max-width:950px){#fm-connected-demand-r15 .fm-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){#fm-connected-demand-r15 .fm-content{padding:12px;gap:12px}#fm-connected-demand-r15 .fm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#fm-connected-demand-r15 .fm-appbar{padding:14px 13px}#fm-connected-demand-r15 .fm-preview-label{padding-right:0}#fm-connected-demand-r15 .fm-files{min-width:595px}#fm-connected-demand-r15 .fm-file-search{width:190px}#fm-connected-demand-r15 .fm-file-actions{gap:6px}#fm-connected-demand-r15 .fm-panelhead{align-items:flex-start}#fm-connected-demand-r15 .fm-summary-controls{width:100%;justify-content:space-between}#fm-connected-demand-r15 .fm-popover{width:100%}}
+@media(max-width:430px){#fm-connected-demand-r15 h1{font-size:18px}#fm-connected-demand-r15 .fm-content{padding:9px}#fm-connected-demand-r15 .fm-months{gap:5px}#fm-connected-demand-r15 .fm-months input{width:130px}#fm-connected-demand-r15 .fm-file-actions{padding:0 9px 8px}#fm-connected-demand-r15 .fm-file-search{margin-left:0;width:100%}#fm-connected-demand-r15 .fm-files th,#fm-connected-demand-r15 .fm-files td{padding-left:6px;padding-right:6px}#fm-connected-demand-r15 .fm-fileswrap{overflow-x:auto}#fm-connected-demand-r15 .fm-panelhead{padding:9px}#fm-connected-demand-r15 .fm-quick-scope{gap:5px 13px}#fm-connected-demand-r15 .fm-chart-controls{padding-left:9px;padding-right:9px}#fm-connected-demand-r15 .fm-trends{gap:9px}#fm-connected-demand-r15 .fm-preview-label{font-size:11px}}
+@media(pointer:coarse){#fm-connected-demand-r15 button,#fm-connected-demand-r15 .fm-option,#fm-connected-demand-r15 .fm-check{min-height:42px}#fm-connected-demand-r15 input[type=search]{font-size:16px!important}}
+#fm-connected-demand-r15 .fm-review-actions{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-review-actions button{font-size:12px}
+#fm-connected-demand-r15 .fm-periods-caption{font-weight:500;color:var(--fm-text)}
+#fm-connected-demand-r15 .fm-months label{display:flex;align-items:center;gap:6px}
+#fm-connected-demand-r15 .fm-months{max-width:100%}
+#fm-connected-demand-r15 .fm-summary-review{padding:0 12px 10px}
+#fm-connected-demand-r15 .fm-summary .fm-subtotal td{background:var(--fm-hover);font-weight:500}
+#fm-connected-demand-r15 .fm-summary .fm-subtotal td:first-child{background:var(--fm-hover);font-weight:600}
+#fm-connected-demand-r15 .fm-summary .fm-row-toggle{font-size:12px;font-weight:600;white-space:normal;line-height:1.4;max-width:100%}
+#fm-connected-demand-r15 .fm-expand-mark{display:inline-block;width:12px;color:var(--fm-muted);font-size:11px;flex:none}
+#fm-connected-demand-r15 .fm-ranking-controls{display:flex;align-items:center;gap:7px 10px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-ranking-controls label{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+#fm-connected-demand-r15 .fm-ranking-controls select{font-size:12px;max-width:100%}
+#fm-connected-demand-r15 .fm-summarywrap{scrollbar-width:thin;scrollbar-color:var(--fm-muted) var(--fm-soft)}
+#fm-connected-demand-r15 .fm-scroll-note{padding:0 12px 8px;font-size:12px;color:var(--fm-muted)}
+#fm-connected-demand-r15 .fm-subtotal .fm-tier-parent{font-weight:400}
+#fm-connected-demand-r15 .fm-period-start .fm-period-range{white-space:normal;max-width:100%;text-align:left}
+#fm-connected-demand-r15 .fm-review-hint{font-size:12px;color:var(--fm-muted)}
+@media(max-width:760px){#fm-connected-demand-r15 .fm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){#fm-connected-demand-r15 .fm-summary th:first-child,#fm-connected-demand-r15 .fm-summary td:first-child{min-width:140px}#fm-connected-demand-r15 .fm-selection-search{max-width:100%}}
+#fm-connected-demand-r15 .fm-section-head{position:relative;padding-right:76px}
+#fm-connected-demand-r15 .fm-section-toggle{position:absolute;right:12px;top:10px;font-size:12px}
+#fm-connected-demand-r15 .fm-collapsed .fm-panelhead>:not(h2):not(.fm-section-toggle){display:none}
+#fm-connected-demand-r15 .fm-focus-legend{border:0;background:transparent;padding:2px 0;min-height:28px;display:inline-flex;align-items:center;gap:6px;font-size:12px}
+#fm-connected-demand-r15 .fm-chart-line{transition:opacity .1s,stroke-width .1s}
+@media(prefers-reduced-motion:reduce){#fm-connected-demand-r15 .fm-chart-line{transition:none}}
+@media(pointer:coarse){#fm-connected-demand-r15 .fm-section-toggle{min-height:44px;min-width:44px}}
+</style>
+<div id="fm-connected-demand-r15" aria-label="ForecastMaster demand review design">
+ <div class="fm-window">
+  <header class="fm-appbar">
+   <div class="fm-brand"><span class="fm-brandmark" aria-hidden="true"></span><div><h1>ForecastMaster · Demand review</h1><div class="fm-subtitle">GM review</div></div></div>
+   <div class="fm-preview-label">Design preview · sample data</div>
+  </header>
+  <main class="fm-content">
+   <div class="fm-scope">
+    <div class="fm-country"><span id="fm-affiliate-caption">United Kingdom</span> <small id="fm-cycle-caption">October 2026</small></div>
+    <div class="fm-months" id="fm-month-range" role="group" aria-label="Review months"><span>Review months</span><label>From <input type="month" id="fm-month-start" aria-label="First review month" value="2025-01" min="2024-01" max="2029-12"></label><label>To <input type="month" id="fm-month-end" aria-label="Last review month" value="2027-12" min="2024-01" max="2029-12"></label></div>
+    <div class="fm-choice-summary" id="fm-plan-summary" aria-live="polite">Plan: ADS · automatic</div>
+   </div>
+   <div class="fm-data-context" id="fm-data-context" aria-live="polite"></div>
+   <div class="fm-filters" id="fm-filters"></div>
+   <div class="fm-detail" id="fm-plan-status" role="status" hidden></div>
+   <section class="fm-readout" id="fm-executive-readout" aria-label="Executive position" aria-live="polite"></section>
+   <section class="fm-panel" aria-label="Shared review selection">
+    <div class="fm-panelhead"><h2 class="fm-paneltitle">Growth drivers &amp; sectors</h2><span class="fm-detail">Shared selection · chart and table</span></div>
+    <div class="fm-local-toolbar"><span class="fm-review-hint">Select a driver or any combination of its sectors</span><div class="fm-inline"><input type="search" class="fm-selection-search" id="fm-selection-search" placeholder="Search drivers or sectors…" aria-label="Search review choices"><button type="button" id="fm-select-scope">Select all</button><button type="button" id="fm-clear-scope">Clear all</button></div></div>
+    <div class="fm-quick-scope" id="fm-quick-scope" aria-label="Shared selected growth drivers or forecast tiers"></div>
+    <div class="fm-selection-caption" id="fm-selected-scope" aria-live="polite"></div>
+   </section>
+   <section class="fm-panel" aria-label="Demand comparison chart">
+    <div class="fm-panelhead"><h2 class="fm-paneltitle" id="fm-chart-title">Market units</h2><span class="fm-detail" id="fm-chart-scope"></span></div>
+    <div class="fm-chart-controls">
+     <div class="fm-inline"><span class="fm-detail">Chart view</span><div class="fm-switch" role="group" aria-label="Chart grouping"><button type="button" data-graph-mode="total" aria-pressed="true">Total</button><button type="button" data-graph-mode="driver" aria-pressed="false">Compare drivers</button><button type="button" data-graph-mode="sector" aria-pressed="false">Compare sectors</button><button type="button" data-graph-mode="hierarchy" aria-pressed="false">Driver + sectors</button></div></div>
+    </div>
+    <div class="fm-local-toolbar"><div class="fm-trends" aria-label="Graph trend benchmark"><span class="fm-detail">Trend history</span><label class="fm-check"><input type="radio" name="fm-graph-benchmark" data-chart-trend="6">6M</label><label class="fm-check"><input type="radio" name="fm-graph-benchmark" data-chart-trend="12" checked>12M</label><label class="fm-check"><input type="radio" name="fm-graph-benchmark" data-chart-trend="24">24M</label></div><span class="fm-detail">Visible months use the calendars above</span></div>
+    <div class="fm-graph-context" id="fm-graph-context"></div>
+    <div class="fm-period-note" id="fm-chart-periods"></div>
+    <div class="fm-plots" id="fm-plots"></div>
+    <div class="fm-legend" id="fm-legend"></div>
+   </section>
+   <section class="fm-panel" aria-label="Executive summary">
+    <div class="fm-panelhead"><h2 class="fm-paneltitle">Executive summary</h2><div class="fm-summary-controls"><div class="fm-period-field" id="fm-period-field"></div><div class="fm-trends" aria-label="Table trend comparisons"><span class="fm-detail">Trend comparisons</span><label class="fm-check"><input type="checkbox" data-table-trend="6" checked>6M</label><label class="fm-check"><input type="checkbox" data-table-trend="12" checked>12M</label><label class="fm-check"><input type="checkbox" data-table-trend="24" checked>24M</label></div></div></div>
+    <div class="fm-review-actions fm-summary-review"><button type="button" class="fm-compare-periods" id="fm-compare-periods">Compare 2026 FY + YTG</button><span class="fm-periods-caption" id="fm-review-period-caption" aria-live="polite"></span></div>
+    <div class="fm-local-toolbar"><div class="fm-inline"><span class="fm-detail">Table rows</span><div class="fm-switch" role="group" aria-label="Table row level"><button type="button" data-table-view="driver" aria-pressed="true">Drivers</button><button type="button" data-table-view="sector" aria-pressed="false">Sectors</button><button type="button" data-table-view="hierarchy" aria-pressed="false">Both</button></div></div><span class="fm-detail">Same scope · independent chart and table views</span></div>
+    <div class="fm-summary-context"><span id="fm-summary-context"></span><div class="fm-ranking-controls"><label>Rank period <select id="fm-rank-period" aria-label="Period for ranking"></select></label><label>Trend <select class="fm-rank-window" id="fm-rank-window" aria-label="Variance window for ranking"><option value="6">6M</option><option value="12" selected>12M</option><option value="24">24M</option></select></label><button type="button" class="fm-sort" id="fm-sort-gaps" aria-pressed="false">Largest gaps first</button></div></div>
+    <div class="fm-period-note" id="fm-ranking-caption"></div>
+    <div class="fm-scroll-note" id="fm-table-scroll-note" hidden>Scroll horizontally to compare periods · row names stay visible</div>
+    <div class="fm-summarywrap"><table class="fm-summary" id="fm-summary"></table></div>
+    <div class="fm-table-note">+ Overcall / − Undercall · Plan minus trend · 6M / 12M / 24M are the actual-history windows used to fit each trend.</div>
+   </section>
+   <section class="fm-panel" aria-label="Matching files">
+    <div class="fm-panelhead"><h2 class="fm-paneltitle">Matching files</h2><span class="fm-detail" id="fm-file-count" aria-live="polite"></span></div>
+    <div class="fm-selection-caption">Automatic order: Plan ADS → ADS → highest numbered ADS version, per growth driver and cycle.</div>
+    <div class="fm-file-actions"><button type="button" id="fm-restore-ads">Use ADS default</button><button type="button" id="fm-select-files">Select all plans</button><button type="button" id="fm-clear-files">Clear all</button><label class="fm-check"><input type="checkbox" id="fm-selected-only">Selected only</label><input type="search" class="fm-file-search" id="fm-file-search" placeholder="Search files…" aria-label="Search matching files"></div>
+    <div class="fm-fileswrap"><table class="fm-files"><thead><tr><th class="fm-file-box" scope="col"><span aria-label="Selection">✓</span></th><th scope="col">File</th><th scope="col" class="fm-file-driver">Growth driver</th><th scope="col">Cycle</th><th scope="col" class="fm-file-when">Updated</th></tr></thead><tbody id="fm-file-rows"></tbody></table></div>
+    <div class="fm-file-pagination" id="fm-pagination"><span id="fm-page-caption"></span><button type="button" id="fm-prev-files" aria-label="Previous files">Previous</button><button type="button" id="fm-next-files" aria-label="Next files">Next</button></div>
+   </section>
+  <footer class="fm-foot"><span>Illustrative values · sample sectors · saved actuals cutoff per file</span><span class="fm-live-note" id="fm-live-note" aria-live="polite">Local interactive preview</span></footer>
+  </main>
+ </div>
+</div>
+<script>
+(() => {
+ const root=document.getElementById('fm-connected-demand-r15');
+ if(!root)return;
+ const $=s=>root.querySelector(s),$$=s=>[...root.querySelectorAll(s)];
+ const fx=document.getElementById('fm-connected-review-r15').planFX;
+ fx.mount($('.fm-appbar'),'demand');
+ const escape=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const driverNames={oral:'Core Oral',paed:'Paed SIP'};
+ const sectors=[{id:'compact',name:'Compact',driver:'oral',base:440000,slope:4300,share:.18,price:6.2,color:2},{id:'juce',name:'Juce',driver:'oral',base:310000,slope:2300,share:.15,price:5.4,color:3},{id:'paed-standard',name:'Paed standard',driver:'paed',base:190000,slope:2300,share:.22,price:7.1,color:5},{id:'paed-energy',name:'Paed energy',driver:'paed',base:125000,slope:1400,share:.20,price:8.2,color:6}];
+ const catalog=[{id:'market-units',name:'Market units',section:'ims',unit:'Units',component:'market'},{id:'abbott-units',name:'Abbott units',section:'ims',unit:'Units',component:'abbott'},{id:'volume-share',name:'Abbott volume share',section:'ims',unit:'%',component:'abbott',denominator:'market'},{id:'market-value',name:'Market value',section:'ims',unit:'£',component:'marketValue'},{id:'value-share',name:'Abbott value share',section:'ims',unit:'%',component:'abbottValue',denominator:'marketValue'},{id:'ef-units',name:'Ex-factory selling units',section:'ef',unit:'Units',component:'ef'},{id:'ef-value',name:'Ex-factory value',section:'ef',unit:'£',component:'efValue'}];
+ const cycleOptions=[{id:'2026-10',name:'October 2026'},{id:'2026-07',name:'July 2026'}];
+ const channels=[{id:'community',name:'Community'},{id:'hospital',name:'Hospital'}];
+ const subchannels=[{id:'retail',name:'Pharmacy',channel:'community',weight:.53},{id:'homecare',name:'Homecare',channel:'community',weight:.27},{id:'hospital',name:'Hospital',channel:'hospital',weight:.20}];
+ const periodOptions=Array.from({length:6},(_,i)=>2024+i).flatMap(year=>['FY','YTD','YTG','H1','H2'].map(kind=>({id:year+':'+kind,name:year+' '+kind})));
+ const files=[];
+ const versions={
+  '2026-10|oral':['ADS','ADS_001','ADS_010','Ayush_001'],
+  '2026-10|paed':['ADS_001','ADS_002','Ayush_001'],
+  '2026-07|oral':['Plan ADS','ADS','ADS_002','Ayush_001'],
+  '2026-07|paed':['ADS_001','ADS_010','ADS_002','Ayush_001']
+ };
+ for(const cycle of cycleOptions)for(const driver of Object.keys(driverNames))for(const [index,scenario]of versions[cycle.id+'|'+driver].entries())files.push({id:cycle.id+'|'+driver+'|'+scenario,cycle:cycle.id,driver,scenario,name:'UK_'+(driver==='oral'?'Core_Oral':'Paed_SIP')+'_'+(cycle.id==='2026-10'?'Oct26':'Jul26')+'_'+scenario.replaceAll(' ','_')+'.xlsm',updated:cycle.id==='2026-10'?'20 Oct · 21:'+String(20+index):'18 Jul · 16:'+String(40+index),modifiedUtc:cycle.id==='2026-10'?'2026-10-20T21:'+String(20+index)+':00Z':'2026-07-18T16:'+String(40+index)+':00Z'});
+ function adsInfo(file){
+  const label=String(file.scenario||'').trim(),match=/^(Plan[ _-]*)?ADS(?:[ _-]+(\d+))?$/i.exec(label);
+  if(!match)return null;const revision=match[2]===undefined?0:Number(match[2]);if(!Number.isSafeInteger(revision))return null;
+  return {priority:match[2]!==undefined?1:match[1]?3:2,revision,modified:Date.parse(file.modifiedUtc||'')||0};
+ }
+ function adsSelection(cycles,available=files,drivers=Object.keys(driverNames)){
+  const chosen=[],issues=[];
+  for(const cycle of cycles)for(const driver of drivers){
+   const candidates=available.filter(f=>f.cycle===cycle&&f.driver===driver&&adsInfo(f)).sort((a,b)=>{const x=adsInfo(a),y=adsInfo(b);return y.priority-x.priority||y.revision-x.revision||y.modified-x.modified||a.id.localeCompare(b.id);});
+   if(!candidates.length){issues.push({cycle,driver,status:'MISSING'});continue;}
+   if(candidates.length>1){const a=adsInfo(candidates[0]),b=adsInfo(candidates[1]);if(a.priority===b.priority&&a.revision===b.revision&&a.modified===b.modified){issues.push({cycle,driver,status:'AMBIGUOUS'});continue;}}
+   chosen.push(candidates[0]);
+  }
+  return {files:chosen,issues};
+ }
+ function planFamily(file){return adsInfo(file)?'ADS plan':file.scenario;}
+
+ const defaults={affiliates:['uk'],display:'units',scopeOpen:true,graphOpen:true,summaryOpen:true,filesOpen:false,cycles:['2026-10'],channels:['community','hospital'],subchannels:subchannels.map(s=>s.id),sectors:sectors.map(s=>s.id),sections:['ims'],metrics:['market-units'],periods:['2026:FY'],files:adsSelection(['2026-10']).files.map(f=>f.id),fileMode:'ads',view:'driver',combined:true,trends:[12],sortGaps:false,sortWindow:12,rankPeriod:'2026:FY',tableView:'driver',expandedDrivers:[],tableTrends:[12],selectionLevel:'hierarchy',selectionSearch:'',monthStart:'2025-01',monthEnd:'2027-12',fileSearch:'',selectedOnly:false,filePage:0};
+ const saved=window.openai?.widgetState?.modelContent;
+ let state={...defaults,...(saved?.schema==='fm-connected-gm-review-r15'?saved.state?.demand:{})};
+ for(const k of ['cycles','channels','subchannels','sectors','sections','metrics','periods','files','trends','tableTrends','expandedDrivers'])state[k]=Array.isArray(state[k])?[...state[k]]:[...defaults[k]];
+ const dropdowns=new Map(),fitCache=new Map(),dataCache=new Map();
+ const interactionTimings=[];
+ const monthIndex=iso=>(Number(iso.slice(0,4))-2024)*12+Number(iso.slice(5,7))-1;
+ const isoMonth=t=>`${2024+Math.floor(t/12)}-${String(t%12+1).padStart(2,'0')}`;
+ const monthLabel=t=>new Date(Date.UTC(2024+Math.floor(t/12),t%12,1)).toLocaleDateString('en-GB',{month:'short',year:'2-digit',timeZone:'UTC'});
+ const cutoff=(file,metric)=>monthIndex(file.cycle)-(metric.section==='ef'?1:2);
+ const cycleName=id=>cycleOptions.find(x=>x.id===id)?.name||id;
+ const monthDate=t=>new Date(Date.UTC(2024+Math.floor(t/12),t%12,1));
+ const shortCycle=id=>monthDate(monthIndex(id)).toLocaleDateString('en-GB',{month:'short',year:'numeric',timeZone:'UTC'});
+ const styleColor=i=>getComputedStyle(root).getPropertyValue('--fm-series'+((i-1)%6+1)).trim();
+ const rawNumber=(v,unit)=>v==null||!Number.isFinite(v)?'—':unit==='%'?(v*100).toFixed(1)+'%':(unit==='£'?fx.symbol():'')+Math.round(v).toLocaleString('en-GB');
+ const compact=(v,unit='Units')=>v==null||!Number.isFinite(v)?'—':unit==='%'?(v*100).toFixed(1)+'%':(unit==='£'?fx.symbol():'')+(Math.abs(v)>=1e6?(v/1e6).toFixed(2)+'m':Math.abs(v)>=1e3?(v/1e3).toFixed(1)+'k':Math.round(v).toLocaleString('en-GB'));
+ function deltaLabel(v,unit){if(v==null)return '—';const sign=v>0?'+':v<0?'−':'';return unit==='%'?sign+(Math.abs(v)*100).toFixed(2)+' pp':sign+compact(Math.abs(v),unit);}
+ function persist(){document.getElementById('fm-connected-review-r15')?.reviewSession?.changed('demand',state);}
+ function validOptions(key){
+  if(key==='affiliates')return [{id:'uk',name:'United Kingdom'}];
+  if(key==='cycles')return cycleOptions;
+  if(key==='channels')return channels;
+  if(key==='subchannels')return subchannels.filter(x=>state.channels.includes(x.channel));
+  if(key==='sections')return [{id:'ims',name:'IMS / Market'},{id:'ef',name:'Ex-Factory'}];
+  if(key==='metrics')return catalog.filter(m=>state.sections.includes(m.section)&&(state.display==='value'?(m.unit==='£'||m.id==='value-share'):(m.unit==='Units'||m.id==='volume-share')));
+  return periodOptions.filter(p=>p.id.slice(0,4)>=state.monthStart.slice(0,4)&&p.id.slice(0,4)<=state.monthEnd.slice(0,4));
+ }
+ function repair(key,previous=[]){
+  if(key==='channels'){const ids=validOptions('subchannels').map(x=>x.id);state.subchannels=state.subchannels.filter(id=>ids.includes(id));if(!state.subchannels.length)state.subchannels=ids;}
+  if(key==='sections'){const ids=validOptions('metrics').map(x=>x.id);state.metrics=state.metrics.filter(id=>ids.includes(id));if(!state.metrics.length&&ids.length)state.metrics=[ids[0]];}
+  if(key==='cycles'){state.filePage=0;if(state.fileMode!=='ads'){const added=adsSelection(state.cycles.filter(c=>!previous.includes(c))).files.map(f=>f.id);state.files=[...new Set([...state.files,...added])];}}
+ }
+ const filterDefs=[['affiliates','Affiliate'],['cycles','Demand cycle'],['channels','Channel'],['subchannels','Sub channel'],['sections','Section'],['metrics','Measure']];
+ function dropdown(parent,key,label){
+  const node=document.createElement('div');node.className='fm-filter';node.dataset.filter=key;
+  node.innerHTML=`<span class="fm-fieldlabel" id="fm-label-${key}">${label}</span><button type="button" class="fm-dropdown" aria-labelledby="fm-label-${key} fm-value-${key}" aria-haspopup="dialog" aria-expanded="false"><span id="fm-value-${key}"></span><span class="fm-chevron" aria-hidden="true">▾</span></button><div class="fm-popover" role="dialog" aria-label="${label} selection" hidden><input type="search" placeholder="Search ${label.toLowerCase()}…" aria-label="Search ${label.toLowerCase()}"><div class="fm-options" role="group" aria-label="${label} choices"></div></div>`;
+  parent.append(node);const button=node.querySelector('button'),popup=node.querySelector('.fm-popover'),search=node.querySelector('input'),options=node.querySelector('.fm-options');
+  function caption(){const opts=validOptions(key),selected=opts.filter(o=>state[key].includes(o.id)),plural={cycles:'cycles',drivers:'growth drivers',channels:'channels',subchannels:'sub channels',sectors:'forecast tiers',sections:'sections',metrics:'measures',periods:'periods',tableDrivers:'growth drivers',tableSectors:'forecast tiers',tableMetrics:'measures'};button.firstElementChild.textContent=selected.length===opts.length&&opts.length>1?'All '+plural[key]:selected.length===1?selected[0].name:selected.length?selected.length+' selected':'Choose '+label.toLowerCase();}
+  function items(){const q=search.value.trim().toLowerCase(),opts=validOptions(key).filter(o=>o.name.toLowerCase().includes(q));options.replaceChildren();if(!opts.length){const message=document.createElement('div');message.className='fm-no-options';message.textContent='No matching choices';options.append(message);}for(const o of opts){const item=document.createElement('label');item.className='fm-option';const check=document.createElement('input');check.type='checkbox';check.value=o.id;check.checked=state[key].includes(o.id);check.addEventListener('change',()=>{const previous=state[key].slice();state[key]=check.checked?[...new Set([...state[key],o.id])]:state[key].filter(x=>x!==o.id);repair(key,previous);caption();update();});item.append(check,document.createTextNode(o.name));options.append(item);}}
+  function close(){popup.hidden=true;button.setAttribute('aria-expanded','false');}
+  button.addEventListener('click',()=>{const opening=popup.hidden;dropdowns.forEach(d=>d.close());if(opening){search.value='';items();popup.hidden=false;button.setAttribute('aria-expanded','true');const box=node.getBoundingClientRect(),scope=root.getBoundingClientRect();popup.style.left=box.left+265>scope.right?'auto':'0';popup.style.right=box.left+265>scope.right?'0':'auto';search.focus();}});
+  search.addEventListener('input',items);node.addEventListener('keydown',e=>{if(e.key==='Escape'){close();button.focus();}if(e.key==='ArrowDown'&&document.activeElement===search){e.preventDefault();options.querySelector('input')?.focus();}});
+  dropdowns.set(key,{caption,items,close,node,popup});caption();
+ }
+ filterDefs.forEach(([key,label])=>dropdown($('#fm-filters'),key,label));
+ dropdown($('#fm-period-field'),'periods','Summary period');
+ root.addEventListener('pointerdown',e=>dropdowns.forEach(d=>{if(!d.node.contains(e.target))d.close();}));
+ function availableFiles(){return files.filter(f=>state.cycles.includes(f.cycle));}
+ function matchingFiles(){return availableFiles().filter(f=>!state.fileSearch||f.name.toLowerCase().includes(state.fileSearch.toLowerCase()));}
+ function pickedFiles(){return availableFiles().filter(f=>state.files.includes(f.id));}
+ function selectedDrivers(){return Object.keys(driverNames).filter(id=>sectors.some(s=>s.driver===id&&state.sectors.includes(s.id)));}
+ function activeSectors(driver){return sectors.filter(s=>(!driver||s.driver===driver)&&state.sectors.includes(s.id));}
+ function factor(){return subchannels.filter(s=>state.channels.includes(s.channel)&&state.subchannels.includes(s.id)).reduce((v,s)=>v+s.weight,0);}
+ function sourceAmounts(file,sector,t){
+  const key=file.id+'|'+sector.id+'|'+t;if(dataCache.has(key))return dataCache.get(key);
+  const isFuture=t>cutoff(file,{section:'ims'}),isEfFuture=t>cutoff(file,{section:'ef'}),base=(sector.base+sector.slope*t)*(1+.035*Math.sin((t%12-1)*Math.PI/6));
+  const adjustment=adsInfo(file)?(sector.driver==='oral'?1.18:.85):(sector.driver==='oral'?1.07:.97);
+  const market=base*(isFuture?adjustment:1),share=sector.share+.00038*t+(isFuture?(adsInfo(file) ? .006 : .003):0),abbott=market*share,ef=base*(sector.share+.00038*t)*1.15*(isEfFuture?adjustment:1);
+  const value={market,abbott,marketValue:market*sector.price,abbottValue:abbott*sector.price,ef,efValue:ef*sector.price};dataCache.set(key,value);return value;
+ }
+ function fit(file,sector,metric,window){const key=[file.id,sector.id,metric.id,window].join('|');if(fitCache.has(key))return fitCache.get(key);const end=cutoff(file,metric),points=Array.from({length:window},(_,i)=>{const x=end-window+1+i,v=sourceAmounts(file,sector,x);return {x,y:metric.denominator?v[metric.component]/v[metric.denominator]:v[metric.component]};});const mx=points.reduce((a,p)=>a+p.x,0)/window,my=points.reduce((a,p)=>a+p.y,0)/window;const b=points.reduce((a,p)=>a+(p.x-mx)*(p.y-my),0)/points.reduce((a,p)=>a+(p.x-mx)**2,0);const result={a:my-b*mx,b};fitCache.set(key,result);return result;}
+ function components(file,sector,t,metric,window){const raw=sourceAmounts(file,sector,t),w=factor();let n=raw[metric.component],d=metric.denominator?raw[metric.denominator]:null;if(window&&t>cutoff(file,metric)){const f=fit(file,sector,metric,window),prediction=f.a+f.b*t;n=metric.denominator?prediction*d:prediction;}return {n:n*w,d:d===null?null:d*w};}
+ function comboGroups(){if(!state.affiliates.includes('uk'))return [];const map=new Map();for(const f of pickedFiles()){const family=planFamily(f),key=f.cycle+'|'+family;if(!map.has(key))map.set(key,{key,cycle:f.cycle,scenario:family,files:[]});map.get(key).files.push(f);}return [...map.values()];}
+ function localAmount(combo,subset,metric,months,window=0){if(!subset.length||!months.length||!factor())return null;let n=0,d=0;for(const sector of subset){const sources=combo.files.filter(f=>f.driver===sector.driver);if(sources.length!==1)return null;for(const t of months){const v=components(sources[0],sector,t,metric,window);n+=v.n;if(v.d!==null)d+=v.d;}}return metric.denominator?d===0?null:n/d:n;}
+ function amount(combo,subset,metric,months,window=0){const value=localAmount(combo,subset,metric,months,window);return metric.unit==='£'?fx.total([{currency:'GBP',value}]):value;}
+ function variancePercent(combo,subset,metric,months,window){const plan=localAmount(combo,subset,metric,months),benchmark=localAmount(combo,subset,metric,months,window);return plan==null||benchmark==null||benchmark===0?null:(plan-benchmark)/Math.abs(benchmark);}
+ function periodMonths(id,combo,metric){const [year,kind]=id.split(':'),first=(Number(year)-2024)*12,reference=Math.min(...combo.files.map(f=>cutoff(f,metric)));const cutMonth=((reference%12)+12)%12;let start=0,end=11;if(kind==='YTD')end=cutMonth;if(kind==='YTG')start=cutMonth+1;if(kind==='H1')end=5;if(kind==='H2')start=6;return end>=start?Array.from({length:end-start+1},(_,i)=>first+start+i):[];}
+ function periodRangeLabel(months){
+  if(!months.length)return 'No months in this period';
+  const a=monthDate(months[0]),b=monthDate(months.at(-1)),short=date=>date.toLocaleDateString('en-GB',{month:'short',timeZone:'UTC'});
+  return months.length===1?monthLabel(months[0]):a.getUTCFullYear()===b.getUTCFullYear()?short(a)+'–'+short(b)+' '+a.getUTCFullYear():monthLabel(months[0])+'–'+monthLabel(months.at(-1));
+ }
+ function periodHeaderRange(period){
+  const ranges=[...new Set(comboGroups().flatMap(combo=>catalog.filter(m=>state.metrics.includes(m.id)).map(metric=>periodRangeLabel(periodMonths(period.id,combo,metric)))))];
+  return ranges.length===1?ranges[0]:ranges.length?'Dates vary by source cutoff':'Dates unavailable';
+ }
+ function signedPercent(value){return value==null?'—':(value>0?'+':value<0?'−':'')+(Math.abs(value)*100).toFixed(1)+'%';}
+ function isPartialScope(){return activeSectors().length<sectors.length;}
+ function renderExecutive(){
+  const metrics=catalog.filter(m=>state.metrics.includes(m.id)),combos=comboGroups(),drivers=selectedDrivers(),subset=activeSectors(),period=periodOptions.find(p=>state.periods.includes(p.id)),trend=state.trends[0];
+  const selectedSources=pickedFiles().filter(f=>drivers.includes(f.driver)),cuts=[...new Set(selectedSources.flatMap(f=>metrics.map(m=>cutoff(f,m))))].sort((a,b)=>a-b);
+  const actuals=cuts.length===1?'Actuals through '+monthDate(cuts[0]).toLocaleDateString('en-GB',{month:'long',year:'numeric',timeZone:'UTC'}):cuts.length?'Actuals cutoffs '+monthLabel(cuts[0])+'–'+monthLabel(cuts.at(-1))+' · varies by source/measure':'Actuals cutoff unavailable';
+  const expected=(combos.length||state.cycles.length)*drivers.length,complete=combos.reduce((n,c)=>n+drivers.filter(driver=>c.files.filter(f=>f.driver===driver).length===1).length,0);
+  const year=period?.id.split(':')[0],ytgRanges=year?[...new Set(combos.flatMap(c=>metrics.map(m=>periodRangeLabel(periodMonths(year+':YTG',c,m)))))]:[];
+  const ytg=ytgRanges.length===1?'YTG '+ytgRanges[0]:ytgRanges.length?'YTG dates vary by source/measure':'YTG dates unavailable';
+  $('#fm-data-context').innerHTML=[actuals,ytg,'Plan sources '+complete+'/'+expected,'Sample refresh completed · 21 Oct 2026, 07:30 UTC'].map(label=>'<span>'+escape(label)+'</span>').join('');
+  const periodCaption=periodOptions.filter(p=>state.periods.includes(p.id)).map(p=>p.name+' ('+periodHeaderRange(p)+')').join(' · ');
+  $('#fm-review-period-caption').textContent=periodCaption||'Choose a review period';
+  $('#fm-chart-periods').textContent='Chart months: '+periodRangeLabel([monthIndex(state.monthStart),monthIndex(state.monthEnd)])+' · Summary: '+(periodCaption||'choose a summary period')+(state.view==='hierarchy'&&!state.combined?' · Each driver has its own labelled scale':'');
+  const compareYear=state.periods[0]?.slice(0,4)||state.monthStart.slice(0,4),compared=[compareYear+':FY',compareYear+':YTG'].every(id=>state.periods.includes(id));$('#fm-compare-periods').disabled=compared;$('#fm-compare-periods').textContent=compared?compareYear+' FY + YTG selected':'Compare '+compareYear+' FY + YTG';
+  if(!period||!metrics.length||!combos.length||!subset.length){$('#fm-executive-readout').innerHTML='<div class="fm-detail">'+(!period?'Choose a review period.':!metrics.length?'Choose a measure.':!subset.length?'Choose growth drivers or sectors.':'No plan source is selected.')+'</div>';return;}
+  $('#fm-executive-readout').innerHTML=combos.flatMap(combo=>metrics.flatMap(metric=>periodOptions.filter(p=>state.periods.includes(p.id)).map(period=>{
+   const months=periodMonths(period.id,combo,metric),plan=amount(combo,subset,metric,months),benchmark=amount(combo,subset,metric,months,trend),delta=plan==null||benchmark==null?null:plan-benchmark,percent=variancePercent(combo,subset,metric,months,trend);
+   const movements=drivers.map(driver=>{const scope=activeSectors(driver),p=amount(combo,scope,metric,months),t=amount(combo,scope,metric,months,trend),d=p==null||t==null?null:p-t;return {driver,delta:d,percent:variancePercent(combo,scope,metric,months,trend)};});
+   const offset=movements.some(m=>m.delta>0)&&movements.some(m=>m.delta<0),context=shortCycle(combo.cycle)+' · '+combo.scenario;
+   return `<div data-executive-position="${escape(combo.key+'|'+metric.id+'|'+period.id)}" data-overview-period="${period.id}"><div class="fm-readout-focus"><span>${escape(period.name+' · '+periodRangeLabel(months)+' · '+metric.name)}</span><span>${escape(context)} · ${trend}M trend</span></div><div class="fm-readout-values"><span><span class="fm-readout-label">${isPartialScope()?'Selected plan':'Total plan'}</span><strong class="fm-plan-value" data-overview-plan="${plan==null?'':plan}">${compact(plan,metric.unit)}</strong></span><span><span class="fm-readout-label">Net ${delta==null?'variance':delta>0?'overcall':delta<0?'undercall':'variance'} vs ${trend}M</span><strong class="fm-gap-value" data-overview-delta="${delta==null?'':delta}">${delta==null?'Unavailable':deltaLabel(delta,metric.unit)+' ('+signedPercent(percent)+')'}</strong></span></div><div class="fm-offsets"><span class="fm-readout-label">${offset?'Offsetting driver movements':'Driver variances'}</span>${movements.map(m=>'<span class="fm-readout-offset" data-overview-driver="'+m.driver+'">'+escape(driverNames[m.driver])+': '+(m.delta==null?'Unavailable':(m.delta>0?'Overcall ':m.delta<0?'Undercall ':'')+deltaLabel(m.delta,metric.unit))+' ('+signedPercent(m.percent)+')</span>').join('')}</div></div>`;
+  }))).join('');
+ }
+ function chartBenchmarkContext(metric,driver){
+  return comboGroups().map(combo=>{const sources=combo.files.filter(f=>(!driver||f.driver===driver)&&selectedDrivers().includes(f.driver)),ranges=[...new Set(sources.map(f=>{const end=cutoff(f,metric),history=Array.from({length:state.trends[0]},(_,i)=>end-state.trends[0]+1+i);return state.trends[0]+'M fit: '+periodRangeLabel(history)+' actuals · Forecast from '+monthLabel(end+1);} ))];return (comboGroups().length>1?shortCycle(combo.cycle)+' '+combo.scenario+' · ':'')+ranges.join(' / ');}).join(' · ');
+ }
+ function driverPeriodContext(metric,driver){
+  if(!driver)return '';
+  return comboGroups().flatMap(combo=>periodOptions.filter(period=>state.periods.includes(period.id)).map(period=>{const months=periodMonths(period.id,combo,metric),plan=amount(combo,activeSectors(driver),metric,months),benchmark=amount(combo,activeSectors(driver),metric,months,state.trends[0]),delta=plan==null||benchmark==null?null:plan-benchmark,pct=variancePercent(combo,activeSectors(driver),metric,months,state.trends[0]);return (comboGroups().length>1?shortCycle(combo.cycle)+' '+combo.scenario+' · ':'')+period.name+': '+deltaLabel(delta,metric.unit)+' ('+signedPercent(pct)+') vs '+state.trends[0]+'M';})).join(' · ');
+ }
+ function renderRanking(){
+  const selected=periodOptions.filter(p=>state.periods.includes(p.id));
+  if(!selected.some(p=>p.id===state.rankPeriod))state.rankPeriod=selected[0]?.id||'';
+  const period=selected.find(p=>p.id===state.rankPeriod);
+  $('#fm-rank-period').innerHTML=selected.map(p=>'<option value="'+p.id+'">'+p.name+'</option>').join('');
+  $('#fm-rank-period').value=state.rankPeriod;$('#fm-rank-period').disabled=selected.length<2;
+  $('#fm-rank-window').value=String(state.sortWindow);
+  $('#fm-ranking-caption').textContent=(state.sortGaps?'Largest signed variances by magnitude · ':'Ranking basis · ')+(period?period.name:'choose a period')+' · '+state.sortWindow+'M trend'+(state.tableView!=='sector'?' · sectors stay under their driver':' · sectors compared across all selected drivers');
+ }
+ function renderFiles(){
+  const all=matchingFiles().sort((a,b)=>Number(state.files.includes(b.id))-Number(state.files.includes(a.id))),shown=all.filter(f=>!state.selectedOnly||state.files.includes(f.id)),size=4;state.filePage=Math.max(0,Math.min(state.filePage,Math.ceil(shown.length/size)-1));const page=shown.slice(state.filePage*size,state.filePage*size+size);
+  $('#fm-file-count').textContent=(state.fileMode==='ads'?'ADS automatic · ':'Custom selection · ')+all.length+' available · '+all.filter(f=>state.files.includes(f.id)).length+' used';$('#fm-restore-ads').disabled=state.fileMode==='ads';
+  $('#fm-file-rows').innerHTML=page.length?page.map(f=>`<tr data-selected="${state.files.includes(f.id)}"><td class="fm-file-box"><input type="checkbox" data-file="${escape(f.id)}" aria-label="Select ${escape(f.name)}" ${state.files.includes(f.id)?'checked':''}></td><td><span class="fm-file-name">${escape(f.name)}</span></td><td class="fm-file-driver">${driverNames[f.driver]}</td><td>${escape(shortCycle(f.cycle))}</td><td class="fm-file-when">${escape(f.updated)}</td></tr>`).join(''):'<tr><td colspan="5" class="fm-empty">'+(state.selectedOnly?'No selected files.':'No files match these filters.')+'</td></tr>';
+  $$('[data-file]').forEach(el=>el.addEventListener('change',()=>{state.fileMode='custom';const file=files.find(f=>f.id===el.dataset.file);if(el.checked){state.files=state.files.filter(id=>{const f=files.find(x=>x.id===id);return !f||f.cycle!==file.cycle||f.driver!==file.driver||planFamily(f)!==planFamily(file);});state.files.push(file.id);}else state.files=state.files.filter(id=>id!==file.id);update();}));
+  $('#fm-pagination').hidden=shown.length<=size;$('#fm-page-caption').textContent=(state.filePage*size+1)+'–'+Math.min(shown.length,(state.filePage+1)*size)+' of '+shown.length;$('#fm-prev-files').disabled=state.filePage===0;$('#fm-next-files').disabled=(state.filePage+1)*size>=shown.length;
+ }
+ function chartGroups(){
+  if(state.combined)return [{id:'combined',name:isPartialScope()?'Selected total':'Total',sectors:activeSectors(),color:1}];
+  if(state.view==='sector')return activeSectors().map(s=>({id:s.id,driver:s.driver,name:driverNames[s.driver]+' · '+s.name,sectors:[s],color:s.color,level:'tier'}));
+  const parents=selectedDrivers().map(driver=>({id:driver,driver,name:driverNames[driver],sectors:activeSectors(driver),color:driver==='oral'?1:4,level:'driver'}));
+  return state.view==='hierarchy'?parents.flatMap(parent=>[{...parent,name:parent.name+' · total selected'},...parent.sectors.map(s=>({id:s.id,driver:s.driver,name:driverNames[s.driver]+' · '+s.name,sectors:[s],color:s.color,level:'tier'}))]):parents;
+ }
+ function renderQuick(){
+  const mode=state.combined?'total':state.view;
+  $$('[data-graph-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.graphMode===mode)));
+  $('#fm-selection-search').value=state.selectionSearch;
+  const parents=Object.entries(driverNames).map(([id,name])=>({id,name,ids:sectors.filter(s=>s.driver===id).map(s=>s.id)})),children=sectors.map(s=>({id:s.id,name:s.name,driver:s.driver,ids:[s.id]}));
+  const choices=[...parents,...children];
+  const q=state.selectionSearch.trim().toLowerCase(),shown=choices.filter(c=>(c.name+' '+(driverNames[c.driver]||'')).toLowerCase().includes(q));
+  const choiceHTML=(c,nested=false)=>{const n=c.ids.filter(id=>state.sectors.includes(id)).length;return `<label class="fm-check ${!c.driver?'fm-parent-choice':''}"><input type="checkbox" data-scope-choice="${c.id}" data-partial="${n>0&&n<c.ids.length}" ${n===c.ids.length?'checked':''}>${escape(c.name)}${c.driver&&!nested?'<span class="fm-partial">· '+driverNames[c.driver]+'</span>':!c.driver&&n>0&&n<c.ids.length?'<span class="fm-partial">'+n+' of '+c.ids.length+' tiers</span>':''}</label>`;};
+  {
+   const groups=parents.filter(p=>p.name.toLowerCase().includes(q)||children.some(c=>c.driver===p.id&&c.name.toLowerCase().includes(q)));
+   $('#fm-quick-scope').innerHTML='<div class="fm-hierarchy-options">'+groups.map(p=>'<div role="group" aria-label="'+escape(p.name)+' tiers">'+choiceHTML(p)+'<div class="fm-driver-children">'+children.filter(c=>c.driver===p.id&&(p.name.toLowerCase().includes(q)||c.name.toLowerCase().includes(q))).map(c=>choiceHTML(c,true)).join('')+'</div></div>').join('')+(groups.length?'':'<span class="fm-detail">No matching choices</span>')+'</div>';
+  }
+  $$('[data-scope-choice]').forEach(el=>{el.indeterminate=el.dataset.partial==='true';el.addEventListener('change',()=>{const ids=choices.find(c=>c.id===el.dataset.scopeChoice).ids;state.sectors=el.checked?[...new Set([...state.sectors,...ids])]:state.sectors.filter(id=>!ids.includes(id));update();});});
+  const selected=activeSectors(),drivers=selectedDrivers();
+  $('#fm-selected-scope').textContent=selected.length?(drivers.map(id=>{const n=activeSectors(id).length,total=sectors.filter(s=>s.driver===id).length;return driverNames[id]+(n<total?' ('+n+'/'+total+' tiers)':'');}).join(' + ')+' · '+selected.length+' of '+sectors.length+' forecast tiers selected'):'Nothing selected · choose a growth driver or forecast tier';
+  $('#fm-chart-scope').textContent=selectedDrivers().length+' growth driver'+(selectedDrivers().length===1?'':'s')+' · '+activeSectors().length+' forecast tiers'+(state.combined?' · total':'');
+  $('#fm-graph-context').textContent=(!state.combined&&state.view==='hierarchy'?'Each growth driver shows its selected total and sector lines together · ':'Actuals and saved forecast follow the shared selection · ')+state.trends[0]+'M trend uses the same scope';
+ }
+ function chartSeries(metric,driver){
+  const months=Array.from({length:Math.max(0,monthIndex(state.monthEnd)-monthIndex(state.monthStart)+1)},(_,i)=>monthIndex(state.monthStart)+i),series=[];
+  for(const combo of comboGroups())for(const group of chartGroups().filter(g=>!driver||g.driver===driver)){
+   const color=styleColor(group.color),suffix=comboGroups().length>1?' · '+shortCycle(combo.cycle)+' · '+combo.scenario:'',name=group.name+suffix,c=monthIndex(combo.cycle)-(metric.section==='ef'?1:2);
+   const plan=months.map(t=>({x:t,y:amount(combo,group.sectors,metric,[t])}));
+   const weight=!state.combined&&state.view==='hierarchy'?(group.level==='driver'?3:1.7):2.5;
+   series.push({id:combo.key+'|'+group.id+'|actual',name:name+' · Actuals',kind:'actual',color,width:weight,dash:'',points:plan.map(p=>({x:p.x,y:p.x<=c?p.y:null}))});
+   series.push({id:combo.key+'|'+group.id+'|forecast',name:name+' · Forecast',kind:'forecast',color,width:weight,dash:'8 4',points:plan.map(p=>({x:p.x,y:p.x>=c?p.y:null}))});
+   for(const trend of state.trends)series.push({id:combo.key+'|'+group.id+'|'+trend,name:name+' · '+trend+'M trend',kind:'trend',window:trend,color,width:Math.max(1.2,weight-.7),dash:'2 4',points:months.map(t=>({x:t,y:t>=c?amount(combo,group.sectors,metric,[t],trend):null}))});
+  }
+  return {series,months};
+ }
+ function renderCharts(){
+  if(!state.graphOpen||root.closest('[hidden]'))return;
+  const metrics=catalog.filter(m=>state.metrics.includes(m.id));$('#fm-chart-title').textContent=(metrics.length===1?metrics[0].name:'Demand comparison')+' · '+(state.combined?(isPartialScope()?'Selected total':'Total'):state.view==='sector'?'Forecast tiers':state.view==='hierarchy'?'Growth drivers + tiers':'Growth drivers');
+  $('#fm-plots').replaceChildren();$('#fm-legend').replaceChildren();
+  if(!metrics.length){$('#fm-plots').innerHTML='<div class="fm-empty">Choose a section and measure.</div>';return;}
+  const combos=comboGroups();if(!combos.length||!activeSectors().length||!factor()){$('#fm-plots').innerHTML='<div class="fm-empty">'+(!combos.length?'Select at least one matching file.':!activeSectors().length?'Select at least one growth driver or sector.':'Choose a channel and sub channel.')+'</div>';return;}
+  for(const metric of metrics)for(const driver of !state.combined&&state.view==='hierarchy'?selectedDrivers():['']){const block=document.createElement('div');block.className='fm-plotblock';if(metrics.length>1||driver){const h=document.createElement('div');h.className='fm-plot-heading';h.textContent=(metrics.length>1?metric.name+' · ':'')+(driver?driverNames[driver]+' · total and selected tiers':'');block.append(h);}const fitNote=document.createElement('div');fitNote.className='fm-plot-context';fitNote.dataset.fitContext=metric.id;fitNote.textContent=chartBenchmarkContext(metric,driver);block.append(fitNote);if(driver){const periodNote=document.createElement('div');periodNote.className='fm-plot-context';periodNote.dataset.driverPeriod=driver;periodNote.textContent=driverPeriodContext(metric,driver);block.append(periodNote);}const plot=document.createElement('div');plot.className='fm-plot';plot.dataset.metric=metric.id;plot.dataset.driver=driver;block.append(plot);$('#fm-plots').append(block);drawPlot(plot,metric);}
+  const legend=[];for(const combo of combos)for(const group of chartGroups()){const color=styleColor(group.color);legend.push(`<button type="button" class="fm-focus-legend cursor-interaction" data-focus-group="${group.id}" aria-label="Highlight ${escape(group.name)}"><span class="fm-legend-line" style="--series:${color}"></span>${escape(group.name+(combos.length>1?' · '+shortCycle(combo.cycle)+' · '+combo.scenario:''))}</button>`);}for(const [label,dash]of [['Actuals',''],['Forecast','8 4'],[state.trends[0]+'M trend','2 4']])legend.push(`<span class="fm-legend-item"><svg viewBox="0 0 26 10" aria-hidden="true"><line x1="0" x2="26" y1="5" y2="5" stroke="var(--fm-muted)" stroke-width="2" stroke-dasharray="${dash}"/></svg>${label}</span>`);$('#fm-legend').innerHTML=legend.join('');
+ }
+ function drawPlot(plot,metric){
+  const width=Math.floor(plot.getBoundingClientRect().width);if(width<100)return;const height=parseFloat(getComputedStyle(root).getPropertyValue('--fm-chart-height'))||285;
+  const {series,months}=chartSeries(metric,plot.dataset.driver),numbers=series.flatMap(s=>s.points.map(p=>p.y)).filter(v=>v!==null&&Number.isFinite(v));
+  if(!numbers.length){plot.innerHTML='<div class="fm-chart-empty">'+(metric.unit==='£'&&fx.missing(state.affiliates).length?'Plan rate required for USD · open Plan rates above.':'A selected scenario is missing a file for this growth driver.')+'</div>';return;}
+  const m={l:65,r:17,t:width<370?46:32,b:45},x=t=>m.l+(t-months[0])/Math.max(1,months.at(-1)-months[0])*(width-m.l-m.r);let lo=Math.min(...numbers),hi=Math.max(...numbers),pad=Math.max((hi-lo)*.12,Math.abs(hi)*.04,lo===0&&hi===0?1:0);lo=Math.max(0,lo-pad);hi+=pad;const y=v=>height-m.b-(v-lo)/(hi-lo||1)*(height-m.t-m.b),numTicks=4;
+  const clip='fm-clip-'+metric.id+'-'+(plot.dataset.driver||'all');
+  let svg=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escape(metric.name)} by month for the selected files and ${state.view==='sector'?'forecast tiers':'growth drivers'}"><title>${escape(metric.name)} · selected plan and trend comparison</title><defs><clipPath id="${clip}"><rect x="${m.l}" y="${m.t}" width="${width-m.l-m.r}" height="${height-m.t-m.b}"/></clipPath></defs><text class="fm-axislabel axis-title" data-axis="y" x="${m.l}" y="16">${metric.unit==='%'?'Share (%)':metric.unit==='£'?'Value ('+fx.code()+')':'Units'}</text>`;
+  const reviewBands=new Set();for(const combo of comboGroups())for(const period of periodOptions.filter(p=>state.periods.includes(p.id))){const periodValues=periodMonths(period.id,combo,metric);if(!periodValues.length)continue;const start=Math.max(months[0],periodValues[0]-.5),end=Math.min(months.at(-1),periodValues.at(-1)+.5),key=start+'|'+end;if(end<=start||reviewBands.has(key))continue;reviewBands.add(key);svg+=`<rect class="fm-review-band" data-review-period="${period.id}" x="${x(start)}" y="${m.t}" width="${x(end)-x(start)}" height="${height-m.t-m.b}"/>`;}
+  for(let i=0;i<=numTicks;i++){const v=lo+(hi-lo)*i/numTicks,py=y(v);svg+=`<line class="fm-gridline" x1="${m.l}" y1="${py}" x2="${width-m.r}" y2="${py}"/><text x="${m.l-10}" y="${py+4}" text-anchor="end">${compact(v,metric.unit)}</text>`;}
+  const steps=width<450?3:width<760?5:7,indices=[...new Set(Array.from({length:steps},(_,i)=>Math.round(i*(months.length-1)/Math.max(1,steps-1))))];for(const index of indices){const t=months[index];svg+=`<text x="${x(t)}" y="${height-m.b+21}" text-anchor="${index===0?'start':index===months.length-1?'end':'middle'}">${monthLabel(t)}</text>`;}
+  svg+=`<rect data-chart-frame x="${m.l}" y="${m.t}" width="${width-m.l-m.r}" height="${height-m.t-m.b}" fill="none" stroke="var(--fm-line)"/><text class="fm-axislabel axis-title" data-axis="x" x="${m.l+(width-m.l-m.r)/2}" y="${height-4}" text-anchor="middle">Demand month</text><g clip-path="url(#${clip})">`;
+  const cutoffs=[...new Set(combosForCutoff().map(f=>cutoff(f,metric)))];for(const c of cutoffs)if(c>=months[0]&&c<months.at(-1)){svg+=`<line class="fm-cutoff" x1="${x(c+.5)}" x2="${x(c+.5)}" y1="${m.t}" y2="${height-m.b}"/>`;}
+  for(const s of series){let open=false,path='';for(const p of s.points){if(p.y==null){open=false;continue;}path+=(open?'L':'M')+x(p.x).toFixed(2)+','+y(p.y).toFixed(2);open=true;}svg+=`<path class="fm-curve fm-chart-line" data-focus-series="${escape(s.id.split('|').at(-2))}" data-series="${escape(s.id)}" data-kind="${s.kind}" d="${path}" stroke="${s.color}" stroke-width="${s.width}" stroke-dasharray="${s.dash}"/>`;}
+  svg+='</g>';if(cutoffs.length===1&&cutoffs[0]>=months[0]&&cutoffs[0]<months.at(-1))svg+=`<text x="${width-m.r}" y="${m.t-7}" text-anchor="end">Actuals through ${monthLabel(cutoffs[0])}</text>`;
+  if(state.combined&&comboGroups().length===1&&width>=600){const labels=series.filter(s=>s.kind==='forecast'||s.kind==='trend').map(s=>({s,point:s.points.at(-1)})).filter(({point})=>point?.y!=null).map(({s,point})=>({text:(s.kind==='forecast'?'Plan':s.window+'M trend')+' '+compact(point.y,metric.unit),py:y(point.y)})).sort((a,b)=>a.py-b.py);for(let i=0;i<labels.length;i++)labels[i].py=Math.max(m.t+13,Math.min(height-m.b-7,labels[i].py));for(let i=1;i<labels.length;i++)labels[i].py=Math.max(labels[i].py,labels[i-1].py+17);if(labels.at(-1)?.py>height-m.b-7){const shift=labels.at(-1).py-(height-m.b-7);labels.forEach(label=>label.py-=shift);}for(const label of labels)svg+=`<text class="fm-end-label" x="${width-m.r-5}" y="${label.py-5}" text-anchor="end">${escape(label.text)}</text>`;}
+  svg+=`<g data-hover-marks></g><rect data-chart-hit data-chart-hover-overlay="cross-series" x="${m.l}" y="${m.t}" width="${width-m.l-m.r}" height="${height-m.t-m.b}" fill="transparent"/></svg><div class="fm-tooltip" role="tooltip" hidden></div>`;plot.innerHTML=svg;
+  const overlay=plot.querySelector('[data-chart-hit]'),tip=plot.querySelector('.fm-tooltip'),marks=plot.querySelector('[data-hover-marks]');let pinned=false;
+  function show(event){const box=plot.getBoundingClientRect(),px=Math.max(m.l,Math.min(width-m.r,event.clientX-box.left)),t=months[0]+(px-m.l)/(width-m.l-m.r)*(months.at(-1)-months[0]),nearest=Math.round(t),index=Math.max(0,Math.min(months.length-1,Math.floor(t-months[0]))),alpha=t-months[0]-index;let rows=[],markHtml=`<line data-chart-hover-guide x1="${px}" x2="${px}" y1="${m.t}" y2="${height-m.b}" stroke="${getComputedStyle(root).getPropertyValue('--fm-muted').trim()}" stroke-width="1"/>`;for(const s of series){const a=s.points[index],b=s.points[Math.min(index+1,s.points.length-1)];if(a?.y==null||b?.y==null)continue;const value=a.y+(b.y-a.y)*alpha;markHtml+=`<circle data-chart-hover-marker cx="${px}" cy="${y(value)}" r="3" fill="${s.color}"/>`;rows.push(`<div><span>${escape(s.name)}</span><span>${rawNumber(value,metric.unit)}</span></div>`);}marks.innerHTML=markHtml;tip.innerHTML='<strong>'+monthLabel(nearest)+'</strong>'+rows.join('');tip.hidden=!rows.length;tip.style.left=Math.max(4,Math.min(width-tip.offsetWidth-4,px+12))+'px';tip.style.top=Math.max(22,Math.min(height-tip.offsetHeight-6,event.clientY-box.top-20))+'px';}
+  overlay.addEventListener('pointermove',e=>{if(!pinned)show(e);});overlay.addEventListener('pointerleave',()=>{if(!pinned){marks.replaceChildren();tip.hidden=true;}});overlay.addEventListener('pointerdown',e=>{pinned=!pinned;show(e);});
+ }
+ function combosForCutoff(){return pickedFiles().filter(f=>selectedDrivers().includes(f.driver));}
+ function reviewSectors(driver){return activeSectors(driver);}
+ function renderSummary(){
+  const metrics=catalog.filter(m=>state.metrics.includes(m.id)),combos=comboGroups(),drivers=selectedDrivers(),scope=reviewSectors(),periods=periodOptions.filter(p=>state.periods.includes(p.id));
+  $('#fm-summary-context').textContent=(state.tableView==='sector'?'All selected sectors · parent driver shown below each name':state.tableView==='hierarchy'?'Driver subtotals with selected sectors underneath':'Driver totals · expand a driver to see its sectors')+(state.display==='value'?' · '+fx.label():'');
+  $('#fm-sort-gaps').setAttribute('aria-pressed',String(state.sortGaps));
+  const dimensions=[];
+  if(new Set(combos.map(c=>c.cycle)).size>1)dimensions.push({label:'Cycle',width:105,value:(combo,metric)=>shortCycle(combo.cycle)});
+  if(new Set(combos.map(c=>c.scenario)).size>1)dimensions.push({label:'Plan',width:110,value:(combo,metric)=>combo.scenario});
+  if(metrics.length>1)dimensions.push({label:'Measure',width:145,value:(combo,metric)=>metric.name+' ('+(metric.unit==='%'?'share %, Δ pp':metric.unit==='£'?fx.code():metric.unit)+')'});
+  const units=[...new Set(metrics.map(m=>m.unit))],deltaHeading=units.length!==1?'Δ Amount':units[0]==='%'?'Δ pp':units[0]==='£'?'Δ '+fx.symbol():'Δ Units';
+  const span=1+state.tableTrends.length*2,colCount=1+dimensions.length+periods.length*span,depth=state.tableTrends.length?3:2;
+  let cols='<colgroup><col style="width:200px">';for(const dim of dimensions)cols+=`<col style="width:${dim.width}px">`;for(const period of periods){cols+='<col style="width:100px">';for(const trend of state.tableTrends)cols+='<col style="width:95px"><col style="width:75px">';}cols+='</colgroup>';
+  let header='<thead><tr><th rowspan="'+depth+'" scope="col">'+(state.tableView==='sector'?'Forecast tier (sector)':state.tableView==='hierarchy'?'Growth driver / Forecast tier':'Growth driver')+'</th>';
+  for(const dim of dimensions)header+=`<th rowspan="${depth}" scope="col">${dim.label}</th>`;
+  for(const period of periods)header+=`<th class="fm-period-group fm-period-start" colspan="${span}" scope="colgroup" data-period-group="${period.id}">${period.name}<small class="fm-period-range">${periodHeaderRange(period)}</small></th>`;
+  header+='</tr><tr>';
+  for(const period of periods){header+=`<th class="fm-period-start" rowspan="${state.tableTrends.length?2:1}" scope="col">Total Plan</th>`;for(const trend of state.tableTrends)header+=`<th class="fm-trend-group" colspan="2" scope="colgroup">${trend}M variance</th>`;}
+  header+='</tr>';
+  if(state.tableTrends.length){header+='<tr>';for(const period of periods)for(const trend of state.tableTrends)header+=`<th scope="col" data-tooltip="Signed plan minus ${trend}-month trend; share differences are percentage points">${deltaHeading}</th><th scope="col" data-tooltip="Plan minus ${trend}-month trend as a percentage of that trend">%</th>`;header+='</tr>';}
+  header+='</thead>';
+  $('#fm-summary').style.minWidth=(200+dimensions.reduce((n,d)=>n+d.width,0)+periods.length*(100+state.tableTrends.length*170))+'px';let body='';
+  function row(combo,subset,metric,label,cls,tier,driver){
+   const partial=driver&&subset.length<sectors.filter(s=>s.driver===driver).length;
+   const name=driver&&state.tableView==='driver'?`<button type="button" class="fm-row-toggle" data-expand-driver="${driver}" aria-expanded="${state.expandedDrivers.includes(driver)}" aria-label="${state.expandedDrivers.includes(driver)?'Collapse':'Expand'} ${escape(label)} sectors"><span class="fm-expand-mark" aria-hidden="true">${state.expandedDrivers.includes(driver)?'▾':'▸'}</span>${escape(label)}</button>`:escape(label);
+   const caption=name+(tier&&state.tableView==='sector'?`<small class="fm-tier-parent">${escape(driverNames[tier.driver])}</small>`:partial?`<small class="fm-tier-parent">${subset.length} of ${sectors.filter(s=>s.driver===driver).length} tiers selected</small>`:'');
+   let html=`<tr class="${cls}" ${tier?'data-tier-row="'+tier.id+'"':driver?'data-driver-row="'+driver+'"':''}><td>${caption}</td>`;
+   for(const dim of dimensions)html+=`<td class="fm-dimension">${escape(dim.value(combo,metric))}</td>`;
+   for(const period of periods){
+    const months=periodMonths(period.id,combo,metric),plan=amount(combo,subset,metric,months);
+    html+=`<td class="fm-period-start" data-period="${period.id}" data-value="${plan==null?'':plan}" data-tooltip="${rawNumber(plan,metric.unit)}">${compact(plan,metric.unit)}</td>`;
+    for(const trend of state.tableTrends){
+     const benchmark=amount(combo,subset,metric,months,trend),delta=plan==null||benchmark==null?null:plan-benchmark,percent=variancePercent(combo,subset,metric,months,trend),tone=delta>0?'fm-delta-over':delta<0?'fm-delta-under':'';
+     const percentText=percent==null?'—':(percent>0?'+':percent<0?'−':'')+(Math.abs(percent)*100).toFixed(1)+'%';
+     html+=`<td class="${tone}" data-period="${period.id}" data-trend-window="${trend}" data-delta="${delta==null?'':delta}" data-tooltip="${delta==null?'Unavailable':deltaLabel(delta,metric.unit)}">${deltaLabel(delta,metric.unit)}</td><td class="${tone}" data-period="${period.id}" data-trend-window="${trend}" data-variance-percent="${percent==null?'':percent}" data-tooltip="${percent==null?'Unavailable or zero trend benchmark':percentText+' vs '+trend+'M trend'}">${percentText}</td>`;
+    }
+   }
+   return html+'</tr>';
+  }
+  function score(combo,subset,metric){if(!state.rankPeriod)return 0;const months=periodMonths(state.rankPeriod,combo,metric),plan=localAmount(combo,subset,metric,months),trend=localAmount(combo,subset,metric,months,state.sortWindow);return plan==null||trend==null?0:Math.abs(plan-trend);}
+  if(scope.length&&periods.length)for(const combo of combos)for(const metric of metrics){
+   body+=row(combo,scope,metric,isPartialScope()?'Selected total':'Total','fm-total');
+   const entries=state.tableView==='sector'?scope.map(tier=>({label:tier.name,subset:[tier],tier})):drivers.map(driver=>({label:driverNames[driver],subset:reviewSectors(driver),driver})).filter(e=>e.subset.length);
+   if(state.sortGaps)entries.sort((a,b)=>score(combo,b.subset,metric)-score(combo,a.subset,metric));
+   for(const entry of entries){
+    body+=row(combo,entry.subset,metric,entry.label,'fm-table-row'+(entry.tier?' fm-sector-row':' fm-subtotal'),entry.tier,entry.driver);
+    if(state.tableView==='hierarchy'||(state.tableView==='driver'&&state.expandedDrivers.includes(entry.driver))){
+     const tiers=entry.subset.slice();if(state.sortGaps)tiers.sort((a,b)=>score(combo,[b],metric)-score(combo,[a],metric));
+     for(const tier of tiers)body+=row(combo,[tier],metric,tier.name,'fm-table-row fm-sector-row fm-hierarchy-child',tier);
+    }
+   }
+  }
+  $('#fm-summary').innerHTML=cols+header+'<tbody>'+body+'</tbody>';
+  if(!body)$('#fm-summary').innerHTML=cols+header+`<tbody><tr><td colspan="${colCount}" class="fm-empty">${!combos.length?'Select at least one file.':!metrics.length?'Select a measure.':!periods.length?'Select a summary period.':'Select a growth driver or forecast tier.'}</td></tr></tbody>`;
+  $$('[data-expand-driver]').forEach(button=>button.addEventListener('click',()=>{const id=button.dataset.expandDriver;state.expandedDrivers=state.expandedDrivers.includes(id)?state.expandedDrivers.filter(d=>d!==id):[...state.expandedDrivers,id];update();}));
+  updateScrollNote();
+ }
+ function updateScrollNote(){const wrap=$('.fm-summarywrap');$('#fm-table-scroll-note').hidden=wrap.scrollWidth<=wrap.clientWidth+1;}
+ function renderPlanStatus(){
+  const automatic=state.fileMode==='ads',issues=automatic?adsSelection(state.cycles,files,selectedDrivers()).issues:[];
+  const families=[...new Set(pickedFiles().map(planFamily))];
+  $('#fm-plan-summary').textContent=automatic?'Plan: ADS · '+(issues.length?'incomplete':'automatic'):families.length===1?'Plan: '+families[0]+' · custom':'Custom plan comparison';
+  const note=$('#fm-plan-status');note.hidden=!issues.length;
+  note.textContent=issues.map(i=>(i.status==='MISSING'?'ADS not available':'ADS source is ambiguous')+' for '+driverNames[i.driver]+' ('+cycleName(i.cycle)+')').join(' · ')+(issues.length?' · Source details below':'');
+ }
+ const dimensionPairs=[['market-units','market-value'],['volume-share','value-share'],['ef-units','ef-value'],['abbott-units','abbott-value']];
+ catalog.push({id:'abbott-value',name:'Abbott IMS value',section:'ims',unit:'£',component:'abbottValue'});
+ function mapMetrics(ids,display){return [...new Set(ids.map(id=>{const pair=dimensionPairs.find(p=>p.includes(id));return pair?pair[display==='value'?1:0]:id;}))];}
+ const displayField=document.createElement('div');displayField.className='fm-filter';displayField.innerHTML='<label class="fm-fieldlabel" for="fm-display">Display</label><select id="fm-display" style="width:100%"><option value="units">Selling units</option><option value="value">Value</option></select>';$('#fm-filters').append(displayField);
+ $('#fm-display').addEventListener('change',e=>{state.metrics=mapMetrics(state.metrics,e.target.value);state.display=e.target.value;update();});
+ const visibilitySections=[
+  ['scopeOpen','Shared review selection','selector'],['graphOpen','Demand comparison chart','graph'],['summaryOpen','Executive summary','summary'],['filesOpen','Matching files','Matching files']
+ ].map(([key,label,name])=>{
+  const panel=$('section[aria-label="'+label+'"]'),head=panel.querySelector('.fm-panelhead'),body=document.createElement('div'),button=document.createElement('button');
+  body.id='fm-body-'+key;body.className='fm-section-body';while(head.nextSibling)body.append(head.nextSibling);panel.append(body);
+  head.classList.add('fm-section-head');button.type='button';button.className='fm-section-toggle cursor-interaction';button.dataset.sectionToggle=key;button.setAttribute('aria-controls',body.id);head.append(button);
+  button.addEventListener('click',()=>{state[key]=state[key]===false;dropdowns.forEach(d=>d.close());renderVisibility();if(key==='graphOpen'&&state.graphOpen)renderCharts();persist();});return {key,name,panel,body,button};
+ });
+ function renderVisibility(){for(const s of visibilitySections){const open=state[s.key]!==false;s.body.hidden=!open;s.panel.classList.toggle('fm-collapsed',!open);s.button.textContent=open?'Hide':'Show';s.button.setAttribute('aria-expanded',String(open));s.button.setAttribute('aria-label',(open?'Hide ':'Show ')+s.name);}}
+ function focusGroup(id){const paths=$$('[data-focus-series]'),has=paths.some(p=>p.dataset.focusSeries===id);paths.forEach(p=>{p.style.opacity=has&&p.dataset.focusSeries!==id?'.18':'1';p.style.strokeWidth=has&&p.dataset.focusSeries===id?'3.4':'';});}
+ for(const type of ['pointerover','focusin'])root.addEventListener(type,e=>{const target=e.target.closest('[data-focus-group],[data-driver-row],[data-tier-row]');if(target)focusGroup(target.dataset.focusGroup||target.dataset.driverRow||target.dataset.tierRow);});
+ for(const type of ['pointerout','focusout'])root.addEventListener(type,e=>{if(e.target.closest('[data-focus-group],[data-driver-row],[data-tier-row]')&&!e.relatedTarget?.closest?.('[data-focus-group],[data-driver-row],[data-tier-row]'))focusGroup(null);});
+ function update(save=true){
+  fx.render('demand',state);
+  const previous=state.periods.slice(),valid=new Set(validOptions('periods').map(p=>p.id));state.periods=previous.filter(id=>valid.has(id));if(previous.length&&!state.periods.length){const kinds=new Set(previous.map(id=>id.split(':')[1]));state.periods=validOptions('periods').filter(p=>kinds.has(p.id.split(':')[1])).map(p=>p.id);}
+  renderVisibility();$('#fm-display').value=state.display;$('#fm-affiliate-caption').textContent=state.affiliates.includes('uk')?'United Kingdom':'Choose an Affiliate';
+  const start=performance.now();
+  state.selectionLevel='hierarchy';
+  if(state.fileMode==='ads')state.files=adsSelection(state.cycles,files,selectedDrivers()).files.map(f=>f.id);
+  renderPlanStatus();dropdowns.forEach(d=>{d.caption();if(!d.popup.hidden)d.items();});
+  $('#fm-month-start').value=state.monthStart;$('#fm-month-end').value=state.monthEnd;
+  $('#fm-selected-only').checked=state.selectedOnly;$('#fm-file-search').value=state.fileSearch;
+  $$('[data-chart-trend]').forEach(x=>x.checked=state.trends.includes(Number(x.dataset.chartTrend)));
+  $$('[data-table-trend]').forEach(x=>x.checked=state.tableTrends.includes(Number(x.dataset.tableTrend)));
+  $$('[data-table-view]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.tableView===state.tableView)));
+  $('#fm-cycle-caption').textContent=state.cycles.map(cycleName).join(' · ')||'Choose a demand cycle';
+  renderFiles();renderQuick();renderExecutive();renderRanking();renderCharts();renderSummary();
+  $('#fm-live-note').textContent='Demo data · local interactions';
+  if(save)persist();
+  const timing={renderMs:performance.now()-start,paintMs:null};interactionTimings.push(timing);if(interactionTimings.length>40)interactionTimings.shift();
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{timing.paintMs=performance.now()-start;}));
+ }
+ $('#fm-select-files').addEventListener('click',()=>{state.fileMode='custom';const current=matchingFiles(),bestADS=adsSelection(state.cycles,current).files,others=current.filter(f=>!adsInfo(f));const keys=new Set([...bestADS,...others].map(f=>f.cycle+'|'+f.driver+'|'+planFamily(f)));state.files=state.files.filter(id=>{const f=files.find(x=>x.id===id);return !f||!keys.has(f.cycle+'|'+f.driver+'|'+planFamily(f));});state.files=[...new Set([...state.files,...bestADS.map(f=>f.id),...others.map(f=>f.id)])];update();});
+ $('#fm-clear-files').addEventListener('click',()=>{state.fileMode='custom';const current=new Set(matchingFiles().map(f=>f.id));state.files=state.files.filter(id=>!current.has(id));update();});
+ $('#fm-restore-ads').addEventListener('click',()=>{state.fileMode='ads';state.filePage=0;update();});
+ $('#fm-selected-only').addEventListener('change',e=>{state.selectedOnly=e.target.checked;state.filePage=0;update();});
+ $('#fm-file-search').addEventListener('input',e=>{state.fileSearch=e.target.value;state.filePage=0;renderFiles();persist();});
+ $('#fm-prev-files').addEventListener('click',()=>{state.filePage--;renderFiles();});$('#fm-next-files').addEventListener('click',()=>{state.filePage++;renderFiles();});
+ $$('[data-graph-mode]').forEach(b=>b.addEventListener('click',()=>{const mode=b.dataset.graphMode;state.combined=mode==='total';if(mode!=='total')state.view=mode;update();}));
+ $('#fm-sort-gaps').addEventListener('click',()=>{state.sortGaps=!state.sortGaps;update();});
+ $('#fm-rank-window').addEventListener('change',e=>{state.sortWindow=Number(e.target.value);update();});
+ $('#fm-rank-period').addEventListener('change',e=>{state.rankPeriod=e.target.value;update();});
+ $('#fm-compare-periods').addEventListener('click',()=>{const year=state.periods[0]?.slice(0,4)||state.monthStart.slice(0,4);state.periods=[...new Set([...state.periods,year+':FY',year+':YTG'])];update();});
+ $$('[data-chart-trend]').forEach(el=>el.addEventListener('change',()=>{if(el.checked){state.trends=[Number(el.dataset.chartTrend)];update();}}));
+ $$('[data-table-trend]').forEach(el=>el.addEventListener('change',()=>{state.tableTrends=el.checked?[...new Set([...state.tableTrends,Number(el.dataset.tableTrend)])].sort((a,b)=>a-b):state.tableTrends.filter(t=>t!==Number(el.dataset.tableTrend));update();}));
+ $$('[data-table-view]').forEach(el=>el.addEventListener('click',()=>{state.tableView=el.dataset.tableView;update();}));
+ $('#fm-selection-search').addEventListener('input',e=>{state.selectionSearch=e.target.value;renderQuick();persist();});
+ $('#fm-select-scope').addEventListener('click',()=>{state.sectors=sectors.map(s=>s.id);update();});
+ $('#fm-clear-scope').addEventListener('click',()=>{state.sectors=[];update();});
+ for(const [id,key,other]of [['#fm-month-start','monthStart','monthEnd'],['#fm-month-end','monthEnd','monthStart']])$(id).addEventListener('change',e=>{const value=e.target.value;if(!value)return;state[key]=value;if(state.monthStart>state.monthEnd)state[other]=value;update();});
+ let resizeTimer;new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{for(const p of $$('.fm-plot'))drawPlot(p,catalog.find(m=>m.id===p.dataset.metric));updateScrollNote();},60);}).observe(root);
+ const design={density:'Compact',chartHeight:285};
+ if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:()=>{root.style.setProperty('--fm-rowpad',design.density==='Compact'?'6px':'10px');root.style.setProperty('--fm-chart-height',design.chartHeight+'px');renderCharts();}});tweak.addSelect(design,'density',{label:'File row spacing',options:['Compact','Comfortable']});tweak.addSlider(design,'chartHeight',{label:'Chart height',min:235,max:385,step:10,unit:'px'});}
+ root.fmDesign={getState:()=>JSON.parse(JSON.stringify(state)),setState:(patch,save=true)=>{if(patch.display&&patch.display!==state.display&&!patch.metrics)patch={...patch,metrics:mapMetrics(state.metrics,patch.display)};state={...state,...patch};update(save);},getPerformance:()=>JSON.parse(JSON.stringify(interactionTimings)),amount:(combo,subset,metric,months,trend)=>amount(combo,subset,metric,months,trend),localAmount,variancePercent,catalog,files,sectors,combos:comboGroups,activeSectors,chartSeries,adsInfo,adsSelection,planFamily,periodMonths,periodRangeLabel,validOptions,getSources:()=>pickedFiles().filter(f=>selectedDrivers().includes(f.driver))};
+ update(false);
+})();
+</script>

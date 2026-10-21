@@ -1,5 +1,36 @@
 # Company setup status
 
+## 21 October 2026 — R15 simplifies rates to source currencies
+
+The user removed plan-year and country/Affiliate-specific rate inputs. The
+current paired HTML proposal is `design/currency-plan-review-r15/`. Plan rates
+is always visible in either page's header, including Units view. It lists one
+quote per distinct currency in the base metadata, such as **1 GBP = [rate] USD**.
+Rates are shared by currency across both pages, with no plan-year state.
+
+The multi-Affiliate conversion model defaults Value to USD, converts each source
+currency's contributions separately and sums their USD values. Missing required
+rates withhold the complete total, mixed raw currency totals are rejected and
+USD itself has an implicit rate of 1. The visible base remains the existing
+UK/GBP sample; no other Affiliate or currency was invented for the UI. Isolated
+GBP/EUR/USD fixtures validate future conversion plumbing and do not constitute
+live multi-Affiliate data or page binding.
+
+The named return point **Before currency-only rates — Plan-rate Review R14**
+binds all 31 prior R14 files in
+`design/checkpoints/before-currency-plan-review-r15.json`. Every earlier saved
+package remains byte-preserved. The existing interaction checks retain 1,320
+baseline numeric comparisons, while the currency checks cover simplified
+controls, shared edits, monetary conversion, percentage preservation, missing,
+zero and invalid FX, multi-currency summation, state restoration and narrow
+light/dark layouts. See both R15 validation JSON files for the exact evidence.
+Rates shown in check screenshots are artificial; no business rate is prefilled.
+
+Power BI, Fabric, application source and workbooks are unchanged. Official rate
+storage, actual multi-Affiliate/currency sources, shared page binding, numerical
+reconciliation, refresh/cache checks and live performance remain implementation
+work awaiting design approval.
+
 ## 21 October 2026 — R14 plan-rate controls on both HTML pages
 
 The user authorized adding plan rates to both HTML pages, preserving the current

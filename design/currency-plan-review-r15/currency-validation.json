@@ -1,0 +1,14 @@
+{
+  "schema": "FM_CURRENCY_PLAN_R15_VALIDATION",
+  "checkedAt": "2026-10-21T21:42:13.229Z",
+  "checks": [
+    "Plan rates is visible in Units and Value. The editor lists source-currency-to-USD quotes only, with no country or plan-year fields and no prefilled business rate.",
+    "Demand USD totals/absolute variances convert once with a currency-keyed rate; variance percentages retain local business meaning. Missing FX yields unavailable USD, with a currency-only warning.",
+    "Both pages share the same GBP-to-USD rate. S&OP amounts/monthly run rates scale; Share and growth remain unchanged, and Share stays on the right axis.",
+    "Synthetic multi-affiliate fixtures default Value to USD, deduplicate rates by source currency, convert GBP/EUR contributions before summing, leave USD unchanged, and reject partial or mixed-local totals. One missing required rate withholds the complete USD total; numeric zero is preserved.",
+    "Blank/zero/invalid edits, Cancel, host restore and both narrow light/dark layouts work. State has currency/rates only; no FX year survives. No script errors or warm network requests."
+  ],
+  "errors": [],
+  "warmNetworkRequests": 0,
+  "note": "UK/GBP is the only real illustrative base shown in the UI. Multi-affiliate/currency cases are explicit isolated plumbing fixtures; live multi-affiliate sources and Power BI remain unimplemented."
+}

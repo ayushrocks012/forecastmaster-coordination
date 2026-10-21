@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 13464,
-      "SHA256": "202d179e57e088eb49dbb7bb80fdc20cd35b476823f3d29d599d5ed01946bac9"
+      "Bytes": 14146,
+      "SHA256": "fc69853f1c04a3f05f9c3e8cb28ce340284dfa1d355e0ee817eb634be741ccd0"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 21154,
-      "SHA256": "616946ef33e0bf063ccd771aabc48ff869b803e89569a422c0e59b1d262b13c8"
+      "Bytes": 22454,
+      "SHA256": "3503b31d23faee2377686b4b5d4dde50a54031c622785c1c282e5d25839fdcb8"
     },
     "README.md": {
-      "Bytes": 5237,
-      "SHA256": "839dd36e12501e7fab1938fcad59dccb09b40985ab398221eee928affbd70d3b"
+      "Bytes": 4984,
+      "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 46701,
-      "SHA256": "3e54f6419e55bd5dff3b042bcda0d4cfe25f2ea486d35396a8da51981ebdca1a"
+      "Bytes": 48601,
+      "SHA256": "efa00ae7c9052a997caf90dc41012c4a6914879a26015c2b08e319f1ad776695"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -2080,6 +2080,134 @@
     "design/plan-rate-review-r14/validation.json": {
       "Bytes": 1832,
       "SHA256": "8bff1e43ed10ce6310d41e5c2ff2e1745d189e074c59acbd6e0b12ebc4008b9a"
+    },
+    "design/checkpoints/before-currency-plan-review-r15.json": {
+      "Bytes": 5523,
+      "SHA256": "c02210096f50aa3a658ec573c5a0ab7456e43844adcae711bd2b17b18f25ea96"
+    },
+    "design/currency-plan-review-r15/README.md": {
+      "Bytes": 4431,
+      "SHA256": "07c3d883fedd06de0edad346e59579cd47b2b4510ff035aee78879a378d99929"
+    },
+    "design/currency-plan-review-r15/bridge-audit.json": {
+      "Bytes": 4810,
+      "SHA256": "6d3b56f19c2493c17c153d8e454ec897b4b3d0011a3a542013a6f117b05ea7ed"
+    },
+    "design/currency-plan-review-r15/bridge-catalog.json": {
+      "Bytes": 22390,
+      "SHA256": "0acaae2e996443cdea272c11f0911a72abc7c285279c90fbcbbbe8d77644c03f"
+    },
+    "design/currency-plan-review-r15/build.py": {
+      "Bytes": 1195,
+      "SHA256": "26126f24bc32be9554e2b7cf22819ed1ec7e6ba78281d5a1d303a0844dce92b5"
+    },
+    "design/currency-plan-review-r15/check-connected.cjs": {
+      "Bytes": 13751,
+      "SHA256": "a1e5c4c864613c70760164007b70a48bcca928ab373fecd53bb234a4014bc083"
+    },
+    "design/currency-plan-review-r15/check-currency-fx.cjs": {
+      "Bytes": 11766,
+      "SHA256": "59ec732badcb9edc33b9393ad74d7edff343524792f7cc961b98fc428827a40f"
+    },
+    "design/currency-plan-review-r15/currency-demand-dark.png": {
+      "Bytes": 177096,
+      "SHA256": "dd5aeaa5931bc2fc8d2fe2c16cdb9b21241be69c106d75c3e0ac30d6ac939481"
+    },
+    "design/currency-plan-review-r15/currency-demand-mobile.png": {
+      "Bytes": 144406,
+      "SHA256": "99ce6827f46ca1018521811b771243d21ddf92b87b4ff4b57e5c03b5c585fa89"
+    },
+    "design/currency-plan-review-r15/currency-demand.png": {
+      "Bytes": 166669,
+      "SHA256": "f9acf9c192dbdf92ad44518d7b949e068ff1d74f641bee4344cf1de2b6b9396d"
+    },
+    "design/currency-plan-review-r15/currency-editor.png": {
+      "Bytes": 176797,
+      "SHA256": "b775ac2bdbdb99fa33bbc777bb2dc01fd1433a6fe2705643898ea90c571e74fc"
+    },
+    "design/currency-plan-review-r15/currency-sop-dark.png": {
+      "Bytes": 186982,
+      "SHA256": "6ae676e0b4212e75330f79571a09fd0bf31f98657bd36c0560715a8a5c6c96fc"
+    },
+    "design/currency-plan-review-r15/currency-sop-mobile.png": {
+      "Bytes": 174671,
+      "SHA256": "6533000c06b5b4205b7d4be1f1f38a18ba1ba54c21834bd15c3ceed4df628b41"
+    },
+    "design/currency-plan-review-r15/currency-sop.png": {
+      "Bytes": 176001,
+      "SHA256": "bae1f6454ce4d65265905eeff1b5508a8168fb11c0938fae8664c8226c3b4577"
+    },
+    "design/currency-plan-review-r15/currency-validation.json": {
+      "Bytes": 1381,
+      "SHA256": "33771261b84a74bd0b3f3f6d4a0e875d2551bb8a19b5fb8b5bdfdf8cd35384cb"
+    },
+    "design/currency-plan-review-r15/demand-dark.png": {
+      "Bytes": 157752,
+      "SHA256": "58464040e149b8ba4a70b369165cce53a782a3e7a41a987bfdbd001e24cf6282"
+    },
+    "design/currency-plan-review-r15/demand-final.png": {
+      "Bytes": 155980,
+      "SHA256": "340874074e645d54c24fe4629a407de139954519a642d0c1762156c5129fd09a"
+    },
+    "design/currency-plan-review-r15/demand-mobile.png": {
+      "Bytes": 141583,
+      "SHA256": "211b716c4c40ab4c3c38a1acd09b375120dfb3d4bfa658cdd5527e52e606266f"
+    },
+    "design/currency-plan-review-r15/demand-overview.png": {
+      "Bytes": 151054,
+      "SHA256": "741dce57221ac53a388372ad44ef5a0c6d18635568e1303c18d6790a01a64c4f"
+    },
+    "design/currency-plan-review-r15/demand.fragment.html": {
+      "Bytes": 87509,
+      "SHA256": "61bb82c8d6b2967254319ae5b0da47738aaac1a35312af63ecbdd1f5ef972131"
+    },
+    "design/currency-plan-review-r15/index.html": {
+      "Bytes": 626908,
+      "SHA256": "73ba01a64c2fa136cc7b8cf79eef7857c7c9b31b3313ee39ed934432e3a21066"
+    },
+    "design/currency-plan-review-r15/plan-fx.fragment.html": {
+      "Bytes": 11900,
+      "SHA256": "b6b62bf173ed841a89d0a138caa36b38a47c11e4da7952dac58a3a99bd003e95"
+    },
+    "design/currency-plan-review-r15/preservation.json": {
+      "Bytes": 59913,
+      "SHA256": "8771e32b3531a7404aa7a1a1ff65ae0b649d3bd52d255d2aaad832751fddd4d9"
+    },
+    "design/currency-plan-review-r15/review.fragment.html": {
+      "Bytes": 476116,
+      "SHA256": "a2f84955da378d8d7d02ab2225461a62870bd74e96ee95fde11dbd42afd87499"
+    },
+    "design/currency-plan-review-r15/shell.fragment.html": {
+      "Bytes": 6849,
+      "SHA256": "7805df0780428bb81169e729b07faae1cff4f800334caed2bc675a6c0d217825"
+    },
+    "design/currency-plan-review-r15/sop-collapsed.png": {
+      "Bytes": 56094,
+      "SHA256": "13a935dde20794c6eb45448f85a1db6bab385d7b3f56f801297fc5d07ab34f7b"
+    },
+    "design/currency-plan-review-r15/sop-dark.png": {
+      "Bytes": 174327,
+      "SHA256": "649f8cda33764843760f131f10311a1f07e5e54de121f22b8af8520946d38d83"
+    },
+    "design/currency-plan-review-r15/sop-mobile.png": {
+      "Bytes": 167611,
+      "SHA256": "80e41ff54efd246cbf2ba28e803678de3fa9ca6123912f61e79b07636505b851"
+    },
+    "design/currency-plan-review-r15/sop-review.png": {
+      "Bytes": 172681,
+      "SHA256": "b0371d16cf3ef716a7cedce21ac5fe43a1a1c3143a9d187b0e3aacf7f993484b"
+    },
+    "design/currency-plan-review-r15/sop.fragment.html": {
+      "Bytes": 75166,
+      "SHA256": "a8dad4e96e5e1ca174f459ba6daa1752587cf9fd186d48c44015267a6b858130"
+    },
+    "design/currency-plan-review-r15/summary-rules.json": {
+      "Bytes": 2450,
+      "SHA256": "1daa86bc8c5ea64085e607cff4108490b9f4c29b891eaafaba5f54c6de7d7856"
+    },
+    "design/currency-plan-review-r15/validation.json": {
+      "Bytes": 1832,
+      "SHA256": "dee577614bc29be558ba866f89fb240e210a5edf11fb56a985db9c089f248a70"
     }
   }
 }
