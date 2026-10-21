@@ -794,12 +794,12 @@
       "SHA256": "d60ed2ecd05a09dad16ae5ee0eb5cca6e126a503b2a41fcc19bb105c788d6be3"
     },
     "design/executive-period-review-r09/both-dark.png": {
-      "Bytes": 166981,
-      "SHA256": "8333dd5a6886ac903b5a00a8aabe732a3fbd668369e37a72f0c34c5332259846"
+      "Bytes": 251457,
+      "SHA256": "170e64bf7a1c62b77c6aabc974c5540660dba74f441b5e38d71cb93aa5813065"
     },
     "design/executive-period-review-r09/both-views.png": {
-      "Bytes": 164007,
-      "SHA256": "1197412be994a21fc0a36fb5ea091b50ef9bbbb0e91b1d1fe8cac3a19e8e4469"
+      "Bytes": 247289,
+      "SHA256": "c7f2ea4392a4dd7f08cbee9b8aa2852c93c94b97739414321e88a1c472866c75"
     },
     "design/executive-period-review-r09/check-ads-default.cjs": {
       "Bytes": 6569,
@@ -814,32 +814,32 @@
       "SHA256": "d8fda9f0abfe5199e00e20cc08dd1ceaa49836c84ab22e9420809fb8777358f3"
     },
     "design/executive-period-review-r09/dark.png": {
-      "Bytes": 139442,
-      "SHA256": "c1c9e1ef517f0a39bee6b631a563916e8373b7ccb934441181c7b1f1f8187882"
+      "Bytes": 180771,
+      "SHA256": "bac07546be613c28dbcc5e12d0f03a71d5857595471108d59123e2676afaf621"
     },
     "design/executive-period-review-r09/fy-and-ytg.png": {
-      "Bytes": 153344,
-      "SHA256": "b04e22eca5a9350a958437e464d0a9e773c88523acc8dacd12fc0522f6bae0b1"
+      "Bytes": 198750,
+      "SHA256": "f51a57cb180a8eb558a304da4a5fc5a068c5cb4081e591e891948bf4850bd076"
     },
     "design/executive-period-review-r09/index.html": {
       "Bytes": 175086,
       "SHA256": "023f0a02ac425a70af27d505c230acd0eedd2d7fea4ac41e3af239f633333f07"
     },
     "design/executive-period-review-r09/overview.png": {
-      "Bytes": 144783,
-      "SHA256": "d824491cb914368c061583b0f3429104ef63c57f6ee2017979254de7548d1ada"
+      "Bytes": 187843,
+      "SHA256": "c42460c606b241c67d7e7656dd9e2fb6d42b76c0f91e137b1335e9029742b6a4"
     },
     "design/executive-period-review-r09/period-review-dark.png": {
-      "Bytes": 155106,
-      "SHA256": "47469b2a2d0189f13a2db6eb5824fc5e8a73992588b3d2efa9c2c5f09c555702"
+      "Bytes": 201267,
+      "SHA256": "6065f4064654291ddc5ceabd863ef5a6260cf7f7fb0e528951875eaa8b71c1cc"
     },
     "design/executive-period-review-r09/review.fragment.html": {
       "Bytes": 78128,
       "SHA256": "0815bcb50c50073835c619d8ec9c327bc3c1cb799b150ad7c27c89a1fe20469e"
     },
     "design/executive-period-review-r09/sectors.png": {
-      "Bytes": 138183,
-      "SHA256": "f75276bac046c15966af1771a71163550be07b9774c8042cb612994ee7b0c3ec"
+      "Bytes": 179008,
+      "SHA256": "cc5c90ea0d94d52b4f2b57e1cfd5daa7f0b48ec2617641d09491870ef6fbe069"
     },
     "design/executive-period-review-r09/validation-ads.json": {
       "Bytes": 2484,
@@ -854,8 +854,8 @@
       "SHA256": "0c05ad19258a3575485a515c67262ad01983a473634088c2bf3ff579e5a1eeb9"
     },
     "design/executive-period-review-r09/validation-numeric-table.json": {
-      "Bytes": 1145,
-      "SHA256": "783c2091b7db3bd66ed8120f5809867857ce47a33f657d4d8db146046f4a35db"
+      "Bytes": 1295,
+      "SHA256": "0cb7219058be4a1c13a3c62bc2e1207de5d00af1b49682c485c604e20ed5f752"
     }
   }
 }

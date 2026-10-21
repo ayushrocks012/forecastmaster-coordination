@@ -45,5 +45,7 @@
       "scroll": 288
     }
   ],
-  "browser": "Bundled Playwright with Microsoft Edge on Windows"
+  "browser": "Bundled Playwright with Microsoft Edge on Windows",
+  "baselineCommit": "934c690cb870584dca4db456774082c64e494df2",
+  "sourceSHA256": "0815bcb50c50073835c619d8ec9c327bc3c1cb799b150ad7c27c89a1fe20469e"
 }
