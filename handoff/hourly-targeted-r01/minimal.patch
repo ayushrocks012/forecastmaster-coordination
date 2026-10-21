@@ -1,0 +1,223 @@
+--- R05.4/Refresh/source/hourly_worker.py
++++ candidate/Refresh/source/hourly_worker.py
+@@ -144,8 +144,62 @@
+     ]
+ 
+ 
++def hourly_refresh_plan(snapshot: dict[str, Any], baseline: Any) -> dict[str, Any] | None:
++    """Choose scope again under the existing lease, using the committed baseline."""
++    try:
++        checked_snapshot(baseline)
++        if baseline.get("Status") != "SUCCESS" or not baseline.get("RefreshRunID"):
++            raise ValueError("Invalid committed baseline")
++    except (KeyError, TypeError, ValueError):
++        baseline = None
++    changed = hourly_changes(snapshot, baseline)
++    if changed is None:
++        return None
++    removed = sorted(set(metadata_inventory(baseline["Files"]))
++                     - set(metadata_inventory(snapshot["Files"]))) if baseline else []
++    mode = "ALL" if baseline is None or removed else "FILES"
++    return {"Mode": mode, "ChangedFiles": changed, "RemovedFiles": removed}
++
++
++def targeted_index_valid(spark: Any, config: dict[str, Any], snapshot: dict[str, Any],
++                         changed: list[str], contract: str) -> bool:
++    """Only compact metadata: untouched paths must already have complete pointers."""
++    prefix = config["TABLE_PREFIX"]
++    if not all(spark.catalog.tableExists(prefix + suffix)
++               for suffix in ("_file_state", "_source_revisions")):
++        return False
++    expected = metadata_inventory(snapshot["Files"])
++    changed_keys = {path.casefold() for path in changed}
++    complete = {r[0] for r in spark.table(prefix + "_source_revisions")
++                .select("SourceRevisionID").collect()}
++    found = set()
++    try:
++        for row in spark.table(prefix + "_file_state").collect():
++            key = row["SourceRelativePath"].casefold()
++            if (key in found or key not in expected or row["ReaderContract"] != contract
++                    or row["SourceRevisionID"] not in complete):
++                return False
++            found.add(key)
++            if key not in changed_keys:
++                modified = datetime.fromisoformat(row["SourceModifiedAt"])
++                if modified.utcoffset() is None:
++                    modified = modified.replace(tzinfo=UTC)
++                if (int(row["SourceBytes"]) != expected[key]["Bytes"]
++                        or modified.astimezone(UTC).isoformat() != expected[key]["ModifiedAtUtc"]):
++                    return False
++    except (KeyError, TypeError, ValueError):
++        return False
++    return set(expected) - changed_keys <= found
++
++
+ def validate_processed_snapshot(engine: Any, snapshot: dict[str, Any]) -> None:
+     expected = metadata_inventory(snapshot["Files"])
++    config = getattr(engine, "config", {})
++    if config.get("REFRESH_MODE", "ALL") == "FILES":
++        selected = {p.casefold() for p in config["SELECTED_RELATIVE_PATHS"]}
++        if not selected or not selected <= set(expected):
++            raise ValueError("Invalid selected snapshot scope")
++        expected = {key: row for key, row in expected.items() if key in selected}
+     found: dict[str, dict[str, Any]] = {}
+     for meta in engine.discovery_metadata:
+         key = meta["relative"].replace("\\", "/").casefold()
+@@ -187,7 +241,7 @@
+     def run(
+         self,
+         snapshot: dict[str, Any],
+-        refresh: Callable[[list[str]], tuple[Any, dict[str, Any]]],
++        refresh: Callable[[dict[str, Any]], tuple[Any, dict[str, Any]]],
+     ) -> tuple[Any, dict[str, Any]]:
+         snapshot = checked_snapshot(snapshot)
+         if not self.store.acquire():
+@@ -198,8 +252,12 @@
+         engine: Any = None
+         summary: dict[str, Any] = {}
+         try:
+-            changed = hourly_changes(snapshot, self.store.read("metadata-success.json"))
+-            if changed is None:
++            try:
++                baseline = self.store.read("metadata-success.json")
++            except (TypeError, ValueError, UnicodeDecodeError):
++                baseline = None
++            plan = hourly_refresh_plan(snapshot, baseline)
++            if plan is None:
+                 return None, {
+                     "Status": "IDLE",
+                     "Mode": "HOURLY",
+@@ -210,10 +268,10 @@
+                     raise RuntimeError("Cannot prepare hourly receipt folders.")
+             print(
+                 "Hourly metadata changes requiring content checks:",
+-                len(changed),
++                len(plan["ChangedFiles"]),
+                 flush=True,
+             )
+-            engine, summary = refresh(changed)
++            engine, summary = refresh(plan)
+             if (
+                 summary.get("Status") != "SUCCESS"
+                 or summary.get("StageErrors")
+@@ -244,14 +302,15 @@
+                 "Refresh": summary,
+                 "MetadataFingerprint": snapshot["Fingerprint"],
+                 "CurrentFiles": len(snapshot["Files"]),
+-                "ContentChecksRequested": len(changed),
++                "ContentChecksRequested": len(plan["ChangedFiles"]),
++                "RefreshMode": engine.config["REFRESH_MODE"],
+                 "BaselineReceipt": "metadata-baselines/" + batch_id + ".json",
+             }
+             # Retain the full successful metadata before replacing its current pointer.
+             self.store.write(result["BaselineReceipt"], baseline)
+             self.store.write("hourly/" + batch_id + ".json", result)
++            self.store.write("latest.json", result)
+             self.store.write("metadata-success.json", baseline)
+-            self.store.write("latest.json", result)
+             return engine, result
+         except Exception as exc:
+             failure = {
+--- R05.4/Refresh/source/reporting.py
++++ candidate/Refresh/source/reporting.py
+@@ -117,13 +117,15 @@
+         json.dumps(
+             {
+                 "rules": raw_rules,
+-                "sources": source_rows,
++                "sources": [{k: v for k, v in row.items() if k != "PathFirstSeenAtUtc"}
++                            for row in source_rows],
+                 "profiles": sorted(engine.allowed),
+                 "identityPolicy": "current-file-v1",
+             },
+             sort_keys=True,
+         ).encode()
+     ).hexdigest()
++    engine.report_signature = report_signature
+     state_name = REPORT_PREFIX + "_refresh_state"
+     required_helpers = [
+         REPORT_PREFIX + "_" + name
+@@ -145,7 +147,7 @@
+         signatures = {
+             r[0] for r in spark.table(state_name).select("Signature").collect()
+         }
+-        if signatures == {report_signature}:
++        if signatures == {report_signature} and not FORCE_REBUILD_REPORTING_FACTS:
+             print(
+                 "Reporting sources and rules unchanged: no reporting tables rewritten.",
+                 flush=True,
+--- R05.4/Refresh/source/run.py
++++ candidate/Refresh/source/run.py
+@@ -28,16 +28,30 @@
+         except Exception as exc:  # noqa: BLE001 -- retain stage diagnostics and surface failure
+             engine.stage_errors.append("Ingestion: " + str(exc))
+             print("Ingestion stage failed:", str(exc), flush=True)
+-        if engine.completed:
++        if engine.completed and not engine.failed_files and not engine.stage_errors:
+             try:
+                 with engine.stage("Update measure catalog"):
+                     update_catalog(engine)
+             except Exception as exc:  # noqa: BLE001 -- retain stage diagnostics and surface failure
+                 engine.stage_errors.append("Catalog: " + str(exc))
+             try:
++                if engine.stage_errors:
++                    raise RuntimeError("Catalog update failed; reporting/model deferred")
+                 with engine.stage("Update changed reporting projections"):
+                     update_reporting(engine, embedded_rules)
+-                if engine.report_changed or config.get("FORCE_MODEL_REFRESH", False):
++                # A reporting commit is not proof that its model refresh completed.
++                # The marker advances only after confirmed completion, so retry even
++                # if update_reporting() finds the already-committed tables unchanged.
++                store = config["MODEL_STATE_STORE"]
++                identity = {"Signature": engine.report_signature,
++                            "WorkspaceID": config["WORKSPACE_ID"],
++                            "ModelID": config["SEMANTIC_MODEL_ID"],
++                            "ReportPrefix": config["REPORT_PREFIX"]}
++                try:
++                    confirmed = store.read("model-success.json")
++                except (TypeError, ValueError, UnicodeDecodeError):
++                    confirmed = None
++                if confirmed != identity:
+                     with engine.stage("Refresh ForecastMaster Demand Model"):
+                         model_result = refresh_model(
+                             config, notebookutils.credentials.getToken
+@@ -46,6 +60,8 @@
+                         engine.stage_errors.append(
+                             "Model refresh: " + json.dumps(model_result)
+                         )
++                    else:
++                        store.write("model-success.json", identity)
+                 else:
+                     model_result = {
+                         "Status": "UNCHANGED",
+--- R05.4/build/execute_cell.txt
++++ candidate/build/execute_cell.txt
+@@ -6,13 +6,24 @@
+ refresh_model = refresh_confirmed_model
+ 
+ config_keys = ["SOURCE_ROOT","TABLE_PREFIX","REPORT_PREFIX","ALLOWED_PROFILES","REFRESH_MODE","SELECTED_RELATIVE_PATHS","FORCE_REHASH","FORCE_REBUILD_REPORTING_FACTS","FORCE_MODEL_REFRESH","REFRESH_SEMANTIC_MODEL","WORKSPACE_ID","SEMANTIC_MODEL_ID","MAX_BRIDGE_BYTES","MAX_OBSERVATIONS_PER_FILE","SHUFFLE_PARTITIONS","MODEL_REFRESH_TIMEOUT_SECONDS"]
+-def requested_refresh(force_paths=None):
++def requested_refresh(plan=None):
+     refresh_config = {key: globals()[key] for key in config_keys}
+-    # Requests always cover the complete naming-matched Demand tree.
++    mode = plan["Mode"] if fm_mode == "HOURLY" else "ALL"
++    changed = plan["ChangedFiles"] if fm_mode == "HOURLY" else []
++    # A missing/broken ingestion index cannot safely serve a partial inventory.
++    if mode == "FILES" and not targeted_index_valid(
++        spark, refresh_config, fm_hourly_snapshot, changed,
++        CONTRACT + "|affiliate-bridge-cycle-ef-ims-any-suffix-v1",
++    ):
++        mode = "ALL"
++    if FORCE_REBUILD_REPORTING_FACTS or FORCE_REHASH:
++        mode = "ALL"
+     refresh_config.update(
+-        SOURCE_ROOT="Files/Demand", REFRESH_MODE="ALL", SELECTED_RELATIVE_PATHS=[],
++        SOURCE_ROOT="Files/Demand", REFRESH_MODE=mode,
++        SELECTED_RELATIVE_PATHS=changed if mode == "FILES" else [],
+         ALLOWED_PROFILES=["Local", "Ext"], REFRESH_SEMANTIC_MODEL=True,
+-        FORCE_MODEL_REFRESH=(fm_mode == "REQUESTS"), FORCE_REHASH_PATHS=list(force_paths or []),
++        FORCE_MODEL_REFRESH=False, FORCE_REHASH_PATHS=changed,
++        MODEL_STATE_STORE=worker_store,
+     )
+     return run_refresh(spark, globals(), refresh_config, notebookutils, EMBEDDED_REPORT_RULES)
+ 

@@ -1,0 +1,35 @@
+{
+  "InputNotebook": "handoff/notebook-r05.4/ForecastMaster_Refresh.ipynb",
+  "InputSHA256": "7df5abe92ba1afaffc295f4b818be81a6a8a9901013b914156b740675d7ab78d",
+  "ChangedNotebookCellIndices": [
+    4,
+    8,
+    10,
+    12
+  ],
+  "FabricInstallation": "NOT_RUN",
+  "FabricCapacityMeasurement": "NOT_RUN",
+  "ArtifactSHA256": {
+    "COPY-PASTE-GUIDE.txt": "23634eef8fced99f66495f438143a883747e97652549ef8511443531c24d2d87",
+    "OPEN THIS FIRST.txt": "4ab20878c0d75f44cdfce8671197cdf597038fc0862f0569fa5fb3ad658828b3",
+    "build_detector_patch.py": "2a98475d219413acc54625c7433c8eb87d7d5fddbb2fc99f3136715d4ee00db0",
+    "build_patch.py": "edb5c5f09a64a960ad851dd8b85a223b501b2eb054701b595b94b1c6cf547ac1",
+    "candidate/ForecastMaster_Refresh.ipynb": "8ab08620ef9350d54d3104f02f5f5dc98e7d2352a93ab6cddcb8e2896eddbcb1",
+    "candidate/Refresh/source/hourly_worker.py": "1fc458c892ce9ba643eb379c5fed817a9e4a5efa1bff9045b9e139149b48af44",
+    "candidate/Refresh/source/reporting.py": "2fcf6e97aff7d4d3478706d89766c964d8b294c56ca1073449398676d34a3c72",
+    "candidate/Refresh/source/run.py": "8d8d1278fd052fd915480b5a2f58c3825894c52e3fa592275bbeea9fb518c781",
+    "candidate/build/execute_cell.txt": "52d75f77905b9304d6246b7e7bb1000bc60f3d424066be4561e8624604564488",
+    "candidate/detector_helpers.py": "cfaab9014e15366ac96fdad13ea95e6531aed683c0979fe5f74018532f044545",
+    "detector.patch": "91e9a179e44138d3a5f98ada06e09b0310d94b89369d1df4a0eb5afa40ca3027",
+    "minimal.patch": "08e05ebac4c1ba4e63529f382e1cef09e385bb58f07326e6b94882e25c6bafff",
+    "original-locations.json": "80445a3b495fd947a8c903fb39d2ba61b57e591f217fd6f519d3e80df888c002",
+    "paste-cells/04-hourly-worker-and-preflight.py": "1684035f09f1ac7a7d8875e7ce7417c52515ddd72315ff9e27f7effcc8bfc2d9",
+    "paste-cells/08-reporting.py": "2fcf6e97aff7d4d3478706d89766c964d8b294c56ca1073449398676d34a3c72",
+    "paste-cells/10-run-refresh.py": "b88daa07a91217b66b91c8a82fd1133daa9074a7f226ebfdb9667cda377d68a5",
+    "paste-cells/12-execute-refresh.py": "52d75f77905b9304d6246b7e7bb1000bc60f3d424066be4561e8624604564488",
+    "paste-cells/detector-prepareMetadataDecision.py": "e8438a109668dacbea17c45413389eaebbf2875fb56e2682526805bb178a164b",
+    "paste-cells/detector-read-baseline.py": "ac9789d1b64087e6622ec532c756deb9900e9eae57ed7b08668273006bcdc67f",
+    "test_targeted.py": "0f44e62f9ed74716679102f1579bce8cdd1d516fb61edccdac4bdfbb79b8863a",
+    "validation.json": "e3915b02133f32ad5aae34672b300129d3916c3ad28e3da55f99f4dd0bdec61c"
+  }
+}

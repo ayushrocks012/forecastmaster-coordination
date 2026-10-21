@@ -1,0 +1,19 @@
+{
+  "hourly_worker.py": {
+    "def hourly_changes": 123,
+    "def validate_processed_snapshot": 147,
+    "class HourlyWorker": 183,
+    "changed = hourly_changes": 201,
+    "self.store.write(\"metadata-success": 253
+  },
+  "reporting.py": {
+    "\"sources\": source_rows": 120,
+    "state_name = REPORT_PREFIX": 127,
+    "if signatures ==": 148,
+    "\"replaceWhere\"": 297
+  },
+  "run.py": {
+    "if engine.completed:": 31,
+    "if engine.report_changed": 40
+  }
+}

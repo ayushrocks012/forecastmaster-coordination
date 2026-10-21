@@ -1,0 +1,178 @@
+Hourly targeted refresh - receiving laptop steps
+
+This is a prepared, locally tested patch for the existing ForecastMaster_Refresh
+notebook. Receiving these Git files does not install anything in Fabric.
+The existing hourly pipeline, native report button and report/model remain.
+
+1. RECEIVE THE FILES
+
+In VS Code on the other laptop, open a PowerShell terminal and run:
+
+  Set-Location "$env:USERPROFILE\source\forecastmaster-coordination"
+  git status --short
+
+If the status prints local changes, keep them and send that output before
+continuing. If it prints nothing, run:
+
+  git pull --ff-only
+  git log -1 --oneline
+  code "handoff\hourly-targeted-r01\OPEN THIS FIRST.txt"
+
+If your existing clone is elsewhere, open that folder and use its terminal.
+If no clone exists, use the repository's START-HERE.md first. Python and package
+installation are not required for these receiving and copy/paste steps.
+
+2. PREPARE FABRIC
+
+Open your existing Fabric workspace. Temporarily disable the schedule for
+ForecastMaster_Hourly and let current refresh runs finish. Avoid starting the
+native report-button refresh while changing the worker.
+
+Export/download the CURRENT ForecastMaster_Refresh notebook as an .ipynb backup.
+Copy/export the CURRENT User Data Functions source containing checkDemandChangesR05
+and submitNativeRefreshR06 as the Functions backup. Keep these originals for
+rollback; use the same existing Fabric items when editing below.
+
+3. REPLACE FOUR EXISTING NOTEBOOK CELLS
+
+Open the existing ForecastMaster_Refresh notebook in Fabric.
+Do not run the cells individually while changing them. Replace all four first.
+
+Run this PowerShell command to copy the first prepared cell:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\paste-cells\04-hourly-worker-and-preflight.py" | Set-Clipboard
+
+In Fabric find the EXISTING cell beginning:
+  "Coordinate a metadata-gated hourly run through the existing refresh engine."
+It contains HourlyWorker and the subsequent notebook preflight.
+Select ALL code in that one cell and paste, replacing its contents.
+
+Next, copy the reporting cell:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\paste-cells\08-reporting.py" | Set-Clipboard
+
+Replace ALL code in the EXISTING cell beginning:
+  "Reporting projection retains R03.1 arithmetic and adds folder-independent path aliases."
+It defines update_reporting().
+
+Next, copy the ordered-run cell:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\paste-cells\10-run-refresh.py" | Set-Clipboard
+
+Replace ALL code in the EXISTING cell beginning:
+  "Single ordered invocation for the embedded Fabric notebook."
+It defines run_refresh().
+
+Finally, copy the execution cell:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\paste-cells\12-execute-refresh.py" | Set-Clipboard
+
+Replace ALL code in the EXISTING final cell beginning:
+  EMBEDDED_REPORT_RULES = ...
+It contains requested_refresh(), calls hourly_worker/request_worker, and ends
+with notebookutils.notebook.exit(...).
+
+The 04/08/10/12 filenames are zero-based JSON cell indices. Use the quoted text
+to locate each cell; Fabric may not display those numbers. Preserve the other
+cells, parameter defaults and default Lakehouse attachment. Save the notebook.
+
+If a quoted cell differs because you have later customizations, stop that
+replacement and compare minimal.patch with the exported version first. In
+particular, preserve any later non-IMS or reporting adaptations. Do not replace
+the entire Functions app or install an older notebook over newer customizations.
+
+4. UPDATE TWO SMALL FUNCTIONS BLOCKS
+
+Open the CURRENT User Data Functions source containing checkDemandChangesR05.
+Keep its native ad hoc functions, connections and other helper code.
+
+Copy the prepared replacement helper:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\paste-cells\detector-prepareMetadataDecision.py" | Set-Clipboard
+
+Find:
+  def prepareMetadataDecision(discovery: dict[str, Any], baseline: Any)
+Replace that complete function with the clipboard contents. Keep the functions
+above and below it. The new helper converts an invalid baseline to a rebuild
+request while still rejecting an invalid current inventory.
+
+Then find this line INSIDE checkDemandChangesR05():
+  baseline = readControlJson(files, "metadata-success.json")
+
+Copy its indented replacement:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\paste-cells\detector-read-baseline.py" | Set-Clipboard
+
+Replace ONLY that single baseline-read line with the four pasted lines.
+The pasted try/except is indented inside the existing function's outer try.
+Keep this following line after the new except block, at its original indentation:
+  result = prepareMetadataDecision(discovery, baseline)
+
+Save and publish the Functions changes. The native ad hoc endpoints remain.
+Do not paste the old functions-r05.2/function_app.py over the current app.
+
+5. CHECK THE EXISTING HOURLY PIPELINE
+
+Open ForecastMaster_Hourly. Keep its existing metadata function and gate.
+In the Notebook activity Run_ForecastMaster_Hourly, confirm:
+  notebook: ForecastMaster_Refresh (the same existing item)
+  FM_RUN_MODE: String, HOURLY
+  FM_METADATA_JSON: String, expression:
+    @activity('Check_Demand_Metadata').output.output
+
+Leave the Notebook in the True branch of Refresh_only_when_changed. Its False
+branch stays empty. Keep the current user-context authentication setup.
+Do not change the schedule interval or create another refresh worker.
+
+6. RUN ONE CONTROLLED CHECK
+
+Run ForecastMaster_Hourly manually once from the pipeline.
+
+If nothing changed:
+  Check_Demand_Metadata should return UNCHANGED / NeedsRefresh false.
+  The refresh notebook should be skipped. This is the correct low-capacity path.
+
+If sources genuinely changed:
+  Added/modified paths should produce RefreshMode FILES, provided the existing
+  metadata baseline and compact ingestion index are valid. For one selected
+  file, "Files inspected" should say 1, not the entire historical source count.
+  Removed/renamed paths, or an unusable baseline/index, should produce ALL.
+  The first changed run may synchronize the model once to establish the new
+  model-success.json receipt. Later already-confirmed signatures skip it.
+
+Do not change business values merely to manufacture a test. Observe the next
+legitimate saved correction/addition if this check is UNCHANGED. There is no
+need to erase metadata-success.json or force a full historical rebuild simply
+to install this patch.
+
+The existing native report button invokes ForecastMaster_Native_Adhoc. A success
+there does not by itself verify the patched hourly notebook's FILES path.
+
+7. CHECK THE RESULT, THEN RESUME
+
+For a changed run, check the final WORKER RESULT / notebook exit JSON:
+  Status: SUCCESS
+  RefreshMode: FILES or the justified ALL fallback
+  Refresh.ModelRefresh.Status: COMPLETED or UNCHANGED
+  No failed files or StageErrors
+
+For a historical correction, confirm the affected current source slice has the
+correct keys/values and the earlier raw revision remains available. The package
+preserves the existing atomic affected-file replacement and revision history.
+
+After the relevant check succeeds, restore the original hourly schedule.
+Save the pipeline/notebook result or error in feedback/logs/ or send it in chat.
+Company installation, actual FILES execution and CU savings remain unverified
+until receiving results are supplied.
+
+8. IF YOU NEED TO ROLL BACK
+
+Disable the hourly schedule and let active runs finish. Restore the notebook
+and Functions backups into the SAME existing items. Leave source/history tables,
+metadata-success.json and receipts intact; old code ignores model-success.json.
+Restore any temporary force flags, then resume the original schedule after a
+controlled verification. No table schema migration or data rollback is required
+for this code-only patch.
+
+For detailed validation cases, exact original source locations, limitations and
+rollback discussion, open COPY-PASTE-GUIDE.txt in this same folder.

@@ -1,0 +1,17 @@
+{
+  "LocalRegressionChecks": 28,
+  "PropertyTest": "Historical ETag corrections target only the affected old-cycle path",
+  "MypyStrict": "PASS: 3 changed runtime modules",
+  "Ruff": "PASS: E,F,B,UP excluding pre-existing E501 long lines",
+  "Bandit": "PASS: changed runtime modules and detector helpers",
+  "NotebookCompilation": "PASS: all code cells",
+  "UnchangedNotebookCells": "PASS: only zero-based cells 4,8,10,12 differ",
+  "SparkDeltaExecution": "NOT_RUN: PySpark/Delta unavailable in inspected local environments",
+  "FabricExecution": "NOT_RUN",
+  "FabricCapacityMeasurement": "NOT_RUN",
+  "GraphImpact": "UNKNOWN: F1 authority drift; refresh refused nested parse-cache symlink. Direct source and callers inspected.",
+  "OriginalSources": "Preserved; generated patch is isolated",
+  "CoordinationRepoRegressionChecks": "PASS: 28 cases",
+  "PortableRebuild": "PASS: fresh directory reproduced 8 generated artifacts byte for byte",
+  "RuntimeArtifactBytes": "Unchanged from the reviewed local patch"
+}

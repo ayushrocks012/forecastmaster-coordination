@@ -572,6 +572,94 @@
     "handoff/report-cycle-cache-r04.2/validation/native-feed-results.json": {
       "Bytes": 2017,
       "SHA256": "f6c10b8ca2020a4d3a9e54d6d518a726d582640da423bc8550746d822a141ec4"
+    },
+    "handoff/hourly-targeted-r01/COPY-PASTE-GUIDE.txt": {
+      "Bytes": 14229,
+      "SHA256": "23634eef8fced99f66495f438143a883747e97652549ef8511443531c24d2d87"
+    },
+    "handoff/hourly-targeted-r01/OPEN THIS FIRST.txt": {
+      "Bytes": 8052,
+      "SHA256": "4ab20878c0d75f44cdfce8671197cdf597038fc0862f0569fa5fb3ad658828b3"
+    },
+    "handoff/hourly-targeted-r01/build_detector_patch.py": {
+      "Bytes": 3381,
+      "SHA256": "2a98475d219413acc54625c7433c8eb87d7d5fddbb2fc99f3136715d4ee00db0"
+    },
+    "handoff/hourly-targeted-r01/build_patch.py": {
+      "Bytes": 11346,
+      "SHA256": "edb5c5f09a64a960ad851dd8b85a223b501b2eb054701b595b94b1c6cf547ac1"
+    },
+    "handoff/hourly-targeted-r01/candidate/ForecastMaster_Refresh.ipynb": {
+      "Bytes": 158692,
+      "SHA256": "8ab08620ef9350d54d3104f02f5f5dc98e7d2352a93ab6cddcb8e2896eddbcb1"
+    },
+    "handoff/hourly-targeted-r01/candidate/Refresh/source/hourly_worker.py": {
+      "Bytes": 13853,
+      "SHA256": "1fc458c892ce9ba643eb379c5fed817a9e4a5efa1bff9045b9e139149b48af44"
+    },
+    "handoff/hourly-targeted-r01/candidate/Refresh/source/reporting.py": {
+      "Bytes": 19471,
+      "SHA256": "2fcf6e97aff7d4d3478706d89766c964d8b294c56ca1073449398676d34a3c72"
+    },
+    "handoff/hourly-targeted-r01/candidate/Refresh/source/run.py": {
+      "Bytes": 4578,
+      "SHA256": "8d8d1278fd052fd915480b5a2f58c3825894c52e3fa592275bbeea9fb518c781"
+    },
+    "handoff/hourly-targeted-r01/candidate/build/execute_cell.txt": {
+      "Bytes": 3404,
+      "SHA256": "52d75f77905b9304d6246b7e7bb1000bc60f3d424066be4561e8624604564488"
+    },
+    "handoff/hourly-targeted-r01/candidate/detector_helpers.py": {
+      "Bytes": 5459,
+      "SHA256": "cfaab9014e15366ac96fdad13ea95e6531aed683c0979fe5f74018532f044545"
+    },
+    "handoff/hourly-targeted-r01/detector.patch": {
+      "Bytes": 2454,
+      "SHA256": "91e9a179e44138d3a5f98ada06e09b0310d94b89369d1df4a0eb5afa40ca3027"
+    },
+    "handoff/hourly-targeted-r01/manifest.json": {
+      "Bytes": 2512,
+      "SHA256": "a4d5089bf5d3e5ca3c9dfeecac3892efaa44de826b10f75ede08082c419da085"
+    },
+    "handoff/hourly-targeted-r01/minimal.patch": {
+      "Bytes": 11094,
+      "SHA256": "08e05ebac4c1ba4e63529f382e1cef09e385bb58f07326e6b94882e25c6bafff"
+    },
+    "handoff/hourly-targeted-r01/original-locations.json": {
+      "Bytes": 466,
+      "SHA256": "80445a3b495fd947a8c903fb39d2ba61b57e591f217fd6f519d3e80df888c002"
+    },
+    "handoff/hourly-targeted-r01/paste-cells/04-hourly-worker-and-preflight.py": {
+      "Bytes": 15410,
+      "SHA256": "1684035f09f1ac7a7d8875e7ce7417c52515ddd72315ff9e27f7effcc8bfc2d9"
+    },
+    "handoff/hourly-targeted-r01/paste-cells/08-reporting.py": {
+      "Bytes": 19471,
+      "SHA256": "2fcf6e97aff7d4d3478706d89766c964d8b294c56ca1073449398676d34a3c72"
+    },
+    "handoff/hourly-targeted-r01/paste-cells/10-run-refresh.py": {
+      "Bytes": 4427,
+      "SHA256": "b88daa07a91217b66b91c8a82fd1133daa9074a7f226ebfdb9667cda377d68a5"
+    },
+    "handoff/hourly-targeted-r01/paste-cells/12-execute-refresh.py": {
+      "Bytes": 3404,
+      "SHA256": "52d75f77905b9304d6246b7e7bb1000bc60f3d424066be4561e8624604564488"
+    },
+    "handoff/hourly-targeted-r01/paste-cells/detector-prepareMetadataDecision.py": {
+      "Bytes": 2885,
+      "SHA256": "e8438a109668dacbea17c45413389eaebbf2875fb56e2682526805bb178a164b"
+    },
+    "handoff/hourly-targeted-r01/paste-cells/detector-read-baseline.py": {
+      "Bytes": 171,
+      "SHA256": "ac9789d1b64087e6622ec532c756deb9900e9eae57ed7b08668273006bcdc67f"
+    },
+    "handoff/hourly-targeted-r01/test_targeted.py": {
+      "Bytes": 14941,
+      "SHA256": "0f44e62f9ed74716679102f1579bce8cdd1d516fb61edccdac4bdfbb79b8863a"
+    },
+    "handoff/hourly-targeted-r01/validation.json": {
+      "Bytes": 1012,
+      "SHA256": "e3915b02133f32ad5aae34672b300129d3916c3ad28e3da55f99f4dd0bdec61c"
     }
   }
 }
