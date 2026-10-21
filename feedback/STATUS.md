@@ -513,3 +513,29 @@ responsive light/dark layouts, hover and zero warm network requests/script
 errors were checked. All earlier designs remain preserved. Numbers remain
 synthetic; live binding, Power BI implementation and performance remain pending.
 No application source, workbook, Fabric item or live report was changed.
+
+## 21 October 2026 — R09 audits all contexts and structures the S&OP summary
+
+The user requested auditing the remaining source hierarchy/measures and improving
+the summary's repeated heading lines. They explicitly chose ADS Units/Value only
+for Homecare/Hospital, keeping detailed contract build-up workings outside this
+GM page. R09 audits both retained neutral driver definitions: 29 sector plans,
+13 source contexts, 18 executive measures in both dimensions, 10,179 structural
+data rows, 1,044 identity matches and 58 source-order checks. All displayed
+identities/orders match. Source row positions vary across sector layouts; the
+catalogue now records per-driver ranges instead of implying a universal row.
+No source forecast values, formulas or Product/Manufacturer identities are copied.
+
+The selector now puts Retail before Private Order/Internal Account, matching the
+bridge. Contracts resumes after Out of Pocket with one shared Channel control.
+Every context retains an independent ADS toggle. The summary has one header row
+and dedicated Channel, Sub-channel and Measure columns. Vertically merged labels
+replace full-width hierarchy-heading lines; measure rows use short names without
+repeating full paths. Multiple review groups/cycles use a merged scope column.
+
+Local checks pass 13 integration groups, 216 retained fixture comparisons with
+R08 and 64 reconciliations, plus the source audit above. All prior saved designs
+remain preserved. Numbers are synthetic; live workbook/source binding, Power BI
+implementation and performance remain separate pending gates. GitNexus reported
+stale authority; direct retained metadata supplied the audit evidence without
+refreshing a shared index or changing application/workbook/live report content.
