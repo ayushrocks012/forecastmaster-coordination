@@ -1,0 +1,34 @@
+{
+  "plan": 62160,
+  "trend": 62160,
+  "sopMarket": 62160,
+  "share": 0.1,
+  "converted": 62160,
+  "zero": 0,
+  "missing": null,
+  "hideRestores": true,
+  "hostCalls": {
+    "persist": 21,
+    "fetch": 0,
+    "failed": []
+  },
+  "tableHeaders": 22,
+  "times": [
+    30.800000000745058,
+    13.699999999254942,
+    30,
+    14,
+    27.100000001490116,
+    12.800000000745058,
+    29.399999998509884,
+    13.600000001490116,
+    29.199999999254942,
+    13.199999999254942,
+    30.699999999254942,
+    12
+  ],
+  "refreshed": 62208,
+  "browserErrors": [],
+  "evidence": "SYNTHETIC FIXTURE - packaged visual in headless Edge; no company connection",
+  "fixtureRows": 17280
+}

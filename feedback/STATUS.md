@@ -1,5 +1,38 @@
 # Company setup status
 
+## 21 October 2026 — R16 Desktop candidate prepared, company opening pending
+
+The user authorized the approved paired design in Power BI Desktop and supplied
+a thin Redesign PBIX. The new private generated project has Demand review,
+S&OP review and the unchanged separate Refresh Demand page. The old Review
+meeting page is absent from the new project. The original PBIX and all four
+Refresh Demand definition files are verified byte-preserved. The existing live
+semantic-model connection is retained; no Service report was changed/published.
+
+The public implementation is `handoff/report-gm-desktop-r16/README.md`. Its
+production bundle uses saved bridge components rather than illustrative values.
+Twelve additive reporting definitions supply the missing S&OP identities;
+existing leaf ADS components are reused. Setup is a separate user-run notebook
+cell with a rule backup, readback, shared writer lease and concurrent-change
+guard, followed by one normal native request to rebuild reporting and refresh
+the model. No company setup/refresh was performed by this task.
+
+Local TypeScript/packaging lint, numeric edge cases and packaged-browser checks
+passed with 17,280 explicitly synthetic monthly rows. Both views reconcile on
+known fixture totals; zero/missing FX, weighted share, complete training/period
+windows, visibility, local selections and refresh invalidation are checked.
+Eleven project files validate against public Microsoft schemas. Three visual
+containers retain the source 2.14.0 schema, whose public URL returned HTTP 404;
+that part remains unvalidated. Desktop native opening and live DAX/model
+execution are pending because local Computer Use failed before app inspection.
+These files are a PBIP candidate, not a claimed Desktop-saved PBIX.
+
+Use internal review navigation to carry selections/rates between views; native
+Power BI page tabs maintain separate visual sessions. Company reconciliation,
+initial load/interaction speed, published native-button operation and final
+publication remain receiving checks. All previous HTML/handoff packages remain
+unchanged.
+
 ## 21 October 2026 — R15 simplifies rates to source currencies
 
 The user removed plan-year and country/Affiliate-specific rate inputs. The
