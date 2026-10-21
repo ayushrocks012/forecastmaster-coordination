@@ -1,0 +1,61 @@
+FORECASTMASTER GM REVIEW R16.1 - READER CORRECTION
+
+Your model grain check passed. This replacement corrects the visual's date
+reader; no company source-data cleanup is required for this error.
+Keep the R16 folder and ZIP as they are. Use a separate R16.1 folder.
+
+The original report is preserved as Original - before GM redesign.pbix.
+The new project has Demand review, S&OP review, and Refresh Demand.
+The old Review meeting page is removed. Refresh Demand is byte-preserved.
+
+1. Close the R16 project in Power BI Desktop.
+   Extract the WHOLE R16.1 ZIP to a NEW normal folder on the work laptop.
+2. Open ForecastMaster GM Review / ForecastMaster GM Review.pbip in Power BI Desktop.
+   Keep its .Report folder beside it. Do not open a file inside the ZIP.
+3. Use the same signed-in company account. The existing model connection is retained.
+4. Wait for the saved reporting data to load. Check that the header says R16.1
+   and that the three pages appear. The duplicate monthly component error
+   should be resolved. If any error remains, send its complete text before
+   proceeding. Do not publish yet.
+
+ONE-TIME DATA PREPARATION (needed for the additional S&OP measures)
+This setup does not fix the reader error. Complete it after step 4 succeeds.
+If the earlier identical setup has already completed, do not repeat it just
+because this reader version changed.
+5. In Fabric UK-ANI-Demand, create a separate unscheduled Python notebook.
+   Attach the existing ForecastMaster Lakehouse as its default Lakehouse.
+6. Open SETUP REPORTING FEED.py, copy ALL its text into the first code cell,
+   then run that one cell. It backs up and extends reporting rules only.
+   It uses the existing shared writer lock and stops if the refresh worker is busy.
+7. Look immediately BELOW that code cell for its output. Expect READY, then NEXT.
+   Keep the backup path. If it reports an error, send the exact output.
+8. In the EXISTING published report, click Refresh Demand (native) ONCE.
+   Wait for its pipeline to finish. Its notebook output must contain SUCCESS,
+   no StageErrors, and ModelRefresh COMPLETED.
+9. Return to the NEW Desktop project. Home > Refresh retrieves the model results.
+
+CHECK BEFORE PUBLICATION
+10. Demand review: choose cycle, driver/tiers, chart months and Units/Value.
+    Check the ADS file defaults and a known source total. Missing data must show a dash.
+11. Explore in S&OP carries the current selection and plan rates within the visual.
+    Select Community, its blank sub-channel, then Share / Abbott IMS / Market / PI / ADS.
+    Add Wholesaler or Northern Ireland independently. Check their own ADS rows.
+12. Check FY/YTD/YTG, monthly mode, run rate, growth, and the unchanged Refresh Demand page.
+13. If all checks pass, File > Save As > Power BI report (.pbix), with a NEW name.
+    Publish that new report to UK-ANI-Demand first. Keep the existing report as rollback.
+    Test the published native refresh button separately before replacing shared links.
+
+SCOPE AND EVIDENCE
+- This is a generated PBIP/PBIR candidate, not a Desktop-saved PBIX.
+- Local package/fixture/schema checks are recorded separately from company acceptance.
+- The attachment's source bytes and refresh page are preserved; no company report was published.
+- No business FX rate is prefilled. Enter USD per GBP in Plan rates when using USD Value.
+- Top-level tabs in Power BI each retain their own saved visual session. Use the visual's
+  Demand review / Explore in S&OP buttons to carry shared selections and FX between views.
+- No new model query is requested by this visual for local selections after the initial
+  complete feed loads. Initial loading and company-laptop speed still require measurement.
+
+ROLLBACK
+Open Original - before GM redesign.pbix. No replacement of the original report is needed
+to test this candidate. Reporting-rule backups are in the setup output's OneLake path;
+restore them only when no refresh is running, then perform one native refresh again.

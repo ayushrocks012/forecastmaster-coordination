@@ -1,0 +1,6 @@
+Visual/node_modules
+Visual/.tmp/
+Visual/webpack.statistics.*
+local-test/
+__pycache__/
+probe.cjs

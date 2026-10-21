@@ -1,5 +1,34 @@
 # Company setup status
 
+## 21 October 2026 — R16 opened; clean model grain; R16.1 reader correction
+
+The operator opened all three R16 pages in Desktop on the work laptop. During
+the initial model load, before the one-time S&OP setup, a missing-fields message
+was followed by `Duplicate monthly component. Complete totals withheld`.
+The working source PBIX did not have that failure.
+
+A user-run read-only DAX query found 216,384 fact rows in 216,384 monthly groups,
+zero groups with multiple rows and maximum group size one. The axis has 84 rows,
+84 distinct dates and zero non-month-start dates. These diagnostic counts show
+no source-grain duplication; no company fact or calendar cleanup was performed.
+
+R16's date decoder sliced zoned timestamp strings before reading the local
+calendar month, unlike the working R04.2 reader. Synthetic London timestamps
+reproduce the exact duplicate error across the spring clock change. The new
+`handoff/report-gm-desktop-r16.1/` restores the working date handling; 84 months
+pass across four time zones. Actual company DataView bytes were not inspected.
+Identical aggregate-delivery replay, raw blank/empty aggregate identities,
+metadata carriers, conflicting amounts/missing counts and complete-period
+guards have focused regressions. Empty startup views now wait for data.
+
+The replacement retains the same visual GUID with version 16.0.1.0. Reporting
+rules/setup and business formulas are unchanged, and all 28 tracked R16 files
+are preserved. Local TypeScript, packaging, reader and packaged-browser checks
+are separate from R16.1 company rendering, reconciliation and speed, which
+remain pending. No company setup, source change or publication was performed.
+Open the replacement in a separate folder and verify the first load before
+continuing the existing one-time S&OP setup and publication checklist.
+
 ## 21 October 2026 — R16 Desktop candidate prepared, company opening pending
 
 The user authorized the approved paired design in Power BI Desktop and supplied
