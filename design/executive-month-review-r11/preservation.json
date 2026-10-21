@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "date": "2026-10-21",
+  "sourceSha256": "763a148dfbbc23fc09750562a0d71ae6730e202f3476ac6c5b6a4314257733c1",
+  "unchangedFunctions": {
+    "adsInfo": "bdb1efee2a0be58e11d33179aace0e02bfe17bb2211b206d4afbd6d6e0db40a7",
+    "adsSelection": "fc4a934c746f0578bebb7e69e22c91f782573a546904602df530fb4ce51e1499",
+    "planFamily": "0aa9001a99564ff9639be6890abe60ba9d34b54c7b8fb996c91f32427b22b898",
+    "sourceAmounts": "36654efbe37d4b039af3e8b258f443a88f8700ced302d677b17bfd76a57bf840",
+    "fit": "eb7daec7dea0ef96518f476bfe935220edafde7fad1c7ab0a810780b7d5e01ba",
+    "components": "e603b5a5e8c885f194cb09f299f7570e116db1c0110db841c1d11c27d01fab46",
+    "comboGroups": "a8d3c413381e490f5ee0a834acf2c8937b0cfd9a64ca0c380d36a90f798c24ab",
+    "amount": "706dfbf9e030deb6e3ca6ec4ef883d95d6b3b87485be746c7ee341499293b5bc",
+    "periodMonths": "662354308d5303144dd6c7335295aa7caa91db9f29f0e1c8775b35f2b58a38b8",
+    "periodRangeLabel": "f114870c2d0652ae1f9cff6a5ef5837f77165eb0da3b35423a2ac53c4355b563"
+  },
+  "unchangedVersions": {
+    "design/executive-review-r07/": {
+      "files": 13,
+      "digest": "c595147c5ef163751bbc6e78d4d80d9e23ad7fe4be2c271d6c7b0a3f615d77fe"
+    },
+    "design/executive-overview-r08/": {
+      "files": 17,
+      "digest": "5938831707f2ea281cdd56558540fbcb90af3fa874841ae9f7a46a35fd31a83c"
+    },
+    "design/executive-period-review-r09/": {
+      "files": 17,
+      "digest": "47abee0b5920a1be65302c6d3eb070729ff409a790ec5725694d4e8ac200376b"
+    },
+    "design/executive-gm-review-r10/": {
+      "files": 14,
+      "digest": "51975c3e767b50dbf3cc9a42217eab002a2a6fe01af3dcae34c2b90ec49b3d8f"
+    }
+  },
+  "productionScope": "HTML prototype only; no Power BI or handoff code changes"
+}

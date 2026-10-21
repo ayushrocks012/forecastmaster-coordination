@@ -319,3 +319,16 @@ verification here. R07, R08 and R09 remain unchanged.
 Pending: user design approval, followed by separately authorized Power BI
 implementation and realistic performance/freshness validation. No report,
 model, custom visual package, notebook, function or schedule was changed.
+
+## 21 October 2026 — R11 restores month calendars
+
+The user corrected R10's control placement. R11 restores visible From/To month
+calendars at the top beside broad business filters and puts FY/YTG back in the
+executive-summary controls. Chart months and summary periods are independent;
+neither summary-period nor cycle changes reset the chosen chart range.
+
+Browser checks pass for placement, calendar/summary independence, actual graph
+points after date changes, reversed ranges, retained executive interactions,
+source selection and responsive layout. All 819 numeric cells again agree with
+preserved R09. R10 and previous versions remain unchanged. This is an HTML-only
+proposal; production installation and speed/freshness validation remain paused.
