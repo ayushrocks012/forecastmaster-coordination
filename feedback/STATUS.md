@@ -273,3 +273,15 @@ and the retained hierarchy/source-selection cases. The refresh timestamp in
 R08 is explicitly sample metadata. Neither design constitutes production
 installation, live speed evidence or approval. The report implementation pause
 remains in force while the user reviews the two versions.
+
+## 21 October 2026 — R09 period-review improvements
+
+R09 adds quick FY/YTG comparison, a separate overview for every selected period,
+explicit overcall/undercall wording, trend-fitting history dates, forecast start
+dates and numeric driver-period captions in Both graph mode. The new comparisons
+and retained hierarchy/source-selection browser checks pass on synthetic data.
+R07 and R08 remain preserved; the live Power BI report remains unchanged.
+
+The user also requested removing variance bars. That step is pending the
+session's required direct opt-in; the assistant requested it and continued
+the independent improvements. Bar removal has not been performed or validated.

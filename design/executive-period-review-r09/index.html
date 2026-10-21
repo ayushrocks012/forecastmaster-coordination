@@ -1,0 +1,3183 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Review.fragment</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+
+</head>
+<body>
+<iframe id="codex-visualization" sandbox="allow-scripts" referrerpolicy="no-referrer" title="Review.fragment" data-srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Review.fragment&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 16px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans:
+    -apple-system-body, ui-sans-serif, -apple-system, system-ui, &quot;Segoe UI&quot;,
+    Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;,
+    &quot;Segoe UI Symbol&quot;;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 8px);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-weight: var(--font-weight-normal);
+}
+
+.cursor-interaction {
+  cursor: var(--cursor-interaction, pointer);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  font-weight: inherit;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+.table {
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: calc(var(--font-size-base) * 1.5);
+  line-height: 1.3333333333;
+}
+
+h2 {
+  font-size: calc(var(--font-size-base) * 1.25);
+  line-height: 1.4;
+}
+h3 {
+  font-size: calc(var(--font-size-base) * 1.125);
+  line-height: 1.5555555556;
+}
+h4 {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+h5,
+h6 {
+  font-size: var(--font-size-base);
+  line-height: calc(var(--font-size-base) * 1.625);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+pre,
+pre code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: calc(var(--font-size-base) * 0.875);
+  line-height: calc(var(--font-size-base) * 1.625);
+  font-family: var(--font-sans);
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 5%, transparent);
+}
+.table :is(th, td):not(:last-child) {
+  padding-inline-end: calc(var(--font-size-base) * 1.5);
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead :is(th, td) {
+  border-bottom-color: var(--border-strong, var(--input));
+  padding-block: calc(var(--font-size-base) / 2);
+  line-height: var(--font-size-base);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+.table tbody :is(th, td) {
+  padding-block: calc(var(--font-size-base) * 0.625);
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 8px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+.widget {
+  min-width: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  box-shadow: 0 0 0 0.5px var(--border-strong, var(--border));
+  color: var(--foreground);
+  background: var(--background);
+}
+
+#widget &gt; :not(.card, .widget, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  border: 1px solid var(--border);
+  corner-shape: var(--corner-shape);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-sans);
+  padding: 5px 12px;
+  border-color: color-mix(
+    in oklab,
+    light-dark(var(--primary-foreground), var(--foreground)) 5%,
+    transparent
+  );
+  border-radius: var(--radius-2xl);
+  color: light-dark(var(--primary-foreground), var(--foreground));
+  background: light-dark(var(--foreground), var(--popover));
+  box-shadow: 0 8px 18px rgb(15 23 42 / 20%);
+  letter-spacing: -0.15px;
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  color: color-mix(in srgb, var(--foreground) 40%, var(--muted-foreground));
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-family: var(--font-sans);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+}
+
+small,
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+/* Match inline alignment without overriding a containing flex or grid layout. */
+.btn,
+.nav-link,
+.form-control,
+.form-select,
+.form-range,
+.form-check {
+  vertical-align: middle;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: inherit;
+  font-family: var(--font-sans);
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  border-color: transparent;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.btn {
+  border-color: var(--border);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: var(--cursor-interaction, pointer);
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.btn-primary {
+  border-color: var(--border);
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: border-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: border-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--muted-foreground);
+  background: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+/* Shared preview chrome; product styles stay inside each variant. */
+.viz-dotted-background {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--foreground) 14%, transparent) 0.8px,
+    transparent 0.8px
+  );
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.viz-carousel {
+  position: relative;
+  min-width: 0;
+}
+
+.viz-carousel:has(&gt; .viz-carousel-controls) {
+  min-height: calc(60px + var(--viz-carousel-picker-height, 0px));
+  padding-bottom: 60px;
+}
+
+.viz-carousel &gt; [data-variant][hidden] {
+  display: none !important;
+}
+
+.viz-carousel &gt; [data-variant] {
+  isolation: isolate;
+}
+
+.viz-carousel-controls {
+  --viz-carousel-hover: light-dark(
+    color-mix(in srgb, var(--foreground) 5.4%, transparent),
+    color-mix(in srgb, var(--foreground) 7.8%, transparent)
+  );
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  left: 50%;
+  display: flex;
+  width: max-content;
+  /* Leave room for the host&#x27;s design-controls launcher at the trailing edge. */
+  max-width: calc(100% - 96px);
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  /* Match the settings dropdown chrome independently of the content font size. */
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+/* Keep authored mockup button styles out of the shared carousel chrome. */
+.viz-carousel-controls button,
+.viz-carousel-picker &gt; summary {
+  display: flex !important;
+  height: auto !important;
+  min-height: 30px;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px;
+  padding: 0 6px !important;
+  -webkit-app-region: no-drag;
+  border: 0 !important;
+  border-radius: 14px !important;
+  color: inherit !important;
+  background: transparent !important;
+  font: inherit !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-picker &gt; summary {
+  position: relative;
+  isolation: isolate;
+}
+
+.viz-carousel-controls &gt; button {
+  --icon-size: 16px;
+  width: 30px !important;
+  padding: 0 !important;
+}
+
+.viz-carousel-picker &gt; summary {
+  padding-inline: 12px !important;
+}
+
+.viz-carousel-controls .viz-carousel-caret {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  margin: 0;
+  color: inherit;
+  transform: rotate(180deg);
+}
+
+.viz-carousel-controls &gt; button &gt; svg,
+.viz-carousel-controls .viz-carousel-caret,
+.viz-carousel-count {
+  opacity: 0.5;
+}
+
+.viz-carousel-controls &gt; button::before,
+.viz-carousel-picker &gt; summary::before {
+  position: absolute;
+  z-index: -1;
+  inset: 3px;
+  border-radius: 12px;
+  content: &quot;&quot;;
+  pointer-events: none;
+}
+
+.viz-carousel-controls &gt; button:hover::before,
+.viz-carousel-picker &gt; summary:hover::before {
+  background: var(--viz-carousel-hover);
+}
+
+.viz-carousel-controls &gt; button,
+.viz-carousel-controls [data-lucide],
+.viz-carousel-controls .lucide {
+  flex-shrink: 0;
+}
+
+.viz-carousel-picker {
+  min-width: 0;
+}
+
+.viz-carousel-picker &gt; summary {
+  min-width: 0;
+  list-style: none;
+}
+
+.viz-carousel-picker &gt; summary::-webkit-details-marker {
+  display: none;
+}
+
+.viz-carousel-count {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.viz-carousel-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.viz-carousel-options {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 4px);
+  left: 0;
+  display: flex;
+  max-height: 240px;
+  flex-direction: column;
+  gap: 2px;
+  overflow: auto;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--background);
+  box-shadow: 0 4px 12px light-dark(rgb(0 0 0 / 6%), rgb(0 0 0 / 25%));
+}
+
+.viz-carousel-options &gt; button {
+  border-radius: max(0px, calc(var(--radius-lg) - 5px)) !important;
+  width: 100% !important;
+  min-height: 28px;
+  justify-content: flex-start !important;
+  padding: 4px 8px !important;
+  font-size: var(--font-size-small) !important;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.viz-carousel-options &gt; [aria-current=&quot;true&quot;],
+.viz-carousel-options &gt; button:hover {
+  background: var(--viz-carousel-hover) !important;
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding-inline: calc(4px + var(--control-spacing, 12px) / 2);
+  border-color: var(--input);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--popover) 96%, transparent);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4285714286;
+}
+.form-control:is(
+  [type=&quot;file&quot;],
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;],
+  [type=&quot;color&quot;]
+) {
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  line-height: 18px;
+}
+.form-control:is(
+  [type=&quot;date&quot;],
+  [type=&quot;datetime-local&quot;],
+  [type=&quot;month&quot;],
+  [type=&quot;week&quot;]
+) {
+  padding-inline: var(--control-spacing, 12px);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+  padding: 0;
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+  min-height: calc(10px + 2 * var(--control-spacing, 12px));
+  padding-inline: var(--control-spacing, 12px);
+  margin-inline-end: var(--control-spacing, 12px);
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  resize: vertical;
+  min-height: 96px;
+  padding: 8px 10px;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: none;
+}
+.form-control:disabled {
+  color: var(--muted-foreground);
+  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  opacity: 1;
+}
+.form-control[aria-invalid=&quot;true&quot;] {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--red) 20%, transparent);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  margin: 0;
+  /* The secondary icon role is 14px at compact density and 16px at web density. */
+  --icon-size: calc(10px + var(--control-spacing, 12px) / 2);
+  /* Settings dropdowns retain a 12px inset and a 4px text-to-chevron gap. */
+  padding: 0 calc(16px + var(--icon-size)) 0 12px;
+  outline: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    ),
+    linear-gradient(
+      135deg,
+      transparent calc(50% - 0.6px),
+      var(--muted-foreground) calc(50% - 0.6px) calc(50% + 0.6px),
+      transparent calc(50% + 0.6px)
+    );
+  background-position:
+    calc(100% - 12px - var(--icon-size) / 2) 50%,
+    calc(100% - 12px - var(--icon-size) * 0.18) 50%;
+  background-repeat: no-repeat;
+  background-size: calc(var(--icon-size) * 0.32) calc(var(--icon-size) * 0.32);
+  cursor: var(--cursor-interaction, default);
+  font-size: calc(var(--font-size-base) * 14 / 16);
+  font-size: round(nearest, calc(var(--font-size-base) * 14 / 16), 1px);
+  font-weight: var(--font-weight-normal);
+  line-height: 18px;
+}
+
+.form-select option {
+  color: var(--popover-foreground);
+  background-color: var(--popover);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: light-dark(
+    color-mix(in srgb, var(--foreground) 5.5%, transparent),
+    color-mix(in srgb, var(--foreground) 8%, transparent)
+  );
+}
+
+.form-select:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+.form-select:disabled {
+  opacity: 0.4;
+}
+
+.form-check {
+  display: flex;
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  corner-shape: round;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  width: calc(10px + var(--control-spacing, 12px) / 2);
+  height: calc(10px + var(--control-spacing, 12px) / 2);
+  border-color: var(--border-strong, var(--input));
+  border-radius: calc(var(--radius-sm) / 2);
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:is(:checked, :indeterminate) {
+  border-color: var(--border-strong, var(--input));
+  background-color: color-mix(in srgb, var(--popover) 96%, transparent);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+  background-color: var(--foreground);
+}
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:indeterminate::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 65%;
+  height: 6.65%;
+  margin: auto;
+  border-radius: var(--radius-full);
+  background: var(--foreground);
+  mask: none;
+  content: &quot;&quot;;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  border-radius: var(--radius-full);
+  width: 16px;
+  height: 16px;
+  border: 0;
+  box-shadow: inset 0 0 0 1px var(--input);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 0;
+  background: radial-gradient(
+    circle,
+    var(--primary-foreground) 0 3px,
+    var(--foreground) 3px
+  );
+  box-shadow: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:focus-visible {
+  border-color: var(--ring);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+.form-check:not(.form-switch) .form-check-input[type=&quot;radio&quot;]:disabled,
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;radio&quot;]:disabled
+  + .form-check-label {
+  opacity: 0.5;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+  border-color: #fff;
+  background: #fff;
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--blue);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+  outline: none;
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: var(--primary);
+  height: calc(12px + 2 * var(--control-spacing, 12px));
+  min-height: calc(12px + 2 * var(--control-spacing, 12px));
+  outline: none;
+  border-radius: var(--radius-full);
+  color: var(--foreground);
+  background: transparent;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  margin-top: -9px;
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline the native track and thumb, preserving the larger input hit area. */
+.form-range:focus-visible::-webkit-slider-runnable-track {
+  outline: 2px auto Highlight;
+  outline-color: -webkit-focus-ring-color;
+}
+
+.form-range::-moz-range-track {
+  background: var(--form-range-track, var(--border));
+  height: 2px;
+  border-radius: var(--radius-full);
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  border-color: transparent;
+  background: currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+.form-range:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--blue);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.viz-carousel-controls :is(button, summary):focus-visible {
+  outline: 2px solid var(--ring) !important;
+  outline-offset: 2px !important;
+}
+
+/* Web recipes are the default, including on renderers without inline style queries. */
+@supports (border-radius: if(style(--corner-shape: round): 1px; else: 2px)) {
+  /* Match the host&#x27;s proportional text-sm scale at every text preference. */
+  .tooltip,
+  .viz-badge,
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    font-size: if(
+      style(--corner-shape: round): round(
+          nearest,
+          calc(var(--font-size-base) * 14 / 16),
+          1px
+        );
+        else: round(nearest, calc(var(--font-size-base) * 13 / 14), 1px)
+    );
+  }
+
+  .btn,
+  .nav-link,
+  .form-select {
+    border-radius: if(
+      style(--corner-shape: round): var(--radius-full); else: var(--radius-lg)
+    );
+  }
+
+  .form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+    border-radius: if(
+      style(--corner-shape: round): calc(var(--radius-sm) / 2);
+        else: calc(var(--radius-lg) * 0.4)
+    );
+  }
+
+  .tooltip {
+    font-weight: if(
+      style(--corner-shape: round): 600; else: var(--font-weight-normal)
+    );
+  }
+}
+
+@media (pointer: coarse) {
+  .viz-carousel:has(&gt; .viz-carousel-controls) {
+    min-height: calc(76px + var(--viz-carousel-picker-height, 0px));
+    padding-bottom: 76px;
+  }
+
+  .btn,
+  .nav-link,
+  .viz-carousel-controls button,
+  .viz-carousel-picker &gt; summary,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+  .form-control:is(
+    [type=&quot;file&quot;],
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;week&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;color&quot;]
+  ) {
+    height: 44px;
+    min-height: 44px;
+    font-size: max(16px, calc(var(--font-size-base) * 14 / 16));
+    font-size: max(
+      16px,
+      round(nearest, calc(var(--font-size-base) * 14 / 16), 1px)
+    );
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;application/json&quot; id=&quot;codex-visualization-widget-state&quot;&gt;__CODEX_VISUALIZATION_WIDGET_STATE__&lt;/script&gt;
+&lt;script&gt;(() =&gt; {
+  const root = document.documentElement;
+  const mediaQuery = globalThis.matchMedia(&quot;(prefers-color-scheme: dark)&quot;);
+  const apply = Reflect.apply;
+  const isArray = Array.isArray;
+  const hasOwn = Object.hasOwn;
+  const parentWindow = globalThis.parent;
+  const stringify = JSON.stringify;
+  const parse = JSON.parse;
+  const encode = TextEncoder.prototype.encode.bind(new TextEncoder());
+  const initialStateElement = document.getElementById(
+    &quot;codex-visualization-widget-state&quot;,
+  );
+  const initialGlobals = parse(initialStateElement?.textContent ?? &quot;{}&quot;);
+  initialStateElement?.remove();
+  /** @type {Record&lt;string, unknown&gt; | null} */
+  let state = initialGlobals.widgetState ?? null;
+  const statePersistence = initialGlobals.statePersistence ?? &quot;none&quot;;
+  let nextStateRequestId = 0;
+  /** @type {Map&lt;number, { resolve: () =&gt; void; reject: (error: Error) =&gt; void; timeout: ReturnType&lt;typeof globalThis.setTimeout&gt;; serializedState: string }&gt;} */
+  const pendingStateWrites = new Map();
+  const persistenceError = () =&gt;
+    Object.assign(
+      new Error(&quot;The host could not persist the widget state update&quot;),
+      {
+        code: -32000,
+        data: { code: &quot;widget_state_persistence_failed&quot;, retryable: false },
+      },
+    );
+  /**
+   * @param {object} prototype
+   * @param {string} property
+   */
+  const getPrototypeGetter = (prototype, property) =&gt; {
+    // oxlint-disable-next-line typescript/unbound-method -- invoked through captured Reflect.apply
+    const getter = Object.getOwnPropertyDescriptor(prototype, property)?.get;
+    if (getter == null) {
+      throw new Error(`Missing ${property} getter`);
+    }
+    return getter;
+  };
+  const getMessageData = getPrototypeGetter(MessageEvent.prototype, &quot;data&quot;);
+  const getMessagePorts = getPrototypeGetter(MessageEvent.prototype, &quot;ports&quot;);
+  const getMessageSource = getPrototypeGetter(MessageEvent.prototype, &quot;source&quot;);
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const addHostMessageListener = MessagePort.prototype.addEventListener;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const postHostMessage = MessagePort.prototype.postMessage;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const startHostPort = MessagePort.prototype.start;
+  // oxlint-disable-next-line typescript/unbound-method -- captured before the untrusted fragment runs
+  const stopMessagePropagation = Event.prototype.stopImmediatePropagation;
+  /** @type {MessagePort | null} */
+  let hostPort = null;
+  const postToHost = (type, payload) =&gt; {
+    if (hostPort != null) {
+      apply(postHostMessage, hostPort, [{ type, ...payload }]);
+    }
+  };
+  const openExternal = ({ href }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;open-external&quot;, { href });
+    }
+  };
+  const sendFollowUpMessage = ({ context, prompt, title }) =&gt; {
+    if (globalThis.navigator.userActivation?.isActive === true) {
+      postToHost(&quot;follow-up&quot;, { context, prompt, title });
+    }
+    return Promise.resolve();
+  };
+  /**
+   * @param {Record&lt;string, unknown&gt; | ((previous: Record&lt;string, unknown&gt; | null) =&gt; Record&lt;string, unknown&gt;)} next
+   * @returns {Promise&lt;void&gt;}
+   */
+  const setWidgetState = async (next) =&gt; {
+    const nextState = typeof next === &quot;function&quot; ? next(state) : next;
+    if (
+      nextState == null ||
+      typeof nextState !== &quot;object&quot; ||
+      isArray(nextState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const inputState = stringify(
+      nextState,
+      (_key, /** @type {unknown} */ value) =&gt; {
+        if (
+          typeof value === &quot;undefined&quot; ||
+          typeof value === &quot;function&quot; ||
+          typeof value === &quot;symbol&quot; ||
+          (typeof value === &quot;number&quot; &amp;&amp; !Number.isFinite(value))
+        ) {
+          throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+        }
+        return value;
+      },
+    );
+    const parsedState = parse(inputState);
+    if (
+      parsedState == null ||
+      typeof parsedState !== &quot;object&quot; ||
+      isArray(parsedState)
+    ) {
+      throw new TypeError(&quot;Widget state must be a JSON object&quot;);
+    }
+    const storedState = {
+      modelContent: null,
+      privateContent: null,
+      ...parsedState,
+    };
+    const serializedState = stringify(storedState);
+    if (encode(serializedState).length &gt; 16 * 1024) {
+      throw new TypeError(
+        &quot;Widget state must be a JSON object of at most 16 KiB&quot;,
+      );
+    }
+    if (
+      hasOwn(storedState, &quot;imageIds&quot;) &amp;&amp;
+      (!isArray(storedState.imageIds) ||
+        storedState.imageIds.some(
+          (/** @type {unknown} */ id) =&gt; typeof id !== &quot;string&quot;,
+        ))
+    ) {
+      throw new TypeError(&quot;Widget state imageIds must be an array of strings&quot;);
+    }
+    if (storedState.imageIds?.length &gt; 0) {
+      throw Object.assign(
+        new TypeError(&quot;Visualization state does not support image attachments&quot;),
+        { code: -32602, data: { code: &quot;images_unsupported&quot; } },
+      );
+    }
+    state = storedState;
+    globalThis.openai.widgetState = state;
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: { widgetState: state } },
+      }),
+    );
+    if (statePersistence === &quot;none&quot;) {
+      throw persistenceError();
+    }
+    const id = ++nextStateRequestId;
+    return new Promise((resolve, reject) =&gt; {
+      const timeout = globalThis.setTimeout(() =&gt; {
+        pendingStateWrites.delete(id);
+        reject(persistenceError());
+      }, 30_000);
+      pendingStateWrites.set(id, { resolve, reject, timeout, serializedState });
+      postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+    });
+  };
+  const syncTheme = () =&gt; {
+    const theme = mediaQuery.matches ? &quot;dark&quot; : &quot;light&quot;;
+    root.dataset.theme = theme;
+    globalThis.openai = {
+      ...globalThis.openai,
+      openExternal,
+      sendFollowUpMessage,
+      setWidgetState,
+      theme,
+      visualizationStyleVariables: {},
+      visualizationTheme: theme,
+      widgetState: state,
+      statePersistence,
+      stateModelContext: &quot;none&quot;,
+    };
+    globalThis.dispatchEvent(
+      new CustomEvent(&quot;openai:set_globals&quot;, {
+        detail: { globals: globalThis.openai },
+      }),
+    );
+  };
+  const sendHeight = () =&gt; {
+    postToHost(&quot;height&quot;, {
+      height: Math.ceil(
+        Math.max(
+          document.body.scrollHeight,
+          document.body.getBoundingClientRect().height,
+        ),
+      ),
+    });
+  };
+
+  globalThis.addEventListener(
+    &quot;message&quot;,
+    (event) =&gt; {
+      const data = apply(getMessageData, event, []);
+      const ports = apply(getMessagePorts, event, []);
+      const source = apply(getMessageSource, event, []);
+      if (
+        hostPort != null ||
+        source !== parentWindow ||
+        typeof data !== &quot;object&quot; ||
+        data?.type !== &quot;codex-visualization-initialize&quot; ||
+        !isArray(ports) ||
+        ports.length !== 1
+      ) {
+        return;
+      }
+      apply(stopMessagePropagation, event, []);
+      const nextHostPort = ports[0];
+      try {
+        apply(addHostMessageListener, nextHostPort, [
+          &quot;message&quot;,
+          (event) =&gt; {
+            const data = apply(getMessageData, event, []);
+            if (typeof data === &quot;object&quot; &amp;&amp; data?.type === &quot;measure&quot;) {
+              sendHeight();
+            } else if (
+              typeof data === &quot;object&quot; &amp;&amp;
+              data?.type === &quot;widget-state-result&quot;
+            ) {
+              /** @type {unknown} */
+              const id = data.id;
+              if (typeof id !== &quot;number&quot;) {
+                return;
+              }
+              const pending = pendingStateWrites.get(id);
+              if (pending != null) {
+                pendingStateWrites.delete(id);
+                globalThis.clearTimeout(pending.timeout);
+                if (data.ok === true) {
+                  pending.resolve();
+                } else {
+                  pending.reject(persistenceError());
+                }
+              }
+            }
+          },
+        ]);
+        apply(startHostPort, nextHostPort, []);
+      } catch {
+        return;
+      }
+      hostPort = nextHostPort;
+      for (const [id, { serializedState }] of pendingStateWrites) {
+        postToHost(&quot;widget-state-write&quot;, { id, state: serializedState });
+      }
+      sendHeight();
+    },
+    { capture: true },
+  );
+  document.currentScript?.remove();
+  mediaQuery.addEventListener(&quot;change&quot;, syncTheme);
+  globalThis.addEventListener(&quot;click&quot;, (event) =&gt; {
+    if (event.defaultPrevented) {
+      return;
+    }
+    let element = null;
+    if (event.target instanceof globalThis.Element) {
+      element = event.target;
+    } else if (event.target instanceof globalThis.Node) {
+      element = event.target.parentElement;
+    }
+    const link = element?.closest(&quot;a[href]&quot;);
+    const href = link?.getAttribute(&quot;href&quot;);
+    if (href == null) {
+      return;
+    }
+    if (href.startsWith(&quot;#&quot;)) {
+      let id;
+      try {
+        id = decodeURIComponent(href.slice(1));
+      } catch {
+        return;
+      }
+      const target = id.length === 0 ? root : document.getElementById(id);
+      if (
+        target == null ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      event.preventDefault();
+      postToHost(&quot;scroll-to&quot;, {
+        top: target.getBoundingClientRect().top + globalThis.scrollY,
+      });
+      return;
+    }
+    event.preventDefault();
+    openExternal({ href });
+  });
+  new ResizeObserver(sendHeight).observe(document.body);
+  syncTheme();
+})();
+&lt;/script&gt;
+&lt;style&gt;
+#fm-executive-period-review{color-scheme:light dark;--fm-bg:light-dark(#f5f7fa,#131b25);--fm-panel:light-dark(#ffffff,#1b2633);--fm-text:light-dark(#182c41,#e7edf5);--fm-muted:light-dark(#52667b,#afbed0);--fm-line:light-dark(#dce3eb,#354657);--fm-soft:light-dark(#edf3f7,#263644);--fm-accent:light-dark(#096b76,#73cbd0);--fm-selected:light-dark(#e7f3f4,#203e46);--fm-hover:light-dark(#f0f6f8,#2a3c4b);--fm-series1:light-dark(#087f83,#6cd1d0);--fm-series2:light-dark(#3268b2,#88b8fa);--fm-series3:light-dark(#a86713,#f0b764);--fm-series4:light-dark(#7b55a6,#c2a0ed);--fm-series5:light-dark(#b34c65,#f19db2);--fm-series6:light-dark(#537c2b,#b2d683);font:14px/1.45 &#x27;Segoe UI&#x27;,Arial,sans-serif;color:var(--fm-text);width:100%;--fm-rowpad:6px;--fm-chart-height:285px}
+#fm-executive-period-review *{box-sizing:border-box}
+#fm-executive-period-review button,#fm-executive-period-review input,#fm-executive-period-review select{font:inherit;color:inherit}
+#fm-executive-period-review select{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:4px;padding:5px 7px;min-height:31px}
+#fm-executive-period-review button{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:4px;padding:6px 11px;min-height:32px}
+#fm-executive-period-review button:hover{background:var(--fm-hover)}
+#fm-executive-period-review button:focus-visible,#fm-executive-period-review input:focus-visible{outline:2px solid var(--fm-accent);outline-offset:2px}
+#fm-executive-period-review input[type=checkbox]{accent-color:var(--fm-accent);width:15px;height:15px;flex:none;margin:0}
+#fm-executive-period-review input[type=search],#fm-executive-period-review input[type=month]{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:4px;padding:6px 9px;min-height:32px;min-width:0}
+#fm-executive-period-review button:disabled{opacity:.6}
+#fm-executive-period-review .fm-window{background:var(--fm-bg);border:1px solid var(--fm-line);border-radius:8px;overflow:visible}
+#fm-executive-period-review .fm-appbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 20px;background:var(--fm-panel);border-bottom:1px solid var(--fm-line);border-radius:8px 8px 0 0;flex-wrap:wrap}
+#fm-executive-period-review .fm-brand{display:flex;align-items:center;gap:11px}
+#fm-executive-period-review .fm-brandmark{width:5px;height:32px;background:var(--fm-accent);border-radius:1px}
+#fm-executive-period-review h1{font-size:20px;font-weight:600;line-height:1.25;margin:0}
+#fm-executive-period-review .fm-subtitle{font-size:12px;color:var(--fm-muted);margin-top:3px}
+#fm-executive-period-review .fm-preview-label{font-size:12px;color:var(--fm-muted);padding-right:85px}
+#fm-executive-period-review .fm-content{padding:14px 18px 18px;display:grid;gap:13px}
+#fm-executive-period-review .fm-scope{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+#fm-executive-period-review .fm-country{font-size:13px;font-weight:600;display:flex;gap:8px;align-items:center}
+#fm-executive-period-review .fm-country small{color:var(--fm-muted);font-weight:400;font-size:12px}
+#fm-executive-period-review .fm-months{display:flex;gap:7px;align-items:center;color:var(--fm-muted);font-size:12px;flex-wrap:wrap}
+#fm-executive-period-review .fm-months input{width:148px;font-size:12px}
+#fm-executive-period-review .fm-filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px 12px;position:relative;z-index:12}
+#fm-executive-period-review .fm-filter{min-width:0;position:relative}
+#fm-executive-period-review .fm-fieldlabel{display:block;font-size:12px;color:var(--fm-muted);margin-bottom:4px}
+#fm-executive-period-review .fm-dropdown{width:100%;display:flex;align-items:center;justify-content:space-between;gap:7px;text-align:left;height:35px;padding:6px 9px}
+#fm-executive-period-review .fm-dropdown span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#fm-executive-period-review .fm-chevron{font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-popover{position:absolute;top:calc(100% + 5px);left:0;min-width:100%;width:265px;max-width:min(330px,calc(100vw - 40px));background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:5px;box-shadow:0 8px 24px light-dark(#142c4426,#0005);padding:8px;z-index:40}
+#fm-executive-period-review .fm-popover[hidden]{display:none}
+#fm-executive-period-review .fm-popover input[type=search]{width:100%;font-size:13px;margin-bottom:5px}
+#fm-executive-period-review .fm-options{display:grid;gap:1px}
+#fm-executive-period-review .fm-option{display:flex;align-items:center;gap:9px;padding:7px 5px;border-radius:3px;font-size:13px;min-height:32px;overflow-wrap:anywhere}
+#fm-executive-period-review .fm-option:hover{background:var(--fm-hover)}
+#fm-executive-period-review .fm-no-options{color:var(--fm-muted);font-size:12px;padding:8px 4px}
+#fm-executive-period-review .fm-panel{background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:5px;min-width:0}
+#fm-executive-period-review .fm-panelhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;flex-wrap:wrap}
+#fm-executive-period-review .fm-paneltitle{margin:0;font-weight:600;font-size:14px}
+#fm-executive-period-review .fm-inline{display:flex;align-items:center;gap:9px;flex-wrap:wrap;min-width:0}
+#fm-executive-period-review .fm-detail{font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-file-actions{padding:0 12px 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#fm-executive-period-review .fm-file-actions button{font-size:12px;min-height:29px;padding:4px 9px}
+#fm-executive-period-review .fm-file-search{margin-left:auto;width:230px;font-size:12px!important}
+#fm-executive-period-review .fm-check{display:inline-flex;align-items:center;gap:7px;font-size:12px;min-height:28px}
+#fm-executive-period-review .fm-files{width:100%;border-collapse:collapse;font-size:12px}
+#fm-executive-period-review .fm-fileswrap{width:100%;overflow-x:auto}
+#fm-executive-period-review .fm-files thead{background:var(--fm-soft);color:var(--fm-muted)}
+#fm-executive-period-review .fm-files th{font-weight:400;text-align:left;padding:5px 10px}
+#fm-executive-period-review .fm-files td{padding:var(--fm-rowpad) 10px;border-top:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-files .fm-file-box{width:30px;padding-right:0}
+#fm-executive-period-review .fm-files tr[data-selected=true]{background:var(--fm-selected)}
+#fm-executive-period-review .fm-file-name{display:block;overflow-wrap:anywhere;font-weight:500}
+#fm-executive-period-review .fm-files .fm-file-when{white-space:nowrap}
+#fm-executive-period-review .fm-file-pagination{display:flex;align-items:center;justify-content:flex-end;gap:9px;padding:6px 11px;font-size:12px;border-top:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-file-pagination:has(button[hidden]){display:none}
+#fm-executive-period-review .fm-file-pagination button{padding:2px 7px;min-height:25px;font-size:12px}
+#fm-executive-period-review .fm-chart-controls{padding:0 12px 9px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-switch{display:inline-flex;gap:0}
+#fm-executive-period-review .fm-switch button{font-size:12px;border-radius:0;min-height:31px}
+#fm-executive-period-review .fm-switch button:first-child{border-radius:4px 0 0 4px}
+#fm-executive-period-review .fm-switch button:last-child{border-radius:0 4px 4px 0;border-left:0}
+#fm-executive-period-review .fm-switch button[aria-pressed=true]{background:var(--fm-selected);color:var(--fm-accent);font-weight:600}
+#fm-executive-period-review .fm-quick-scope{padding:9px 12px 3px;display:flex;gap:7px 16px;align-items:center;flex-wrap:wrap;min-height:38px}
+#fm-executive-period-review .fm-quick-scope .fm-check{font-size:13px}
+#fm-executive-period-review .fm-quick-scope{display:grid;gap:8px;padding-bottom:8px}
+#fm-executive-period-review .fm-quick-row{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap}
+#fm-executive-period-review .fm-quick-actions{display:inline-flex;gap:5px}
+#fm-executive-period-review .fm-quick-actions button{font-size:12px;min-height:27px;padding:3px 7px}
+#fm-executive-period-review .fm-series-mark{width:13px;height:3px;background:var(--series);display:inline-block}
+#fm-executive-period-review .fm-quick-caption{font-size:12px;color:var(--fm-muted);margin-right:3px}
+#fm-executive-period-review .fm-sector-parent{font-size:12px;color:var(--fm-muted);margin-right:2px}
+#fm-executive-period-review .fm-graph-context{padding:3px 12px 0;font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-plots{display:grid;gap:12px;padding:6px 9px 0}
+#fm-executive-period-review .fm-plotblock{min-width:0}
+#fm-executive-period-review .fm-plot-heading{font-weight:600;font-size:13px;margin:4px 0 0 7px}
+#fm-executive-period-review .fm-plot{position:relative;height:var(--fm-chart-height);min-width:0}
+#fm-executive-period-review .fm-plot svg{display:block;width:100%;height:100%;font:12px &#x27;Segoe UI&#x27;,Arial,sans-serif;overflow:visible}
+#fm-executive-period-review .fm-plot svg text{fill:var(--fm-muted)}
+#fm-executive-period-review .fm-plot svg .fm-axislabel{fill:var(--fm-text);font-size:12px}
+#fm-executive-period-review .fm-plot svg .fm-gridline{stroke:var(--fm-line);stroke-width:1}
+#fm-executive-period-review .fm-plot svg .fm-curve{fill:none;stroke-linecap:round;stroke-linejoin:round}
+#fm-executive-period-review .fm-plot svg .fm-cutoff{stroke:var(--fm-muted);stroke-width:1;stroke-dasharray:3 5}
+#fm-executive-period-review .fm-legend{display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;padding:5px 13px 11px;font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-legend-item{display:inline-flex;align-items:center;gap:6px}
+#fm-executive-period-review .fm-legend-line{width:21px;border-top:2px solid var(--series,var(--fm-text));display:inline-block}
+#fm-executive-period-review .fm-tooltip{position:absolute;z-index:10;pointer-events:none;max-width:285px;padding:8px 10px;border:1px solid var(--fm-line);border-radius:4px;background:var(--fm-panel);box-shadow:0 4px 15px light-dark(#142c4424,#0005);font-size:12px;color:var(--fm-text)}
+#fm-executive-period-review .fm-tooltip div{display:flex;justify-content:space-between;gap:20px;margin-top:3px}
+#fm-executive-period-review .fm-tooltip strong{font-weight:600}
+#fm-executive-period-review .fm-summary-controls{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+#fm-executive-period-review .fm-period-field{width:172px}
+#fm-executive-period-review .fm-summary-controls .fm-fieldlabel{display:none}
+#fm-executive-period-review .fm-trends{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#fm-executive-period-review .fm-summary-context{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:0 12px 9px;font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-summarywrap{width:100%;overflow-x:auto;border-radius:0 0 5px 5px}
+#fm-executive-period-review .fm-summary{border-collapse:collapse;width:100%;font-size:12px;min-width:570px}
+#fm-executive-period-review .fm-summary th{font-weight:500;padding:7px 10px;white-space:nowrap;background:var(--fm-soft);text-align:right;border-top:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-summary th:first-child{text-align:left}
+#fm-executive-period-review .fm-summary td{padding:8px 10px;border-top:1px solid var(--fm-line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#fm-executive-period-review .fm-summary td:first-child{text-align:left;white-space:normal;min-width:170px}
+#fm-executive-period-review .fm-summary .fm-total td{background:var(--fm-soft);font-weight:600}
+#fm-executive-period-review .fm-summary{table-layout:fixed}
+#fm-executive-period-review .fm-summary thead .fm-period-group{text-align:center;font-weight:600;border-bottom:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-summary thead .fm-trend-group{text-align:center}
+#fm-executive-period-review .fm-summary .fm-period-start{border-left:2px solid var(--fm-line)}
+#fm-executive-period-review .fm-summary thead tr:first-child th:first-child,#fm-executive-period-review .fm-summary tbody td:first-child:not([colspan]){position:sticky;left:0;background:var(--fm-panel);z-index:2}
+#fm-executive-period-review .fm-summary thead tr:first-child th:first-child{background:var(--fm-soft);z-index:3}
+#fm-executive-period-review .fm-summary .fm-total td:first-child{background:var(--fm-soft)}
+#fm-executive-period-review .fm-summary .fm-row-toggle{max-width:100%}
+#fm-executive-period-review .fm-local-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px;padding:10px 12px;position:relative;z-index:9}
+#fm-executive-period-review .fm-local-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-tier-parent{display:block;font-size:11px;color:var(--fm-muted);margin-top:2px}
+#fm-executive-period-review .fm-dimension{color:var(--fm-muted);font-size:11px}
+#fm-executive-period-review .fm-table-row td:first-child{font-weight:400}
+#fm-executive-period-review .fm-selection-search{width:215px;font-size:12px!important}
+#fm-executive-period-review .fm-shared-options{display:flex;align-items:center;flex-wrap:wrap;gap:9px 22px}
+#fm-executive-period-review .fm-shared-options .fm-check{font-size:13px}
+#fm-executive-period-review .fm-partial{color:var(--fm-muted);font-size:12px}
+#fm-executive-period-review .fm-selection-caption{padding:0 12px 10px;color:var(--fm-muted);font-size:12px}
+#fm-executive-period-review .fm-hierarchy-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}
+#fm-executive-period-review .fm-driver-children{display:flex;gap:5px 18px;flex-wrap:wrap;margin:4px 0 0 22px;padding-left:11px;border-left:2px solid var(--fm-line)}
+#fm-executive-period-review .fm-parent-choice{font-weight:600}
+#fm-executive-period-review .fm-summary .fm-table-row.fm-sector-row.fm-hierarchy-child td:first-child{padding-left:29px;color:var(--fm-text)}
+#fm-executive-period-review .fm-summary .fm-subtotal td{font-weight:600}
+@media(max-width:560px){#fm-executive-period-review .fm-hierarchy-options{grid-template-columns:1fr}}
+#fm-executive-period-review input[type=radio]{accent-color:var(--fm-accent);width:15px;height:15px;margin:0}
+#fm-executive-period-review .fm-legend svg{width:26px;height:10px;overflow:visible}
+#fm-executive-period-review .fm-choice-summary{font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-data-context{display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap;color:var(--fm-muted);font-size:12px}
+#fm-executive-period-review .fm-readout{background:var(--fm-panel);border:1px solid var(--fm-line);border-left:4px solid var(--fm-accent);border-radius:5px;padding:12px 14px;display:grid;gap:12px}
+#fm-executive-period-review .fm-readout-focus{display:flex;gap:8px 15px;align-items:baseline;justify-content:space-between;flex-wrap:wrap;font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-readout-values{display:flex;gap:8px 22px;align-items:baseline;flex-wrap:wrap;margin-top:5px}
+#fm-executive-period-review .fm-plan-value{font-size:24px;font-weight:600;line-height:1.25;font-variant-numeric:tabular-nums}
+#fm-executive-period-review .fm-gap-value{font-size:16px;font-weight:500;font-variant-numeric:tabular-nums}
+#fm-executive-period-review .fm-offsets{display:flex;gap:6px 17px;align-items:center;flex-wrap:wrap;margin-top:7px;font-size:13px}
+#fm-executive-period-review .fm-readout-label{font-size:12px;color:var(--fm-muted);font-weight:400;margin-right:5px}
+#fm-executive-period-review .fm-readout-offset{font-variant-numeric:tabular-nums}
+#fm-executive-period-review .fm-readout{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
+#fm-executive-period-review .fm-plot-context{font-size:12px;color:var(--fm-muted);margin:4px 7px 2px;overflow-wrap:anywhere}
+#fm-executive-period-review .fm-compare-periods{font-size:12px}
+#fm-executive-period-review .fm-period-range{display:block;font-size:11px;color:var(--fm-muted);font-weight:400;margin-top:2px}
+#fm-executive-period-review .fm-period-note{padding:0 12px 7px;font-size:12px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-rank-window{font-size:12px}
+#fm-executive-period-review .fm-table-note{padding:8px 12px;color:var(--fm-muted);font-size:12px;border-top:1px solid var(--fm-line)}
+#fm-executive-period-review .fm-variance-track{display:block;position:relative;height:4px;margin-top:4px;background:var(--fm-soft);width:100%}
+#fm-executive-period-review .fm-variance-zero{position:absolute;left:50%;top:0;width:1px;height:4px;background:var(--fm-muted)}
+#fm-executive-period-review .fm-variance-bar{position:absolute;top:0;height:4px;background:var(--fm-accent)}
+#fm-executive-period-review .fm-variance-bar[data-direction=under]{background:var(--fm-series3)}
+#fm-executive-period-review .fm-plot svg .fm-review-band{fill:var(--fm-selected);fill-opacity:.65}
+#fm-executive-period-review .fm-plot svg .fm-end-label{fill:var(--fm-text);paint-order:stroke;stroke:var(--fm-panel);stroke-width:4px;stroke-linejoin:round}
+#fm-executive-period-review .fm-switch{flex-wrap:wrap;max-width:100%}
+#fm-executive-period-review .fm-summary .fm-table-row.fm-sector-row td:first-child{padding-left:10px;color:var(--fm-text)}
+@media(max-width:560px){#fm-executive-period-review .fm-local-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#fm-executive-period-review .fm-sort[aria-pressed=true]{background:var(--fm-selected);color:var(--fm-accent)}
+#fm-executive-period-review .fm-tier-check{display:inline-flex;align-items:center;gap:8px}
+#fm-executive-period-review .fm-summary .fm-sector-row td:first-child{padding-left:24px}
+#fm-executive-period-review .fm-summary .fm-subtotal td:first-child{font-weight:600}
+#fm-executive-period-review .fm-summary .fm-sector-row td:first-child{padding-left:39px;color:var(--fm-muted)}
+#fm-executive-period-review .fm-summary .fm-context-row td{background:var(--fm-panel);font-size:12px;color:var(--fm-muted);text-align:left;padding:8px 10px}
+#fm-executive-period-review .fm-row-toggle{border:0!important;background:transparent!important;padding:0 6px 0 0!important;min-height:23px!important;display:inline-flex;align-items:center;gap:7px;text-align:left}
+#fm-executive-period-review .fm-delta-over{color:var(--fm-accent)}
+#fm-executive-period-review .fm-delta-under{color:var(--fm-series3)}
+#fm-executive-period-review .fm-empty{text-align:center;padding:24px 15px;color:var(--fm-muted);font-size:13px}
+#fm-executive-period-review .fm-chart-empty{display:flex;align-items:center;justify-content:center;height:100%;text-align:center;color:var(--fm-muted)}
+#fm-executive-period-review .fm-foot{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap;color:var(--fm-muted);font-size:11px;padding:0 1px}
+#fm-executive-period-review .fm-live-note{min-width:0}
+#fm-executive-period-review [hidden]{display:none!important}
+@media(min-width:1280px){#fm-executive-period-review .fm-filters{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:760px){#fm-executive-period-review .fm-content{padding:12px;gap:12px}#fm-executive-period-review .fm-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#fm-executive-period-review .fm-appbar{padding:14px 13px}#fm-executive-period-review .fm-preview-label{padding-right:0}#fm-executive-period-review .fm-files{min-width:595px}#fm-executive-period-review .fm-file-search{width:190px}#fm-executive-period-review .fm-file-actions{gap:6px}#fm-executive-period-review .fm-panelhead{align-items:flex-start}#fm-executive-period-review .fm-summary-controls{width:100%;justify-content:space-between}#fm-executive-period-review .fm-popover{width:100%}}
+@media(max-width:430px){#fm-executive-period-review h1{font-size:18px}#fm-executive-period-review .fm-content{padding:9px}#fm-executive-period-review .fm-months{gap:5px}#fm-executive-period-review .fm-months input{width:130px}#fm-executive-period-review .fm-file-actions{padding:0 9px 8px}#fm-executive-period-review .fm-file-search{margin-left:0;width:100%}#fm-executive-period-review .fm-files th,#fm-executive-period-review .fm-files td{padding-left:6px;padding-right:6px}#fm-executive-period-review .fm-fileswrap{overflow-x:auto}#fm-executive-period-review .fm-panelhead{padding:9px}#fm-executive-period-review .fm-quick-scope{gap:5px 13px}#fm-executive-period-review .fm-chart-controls{padding-left:9px;padding-right:9px}#fm-executive-period-review .fm-trends{gap:9px}#fm-executive-period-review .fm-preview-label{font-size:11px}}
+@media(pointer:coarse){#fm-executive-period-review button,#fm-executive-period-review .fm-option,#fm-executive-period-review .fm-check{min-height:42px}#fm-executive-period-review input[type=search]{font-size:16px!important}}
+&lt;/style&gt;
+&lt;div id=&quot;fm-executive-period-review&quot; aria-label=&quot;ForecastMaster demand review design&quot;&gt;
+ &lt;div class=&quot;fm-window&quot;&gt;
+  &lt;header class=&quot;fm-appbar&quot;&gt;
+   &lt;div class=&quot;fm-brand&quot;&gt;&lt;span class=&quot;fm-brandmark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;h1&gt;ForecastMaster · Demand review&lt;/h1&gt;&lt;div class=&quot;fm-subtitle&quot;&gt;Executive period review · R09&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;fm-preview-label&quot;&gt;Design preview · sample data&lt;/div&gt;
+  &lt;/header&gt;
+  &lt;main class=&quot;fm-content&quot;&gt;
+   &lt;div class=&quot;fm-scope&quot;&gt;
+    &lt;div class=&quot;fm-country&quot;&gt;United Kingdom &lt;small id=&quot;fm-cycle-caption&quot;&gt;October 2026&lt;/small&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-choice-summary&quot; id=&quot;fm-plan-summary&quot; aria-live=&quot;polite&quot;&gt;Plan: ADS · automatic&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;fm-data-context&quot; id=&quot;fm-data-context&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;fm-filters&quot; id=&quot;fm-filters&quot;&gt;&lt;/div&gt;
+   &lt;div class=&quot;fm-detail&quot; id=&quot;fm-plan-status&quot; role=&quot;status&quot; hidden&gt;&lt;/div&gt;
+   &lt;section class=&quot;fm-readout&quot; id=&quot;fm-executive-readout&quot; aria-label=&quot;Executive position&quot; aria-live=&quot;polite&quot;&gt;&lt;/section&gt;
+   &lt;section class=&quot;fm-panel&quot; aria-label=&quot;Shared review selection&quot;&gt;
+    &lt;div class=&quot;fm-panelhead&quot;&gt;&lt;h2 class=&quot;fm-paneltitle&quot;&gt;Review scope&lt;/h2&gt;&lt;span class=&quot;fm-detail&quot;&gt;Included in both chart and table&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-local-toolbar&quot;&gt;&lt;div class=&quot;fm-inline&quot;&gt;&lt;span class=&quot;fm-detail&quot;&gt;Selection layout&lt;/span&gt;&lt;div class=&quot;fm-switch&quot; role=&quot;group&quot; aria-label=&quot;Selection level&quot;&gt;&lt;button type=&quot;button&quot; data-selection-level=&quot;driver&quot; aria-pressed=&quot;false&quot;&gt;Growth drivers&lt;/button&gt;&lt;button type=&quot;button&quot; data-selection-level=&quot;sector&quot; aria-pressed=&quot;false&quot;&gt;Forecast tiers (sectors)&lt;/button&gt;&lt;button type=&quot;button&quot; data-selection-level=&quot;hierarchy&quot; aria-pressed=&quot;true&quot;&gt;Both · driver → tier&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;fm-inline&quot;&gt;&lt;input type=&quot;search&quot; class=&quot;fm-selection-search&quot; id=&quot;fm-selection-search&quot; placeholder=&quot;Search choices…&quot; aria-label=&quot;Search review choices&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;fm-select-scope&quot;&gt;Select all&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;fm-clear-scope&quot;&gt;Clear all&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-quick-scope&quot; id=&quot;fm-quick-scope&quot; aria-label=&quot;Shared selected growth drivers or forecast tiers&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-selection-caption&quot; id=&quot;fm-selected-scope&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+   &lt;/section&gt;
+   &lt;section class=&quot;fm-panel&quot; aria-label=&quot;Demand comparison chart&quot;&gt;
+    &lt;div class=&quot;fm-panelhead&quot;&gt;&lt;h2 class=&quot;fm-paneltitle&quot; id=&quot;fm-chart-title&quot;&gt;Market units&lt;/h2&gt;&lt;span class=&quot;fm-detail&quot; id=&quot;fm-chart-scope&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-chart-controls&quot;&gt;
+     &lt;div class=&quot;fm-inline&quot;&gt;&lt;span class=&quot;fm-detail&quot;&gt;Chart grouping&lt;/span&gt;&lt;div class=&quot;fm-switch&quot; role=&quot;group&quot; aria-label=&quot;Chart grouping&quot;&gt;&lt;button type=&quot;button&quot; data-graph-mode=&quot;total&quot; aria-pressed=&quot;true&quot;&gt;Combined total&lt;/button&gt;&lt;button type=&quot;button&quot; data-graph-mode=&quot;driver&quot; aria-pressed=&quot;false&quot;&gt;By growth driver&lt;/button&gt;&lt;button type=&quot;button&quot; data-graph-mode=&quot;sector&quot; aria-pressed=&quot;false&quot;&gt;By forecast tier&lt;/button&gt;&lt;button type=&quot;button&quot; data-graph-mode=&quot;hierarchy&quot; aria-pressed=&quot;false&quot;&gt;Both · driver + tiers&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;fm-local-toolbar&quot;&gt;&lt;div class=&quot;fm-trends&quot; aria-label=&quot;Graph trend benchmark&quot;&gt;&lt;span class=&quot;fm-detail&quot;&gt;Trend fitted to last&lt;/span&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;fm-graph-benchmark&quot; data-chart-trend=&quot;6&quot;&gt;6M&lt;/label&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;fm-graph-benchmark&quot; data-chart-trend=&quot;12&quot; checked&gt;12M&lt;/label&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;fm-graph-benchmark&quot; data-chart-trend=&quot;24&quot;&gt;24M&lt;/label&gt;&lt;/div&gt;&lt;div class=&quot;fm-months&quot;&gt;&lt;span&gt;Chart months&lt;/span&gt;&lt;input type=&quot;month&quot; id=&quot;fm-month-start&quot; aria-label=&quot;First chart month&quot; value=&quot;2025-01&quot; min=&quot;2024-01&quot; max=&quot;2027-12&quot;&gt;&lt;span&gt;to&lt;/span&gt;&lt;input type=&quot;month&quot; id=&quot;fm-month-end&quot; aria-label=&quot;Last chart month&quot; value=&quot;2027-12&quot; min=&quot;2024-01&quot; max=&quot;2027-12&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-graph-context&quot; id=&quot;fm-graph-context&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-period-note&quot; id=&quot;fm-chart-periods&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-plots&quot; id=&quot;fm-plots&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-legend&quot; id=&quot;fm-legend&quot;&gt;&lt;/div&gt;
+   &lt;/section&gt;
+   &lt;section class=&quot;fm-panel&quot; aria-label=&quot;Executive summary&quot;&gt;
+    &lt;div class=&quot;fm-panelhead&quot;&gt;&lt;h2 class=&quot;fm-paneltitle&quot;&gt;Executive summary&lt;/h2&gt;&lt;div class=&quot;fm-summary-controls&quot;&gt;&lt;div class=&quot;fm-period-field&quot; id=&quot;fm-period-field&quot;&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;fm-compare-periods&quot; id=&quot;fm-compare-periods&quot;&gt;Compare 2026 FY + YTG&lt;/button&gt;&lt;div class=&quot;fm-trends&quot; aria-label=&quot;Table trend comparisons&quot;&gt;&lt;span class=&quot;fm-detail&quot;&gt;Table trends&lt;/span&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;checkbox&quot; data-table-trend=&quot;6&quot; checked&gt;6M&lt;/label&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;checkbox&quot; data-table-trend=&quot;12&quot; checked&gt;12M&lt;/label&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;checkbox&quot; data-table-trend=&quot;24&quot; checked&gt;24M&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-local-toolbar&quot;&gt;&lt;div class=&quot;fm-inline&quot;&gt;&lt;span class=&quot;fm-detail&quot;&gt;Table row layout&lt;/span&gt;&lt;div class=&quot;fm-switch&quot; role=&quot;group&quot; aria-label=&quot;Table row level&quot;&gt;&lt;button type=&quot;button&quot; data-table-view=&quot;driver&quot; aria-pressed=&quot;false&quot;&gt;Growth drivers&lt;/button&gt;&lt;button type=&quot;button&quot; data-table-view=&quot;sector&quot; aria-pressed=&quot;false&quot;&gt;Forecast tiers (sectors)&lt;/button&gt;&lt;button type=&quot;button&quot; data-table-view=&quot;hierarchy&quot; aria-pressed=&quot;true&quot;&gt;Both · driver → tier&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;fm-detail&quot;&gt;Same selection · change the row layout&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-summary-context&quot;&gt;&lt;span id=&quot;fm-summary-context&quot;&gt;&lt;/span&gt;&lt;div class=&quot;fm-inline&quot;&gt;&lt;label class=&quot;fm-check&quot;&gt;Rank by &lt;select class=&quot;fm-rank-window&quot; id=&quot;fm-rank-window&quot; aria-label=&quot;Variance window for ranking&quot;&gt;&lt;option value=&quot;6&quot;&gt;6M absolute gap&lt;/option&gt;&lt;option value=&quot;12&quot; selected&gt;12M absolute gap&lt;/option&gt;&lt;option value=&quot;24&quot;&gt;24M absolute gap&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;button type=&quot;button&quot; class=&quot;fm-sort&quot; id=&quot;fm-sort-gaps&quot; aria-pressed=&quot;false&quot;&gt;Largest gaps first&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-period-note&quot; id=&quot;fm-ranking-caption&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-summarywrap&quot;&gt;&lt;table class=&quot;fm-summary&quot; id=&quot;fm-summary&quot;&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-table-note&quot;&gt;+ Overcall / − Undercall · Plan minus trend · 6M / 12M / 24M are the actual-history windows used to fit each trend.&lt;/div&gt;
+   &lt;/section&gt;
+   &lt;section class=&quot;fm-panel&quot; aria-label=&quot;Matching files&quot;&gt;
+    &lt;div class=&quot;fm-panelhead&quot;&gt;&lt;h2 class=&quot;fm-paneltitle&quot;&gt;Matching files&lt;/h2&gt;&lt;span class=&quot;fm-detail&quot; id=&quot;fm-file-count&quot; aria-live=&quot;polite&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-selection-caption&quot;&gt;Automatic order: Plan ADS → ADS → highest numbered ADS version, per growth driver and cycle.&lt;/div&gt;
+    &lt;div class=&quot;fm-file-actions&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;fm-restore-ads&quot;&gt;Use ADS default&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;fm-select-files&quot;&gt;Select all plans&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;fm-clear-files&quot;&gt;Clear all&lt;/button&gt;&lt;label class=&quot;fm-check&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;fm-selected-only&quot;&gt;Selected only&lt;/label&gt;&lt;input type=&quot;search&quot; class=&quot;fm-file-search&quot; id=&quot;fm-file-search&quot; placeholder=&quot;Search files…&quot; aria-label=&quot;Search matching files&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-fileswrap&quot;&gt;&lt;table class=&quot;fm-files&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th class=&quot;fm-file-box&quot; scope=&quot;col&quot;&gt;&lt;span aria-label=&quot;Selection&quot;&gt;✓&lt;/span&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;File&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;fm-file-driver&quot;&gt;Growth driver&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Cycle&lt;/th&gt;&lt;th scope=&quot;col&quot; class=&quot;fm-file-when&quot;&gt;Updated&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=&quot;fm-file-rows&quot;&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+    &lt;div class=&quot;fm-file-pagination&quot; id=&quot;fm-pagination&quot;&gt;&lt;span id=&quot;fm-page-caption&quot;&gt;&lt;/span&gt;&lt;button type=&quot;button&quot; id=&quot;fm-prev-files&quot; aria-label=&quot;Previous files&quot;&gt;Previous&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;fm-next-files&quot; aria-label=&quot;Next files&quot;&gt;Next&lt;/button&gt;&lt;/div&gt;
+   &lt;/section&gt;
+  &lt;footer class=&quot;fm-foot&quot;&gt;&lt;span&gt;Illustrative values · sample sectors · saved actuals cutoff per file&lt;/span&gt;&lt;span class=&quot;fm-live-note&quot; id=&quot;fm-live-note&quot; aria-live=&quot;polite&quot;&gt;Local interactive preview&lt;/span&gt;&lt;/footer&gt;
+  &lt;/main&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(() =&gt; {
+ const root=document.getElementById(&#x27;fm-executive-period-review&#x27;);
+ if(!root)return;
+ const $=s=&gt;root.querySelector(s),$$=s=&gt;[...root.querySelectorAll(s)];
+ const escape=v=&gt;String(v??&#x27;&#x27;).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g,c=&gt;({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;}[c]));
+ const driverNames={oral:&#x27;Core Oral&#x27;,paed:&#x27;Paed SIP&#x27;};
+ const sectors=[{id:&#x27;compact&#x27;,name:&#x27;Compact&#x27;,driver:&#x27;oral&#x27;,base:440000,slope:4300,share:.18,price:6.2,color:2},{id:&#x27;juce&#x27;,name:&#x27;Juce&#x27;,driver:&#x27;oral&#x27;,base:310000,slope:2300,share:.15,price:5.4,color:3},{id:&#x27;paed-standard&#x27;,name:&#x27;Paed standard&#x27;,driver:&#x27;paed&#x27;,base:190000,slope:2300,share:.22,price:7.1,color:5},{id:&#x27;paed-energy&#x27;,name:&#x27;Paed energy&#x27;,driver:&#x27;paed&#x27;,base:125000,slope:1400,share:.20,price:8.2,color:6}];
+ const catalog=[{id:&#x27;market-units&#x27;,name:&#x27;Market units&#x27;,section:&#x27;ims&#x27;,unit:&#x27;Units&#x27;,component:&#x27;market&#x27;},{id:&#x27;abbott-units&#x27;,name:&#x27;Abbott units&#x27;,section:&#x27;ims&#x27;,unit:&#x27;Units&#x27;,component:&#x27;abbott&#x27;},{id:&#x27;volume-share&#x27;,name:&#x27;Abbott volume share&#x27;,section:&#x27;ims&#x27;,unit:&#x27;%&#x27;,component:&#x27;abbott&#x27;,denominator:&#x27;market&#x27;},{id:&#x27;market-value&#x27;,name:&#x27;Market value&#x27;,section:&#x27;ims&#x27;,unit:&#x27;£&#x27;,component:&#x27;marketValue&#x27;},{id:&#x27;value-share&#x27;,name:&#x27;Abbott value share&#x27;,section:&#x27;ims&#x27;,unit:&#x27;%&#x27;,component:&#x27;abbottValue&#x27;,denominator:&#x27;marketValue&#x27;},{id:&#x27;ef-units&#x27;,name:&#x27;Ex-factory selling units&#x27;,section:&#x27;ef&#x27;,unit:&#x27;Units&#x27;,component:&#x27;ef&#x27;},{id:&#x27;ef-value&#x27;,name:&#x27;Ex-factory value&#x27;,section:&#x27;ef&#x27;,unit:&#x27;£&#x27;,component:&#x27;efValue&#x27;}];
+ const cycleOptions=[{id:&#x27;2026-10&#x27;,name:&#x27;October 2026&#x27;},{id:&#x27;2026-07&#x27;,name:&#x27;July 2026&#x27;}];
+ const channels=[{id:&#x27;community&#x27;,name:&#x27;Community&#x27;},{id:&#x27;hospital&#x27;,name:&#x27;Hospital&#x27;}];
+ const subchannels=[{id:&#x27;retail&#x27;,name:&#x27;Pharmacy&#x27;,channel:&#x27;community&#x27;,weight:.53},{id:&#x27;homecare&#x27;,name:&#x27;Homecare&#x27;,channel:&#x27;community&#x27;,weight:.27},{id:&#x27;hospital&#x27;,name:&#x27;Hospital&#x27;,channel:&#x27;hospital&#x27;,weight:.20}];
+ const periodOptions=[{id:&#x27;2026:FY&#x27;,name:&#x27;2026 FY&#x27;},{id:&#x27;2026:YTD&#x27;,name:&#x27;2026 YTD&#x27;},{id:&#x27;2026:YTG&#x27;,name:&#x27;2026 YTG&#x27;},{id:&#x27;2026:H1&#x27;,name:&#x27;2026 H1&#x27;},{id:&#x27;2026:H2&#x27;,name:&#x27;2026 H2&#x27;},{id:&#x27;2027:FY&#x27;,name:&#x27;2027 FY&#x27;},{id:&#x27;2025:FY&#x27;,name:&#x27;2025 FY&#x27;}];
+ const files=[];
+ const versions={
+  &#x27;2026-10|oral&#x27;:[&#x27;ADS&#x27;,&#x27;ADS_001&#x27;,&#x27;ADS_010&#x27;,&#x27;Ayush_001&#x27;],
+  &#x27;2026-10|paed&#x27;:[&#x27;ADS_001&#x27;,&#x27;ADS_002&#x27;,&#x27;Ayush_001&#x27;],
+  &#x27;2026-07|oral&#x27;:[&#x27;Plan ADS&#x27;,&#x27;ADS&#x27;,&#x27;ADS_002&#x27;,&#x27;Ayush_001&#x27;],
+  &#x27;2026-07|paed&#x27;:[&#x27;ADS_001&#x27;,&#x27;ADS_010&#x27;,&#x27;ADS_002&#x27;,&#x27;Ayush_001&#x27;]
+ };
+ for(const cycle of cycleOptions)for(const driver of Object.keys(driverNames))for(const [index,scenario]of versions[cycle.id+&#x27;|&#x27;+driver].entries())files.push({id:cycle.id+&#x27;|&#x27;+driver+&#x27;|&#x27;+scenario,cycle:cycle.id,driver,scenario,name:&#x27;UK_&#x27;+(driver===&#x27;oral&#x27;?&#x27;Core_Oral&#x27;:&#x27;Paed_SIP&#x27;)+&#x27;_&#x27;+(cycle.id===&#x27;2026-10&#x27;?&#x27;Oct26&#x27;:&#x27;Jul26&#x27;)+&#x27;_&#x27;+scenario.replaceAll(&#x27; &#x27;,&#x27;_&#x27;)+&#x27;.xlsm&#x27;,updated:cycle.id===&#x27;2026-10&#x27;?&#x27;20 Oct · 21:&#x27;+String(20+index):&#x27;18 Jul · 16:&#x27;+String(40+index),modifiedUtc:cycle.id===&#x27;2026-10&#x27;?&#x27;2026-10-20T21:&#x27;+String(20+index)+&#x27;:00Z&#x27;:&#x27;2026-07-18T16:&#x27;+String(40+index)+&#x27;:00Z&#x27;});
+ function adsInfo(file){
+  const label=String(file.scenario||&#x27;&#x27;).trim(),match=/^(Plan[ _-]*)?ADS(?:[ _-]+(\d+))?$/i.exec(label);
+  if(!match)return null;const revision=match[2]===undefined?0:Number(match[2]);if(!Number.isSafeInteger(revision))return null;
+  return {priority:match[2]!==undefined?1:match[1]?3:2,revision,modified:Date.parse(file.modifiedUtc||&#x27;&#x27;)||0};
+ }
+ function adsSelection(cycles,available=files,drivers=Object.keys(driverNames)){
+  const chosen=[],issues=[];
+  for(const cycle of cycles)for(const driver of drivers){
+   const candidates=available.filter(f=&gt;f.cycle===cycle&amp;&amp;f.driver===driver&amp;&amp;adsInfo(f)).sort((a,b)=&gt;{const x=adsInfo(a),y=adsInfo(b);return y.priority-x.priority||y.revision-x.revision||y.modified-x.modified||a.id.localeCompare(b.id);});
+   if(!candidates.length){issues.push({cycle,driver,status:&#x27;MISSING&#x27;});continue;}
+   if(candidates.length&gt;1){const a=adsInfo(candidates[0]),b=adsInfo(candidates[1]);if(a.priority===b.priority&amp;&amp;a.revision===b.revision&amp;&amp;a.modified===b.modified){issues.push({cycle,driver,status:&#x27;AMBIGUOUS&#x27;});continue;}}
+   chosen.push(candidates[0]);
+  }
+  return {files:chosen,issues};
+ }
+ function planFamily(file){return adsInfo(file)?&#x27;ADS plan&#x27;:file.scenario;}
+
+ const defaults={cycles:[&#x27;2026-10&#x27;],channels:[&#x27;community&#x27;,&#x27;hospital&#x27;],subchannels:subchannels.map(s=&gt;s.id),sectors:sectors.map(s=&gt;s.id),sections:[&#x27;ims&#x27;],metrics:[&#x27;market-units&#x27;],periods:[&#x27;2026:FY&#x27;],files:adsSelection([&#x27;2026-10&#x27;]).files.map(f=&gt;f.id),fileMode:&#x27;ads&#x27;,view:&#x27;driver&#x27;,combined:true,trends:[12],sortGaps:false,sortWindow:12,tableView:&#x27;hierarchy&#x27;,tableTrends:[6,12,24],selectionLevel:&#x27;hierarchy&#x27;,selectionSearch:&#x27;&#x27;,monthStart:&#x27;2025-01&#x27;,monthEnd:&#x27;2027-12&#x27;,fileSearch:&#x27;&#x27;,selectedOnly:false,filePage:0};
+ let saved=window.openai?.widgetState?.modelContent;
+ let state={...defaults,...(saved?.schema===&#x27;fm-executive-period-review-html-r9&#x27;?saved.state:{})};
+ for(const k of [&#x27;cycles&#x27;,&#x27;channels&#x27;,&#x27;subchannels&#x27;,&#x27;sectors&#x27;,&#x27;sections&#x27;,&#x27;metrics&#x27;,&#x27;periods&#x27;,&#x27;files&#x27;,&#x27;trends&#x27;,&#x27;tableTrends&#x27;])state[k]=Array.isArray(state[k])?[...state[k]]:[...defaults[k]];
+ const dropdowns=new Map(),fitCache=new Map(),dataCache=new Map();
+ const monthIndex=iso=&gt;(Number(iso.slice(0,4))-2024)*12+Number(iso.slice(5,7))-1;
+ const isoMonth=t=&gt;`${2024+Math.floor(t/12)}-${String(t%12+1).padStart(2,&#x27;0&#x27;)}`;
+ const monthLabel=t=&gt;new Date(Date.UTC(2024+Math.floor(t/12),t%12,1)).toLocaleDateString(&#x27;en-GB&#x27;,{month:&#x27;short&#x27;,year:&#x27;2-digit&#x27;,timeZone:&#x27;UTC&#x27;});
+ const cutoff=(file,metric)=&gt;monthIndex(file.cycle)-(metric.section===&#x27;ef&#x27;?1:2);
+ const cycleName=id=&gt;cycleOptions.find(x=&gt;x.id===id)?.name||id;
+ const monthDate=t=&gt;new Date(Date.UTC(2024+Math.floor(t/12),t%12,1));
+ const shortCycle=id=&gt;monthDate(monthIndex(id)).toLocaleDateString(&#x27;en-GB&#x27;,{month:&#x27;short&#x27;,year:&#x27;numeric&#x27;,timeZone:&#x27;UTC&#x27;});
+ const styleColor=i=&gt;getComputedStyle(root).getPropertyValue(&#x27;--fm-series&#x27;+((i-1)%6+1)).trim();
+ const rawNumber=(v,unit)=&gt;v==null||!Number.isFinite(v)?&#x27;—&#x27;:unit===&#x27;%&#x27;?(v*100).toFixed(1)+&#x27;%&#x27;:(unit===&#x27;£&#x27;?&#x27;£&#x27;:&#x27;&#x27;)+Math.round(v).toLocaleString(&#x27;en-GB&#x27;);
+ const compact=(v,unit=&#x27;Units&#x27;)=&gt;v==null||!Number.isFinite(v)?&#x27;—&#x27;:unit===&#x27;%&#x27;?(v*100).toFixed(1)+&#x27;%&#x27;:(unit===&#x27;£&#x27;?&#x27;£&#x27;:&#x27;&#x27;)+(Math.abs(v)&gt;=1e6?(v/1e6).toFixed(2)+&#x27;m&#x27;:Math.abs(v)&gt;=1e3?(v/1e3).toFixed(1)+&#x27;k&#x27;:Math.round(v).toLocaleString(&#x27;en-GB&#x27;));
+ function deltaLabel(v,unit){if(v==null)return &#x27;—&#x27;;const sign=v&gt;0?&#x27;+&#x27;:v&lt;0?&#x27;−&#x27;:&#x27;&#x27;;return unit===&#x27;%&#x27;?sign+(Math.abs(v)*100).toFixed(2)+&#x27; pp&#x27;:sign+compact(Math.abs(v),unit);}
+ function persist(){if(window.openai?.setWidgetState)Promise.resolve(window.openai.setWidgetState({modelContent:{schema:&#x27;fm-executive-period-review-html-r9&#x27;,state},privateContent:null})).catch(()=&gt;{});}
+ function validOptions(key){
+  if(key===&#x27;cycles&#x27;)return cycleOptions;
+  if(key===&#x27;channels&#x27;)return channels;
+  if(key===&#x27;subchannels&#x27;)return subchannels.filter(x=&gt;state.channels.includes(x.channel));
+  if(key===&#x27;sections&#x27;)return [{id:&#x27;ims&#x27;,name:&#x27;IMS / Market&#x27;},{id:&#x27;ef&#x27;,name:&#x27;Ex-Factory&#x27;}];
+  if(key===&#x27;metrics&#x27;)return catalog.filter(m=&gt;state.sections.includes(m.section));
+  return periodOptions;
+ }
+ function repair(key,previous=[]){
+  if(key===&#x27;channels&#x27;){const ids=validOptions(&#x27;subchannels&#x27;).map(x=&gt;x.id);state.subchannels=state.subchannels.filter(id=&gt;ids.includes(id));if(!state.subchannels.length)state.subchannels=ids;}
+  if(key===&#x27;sections&#x27;){const ids=validOptions(&#x27;metrics&#x27;).map(x=&gt;x.id);state.metrics=state.metrics.filter(id=&gt;ids.includes(id));if(!state.metrics.length&amp;&amp;ids.length)state.metrics=[ids[0]];}
+  if(key===&#x27;cycles&#x27;){state.filePage=0;if(state.fileMode!==&#x27;ads&#x27;){const added=adsSelection(state.cycles.filter(c=&gt;!previous.includes(c))).files.map(f=&gt;f.id);state.files=[...new Set([...state.files,...added])];}}
+ }
+ const filterDefs=[[&#x27;cycles&#x27;,&#x27;Demand cycle&#x27;],[&#x27;channels&#x27;,&#x27;Channel&#x27;],[&#x27;subchannels&#x27;,&#x27;Sub channel&#x27;],[&#x27;sections&#x27;,&#x27;Section&#x27;],[&#x27;metrics&#x27;,&#x27;Measure&#x27;]];
+ function dropdown(parent,key,label){
+  const node=document.createElement(&#x27;div&#x27;);node.className=&#x27;fm-filter&#x27;;node.dataset.filter=key;
+  node.innerHTML=`&lt;span class=&quot;fm-fieldlabel&quot; id=&quot;fm-label-${key}&quot;&gt;${label}&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;fm-dropdown&quot; aria-labelledby=&quot;fm-label-${key} fm-value-${key}&quot; aria-haspopup=&quot;dialog&quot; aria-expanded=&quot;false&quot;&gt;&lt;span id=&quot;fm-value-${key}&quot;&gt;&lt;/span&gt;&lt;span class=&quot;fm-chevron&quot; aria-hidden=&quot;true&quot;&gt;▾&lt;/span&gt;&lt;/button&gt;&lt;div class=&quot;fm-popover&quot; role=&quot;dialog&quot; aria-label=&quot;${label} selection&quot; hidden&gt;&lt;input type=&quot;search&quot; placeholder=&quot;Search ${label.toLowerCase()}…&quot; aria-label=&quot;Search ${label.toLowerCase()}&quot;&gt;&lt;div class=&quot;fm-options&quot; role=&quot;group&quot; aria-label=&quot;${label} choices&quot;&gt;&lt;/div&gt;&lt;/div&gt;`;
+  parent.append(node);const button=node.querySelector(&#x27;button&#x27;),popup=node.querySelector(&#x27;.fm-popover&#x27;),search=node.querySelector(&#x27;input&#x27;),options=node.querySelector(&#x27;.fm-options&#x27;);
+  function caption(){const opts=validOptions(key),selected=opts.filter(o=&gt;state[key].includes(o.id)),plural={cycles:&#x27;cycles&#x27;,drivers:&#x27;growth drivers&#x27;,channels:&#x27;channels&#x27;,subchannels:&#x27;sub channels&#x27;,sectors:&#x27;forecast tiers&#x27;,sections:&#x27;sections&#x27;,metrics:&#x27;measures&#x27;,periods:&#x27;periods&#x27;,tableDrivers:&#x27;growth drivers&#x27;,tableSectors:&#x27;forecast tiers&#x27;,tableMetrics:&#x27;measures&#x27;};button.firstElementChild.textContent=selected.length===opts.length&amp;&amp;opts.length&gt;1?&#x27;All &#x27;+plural[key]:selected.length===1?selected[0].name:selected.length?selected.length+&#x27; selected&#x27;:&#x27;Choose &#x27;+label.toLowerCase();}
+  function items(){const q=search.value.trim().toLowerCase(),opts=validOptions(key).filter(o=&gt;o.name.toLowerCase().includes(q));options.replaceChildren();if(!opts.length){const message=document.createElement(&#x27;div&#x27;);message.className=&#x27;fm-no-options&#x27;;message.textContent=&#x27;No matching choices&#x27;;options.append(message);}for(const o of opts){const item=document.createElement(&#x27;label&#x27;);item.className=&#x27;fm-option&#x27;;const check=document.createElement(&#x27;input&#x27;);check.type=&#x27;checkbox&#x27;;check.value=o.id;check.checked=state[key].includes(o.id);check.addEventListener(&#x27;change&#x27;,()=&gt;{const previous=state[key].slice();state[key]=check.checked?[...new Set([...state[key],o.id])]:state[key].filter(x=&gt;x!==o.id);repair(key,previous);caption();update();});item.append(check,document.createTextNode(o.name));options.append(item);}}
+  function close(){popup.hidden=true;button.setAttribute(&#x27;aria-expanded&#x27;,&#x27;false&#x27;);}
+  button.addEventListener(&#x27;click&#x27;,()=&gt;{const opening=popup.hidden;dropdowns.forEach(d=&gt;d.close());if(opening){search.value=&#x27;&#x27;;items();popup.hidden=false;button.setAttribute(&#x27;aria-expanded&#x27;,&#x27;true&#x27;);const box=node.getBoundingClientRect(),scope=root.getBoundingClientRect();popup.style.left=box.left+265&gt;scope.right?&#x27;auto&#x27;:&#x27;0&#x27;;popup.style.right=box.left+265&gt;scope.right?&#x27;0&#x27;:&#x27;auto&#x27;;search.focus();}});
+  search.addEventListener(&#x27;input&#x27;,items);node.addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.key===&#x27;Escape&#x27;){close();button.focus();}if(e.key===&#x27;ArrowDown&#x27;&amp;&amp;document.activeElement===search){e.preventDefault();options.querySelector(&#x27;input&#x27;)?.focus();}});
+  dropdowns.set(key,{caption,items,close,node,popup});caption();
+ }
+ filterDefs.forEach(([key,label])=&gt;dropdown($(&#x27;#fm-filters&#x27;),key,label));dropdown($(&#x27;#fm-period-field&#x27;),&#x27;periods&#x27;,&#x27;Summary period&#x27;);
+ root.addEventListener(&#x27;pointerdown&#x27;,e=&gt;dropdowns.forEach(d=&gt;{if(!d.node.contains(e.target))d.close();}));
+ function availableFiles(){return files.filter(f=&gt;state.cycles.includes(f.cycle));}
+ function matchingFiles(){return availableFiles().filter(f=&gt;!state.fileSearch||f.name.toLowerCase().includes(state.fileSearch.toLowerCase()));}
+ function pickedFiles(){return availableFiles().filter(f=&gt;state.files.includes(f.id));}
+ function selectedDrivers(){return Object.keys(driverNames).filter(id=&gt;sectors.some(s=&gt;s.driver===id&amp;&amp;state.sectors.includes(s.id)));}
+ function activeSectors(driver){return sectors.filter(s=&gt;(!driver||s.driver===driver)&amp;&amp;state.sectors.includes(s.id));}
+ function factor(){return subchannels.filter(s=&gt;state.channels.includes(s.channel)&amp;&amp;state.subchannels.includes(s.id)).reduce((v,s)=&gt;v+s.weight,0);}
+ function sourceAmounts(file,sector,t){
+  const key=file.id+&#x27;|&#x27;+sector.id+&#x27;|&#x27;+t;if(dataCache.has(key))return dataCache.get(key);
+  const isFuture=t&gt;cutoff(file,{section:&#x27;ims&#x27;}),isEfFuture=t&gt;cutoff(file,{section:&#x27;ef&#x27;}),base=(sector.base+sector.slope*t)*(1+.035*Math.sin((t%12-1)*Math.PI/6));
+  const adjustment=adsInfo(file)?(sector.driver===&#x27;oral&#x27;?1.18:.85):(sector.driver===&#x27;oral&#x27;?1.07:.97);
+  const market=base*(isFuture?adjustment:1),share=sector.share+.00038*t+(isFuture?(adsInfo(file) ? .006 : .003):0),abbott=market*share,ef=base*(sector.share+.00038*t)*1.15*(isEfFuture?adjustment:1);
+  const value={market,abbott,marketValue:market*sector.price,abbottValue:abbott*sector.price,ef,efValue:ef*sector.price};dataCache.set(key,value);return value;
+ }
+ function fit(file,sector,metric,window){const key=[file.id,sector.id,metric.id,window].join(&#x27;|&#x27;);if(fitCache.has(key))return fitCache.get(key);const end=cutoff(file,metric),points=Array.from({length:window},(_,i)=&gt;{const x=end-window+1+i,v=sourceAmounts(file,sector,x);return {x,y:metric.denominator?v[metric.component]/v[metric.denominator]:v[metric.component]};});const mx=points.reduce((a,p)=&gt;a+p.x,0)/window,my=points.reduce((a,p)=&gt;a+p.y,0)/window;const b=points.reduce((a,p)=&gt;a+(p.x-mx)*(p.y-my),0)/points.reduce((a,p)=&gt;a+(p.x-mx)**2,0);const result={a:my-b*mx,b};fitCache.set(key,result);return result;}
+ function components(file,sector,t,metric,window){const raw=sourceAmounts(file,sector,t),w=factor();let n=raw[metric.component],d=metric.denominator?raw[metric.denominator]:null;if(window&amp;&amp;t&gt;cutoff(file,metric)){const f=fit(file,sector,metric,window),prediction=f.a+f.b*t;n=metric.denominator?prediction*d:prediction;}return {n:n*w,d:d===null?null:d*w};}
+ function comboGroups(){const map=new Map();for(const f of pickedFiles()){const family=planFamily(f),key=f.cycle+&#x27;|&#x27;+family;if(!map.has(key))map.set(key,{key,cycle:f.cycle,scenario:family,files:[]});map.get(key).files.push(f);}return [...map.values()];}
+ function amount(combo,subset,metric,months,window=0){if(!subset.length||!months.length||!factor())return null;let n=0,d=0;for(const sector of subset){const sources=combo.files.filter(f=&gt;f.driver===sector.driver);if(sources.length!==1)return null;for(const t of months){const v=components(sources[0],sector,t,metric,window);n+=v.n;if(v.d!==null)d+=v.d;}}return metric.denominator?d===0?null:n/d:n;}
+ function periodMonths(id,combo,metric){const [year,kind]=id.split(&#x27;:&#x27;),first=(Number(year)-2024)*12,reference=Math.min(...combo.files.map(f=&gt;cutoff(f,metric)));const cutMonth=((reference%12)+12)%12;let start=0,end=11;if(kind===&#x27;YTD&#x27;)end=cutMonth;if(kind===&#x27;YTG&#x27;)start=cutMonth+1;if(kind===&#x27;H1&#x27;)end=5;if(kind===&#x27;H2&#x27;)start=6;return end&gt;=start?Array.from({length:end-start+1},(_,i)=&gt;first+start+i):[];}
+ function periodRangeLabel(months){
+  if(!months.length)return &#x27;No months in this period&#x27;;
+  const a=monthDate(months[0]),b=monthDate(months.at(-1)),short=date=&gt;date.toLocaleDateString(&#x27;en-GB&#x27;,{month:&#x27;short&#x27;,timeZone:&#x27;UTC&#x27;});
+  return months.length===1?monthLabel(months[0]):a.getUTCFullYear()===b.getUTCFullYear()?short(a)+&#x27;–&#x27;+short(b)+&#x27; &#x27;+a.getUTCFullYear():monthLabel(months[0])+&#x27;–&#x27;+monthLabel(months.at(-1));
+ }
+ function periodHeaderRange(period){
+  const ranges=[...new Set(comboGroups().flatMap(combo=&gt;catalog.filter(m=&gt;state.metrics.includes(m.id)).map(metric=&gt;periodRangeLabel(periodMonths(period.id,combo,metric)))))];
+  return ranges.length===1?ranges[0]:ranges.length?&#x27;Dates vary by source cutoff&#x27;:&#x27;Dates unavailable&#x27;;
+ }
+ function signedPercent(value){return value==null?&#x27;—&#x27;:(value&gt;0?&#x27;+&#x27;:value&lt;0?&#x27;−&#x27;:&#x27;&#x27;)+(Math.abs(value)*100).toFixed(1)+&#x27;%&#x27;;}
+ function renderExecutive(){
+  const metrics=catalog.filter(m=&gt;state.metrics.includes(m.id)),combos=comboGroups(),drivers=selectedDrivers(),subset=activeSectors(),period=periodOptions.find(p=&gt;state.periods.includes(p.id)),trend=state.trends[0];
+  const selectedSources=pickedFiles().filter(f=&gt;drivers.includes(f.driver)),cuts=[...new Set(selectedSources.flatMap(f=&gt;metrics.map(m=&gt;cutoff(f,m))))].sort((a,b)=&gt;a-b);
+  const actuals=cuts.length===1?&#x27;Actuals through &#x27;+monthDate(cuts[0]).toLocaleDateString(&#x27;en-GB&#x27;,{month:&#x27;long&#x27;,year:&#x27;numeric&#x27;,timeZone:&#x27;UTC&#x27;}):cuts.length?&#x27;Actuals cutoffs &#x27;+monthLabel(cuts[0])+&#x27;–&#x27;+monthLabel(cuts.at(-1))+&#x27; · varies by source/measure&#x27;:&#x27;Actuals cutoff unavailable&#x27;;
+  const expected=(combos.length||state.cycles.length)*drivers.length,complete=combos.reduce((n,c)=&gt;n+drivers.filter(driver=&gt;c.files.filter(f=&gt;f.driver===driver).length===1).length,0);
+  const year=period?.id.split(&#x27;:&#x27;)[0],ytgRanges=year?[...new Set(combos.flatMap(c=&gt;metrics.map(m=&gt;periodRangeLabel(periodMonths(year+&#x27;:YTG&#x27;,c,m)))))]:[];
+  const ytg=ytgRanges.length===1?&#x27;YTG &#x27;+ytgRanges[0]:ytgRanges.length?&#x27;YTG dates vary by source/measure&#x27;:&#x27;YTG dates unavailable&#x27;;
+  $(&#x27;#fm-data-context&#x27;).innerHTML=[actuals,ytg,&#x27;Plan sources &#x27;+complete+&#x27;/&#x27;+expected,&#x27;Sample refresh · 21 Oct 2026, 07:30 UTC&#x27;].map(label=&gt;&#x27;&lt;span&gt;&#x27;+escape(label)+&#x27;&lt;/span&gt;&#x27;).join(&#x27;&#x27;);
+  $(&#x27;#fm-chart-periods&#x27;).textContent=&#x27;Shaded review periods: &#x27;+periodOptions.filter(p=&gt;state.periods.includes(p.id)).map(p=&gt;p.name+&#x27; (&#x27;+periodHeaderRange(p)+&#x27;)&#x27;).join(&#x27; · &#x27;)+(state.view===&#x27;hierarchy&#x27;&amp;&amp;!state.combined?&#x27; · Each driver chart has its own labelled scale&#x27;:&#x27;&#x27;);
+  const compared=[&#x27;2026:FY&#x27;,&#x27;2026:YTG&#x27;].every(id=&gt;state.periods.includes(id));$(&#x27;#fm-compare-periods&#x27;).disabled=compared;$(&#x27;#fm-compare-periods&#x27;).textContent=compared?&#x27;2026 FY + YTG selected&#x27;:&#x27;Compare 2026 FY + YTG&#x27;;
+  if(!period||!metrics.length||!combos.length||!subset.length){$(&#x27;#fm-executive-readout&#x27;).innerHTML=&#x27;&lt;div class=&quot;fm-detail&quot;&gt;&#x27;+(!period?&#x27;Choose a review period.&#x27;:!metrics.length?&#x27;Choose a measure.&#x27;:!subset.length?&#x27;Choose growth drivers or sectors.&#x27;:&#x27;No plan source is selected.&#x27;)+&#x27;&lt;/div&gt;&#x27;;return;}
+  $(&#x27;#fm-executive-readout&#x27;).innerHTML=combos.flatMap(combo=&gt;metrics.flatMap(metric=&gt;periodOptions.filter(p=&gt;state.periods.includes(p.id)).map(period=&gt;{
+   const months=periodMonths(period.id,combo,metric),plan=amount(combo,subset,metric,months),benchmark=amount(combo,subset,metric,months,trend),delta=plan==null||benchmark==null?null:plan-benchmark,percent=delta==null||benchmark===0?null:delta/Math.abs(benchmark);
+   const movements=drivers.map(driver=&gt;{const scope=activeSectors(driver),p=amount(combo,scope,metric,months),t=amount(combo,scope,metric,months,trend),d=p==null||t==null?null:p-t;return {driver,delta:d,percent:d==null||t===0?null:d/Math.abs(t)};});
+   const offset=movements.some(m=&gt;m.delta&gt;0)&amp;&amp;movements.some(m=&gt;m.delta&lt;0),context=shortCycle(combo.cycle)+&#x27; · &#x27;+combo.scenario;
+   return `&lt;div data-executive-position=&quot;${escape(combo.key+&#x27;|&#x27;+metric.id+&#x27;|&#x27;+period.id)}&quot; data-overview-period=&quot;${period.id}&quot;&gt;&lt;div class=&quot;fm-readout-focus&quot;&gt;&lt;span&gt;${escape(period.name+&#x27; · &#x27;+periodRangeLabel(months)+&#x27; · &#x27;+metric.name)}&lt;/span&gt;&lt;span&gt;${escape(context)} · ${trend}M trend&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;fm-readout-values&quot;&gt;&lt;span&gt;&lt;span class=&quot;fm-readout-label&quot;&gt;Total plan&lt;/span&gt;&lt;strong class=&quot;fm-plan-value&quot; data-overview-plan=&quot;${plan==null?&#x27;&#x27;:plan}&quot;&gt;${compact(plan,metric.unit)}&lt;/strong&gt;&lt;/span&gt;&lt;span&gt;&lt;span class=&quot;fm-readout-label&quot;&gt;Net ${delta==null?&#x27;variance&#x27;:delta&gt;0?&#x27;overcall&#x27;:delta&lt;0?&#x27;undercall&#x27;:&#x27;variance&#x27;} vs ${trend}M&lt;/span&gt;&lt;strong class=&quot;fm-gap-value&quot; data-overview-delta=&quot;${delta==null?&#x27;&#x27;:delta}&quot;&gt;${delta==null?&#x27;Unavailable&#x27;:deltaLabel(delta,metric.unit)+&#x27; (&#x27;+signedPercent(percent)+&#x27;)&#x27;}&lt;/strong&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;fm-offsets&quot;&gt;&lt;span class=&quot;fm-readout-label&quot;&gt;${offset?&#x27;Offsetting driver movements&#x27;:&#x27;Driver variances&#x27;}&lt;/span&gt;${movements.map(m=&gt;&#x27;&lt;span class=&quot;fm-readout-offset&quot; data-overview-driver=&quot;&#x27;+m.driver+&#x27;&quot;&gt;&#x27;+escape(driverNames[m.driver])+&#x27;: &#x27;+(m.delta==null?&#x27;Unavailable&#x27;:(m.delta&gt;0?&#x27;Overcall &#x27;:m.delta&lt;0?&#x27;Undercall &#x27;:&#x27;&#x27;)+deltaLabel(m.delta,metric.unit))+&#x27; (&#x27;+signedPercent(m.percent)+&#x27;)&lt;/span&gt;&#x27;).join(&#x27;&#x27;)}&lt;/div&gt;&lt;/div&gt;`;
+  }))).join(&#x27;&#x27;);
+ }
+ function chartBenchmarkContext(metric,driver){
+  return comboGroups().map(combo=&gt;{const sources=combo.files.filter(f=&gt;(!driver||f.driver===driver)&amp;&amp;selectedDrivers().includes(f.driver)),ranges=[...new Set(sources.map(f=&gt;{const end=cutoff(f,metric),history=Array.from({length:state.trends[0]},(_,i)=&gt;end-state.trends[0]+1+i);return state.trends[0]+&#x27;M fit: &#x27;+periodRangeLabel(history)+&#x27; actuals · Forecast from &#x27;+monthLabel(end+1);} ))];return (comboGroups().length&gt;1?shortCycle(combo.cycle)+&#x27; &#x27;+combo.scenario+&#x27; · &#x27;:&#x27;&#x27;)+ranges.join(&#x27; / &#x27;);}).join(&#x27; · &#x27;);
+ }
+ function driverPeriodContext(metric,driver){
+  if(!driver)return &#x27;&#x27;;
+  return comboGroups().flatMap(combo=&gt;periodOptions.filter(period=&gt;state.periods.includes(period.id)).map(period=&gt;{const months=periodMonths(period.id,combo,metric),plan=amount(combo,activeSectors(driver),metric,months),benchmark=amount(combo,activeSectors(driver),metric,months,state.trends[0]),delta=plan==null||benchmark==null?null:plan-benchmark,pct=delta==null||benchmark===0?null:delta/Math.abs(benchmark);return (comboGroups().length&gt;1?shortCycle(combo.cycle)+&#x27; &#x27;+combo.scenario+&#x27; · &#x27;:&#x27;&#x27;)+period.name+&#x27;: &#x27;+deltaLabel(delta,metric.unit)+&#x27; (&#x27;+signedPercent(pct)+&#x27;) vs &#x27;+state.trends[0]+&#x27;M&#x27;;})).join(&#x27; · &#x27;);
+ }
+ function renderRanking(){
+  const period=periodOptions.find(p=&gt;state.periods.includes(p.id));
+  $(&#x27;#fm-rank-window&#x27;).value=String(state.sortWindow);
+  $(&#x27;#fm-ranking-caption&#x27;).textContent=(state.sortGaps?&#x27;Ranked by &#x27;:&#x27;Ranking basis: &#x27;)+(period?period.name:&#x27;choose a period&#x27;)+&#x27; · &#x27;+state.sortWindow+&#x27;M absolute gap&#x27;+(state.tableView===&#x27;hierarchy&#x27;?&#x27; · sectors stay under their driver&#x27;:&#x27;&#x27;);
+ }
+ function renderFiles(){
+  const all=matchingFiles().sort((a,b)=&gt;Number(state.files.includes(b.id))-Number(state.files.includes(a.id))),shown=all.filter(f=&gt;!state.selectedOnly||state.files.includes(f.id)),size=4;state.filePage=Math.max(0,Math.min(state.filePage,Math.ceil(shown.length/size)-1));const page=shown.slice(state.filePage*size,state.filePage*size+size);
+  $(&#x27;#fm-file-count&#x27;).textContent=(state.fileMode===&#x27;ads&#x27;?&#x27;ADS automatic · &#x27;:&#x27;Custom selection · &#x27;)+all.length+&#x27; available · &#x27;+all.filter(f=&gt;state.files.includes(f.id)).length+&#x27; used&#x27;;$(&#x27;#fm-restore-ads&#x27;).disabled=state.fileMode===&#x27;ads&#x27;;
+  $(&#x27;#fm-file-rows&#x27;).innerHTML=page.length?page.map(f=&gt;`&lt;tr data-selected=&quot;${state.files.includes(f.id)}&quot;&gt;&lt;td class=&quot;fm-file-box&quot;&gt;&lt;input type=&quot;checkbox&quot; data-file=&quot;${escape(f.id)}&quot; aria-label=&quot;Select ${escape(f.name)}&quot; ${state.files.includes(f.id)?&#x27;checked&#x27;:&#x27;&#x27;}&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;fm-file-name&quot;&gt;${escape(f.name)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;fm-file-driver&quot;&gt;${driverNames[f.driver]}&lt;/td&gt;&lt;td&gt;${escape(shortCycle(f.cycle))}&lt;/td&gt;&lt;td class=&quot;fm-file-when&quot;&gt;${escape(f.updated)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;):&#x27;&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;fm-empty&quot;&gt;&#x27;+(state.selectedOnly?&#x27;No selected files.&#x27;:&#x27;No files match these filters.&#x27;)+&#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;;
+  $$(&#x27;[data-file]&#x27;).forEach(el=&gt;el.addEventListener(&#x27;change&#x27;,()=&gt;{state.fileMode=&#x27;custom&#x27;;const file=files.find(f=&gt;f.id===el.dataset.file);if(el.checked){state.files=state.files.filter(id=&gt;{const f=files.find(x=&gt;x.id===id);return !f||f.cycle!==file.cycle||f.driver!==file.driver||planFamily(f)!==planFamily(file);});state.files.push(file.id);}else state.files=state.files.filter(id=&gt;id!==file.id);update();}));
+  $(&#x27;#fm-pagination&#x27;).hidden=shown.length&lt;=size;$(&#x27;#fm-page-caption&#x27;).textContent=(state.filePage*size+1)+&#x27;–&#x27;+Math.min(shown.length,(state.filePage+1)*size)+&#x27; of &#x27;+shown.length;$(&#x27;#fm-prev-files&#x27;).disabled=state.filePage===0;$(&#x27;#fm-next-files&#x27;).disabled=(state.filePage+1)*size&gt;=shown.length;
+ }
+ function chartGroups(){
+  if(state.combined)return [{id:&#x27;combined&#x27;,name:&#x27;Total selected&#x27;,sectors:activeSectors(),color:1}];
+  if(state.view===&#x27;sector&#x27;)return activeSectors().map(s=&gt;({id:s.id,driver:s.driver,name:driverNames[s.driver]+&#x27; · &#x27;+s.name,sectors:[s],color:s.color,level:&#x27;tier&#x27;}));
+  const parents=selectedDrivers().map(driver=&gt;({id:driver,driver,name:driverNames[driver],sectors:activeSectors(driver),color:driver===&#x27;oral&#x27;?1:4,level:&#x27;driver&#x27;}));
+  return state.view===&#x27;hierarchy&#x27;?parents.flatMap(parent=&gt;[{...parent,name:parent.name+&#x27; · total selected&#x27;},...parent.sectors.map(s=&gt;({id:s.id,driver:s.driver,name:driverNames[s.driver]+&#x27; · &#x27;+s.name,sectors:[s],color:s.color,level:&#x27;tier&#x27;}))]):parents;
+ }
+ function renderQuick(){
+  const mode=state.combined?&#x27;total&#x27;:state.view;
+  $$(&#x27;[data-graph-mode]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.graphMode===mode)));
+  $$(&#x27;[data-selection-level]&#x27;).forEach(b=&gt;b.setAttribute(&#x27;aria-pressed&#x27;,String(b.dataset.selectionLevel===state.selectionLevel)));
+  $(&#x27;#fm-selection-search&#x27;).value=state.selectionSearch;
+  const parents=Object.entries(driverNames).map(([id,name])=&gt;({id,name,ids:sectors.filter(s=&gt;s.driver===id).map(s=&gt;s.id)})),children=sectors.map(s=&gt;({id:s.id,name:s.name,driver:s.driver,ids:[s.id]}));
+  const choices=state.selectionLevel===&#x27;hierarchy&#x27;?[...parents,...children]:state.selectionLevel===&#x27;driver&#x27;?parents:children;
+  const q=state.selectionSearch.trim().toLowerCase(),shown=choices.filter(c=&gt;(c.name+&#x27; &#x27;+(driverNames[c.driver]||&#x27;&#x27;)).toLowerCase().includes(q));
+  const choiceHTML=(c,nested=false)=&gt;{const n=c.ids.filter(id=&gt;state.sectors.includes(id)).length;return `&lt;label class=&quot;fm-check ${!c.driver?&#x27;fm-parent-choice&#x27;:&#x27;&#x27;}&quot;&gt;&lt;input type=&quot;checkbox&quot; data-scope-choice=&quot;${c.id}&quot; data-partial=&quot;${n&gt;0&amp;&amp;n&lt;c.ids.length}&quot; ${n===c.ids.length?&#x27;checked&#x27;:&#x27;&#x27;}&gt;${escape(c.name)}${c.driver&amp;&amp;!nested?&#x27;&lt;span class=&quot;fm-partial&quot;&gt;· &#x27;+driverNames[c.driver]+&#x27;&lt;/span&gt;&#x27;:!c.driver&amp;&amp;n&gt;0&amp;&amp;n&lt;c.ids.length?&#x27;&lt;span class=&quot;fm-partial&quot;&gt;&#x27;+n+&#x27; of &#x27;+c.ids.length+&#x27; tiers&lt;/span&gt;&#x27;:&#x27;&#x27;}&lt;/label&gt;`;};
+  if(state.selectionLevel===&#x27;hierarchy&#x27;){
+   const groups=parents.filter(p=&gt;p.name.toLowerCase().includes(q)||children.some(c=&gt;c.driver===p.id&amp;&amp;c.name.toLowerCase().includes(q)));
+   $(&#x27;#fm-quick-scope&#x27;).innerHTML=&#x27;&lt;div class=&quot;fm-hierarchy-options&quot;&gt;&#x27;+groups.map(p=&gt;&#x27;&lt;div role=&quot;group&quot; aria-label=&quot;&#x27;+escape(p.name)+&#x27; tiers&quot;&gt;&#x27;+choiceHTML(p)+&#x27;&lt;div class=&quot;fm-driver-children&quot;&gt;&#x27;+children.filter(c=&gt;c.driver===p.id&amp;&amp;(p.name.toLowerCase().includes(q)||c.name.toLowerCase().includes(q))).map(c=&gt;choiceHTML(c,true)).join(&#x27;&#x27;)+&#x27;&lt;/div&gt;&lt;/div&gt;&#x27;).join(&#x27;&#x27;)+(groups.length?&#x27;&#x27;:&#x27;&lt;span class=&quot;fm-detail&quot;&gt;No matching choices&lt;/span&gt;&#x27;)+&#x27;&lt;/div&gt;&#x27;;
+  }else $(&#x27;#fm-quick-scope&#x27;).innerHTML=&#x27;&lt;div class=&quot;fm-shared-options&quot;&gt;&#x27;+shown.map(c=&gt;choiceHTML(c)).join(&#x27;&#x27;)+(shown.length?&#x27;&#x27;:&#x27;&lt;span class=&quot;fm-detail&quot;&gt;No matching choices&lt;/span&gt;&#x27;)+&#x27;&lt;/div&gt;&#x27;;
+  $$(&#x27;[data-scope-choice]&#x27;).forEach(el=&gt;{el.indeterminate=el.dataset.partial===&#x27;true&#x27;;el.addEventListener(&#x27;change&#x27;,()=&gt;{const ids=choices.find(c=&gt;c.id===el.dataset.scopeChoice).ids;state.sectors=el.checked?[...new Set([...state.sectors,...ids])]:state.sectors.filter(id=&gt;!ids.includes(id));update();});});
+  const selected=activeSectors(),drivers=selectedDrivers();
+  $(&#x27;#fm-selected-scope&#x27;).textContent=selected.length?(drivers.map(id=&gt;{const n=activeSectors(id).length,total=sectors.filter(s=&gt;s.driver===id).length;return driverNames[id]+(n&lt;total?&#x27; (&#x27;+n+&#x27;/&#x27;+total+&#x27; tiers)&#x27;:&#x27;&#x27;);}).join(&#x27; + &#x27;)+&#x27; · &#x27;+selected.length+&#x27; of &#x27;+sectors.length+&#x27; forecast tiers selected&#x27;):&#x27;Nothing selected · choose a growth driver or forecast tier&#x27;;
+  $(&#x27;#fm-chart-scope&#x27;).textContent=selectedDrivers().length+&#x27; growth driver&#x27;+(selectedDrivers().length===1?&#x27;&#x27;:&#x27;s&#x27;)+&#x27; · &#x27;+activeSectors().length+&#x27; forecast tiers&#x27;+(state.combined?&#x27; · total&#x27;:&#x27;&#x27;);
+  $(&#x27;#fm-graph-context&#x27;).textContent=(!state.combined&amp;&amp;state.view===&#x27;hierarchy&#x27;?&#x27;Each growth driver shows its selected total and sector lines together · &#x27;:&#x27;Actuals and saved forecast follow the shared selection · &#x27;)+state.trends[0]+&#x27;M trend uses the same scope&#x27;;
+ }
+ function chartSeries(metric,driver){
+  const months=Array.from({length:Math.max(0,monthIndex(state.monthEnd)-monthIndex(state.monthStart)+1)},(_,i)=&gt;monthIndex(state.monthStart)+i),series=[];
+  for(const combo of comboGroups())for(const group of chartGroups().filter(g=&gt;!driver||g.driver===driver)){
+   const color=styleColor(group.color),suffix=comboGroups().length&gt;1?&#x27; · &#x27;+shortCycle(combo.cycle)+&#x27; · &#x27;+combo.scenario:&#x27;&#x27;,name=group.name+suffix,c=monthIndex(combo.cycle)-(metric.section===&#x27;ef&#x27;?1:2);
+   const plan=months.map(t=&gt;({x:t,y:amount(combo,group.sectors,metric,[t])}));
+   const weight=!state.combined&amp;&amp;state.view===&#x27;hierarchy&#x27;?(group.level===&#x27;driver&#x27;?3:1.7):2.5;
+   series.push({id:combo.key+&#x27;|&#x27;+group.id+&#x27;|actual&#x27;,name:name+&#x27; · Actuals&#x27;,kind:&#x27;actual&#x27;,color,width:weight,dash:&#x27;&#x27;,points:plan.map(p=&gt;({x:p.x,y:p.x&lt;=c?p.y:null}))});
+   series.push({id:combo.key+&#x27;|&#x27;+group.id+&#x27;|forecast&#x27;,name:name+&#x27; · Forecast&#x27;,kind:&#x27;forecast&#x27;,color,width:weight,dash:&#x27;8 4&#x27;,points:plan.map(p=&gt;({x:p.x,y:p.x&gt;=c?p.y:null}))});
+   for(const trend of state.trends)series.push({id:combo.key+&#x27;|&#x27;+group.id+&#x27;|&#x27;+trend,name:name+&#x27; · &#x27;+trend+&#x27;M trend&#x27;,kind:&#x27;trend&#x27;,window:trend,color,width:Math.max(1.2,weight-.7),dash:&#x27;2 4&#x27;,points:months.map(t=&gt;({x:t,y:t&gt;=c?amount(combo,group.sectors,metric,[t],trend):null}))});
+  }
+  return {series,months};
+ }
+ function renderCharts(){
+  const metrics=catalog.filter(m=&gt;state.metrics.includes(m.id));$(&#x27;#fm-chart-title&#x27;).textContent=(metrics.length===1?metrics[0].name:&#x27;Demand comparison&#x27;)+&#x27; · &#x27;+(state.combined?&#x27;Total&#x27;:state.view===&#x27;sector&#x27;?&#x27;Forecast tiers&#x27;:state.view===&#x27;hierarchy&#x27;?&#x27;Growth drivers + tiers&#x27;:&#x27;Growth drivers&#x27;);
+  $(&#x27;#fm-plots&#x27;).replaceChildren();$(&#x27;#fm-legend&#x27;).replaceChildren();
+  if(!metrics.length){$(&#x27;#fm-plots&#x27;).innerHTML=&#x27;&lt;div class=&quot;fm-empty&quot;&gt;Choose a section and measure.&lt;/div&gt;&#x27;;return;}
+  const combos=comboGroups();if(!combos.length||!activeSectors().length||!factor()){$(&#x27;#fm-plots&#x27;).innerHTML=&#x27;&lt;div class=&quot;fm-empty&quot;&gt;&#x27;+(!combos.length?&#x27;Select at least one matching file.&#x27;:!activeSectors().length?&#x27;Select at least one growth driver or sector.&#x27;:&#x27;Choose a channel and sub channel.&#x27;)+&#x27;&lt;/div&gt;&#x27;;return;}
+  for(const metric of metrics)for(const driver of !state.combined&amp;&amp;state.view===&#x27;hierarchy&#x27;?selectedDrivers():[&#x27;&#x27;]){const block=document.createElement(&#x27;div&#x27;);block.className=&#x27;fm-plotblock&#x27;;if(metrics.length&gt;1||driver){const h=document.createElement(&#x27;div&#x27;);h.className=&#x27;fm-plot-heading&#x27;;h.textContent=(metrics.length&gt;1?metric.name+&#x27; · &#x27;:&#x27;&#x27;)+(driver?driverNames[driver]+&#x27; · total and selected tiers&#x27;:&#x27;&#x27;);block.append(h);}const fitNote=document.createElement(&#x27;div&#x27;);fitNote.className=&#x27;fm-plot-context&#x27;;fitNote.dataset.fitContext=metric.id;fitNote.textContent=chartBenchmarkContext(metric,driver);block.append(fitNote);if(driver){const periodNote=document.createElement(&#x27;div&#x27;);periodNote.className=&#x27;fm-plot-context&#x27;;periodNote.dataset.driverPeriod=driver;periodNote.textContent=driverPeriodContext(metric,driver);block.append(periodNote);}const plot=document.createElement(&#x27;div&#x27;);plot.className=&#x27;fm-plot&#x27;;plot.dataset.metric=metric.id;plot.dataset.driver=driver;block.append(plot);$(&#x27;#fm-plots&#x27;).append(block);drawPlot(plot,metric);}
+  const legend=[];for(const combo of combos)for(const group of chartGroups()){const color=styleColor(group.color);legend.push(`&lt;span class=&quot;fm-legend-item&quot;&gt;&lt;span class=&quot;fm-legend-line&quot; style=&quot;--series:${color}&quot;&gt;&lt;/span&gt;${escape(group.name+(combos.length&gt;1?&#x27; · &#x27;+shortCycle(combo.cycle)+&#x27; · &#x27;+combo.scenario:&#x27;&#x27;))}&lt;/span&gt;`);}for(const [label,dash]of [[&#x27;Actuals&#x27;,&#x27;&#x27;],[&#x27;Forecast&#x27;,&#x27;8 4&#x27;],[state.trends[0]+&#x27;M trend&#x27;,&#x27;2 4&#x27;]])legend.push(`&lt;span class=&quot;fm-legend-item&quot;&gt;&lt;svg viewBox=&quot;0 0 26 10&quot; aria-hidden=&quot;true&quot;&gt;&lt;line x1=&quot;0&quot; x2=&quot;26&quot; y1=&quot;5&quot; y2=&quot;5&quot; stroke=&quot;var(--fm-muted)&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;${dash}&quot;/&gt;&lt;/svg&gt;${label}&lt;/span&gt;`);$(&#x27;#fm-legend&#x27;).innerHTML=legend.join(&#x27;&#x27;);
+ }
+ function drawPlot(plot,metric){
+  const width=Math.floor(plot.getBoundingClientRect().width);if(width&lt;100)return;const height=parseFloat(getComputedStyle(root).getPropertyValue(&#x27;--fm-chart-height&#x27;))||285;
+  const {series,months}=chartSeries(metric,plot.dataset.driver),numbers=series.flatMap(s=&gt;s.points.map(p=&gt;p.y)).filter(v=&gt;v!==null&amp;&amp;Number.isFinite(v));
+  if(!numbers.length){plot.innerHTML=&#x27;&lt;div class=&quot;fm-chart-empty&quot;&gt;A selected scenario is missing a file for this growth driver.&lt;/div&gt;&#x27;;return;}
+  const m={l:65,r:17,t:width&lt;370?46:32,b:45},x=t=&gt;m.l+(t-months[0])/Math.max(1,months.at(-1)-months[0])*(width-m.l-m.r);let lo=Math.min(...numbers),hi=Math.max(...numbers),pad=Math.max((hi-lo)*.12,Math.abs(hi)*.04);lo=Math.max(0,lo-pad);hi+=pad;const y=v=&gt;height-m.b-(v-lo)/(hi-lo||1)*(height-m.t-m.b),numTicks=4;
+  const clip=&#x27;fm-clip-&#x27;+metric.id+&#x27;-&#x27;+(plot.dataset.driver||&#x27;all&#x27;);
+  let svg=`&lt;svg viewBox=&quot;0 0 ${width} ${height}&quot; role=&quot;img&quot; aria-label=&quot;${escape(metric.name)} by month for the selected files and ${state.view===&#x27;sector&#x27;?&#x27;forecast tiers&#x27;:&#x27;growth drivers&#x27;}&quot;&gt;&lt;title&gt;${escape(metric.name)} · selected plan and trend comparison&lt;/title&gt;&lt;defs&gt;&lt;clipPath id=&quot;${clip}&quot;&gt;&lt;rect x=&quot;${m.l}&quot; y=&quot;${m.t}&quot; width=&quot;${width-m.l-m.r}&quot; height=&quot;${height-m.t-m.b}&quot;/&gt;&lt;/clipPath&gt;&lt;/defs&gt;&lt;text class=&quot;fm-axislabel axis-title&quot; data-axis=&quot;y&quot; x=&quot;${m.l}&quot; y=&quot;16&quot;&gt;${metric.unit===&#x27;%&#x27;?&#x27;Share (%)&#x27;:metric.unit===&#x27;£&#x27;?&#x27;Value (£)&#x27;:&#x27;Units&#x27;}&lt;/text&gt;`;
+  const reviewBands=new Set();for(const combo of comboGroups())for(const period of periodOptions.filter(p=&gt;state.periods.includes(p.id))){const periodValues=periodMonths(period.id,combo,metric);if(!periodValues.length)continue;const start=Math.max(months[0],periodValues[0]-.5),end=Math.min(months.at(-1),periodValues.at(-1)+.5),key=start+&#x27;|&#x27;+end;if(end&lt;=start||reviewBands.has(key))continue;reviewBands.add(key);svg+=`&lt;rect class=&quot;fm-review-band&quot; data-review-period=&quot;${period.id}&quot; x=&quot;${x(start)}&quot; y=&quot;${m.t}&quot; width=&quot;${x(end)-x(start)}&quot; height=&quot;${height-m.t-m.b}&quot;/&gt;`;}
+  for(let i=0;i&lt;=numTicks;i++){const v=lo+(hi-lo)*i/numTicks,py=y(v);svg+=`&lt;line class=&quot;fm-gridline&quot; x1=&quot;${m.l}&quot; y1=&quot;${py}&quot; x2=&quot;${width-m.r}&quot; y2=&quot;${py}&quot;/&gt;&lt;text x=&quot;${m.l-10}&quot; y=&quot;${py+4}&quot; text-anchor=&quot;end&quot;&gt;${compact(v,metric.unit)}&lt;/text&gt;`;}
+  const steps=width&lt;450?3:width&lt;760?5:7,indices=[...new Set(Array.from({length:steps},(_,i)=&gt;Math.round(i*(months.length-1)/Math.max(1,steps-1))))];for(const index of indices){const t=months[index];svg+=`&lt;text x=&quot;${x(t)}&quot; y=&quot;${height-m.b+21}&quot; text-anchor=&quot;${index===0?&#x27;start&#x27;:index===months.length-1?&#x27;end&#x27;:&#x27;middle&#x27;}&quot;&gt;${monthLabel(t)}&lt;/text&gt;`;}
+  svg+=`&lt;rect data-chart-frame x=&quot;${m.l}&quot; y=&quot;${m.t}&quot; width=&quot;${width-m.l-m.r}&quot; height=&quot;${height-m.t-m.b}&quot; fill=&quot;none&quot; stroke=&quot;var(--fm-line)&quot;/&gt;&lt;text class=&quot;fm-axislabel axis-title&quot; data-axis=&quot;x&quot; x=&quot;${m.l+(width-m.l-m.r)/2}&quot; y=&quot;${height-4}&quot; text-anchor=&quot;middle&quot;&gt;Demand month&lt;/text&gt;&lt;g clip-path=&quot;url(#${clip})&quot;&gt;`;
+  const cutoffs=[...new Set(combosForCutoff().map(f=&gt;cutoff(f,metric)))];for(const c of cutoffs)if(c&gt;=months[0]&amp;&amp;c&lt;months.at(-1)){svg+=`&lt;line class=&quot;fm-cutoff&quot; x1=&quot;${x(c+.5)}&quot; x2=&quot;${x(c+.5)}&quot; y1=&quot;${m.t}&quot; y2=&quot;${height-m.b}&quot;/&gt;`;}
+  for(const s of series){let open=false,path=&#x27;&#x27;;for(const p of s.points){if(p.y==null){open=false;continue;}path+=(open?&#x27;L&#x27;:&#x27;M&#x27;)+x(p.x).toFixed(2)+&#x27;,&#x27;+y(p.y).toFixed(2);open=true;}svg+=`&lt;path class=&quot;fm-curve&quot; data-series=&quot;${escape(s.id)}&quot; data-kind=&quot;${s.kind}&quot; d=&quot;${path}&quot; stroke=&quot;${s.color}&quot; stroke-width=&quot;${s.width}&quot; stroke-dasharray=&quot;${s.dash}&quot;/&gt;`;}
+  svg+=&#x27;&lt;/g&gt;&#x27;;if(cutoffs.length===1&amp;&amp;cutoffs[0]&gt;=months[0]&amp;&amp;cutoffs[0]&lt;months.at(-1))svg+=`&lt;text x=&quot;${width-m.r}&quot; y=&quot;${m.t-7}&quot; text-anchor=&quot;end&quot;&gt;Actuals through ${monthLabel(cutoffs[0])}&lt;/text&gt;`;
+  if(state.combined&amp;&amp;comboGroups().length===1&amp;&amp;width&gt;=600){const labels=series.filter(s=&gt;s.kind===&#x27;forecast&#x27;||s.kind===&#x27;trend&#x27;).map(s=&gt;({s,point:s.points.at(-1)})).filter(({point})=&gt;point?.y!=null).map(({s,point})=&gt;({text:(s.kind===&#x27;forecast&#x27;?&#x27;Plan&#x27;:s.window+&#x27;M trend&#x27;)+&#x27; &#x27;+compact(point.y,metric.unit),py:y(point.y)})).sort((a,b)=&gt;a.py-b.py);for(let i=0;i&lt;labels.length;i++)labels[i].py=Math.max(m.t+13,Math.min(height-m.b-7,labels[i].py));for(let i=1;i&lt;labels.length;i++)labels[i].py=Math.max(labels[i].py,labels[i-1].py+17);if(labels.at(-1)?.py&gt;height-m.b-7){const shift=labels.at(-1).py-(height-m.b-7);labels.forEach(label=&gt;label.py-=shift);}for(const label of labels)svg+=`&lt;text class=&quot;fm-end-label&quot; x=&quot;${width-m.r-5}&quot; y=&quot;${label.py-5}&quot; text-anchor=&quot;end&quot;&gt;${escape(label.text)}&lt;/text&gt;`;}
+  svg+=`&lt;g data-hover-marks&gt;&lt;/g&gt;&lt;rect data-chart-hit data-chart-hover-overlay=&quot;cross-series&quot; x=&quot;${m.l}&quot; y=&quot;${m.t}&quot; width=&quot;${width-m.l-m.r}&quot; height=&quot;${height-m.t-m.b}&quot; fill=&quot;transparent&quot;/&gt;&lt;/svg&gt;&lt;div class=&quot;fm-tooltip&quot; role=&quot;tooltip&quot; hidden&gt;&lt;/div&gt;`;plot.innerHTML=svg;
+  const overlay=plot.querySelector(&#x27;[data-chart-hit]&#x27;),tip=plot.querySelector(&#x27;.fm-tooltip&#x27;),marks=plot.querySelector(&#x27;[data-hover-marks]&#x27;);let pinned=false;
+  function show(event){const box=plot.getBoundingClientRect(),px=Math.max(m.l,Math.min(width-m.r,event.clientX-box.left)),t=months[0]+(px-m.l)/(width-m.l-m.r)*(months.at(-1)-months[0]),nearest=Math.round(t),index=Math.max(0,Math.min(months.length-1,Math.floor(t-months[0]))),alpha=t-months[0]-index;let rows=[],markHtml=`&lt;line data-chart-hover-guide x1=&quot;${px}&quot; x2=&quot;${px}&quot; y1=&quot;${m.t}&quot; y2=&quot;${height-m.b}&quot; stroke=&quot;${getComputedStyle(root).getPropertyValue(&#x27;--fm-muted&#x27;).trim()}&quot; stroke-width=&quot;1&quot;/&gt;`;for(const s of series){const a=s.points[index],b=s.points[Math.min(index+1,s.points.length-1)];if(a?.y==null||b?.y==null)continue;const value=a.y+(b.y-a.y)*alpha;markHtml+=`&lt;circle data-chart-hover-marker cx=&quot;${px}&quot; cy=&quot;${y(value)}&quot; r=&quot;3&quot; fill=&quot;${s.color}&quot;/&gt;`;rows.push(`&lt;div&gt;&lt;span&gt;${escape(s.name)}&lt;/span&gt;&lt;span&gt;${rawNumber(value,metric.unit)}&lt;/span&gt;&lt;/div&gt;`);}marks.innerHTML=markHtml;tip.innerHTML=&#x27;&lt;strong&gt;&#x27;+monthLabel(nearest)+&#x27;&lt;/strong&gt;&#x27;+rows.join(&#x27;&#x27;);tip.hidden=!rows.length;tip.style.left=Math.max(4,Math.min(width-tip.offsetWidth-4,px+12))+&#x27;px&#x27;;tip.style.top=Math.max(22,Math.min(height-tip.offsetHeight-6,event.clientY-box.top-20))+&#x27;px&#x27;;}
+  overlay.addEventListener(&#x27;pointermove&#x27;,e=&gt;{if(!pinned)show(e);});overlay.addEventListener(&#x27;pointerleave&#x27;,()=&gt;{if(!pinned){marks.replaceChildren();tip.hidden=true;}});overlay.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{pinned=!pinned;show(e);});
+ }
+ function combosForCutoff(){return pickedFiles().filter(f=&gt;selectedDrivers().includes(f.driver));}
+ function reviewSectors(driver){return activeSectors(driver);}
+ function renderSummary(){
+  const metrics=catalog.filter(m=&gt;state.metrics.includes(m.id)),combos=comboGroups(),drivers=selectedDrivers(),scope=reviewSectors(),periods=periodOptions.filter(p=&gt;state.periods.includes(p.id));
+  $(&#x27;#fm-summary-context&#x27;).textContent=(state.tableView===&#x27;sector&#x27;?&#x27;Forecast tiers · flat rows&#x27;:state.tableView===&#x27;hierarchy&#x27;?&#x27;Growth driver subtotals with sectors underneath&#x27;:&#x27;Growth drivers · flat rows&#x27;)+&#x27; · same selection as graph&#x27;;
+  $(&#x27;#fm-sort-gaps&#x27;).setAttribute(&#x27;aria-pressed&#x27;,String(state.sortGaps));
+  const dimensions=[];
+  if(new Set(combos.map(c=&gt;c.cycle)).size&gt;1)dimensions.push({label:&#x27;Cycle&#x27;,width:105,value:(combo,metric)=&gt;shortCycle(combo.cycle)});
+  if(new Set(combos.map(c=&gt;c.scenario)).size&gt;1)dimensions.push({label:&#x27;Plan&#x27;,width:110,value:(combo,metric)=&gt;combo.scenario});
+  if(metrics.length&gt;1)dimensions.push({label:&#x27;Measure&#x27;,width:145,value:(combo,metric)=&gt;metric.name});
+  const span=1+state.tableTrends.length*2,colCount=1+dimensions.length+periods.length*span,depth=state.tableTrends.length?3:2;
+  let cols=&#x27;&lt;colgroup&gt;&lt;col style=&quot;width:200px&quot;&gt;&#x27;;for(const dim of dimensions)cols+=`&lt;col style=&quot;width:${dim.width}px&quot;&gt;`;for(const period of periods){cols+=&#x27;&lt;col style=&quot;width:100px&quot;&gt;&#x27;;for(const trend of state.tableTrends)cols+=&#x27;&lt;col style=&quot;width:95px&quot;&gt;&lt;col style=&quot;width:75px&quot;&gt;&#x27;;}cols+=&#x27;&lt;/colgroup&gt;&#x27;;
+  let header=&#x27;&lt;thead&gt;&lt;tr&gt;&lt;th rowspan=&quot;&#x27;+depth+&#x27;&quot; scope=&quot;col&quot;&gt;&#x27;+(state.tableView===&#x27;sector&#x27;?&#x27;Forecast tier (sector)&#x27;:state.tableView===&#x27;hierarchy&#x27;?&#x27;Growth driver / Forecast tier&#x27;:&#x27;Growth driver&#x27;)+&#x27;&lt;/th&gt;&#x27;;
+  for(const dim of dimensions)header+=`&lt;th rowspan=&quot;${depth}&quot; scope=&quot;col&quot;&gt;${dim.label}&lt;/th&gt;`;
+  for(const period of periods)header+=`&lt;th class=&quot;fm-period-group fm-period-start&quot; colspan=&quot;${span}&quot; scope=&quot;colgroup&quot; data-period-group=&quot;${period.id}&quot;&gt;${period.name}&lt;small class=&quot;fm-period-range&quot;&gt;${periodHeaderRange(period)}&lt;/small&gt;&lt;/th&gt;`;
+  header+=&#x27;&lt;/tr&gt;&lt;tr&gt;&#x27;;
+  for(const period of periods){header+=`&lt;th class=&quot;fm-period-start&quot; rowspan=&quot;${state.tableTrends.length?2:1}&quot; scope=&quot;col&quot;&gt;Total Plan&lt;/th&gt;`;for(const trend of state.tableTrends)header+=`&lt;th class=&quot;fm-trend-group&quot; colspan=&quot;2&quot; scope=&quot;colgroup&quot;&gt;${trend}M variance&lt;/th&gt;`;}
+  header+=&#x27;&lt;/tr&gt;&#x27;;
+  if(state.tableTrends.length){header+=&#x27;&lt;tr&gt;&#x27;;for(const period of periods)for(const trend of state.tableTrends)header+=`&lt;th scope=&quot;col&quot; data-tooltip=&quot;Signed plan minus ${trend}-month trend, in the measure&#x27;s units&quot;&gt;Absolute&lt;/th&gt;&lt;th scope=&quot;col&quot; data-tooltip=&quot;Plan minus ${trend}-month trend as a percentage of that trend&quot;&gt;%&lt;/th&gt;`;header+=&#x27;&lt;/tr&gt;&#x27;;}
+  header+=&#x27;&lt;/thead&gt;&#x27;;
+  $(&#x27;#fm-summary&#x27;).style.minWidth=(200+dimensions.reduce((n,d)=&gt;n+d.width,0)+periods.length*(100+state.tableTrends.length*170))+&#x27;px&#x27;;let body=&#x27;&#x27;;
+  function row(combo,subset,metric,label,cls,tier,driver){
+   const partial=driver&amp;&amp;subset.length&lt;sectors.filter(s=&gt;s.driver===driver).length;
+   const caption=escape(label)+(tier&amp;&amp;state.tableView!==&#x27;hierarchy&#x27;?`&lt;small class=&quot;fm-tier-parent&quot;&gt;${escape(driverNames[tier.driver])}&lt;/small&gt;`:partial?`&lt;small class=&quot;fm-tier-parent&quot;&gt;${subset.length} of ${sectors.filter(s=&gt;s.driver===driver).length} tiers selected&lt;/small&gt;`:&#x27;&#x27;);
+   let html=`&lt;tr class=&quot;${cls}&quot; ${tier?&#x27;data-tier-row=&quot;&#x27;+tier.id+&#x27;&quot;&#x27;:driver?&#x27;data-driver-row=&quot;&#x27;+driver+&#x27;&quot;&#x27;:&#x27;&#x27;}&gt;&lt;td&gt;${caption}&lt;/td&gt;`;
+   for(const dim of dimensions)html+=`&lt;td class=&quot;fm-dimension&quot;&gt;${escape(dim.value(combo,metric))}&lt;/td&gt;`;
+   for(const period of periods){
+    const months=periodMonths(period.id,combo,metric),plan=amount(combo,subset,metric,months);
+    html+=`&lt;td class=&quot;fm-period-start&quot; data-period=&quot;${period.id}&quot; data-value=&quot;${plan==null?&#x27;&#x27;:plan}&quot; data-tooltip=&quot;${rawNumber(plan,metric.unit)}&quot;&gt;${compact(plan,metric.unit)}&lt;/td&gt;`;
+    for(const trend of state.tableTrends){
+     const benchmark=amount(combo,subset,metric,months,trend),delta=plan==null||benchmark==null?null:plan-benchmark,percent=delta==null||benchmark===0?null:delta/Math.abs(benchmark),tone=delta&gt;0?&#x27;fm-delta-over&#x27;:delta&lt;0?&#x27;fm-delta-under&#x27;:&#x27;&#x27;;
+     const percentText=percent==null?&#x27;—&#x27;:(percent&gt;0?&#x27;+&#x27;:percent&lt;0?&#x27;−&#x27;:&#x27;&#x27;)+(Math.abs(percent)*100).toFixed(1)+&#x27;%&#x27;;
+     const groups=[scope,...drivers.map(d=&gt;reviewSectors(d)),...scope.map(s=&gt;[s])],scale=Math.max(0,...groups.map(group=&gt;{const p=amount(combo,group,metric,months),t=amount(combo,group,metric,months,trend);return p==null||t==null?0:Math.abs(p-t);})),barWidth=delta==null||!scale?0:Math.abs(delta)/scale*47;
+     const bar=delta==null?&#x27;&#x27;:`&lt;span class=&quot;fm-variance-track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;fm-variance-zero&quot;&gt;&lt;/span&gt;&lt;span class=&quot;fm-variance-bar&quot; data-direction=&quot;${delta&lt;0?&#x27;under&#x27;:&#x27;over&#x27;}&quot; style=&quot;left:${delta&lt;0?50-barWidth:50}%;width:${barWidth}%&quot;&gt;&lt;/span&gt;&lt;/span&gt;`;
+     html+=`&lt;td class=&quot;${tone}&quot; data-period=&quot;${period.id}&quot; data-trend-window=&quot;${trend}&quot; data-delta=&quot;${delta==null?&#x27;&#x27;:delta}&quot; data-tooltip=&quot;${delta==null?&#x27;Unavailable&#x27;:deltaLabel(delta,metric.unit)}&quot;&gt;${deltaLabel(delta,metric.unit)}${bar}&lt;/td&gt;&lt;td class=&quot;${tone}&quot; data-period=&quot;${period.id}&quot; data-trend-window=&quot;${trend}&quot; data-variance-percent=&quot;${percent==null?&#x27;&#x27;:percent}&quot; data-tooltip=&quot;${percent==null?&#x27;Unavailable or zero trend benchmark&#x27;:percentText+&#x27; vs &#x27;+trend+&#x27;M trend&#x27;}&quot;&gt;${percentText}&lt;/td&gt;`;
+    }
+   }
+   return html+&#x27;&lt;/tr&gt;&#x27;;
+  }
+  function score(combo,subset,metric){if(!periods.length)return 0;const months=periodMonths(periods[0].id,combo,metric),plan=amount(combo,subset,metric,months),trend=amount(combo,subset,metric,months,state.sortWindow);return plan==null||trend==null?0:Math.abs(plan-trend);}
+  if(scope.length&amp;&amp;periods.length)for(const combo of combos)for(const metric of metrics){
+   body+=row(combo,scope,metric,&#x27;Total&#x27;,&#x27;fm-total&#x27;);
+   const entries=state.tableView===&#x27;sector&#x27;?scope.map(tier=&gt;({label:tier.name,subset:[tier],tier})):drivers.map(driver=&gt;({label:driverNames[driver],subset:reviewSectors(driver),driver})).filter(e=&gt;e.subset.length);
+   if(state.sortGaps)entries.sort((a,b)=&gt;score(combo,b.subset,metric)-score(combo,a.subset,metric));
+   for(const entry of entries){
+    body+=row(combo,entry.subset,metric,entry.label,&#x27;fm-table-row&#x27;+(entry.tier?&#x27; fm-sector-row&#x27;:&#x27;&#x27;)+(state.tableView===&#x27;hierarchy&#x27;?&#x27; fm-subtotal&#x27;:&#x27;&#x27;),entry.tier,entry.driver);
+    if(state.tableView===&#x27;hierarchy&#x27;){
+     const tiers=entry.subset.slice();if(state.sortGaps)tiers.sort((a,b)=&gt;score(combo,[b],metric)-score(combo,[a],metric));
+     for(const tier of tiers)body+=row(combo,[tier],metric,tier.name,&#x27;fm-table-row fm-sector-row fm-hierarchy-child&#x27;,tier);
+    }
+   }
+  }
+  $(&#x27;#fm-summary&#x27;).innerHTML=cols+header+&#x27;&lt;tbody&gt;&#x27;+body+&#x27;&lt;/tbody&gt;&#x27;;
+  if(!body)$(&#x27;#fm-summary&#x27;).innerHTML=cols+header+`&lt;tbody&gt;&lt;tr&gt;&lt;td colspan=&quot;${colCount}&quot; class=&quot;fm-empty&quot;&gt;${!combos.length?&#x27;Select at least one file.&#x27;:!metrics.length?&#x27;Select a measure.&#x27;:!periods.length?&#x27;Select a summary period.&#x27;:&#x27;Select a growth driver or forecast tier.&#x27;}&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;`;
+ }
+ function renderPlanStatus(){
+  const automatic=state.fileMode===&#x27;ads&#x27;,issues=automatic?adsSelection(state.cycles,files,selectedDrivers()).issues:[];
+  const families=[...new Set(pickedFiles().map(planFamily))];
+  $(&#x27;#fm-plan-summary&#x27;).textContent=automatic?&#x27;Plan: ADS · &#x27;+(issues.length?&#x27;incomplete&#x27;:&#x27;automatic&#x27;):families.length===1?&#x27;Plan: &#x27;+families[0]+&#x27; · custom&#x27;:&#x27;Custom plan comparison&#x27;;
+  const note=$(&#x27;#fm-plan-status&#x27;);note.hidden=!issues.length;
+  note.textContent=issues.map(i=&gt;(i.status===&#x27;MISSING&#x27;?&#x27;ADS not available&#x27;:&#x27;ADS source is ambiguous&#x27;)+&#x27; for &#x27;+driverNames[i.driver]+&#x27; (&#x27;+cycleName(i.cycle)+&#x27;)&#x27;).join(&#x27; · &#x27;)+(issues.length?&#x27; · Source details below&#x27;:&#x27;&#x27;);
+ }
+ function update(save=true){const start=performance.now();if(state.fileMode===&#x27;ads&#x27;)state.files=adsSelection(state.cycles,files,selectedDrivers()).files.map(f=&gt;f.id);renderPlanStatus();dropdowns.forEach(d=&gt;d.caption());$(&#x27;#fm-month-start&#x27;).value=state.monthStart;$(&#x27;#fm-month-end&#x27;).value=state.monthEnd;$(&#x27;#fm-selected-only&#x27;).checked=state.selectedOnly;$(&#x27;#fm-file-search&#x27;).value=state.fileSearch;$$(&#x27;[data-chart-trend]&#x27;).forEach(x=&gt;x.checked=state.trends.includes(Number(x.dataset.chartTrend)));$$(&#x27;[data-table-trend]&#x27;).forEach(x=&gt;x.checked=state.tableTrends.includes(Number(x.dataset.tableTrend)));$$(&#x27;[data-table-view]&#x27;).forEach(x=&gt;x.setAttribute(&#x27;aria-pressed&#x27;,String(x.dataset.tableView===state.tableView)));$(&#x27;#fm-cycle-caption&#x27;).textContent=state.cycles.map(cycleName).join(&#x27; · &#x27;)||&#x27;Choose a demand cycle&#x27;;renderFiles();renderQuick();renderExecutive();renderRanking();renderCharts();renderSummary();$(&#x27;#fm-live-note&#x27;).textContent=&#x27;Demo data · local interactions&#x27;;if(save)persist();}
+ $(&#x27;#fm-select-files&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.fileMode=&#x27;custom&#x27;;const current=matchingFiles(),bestADS=adsSelection(state.cycles,current).files,others=current.filter(f=&gt;!adsInfo(f));const keys=new Set([...bestADS,...others].map(f=&gt;f.cycle+&#x27;|&#x27;+f.driver+&#x27;|&#x27;+planFamily(f)));state.files=state.files.filter(id=&gt;{const f=files.find(x=&gt;x.id===id);return !f||!keys.has(f.cycle+&#x27;|&#x27;+f.driver+&#x27;|&#x27;+planFamily(f));});state.files=[...new Set([...state.files,...bestADS.map(f=&gt;f.id),...others.map(f=&gt;f.id)])];update();});
+ $(&#x27;#fm-clear-files&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.fileMode=&#x27;custom&#x27;;const current=new Set(matchingFiles().map(f=&gt;f.id));state.files=state.files.filter(id=&gt;!current.has(id));update();});
+ $(&#x27;#fm-restore-ads&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.fileMode=&#x27;ads&#x27;;state.filePage=0;update();});
+ $(&#x27;#fm-selected-only&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.selectedOnly=e.target.checked;state.filePage=0;update();});
+ $(&#x27;#fm-file-search&#x27;).addEventListener(&#x27;input&#x27;,e=&gt;{state.fileSearch=e.target.value;state.filePage=0;renderFiles();persist();});
+ $(&#x27;#fm-prev-files&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.filePage--;renderFiles();});$(&#x27;#fm-next-files&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.filePage++;renderFiles();});
+ $$(&#x27;[data-graph-mode]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{const mode=b.dataset.graphMode;state.combined=mode===&#x27;total&#x27;;if(mode!==&#x27;total&#x27;)state.view=mode;update();}));
+ $(&#x27;#fm-sort-gaps&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.sortGaps=!state.sortGaps;update();});
+ $(&#x27;#fm-rank-window&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.sortWindow=Number(e.target.value);update();});
+ $(&#x27;#fm-compare-periods&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.periods=[...new Set([...state.periods,&#x27;2026:FY&#x27;,&#x27;2026:YTG&#x27;])];update();});
+ $$(&#x27;[data-chart-trend]&#x27;).forEach(el=&gt;el.addEventListener(&#x27;change&#x27;,()=&gt;{if(el.checked){state.trends=[Number(el.dataset.chartTrend)];update();}}));
+ $$(&#x27;[data-table-trend]&#x27;).forEach(el=&gt;el.addEventListener(&#x27;change&#x27;,()=&gt;{state.tableTrends=el.checked?[...new Set([...state.tableTrends,Number(el.dataset.tableTrend)])].sort((a,b)=&gt;a-b):state.tableTrends.filter(t=&gt;t!==Number(el.dataset.tableTrend));update();}));
+ $$(&#x27;[data-table-view]&#x27;).forEach(el=&gt;el.addEventListener(&#x27;click&#x27;,()=&gt;{state.tableView=el.dataset.tableView;update();}));
+ $$(&#x27;[data-selection-level]&#x27;).forEach(el=&gt;el.addEventListener(&#x27;click&#x27;,()=&gt;{state.selectionLevel=el.dataset.selectionLevel;state.selectionSearch=&#x27;&#x27;;update();}));
+ $(&#x27;#fm-selection-search&#x27;).addEventListener(&#x27;input&#x27;,e=&gt;{state.selectionSearch=e.target.value;renderQuick();persist();});
+ $(&#x27;#fm-select-scope&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.sectors=sectors.map(s=&gt;s.id);update();});
+ $(&#x27;#fm-clear-scope&#x27;).addEventListener(&#x27;click&#x27;,()=&gt;{state.sectors=[];update();});
+ for(const [id,key,other]of [[&#x27;#fm-month-start&#x27;,&#x27;monthStart&#x27;,&#x27;monthEnd&#x27;],[&#x27;#fm-month-end&#x27;,&#x27;monthEnd&#x27;,&#x27;monthStart&#x27;]])$(id).addEventListener(&#x27;change&#x27;,e=&gt;{const value=e.target.value;if(!value)return;state[key]=value;if(state.monthStart&gt;state.monthEnd)state[other]=value;update();});
+ let resizeTimer;new ResizeObserver(()=&gt;{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=&gt;{for(const p of $$(&#x27;.fm-plot&#x27;))drawPlot(p,catalog.find(m=&gt;m.id===p.dataset.metric));},60);}).observe(root);
+ window.addEventListener(&#x27;openai:set_globals&#x27;,e=&gt;{const next=e.detail?.globals?.widgetState?.modelContent;if(next?.schema===&#x27;fm-executive-period-review-html-r9&#x27;&amp;&amp;next.state){state={...defaults,...next.state};update(false);}});
+ const design={density:&#x27;Compact&#x27;,chartHeight:285};
+ if(globalThis.Tweak){const tweak=new Tweak({container:root,onChange:()=&gt;{root.style.setProperty(&#x27;--fm-rowpad&#x27;,design.density===&#x27;Compact&#x27;?&#x27;6px&#x27;:&#x27;10px&#x27;);root.style.setProperty(&#x27;--fm-chart-height&#x27;,design.chartHeight+&#x27;px&#x27;);renderCharts();}});tweak.addSelect(design,&#x27;density&#x27;,{label:&#x27;File row spacing&#x27;,options:[&#x27;Compact&#x27;,&#x27;Comfortable&#x27;]});tweak.addSlider(design,&#x27;chartHeight&#x27;,{label:&#x27;Chart height&#x27;,min:235,max:385,step:10,unit:&#x27;px&#x27;});}
+ root.fmDesign={getState:()=&gt;JSON.parse(JSON.stringify(state)),setState:patch=&gt;{state={...state,...patch};update();},amount:(combo,subset,metric,months,trend)=&gt;amount(combo,subset,metric,months,trend),catalog,files,sectors,combos:comboGroups,activeSectors,chartSeries,adsInfo,adsSelection,planFamily,periodMonths,periodRangeLabel};
+ update(false);
+})();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (event) =&gt; {
+    for (const target of event.composedPath()) {
+      if (target?.nodeType === Node.ELEMENT_NODE) {
+        const trigger = target.closest(&quot;[data-tooltip]&quot;);
+        if (trigger) return trigger;
+      }
+    }
+    return null;
+  };
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handlers = {
+    pointerover: handlePointerOpen,
+    pointerdown: handlePointer,
+    pointercancel: handlePointer,
+    click: handleTouchClick,
+    pointerout: handleLeave,
+    focusin: handleFocusIn,
+    focusout: handleLeave,
+    keydown: handleKeyDown,
+    contextmenu: handleContextMenu,
+  };
+  const roots = new Map();
+  const handledEvents = new WeakSet();
+  const handleEvent = (event) =&gt; {
+    if (handledEvents.has(event)) return;
+    handledEvents.add(event);
+    handlers[event.type](event);
+  };
+  const discoverRoots = (node) =&gt; {
+    if (node.shadowRoot) listen(node.shadowRoot);
+    for (const element of node.querySelectorAll(&quot;*&quot;)) {
+      if (element.shadowRoot) listen(element.shadowRoot);
+    }
+  };
+  const listen = (root) =&gt; {
+    if (roots.has(root)) return;
+    for (const type of Object.keys(handlers)) root.addEventListener(type, handleEvent);
+    const observer = new window.MutationObserver((records) =&gt; {
+      for (const { addedNodes } of records) {
+        for (const node of addedNodes) {
+          if (node.nodeType === Node.ELEMENT_NODE) discoverRoots(node);
+        }
+      }
+      for (const [root, cleanup] of roots) {
+        if (root.host &amp;&amp; !root.host.isConnected) {
+          cleanup();
+          roots.delete(root);
+        }
+      }
+      if (activeTrigger &amp;&amp; !activeTrigger.isConnected) closeTooltip(false);
+    });
+    observer.observe(root, { childList: true, subtree: true });
+    roots.set(root, () =&gt; {
+      observer.disconnect();
+      for (const type of Object.keys(handlers)) root.removeEventListener(type, handleEvent);
+    });
+    discoverRoots(root);
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    for (const cleanup of roots.values()) cleanup();
+    roots.clear();
+    tooltip = null;
+  };
+
+  // Events between children of one shadow root never reach the document.
+  listen(document);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-carousel&quot;&gt;
+  (() =&gt; {
+    for (const root of document.querySelectorAll(&quot;.viz-carousel&quot;)) {
+      const panels = Array.from(
+        root.querySelectorAll(&quot;:scope &gt; [data-variant]&quot;),
+      );
+      if (panels.length === 0) {
+        continue;
+      }
+      root.setAttribute(&quot;role&quot;, &quot;group&quot;);
+      panels.forEach((panel, index) =&gt; {
+        panel.hidden = index !== 0;
+        panel.setAttribute(&quot;role&quot;, &quot;group&quot;);
+        if (!panel.hasAttribute(&quot;aria-label&quot;)) {
+          panel.setAttribute(&quot;aria-label&quot;, panel.dataset.variant);
+        }
+      });
+      root.dataset.activeVariant = panels[0].dataset.variant;
+      if (panels.length === 1) {
+        continue;
+      }
+
+      const controls = document.createElement(&quot;div&quot;);
+      controls.className = &quot;viz-carousel-controls&quot;;
+      // Portable copy of the settings dropdown&#x27;s legacy glyph; no 14px icon-package preset matches it.
+      // https://github.com/openai/openai/blob/master/codex/codex-apps/webview/src/icons/chevron.svg
+      controls.innerHTML = `
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-previous cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;details class=&quot;viz-carousel-picker&quot;&gt;
+        &lt;summary class=&quot;cursor-interaction&quot;&gt;
+          &lt;span class=&quot;viz-carousel-count tabular-nums&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;viz-carousel-name&quot;&gt;&lt;/span&gt;
+          &lt;svg class=&quot;viz-carousel-caret&quot; width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 20 21&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&gt;
+            &lt;path d=&quot;M15.2793 7.71101C15.539 7.45131 15.961 7.45131 16.2207 7.71101C16.4804 7.97071 16.4804 8.39272 16.2207 8.65242L10.4707 14.4024C10.211 14.6621 9.78902 14.6621 9.52932 14.4024L3.77932 8.65242L3.69436 8.54792C3.52385 8.28979 3.55205 7.93828 3.77932 7.71101C4.00659 7.48374 4.3581 7.45554 4.61623 7.62605L4.72073 7.71101L10 12.9903L15.2793 7.71101Z&quot; fill=&quot;currentColor&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;0.6&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/summary&gt;
+        &lt;div class=&quot;viz-carousel-options&quot;&gt;&lt;/div&gt;
+      &lt;/details&gt;
+      &lt;button type=&quot;button&quot; class=&quot;viz-carousel-next cursor-interaction&quot;&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;`;
+      const previous = controls.querySelector(&quot;.viz-carousel-previous&quot;);
+      const next = controls.querySelector(&quot;.viz-carousel-next&quot;);
+      const picker = controls.querySelector(&quot;.viz-carousel-picker&quot;);
+      const summary = picker.querySelector(&quot;summary&quot;);
+      const count = controls.querySelector(&quot;.viz-carousel-count&quot;);
+      const name = controls.querySelector(&quot;.viz-carousel-name&quot;);
+      const options = controls.querySelector(&quot;.viz-carousel-options&quot;);
+      const status = document.createElement(&quot;span&quot;);
+      status.className = &quot;sr-only&quot;;
+      status.setAttribute(&quot;role&quot;, &quot;status&quot;);
+      status.setAttribute(&quot;aria-live&quot;, &quot;polite&quot;);
+      status.setAttribute(&quot;aria-atomic&quot;, &quot;true&quot;);
+      previous.setAttribute(
+        &quot;aria-label&quot;,
+        root.dataset.previousLabel ?? &quot;Previous variant&quot;,
+      );
+      next.setAttribute(&quot;aria-label&quot;, root.dataset.nextLabel ?? &quot;Next variant&quot;);
+
+      let active = 0;
+      let mousePointerId = null;
+      let summaryPointerHandled = false;
+      summary.addEventListener(&quot;pointerdown&quot;, (event) =&gt; {
+        summaryPointerHandled =
+          event.pointerType === &quot;mouse&quot; &amp;&amp; event.button === 0 &amp;&amp; !event.ctrlKey;
+        if (!summaryPointerHandled) {
+          return;
+        }
+        event.preventDefault();
+        summary.focus({ preventScroll: true });
+        picker.open = !picker.open;
+        mousePointerId = picker.open ? event.pointerId : null;
+      });
+      summary.addEventListener(&quot;click&quot;, (event) =&gt; {
+        if (summaryPointerHandled &amp;&amp; event.detail &gt; 0) {
+          event.preventDefault();
+        }
+      });
+      const choices = panels.map((panel, index) =&gt; {
+        const choice = document.createElement(&quot;button&quot;);
+        choice.type = &quot;button&quot;;
+        choice.className = &quot;cursor-interaction&quot;;
+        choice.textContent = panel.dataset.variant;
+        choice.addEventListener(&quot;click&quot;, () =&gt; {
+          select(index);
+          summary.focus();
+        });
+        choice.addEventListener(&quot;pointerup&quot;, (event) =&gt; {
+          if (
+            picker.open &amp;&amp;
+            event.pointerType === &quot;mouse&quot; &amp;&amp;
+            event.button === 0 &amp;&amp;
+            event.pointerId === mousePointerId
+          ) {
+            choice.click();
+          }
+        });
+        options.appendChild(choice);
+        return choice;
+      });
+      const select = (index) =&gt; {
+        const changed = active !== index;
+        active = index;
+        panels.forEach((panel, position) =&gt; {
+          panel.hidden = position !== active;
+          choices[position].setAttribute(
+            &quot;aria-current&quot;,
+            String(position === active),
+          );
+        });
+        root.dataset.activeVariant = panels[active].dataset.variant;
+        count.textContent = `${active + 1} / ${panels.length}`;
+        name.textContent = panels[active].dataset.variant;
+        picker.open = false;
+        mousePointerId = null;
+        if (changed) {
+          status.textContent = `${count.textContent}: ${name.textContent}`;
+        }
+      };
+      previous.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + panels.length - 1) % panels.length),
+      );
+      next.addEventListener(&quot;click&quot;, () =&gt;
+        select((active + 1) % panels.length),
+      );
+      picker.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+        if (event.key === &quot;Escape&quot; &amp;&amp; picker.open) {
+          event.preventDefault();
+          picker.open = false;
+          mousePointerId = null;
+          summary.focus();
+          return;
+        }
+        if (event.altKey || event.ctrlKey || event.metaKey) {
+          return;
+        }
+        const index = choices.indexOf(document.activeElement);
+        let nextIndex;
+        if (event.key === &quot;ArrowDown&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + 1) % choices.length;
+        } else if (event.key === &quot;ArrowUp&quot;) {
+          nextIndex = index &lt; 0 ? active : (index + choices.length - 1) % choices.length;
+        } else if (picker.open &amp;&amp; event.key === &quot;Home&quot;) {
+          nextIndex = 0;
+        } else if (picker.open &amp;&amp; event.key === &quot;End&quot;) {
+          nextIndex = choices.length - 1;
+        } else {
+          return;
+        }
+        event.preventDefault();
+        picker.open = true;
+        choices[nextIndex].focus();
+      });
+      picker.addEventListener(&quot;focusout&quot;, (event) =&gt; {
+        if (!picker.contains(event.relatedTarget)) {
+          picker.open = false;
+          mousePointerId = null;
+        }
+      });
+      const dismiss = (event) =&gt; {
+        if (!summary.contains(event.target)) {
+          mousePointerId = null;
+        }
+        if (!picker.contains(event.target)) {
+          picker.open = false;
+        }
+      };
+      const endPointerSelection = () =&gt; {
+        mousePointerId = null;
+      };
+      const sizePicker = () =&gt; {
+        root.style.setProperty(
+          &quot;--viz-carousel-picker-height&quot;,
+          `${picker.open ? options.offsetHeight : 0}px`,
+        );
+      };
+      picker.addEventListener(&quot;toggle&quot;, sizePicker);
+      window.addEventListener(&quot;resize&quot;, sizePicker);
+      document.addEventListener(&quot;pointerdown&quot;, dismiss);
+      document.addEventListener(&quot;pointerup&quot;, endPointerSelection);
+      document.addEventListener(&quot;pointercancel&quot;, endPointerSelection);
+      window.addEventListener(&quot;blur&quot;, endPointerSelection);
+      window.addEventListener(
+        &quot;pagehide&quot;,
+        () =&gt; {
+          document.removeEventListener(&quot;pointerdown&quot;, dismiss);
+          document.removeEventListener(&quot;pointerup&quot;, endPointerSelection);
+          document.removeEventListener(&quot;pointercancel&quot;, endPointerSelection);
+          window.removeEventListener(&quot;blur&quot;, endPointerSelection);
+          window.removeEventListener(&quot;resize&quot;, sizePicker);
+        },
+        { once: true },
+      );
+      root.append(controls, status);
+      select(0);
+    }
+  })();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+
+<script>(() => {
+  const frame = document.getElementById("codex-visualization");
+  if (!(frame instanceof HTMLIFrameElement)) {
+    return;
+  }
+  const isShare = document.documentElement.classList.contains(
+    "visualization-share-root",
+  );
+  let viewportHeight = globalThis.innerHeight;
+  let sizeFingerprint = null;
+  let sizeWriteTimeout;
+  let lastSize = null;
+  let pendingSize = null;
+  const storageKey = `codex:visualization-widget-state-v2:${JSON.stringify([
+    globalThis.location.pathname,
+    globalThis.location.search,
+  ])}`;
+  const sizeStorageKey = `${storageKey}:share-size-v1`;
+  const parseState = (serializedState) => {
+    if (
+      typeof serializedState !== "string" ||
+      new TextEncoder().encode(serializedState).length > 16 * 1024
+    ) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    /** @type {unknown} */
+    const state = JSON.parse(serializedState);
+    if (
+      state == null ||
+      typeof state !== "object" ||
+      Array.isArray(state) ||
+      ("imageIds" in state &&
+        (!Array.isArray(state.imageIds) || state.imageIds.length > 0))
+    ) {
+      throw new TypeError("Widget state must be a JSON object");
+    }
+    const storedState = { modelContent: null, privateContent: null, ...state };
+    const canonicalState = JSON.stringify(
+      storedState,
+      (_key, /** @type {unknown} */ value) => {
+        if (typeof value === "number" && !Number.isFinite(value)) {
+          throw new TypeError("Widget state must contain finite numbers");
+        }
+        return value;
+      },
+    );
+    if (new TextEncoder().encode(canonicalState).length > 16 * 1024) {
+      throw new TypeError(
+        "Widget state must be a JSON object of at most 16 KiB",
+      );
+    }
+    return storedState;
+  };
+  let storage = null;
+  let state = null;
+  try {
+    const localStorage = globalThis.localStorage;
+    const probeKey = `${storageKey}:probe`;
+    localStorage.setItem(probeKey, "1");
+    localStorage.removeItem(probeKey);
+    storage = localStorage;
+    const savedState = storage.getItem(storageKey);
+    if (savedState != null) {
+      try {
+        state = parseState(savedState);
+      } catch {
+        // Invalid saved state does not disable future writes.
+      }
+    }
+  } catch {
+    storage = null;
+  }
+  const persistSize = () => {
+    globalThis.clearTimeout(sizeWriteTimeout);
+    if (pendingSize == null) {
+      return;
+    }
+    try {
+      storage?.setItem(sizeStorageKey, pendingSize);
+    } catch {
+      // A denied or full cache must not affect the visualization.
+    }
+    pendingSize = null;
+  };
+  if (isShare) {
+    globalThis.addEventListener("pagehide", persistSize);
+  }
+  const initialGlobals = {
+    widgetState: state,
+    statePersistence: storage == null ? "none" : "local",
+  };
+
+  const channel = new MessageChannel();
+  channel.port1.addEventListener("message", (event) => {
+    const data = event.data;
+    if (typeof data !== "object" || data == null) {
+      return;
+    }
+    if (data.type === "widget-state-write") {
+      if (!Number.isSafeInteger(data.id) || data.id <= 0) {
+        return;
+      }
+      let ok = false;
+      try {
+        if (storage != null) {
+          const state = parseState(data.state);
+          storage.setItem(storageKey, JSON.stringify(state));
+          ok = true;
+        }
+      } catch {
+        // Storage denial, quota limits, and invalid state return a failed receipt.
+      }
+      channel.port1.postMessage({
+        type: "widget-state-result",
+        id: data.id,
+        ok,
+      });
+      return;
+    }
+    if (data.type === "height") {
+      const height = data.height;
+      if (
+        typeof height !== "number" ||
+        !Number.isFinite(height) ||
+        height < 0
+      ) {
+        return;
+      }
+      if (height <= 10_000) {
+        const width = isShare && storage != null ? frame.clientWidth : null;
+        frame.style.height = Math.ceil(height) + "px";
+        if (isShare && storage != null) {
+          const size = JSON.stringify({
+            fingerprint: sizeFingerprint,
+            width,
+            viewportHeight: globalThis.innerHeight,
+            dark: globalThis.matchMedia("(prefers-color-scheme: dark)").matches,
+            scale: globalThis.devicePixelRatio,
+            height: Math.ceil(height),
+          });
+          if (size !== lastSize) {
+            lastSize = size;
+            pendingSize = size;
+            globalThis.clearTimeout(sizeWriteTimeout);
+            sizeWriteTimeout = globalThis.setTimeout(persistSize, 100);
+          }
+        }
+      }
+      if (isShare) {
+        // Keep unusually tall content accessible without accepting an unbounded height.
+        if (height > 10_000 && Number.parseFloat(frame.style.height) === 0) {
+          frame.style.removeProperty("height");
+        }
+        frame.scrolling = height > 10_000 ? "auto" : "no";
+        document.documentElement.classList.add("visualization-share-ready");
+      }
+      return;
+    }
+    if (data.type === "scroll-to") {
+      const top = data.top;
+      if (
+        typeof top === "number" &&
+        Number.isFinite(top) &&
+        top >= 0 &&
+        globalThis.navigator.userActivation?.isActive === true
+      ) {
+        globalThis.scrollTo({
+          top: Math.ceil(
+            globalThis.scrollY + frame.getBoundingClientRect().top + top,
+          ),
+        });
+      }
+      return;
+    }
+    if (data.type === "open-external") {
+      const rawHref = data.href;
+      if (typeof rawHref !== "string") {
+        return;
+      }
+      let href;
+      try {
+        const url = new URL(rawHref, document.baseURI);
+        if (url.protocol !== "https:") {
+          return;
+        }
+        href = url.href;
+      } catch {
+        return;
+      }
+      if (globalThis.navigator.userActivation?.isActive === true) {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.rel = "noopener noreferrer";
+        anchor.target = "_blank";
+        document.body.appendChild(anchor);
+        anchor.click();
+        anchor.remove();
+      }
+      return;
+    }
+    if (data.type === "follow-up") {
+      const prompt = data.prompt;
+      if (
+        typeof prompt !== "string" ||
+        globalThis.navigator.userActivation?.isActive !== true
+      ) {
+        return;
+      }
+      const title = data.title;
+      globalThis.prompt(typeof title === "string" ? title : prompt, prompt);
+    }
+  });
+  channel.port1.start();
+  const srcdoc = frame.dataset.srcdoc;
+  if (srcdoc == null) {
+    return;
+  }
+  globalThis.addEventListener("resize", () => {
+    const height = Number.parseFloat(frame.style.height);
+    if (!isShare && (!Number.isFinite(height) || height <= viewportHeight)) {
+      frame.style.removeProperty("height");
+    }
+    viewportHeight = globalThis.innerHeight;
+    channel.port1.postMessage({ type: "measure" });
+  });
+  frame.addEventListener(
+    "load",
+    () => {
+      frame.contentWindow?.postMessage(
+        { type: "codex-visualization-initialize" },
+        "*",
+        [channel.port2],
+      );
+    },
+    { once: true },
+  );
+  // Match the trusted bootstrap element, not the same text in an authored title.
+  const frameHtml = srcdoc.replace(
+    '<script type="application/json" id="codex-visualization-widget-state">__CODEX_VISUALIZATION_WIDGET_STATE__<\/script>',
+    () =>
+      '<script type="application/json" id="codex-visualization-widget-state">' +
+      JSON.stringify(initialGlobals).replaceAll("<", "\\u003c") +
+      "<\/script>",
+  );
+  if (isShare && storage != null) {
+    // Fingerprint the rendered document, including restored widget state, without
+    // storing its content. This is a layout cache, not a security identity.
+    let hash = 5381;
+    for (let index = 0; index < frameHtml.length; index += 1) {
+      hash = (hash * 33 + frameHtml.charCodeAt(index)) % 4_294_967_296;
+    }
+    sizeFingerprint = hash.toString(36);
+    try {
+      const size = JSON.parse(storage.getItem(sizeStorageKey) ?? "null");
+      if (
+        size?.fingerprint === sizeFingerprint &&
+        size.width === frame.clientWidth &&
+        size.viewportHeight === globalThis.innerHeight &&
+        size.dark ===
+          globalThis.matchMedia("(prefers-color-scheme: dark)").matches &&
+        size.scale === globalThis.devicePixelRatio &&
+        typeof size.height === "number" &&
+        Number.isFinite(size.height) &&
+        size.height >= 0 &&
+        size.height <= 10_000
+      ) {
+        frame.style.height = size.height + "px";
+      }
+    } catch {
+      // Ignore missing or invalid cache entries and measure the live frame.
+    }
+  }
+  frame.srcdoc = frameHtml;
+  delete frame.dataset.srcdoc;
+})();
+</script>
+</body>
+</html>

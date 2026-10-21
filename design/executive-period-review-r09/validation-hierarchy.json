@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Both selector shows parent and child checkboxes simultaneously",
+    "Driver selection selects all its tiers",
+    "Partial parent checkbox and subtotal are explicit",
+    "Switching selection level preserves scope",
+    "Table includes total, driver subtotals and child tiers",
+    "Subtotals and grand total avoid double counting",
+    "Variance subtotals reconcile",
+    "Table layout changes preserve totals",
+    "Both graph shows per-driver total and tiers simultaneously",
+    "Monthly actual, forecast and trend reconcile across levels",
+    "Graph and table grouping remain independent",
+    "Largest gaps retains parent-child grouping",
+    "Search does not change data selection",
+    "FY and YTG expand columns",
+    "Share totals recompute a weighted ratio",
+    "Clear all produces an empty state",
+    "Responsive Both mode",
+    "No JavaScript errors"
+  ],
+  "rowOrder": [
+    "total",
+    "oral",
+    "compact",
+    "juce",
+    "paed",
+    "paed-standard",
+    "paed-energy"
+  ],
+  "arithmetic": {
+    "data-value": {
+      "total": 16843773.686148662,
+      "parents": [
+        12012006.30264727,
+        4831767.383501394
+      ],
+      "children": [
+        [
+          7208339.890565364,
+          4803666.412081905
+        ],
+        [
+          2937189.2335995412,
+          1894578.1499018532
+        ]
+      ]
+    },
+    "data-delta": {
+      "total": 30025.638178564608,
+      "parents": [
+        407779.6467341557,
+        -377754.00855558924
+      ],
+      "children": [
+        [
+          245678.4577456396,
+          162101.18898851704
+        ],
+        [
+          -229755.74133825675,
+          -147998.26721733273
+        ]
+      ]
+    }
+  },
+  "ratio": {
+    "table": 0.19403536000201632,
+    "ratio": 0.19403536000201632
+  },
+  "dimensions": [
+    {
+      "width": 992,
+      "scroll": 992,
+      "plots": [
+        {
+          "width": 934,
+          "svg": 934
+        },
+        {
+          "width": 934,
+          "svg": 934
+        }
+      ]
+    },
+    {
+      "width": 704,
+      "scroll": 704,
+      "plots": [
+        {
+          "width": 658,
+          "svg": 658
+        },
+        {
+          "width": 658,
+          "svg": 658
+        }
+      ]
+    },
+    {
+      "width": 358,
+      "scroll": 358,
+      "plots": [
+        {
+          "width": 318,
+          "svg": 318
+        },
+        {
+          "width": 318,
+          "svg": 318
+        }
+      ]
+    },
+    {
+      "width": 288,
+      "scroll": 288,
+      "plots": [
+        {
+          "width": 248,
+          "svg": 248
+        },
+        {
+          "width": 248,
+          "svg": 248
+        }
+      ]
+    }
+  ]
+}

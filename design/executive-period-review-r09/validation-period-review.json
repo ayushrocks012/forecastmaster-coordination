@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Quick comparison adds FY and YTG without removing another period",
+    "Every selected period has a distinct executive overview",
+    "FY/YTG values reconcile with the standard table",
+    "Net and driver directions use overcall and undercall wording",
+    "Actual-history fitting dates and forecast start are explicit",
+    "Changing the trend changes its fitting window",
+    "Both charts show comparable period variance numbers",
+    "Scope updates driver captions",
+    "Ex-factory history and YTG follow its distinct cutoff",
+    "Multiple measures, cycles and periods stay numerically separate",
+    "Responsive period comparison",
+    "No JavaScript errors"
+  ],
+  "compare": [
+    {
+      "period": "2026:FY",
+      "plan": 16843773.686148662,
+      "delta": 30025.638178564608,
+      "tablePlan": 16843773.686148662,
+      "tableDelta": 30025.638178564608
+    },
+    {
+      "period": "2026:YTG",
+      "plan": 5903953.671444935,
+      "delta": 30025.638178568333,
+      "tablePlan": 5903953.671444935,
+      "tableDelta": 30025.638178568333
+    }
+  ],
+  "mixed": [
+    {
+      "id": "2026-10|ADS plan|market-units|2026:FY",
+      "expected": 16843773.686148662,
+      "actual": 16843773.686148662
+    },
+    {
+      "id": "2026-10|ADS plan|market-units|2026:YTG",
+      "expected": 5903953.671444935,
+      "actual": 5903953.671444935
+    },
+    {
+      "id": "2026-10|ADS plan|volume-share|2026:FY",
+      "expected": 0.19403536000201632,
+      "actual": 0.19403536000201632
+    },
+    {
+      "id": "2026-10|ADS plan|volume-share|2026:YTG",
+      "expected": 0.197612333231618,
+      "actual": 0.197612333231618
+    },
+    {
+      "id": "2026-07|ADS plan|market-units|2026:FY",
+      "expected": 17169077.833661836,
+      "actual": 17169077.833661836
+    },
+    {
+      "id": "2026-07|ADS plan|market-units|2026:YTG",
+      "expected": 10416637.77846804,
+      "actual": 10416637.77846804
+    },
+    {
+      "id": "2026-07|ADS plan|volume-share|2026:FY",
+      "expected": 0.19483435987117204,
+      "actual": 0.19483435987117204
+    },
+    {
+      "id": "2026-07|ADS plan|volume-share|2026:YTG",
+      "expected": 0.19700110541856777,
+      "actual": 0.19700110541856777
+    }
+  ],
+  "dimensions": [
+    {
+      "width": 992,
+      "scroll": 992,
+      "overviewCards": [
+        454.5,
+        454.5
+      ]
+    },
+    {
+      "width": 704,
+      "scroll": 704,
+      "overviewCards": [
+        645,
+        645
+      ]
+    },
+    {
+      "width": 358,
+      "scroll": 358,
+      "overviewCards": [
+        305,
+        305
+      ]
+    },
+    {
+      "width": 288,
+      "scroll": 288,
+      "overviewCards": [
+        235,
+        235
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path');
+const {pathToFileURL}=require('node:url');
+const close=(a,b)=>assert.ok(Math.abs(a-b)<Math.max(1e-9,Math.abs(a)*1e-10),`${a} != ${b}`);
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ const page=await browser.newPage({viewport:{width:1080,height:1200},colorScheme:'light'});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(pathToFileURL(path.join(__dirname,'index.html')).href);
+ const frame=page.frames().find(f=>f!==page.mainFrame());await frame.waitForSelector('.fm-total');
+ const get=()=>frame.evaluate(()=>document.getElementById('fm-executive-period-review').fmDesign.getState());
+ const set=patch=>frame.evaluate(p=>document.getElementById('fm-executive-period-review').fmDesign.setState(p),patch);
+ const initial=await get();
+ assert.equal(await frame.locator('[data-overview-period]').count(),1);
+ assert.match(await frame.locator('[data-fit-context]').innerText(),/12M fit:.*25.*Aug 26 actuals.*Forecast from Sept? 26/);
+ assert.match(await frame.locator('#fm-executive-readout').innerText(),/Net overcall.*Core Oral: Overcall.*Paed SIP: Undercall/s);
+ await frame.locator('#fm-compare-periods').click();
+ assert.deepEqual((await get()).periods,['2026:FY','2026:YTG']);
+ assert.equal(await frame.locator('[data-overview-period="2026:FY"]').count(),1);
+ assert.equal(await frame.locator('[data-overview-period="2026:YTG"]').count(),1);
+ assert.equal(await frame.locator('[data-period-group]').count(),2);
+ assert.equal(await frame.locator('#fm-compare-periods').isDisabled(),true);
+ const compare=await frame.evaluate(()=>[...document.querySelectorAll('[data-overview-period]')].map(row=>({period:row.dataset.overviewPeriod,plan:Number(row.querySelector('[data-overview-plan]').dataset.overviewPlan),delta:Number(row.querySelector('[data-overview-delta]').dataset.overviewDelta),tablePlan:Number(document.querySelector(`.fm-total [data-period="${row.dataset.overviewPeriod}"][data-value]`).dataset.value),tableDelta:Number(document.querySelector(`.fm-total [data-period="${row.dataset.overviewPeriod}"][data-trend-window="12"][data-delta]`).dataset.delta)})));
+ for(const r of compare){close(r.plan,r.tablePlan);close(r.delta,r.tableDelta);}assert.ok(compare[0].plan>compare[1].plan);close(compare[0].delta,compare[1].delta);
+ await page.screenshot({path:path.join(__dirname,'fy-and-ytg.png'),fullPage:true});
+ await frame.locator('[data-chart-trend="6"]').check();
+ assert.match(await frame.locator('[data-fit-context]').innerText(),/6M fit: Mar–Aug 2026 actuals/);
+ await frame.locator('[data-graph-mode="hierarchy"]').click();
+ assert.equal(await frame.locator('[data-driver-period]').count(),2);
+ assert.match(await frame.locator('[data-driver-period="oral"]').innerText(),/2026 FY:.*2026 YTG:.*vs 6M/);
+ await frame.locator('[data-scope-choice="juce"]').uncheck();
+ const partial=await frame.evaluate(()=>({graph:document.querySelector('[data-driver-period="oral"]').textContent,firstReadout:document.querySelector('[data-overview-period="2026:FY"] [data-overview-driver="oral"]').textContent}));
+ assert.match(partial.graph,/2026 FY:/);assert.match(partial.firstReadout,/Overcall/);
+ await set({...initial,sections:['ef'],metrics:['ef-units'],trends:[24],periods:['2026:FY','2026:YTG']});
+ assert.match(await frame.locator('[data-fit-context]').innerText(),/24M fit: Oct 24–Sept? 26 actuals.*Forecast from Oct 26/);
+ assert.match(await frame.locator('[data-overview-period="2026:YTG"]').innerText(),/Oct–Dec 2026/);
+ await set({...initial,metrics:['market-units','volume-share'],cycles:['2026-10','2026-07'],periods:['2026:FY','2026:YTG']});
+ assert.equal(await frame.locator('[data-executive-position]').count(),8);
+ const mixed=await frame.evaluate(()=>{
+  const api=document.getElementById('fm-executive-period-review').fmDesign,state=api.getState(),result=[];
+  for(const combo of api.combos())for(const metric of api.catalog.filter(m=>state.metrics.includes(m.id)))for(const period of state.periods){
+   const id=combo.key+'|'+metric.id+'|'+period,row=[...document.querySelectorAll('[data-executive-position]')].find(r=>r.dataset.executivePosition===id),expected=api.amount(combo,api.activeSectors(),metric,api.periodMonths(period,combo,metric));
+   result.push({id,expected,actual:Number(row.querySelector('[data-overview-plan]').dataset.overviewPlan)});
+  }return result;
+ });for(const r of mixed)close(r.expected,r.actual);
+ await set({...initial,periods:['2027:FY']});await frame.locator('#fm-compare-periods').click();assert.ok((await get()).periods.includes('2027:FY'),'Adding FY/YTG retains other selected periods');
+ await set({...initial,periods:['2026:FY','2026:YTG']});
+ const dimensions=[];for(const width of [1024,736,390,320]){await page.setViewportSize({width,height:1200});await page.waitForTimeout(120);const d=await frame.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth,overviewCards:[...document.querySelectorAll('[data-overview-period]')].map(e=>e.getBoundingClientRect().width)}));assert.ok(d.scroll<=d.width+1);dimensions.push(d);}
+ await page.setViewportSize({width:1080,height:1200});await page.emulateMedia({colorScheme:'dark'});await page.waitForTimeout(120);await page.screenshot({path:path.join(__dirname,'period-review-dark.png'),fullPage:true});
+ assert.deepEqual(errors,[]);
+ const result={status:'PASS',checks:['Quick comparison adds FY and YTG without removing another period','Every selected period has a distinct executive overview','FY/YTG values reconcile with the standard table','Net and driver directions use overcall and undercall wording','Actual-history fitting dates and forecast start are explicit','Changing the trend changes its fitting window','Both charts show comparable period variance numbers','Scope updates driver captions','Ex-factory history and YTG follow its distinct cutoff','Multiple measures, cycles and periods stay numerically separate','Responsive period comparison','No JavaScript errors'],compare,mixed,dimensions};
+ fs.writeFileSync(path.join(__dirname,'validation-period-review.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1);});

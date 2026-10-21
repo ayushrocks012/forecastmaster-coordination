@@ -5,6 +5,7 @@ A separate repository for exchanging ForecastMaster setup scripts, office-laptop
 This repository is public. Files and screenshots committed here are publicly visible.
 
 - **Executive review design comparison:** pull this repo and open `design/index.html` in a browser. [R08 — Executive Overview](design/executive-overview-r08/README.md) is the new proposal; [R07 — Driver and Sector Review](design/executive-review-r07/README.md) is preserved under tag `design-driver-sector-r07`. Both await the user's final design choice.
+- [R09 — Executive Period Review](design/executive-period-review-r09/README.md) adds FY/YTG overview comparison and explicit trend-history dates. The separately requested variance-bar removal is pending the session's required direct opt-in; it has not been applied.
 - Current notebook updater: [INSTALL NOTEBOOK R05.4.txt](handoff/notebook-r05.4/INSTALL%20NOTEBOOK%20R05.4.txt)
 - Current authentication correction: [hourly user context setup](handoff/pipeline-user-context-r01/README.md)
 - Original R05.3 handoff: [retained package](handoff/notebook-r05.3/README.txt)

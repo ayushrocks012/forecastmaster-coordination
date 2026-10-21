@@ -782,12 +782,76 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 2527,
-      "SHA256": "5184216a5f18253dacb12eb1080adee25b2ad17c62ff4cf69e6b380ea6b6d7a4"
+      "Bytes": 3068,
+      "SHA256": "2c87c000013cf073c8bb1628bca25e5c61527e2738a4dd73a81be1425fda1bb1"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
       "SHA256": "6a1d0596abb4398ad9c87afb9c44fd636a2e6268ebffd9ed28ffe34b66a0cfa8"
+    },
+    "design/executive-period-review-r09/README.md": {
+      "Bytes": 2613,
+      "SHA256": "9e421860a122ae377cf9df3ee7d9c909b28f7a3347146217d9cf6d93ec59ba1c"
+    },
+    "design/executive-period-review-r09/both-dark.png": {
+      "Bytes": 380391,
+      "SHA256": "2c18ade1e82caf9fd6714a925918c63de8248e46cf8cdc8ef979ced435badebb"
+    },
+    "design/executive-period-review-r09/both-views.png": {
+      "Bytes": 374736,
+      "SHA256": "c8107f8e81834c4b24280c3378e55f6e06ebd0a2702b34b4c04d2aa9a03f9d57"
+    },
+    "design/executive-period-review-r09/check-ads-default.cjs": {
+      "Bytes": 6569,
+      "SHA256": "9a72bcd7d5af1e668bee0170d9852b393235c4c638e256a723f169618852e060"
+    },
+    "design/executive-period-review-r09/check-hierarchy.cjs": {
+      "Bytes": 9762,
+      "SHA256": "86c18793e1564d98b18bc0d37d2d69caf56c963847cc5adeb4dbe8450baa3c70"
+    },
+    "design/executive-period-review-r09/check-period-review.cjs": {
+      "Bytes": 6412,
+      "SHA256": "d8fda9f0abfe5199e00e20cc08dd1ceaa49836c84ab22e9420809fb8777358f3"
+    },
+    "design/executive-period-review-r09/dark.png": {
+      "Bytes": 289327,
+      "SHA256": "f84da3b269ad2e5a4aa747bc6da99c9ac541a72e3bafd7bd94eedd62d0234d19"
+    },
+    "design/executive-period-review-r09/fy-and-ytg.png": {
+      "Bytes": 316258,
+      "SHA256": "1eab90c368657c0ca4f00b050b3c18d2adb9f78d6839316d72eee0e797469a28"
+    },
+    "design/executive-period-review-r09/index.html": {
+      "Bytes": 176286,
+      "SHA256": "999bd91a5a707b6550299bbaf85b41f493093af13212962df145b5a83755e627"
+    },
+    "design/executive-period-review-r09/overview.png": {
+      "Bytes": 299779,
+      "SHA256": "65cf77ad5544e15270d5dbec6e37466bdd91c4c168ee4cfc9d8f22b5b746d45c"
+    },
+    "design/executive-period-review-r09/period-review-dark.png": {
+      "Bytes": 319634,
+      "SHA256": "f19d963f51ea9ebbd72036896181b0c050c77e0e9876bd4d619b28c29d255c7c"
+    },
+    "design/executive-period-review-r09/review.fragment.html": {
+      "Bytes": 79187,
+      "SHA256": "16c7ea11b897a42c256d88f93c21b788b1741445e14c7a01fe794a1c52f063c9"
+    },
+    "design/executive-period-review-r09/sectors.png": {
+      "Bytes": 287079,
+      "SHA256": "181f4905704547fc265320e687f65ae2ad79c1246a6c4d384d7b13611960c784"
+    },
+    "design/executive-period-review-r09/validation-ads.json": {
+      "Bytes": 2484,
+      "SHA256": "89b26ffc52fc5e71c0f2766dd82daa047de2885c61606d7256a3307f52566d10"
+    },
+    "design/executive-period-review-r09/validation-hierarchy.json": {
+      "Bytes": 2669,
+      "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
+    },
+    "design/executive-period-review-r09/validation-period-review.json": {
+      "Bytes": 2711,
+      "SHA256": "0c05ad19258a3575485a515c67262ad01983a473634088c2bf3ff579e5a1eeb9"
     }
   }
 }
