@@ -427,3 +427,33 @@ pass. Warm interactions make no network requests; their synthetic timing is not
 Power BI performance evidence. Previous design packages, including approved R11
 and R04, remain byte-preserved. No workbook, application source or live Power BI
 content changed. Design approval and separately authorized live work are pending.
+
+## 21 October 2026 — R06 corrects cascade, labels and bridge identities
+
+The user identified that R05's columns were independent, Ex-factory Cur was not
+explicitly selectable, Units/Value captions were inconsistent and measure order
+did not match the bridge. R06 now cascades Channel → target total/subchannel →
+Measure. Community IMS requires its blank-subchannel total. Wholesaler alone
+has its own Ex-factory choices. Channel off removes dependent series while
+remembering choices; empty target selections disable Ex-factory measures.
+
+The retained neutral V18 identities for Core Oral and Paed SIP were inspected
+directly, along with the maintained common-layout and binding source. The new
+sanitized catalogue records 44 direct measure identities and five explicit
+review aggregates/diagnostics, including separate Cur/Pub/ADS, the IMS basis of
+net IMS, Out of Pocket → Retail and source context order. It includes no source
+values, formulas, products or customers. The user-requested executive primary
+order is Abbott IMS, Market, PI, Ex-factory at Community total, followed by the
+other source contexts. Cur/Pub observations are additional synthetic fixtures;
+they are not claims about receiving data or a renamed ADS feed.
+
+The selector, legends, tooltips and table now change all relevant names between
+units and value, including unit/value share on the same graph's right axis.
+The summary labels each channel/subchannel context and keeps selected periods
+beside the table. Local checks pass 12 behavior groups, 102 reconciliation
+comparisons and 372 existing ADS/IMS cells matching R05 in five scenarios.
+Responsive light/dark layouts and warm local interactions also pass. GitNexus
+reported stale authority; bounded current-source/descriptor inspection supplied
+the lookup evidence without refreshing the index. No actual workbook or live
+Power BI content was modified. Earlier designs remain preserved; design review,
+real source binding and company performance qualification remain pending.

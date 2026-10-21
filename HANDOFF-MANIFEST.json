@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 7304,
-      "SHA256": "1bb0fd715ec8189695918b4b7cd8c071469feab386158d89875fa541b7c06ade"
+      "Bytes": 7973,
+      "SHA256": "bf80b917c1bda6975e152d4be35385245718ce80cd810bee40b42a9798287a3a"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 11051,
-      "SHA256": "ccb37cacb42b764ba4509accafff09a6127de4afed2bd157c93e3a4c524f510b"
+      "Bytes": 12104,
+      "SHA256": "a676f7a736094bd719741861125f98c6ba804c27262d5d1b9e0da77a555d2892"
     },
     "README.md": {
-      "Bytes": 5059,
-      "SHA256": "232b63196ed8eb4a4c8c326090fcf257d4d3bd89189751984f7cf085ba54bb5b"
+      "Bytes": 5095,
+      "SHA256": "06e0cea8baf635c8b454b6cab90be0d1a779634285ca84e3d596468c5f6c3e97"
     },
     "feedback/STATUS.md": {
-      "Bytes": 29755,
-      "SHA256": "6f908cd48181e21f46c42b335d099bc642b6bea4a84c3f46559884b81b18a2db"
+      "Bytes": 31769,
+      "SHA256": "7300e611377f47075681745ed026b9409bb196e41e19ec4f94fec38dcc91269b"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -1288,6 +1288,82 @@
     "design/sop-spaced-groups-r05/validation.json": {
       "Bytes": 2676,
       "SHA256": "658a5369fdf9f2be571d4f57df88096d7d1ae693f0b3e045e7b5bfeed47de647"
+    },
+    "design/sop-cascade-r06/README.md": {
+      "Bytes": 4921,
+      "SHA256": "94ebebb1b835d0b9a5063a11859984e572ec5c7ee9175a777bc43733afbde38d"
+    },
+    "design/sop-cascade-r06/bridge-catalog.json": {
+      "Bytes": 23231,
+      "SHA256": "01206db0b05df1430f93123ff9b67bb404640bfd65f65574502f2f7905551194"
+    },
+    "design/sop-cascade-r06/bridge-order.png": {
+      "Bytes": 195150,
+      "SHA256": "ee32aa9f3c3a42c76887df57491b6797c20bbccd2116e71099807a11d2acc465"
+    },
+    "design/sop-cascade-r06/build.py": {
+      "Bytes": 809,
+      "SHA256": "172257e75532790c60e415ee8f340dfb40e05d3a453f81715c157da06d0d09b3"
+    },
+    "design/sop-cascade-r06/check-sop.cjs": {
+      "Bytes": 22730,
+      "SHA256": "ba09d2ca94209bcd5cc6c673083b3efcf06c64f60627a3de5b37807c16a6c4e2"
+    },
+    "design/sop-cascade-r06/community-current.png": {
+      "Bytes": 167735,
+      "SHA256": "c92fdf03eafdbf62bd10802b001b98de9c0afb6b45b06ec10927f3eb34e5e86f"
+    },
+    "design/sop-cascade-r06/current-and-ads.png": {
+      "Bytes": 180921,
+      "SHA256": "293a5654bf09719fec751d8eea29c2dcff28b07808330a4c2d806c6803d92c04"
+    },
+    "design/sop-cascade-r06/dark.png": {
+      "Bytes": 157334,
+      "SHA256": "4aafafa1a1a10813b680667280d92a186ca51b8b2a355d7c6b0ed78ab6dcc846"
+    },
+    "design/sop-cascade-r06/index.html": {
+      "Bytes": 492749,
+      "SHA256": "d0b656601ce599a09daf43d60eb235238ba752a0938ccad0c11edda0155dc06e"
+    },
+    "design/sop-cascade-r06/mobile.png": {
+      "Bytes": 156683,
+      "SHA256": "3a6e8247870b09e514da0b87b890c9174d06dab2cfe2ec4244a691aba871ecfc"
+    },
+    "design/sop-cascade-r06/monthly.png": {
+      "Bytes": 176704,
+      "SHA256": "b4212f84aad95c67885593be899d523db489d478241d34c3e5b8fcff9d69a806"
+    },
+    "design/sop-cascade-r06/multiple-channels.png": {
+      "Bytes": 202315,
+      "SHA256": "050ae062c7d8572160384001d417a632646b3df346b39f85be4e97af5913bd67"
+    },
+    "design/sop-cascade-r06/overview.png": {
+      "Bytes": 156863,
+      "SHA256": "3e4ef797c3b80f60b607cdea68be0bcfb38b978f43d7fff38e032b16a75a815d"
+    },
+    "design/sop-cascade-r06/page.fragment.html": {
+      "Bytes": 65963,
+      "SHA256": "662115a7629be826bac3a8fed0042af8cac6413ae32e4f56992336cc08fb04f4"
+    },
+    "design/sop-cascade-r06/preservation.json": {
+      "Bytes": 3214,
+      "SHA256": "e820dc6530e4d8b7cfb13a758b754f1c58e28b78bc1469e7443d28d564806ac7"
+    },
+    "design/sop-cascade-r06/review.fragment.html": {
+      "Bytes": 361422,
+      "SHA256": "634395c2a14435995f82137e88bbbe383cf80ca3da188b45d36d1fac3cc5bdbb"
+    },
+    "design/sop-cascade-r06/selector-hidden.png": {
+      "Bytes": 103907,
+      "SHA256": "3f315bee35296b5b7c54fcacbb637c1635dc13449b52b1931c80358436164db0"
+    },
+    "design/sop-cascade-r06/validation.json": {
+      "Bytes": 2765,
+      "SHA256": "4a159c330abca1322a3c3305d88388388db248810192f0efe2a0e79f027c61a0"
+    },
+    "design/sop-cascade-r06/value.png": {
+      "Bytes": 183574,
+      "SHA256": "297d643ca02348fc339444619172446314f0e106b7383f60a25ca4692da8ffa3"
     }
   }
 }

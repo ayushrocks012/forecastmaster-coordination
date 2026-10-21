@@ -1,0 +1,53 @@
+{
+  "scope": "Synthetic HTML-only cascade; no company runtime, source binding or Power BI speed assertion",
+  "checks": [
+    "Community enables its targets and explicit Cur/ADS measures; other channels start disabled; Share remains on the same graph’s right axis.",
+    "Parent off disables descendants and removes their series; restoring preserves choices. Selecting a target enables its Ex-factory measures, with clear indented Wholesaler/NI rows.",
+    "Cur and ADS are separately selectable for each chosen total/subchannel, use distinct series labels/colours and preserve separate future observations.",
+    "V18 identity catalogue binds 44 direct measures plus five explicit review diagnostics/aggregates; Community Cur/Pub/net/ADS precedes Wholesaler and NI, whose Ex-factory order is Cur/Pub/ADS.",
+    "Units/Value renames Market, Abbott IMS, Cur/ADS and unit/value share throughout buttons, legend and summary, with correct amounts and a percentage right axis.",
+    "Multiple parent channels cascade independently; Contracts exposes its real seven members, keeps expanded selections, and supports keyboard parent off/on.",
+    "102 numeric comparisons preserve Cur/Pub/ADS Community splits, Contracts and sector totals, FY=YTD+YTG, weighted share, blank/zero rules and separate cutoffs.",
+    "Select matches enables only required ancestors/targets; Select all and Clear all propagate correctly; a fresh Channel → Wholesaler → Cur path and legend off behavior work.",
+    "Bridge row order is independent of click order; summary periods add columns; calendars affect monthly columns separately; combined/driver/sector Cur totals reconcile.",
+    "Shared hover/touch includes selected Cur, IMS amounts and properly formatted right-axis share.",
+    "Responsive light/dark layouts and hide/show preserve values; warm interactions make no network requests and no runtime errors occur.",
+    "372 existing ADS/IMS raw and displayed cells match saved R05 across five scenarios; Cur is an explicit additional synthetic fixture."
+  ],
+  "invariantComparisons": 102,
+  "parity": {
+    "baseline": "R05",
+    "scenarios": 5,
+    "cells": 372
+  },
+  "responsive": [
+    {
+      "width": 1080,
+      "overflow": 0
+    },
+    {
+      "width": 736,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "overflow": 0
+    },
+    {
+      "width": 320,
+      "overflow": 0
+    }
+  ],
+  "errors": [],
+  "externalRequests": [
+    "https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js",
+    "https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js",
+    "https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js"
+  ],
+  "warm": {
+    "count": 12,
+    "meanMs": 8.450000000186265,
+    "maxMs": 13,
+    "networkRequests": 0
+  }
+}

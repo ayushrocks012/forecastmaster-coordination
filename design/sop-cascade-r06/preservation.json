@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "date": "2026-10-21",
+  "scope": "Bridge-identity cascade, contextual Cur/Pub/ADS, Units/Value labels and ordered contexts; synthetic HTML only",
+  "preservedVersions": {
+    "design/executive-review-r07/": {
+      "files": 13,
+      "recordsSHA256": "4d98b7dc4cf24bc11e510b97d2d166d0ad961073c098cc505a5ef9af4f542dda"
+    },
+    "design/executive-overview-r08/": {
+      "files": 17,
+      "recordsSHA256": "063132696eb6ea221607e726dfa5f9dd75617312eb1b44eafaeacd25f51dfb17"
+    },
+    "design/executive-period-review-r09/": {
+      "files": 17,
+      "recordsSHA256": "7e891ac74b46b2a9b743c15f1028d418f0008b4dc337fe0c7d87257772182c63"
+    },
+    "design/executive-gm-review-r10/": {
+      "files": 14,
+      "recordsSHA256": "c064a745a3783f30d83651e35d61049d485bdb716e7bd00104484a73d32ad716"
+    },
+    "design/executive-month-review-r11/": {
+      "files": 14,
+      "recordsSHA256": "d87dd9354c23d5dac14d87666a27dc6d437cbd1a94261b17924e2b8af874066a"
+    },
+    "design/sop-build-up-r01/": {
+      "files": 16,
+      "recordsSHA256": "e83a16621f43d01559301a6687f0ef4702d6fb21fcfc120e03a53c716d003cfa"
+    },
+    "design/sop-side-panel-r02/": {
+      "files": 16,
+      "recordsSHA256": "3fcdd09280756252e7a71e2af6b8cedd1c225714f656114951865da2ddd86156"
+    },
+    "design/sop-channel-table-r03/": {
+      "files": 15,
+      "recordsSHA256": "f8d37a3f8fc6e83db5fd9e11c454bd5a696fbe9d467a9a0ca6ffbc2463f3424a"
+    },
+    "design/sop-three-column-r04/": {
+      "files": 15,
+      "recordsSHA256": "eeaa9bba677ecfb4a76cce165bab42b205003665308446d27e794b7c65ff1103"
+    },
+    "design/sop-spaced-groups-r05/": {
+      "files": 15,
+      "recordsSHA256": "e0484cd5e89ef2c069bceec4b468a90d4e51bbf349d1631fe27bbc8e817d8b03"
+    }
+  },
+  "unchangedOriginalCalculationAndFixtureHashes": {
+    "source": "fb69dd4b344ea38f05e3db7f346628725ee6e7e34cd49fc5c13ce323f9574daa",
+    "groups": "523b0cea6def6e15606f7580cb4824c35da7451a5b087503e36dc68df6f37122",
+    "periodMonths": "d4f567883e9d8c80192af35bfd1c879850d73130fce1b95d3b6553391716768b",
+    "chartMonths": "38a886a79844ab170b4fbd56c3ea6a8df3b6e312375c60a6e0e030831a2f985a",
+    "buildComponents": "4c37c073679acd2aee033904738ee558ac0d501eca1fb0e43570b439fc5f38a0",
+    "sectors": "989677c1bc02badba35f9071332c0a7a06a1b72c81150718cfff07a008f8ba2a",
+    "rows": "e7250c6e9e309f3e1d74f55346ed035e6e6f20b593fd63b4c85ac47c086876af"
+  },
+  "additionalSyntheticFixtures": {
+    "currentSource": "0fb74ae4c2345b981cb95cc96616cd6afe114d787da9b75a2e0d1215762a031c",
+    "publishedSource": "e0f03a0daf41287cca9e40aefc424699932c75dfe7898a95e23991cf18f8b9f7"
+  },
+  "amountDispatch": {
+    "change": "Selects explicit synthetic Cur/Pub or original ADS provider; original ADS/IMS numerical parity tested",
+    "beforeSHA256": "4f9fb9710243683f22ec3225c80c63777060ec3b3b1ac8f3fca123f2bf17755c",
+    "afterSHA256": "b75109797bf9096e0101ca1ce4e7343ccef90fd4e7f95f390bfb7818a552197a"
+  },
+  "bridgeCatalogueSHA256": "01206db0b05df1430f93123ff9b67bb404640bfd65f65574502f2f7905551194",
+  "newFragmentSHA256": "634395c2a14435995f82137e88bbbe383cf80ca3da188b45d36d1fac3cc5bdbb",
+  "numericParity": {
+    "baseline": "R05",
+    "scenarios": 5,
+    "cells": 372
+  }
+}
