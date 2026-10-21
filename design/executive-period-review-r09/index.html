@@ -1931,10 +1931,6 @@ html&gt;body{padding:0}&lt;/style&gt;
 #fm-executive-period-review .fm-period-note{padding:0 12px 7px;font-size:12px;color:var(--fm-muted)}
 #fm-executive-period-review .fm-rank-window{font-size:12px}
 #fm-executive-period-review .fm-table-note{padding:8px 12px;color:var(--fm-muted);font-size:12px;border-top:1px solid var(--fm-line)}
-#fm-executive-period-review .fm-variance-track{display:block;position:relative;height:4px;margin-top:4px;background:var(--fm-soft);width:100%}
-#fm-executive-period-review .fm-variance-zero{position:absolute;left:50%;top:0;width:1px;height:4px;background:var(--fm-muted)}
-#fm-executive-period-review .fm-variance-bar{position:absolute;top:0;height:4px;background:var(--fm-accent)}
-#fm-executive-period-review .fm-variance-bar[data-direction=under]{background:var(--fm-series3)}
 #fm-executive-period-review .fm-plot svg .fm-review-band{fill:var(--fm-selected);fill-opacity:.65}
 #fm-executive-period-review .fm-plot svg .fm-end-label{fill:var(--fm-text);paint-order:stroke;stroke:var(--fm-panel);stroke-width:4px;stroke-linejoin:round}
 #fm-executive-period-review .fm-switch{flex-wrap:wrap;max-width:100%}
@@ -2254,9 +2250,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     for(const trend of state.tableTrends){
      const benchmark=amount(combo,subset,metric,months,trend),delta=plan==null||benchmark==null?null:plan-benchmark,percent=delta==null||benchmark===0?null:delta/Math.abs(benchmark),tone=delta&gt;0?&#x27;fm-delta-over&#x27;:delta&lt;0?&#x27;fm-delta-under&#x27;:&#x27;&#x27;;
      const percentText=percent==null?&#x27;—&#x27;:(percent&gt;0?&#x27;+&#x27;:percent&lt;0?&#x27;−&#x27;:&#x27;&#x27;)+(Math.abs(percent)*100).toFixed(1)+&#x27;%&#x27;;
-     const groups=[scope,...drivers.map(d=&gt;reviewSectors(d)),...scope.map(s=&gt;[s])],scale=Math.max(0,...groups.map(group=&gt;{const p=amount(combo,group,metric,months),t=amount(combo,group,metric,months,trend);return p==null||t==null?0:Math.abs(p-t);})),barWidth=delta==null||!scale?0:Math.abs(delta)/scale*47;
-     const bar=delta==null?&#x27;&#x27;:`&lt;span class=&quot;fm-variance-track&quot; aria-hidden=&quot;true&quot;&gt;&lt;span class=&quot;fm-variance-zero&quot;&gt;&lt;/span&gt;&lt;span class=&quot;fm-variance-bar&quot; data-direction=&quot;${delta&lt;0?&#x27;under&#x27;:&#x27;over&#x27;}&quot; style=&quot;left:${delta&lt;0?50-barWidth:50}%;width:${barWidth}%&quot;&gt;&lt;/span&gt;&lt;/span&gt;`;
-     html+=`&lt;td class=&quot;${tone}&quot; data-period=&quot;${period.id}&quot; data-trend-window=&quot;${trend}&quot; data-delta=&quot;${delta==null?&#x27;&#x27;:delta}&quot; data-tooltip=&quot;${delta==null?&#x27;Unavailable&#x27;:deltaLabel(delta,metric.unit)}&quot;&gt;${deltaLabel(delta,metric.unit)}${bar}&lt;/td&gt;&lt;td class=&quot;${tone}&quot; data-period=&quot;${period.id}&quot; data-trend-window=&quot;${trend}&quot; data-variance-percent=&quot;${percent==null?&#x27;&#x27;:percent}&quot; data-tooltip=&quot;${percent==null?&#x27;Unavailable or zero trend benchmark&#x27;:percentText+&#x27; vs &#x27;+trend+&#x27;M trend&#x27;}&quot;&gt;${percentText}&lt;/td&gt;`;
+     html+=`&lt;td class=&quot;${tone}&quot; data-period=&quot;${period.id}&quot; data-trend-window=&quot;${trend}&quot; data-delta=&quot;${delta==null?&#x27;&#x27;:delta}&quot; data-tooltip=&quot;${delta==null?&#x27;Unavailable&#x27;:deltaLabel(delta,metric.unit)}&quot;&gt;${deltaLabel(delta,metric.unit)}&lt;/td&gt;&lt;td class=&quot;${tone}&quot; data-period=&quot;${period.id}&quot; data-trend-window=&quot;${trend}&quot; data-variance-percent=&quot;${percent==null?&#x27;&#x27;:percent}&quot; data-tooltip=&quot;${percent==null?&#x27;Unavailable or zero trend benchmark&#x27;:percentText+&#x27; vs &#x27;+trend+&#x27;M trend&#x27;}&quot;&gt;${percentText}&lt;/td&gt;`;
     }
    }
    return html+&#x27;&lt;/tr&gt;&#x27;;

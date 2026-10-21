@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Variance bars removed from all checked table layouts",
+    "Every numeric cell value and displayed number string matches the preceding R09",
+    "Monthly chart lines retained",
+    "All existing R09 screenshots regenerated",
+    "Responsive widths and no JavaScript errors"
+  ],
+  "comparisons": [
+    {
+      "scenario": 1,
+      "numericCells": 49,
+      "sha256": "27bcd25dab48a52a5675262a1877c5d80335bc75bbbca16ff93e13a71271f879",
+      "unchanged": true
+    },
+    {
+      "scenario": 2,
+      "numericCells": 98,
+      "sha256": "5d3ff3d77086f5ef92d622614391356674b78f19ab5ccc11e31ae7e4e4fa0a58",
+      "unchanged": true
+    },
+    {
+      "scenario": 3,
+      "numericCells": 392,
+      "sha256": "366bcd1f2076652641f0fa788ead776298c87ec2b81574deebc84220000336f5",
+      "unchanged": true
+    }
+  ],
+  "widths": [
+    {
+      "width": 992,
+      "scroll": 992
+    },
+    {
+      "width": 704,
+      "scroll": 704
+    },
+    {
+      "width": 358,
+      "scroll": 358
+    },
+    {
+      "width": 288,
+      "scroll": 288
+    }
+  ],
+  "browser": "Bundled Playwright with Microsoft Edge on Windows"
+}

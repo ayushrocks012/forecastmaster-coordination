@@ -285,3 +285,12 @@ R07 and R08 remain preserved; the live Power BI report remains unchanged.
 The user also requested removing variance bars. That step is pending the
 session's required direct opt-in; the assistant requested it and continued
 the independent improvements. Bar removal has not been performed or validated.
+
+## 21 October 2026 — numeric variance table updated
+
+This supersedes the pending bar-removal note above. The user provided the
+explicit opt-in and requested a regenerated preview. R09 now displays the
+standard numeric variance table without the small bars beneath Absolute.
+Before/after numeric values and displayed number strings agree across default,
+FY/YTG and multiple-measure/cycle views. The preview and screenshots are
+regenerated. R07 and R08 remain unchanged, and no live Power BI changes were made.

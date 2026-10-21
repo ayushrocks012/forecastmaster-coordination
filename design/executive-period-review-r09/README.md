@@ -24,13 +24,12 @@ ADS source-selection rules and source details remain available. The monthly
 detail table and approval workflow remain absent. The displayed refresh time
 is explicitly sample metadata; this is not a production performance result.
 
-## Pending request
+## Numeric variance table
 
-The user asked to remove the small variance bars. That change has not been
-made: the current session's global rule requires a direct message starting
-`CONFIDENTIALITY OPT-IN:` before an action that reduces displayed information.
-The assistant requested that opt-in and continued these independent changes.
-R09 must not be described as having completed bar removal.
+On 21 October 2026, following the user's explicit opt-in, the small bars beneath
+Absolute variance were removed. Every numeric plan, absolute variance and
+percentage is retained. `validation-numeric-table.json` records before/after
+agreement across the default, FY/YTG and multiple-measure/cycle views.
 
 ## Checks
 

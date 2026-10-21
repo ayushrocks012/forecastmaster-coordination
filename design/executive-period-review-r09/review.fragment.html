@@ -143,10 +143,6 @@
 #fm-executive-period-review .fm-period-note{padding:0 12px 7px;font-size:12px;color:var(--fm-muted)}
 #fm-executive-period-review .fm-rank-window{font-size:12px}
 #fm-executive-period-review .fm-table-note{padding:8px 12px;color:var(--fm-muted);font-size:12px;border-top:1px solid var(--fm-line)}
-#fm-executive-period-review .fm-variance-track{display:block;position:relative;height:4px;margin-top:4px;background:var(--fm-soft);width:100%}
-#fm-executive-period-review .fm-variance-zero{position:absolute;left:50%;top:0;width:1px;height:4px;background:var(--fm-muted)}
-#fm-executive-period-review .fm-variance-bar{position:absolute;top:0;height:4px;background:var(--fm-accent)}
-#fm-executive-period-review .fm-variance-bar[data-direction=under]{background:var(--fm-series3)}
 #fm-executive-period-review .fm-plot svg .fm-review-band{fill:var(--fm-selected);fill-opacity:.65}
 #fm-executive-period-review .fm-plot svg .fm-end-label{fill:var(--fm-text);paint-order:stroke;stroke:var(--fm-panel);stroke-width:4px;stroke-linejoin:round}
 #fm-executive-period-review .fm-switch{flex-wrap:wrap;max-width:100%}
@@ -466,9 +462,7 @@
     for(const trend of state.tableTrends){
      const benchmark=amount(combo,subset,metric,months,trend),delta=plan==null||benchmark==null?null:plan-benchmark,percent=delta==null||benchmark===0?null:delta/Math.abs(benchmark),tone=delta>0?'fm-delta-over':delta<0?'fm-delta-under':'';
      const percentText=percent==null?'—':(percent>0?'+':percent<0?'−':'')+(Math.abs(percent)*100).toFixed(1)+'%';
-     const groups=[scope,...drivers.map(d=>reviewSectors(d)),...scope.map(s=>[s])],scale=Math.max(0,...groups.map(group=>{const p=amount(combo,group,metric,months),t=amount(combo,group,metric,months,trend);return p==null||t==null?0:Math.abs(p-t);})),barWidth=delta==null||!scale?0:Math.abs(delta)/scale*47;
-     const bar=delta==null?'':`<span class="fm-variance-track" aria-hidden="true"><span class="fm-variance-zero"></span><span class="fm-variance-bar" data-direction="${delta<0?'under':'over'}" style="left:${delta<0?50-barWidth:50}%;width:${barWidth}%"></span></span>`;
-     html+=`<td class="${tone}" data-period="${period.id}" data-trend-window="${trend}" data-delta="${delta==null?'':delta}" data-tooltip="${delta==null?'Unavailable':deltaLabel(delta,metric.unit)}">${deltaLabel(delta,metric.unit)}${bar}</td><td class="${tone}" data-period="${period.id}" data-trend-window="${trend}" data-variance-percent="${percent==null?'':percent}" data-tooltip="${percent==null?'Unavailable or zero trend benchmark':percentText+' vs '+trend+'M trend'}">${percentText}</td>`;
+     html+=`<td class="${tone}" data-period="${period.id}" data-trend-window="${trend}" data-delta="${delta==null?'':delta}" data-tooltip="${delta==null?'Unavailable':deltaLabel(delta,metric.unit)}">${deltaLabel(delta,metric.unit)}</td><td class="${tone}" data-period="${period.id}" data-trend-window="${trend}" data-variance-percent="${percent==null?'':percent}" data-tooltip="${percent==null?'Unavailable or zero trend benchmark':percentText+' vs '+trend+'M trend'}">${percentText}</td>`;
     }
    }
    return html+'</tr>';
