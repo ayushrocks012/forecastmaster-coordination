@@ -1,0 +1,7 @@
+const {chromium}=require('./qa-deps.cjs').tool('playwright'),path=require('node:path'),fs=require('node:fs'),assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch(require('./qa-deps.cjs').browserOptions()),p=await b.newPage();await p.goto('file://'+path.join(__dirname,'harness.html'));await p.addScriptTag({path:path.join(__dirname,'bridge-visual.js')});const result=await p.evaluate(()=>{
+ let applied;const element=document.createElement('div'),v=new NativeReview.Visual({element,host:{applyJsonFilter:filters=>applied=filters}});
+ v.filter({affiliate:'UK',cycles:['2026-07','2026-10'],drivers:['Core Oral','Paed SIP'],profile:'Ext',metric:'ims-market-units'});
+ let malformed=false;try{NativeReview.decode({table:{columns:[{roles:{Context:true}}],rows:[['{incomplete']]}})}catch{malformed=true;}
+ v.destroy();return {applied,malformed};});
+ assert.deepEqual(result.applied.find(f=>f.target.column==='DemandCycle').values,['2026-07','2026-10']);assert.deepEqual(result.applied.find(f=>f.target.column==='GrowthDriver').values,['Core Oral','Paed SIP']);assert.equal(result.malformed,true);await b.close();const summary={Status:'PASS',Checks:['Native self filters transmit all selected cycles','Native self filters transmit all selected drivers','Truncated metadata fails explicitly instead of silently showing partial results']};fs.writeFileSync(path.join(__dirname,'bridge-results.json'),JSON.stringify(summary,null,2));console.log(JSON.stringify(summary,null,2));})().catch(e=>{console.error(e);process.exit(1)});

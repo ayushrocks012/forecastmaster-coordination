@@ -1,0 +1,16 @@
+{
+  "Parent": "/mnt/c/Users/Ayush/Documents/PowerBI-Local-Setup/ForecastMaster-R04.1-Current-Files-2026-10-19",
+  "Files": {
+    "Visual/source/src/cohorts.ts": "834c52658e2e245c552b378329ba714fb6fe5922acfdf4a2c3f73384bfcdeeb7",
+    "Visual/source/src/engine.ts": "37186299dccc21ff51e6d26d28973c975209d1a2b95747e0e43b7f498fadc9b4",
+    "Visual/source/src/files.ts": "442155d91953a15a0f1170b9b7f7d8ef23e69236971cf54ece3198d05bd8c326",
+    "Visual/source/src/settings.ts": "6fa55bff73e2b5dfbee7de87921337c8401582482b9bf90e61a1836edccd42c8",
+    "Visual/source/src/template.ts": "d6beb3ada55bb2c94e5327f8ba9777bfbf8bfa2b1295050dde273b99d506aaf6",
+    "Visual/source/src/visual.ts": "4b149b144c7857735018d17d5a1859d9023f2801a1ed3fc8659b39ed85383930",
+    "Upgrade_Visual_Feed_R04.tmdl": "bc6de5bcfd21b3c4de585c0bef2db14e5610a9dd7fa213269b9df16e1e9b107e"
+  },
+  "UnchangedSourceFiles": [
+    "Visual/src/cohorts.ts",
+    "Visual/src/files.ts"
+  ]
+}

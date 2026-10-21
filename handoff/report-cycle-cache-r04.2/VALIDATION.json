@@ -1,0 +1,82 @@
+{
+  "Release": "R04.2",
+  "Date": "2026-10-21",
+  "Status": "PASS_LOCAL_REPORT_SCOPE",
+  "CompanyInstallation": "NOT_YET_INSTALLED",
+  "CompanyCapacityTiming": "NOT_MEASURED",
+  "Unchanged": [
+    "CohortMath arithmetic and current-file selectors are byte-identical to R04.1",
+    "No workbook, source refresh worker, pipeline, event rule, Functions or company report definition changed from this laptop"
+  ],
+  "TypeScript": "PASS with TypeScript 5.9.3; source and host bridge typechecked",
+  "PackagedVisual": {
+    "GUID": "ForecastMasterReviewMeetingR03C3",
+    "Version": "4.2.0.0",
+    "SHA256": "5dc2c8eadb02212bc092bb26396444879872766230bbfaf7c8bb67abf0990c6f"
+  },
+  "PythonInstallerTests": 18,
+  "RetainedArithmeticChecks": 17,
+  "RetainedBrowserChecks": 22,
+  "RetainedNativeFeedChecks": 8,
+  "RetainedHostBridgeChecks": 3,
+  "NativeDax": {
+    "CompleteRows": 1687,
+    "NumericRows": 1680,
+    "Metrics": 7,
+    "Files": 4,
+    "Cycles": 2,
+    "StoredEqualsDefined": true,
+    "EveryNumericComponentComparedToIndependentSyntheticFacts": true,
+    "IncompleteLegacyScopeReturnsNoNumericValues": true
+  },
+  "SmallCycleBrowser": {
+    "Status": "PASS",
+    "FixtureRows": 1687,
+    "LocalChanges": 16,
+    "HostQueriesForLocalChanges": 0,
+    "MedianMs": 7.800000000745058,
+    "P95Ms": 12.199999999254942,
+    "MaxMs": 12.199999999254942,
+    "Checks": [
+      "Per-metric data isolation",
+      "Weighted share reconciliation",
+      "Zero-valued EF month",
+      "Channel availability fallback",
+      "Driver-set availability",
+      "No model query for local changes",
+      "Incomplete cycle handshake",
+      "Refresh replaces loaded values",
+      "Fetch limit reports incomplete result"
+    ],
+    "PageErrors": []
+  },
+  "StressCycleBrowser": {
+    "Status": "PASS",
+    "rows": 53984,
+    "files": 128,
+    "decodeMs": 43.30000000074506,
+    "medianMs": 8.100000001490116,
+    "p95Ms": 13.400000002235174,
+    "queries": 0,
+    "local": "Local",
+    "profileLoading": false,
+    "staleIgnored": true,
+    "partial": {
+      "retainsCompleteView": true,
+      "fetches": 1
+    },
+    "PageErrors": []
+  },
+  "TimingDefinition": "Synchronous change handler including calculation and DOM updates in a local headless browser. Does not include network, company capacity, initial cycle load or browser paint. Not a latency guarantee.",
+  "GraphImpact": {
+    "State": "UNAVAILABLE",
+    "PreQuery": "ENOSPC creating shared quick-graph state",
+    "PreImpact": "ENOSPC creating shared quick-graph state",
+    "Fallback": "Direct dependency tracing and the listed native/browser/installer checks; graph coverage is not claimed",
+    "PostStagedGate": "FAILED_CLOSED: analysis_incomplete=1; diff-impact run failed. The printed zero counts are not usable impact evidence."
+  },
+  "ReceivingSteps": "README.md",
+  "FixtureEncoding": "Native JSON copies use LF and two-space indentation, with parsed payloads asserted identical to the original Windows-native receipts retained in the R04.1/R04.2 QA folders.",
+  "DiffWhitespaceCheck": "Modified/new sources checked; byte-preserved baseline and third-party notice retain their original whitespace.",
+  "CycleRequestBeforeMissingDriverDiagnostic": "PASS"
+}

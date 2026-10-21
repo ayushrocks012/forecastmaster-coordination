@@ -1,0 +1,306 @@
+{
+  "dataRoles": [
+    {
+      "name": "FileID",
+      "displayName": "FileID",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Month",
+      "displayName": "Month",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Country",
+      "displayName": "Country",
+      "kind": "Grouping"
+    },
+    {
+      "name": "DemandCycle",
+      "displayName": "DemandCycle",
+      "kind": "Grouping"
+    },
+    {
+      "name": "GrowthDriver",
+      "displayName": "GrowthDriver",
+      "kind": "Grouping"
+    },
+    {
+      "name": "SourceProfile",
+      "displayName": "SourceProfile",
+      "kind": "Grouping"
+    },
+    {
+      "name": "MetricKey",
+      "displayName": "MetricKey",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Channel",
+      "displayName": "Channel",
+      "kind": "Grouping"
+    },
+    {
+      "name": "SubChannel",
+      "displayName": "SubChannel",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Sector",
+      "displayName": "Sector",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Numerator",
+      "displayName": "Numerator",
+      "kind": "Measure"
+    },
+    {
+      "name": "Denominator",
+      "displayName": "Denominator",
+      "kind": "Measure"
+    },
+    {
+      "name": "NumeratorMissing",
+      "displayName": "NumeratorMissing",
+      "kind": "Measure"
+    },
+    {
+      "name": "DenominatorMissing",
+      "displayName": "DenominatorMissing",
+      "kind": "Measure"
+    },
+    {
+      "name": "FileMetadata",
+      "displayName": "FileMetadata",
+      "kind": "Measure"
+    },
+    {
+      "name": "Catalog",
+      "displayName": "Catalog",
+      "kind": "Measure"
+    },
+    {
+      "name": "Context",
+      "displayName": "Context",
+      "kind": "Measure"
+    },
+    {
+      "name": "Dimensions",
+      "displayName": "Dimensions",
+      "kind": "Measure"
+    },
+    {
+      "name": "Bounds",
+      "displayName": "Bounds",
+      "kind": "Measure"
+    }
+  ],
+  "objects": {
+    "general": {
+      "properties": {
+        "filter": {
+          "type": {
+            "filter": true
+          }
+        },
+        "selfFilter": {
+          "type": {
+            "filter": {
+              "selfFilter": true
+            }
+          }
+        },
+        "state": {
+          "type": {
+            "text": true
+          }
+        }
+      }
+    },
+    "diagnostics": {
+      "properties": {
+        "snapshot": {
+          "type": {
+            "text": true
+          }
+        }
+      }
+    }
+  },
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "FileID": {
+            "max": 1
+          },
+          "Month": {
+            "max": 1
+          },
+          "Country": {
+            "max": 1
+          },
+          "DemandCycle": {
+            "max": 1
+          },
+          "GrowthDriver": {
+            "max": 1
+          },
+          "SourceProfile": {
+            "max": 1
+          },
+          "MetricKey": {
+            "max": 1
+          },
+          "Channel": {
+            "max": 1
+          },
+          "SubChannel": {
+            "max": 1
+          },
+          "Sector": {
+            "max": 1
+          },
+          "Numerator": {
+            "max": 1
+          },
+          "Denominator": {
+            "max": 1
+          },
+          "NumeratorMissing": {
+            "max": 1
+          },
+          "DenominatorMissing": {
+            "max": 1
+          },
+          "FileMetadata": {
+            "max": 1
+          },
+          "Catalog": {
+            "max": 1
+          },
+          "Context": {
+            "max": 1
+          },
+          "Dimensions": {
+            "max": 1
+          },
+          "Bounds": {
+            "max": 1
+          }
+        }
+      ],
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "FileID"
+              }
+            },
+            {
+              "for": {
+                "in": "Month"
+              }
+            },
+            {
+              "for": {
+                "in": "Country"
+              }
+            },
+            {
+              "for": {
+                "in": "DemandCycle"
+              }
+            },
+            {
+              "for": {
+                "in": "GrowthDriver"
+              }
+            },
+            {
+              "for": {
+                "in": "SourceProfile"
+              }
+            },
+            {
+              "for": {
+                "in": "MetricKey"
+              }
+            },
+            {
+              "for": {
+                "in": "Channel"
+              }
+            },
+            {
+              "for": {
+                "in": "SubChannel"
+              }
+            },
+            {
+              "for": {
+                "in": "Sector"
+              }
+            },
+            {
+              "for": {
+                "in": "Numerator"
+              }
+            },
+            {
+              "for": {
+                "in": "Denominator"
+              }
+            },
+            {
+              "for": {
+                "in": "NumeratorMissing"
+              }
+            },
+            {
+              "for": {
+                "in": "DenominatorMissing"
+              }
+            },
+            {
+              "for": {
+                "in": "FileMetadata"
+              }
+            },
+            {
+              "for": {
+                "in": "Catalog"
+              }
+            },
+            {
+              "for": {
+                "in": "Context"
+              }
+            },
+            {
+              "for": {
+                "in": "Dimensions"
+              }
+            },
+            {
+              "for": {
+                "in": "Bounds"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 10000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "privileges": [],
+  "supportsKeyboardFocus": true,
+  "suppressDefaultTitle": true,
+  "supportsEmptyDataView": true
+}

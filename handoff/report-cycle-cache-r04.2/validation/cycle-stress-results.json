@@ -1,0 +1,17 @@
+{
+  "Status": "PASS",
+  "rows": 53984,
+  "files": 128,
+  "decodeMs": 43.30000000074506,
+  "medianMs": 8.100000001490116,
+  "p95Ms": 13.400000002235174,
+  "queries": 0,
+  "local": "Local",
+  "profileLoading": false,
+  "staleIgnored": true,
+  "partial": {
+    "retainsCompleteView": true,
+    "fetches": 1
+  },
+  "PageErrors": []
+}

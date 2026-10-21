@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ims-market-units",
+    "family": "IMS / Market",
+    "label": "IMS Market Units",
+    "unit": "Units",
+    "aggregation": "SUM",
+    "cutoffFamily": "IMS",
+    "numeratorKey": "product-units",
+    "denominatorKey": ""
+  },
+  {
+    "id": "ims-abbott-units",
+    "family": "IMS / Market",
+    "label": "IMS Abbott Units",
+    "unit": "Units",
+    "aggregation": "SUM",
+    "cutoffFamily": "IMS",
+    "numeratorKey": "abbott-units",
+    "denominatorKey": ""
+  },
+  {
+    "id": "ims-volume-share",
+    "family": "IMS / Market",
+    "label": "IMS Abbott Volume Share",
+    "unit": "%",
+    "aggregation": "RATIO",
+    "cutoffFamily": "IMS",
+    "numeratorKey": "abbott-units",
+    "denominatorKey": "product-units"
+  },
+  {
+    "id": "ims-market-value",
+    "family": "IMS / Market",
+    "label": "IMS Market Value",
+    "unit": "\u00a3",
+    "aggregation": "SUM",
+    "cutoffFamily": "IMS",
+    "numeratorKey": "product-value",
+    "denominatorKey": ""
+  },
+  {
+    "id": "ims-value-share",
+    "family": "IMS / Market",
+    "label": "IMS Abbott Value Share",
+    "unit": "%",
+    "aggregation": "RATIO",
+    "cutoffFamily": "IMS",
+    "numeratorKey": "abbott-value",
+    "denominatorKey": "product-value"
+  },
+  {
+    "id": "ef-selling-units",
+    "family": "Ex-Factory",
+    "label": "Ex-factory Selling Units",
+    "unit": "Units",
+    "aggregation": "SUM",
+    "cutoffFamily": "EF",
+    "numeratorKey": "ef-ads-units",
+    "denominatorKey": ""
+  },
+  {
+    "id": "ef-value",
+    "family": "Ex-Factory",
+    "label": "Ex-factory Value",
+    "unit": "\u00a3",
+    "aggregation": "SUM",
+    "cutoffFamily": "EF",
+    "numeratorKey": "ef-ads-value",
+    "denominatorKey": ""
+  }
+]

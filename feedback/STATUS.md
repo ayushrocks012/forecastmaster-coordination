@@ -185,3 +185,32 @@ are unchanged, expect metadata UNCHANGED / NeedsRefresh false and a skipped
 notebook. Capture the metadata output and any notebook output if one runs.
 Schedule execution remains unverified until that evidence is supplied. The old
 controller's polling schedule stays off; no new schedule or IT action is needed.
+
+
+## 21 October 2026: Review meeting performance update prepared
+
+The operator removed the old Run flow button and saved the Service report. Their
+01:55 screenshot still shows Connected model R04.1 and a long yellow
+"Loading monthly aggregates for this selection" after changing Section/Measure.
+They explicitly requested demand-cycle loading followed by fast local selections.
+
+`handoff/report-cycle-cache-r04.2/` is a prepared implementation, not a company
+installation result. It loads the selected country/cycle set across all seven
+measures, drivers and profiles; the remaining filters run locally. The same-GUID
+visual is imported into the current saved Service report before the separate
+model-feed installer is run. The source refresh system and its hourly schedule
+are unchanged. The existing native button remains in the current Service report.
+
+Local checks passed: retained arithmetic and browser regressions, native DAX
+execution of all seven measures over four synthetic files/two cycles, exact
+agreement between query-defined and stored expressions, installer preservation
+and failure gates, refresh replacement, stale-response rejection and complete
+segment loading. A 53,984-row/128-file synthetic browser test made zero host
+queries for local selections, with approximately 8 ms median and 14 ms worst
+measured response in that run. These are local synthetic timings, not company
+capacity measurements. See the package VALIDATION.json for exact results.
+
+**Pending:** import the R04.2 visual, run the model-feed installer, reload the
+company report, and confirm local interactions and saved business values. The
+first scheduled hourly run also remains unverified; this report optimization
+does not turn that earlier pending check into a pass.

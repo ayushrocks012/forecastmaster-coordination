@@ -1,0 +1,29 @@
+{
+  "Status": "PASS",
+  "Passed": 22,
+  "Checks": [
+    "Initial saved-source view renders with feed schema 4",
+    "Two cycles are selectable without dropping the first",
+    "Both saved plans use their own June values and actual/forecast status",
+    "Driver multi-selection produces one total per cycle",
+    "Duplicate driver versions visibly block an unsafe total",
+    "Missing selected driver is reported instead of displaying a partial total",
+    "Out of Pocket changes the unavailable IMS choice to a supported EF measure",
+    "Reported zero remains an available metric and displays zero",
+    "Family availability updates again when the channel changes",
+    "Aggregate volume share is market-weighted across drivers",
+    "Each comparison series has its own visible cutoff marker",
+    "Multi-select state is persisted",
+    "Driver choices cascade to the selected cycle",
+    "Expanding cycle selection preserves an explicit October benchmark Base",
+    "A driver with no October file remains visible and prevents an incomplete all-driver total",
+    "One hundred imports of one path still produce one current file card",
+    "The plotted file and Base move together to its newest saved data",
+    "Separately named scenarios remain selectable",
+    "Selectors contain no unavailable-option labels",
+    "A refresh preserves Clear all instead of plotting files again",
+    "Undo restores the current file and cannot resurrect an obsolete import",
+    "An old model feed shows the upgrade instruction immediately"
+  ],
+  "PageErrors": []
+}

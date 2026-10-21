@@ -1,0 +1,83 @@
+{
+  "Status": "PASS",
+  "NativeDaxQueries": 4,
+  "NumericRowsPerMultiSelectionQuery": 240,
+  "LegacySingleCohortNumericRows": 60,
+  "Checks": [
+    "Native DAX includes four source identities across two cycles and two drivers",
+    "Native aggregate rows are not multiplied across reference groupings",
+    "Native compact availability maps to metric identities",
+    "Native units totals reconcile to the raw synthetic facts",
+    "Native shares use combined numerator and denominator",
+    "Native channel change selects the valid EF family",
+    "Native zero-valued EF month remains valid",
+    "Legacy R03.2 renderer remains usable with the upgraded single-cohort feed"
+  ],
+  "Evidence": {
+    "fileCount": 4,
+    "parts": 240,
+    "context": {
+      "affiliate": "UK",
+      "profile": "Ext",
+      "metric": "ims-market-units",
+      "channel": "Out of Pocket",
+      "subchannel": "",
+      "sector": "A",
+      "schema": 4,
+      "cycle": "",
+      "driver": "",
+      "cycles": [
+        "2026-07",
+        "2026-10"
+      ],
+      "drivers": [
+        "Core Oral",
+        "Paed SIP"
+      ]
+    },
+    "dimensions": [
+      {
+        "channel": "Community",
+        "subchannel": "",
+        "sector": "A",
+        "metrics": [
+          "ims-market-units",
+          "ims-abbott-units",
+          "ims-volume-share",
+          "ims-market-value",
+          "ims-value-share"
+        ]
+      },
+      {
+        "channel": "Out of Pocket",
+        "subchannel": "",
+        "sector": "A",
+        "metrics": [
+          "ef-value",
+          "ef-selling-units"
+        ]
+      }
+    ]
+  },
+  "Legacy": {
+    "context": {
+      "affiliate": "UK",
+      "profile": "Ext",
+      "metric": "ims-market-units",
+      "channel": "Out of Pocket",
+      "subchannel": "",
+      "sector": "A",
+      "schema": 4,
+      "cycle": "2026-07",
+      "driver": "Core Oral",
+      "cycles": [
+        "2026-07"
+      ],
+      "drivers": [
+        "Core Oral"
+      ]
+    },
+    "scopeRequests": 0
+  },
+  "PageErrors": []
+}

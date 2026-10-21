@@ -1,0 +1,21 @@
+{
+  "Status": "PASS",
+  "FixtureRows": 1687,
+  "LocalChanges": 16,
+  "HostQueriesForLocalChanges": 0,
+  "MedianMs": 7.800000000745058,
+  "P95Ms": 12.199999999254942,
+  "MaxMs": 12.199999999254942,
+  "Checks": [
+    "Per-metric data isolation",
+    "Weighted share reconciliation",
+    "Zero-valued EF month",
+    "Channel availability fallback",
+    "Driver-set availability",
+    "No model query for local changes",
+    "Incomplete cycle handshake",
+    "Refresh replaces loaded values",
+    "Fetch limit reports incomplete result"
+  ],
+  "PageErrors": []
+}

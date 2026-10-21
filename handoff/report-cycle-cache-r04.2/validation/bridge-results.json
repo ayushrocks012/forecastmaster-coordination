@@ -1,0 +1,8 @@
+{
+  "Status": "PASS",
+  "Checks": [
+    "Native self filters transmit all selected cycles",
+    "Native self filters transmit all selected drivers",
+    "Truncated metadata fails explicitly instead of silently showing partial results"
+  ]
+}
