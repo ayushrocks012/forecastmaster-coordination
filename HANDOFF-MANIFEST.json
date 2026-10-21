@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 11396,
-      "SHA256": "b1238fddb1298551bdd45c3693981783b57d6eb4fce51c3dbf0d861bc6745c5a"
+      "Bytes": 12097,
+      "SHA256": "b07d4be28d2d01234dbcff33df39ceea102aae9a2d03f835dfd2f5c3a86c9f38"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 17387,
-      "SHA256": "77c0d69ec925bfa42b0f24c1193a749f356d18969968bc7c50ee9536030e462a"
+      "Bytes": 18437,
+      "SHA256": "ea7b3a03fbbbc1400f56dc9a80ca527c9a7cb1f3c88ac8505259f85b1751385c"
     },
     "README.md": {
-      "Bytes": 5651,
-      "SHA256": "bf1b5be208fdb9287c0d67d4720029a533d6585372625c6239735001e4cf0305"
+      "Bytes": 5753,
+      "SHA256": "61b6106cd27fa64b834362f399c3e12b77803745aaf3777b0621fcd549944702"
     },
     "feedback/STATUS.md": {
-      "Bytes": 40471,
-      "SHA256": "048fd49b0e015020595921381ed7718b5f1599c44740d1e575d4c18b50130b39"
+      "Bytes": 42229,
+      "SHA256": "6099d368208abba3fa420a095d0f407296ec5aed0b72ab7d26c930dfafea4144"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -1752,6 +1752,118 @@
     "design/sop-section-visibility-r11/value.png": {
       "Bytes": 156641,
       "SHA256": "0c196fb0eaf0a39a78ee8db62e8fa42c6cb081356820f8233f4feae3238ab8f4"
+    },
+    "design/sop-calendar-spacing-r12/README.md": {
+      "Bytes": 3515,
+      "SHA256": "402277f3ffa5baf1453683400faaddb7be322ccac93f1e41f246b3b9f94eb8da"
+    },
+    "design/sop-calendar-spacing-r12/all-contexts.png": {
+      "Bytes": 215929,
+      "SHA256": "74fc74d3494b4f1f1cd76e0f10319add3c0471f22a46805a316596d12d0aa890"
+    },
+    "design/sop-calendar-spacing-r12/all-hidden.png": {
+      "Bytes": 48726,
+      "SHA256": "0e4ec74020508b7d51a177384fa1709331060b646e671da65786a4a99b34a4fa"
+    },
+    "design/sop-calendar-spacing-r12/audit_bridge.py": {
+      "Bytes": 6060,
+      "SHA256": "e76ec99798056b2d1db0797c5d3a5071ab8ae17995928a0b0b697b98cd262168"
+    },
+    "design/sop-calendar-spacing-r12/bridge-audit.json": {
+      "Bytes": 4810,
+      "SHA256": "6d3b56f19c2493c17c153d8e454ec897b4b3d0011a3a542013a6f117b05ea7ed"
+    },
+    "design/sop-calendar-spacing-r12/bridge-catalog.json": {
+      "Bytes": 22390,
+      "SHA256": "0acaae2e996443cdea272c11f0911a72abc7c285279c90fbcbbbe8d77644c03f"
+    },
+    "design/sop-calendar-spacing-r12/build.py": {
+      "Bytes": 1037,
+      "SHA256": "db651ecc3a8610143007de0059d4b9ab75c27f324345866bfcca8a11f20c6b78"
+    },
+    "design/sop-calendar-spacing-r12/check-sop.cjs": {
+      "Bytes": 32967,
+      "SHA256": "6e48a1e8f66278e76f2b4517bc33dcf2a93bb835d4ea2055c4e2ee095403cd0f"
+    },
+    "design/sop-calendar-spacing-r12/dark.png": {
+      "Bytes": 156000,
+      "SHA256": "873e7e5ec06c57c38dd844f138287b2375abf8e308d6cd649e4f20482e8dcc48"
+    },
+    "design/sop-calendar-spacing-r12/derived.png": {
+      "Bytes": 176578,
+      "SHA256": "d1b031144ec2a72665c85b56a2597b00ae52626f16882310296985f4317722b2"
+    },
+    "design/sop-calendar-spacing-r12/empty.png": {
+      "Bytes": 106440,
+      "SHA256": "b33a13deead663280afaa2f952764c3126354b6e439162e69c7f04ecc17bcc65"
+    },
+    "design/sop-calendar-spacing-r12/graph-hidden.png": {
+      "Bytes": 147309,
+      "SHA256": "0a330b52cf645accd8c17bb7e1a554552b03a7c23701810604974c23f25c20d3"
+    },
+    "design/sop-calendar-spacing-r12/graph-only.png": {
+      "Bytes": 83839,
+      "SHA256": "c83aaf8f38736e8c27ca66743ffd12d065625806f4b6b3be7c0018e9ad176ec9"
+    },
+    "design/sop-calendar-spacing-r12/index.html": {
+      "Bytes": 498705,
+      "SHA256": "35a70700ef5b940e4365af7937ffed591323394805a770a744cefda75f45ea31"
+    },
+    "design/sop-calendar-spacing-r12/mobile.png": {
+      "Bytes": 156975,
+      "SHA256": "0428bc79a3ac6db1f2fa03709540031ef29616e00b647bcdb39c6d02d67ffd29"
+    },
+    "design/sop-calendar-spacing-r12/multiple-channels.png": {
+      "Bytes": 184212,
+      "SHA256": "31ef011c9de732964569239beb24fa3f6f4661e355a9e66de36ae3826a289ec3"
+    },
+    "design/sop-calendar-spacing-r12/page.fragment.html": {
+      "Bytes": 74941,
+      "SHA256": "dc94e6cffe7a4ccae23ae288a697dfda4d4342f153ed4c5229e1073cbdf42b6e"
+    },
+    "design/sop-calendar-spacing-r12/preservation.json": {
+      "Bytes": 45818,
+      "SHA256": "8447274242690f282db8a659cca79e3b73f38cdcef51df908408dc92c50bd5a7"
+    },
+    "design/sop-calendar-spacing-r12/review.fragment.html": {
+      "Bytes": 369686,
+      "SHA256": "5c94d18e296fb6252c7bac6947a6be1f2b0453e9f8d5871e96490bc64c4394ad"
+    },
+    "design/sop-calendar-spacing-r12/selected.png": {
+      "Bytes": 154912,
+      "SHA256": "66e0d37745b446b377c1a3f919199f0524c793f26b019b4239d6bd5a54dd3a36"
+    },
+    "design/sop-calendar-spacing-r12/single-year.png": {
+      "Bytes": 155018,
+      "SHA256": "c118c10cbcd2dd07c5413c520760501e7be23908856001355966a30f090bbd98"
+    },
+    "design/sop-calendar-spacing-r12/summary-only-view.png": {
+      "Bytes": 103061,
+      "SHA256": "84fcac5ccb57ab4a070bffe15e845573aaefd8ce7bf191d7a9e0c8bd66c3dd22"
+    },
+    "design/sop-calendar-spacing-r12/summary-only.png": {
+      "Bytes": 33199,
+      "SHA256": "78d32aeecf49f0c82403e9dba85f690c61d597ab6a49404c58216a74f904abd1"
+    },
+    "design/sop-calendar-spacing-r12/summary-rules.json": {
+      "Bytes": 2450,
+      "SHA256": "1daa86bc8c5ea64085e607cff4108490b9f4c29b891eaafaba5f54c6de7d7856"
+    },
+    "design/sop-calendar-spacing-r12/summary-stats.png": {
+      "Bytes": 55840,
+      "SHA256": "53b131b8e37f97391a0b8140607fe3921f32f4fcaf5a3a3e8cd48ad42746d070"
+    },
+    "design/sop-calendar-spacing-r12/two-years.png": {
+      "Bytes": 161881,
+      "SHA256": "ccb009da368d2740470924ab9be36d48509e43e339a53b44a05d929c067a19a1"
+    },
+    "design/sop-calendar-spacing-r12/validation.json": {
+      "Bytes": 4329,
+      "SHA256": "efa8df841e1c49f5bd99f8ab97529e601dc8b05d2dbb146f9c89760da0cafe23"
+    },
+    "design/sop-calendar-spacing-r12/value.png": {
+      "Bytes": 157231,
+      "SHA256": "3a6a05cae53a13b13d0571d85131121acf4bb08bc6f5acf62d136f225a957d8d"
     }
   }
 }

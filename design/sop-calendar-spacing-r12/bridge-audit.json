@@ -1,0 +1,169 @@
+{
+  "schema": "FM_SOP_R09_RETAINED_BRIDGE_AUDIT",
+  "checkedAt": "2026-10-21T20:41:36.035786+00:00",
+  "status": "PASS",
+  "sourceContextCount": 13,
+  "sectorDefinitions": 29,
+  "structuralDataRowsInspected": 10179,
+  "bindingIdentityMatches": 1044,
+  "sourceOrderChecks": 58,
+  "dimensions": [
+    "units",
+    "value"
+  ],
+  "selectedExecutiveMeasures": 18,
+  "sourceReports": {
+    "core-oral": {
+      "descriptorSHA256": "814ceadd7c96f7d205785cc6e006205d13ab85211324f4c2592573416908d5e8",
+      "sectorDefinitions": 20,
+      "structuralDataRowsInspected": 7125,
+      "bindingMatches": 720,
+      "sourceOrderChecks": 40,
+      "contexts": [
+        {
+          "channel": "Community",
+          "subChannel": null,
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Community",
+          "subChannel": "Wholesaler",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Community",
+          "subChannel": "Northern Ireland",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Homecare",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Hospital",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Healthcare Logistics",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Competitor",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Nursing Home",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Out of Pocket",
+          "subChannel": "Retail",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Private Order",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Internal Account",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Unassigned",
+          "subChannel": "Unassigned",
+          "sectorOccurrences": 20
+        },
+        {
+          "channel": "Sector total",
+          "subChannel": null,
+          "sectorOccurrences": 20
+        }
+      ]
+    },
+    "paed-sip": {
+      "descriptorSHA256": "260a0a64e43fd3e456773b88272af4e35c41a97c60fe8d4dd1b574c95f763bf3",
+      "sectorDefinitions": 9,
+      "structuralDataRowsInspected": 3054,
+      "bindingMatches": 324,
+      "sourceOrderChecks": 18,
+      "contexts": [
+        {
+          "channel": "Community",
+          "subChannel": null,
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Community",
+          "subChannel": "Wholesaler",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Community",
+          "subChannel": "Northern Ireland",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Homecare",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Hospital",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Healthcare Logistics",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Competitor",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Nursing Home",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Out of Pocket",
+          "subChannel": "Retail",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Private Order",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Contracts",
+          "subChannel": "Internal Account",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Unassigned",
+          "subChannel": "Unassigned",
+          "sectorOccurrences": 9
+        },
+        {
+          "channel": "Sector total",
+          "subChannel": null,
+          "sectorOccurrences": 9
+        }
+      ]
+    }
+  },
+  "findings": [],
+  "scope": "Retained neutral Core Oral and Paed SIP definitions, all sectors and all Channel/Sub-channel contexts. Executive measures only; not every bridge working/input.",
+  "exclusions": "Cur/Pub remain excluded. Homecare/Hospital baseline/day, new-contract and shipment workings remain outside this GM page by user choice.",
+  "limits": "No live workbook/Fabric audit, real forecast values, full model binding or Power BI speed qualification. GitNexus reported stale authority; direct retained identities supplied this evidence."
+}

@@ -592,3 +592,31 @@ summary-rule bytes are unchanged; prior saved designs remain preserved.
 The numbers remain synthetic. This is HTML design work only: the approved first
 page, live Power BI report, Fabric items, application source and workbooks were
 not changed. Live implementation remains paused for design approval.
+
+## 21 October 2026 — R12 links summary years to calendars and clarifies spacing
+
+The user identified that 2027 FY remained available during a January–December
+2026 review, and requested small standard spacing between measures and
+Sub-channels as well as Channels. R12 labels the top dates Review months and
+limits summary years to that range. Widening adds choices without selecting
+new columns; narrowing removes out-of-range selections. Changing entirely to
+new years carries selected period kinds across; an explicitly cleared selection
+stays empty. Named FY/YTD/YTG business windows remain intact, with a visible
+caption explaining FY is January–December. Monthly uses the exact selected months.
+
+The summary now has a contrasting 6px gap at every selected business-block
+boundary, including Share before Abbott IMS, Sub-channels and Channels.
+Run-rate/growth details stay with their measure's amount. Merged hierarchy
+geometry and source order remain intact. The reference analysis confirms
+business-block spacer rows; no workbook layout was modified.
+
+Local checks pass 18 browser integration groups, including dynamic open-picker
+updates, stale-column removal, year switching, clear-state retention, partial
+year semantics and hidden-summary updates. They verify all 17 measure/context
+boundaries, 216 retained amount comparisons with R11, 384 derived comparisons,
+64 reconciliations and all eight Hide/Show combinations. Responsive light/dark
+layouts, hover and zero warm requests/script errors also pass.
+
+All prior designs remain preserved and observations remain synthetic. No live
+Power BI report, Fabric item, application source or workbook was changed. Live
+source binding, report performance and implementation remain pending approval.
