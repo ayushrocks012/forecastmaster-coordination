@@ -1,0 +1,52 @@
+const{chromium}=require('C:\\Users\\Ayush\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true}),page=await browser.newPage({viewport:{width:1480,height:1000},timezoneId:'Europe/London'}),errors=[];
+ page.on('pageerror',e=>errors.push(String(e)));const url='file:///'+path.join(__dirname,'local-test/index.html').replace(/\\/g,'/');
+ const baseline=JSON.parse(fs.readFileSync(path.join(__dirname,'local-test/feed.json'),'utf8'));
+ const fileMeta=(id,driver,scenario)=>({id,path:'synthetic/'+id+'.xlsm',filename:`UK_${driver}_Bridge_Oct 26_EF-Sep 26_IMS-Aug 26_${scenario}.xlsm`,affiliate:'UK',driver,cycle:'2026-10',ims:'2026-08',ef:'2026-09'});
+ const mixed=structuredClone(baseline);
+ for(let i=0;i<3;i++){const f=fileMeta('unavailable-'+i,'Other driver '+i,'Working_001');mixed.table.rows.push([f.id,'2026-01','gm-market-units','Community','','Unselected tier',5,0,JSON.stringify(f),null]);}
+ mixed.metadata.objects.general.state=JSON.stringify({page:'demand',demand:{sectors:Array.from({length:7},(_,i)=>'s'+i)},sop:{sectors:Array.from({length:7},(_,i)=>'s'+i)}});
+ await page.goto(url);await page.evaluate(v=>visual.update({dataViews:[v],type:2}),mixed);
+ const initial=await page.evaluate(()=>{const a=visual.app.live,d=document.querySelector('#fm-connected-demand-r15').fmDesign,s=document.querySelector('#fm-connected-sop-r15').sopDesign;return {rawDrivers:Object.keys(a.drivers).length,drivers:d.scopeOptions().driverIds.length,tiers:d.getState().sectors.length,sopTiers:s.getState().sectors.length,excluded:d.scopeOptions().excluded.length,choices:document.querySelectorAll('#fm-quick-scope .gm-scope-field').length,oldTree:document.querySelectorAll('#fm-quick-scope .fm-driver-children').length,height:document.querySelector('section[aria-label="Shared review selection"]').getBoundingClientRect().height,channelsHidden:document.querySelector('[data-filter="channels"]').hidden};});
+ assert.deepEqual([initial.rawDrivers,initial.drivers,initial.tiers,initial.sopTiers,initial.excluded],[5,2,4,4,3]);assert.equal(initial.choices,2);assert.equal(initial.oldTree,0);assert(initial.height<160);assert(initial.channelsHidden);
+ const gap=structuredClone(mixed);delete gap.metadata.objects.general.state;
+ for(const r of gap.table.rows)if(r[0]==='fixture-Core Oral'&&r[1]==='2025-10'&&r[2]==='gm-market-value'&&r[5]==='Tier Two'){r[6]=null;r[7]=1;}
+ await page.evaluate(v=>{visual.update({dataViews:[v],type:2});document.querySelector('#fm-connected-demand-r15').fmDesign.setState({display:'value'});},gap);
+ const gapCase=await page.evaluate(()=>{const d=document.querySelector('#fm-connected-demand-r15').fmDesign,m=d.catalog.find(m=>m.id==='market-value'),c=d.combos()[0],months=d.periodMonths('2026:FY',c,m),all=d.getState().sectors,bad=visual.app.live.sectors.find(s=>s.name==='Tier Two'&&visual.app.live.drivers[s.driver]==='Core Oral').id;const plan=d.amount(c,d.activeSectors(),m,months),benchmark=d.amount(c,d.activeSectors(),m,months,12),shown=!document.querySelector('#fm-availability').hidden;d.setState({sectors:all.filter(id=>id!==bad)});const selectedPlan=d.amount(d.combos()[0],d.activeSectors(),m,months),selectedBenchmark=d.amount(d.combos()[0],d.activeSectors(),m,months,12);d.setState({sectors:all});return {plan,benchmark,shown,selectedPlan,selectedBenchmark,reselected:d.amount(d.combos()[0],d.activeSectors(),m,months,12),note:document.querySelector('#fm-availability').textContent,shortcutVisible:getComputedStyle(document.querySelector('.fm-summary-review')).display!=='none'};});
+ assert.equal(gapCase.plan,310800);assert.equal(gapCase.benchmark,null);assert(gapCase.shown);assert.equal(gapCase.selectedPlan,233100);assert(Math.abs(gapCase.selectedBenchmark-233100)<1e-6);assert.equal(gapCase.reselected,null);assert.match(gapCase.note,/1 unavailable months/);assert.equal(gapCase.shortcutVisible,false);
+ const headline=await page.evaluate(()=>{const d=document.querySelector('#fm-connected-demand-r15').fmDesign;d.setState({periods:['2026:FY','2026:YTD','2026:YTG']});const n=document.querySelector('#fm-executive-readout');return {cards:n.querySelectorAll('[data-executive-position]').length,text:n.innerText,table:document.querySelector('#fm-summary').textContent};});
+ assert.equal(headline.cards,1);assert.match(headline.text,/2026 FY/);assert.doesNotMatch(headline.text,/2026 YTD|2026 YTG|Driver variances/);for(const p of ['2026 FY','2026 YTD','2026 YTG'])assert(headline.table.includes(p));
+ await page.evaluate(()=>{const d=document.querySelector('#fm-connected-demand-r15').fmDesign;d.setState({sectors:[]});d.setState({display:'value'});});
+ assert.equal(await page.evaluate(()=>document.querySelector('#fm-connected-demand-r15').fmDesign.getState().sectors.length),0,'Clear all must stay empty');
+ await page.evaluate(()=>{const d=document.querySelector('#fm-connected-demand-r15').fmDesign;d.setState({sections:['ef'],metrics:['ef-units']});});
+ assert.equal(await page.locator('[data-filter="channels"]').isVisible(),true);
+ // One source per driver; 50 tiers per source, no hidden synthetic numeric generator.
+ const scale={table:{columns:baseline.table.columns,rows:[]},metadata:{objects:{general:{page:'demand'}}}};
+ for(let driver=1;driver<=10;driver++){const name='Driver '+String(driver).padStart(2,'0'),f=fileMeta('scale-'+driver,name,'ADS');let first=true;for(let tier=1;tier<=50;tier++)for(let month=1;month<=12;month++){scale.table.rows.push([f.id,'2026-'+String(month).padStart(2,'0'),'gm-market-units','Community','','Tier '+String(tier).padStart(2,'0'),driver+tier+month,0,first?JSON.stringify(f):null,first?JSON.stringify({first:'2026-01',last:'2026-12'}):null]);first=false;}}
+ await page.reload();await page.evaluate(v=>visual.update({dataViews:[v],type:2}),scale);
+ const scaled=await page.evaluate(()=>{const d=document.querySelector('#fm-connected-demand-r15').fmDesign;return {drivers:d.scopeOptions().driverIds.length,tiers:d.getState().sectors.length,height:document.querySelector('section[aria-label="Shared review selection"]').getBoundingClientRect().height};});
+ assert.equal(scaled.drivers,10);assert.equal(scaled.tiers,500);assert(scaled.height<160);assert(Math.abs(scaled.height-initial.height)<30);
+ const scope=page.locator('#fm-quick-scope'),tiers=scope.locator('[data-scope-field="sector"]');
+ await tiers.locator('.gm-scope-button').click();await tiers.locator('input[type="search"]').fill('Driver 10 · Tier 50');
+ assert.equal(await tiers.locator('.gm-scope-option').count(),1);
+ await tiers.getByRole('button',{name:'Clear all',exact:true}).click();assert.equal(await page.evaluate(()=>document.querySelector('#fm-connected-demand-r15').fmDesign.getState().sectors.length),499);
+ assert(await tiers.locator('.gm-scope-popup').isVisible(),'Multi-select stays open');
+ await tiers.getByRole('button',{name:'Select all',exact:true}).click();assert.equal(await page.evaluate(()=>document.querySelector('#fm-connected-demand-r15').fmDesign.getState().sectors.length),500);
+ await tiers.locator('input[type="search"]').press('Escape');assert.equal(await tiers.locator('.gm-scope-popup').isVisible(),false);
+ const drivers=scope.locator('[data-scope-field="driver"]');await drivers.locator('.gm-scope-button').click();await drivers.locator('input[type="search"]').fill('Driver 10');
+ await drivers.getByRole('button',{name:'Clear all',exact:true}).click();assert.equal(await page.evaluate(()=>document.querySelector('#fm-connected-demand-r15').fmDesign.getState().sectors.length),450);
+ await drivers.locator('input[type="search"]').press('Escape');
+ const mainScroll=await page.evaluate(()=>[...document.querySelectorAll('*')].filter(e=>e.getClientRects().length&&['auto','scroll'].includes(getComputedStyle(e).overflowY)&&e.scrollHeight>e.clientHeight+2).map(e=>e.className||e.id||e.tagName));
+ assert.deepEqual(mainScroll,['gm-review-viewport']);
+ await page.screenshot({path:path.join(__dirname,'local-test/compact-demand.png')});
+ await page.evaluate(()=>document.querySelector('#fm-connected-review-r15').reviewSession.navigate('sop'));
+ const sop=await page.evaluate(()=>({tiers:document.querySelector('#fm-connected-sop-r15').sopDesign.getState().sectors.length,choices:document.querySelectorAll('#sb-scope .gm-scope-field').length,height:document.querySelector('section[aria-label="Growth driver and sector selection"]').getBoundingClientRect().height,offHeights:[...document.querySelectorAll('[data-channel-off=true]')].map(e=>e.getBoundingClientRect().height),sources:document.querySelector('#fm-connected-review-r15').reviewSession.getSources().length}));
+ fs.writeFileSync(path.join(__dirname,'local-test/layout-debug.json'),JSON.stringify({sop,styles:await page.evaluate(()=>[...document.querySelectorAll('[data-channel-off=true]')].map(e=>({attr:e.outerHTML.slice(0,250),cells:[...e.querySelectorAll('td')].map(c=>({padding:getComputedStyle(c).padding,height:c.getBoundingClientRect().height,hints:[...c.children].map(x=>({tag:x.tagName,display:getComputedStyle(x).display,height:x.getBoundingClientRect().height}))}))})))},null,2));
+ assert.equal(sop.tiers,450);assert.equal(sop.choices,2);assert(sop.height<160);assert(sop.offHeights.every(h=>h<75));assert.equal(sop.sources,9);
+ await page.evaluate(()=>{document.querySelector('.gm-review-viewport').scrollTop=0;});await page.screenshot({path:path.join(__dirname,'local-test/compact-sop.png')});
+ assert.deepEqual(errors,[]);const calls=await page.evaluate(()=>hostCalls);assert.equal(calls.fetch,0);assert.deepEqual(calls.failed,[]);
+ const result={evidence:'SYNTHETIC packaged visual in Edge; company Desktop test pending',initial,scaled,sop,gapCase,singleHeadlineWithAllSelectedPeriodsInTable:true,singleVerticalContentScroll:mainScroll,searchAndFilteredBulkSelection:true,clearAllPreserved:true,dropdownRemainsOpen:true,unitsExfactoryFilterVisibility:true,browserErrors:errors,localInteractionsWithoutNewFetch:calls.fetch===0};
+ fs.writeFileSync(path.join(__dirname,'VALIDATION-LAYOUT.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

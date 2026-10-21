@@ -1,5 +1,43 @@
 # Company setup status
 
+## 22 October 2026 — R16.1 company load passed; R16.2 compact correction
+
+The operator confirmed that R16.1 opens and retrieves saved reporting data.
+The reporting setup returned READY with a rules backup. A subsequent native
+refresh returned SUCCESS, no stage errors, rebuilt the review projection and
+confirmed ModelRefresh COMPLETED. Screenshots show numeric Core Oral and Paed
+SIP rows. Those receiving results supersede the earlier pending setup/load notes.
+
+The old selector exposed every model driver despite only two usable ADS driver
+sources. Its long checkbox tree, nested scrollbars and repeated FY/YTD/YTG
+headline/shortcut text crowded the page. The authorized separate R16.2 package
+uses source-aware searchable driver/tier dropdowns, stable scope identities,
+one labelled headline period and a single vertical content viewport. It keeps
+every selected executive-table period and existing graph/table numeric rules.
+Inactive S&OP channel rows are more compact; active bridge contexts retain order.
+
+A read-only Market Value history check for Sep 2025–Aug 2026 found 12 complete
+months for Vegan, but 11 or 8 for Vegan 2K across returned source revisions,
+with 1 or 4 missing cells. Thus a Plan may exist while its full-scope 12M trend
+is unavailable. Removing that tier legitimately changes Plan and can restore
+the remaining scope's benchmark. R16.2 explains incomplete history; it never
+fills missing values, switches training windows or repairs company source data.
+Actual-only YTD retains actuals, so its trend variance remains zero.
+
+Local packaged Edge tests pass for 500 tiers across ten drivers with a constant
+selector height below 160px at desktop width, source preference and exclusions,
+selection/reselection arithmetic, complete-data guards, shared internal review
+navigation, FX/Share, refresh invalidation and one vertical content scroller.
+All 31 tracked R16.1 files and exact numeric/transport functions are preserved.
+The setup/rules are unchanged: do not repeat the already completed company setup.
+
+The new private project/ZIP preserves the source report and native Refresh Demand
+page. No company report was published. R16.2 Desktop rendering, source-total
+reconciliation, measured company speed and eventual published-button checks
+remain receiving gates. Public code and receipts contain synthetic data only.
+GitNexus impact remained partial/UNKNOWN, supplemented by direct tracing and
+focused tests; no zero-impact conclusion is claimed.
+
 ## 21 October 2026 — R16 opened; clean model grain; R16.1 reader correction
 
 The operator opened all three R16 pages in Desktop on the work laptop. During

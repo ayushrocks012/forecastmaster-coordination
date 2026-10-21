@@ -1,0 +1,13 @@
+{
+  "repository": "forecastmaster-coordination",
+  "quickImpact": "ACTIONABLE_PARTIAL",
+  "risk": "UNKNOWN",
+  "riskLowerBound": "MEDIUM",
+  "resolvedTarget": "R16.1 sources closure",
+  "sentinelRetry": "read-only retry returned partial after extraction-state sentinel",
+  "changeScope": "FAILED_CLOSED_ANALYSIS_INCOMPLETE",
+  "detectChanges": "UNAVAILABLE",
+  "reason": "AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+  "zeroImpactConcluded": false,
+  "fallback": "Direct source tracing, canonical BR-005 and bridge lookup, preserved numeric functions, synthetic source/selection and packaged-browser regression checks. Company R16.2 acceptance pending."
+}

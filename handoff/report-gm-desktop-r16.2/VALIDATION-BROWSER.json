@@ -1,0 +1,41 @@
+{
+  "plan": 62160,
+  "trend": 62160,
+  "sopMarket": 62160,
+  "share": 0.1,
+  "converted": 62160,
+  "zero": 0,
+  "missing": null,
+  "hideRestores": true,
+  "hostCalls": {
+    "persist": 21,
+    "fetch": 1,
+    "failed": []
+  },
+  "tableHeaders": 22,
+  "times": [
+    42.69999999925494,
+    20.699999999254942,
+    42.30000000074506,
+    18.199999999254942,
+    41,
+    18.700000002980232,
+    37.599999997764826,
+    17.100000001490116,
+    36.30000000074506,
+    17.299999997019768,
+    43.30000000074506,
+    20.5
+  ],
+  "refreshed": 62208,
+  "browserErrors": [],
+  "startup": {
+    "first": "Waiting for saved reporting data from the connected model…",
+    "loading": "Loading the saved monthly data once…",
+    "failed": [],
+    "fetch": 1
+  },
+  "overlapHandled": true,
+  "evidence": "SYNTHETIC FIXTURE - packaged visual in headless Edge; no company connection",
+  "fixtureRows": 17280
+}

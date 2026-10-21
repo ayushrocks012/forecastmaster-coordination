@@ -1,0 +1,52 @@
+{
+  "evidence": "SYNTHETIC packaged visual in Edge; company Desktop test pending",
+  "initial": {
+    "rawDrivers": 5,
+    "drivers": 2,
+    "tiers": 4,
+    "sopTiers": 4,
+    "excluded": 3,
+    "choices": 2,
+    "oldTree": 0,
+    "height": 136.921875,
+    "channelsHidden": true
+  },
+  "scaled": {
+    "drivers": 10,
+    "tiers": 500,
+    "height": 136.921875
+  },
+  "sop": {
+    "tiers": 450,
+    "choices": 2,
+    "height": 129.921875,
+    "offHeights": [
+      50.5,
+      51,
+      60.1875,
+      51,
+      59.6875
+    ],
+    "sources": 9
+  },
+  "gapCase": {
+    "plan": 310800,
+    "benchmark": null,
+    "shown": true,
+    "selectedPlan": 233100,
+    "selectedBenchmark": 233100,
+    "reselected": null,
+    "note": "Some trend comparisons unavailable · 1 tiers need complete historyCore Oral · Tier Two · Market value: 12M history has 1 unavailable months (2025-09 to 2026-08). No partial benchmark is substituted.",
+    "shortcutVisible": false
+  },
+  "singleHeadlineWithAllSelectedPeriodsInTable": true,
+  "singleVerticalContentScroll": [
+    "gm-review-viewport"
+  ],
+  "searchAndFilteredBulkSelection": true,
+  "clearAllPreserved": true,
+  "dropdownRemainsOpen": true,
+  "unitsExfactoryFilterVisibility": true,
+  "browserErrors": [],
+  "localInteractionsWithoutNewFetch": true
+}

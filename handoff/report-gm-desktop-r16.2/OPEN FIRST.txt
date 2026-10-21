@@ -1,0 +1,62 @@
+FORECASTMASTER GM REVIEW R16.2 - COMPACT SOURCE-AWARE REVIEW
+
+Use a NEW folder. Keep the R16.1 project and ZIP unchanged as rollback.
+The original report is also retained as Original - before GM redesign.pbix.
+The three pages remain Demand review, S&OP review, and Refresh Demand.
+
+YOU ALREADY COMPLETED SETUP
+Your reporting setup, native refresh and model refresh succeeded. This is a
+report-only update. Do NOT repeat the setup notebook or trigger another native
+refresh merely to install R16.2. The included setup file is unchanged reference.
+
+OPEN THE REPLACEMENT
+1. Close R16.1 in Power BI Desktop.
+2. Extract the WHOLE R16.2 ZIP to a NEW normal folder on the work laptop.
+   Do not open a file inside the ZIP or overwrite the old project.
+3. Open ForecastMaster GM Review / ForecastMaster GM Review.pbip.
+   Keep its .Report folder alongside it. Use the same company account.
+4. Wait for the saved reporting data to load. Check that the header says R16.2.
+   If the canvas has an outer scrollbar, View > Page view > Fit to page.
+   The report content itself has one vertical scrollbar. Open dropdowns and
+   wide tables may have their own useful menu/horizontal scrollbars.
+
+CHECK DEMAND REVIEW FIRST
+5. Select your Affiliate and October 2026 cycle. Growth drivers and Forecast
+   tiers are now compact searchable dropdowns, populated from available ADS
+   sources. With the current two ADS driver sources, unrelated no-ADS drivers
+   should be absent. Source details explains the exclusion.
+6. Select Core Oral in Growth drivers, then inspect its Forecast tiers.
+   The dropdown stays open for multi-selection; Select all / Clear all apply
+   to the search results. Clear all must leave an empty review, not all tiers.
+7. Test Units first; then Value and the required plan rate for USD. Check a
+   known Plan total against the source using the same source, sector and period.
+   Compare the headline with the same period's executive-table total.
+8. Select FY, YTD and YTG in the summary. The headline keeps ONE labelled period;
+   the table shows every selected period. Redundant FY + YTG captions are gone.
+9. Market Value including Vegan 2K may have unavailable trends: your DAX check
+   confirmed missing history. Expand the history note to see the exact tier and
+   window. Removing that tier legitimately changes Plan and can restore the
+   benchmark for the remaining scope. Re-selecting it must restore the warning.
+   No missing history is filled and no partial benchmark is substituted.
+   Actual-only YTD retains actuals and therefore zero trend variance.
+
+CHECK S&OP AND SAVE
+10. Use Explore in S&OP INSIDE the visual to carry scope and plan rates.
+    Power BI's native page tabs retain separate visual sessions.
+11. Select Community, its blank sub-channel, and the required measures.
+    Add Wholesaler / Northern Ireland independently. Check graph and table
+    values against the corresponding bridge identities, including Share on
+    the right axis. Channel/context/measure choices still require explicit ticks.
+12. Check periods/monthly mode, run rate, growth and Hide/Show. Refresh Demand
+    retains the original native button and page definition byte for byte.
+13. Send any complete error text or mismatched total before publishing. Local
+    synthetic tests are complete; company R16.2 reconciliation and speed are
+    still to be checked on your laptop.
+14. Once receiving checks pass, File > Save As > Power BI report (.pbix), with
+    a NEW name. Publish that new report first, retaining the existing report.
+    Verify the published native button separately before replacing shared links.
+
+ROLLBACK
+Close R16.2 and reopen your R16.1 project, or Original - before GM redesign.pbix.
+This update changes neither source data nor installed reporting rules. No rule
+restore or company model replacement is needed to undo the report-only update.
