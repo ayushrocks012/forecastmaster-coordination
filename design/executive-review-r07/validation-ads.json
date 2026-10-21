@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Matching files follows executive summary",
+    "ADS selected on initial load",
+    "Plan ADS takes priority over ADS and numbered versions",
+    "Exact ADS takes priority over numbered versions",
+    "Numeric suffix comparison handles ADS_010 vs ADS_002",
+    "Defaults selected separately per driver and cycle",
+    "Mixed ADS suffixes aggregate as one plan",
+    "No duplicate revisions per driver in a plan",
+    "Manual override and restore default",
+    "Changing cycle and scope chooses sources automatically",
+    "Missing ADS is visible and no other planner is substituted",
+    "Missing ADS prevents a complete total",
+    "Ambiguous equal candidates are not picked arbitrarily",
+    "Responsive widths",
+    "No JavaScript errors"
+  ],
+  "initial": [
+    "2026-10|oral|ADS",
+    "2026-10|paed|ADS_002"
+  ],
+  "layout": {
+    "files": 6,
+    "summary": 5,
+    "graph": 4
+  },
+  "policy": {
+    "planADS": {
+      "files": [
+        {
+          "id": "Plan ADS",
+          "scenario": "Plan ADS",
+          "cycle": "2026-10",
+          "driver": "oral",
+          "modifiedUtc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "issues": []
+    },
+    "exactADS": {
+      "files": [
+        {
+          "id": "ADS",
+          "scenario": "ADS",
+          "cycle": "2026-10",
+          "driver": "oral",
+          "modifiedUtc": "2026-10-20T00:00:00Z"
+        }
+      ],
+      "issues": []
+    },
+    "numeric": {
+      "files": [
+        {
+          "id": "ten",
+          "scenario": "ADS_010",
+          "cycle": "2026-10",
+          "driver": "oral",
+          "modifiedUtc": "2026-10-19T00:00:00Z"
+        }
+      ],
+      "issues": []
+    },
+    "missing": {
+      "files": [],
+      "issues": [
+        {
+          "cycle": "2026-10",
+          "driver": "oral",
+          "status": "MISSING"
+        }
+      ]
+    },
+    "ambiguous": {
+      "files": [],
+      "issues": [
+        {
+          "cycle": "2026-10",
+          "driver": "oral",
+          "status": "AMBIGUOUS"
+        }
+      ]
+    }
+  },
+  "missing": {
+    "files": [
+      "2026-10|oral|ADS"
+    ],
+    "message": "ADS not available for Paed SIP (October 2026) · Source details below",
+    "hidden": false,
+    "total": ""
+  },
+  "dimensions": [
+    {
+      "width": 992,
+      "scroll": 992
+    },
+    {
+      "width": 704,
+      "scroll": 704
+    },
+    {
+      "width": 358,
+      "scroll": 358
+    },
+    {
+      "width": 288,
+      "scroll": 288
+    }
+  ]
+}

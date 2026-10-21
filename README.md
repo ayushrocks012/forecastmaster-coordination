@@ -4,13 +4,14 @@ A separate repository for exchanging ForecastMaster setup scripts, office-laptop
 
 This repository is public. Files and screenshots committed here are publicly visible.
 
+- **Current executive review design, awaiting approval:** [open the R07 preview guide](design/executive-review-r07/README.md). Pull this repo and open `design/executive-review-r07/index.html` in a browser. Includes the new Growth driver → Forecast tier Both view and sample-data screenshots.
 - Current notebook updater: [INSTALL NOTEBOOK R05.4.txt](handoff/notebook-r05.4/INSTALL%20NOTEBOOK%20R05.4.txt)
 - Current authentication correction: [hourly user context setup](handoff/pipeline-user-context-r01/README.md)
 - Original R05.3 handoff: [retained package](handoff/notebook-r05.3/README.txt)
 - Current published Functions source: [ForecastMaster-Actions-R06-native.txt](handoff/native-adhoc-r01/ForecastMaster-Actions-R06-native.txt)
 - Native ad hoc extension, installed and tested through the company report button:
   [native setup and receiving steps](handoff/native-adhoc-r01/README.md)
-- Prepared report performance update, company installation pending: [R04.2 cycle feed](handoff/report-cycle-cache-r04.2/README.md)
+- Prepared report performance update, paused for design review: [R04.2 cycle feed](handoff/report-cycle-cache-r04.2/README.md)
 - Company setup state: [feedback/STATUS.md](feedback/STATUS.md)
 - Screenshot exchange: [feedback/screenshots](feedback/screenshots)
 - Text output exchange: [feedback/logs](feedback/logs)

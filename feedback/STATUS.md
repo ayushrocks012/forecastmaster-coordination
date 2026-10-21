@@ -214,3 +214,25 @@ capacity measurements. See the package VALIDATION.json for exact results.
 company report, and confirm local interactions and saved business values. The
 first scheduled hourly run also remains unverified; this report optimization
 does not turn that earlier pending check into a pass.
+
+## 21 October 2026 — executive design review, R07
+
+This later instruction pauses the report installation steps above. The user
+requested an HTML design review before changing the live Power BI visual, and
+then requested this prototype be synced to Coordination for review elsewhere.
+
+Open [the R07 guide](../design/executive-review-r07/README.md), then open the
+folder's `index.html` in a browser. It includes simultaneous driver/sector
+selection, a Both chart view with each driver's total and sector lines, and a
+Both table layout with driver subtotals and sector rows. Existing flat layouts,
+shared scope, FY/YTG column groups and automatic ADS defaults are retained.
+The preceding R06 design is available alongside it for comparison.
+
+Local browser checks passed for hierarchy selection, partial parents, totals
+without double counting, weighted share ratios, graph/table view independence,
+FY/YTG expansion, ADS ranking/override/missing/ambiguous cases and responsive
+widths. The receipts and sample screenshots are in the design folder.
+
+**Pending:** user design approval, production implementation/data binding and
+company performance/business-value validation. These prototype results do not
+install R04.2 or change the company report, refresh system or schedules.

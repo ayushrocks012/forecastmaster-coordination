@@ -572,6 +572,58 @@
     "handoff/report-cycle-cache-r04.2/validation/native-feed-results.json": {
       "Bytes": 2017,
       "SHA256": "f6c10b8ca2020a4d3a9e54d6d518a726d582640da423bc8550746d822a141ec4"
+    },
+    "design/executive-review-r07/README.md": {
+      "Bytes": 5525,
+      "SHA256": "37a5aadac4cd5c47295d0aef7a78afbfcc64e3478cff32a77f25892607d51ad7"
+    },
+    "design/executive-review-r07/both-dark.png": {
+      "Bytes": 304303,
+      "SHA256": "3187631732449086dcc240e6d4a7f56f156921b0854aad6017673a212825e2ae"
+    },
+    "design/executive-review-r07/both-views.png": {
+      "Bytes": 298835,
+      "SHA256": "cb9be8fbd1b497250502f4079050e313726003cec68f4b86df6fdf28173c7800"
+    },
+    "design/executive-review-r07/check-ads-default.cjs": {
+      "Bytes": 6534,
+      "SHA256": "4ff1a564f7c8d2c34b30a360343d03cb395153d9b16ee6393ecf09fd4a3b6f6e"
+    },
+    "design/executive-review-r07/check-hierarchy.cjs": {
+      "Bytes": 9734,
+      "SHA256": "ce926f8cbf80ef373d72e1ddabf814da070d490bbf0cb11bac32f6d22f6d188f"
+    },
+    "design/executive-review-r07/dark.png": {
+      "Bytes": 230305,
+      "SHA256": "4b2f1693c23ac442895d60f8f1f6a7dd874aa6b37313fcc0c7b55f4283b7ec24"
+    },
+    "design/executive-review-r07/index.html": {
+      "Bytes": 159457,
+      "SHA256": "ecbeb294355b3929874cf7d7200e19c5b487248f5e067e24bcdfb6bc6cce21e4"
+    },
+    "design/executive-review-r07/overview.png": {
+      "Bytes": 236848,
+      "SHA256": "568f35123e3b2874bb0ca83de500cecf40e86edfd689dc61186fdc6f465de624"
+    },
+    "design/executive-review-r07/previous-r06.html": {
+      "Bytes": 155896,
+      "SHA256": "5a1eb985fff92eb715b83d5b761fed4794489ca5123e5d57af77c0a7388bf2ff"
+    },
+    "design/executive-review-r07/review.fragment.html": {
+      "Bytes": 64794,
+      "SHA256": "5271f736505f494c5013bb973b6bb5324eb9ddccf5edce670d192379bc8ede5d"
+    },
+    "design/executive-review-r07/sectors.png": {
+      "Bytes": 226665,
+      "SHA256": "23d4d3325cfc75072ffc2a7e820b5d545f36f79e04ac3184f7a559bdfafe4014"
+    },
+    "design/executive-review-r07/validation-ads.json": {
+      "Bytes": 2484,
+      "SHA256": "2348f8d1315f5ffea25dfb430a215b8829398f60adfc47ebda0af553bc6a7aee"
+    },
+    "design/executive-review-r07/validation-hierarchy.json": {
+      "Bytes": 2669,
+      "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     }
   }
 }
