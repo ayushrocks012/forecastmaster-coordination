@@ -1,0 +1,12 @@
+{
+  "evidence": "SYNTHETIC source identities only",
+  "availableADSDrivers": 2,
+  "excludedNonADSDrivers": 3,
+  "cycleAffiliateAndCustomScope": true,
+  "actualPreferredFileSectorMembership": true,
+  "missingCycleRetained": true,
+  "ambiguousADSBlocked": true,
+  "ambiguousTierStillVisible": true,
+  "sourcePreferencePreserved": true,
+  "scopeCacheIndependentOfTicks": true
+}

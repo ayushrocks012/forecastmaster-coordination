@@ -1,0 +1,18 @@
+{
+  "previousR16_2TrackedFilesUnchanged": 43,
+  "exactFunctionsPreserved": [
+    "read",
+    "cutoff",
+    "fit",
+    "parts",
+    "point",
+    "decode"
+  ],
+  "exactSupportingFilesPreserved": [
+    "GM-RULES.json",
+    "SETUP REPORTING FEED.py",
+    "build_setup.py",
+    "Visual/src/files.ts"
+  ],
+  "companyDataRepaired": false
+}

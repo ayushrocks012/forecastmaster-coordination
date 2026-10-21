@@ -1,0 +1,13 @@
+{
+  "evidence": "SYNTHETIC aggregate-versus-detail regression",
+  "sumAvailableMembers": true,
+  "missingLeafPreserved": true,
+  "entireMissingMonthPreserved": true,
+  "exactPeriodCalendarRetained": true,
+  "entireMissingTrainingMonthWithheld": true,
+  "zeroAndZeroDenominatorPreserved": true,
+  "missingAndAmbiguousSourceWithheld": true,
+  "weightedShareUsesPairedComponents": true,
+  "actualOnlyVarianceZero": true,
+  "SOPAndDemandSamePolicy": true
+}

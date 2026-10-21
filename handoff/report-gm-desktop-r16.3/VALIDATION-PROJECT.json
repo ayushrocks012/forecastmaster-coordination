@@ -1,0 +1,31 @@
+{
+  "schemaFilesValidated": 10,
+  "schemaUnavailable": [
+    {
+      "file": "definition/pages/demandreview/visuals/demandreviewworkspace/visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "status": "HTTP 404 - preserved source schema version"
+    },
+    {
+      "file": "definition/pages/refreshdemand/visuals/bb4c7f4f8fe28cf5983f/visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "status": "HTTP 404 - preserved source schema version"
+    }
+  ],
+  "sourceAndRollbackVerified": true,
+  "refreshDemandBytePreserved": true,
+  "existingSemanticModelConnectionPreserved": true,
+  "nativePages": [
+    "GM Review",
+    "Refresh Demand"
+  ],
+  "reviewModesShareOneInstance": true,
+  "newPageGeometry": "1440 x 810, FitToPage, matching visual viewport",
+  "newRules": 12,
+  "totalRules": 19,
+  "setupIdempotent": true,
+  "conflictingSetupRefused": true,
+  "desktopNativeRender": "PENDING",
+  "liveCompanyNumbers": "PENDING",
+  "publication": "NOT PERFORMED"
+}

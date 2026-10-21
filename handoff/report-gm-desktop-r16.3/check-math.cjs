@@ -1,0 +1,21 @@
+const assert=require('node:assert/strict');
+const{createLive}=require('./local-test/math/live');
+const bridge=require('../../design/currency-plan-review-r15/bridge-catalog.json');
+const file={id:'fixture',path:'fixture/ADS.xlsm',filename:'UK_Driver_Bridge_Oct 26_EF-Sep 26_IMS-Aug 26_ADS.xlsm',affiliate:'UK',driver:'Driver',cycle:'2026-10',ims:'2026-08',ef:'2026-09'};
+const rows=[];for(let t=0;t<48;t++)for(const [component,n]of [['gm-abbott-units',10+t],['gm-market-units',100+t]])rows.push({file:'fixture',month:`${2024+Math.floor(t/12)}-${String(t%12+1).padStart(2,'0')}`,component,sector:'Tier',channel:'Community',subchannel:'',n,missing:0});
+function live(input=rows){const map=new Map();for(const r of input){const k=JSON.stringify([r.file,r.month,r.component]);if(!map.has(k))map.set(k,[]);map.get(k).push(r);}return createLive({rows:input,files:[file],byFileMonthComponent:map,bounds:{first:'2024-01',last:'2027-12'}},bridge);}
+const a=live(),sector=a.sectors[0],f=a.files[0],combo={files:[f]},metric={id:'market-units',component:'market',section:'ims',unit:'Units'},months=Array.from({length:12},(_,i)=>24+i),fx={total:xs=>xs.reduce((s,x)=>s+x.value,0)};
+assert.equal(a.demand(combo,[sector],metric,months,0,null,fx,false),1554);
+for(const n of [6,12,24])assert(Math.abs(a.demand(combo,[sector],metric,months,n,null,fx,false)-1554)<1e-9);
+const missingMonth=live(rows.filter(r=>!(r.month==='2026-06'&&r.component==='gm-market-units')));
+assert.equal(missingMonth.demand(combo,[sector],metric,months,0,null,fx,false),null);
+const missingMember=live(rows.map(r=>r.month==='2026-06'&&r.component==='gm-market-units'?{...r,missing:1}:r));
+assert.equal(missingMember.demand(combo,[sector],metric,months,0,null,fx,false),null);
+const zero=live(rows.map(r=>r.component==='gm-market-units'?{...r,n:0}:r));assert.equal(zero.demand(combo,[sector],metric,months,0,null,fx,false),0);
+const gap=live(rows.filter(r=>!(r.month==='2025-12'&&r.component==='gm-market-units')));assert.equal(gap.demand(combo,[sector],metric,[36],12,null,fx,false),null);
+assert.equal(a.demand({files:[f,f]},[sector],metric,months,0,null,fx,false),null);
+assert.throws(()=>live([...rows,rows[0]]),/Duplicate monthly component/);
+const share={...metric,id:'share',component:'abbott',denominator:'market'};
+assert(Math.abs(a.demand(combo,[sector],share,months,0,null,fx,false)-474/1554)<1e-10);
+assert.equal(zero.demand(combo,[sector],share,months,0,null,fx,false),null);
+console.log('PASS: complete periods, missing member/month, numeric zero, missing training month, ambiguous source, duplicate transport row, weighted ratio, 6/12/24M fits.');

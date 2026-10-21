@@ -1,0 +1,173 @@
+{
+  "dataRoles": [
+    {
+      "name": "FileID",
+      "displayName": "FileID",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Month",
+      "displayName": "Month",
+      "kind": "Grouping"
+    },
+    {
+      "name": "MetricKey",
+      "displayName": "MetricKey",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Channel",
+      "displayName": "Channel",
+      "kind": "Grouping"
+    },
+    {
+      "name": "SubChannel",
+      "displayName": "SubChannel",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Sector",
+      "displayName": "Sector",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Numerator",
+      "displayName": "Numerator",
+      "kind": "Measure"
+    },
+    {
+      "name": "NumeratorMissing",
+      "displayName": "NumeratorMissing",
+      "kind": "Measure"
+    },
+    {
+      "name": "FileMetadata",
+      "displayName": "FileMetadata",
+      "kind": "Measure"
+    },
+    {
+      "name": "Bounds",
+      "displayName": "Bounds",
+      "kind": "Measure"
+    }
+  ],
+  "objects": {
+    "general": {
+      "properties": {
+        "state": {
+          "type": {
+            "text": true
+          }
+        },
+        "page": {
+          "type": {
+            "text": true
+          }
+        }
+      }
+    }
+  },
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "FileID": {
+            "max": 1
+          },
+          "Month": {
+            "max": 1
+          },
+          "MetricKey": {
+            "max": 1
+          },
+          "Channel": {
+            "max": 1
+          },
+          "SubChannel": {
+            "max": 1
+          },
+          "Sector": {
+            "max": 1
+          },
+          "Numerator": {
+            "max": 1
+          },
+          "NumeratorMissing": {
+            "max": 1
+          },
+          "FileMetadata": {
+            "max": 1
+          },
+          "Bounds": {
+            "max": 1
+          }
+        }
+      ],
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "FileID"
+              }
+            },
+            {
+              "for": {
+                "in": "Month"
+              }
+            },
+            {
+              "for": {
+                "in": "MetricKey"
+              }
+            },
+            {
+              "for": {
+                "in": "Channel"
+              }
+            },
+            {
+              "for": {
+                "in": "SubChannel"
+              }
+            },
+            {
+              "for": {
+                "in": "Sector"
+              }
+            },
+            {
+              "for": {
+                "in": "Numerator"
+              }
+            },
+            {
+              "for": {
+                "in": "NumeratorMissing"
+              }
+            },
+            {
+              "for": {
+                "in": "FileMetadata"
+              }
+            },
+            {
+              "for": {
+                "in": "Bounds"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 10000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "privileges": [],
+  "supportsKeyboardFocus": true,
+  "suppressDefaultTitle": true,
+  "supportsEmptyDataView": true
+}

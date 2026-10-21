@@ -1,0 +1,52 @@
+FORECASTMASTER GM REVIEW R16.3 - TOTALS, DYNAMIC TIERS, ZOOM, MATCHING HEADERS
+
+Keep R16.2 and its ZIP unchanged. Use a NEW extracted folder for R16.3.
+Your successful reporting setup and model refresh do not need to be repeated.
+This update changes the report only. Do not rerun the setup notebook.
+
+1. Close R16.2 in Power BI Desktop.
+2. Extract the WHOLE R16.3 ZIP to a new ordinary folder on the work laptop.
+3. Open ForecastMaster GM Review / ForecastMaster GM Review.pbip.
+   Keep its .Report folder beside it. Use the same company account.
+4. Wait for the saved data. Confirm the header says R16.3.
+   The two native pages are GM Review and Refresh Demand. Demand review and
+   S&OP review remain available within GM Review. The model connection is retained.
+
+CHECK DEMAND REVIEW
+5. Choose Affiliate and October cycle. Open Growth drivers, Clear all, then
+   tick Core Oral. Forecast tiers should now contain only Core Oral tiers.
+   Clearing tiers keeps Core Oral selected so you can choose its tiers again.
+6. Review Jan 2025 to Dec 2027. Total history now sums the available selected
+   sector values each month, as in the bridge. A blank Vegan 2K observation
+   does not suppress the whole Core Oral history or aggregate trend/variance.
+7. Drill into Vegan 2K alone: its own unavailable observations remain gaps.
+   A completely unreported month or missing/ambiguous source remains unavailable.
+   No leaf data has been filled. Compare a known monthly total to the bridge.
+8. Check FY/YTD/YTG in the executive table. The headline shows one labelled
+   period. Actual-only YTD keeps actuals, so its trend variance is zero.
+   Test Units, then Value with the required USD plan rate if using USD.
+9. Use Desktop's zoom slider at 80%, 100%, then View > Page view > Fit to page.
+   Text and chart content should scale together without resetting selections.
+   Fit to page fits the report canvas; the longer content/table still scrolls
+   vertically within it. Send the exact symptom if native zoom differs.
+
+CHECK S&OP AND SAVE
+10. Use Explore in S&OP INSIDE the visual to carry the selected scope/rates.
+    Calendars, source status, Affiliate, cycle and Display retain their positions.
+    The Section/Measure positions are blank on S&OP by design.
+    There is no duplicate native S&OP page. Use the separate Refresh Demand
+    native tab only for the existing refresh action.
+11. Choose Channel, source Sub-channel (or blank), and Measure explicitly.
+    Check aggregate chart/table values against the bridge, then individual tiers.
+    Verify Share on the right axis, FY/YTD/YTG/monthly, run rate and growth.
+12. Check the separate Refresh Demand page. Its native button is preserved.
+13. Send screenshots and any mismatched total before publication. The local
+    synthetic tests passed; company R16.3 totals, native zoom and speed still
+    need verification on your laptop.
+14. Once receiving checks pass, Save As a NEW PBIX and publish the new report
+    first, retaining the existing report. Test its published native button
+    separately before replacing shared links.
+
+ROLLBACK
+Close R16.3 and reopen R16.2, or Original - before GM redesign.pbix.
+No source/model/rule restore is needed to undo this report-only update.

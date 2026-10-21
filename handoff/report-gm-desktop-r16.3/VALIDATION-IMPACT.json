@@ -1,0 +1,18 @@
+{
+  "repository": "forecastmaster-coordination",
+  "quickImpact": "ACTIONABLE_PARTIAL",
+  "risk": "UNKNOWN",
+  "riskLowerBound": "MEDIUM",
+  "targets": [
+    "createLive",
+    "compactScope",
+    "Visual",
+    "prepare_project.create"
+  ],
+  "demandProbe": "AMBIGUOUS",
+  "changeScope": "FAILED_CLOSED_ANALYSIS_INCOMPLETE",
+  "detectChanges": "UNAVAILABLE",
+  "reason": "AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+  "zeroImpactConcluded": false,
+  "fallback": "Direct source tracing; canonical BR-018 available display totals and BR-005 calendar rules; focused aggregate/detail, transport, cascade, paired-layout and resize-only packaged-browser tests. Company R16.3 acceptance pending."
+}

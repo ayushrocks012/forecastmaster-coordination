@@ -1,5 +1,42 @@
 # Company setup status
 
+## 22 October 2026 — R16.2 received; R16.3 corrects totals and navigation
+
+The operator's R16.2 screenshots confirm native loading and numeric results in
+both review modes. They identified incomplete driver-level history caused by
+strict tier guards, a tier dropdown still listing unselected drivers, ineffective
+content zoom, and mismatched header/filter placement. They clarified that the
+GM needs available-value driver totals even when an individual tier has a gap.
+
+The application-owned BR-018 later SUM_AVAILABLE_V1 display policy and current
+operator_formulas/sector_summary code already support available-member display
+sums. R16.3 applies that rule monthly and fits trends on the selected aggregate.
+Individual tier gaps remain unavailable; a wholly unreported month or missing/
+ambiguous source remains unavailable. Source data and leaf formulas are unchanged.
+The earlier R16.2 strict aggregate rule is superseded for this GM display.
+
+Forecast tiers now cascade from selected drivers, with parent scope independent
+of child ticks. Both review modes share matching calendar/source/filter geometry,
+reserving blank Section/Measure positions in S&OP. Host viewport updates scale
+cached content and hover coordinates without a data reload. Synthetic Edge tests
+pass at 50%, 80%, 100% and approximately 103%, including resize-only updates with
+no dataViews. Native work-laptop zoom remains a separate receiving check.
+
+The operator questioned the duplicate native S&OP page. The new candidate has
+GM Review and Refresh Demand only; Demand and S&OP are two modes of the SAME
+review instance, avoiding independent duplicate selections/data loads. Existing
+three-page projects remain untouched rollback copies. The native refresh page,
+original source bytes, model connection, feed expressions and setup are preserved.
+Do not repeat the already successful reporting setup or native model rebuild.
+
+Local TypeScript/packaging, synthetic aggregate/detail, source/cascade, 500-tier,
+FX/Share, transport/date, refresh-cache, paired-header and viewport checks pass.
+Ten project files validate against Microsoft schemas; two preserved visual
+containers have unavailable 2.14.0 schema URLs. Company R16.3 rendering, source
+totals, native zoom, measured speed and publication remain receiving gates.
+GitNexus impact remains partial/UNKNOWN and is supplemented by direct tracing
+and tests. No cloud content or company source was modified or published.
+
 ## 22 October 2026 — R16.1 company load passed; R16.2 compact correction
 
 The operator confirmed that R16.1 opens and retrieves saved reporting data.
