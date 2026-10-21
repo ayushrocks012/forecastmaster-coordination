@@ -407,3 +407,23 @@ The new behavior and retained line/table controls pass locally, with 58
 reconciliation comparisons and 385 cells matching preserved R01. All earlier
 design packages remain unchanged. Actual source binding and production speed
 are unverified; no Power BI or application source changes were made.
+
+## 21 October 2026 — R05 uses spaced bands and a shared right axis
+
+The user clarified that floating buttons meant spacing: Community and its
+measures at the top, Contracts beside Homecare/Hospital, and Retail in a separate
+lower band. R05 follows that sketch with three aligned columns and expandable
+extra choices. The user then requested Share on the same graph's right axis and
+the summary to build selected periods in bridge order. Amounts retain their
+left scale, percentages use the right scale, and hover values follow each
+series' unit. Summary period selection is beside the table; row order is fixed
+to the bridge story regardless of the click sequence.
+
+`design/sop-spaced-groups-r05/` is separately saved. Local checks cover the new
+spacing and expansion, both numeric axes, ratio-only display, period selection,
+bridge row order, 58 numerical reconciliations and 388 raw/formatted cells
+matching R01 across five scenarios. Responsive widths and light/dark rendering
+pass. Warm interactions make no network requests; their synthetic timing is not
+Power BI performance evidence. Previous design packages, including approved R11
+and R04, remain byte-preserved. No workbook, application source or live Power BI
+content changed. Design approval and separately authorized live work are pending.

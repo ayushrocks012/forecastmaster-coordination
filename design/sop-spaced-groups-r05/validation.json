@@ -1,0 +1,57 @@
+{
+  "scope": "Synthetic HTML-only design; no company runtime or Power BI speed assertion",
+  "checks": [
+    "Useful default: Market, Abbott, share and Community ADS share one graph; share uses the right percentage axis.",
+    "Spaced channel bands align Community measures and Contracts children; extra measures and five contract members expand without losing selections.",
+    "Desktop selector sits on the left below periods and scope; hiding it preserves the data and expands the review.",
+    "Ex-factory ADS measure toggles channel and subchannel series together while remembering those choices; IMS references remain explicit.",
+    "One click on/off and keyboard Space keep buttons, plotted lines and table rows synchronized without selecting children automatically.",
+    "One dual-axis graph preserves units/GBP on the left and share/uplift on the right; ratio-only selection works; summary period choices add columns in bridge row order.",
+    "58 reconciliation comparisons: Community split, seven Contracts channels, eleven ADS leaves, net IMS, weighted percentages and FY=YTD+YTG; blanks/zero preserved.",
+    "Channel-aligned bands retain parent context; search selects matches only and reveals extra choices; lean lines show full parent and child values, with no bar mode.",
+    "Combined, driver and sector scope totals agree; multiple cycles remain separately labelled.",
+    "Calendar changes preserve FY/YTD/YTG totals; Monthly follows the visible calendars and leaves summary choices intact.",
+    "Shared hover and touch-pinned details cover both axes, with correct percentage and amount formatting.",
+    "Responsive/light-dark rendering, empty selections and warm local interactions pass without JavaScript errors or network requests.",
+    "388 raw/formatted cells match the preserved R01 design across five scope, cycle, unit and table scenarios."
+  ],
+  "responsive": [
+    {
+      "width": 1080,
+      "innerWidth": 1048,
+      "overflow": 0
+    },
+    {
+      "width": 736,
+      "innerWidth": 704,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "innerWidth": 358,
+      "overflow": 0
+    },
+    {
+      "width": 320,
+      "innerWidth": 288,
+      "overflow": 0
+    }
+  ],
+  "invariantComparisons": 58,
+  "parity": {
+    "scenarios": 5,
+    "cells": 388
+  },
+  "errors": [],
+  "externalRequests": [
+    "https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js",
+    "https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js",
+    "https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js"
+  ],
+  "warm": {
+    "count": 12,
+    "meanMs": 5.408333333364378,
+    "maxMs": 8.5,
+    "networkRequests": 0
+  }
+}
