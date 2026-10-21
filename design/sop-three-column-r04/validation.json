@@ -1,0 +1,56 @@
+{
+  "scope": "Synthetic HTML-only design; no company runtime or Power BI speed assertion",
+  "checks": [
+    "Useful default: Community Market, Abbott and Ex-factory ADS share the graph and table.",
+    "Desktop selector sits on the left below periods and scope; hiding it preserves the data and expands the review.",
+    "Ex-factory ADS measure toggles channel and subchannel series together while remembering those choices; IMS references remain explicit.",
+    "One click on/off and keyboard Space keep buttons, plotted lines and table rows synchronized without selecting children automatically.",
+    "Value updates amount charts and table together; share/factor retain a separate percentage graph.",
+    "58 reconciliation comparisons: Community split, seven Contracts channels, eleven ADS leaves, net IMS, weighted percentages and FY=YTD+YTG; blanks/zero preserved.",
+    "Three separate toggle columns retain parent context; search selects matches only; lean lines show full parent and child values, with no bar mode.",
+    "Combined, driver and sector scope totals agree; multiple cycles remain separately labelled.",
+    "Calendar changes preserve FY/YTD/YTG totals; Monthly follows the visible calendars and leaves summary choices intact.",
+    "Cross-series hover markers and touch-pinned details work.",
+    "Responsive/light-dark rendering, empty selections and warm local interactions pass without JavaScript errors or network requests.",
+    "385 raw/formatted cells match the preserved R01 design across five scope, cycle, unit and table scenarios."
+  ],
+  "responsive": [
+    {
+      "width": 1080,
+      "innerWidth": 1048,
+      "overflow": 0
+    },
+    {
+      "width": 736,
+      "innerWidth": 704,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "innerWidth": 358,
+      "overflow": 0
+    },
+    {
+      "width": 320,
+      "innerWidth": 288,
+      "overflow": 0
+    }
+  ],
+  "invariantComparisons": 58,
+  "parity": {
+    "scenarios": 5,
+    "cells": 385
+  },
+  "errors": [],
+  "externalRequests": [
+    "https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js",
+    "https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js",
+    "https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js"
+  ],
+  "warm": {
+    "count": 12,
+    "meanMs": 4.291666666666667,
+    "maxMs": 6.400000000372529,
+    "networkRequests": 0
+  }
+}

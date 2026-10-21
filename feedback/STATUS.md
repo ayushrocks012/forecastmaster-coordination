@@ -394,3 +394,16 @@ Local checks pass for the new arrangement and retained behavior: 58 numerical
 reconciliations, 385 raw/formatted cells matching R01 across five scenarios,
 keyboard/hover/touch interactions and responsive light/dark rendering. These
 are synthetic design checks. No live Power BI or application changes were made.
+
+## 21 October 2026 — R04 separates three business roles
+
+The user requested Channel, Sub-channel and Measure instead of two mixed
+columns. R04 groups parent totals, real source subchannels and IMS/ADS measures
+separately. Units/Value remains above. Ex-factory ADS can hide/restore the chosen
+channel/subchannel lines and table rows without discarding those choices; the
+off state is explicit. IMS references stay on the Community basis.
+
+The new behavior and retained line/table controls pass locally, with 58
+reconciliation comparisons and 385 cells matching preserved R01. All earlier
+design packages remain unchanged. Actual source binding and production speed
+are unverified; no Power BI or application source changes were made.
