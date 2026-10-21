@@ -1,0 +1,50 @@
+--- shared-functions/function_app.py
++++ shared-functions/function_app.py
+@@ -269,17 +269,24 @@
+     fingerprint = inventoryFingerprint(rows)
+     before: dict[str, dict[str, Any]] = {}
+     if baseline is not None:
+-        if (
+-            not isinstance(baseline, dict)
+-            or baseline.get("SchemaVersion") != 1
+-            or baseline.get("SourceRoot") != "Files/Demand"
+-            or baseline.get("Status") != "SUCCESS"
+-            or not baseline.get("RefreshRunID")
+-        ):
+-            raise ValueError("The committed metadata baseline is invalid.")
+-        before = canonicalInventory(baseline.get("Files"))
+-        if baseline.get("Fingerprint") != inventoryFingerprint(baseline["Files"]):
+-            raise ValueError("The committed metadata baseline fingerprint is invalid.")
++        try:
++            if (
++                not isinstance(baseline, dict)
++                or type(baseline.get("SchemaVersion")) is not int
++                or baseline.get("SchemaVersion") != 1
++                or baseline.get("SourceRoot") != "Files/Demand"
++                or baseline.get("Status") != "SUCCESS"
++                or not baseline.get("RefreshRunID")
++            ):
++                raise ValueError("The committed metadata baseline is invalid.")
++            captured = datetime.fromisoformat(baseline["CapturedAtUtc"])
++            if captured.utcoffset() is None:
++                raise ValueError("Committed baseline timestamp needs a timezone.")
++            before = canonicalInventory(baseline.get("Files"))
++            if baseline.get("Fingerprint") != inventoryFingerprint(baseline["Files"]):
++                raise ValueError("The committed metadata baseline fingerprint is invalid.")
++        except (KeyError, TypeError, ValueError):
++            baseline, before = None, {}
+     original = {row["Path"].casefold(): row["Path"] for row in rows}
+     changed = [
+         original[key] for key in sorted(current) if before.get(key) != current[key]
+@@ -409,7 +416,10 @@
+             discovery = inspectMetadata(demand)
+         finally:
+             demand.close()
+-        baseline = readControlJson(files, "metadata-success.json")
++        try:
++            baseline = readControlJson(files, "metadata-success.json")
++        except (json.JSONDecodeError, UnicodeDecodeError):
++            baseline = None
+         result = prepareMetadataDecision(discovery, baseline)
+     finally:
+         files.close()

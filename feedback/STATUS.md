@@ -215,9 +215,26 @@ company report, and confirm local interactions and saved business values. The
 first scheduled hourly run also remains unverified; this report optimization
 does not turn that earlier pending check into a pass.
 
+
+## 21 October 2026 - targeted hourly refresh patch prepared
+
+`handoff/hourly-targeted-r01/OPEN THIS FIRST.txt` owns the receiving steps.
+The package targets the existing R05.4 hourly notebook: exact FILES mode for
+added/modified sources, ALL for removal/rename/baseline recovery/manual rebuild,
+selected-scope validation, and model completion retry tracking. Raw revision
+history and the existing atomic affected-file reporting replacement are retained.
+Two shared detector helper changes recover from invalid metadata baselines.
+The current native ad hoc endpoints and its separate notebook are preserved.
+
+Local scope/retry regression checks: 28 passed; three runtime modules passed
+strict mypy, bounded Ruff and Bandit checks. All generated notebook cells compile.
+Spark/Delta integration, company installation, hourly FILES execution and measured
+CU savings are NOT RUN. The previous company acceptance entries remain historical
+evidence for their original versions. Repository delivery alone installs nothing.
+
 ## 21 October 2026 — executive design review, R07
 
-This later instruction pauses the report installation steps above. The user
+This later instruction pauses the R04.2 report installation steps above. The user
 requested an HTML design review before changing the live Power BI visual, and
 then requested this prototype be synced to Coordination for review elsewhere.
 

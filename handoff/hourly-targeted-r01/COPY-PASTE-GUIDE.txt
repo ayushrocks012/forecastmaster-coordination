@@ -1,0 +1,240 @@
+Fabric hourly refresh: minimal R05.4 targeted refresh patch
+
+Prepared from the local notebook-r05.4 handoff, not a live export of the company
+notebook. Nothing has been installed, refreshed or scheduled in Fabric.
+Compare the affected cells with your deployed export before pasting. Preserve
+any later reader/reporting changes by applying the matching diff hunks instead
+of overwriting a cell that differs. Original handoffs are untouched.
+
+THE CHANGE
+
+Keep the current detector, hourly pipeline, shared writer lease, ingestion,
+raw revision tables, current-file pointers and reporting architecture.
+
+- Added/modified files, including older cycles: FILES with exact relative paths.
+- Deletions and renames: ALL; reconcile current paths before reporting.
+- Missing/invalid metadata baseline or unusable ingestion index: ALL.
+- Existing manual/request rebuild route: ALL.
+- Global FORCE_REHASH or FORCE_REBUILD_REPORTING_FACTS: ALL when invoked through
+  that route. The hourly UNCHANGED gate still skips the notebook.
+- FORCE_REHASH_PATHS remains the changed set even in ALL. An ETag-only change
+  cannot disappear behind a matching modification-time/length shortcut.
+- ALL discovery lists metadata for the entire tree; it does not automatically
+  decode unchanged workbooks. FILES gives Spark only exact selected file paths.
+
+No pipeline parameter redesign is needed. Retain:
+  FM_RUN_MODE (String): HOURLY
+  FM_METADATA_JSON (String/expression):
+    @activity('Check_Demand_Metadata').output.output
+  Notebook in the True branch of Refresh_only_when_changed; False branch empty.
+  The condition must use the parsed detector NeedsRefresh Boolean.
+
+The worker recomputes the delta against metadata-success.json under worker.lock.
+This is cheap Python metadata comparison and avoids trusting a detector result
+that may predate another completed writer. It does not read workbook contents.
+
+EXACT NOTEBOOK LOCATIONS
+
+Cell numbers below are ZERO-BASED indices in the .ipynb, not UI code-cell numbers.
+Use the quoted anchor to find the same cell in Fabric.
+
+Cell 4: "Coordinate a metadata-gated hourly run..."
+  Source: Refresh/source/hourly_worker.py
+  Original line 147: insert hourly_refresh_plan() and targeted_index_valid().
+  Original validate_processed_snapshot(), line 148: FILES validation compares
+  selected metadata/events with the selected snapshot subset, not all files.
+  Original HourlyWorker.run(), lines 190/201/216: pass a scope plan to callback.
+  Original lines 253-254: write latest.json before metadata-success.json.
+  Whole-cell copy/paste: paste-cells/04-hourly-worker-and-preflight.py
+  This file includes the existing preflight; do not append it as a second worker.
+
+Cell 8: "Reporting projection retains R03.1 arithmetic..."
+  Source: Refresh/source/reporting.py
+  Original line 120: exclude PathFirstSeenAtUtc from the reporting signature.
+  Original line 127: retain computed signature on engine.report_signature.
+  Original line 148: explicit reporting rebuild bypasses unchanged early return.
+  Whole-cell copy/paste: paste-cells/08-reporting.py
+
+Cell 10: "Single ordered invocation for the embedded Fabric notebook."
+  Source: Refresh/source/run.py
+  Original line 31: do not start reporting/model stages after ingestion failure.
+  Original line 40: use confirmed reporting signature, not this run's Boolean,
+  to decide whether the model is behind. Catalog failure also prevents publishing.
+  Whole-cell copy/paste: paste-cells/10-run-refresh.py
+
+Cell 12: starts "EMBEDDED_REPORT_RULES = ..."
+  Template: build/execute_cell.txt, requested_refresh()
+  Replace the forced REFRESH_MODE="ALL" callback with the prepared callback.
+  It uses the plan, falls back to ALL if the compact ingestion index cannot
+  cover untouched paths, and passes the existing worker_store to run_refresh().
+  Whole-cell copy/paste: paste-cells/12-execute-refresh.py
+
+The smallest exact textual changes are in minimal.patch. The four whole-cell
+files are provided to avoid manual indentation/editing errors; they embed the
+same changes. candidate/ForecastMaster_Refresh.ipynb is a self-contained review
+copy; applying four cells to the existing notebook preserves its item identity,
+attachment and pipeline reference. Pasting a .py module into a cell is not the
+same as uploading that module as an unattached file.
+
+DETECTOR: TWO SMALL FALLBACK EDITS
+
+Apply these to the CURRENT Functions app, including a current app that also
+contains native ad hoc endpoints. Do not replace that app with an older R05.2
+whole-file export. The inspected R05.2 shared helpers are also used by R06.
+
+1. Replace prepareMetadataDecision() with:
+     paste-cells/detector-prepareMetadataDecision.py
+   Original location: function_app.py, line 251, baseline-validation block.
+   An invalid baseline becomes BASELINE_REQUIRED / NeedsRefresh true, with all
+   current files in ChangedFiles. The current complete inventory is still
+   validated; an invalid/incomplete discovery still fails.
+
+2. Inside checkDemandChangesR05(), replace ONLY:
+     baseline = readControlJson(files, "metadata-success.json")
+   with the four indented lines in:
+     paste-cells/detector-read-baseline.py
+   Original location: function_app.py, line 412.
+   Malformed JSON is an absent baseline. Permission, network and service errors
+   continue to fail; they are not interpreted as an empty directory.
+
+See detector.patch for both precise before/after hunks. No detector workbook
+content reads or changes to its listing algorithm are introduced.
+
+WHY HISTORICAL CORRECTIONS DO NOT DUPLICATE OR LEAVE OLD DIMENSIONS
+
+These existing R05.4 blocks are preserved:
+  fast_refresh.py report_identity(): stable identity for each normalized path.
+  fast_refresh.py report_sources(): latest complete pointer per saved path.
+  reporting.py lines 281-300: atomic Delta replaceWhere of all fact rows for the
+  affected SourceRevisionID. Removed months/dimensions are replaced too; this
+  is not insert-only MERGE. Never restrict this replacement to the newest cycle.
+  reporting.py lines 339 onward: retire stale current fact/receipt IDs after ALL.
+
+Raw content revisions and their observations/context remain retained. Separate
+saved scenario paths and Local/Ext profiles remain distinct. There is no raw
+history deletion, vacuum, rolling history window or latest-cycle-only filter.
+
+WHY THE TWO SUCCESS MARKERS ARE DIFFERENT
+
+The existing reporting signature records that report tables were committed.
+It does not prove the model refresh succeeded. model-success.json, in the
+existing ForecastMasterRefreshState store, records the report signature plus
+workspace/model/report-prefix identity only AFTER confirmed model completion.
+
+A model failure or unconfirmed completion leaves that marker behind; retry
+still refreshes the model even if reporting itself returns unchanged. A marker
+write failure also fails the run. An already-confirmed signature skips the
+model even during an otherwise repeated reconciliation. First deployment has
+no marker and the reporting signature calculation changes, so allow one
+conservative model synchronization; later unchanged runs skip it.
+
+A SAME_CONTENT receipt may update LastSuccessAtUtc. Excluding its derived
+PathFirstSeenAtUtc from the signature avoids report/helper rewrites and model
+refreshes for metadata-only touches with unchanged bytes and rules.
+
+metadata-success.json advances only after source, catalog, reporting, confirmed
+model state, snapshot validation, and all prerequisite receipt writes succeed.
+It is now the last success write. A retry can reuse completed content revisions
+without duplicating them. The original shared lease and failure receipts remain.
+
+DEPLOYMENT AND VALIDATION
+
+1. Disable the hourly schedule temporarily and let any current writer finish.
+   Export the existing notebook and Functions definition as the rollback copy.
+   Retain the current metadata-success.json and model/report table versions as
+   evidence. Do not clear either metadata baseline to test this patch.
+2. Apply the two detector edits and the four notebook edits above, to the same
+   existing items. Save/reopen. Keep existing parameters and lakehouse binding.
+3. Run the existing hourly pipeline once. If sources are unchanged, it should
+   skip Spark; a missing model marker alone does not require a full rebuild.
+   The next legitimate source edit exercises FILES and establishes the marker.
+   For an intentional ALL rebuild use the existing manual/request route, which
+   requires a queued SharePoint request; REQUESTS without a request is IDLE.
+   FORCE_REBUILD_REPORTING_FACTS=True is only for an intentional fact rebuild;
+   reset it afterwards. The separate native report button invokes its own
+   notebook, so its success alone does not validate the patched hourly worker.
+4. Observe the next hourly runs / rehearse the cases below in a controlled copy.
+   Keep a single writer. Do not create fake business corrections in live inputs.
+5. Resume the original hourly schedule after the relevant checks pass.
+
+Case                             Expected evidence
+No changes                       NeedsRefresh false; notebook not started.
+One addition / old-cycle edit    RefreshMode FILES; "Files inspected" equals
+                                 selected count, not historical inventory count.
+ETag-only edit                   Exact file content checked. If bytes unchanged,
+                                 no report rewrite/model refresh after marker sync.
+Removed file                    RefreshMode ALL even with ChangedFiles=[];
+                                 old current path/facts gone; raw revision retained.
+Rename                          ALL; old current path retired, new path active;
+                                 identical raw bytes reuse the retained revision.
+Changed months or dimensions    Affected source slice replaced; old keys absent;
+                                 unaffected files and cycles unchanged.
+Failed workbook / catalog       Run fails; no model refresh; baseline retained.
+Failed/unconfirmed model        Baseline retained; next run retries model despite
+                                 already-committed reporting signature.
+Receipt write failure           Baseline retained; no falsely successful pointer.
+Invalid/missing baseline        Detector requests rebuild; worker uses ALL.
+Manual fact rebuild             ALL and reporting early return bypassed.
+
+For the affected source compare before/after current fact key counts and sums
+against its saved workbook. Check uniqueness of:
+  SourceRevisionID, Channel, SubChannel, Sector, Month, ComponentKey
+Verify the old revision's raw observation count is unchanged. Test removed rows,
+nulls and numeric zero separately. Do not validate only total row counts.
+
+Capacity verification: compare matched before/after runs using the same changed
+file and capacity conditions. Record metadata listing, Spark session startup,
+"Discover matching files", "Read saved workbook", projection and model durations,
+plus CU(s) in Fabric Capacity Metrics. FILES removes the recursive Spark root
+listing; it does not eliminate Spark startup, the metadata detector's full
+listing, Delta metadata work, or a required model refresh. No measured CU saving
+or runtime percentage is claimed from local tests.
+
+The existing nonempty-inventory and nonempty-projection guards remain. If all
+bridges disappear, listing is incomplete, or a workbook has no configured fact
+components, the run fails and retains the last successful baseline rather than
+silently presenting a successful empty rebuild. Resolve the source condition
+before retrying. An unrelated file changed after the detector snapshot is picked
+up by the next metadata comparison; FILES is not a full-tree atomic snapshot.
+
+LOCAL VALIDATION AND LIMITS
+
+28 local regression cases passed, including a Hypothesis historical-correction
+property check. Tests execute the saved callback, the actual discover() method
+with an instrumented Spark reader, partial-scope validation, baseline failure
+paths, and run_refresh() with injected model/store failures.
+Strict mypy passed on the three changed runtime modules. Bounded Ruff and Bandit
+checks passed. Every notebook code cell compiled; only cells 4,8,10,12 differ.
+Existing atomic projection and retention code were preserved byte-for-byte,
+except for the small signature/rebuild guard changes described above.
+
+Spark/Delta integration, receiving-workspace execution and CU measurements were
+NOT RUN. The inspected environments lack PySpark/Delta. These 28 tests are not
+presented as Spark integration. GitNexus impact remains UNKNOWN: authority drift
+and a refresh refusal at its nested parse-cache symlink; direct source/callers
+were inspected. No shared graph tooling or application sources were modified.
+
+Optional developer check command, from this coordination repository
+(requires an existing Python environment with pytest and hypothesis; not an
+operator installation prerequisite):
+  python -m pytest -q handoff/hourly-targeted-r01/test_targeted.py
+See validation.json and manifest.json for the recorded boundary and input hash.
+
+ROLLBACK
+
+1. Disable schedule and let the active writer finish. Retain failed-run receipts.
+2. Restore the exported pre-patch cells and the two pre-patch detector helper
+   blocks in the same existing items. Restore parameters if you changed flags.
+3. Leave raw history, current tables, metadata-success.json and extra model-
+   success.json intact. This patch introduces no table schema migration; old
+   code ignores the extra marker. Do not delete revisions, baseline receipts,
+   or Delta recovery files. A code rollback does not require rolling data back.
+4. Use the original manual/request ALL route once to verify current-path
+   reconciliation and model completion, then resume the prior schedule.
+   Separately investigate a data rollback only if data validation finds an
+   actual error; do not blanket-restore all Delta tables for a code-only rollback.
+
+Official API references used:
+https://learn.microsoft.com/en-us/fabric/data-engineering/author-execute-notebook
+https://learn.microsoft.com/en-us/fabric/data-engineering/notebookutils/notebookutils-notebook-run
+https://docs.delta.io/delta-update/

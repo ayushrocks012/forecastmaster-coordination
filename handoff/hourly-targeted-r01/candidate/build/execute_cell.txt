@@ -1,0 +1,41 @@
+EMBEDDED_REPORT_RULES = 'MetricKey,Section,Measure,Unit,Aggregation,CutoffFamily,NumeratorKey,NumeratorSection,NumeratorMeasure,NumeratorManufacturer,NumeratorRequireProduct,DenominatorKey,DenominatorSection,DenominatorMeasure,DenominatorManufacturer,DenominatorRequireProduct,SortIndex\nims-market-units,IMS / Market,IMS Market Units,Units,SUM,IMS,product-units,Pricing,Product Selling units,*,true,,,,,false,10\nims-abbott-units,IMS / Market,IMS Abbott Units,Units,SUM,IMS,abbott-units,Pricing,Product Selling units,Abbott,true,,,,,false,20\nims-volume-share,IMS / Market,IMS Abbott Volume Share,%,RATIO,IMS,abbott-units,Pricing,Product Selling units,Abbott,true,product-units,Pricing,Product Selling units,*,true,30\nims-market-value,IMS / Market,IMS Market Value,£,SUM,IMS,product-value,Pricing,Product Value £,*,true,,,,,false,40\nims-value-share,IMS / Market,IMS Abbott Value Share,%,RATIO,IMS,abbott-value,Pricing,Product Value £,Abbott,true,product-value,Pricing,Product Value £,*,true,50\nef-selling-units,Ex-Factory,Ex-factory Selling Units,Units,SUM,EF,ef-ads-units,Ex-Factory,ADS Selling units,*,false,,,,,false,60\nef-value,Ex-Factory,Ex-factory Value,£,SUM,EF,ef-ads-value,Ex-Factory,ADS Value £,*,false,,,,,false,70\n'
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+# The original ordered ingestion/reporting implementation calls this binding.
+refresh_model = refresh_confirmed_model
+
+config_keys = ["SOURCE_ROOT","TABLE_PREFIX","REPORT_PREFIX","ALLOWED_PROFILES","REFRESH_MODE","SELECTED_RELATIVE_PATHS","FORCE_REHASH","FORCE_REBUILD_REPORTING_FACTS","FORCE_MODEL_REFRESH","REFRESH_SEMANTIC_MODEL","WORKSPACE_ID","SEMANTIC_MODEL_ID","MAX_BRIDGE_BYTES","MAX_OBSERVATIONS_PER_FILE","SHUFFLE_PARTITIONS","MODEL_REFRESH_TIMEOUT_SECONDS"]
+def requested_refresh(plan=None):
+    refresh_config = {key: globals()[key] for key in config_keys}
+    mode = plan["Mode"] if fm_mode == "HOURLY" else "ALL"
+    changed = plan["ChangedFiles"] if fm_mode == "HOURLY" else []
+    # A missing/broken ingestion index cannot safely serve a partial inventory.
+    if mode == "FILES" and not targeted_index_valid(
+        spark, refresh_config, fm_hourly_snapshot, changed,
+        CONTRACT + "|affiliate-bridge-cycle-ef-ims-any-suffix-v1",
+    ):
+        mode = "ALL"
+    if FORCE_REBUILD_REPORTING_FACTS or FORCE_REHASH:
+        mode = "ALL"
+    refresh_config.update(
+        SOURCE_ROOT="Files/Demand", REFRESH_MODE=mode,
+        SELECTED_RELATIVE_PATHS=changed if mode == "FILES" else [],
+        ALLOWED_PROFILES=["Local", "Ext"], REFRESH_SEMANTIC_MODEL=True,
+        FORCE_MODEL_REFRESH=False, FORCE_REHASH_PATHS=changed,
+        MODEL_STATE_STORE=worker_store,
+    )
+    return run_refresh(spark, globals(), refresh_config, notebookutils, EMBEDDED_REPORT_RULES)
+
+if fm_mode == "HOURLY":
+    engine, worker_result = hourly_worker.run(fm_hourly_snapshot, requested_refresh)
+else:
+    engine, worker_result = request_worker.run(requested_refresh)
+if engine is not None:
+    if engine.events:
+        display(engine.string_frame([row for row in engine.events if row["Status"] != "OUTSIDE_FILENAME_PATTERN"], EVENT_FIELDS))
+    if engine.timings:
+        display(spark.createDataFrame(engine.timings))
+print("WORKER RESULT:", json.dumps(worker_result, indent=2), flush=True)
+
+notebookutils.notebook.exit(json.dumps(worker_result, ensure_ascii=False, allow_nan=False))
