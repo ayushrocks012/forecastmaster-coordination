@@ -1,0 +1,23 @@
+{
+  "schema": "FM_SOP_SOURCE_ONLY_R07_VALIDATION",
+  "checkedAt": "2026-10-21T20:18:26.740Z",
+  "checks": [
+    "Initial results are empty. Channel alone selects neither context nor measure; context alone is empty; selecting/removing the first measure adds/removes only that series and table row.",
+    "All 44 available IDs match direct retained source bindings. No combined Contracts context, effective uplift, matched-IMS diagnostic or invented channel is selectable.",
+    "IMS requires Community blank sub-channel. Wholesaler/NI show only selected EF measures. Channel off disables/removes dependents, with valid remembered choices restored on re-enable.",
+    "Units/Value changes IMS/Market/PI/Cur/Pub/ADS labels and formats; Share uses the same graph’s right percentage axis.",
+    "Affiliate is a searchable multi-select backed only by the confirmed UK sample; clearing it clears results. Source Section filters measures. Searching drivers does not change selection.",
+    "Contracts has only real sub-channels. Channel alone adds nothing; Homecare/Hospital ADS appears only after explicit context and measure selection.",
+    "Explicit Select all/Select matches selects only direct source measures; Clear all empties results. Click order never changes bridge context/measure order.",
+    "66 comparisons preserve source Community/sector totals and weighted shares in Units and Value without a derived Contracts display row.",
+    "264 retained direct-source measure/period/dimension values match the preserved R06 fixture exactly.",
+    "Month calendars and summary periods remain independent; Monthly follows calendars. Hiding the selector preserves selections and results.",
+    "Responsive light/dark layouts fit 1080/736/390/320px, with legible chart labels, cross-series hover and zero warm network requests or script errors."
+  ],
+  "numericComparisons": 66,
+  "retainedValueComparisons": 264,
+  "sourceBindings": 44,
+  "errors": [],
+  "warmNetworkRequests": 0,
+  "note": "Synthetic local browser checks only; no live source binding or Power BI performance qualification."
+}

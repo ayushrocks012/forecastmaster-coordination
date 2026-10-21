@@ -457,3 +457,32 @@ reported stale authority; bounded current-source/descriptor inspection supplied
 the lookup evidence without refreshing the index. No actual workbook or live
 Power BI content was modified. Earlier designs remain preserved; design review,
 real source binding and company performance qualification remain pending.
+
+## 21 October 2026 — R07 source-only selection and broad filters
+
+The user prohibited invented Channels, Sub-channels and Measures and requested
+missing broad filters, including Affiliate. The separately saved R07 second-page
+prototype removes R06's derived Contracts combined contexts, effective uplift
+and matched-calendar diagnostic. Its exposed catalogue contains only 44 direct
+retained source identities, an executive subset rather than every bridge field.
+There is no preselected Channel, context or Measure. Choosing a Channel enables
+its source choices without adding a graph series or table row. Graph and table
+show only explicitly selected valid combinations. Real blank contexts stay
+blank; no IMS allocation to Wholesaler or Contracts is created.
+
+The top now includes searchable Affiliate, Demand cycle and source Section,
+Units/Value and the visible calendars. Shared driver/sector choices have search;
+Channel/Sub-channel/Measure remain solely in the left selector. Only the
+confirmed UK sample Affiliate is offered. Clearing Affiliate clears results;
+Section filters applicable measures without changing the IMS/EF cutoff basis.
+Units/Value changes measure names throughout, and Share keeps the right axis.
+FY/YTD/YTG periods remain independent from chart/monthly dates.
+
+Local integration checks passed 11 groups, 66 reconciliation comparisons and
+264 retained source-measure fixture values matching saved R06. Responsive
+light/dark layouts, cross-series hover, explicit selection gates and zero warm
+network requests/script errors were checked. All 172 preceding saved design
+files were verified against their prior manifest hashes. Numeric data remains
+synthetic; this is not full source binding or Power BI speed evidence. No live
+report, Fabric item, workbook or application source was changed. Design approval
+and live implementation remain separate pending gates.

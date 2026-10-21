@@ -1,0 +1,901 @@
+{
+  "schema": "FM_SOP_EXECUTIVE_BRIDGE_CATALOG_R07",
+  "sources": {
+    "core-oral": {
+      "schema": "SDM_V18_MODEL_BINDINGS_V1",
+      "descriptorSHA256": "814ceadd7c96f7d205785cc6e006205d13ab85211324f4c2592573416908d5e8",
+      "kind": "Retained neutral model identities; no forecast values"
+    },
+    "paed-sip": {
+      "schema": "SDM_V18_MODEL_BINDINGS_V1",
+      "descriptorSHA256": "260a0a64e43fd3e456773b88272af4e35c41a97c60fe8d4dd1b574c95f763bf3",
+      "kind": "Retained neutral model identities; no forecast values"
+    }
+  },
+  "sanitization": "Whitelisted Channel/Sub Channel/Section/Measure identities and source row positions only. No workbook cells, values, formulas, products or customers.",
+  "presentationPolicy": "Only direct retained source identities are selectable. No derived review measures or combined Contracts context. Requested Community executive order: Abbott IMS, Market, PI, Ex-factory, then source contexts. Nothing selected by default.",
+  "displayOrder": [
+    "abbott",
+    "market",
+    "pi",
+    "cur-community",
+    "pub-community",
+    "net",
+    "community",
+    "share",
+    "cur-wholesaler",
+    "pub-wholesaler",
+    "wholesaler",
+    "cur-ni",
+    "pub-ni",
+    "ni",
+    "cur-homecare",
+    "pub-homecare",
+    "homecare",
+    "cur-hospital",
+    "pub-hospital",
+    "hospital",
+    "cur-hcl",
+    "pub-hcl",
+    "hcl",
+    "cur-competitor",
+    "pub-competitor",
+    "competitor",
+    "cur-nursing",
+    "pub-nursing",
+    "nursing",
+    "cur-retail",
+    "pub-retail",
+    "retail",
+    "cur-private",
+    "pub-private",
+    "private",
+    "cur-internal",
+    "pub-internal",
+    "internal",
+    "cur-unassigned",
+    "pub-unassigned",
+    "unassigned",
+    "cur-ads",
+    "pub-ads",
+    "ads"
+  ],
+  "bindings": [
+    {
+      "id": "cur-community",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Community Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Community Cur Selling units",
+        "row": 100
+      },
+      "value": {
+        "role": "Community Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Community Cur Value \u00a3",
+        "row": 105
+      }
+    },
+    {
+      "id": "pub-community",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Community Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Community Pub Selling units",
+        "row": 101
+      },
+      "value": {
+        "role": "Community Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Community Pub Value \u00a3",
+        "row": 106
+      }
+    },
+    {
+      "id": "community",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Community ADS Units",
+        "section": "Ex-Factory",
+        "measure": "Community ADS Selling units",
+        "row": 103
+      },
+      "value": {
+        "role": "Community ADS Value",
+        "section": "Ex-Factory",
+        "measure": "Community ADS Value \u00a3",
+        "row": 108
+      }
+    },
+    {
+      "id": "cur-wholesaler",
+      "channel": "Community",
+      "subChannel": "Wholesaler",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Wholesaler | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 112
+      },
+      "value": {
+        "role": "Wholesaler | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 121
+      }
+    },
+    {
+      "id": "pub-wholesaler",
+      "channel": "Community",
+      "subChannel": "Wholesaler",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Wholesaler | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 113
+      },
+      "value": {
+        "role": "Wholesaler | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 122
+      }
+    },
+    {
+      "id": "wholesaler",
+      "channel": "Community",
+      "subChannel": "Wholesaler",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Wholesaler | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 114
+      },
+      "value": {
+        "role": "Wholesaler | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 123
+      }
+    },
+    {
+      "id": "cur-ni",
+      "channel": "Community",
+      "subChannel": "Northern Ireland",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Northern Ireland | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 134
+      },
+      "value": {
+        "role": "Northern Ireland | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 143
+      }
+    },
+    {
+      "id": "pub-ni",
+      "channel": "Community",
+      "subChannel": "Northern Ireland",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Northern Ireland | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 135
+      },
+      "value": {
+        "role": "Northern Ireland | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 144
+      }
+    },
+    {
+      "id": "ni",
+      "channel": "Community",
+      "subChannel": "Northern Ireland",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Northern Ireland | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 136
+      },
+      "value": {
+        "role": "Northern Ireland | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 145
+      }
+    },
+    {
+      "id": "cur-homecare",
+      "channel": "Contracts",
+      "subChannel": "Homecare",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Homecare | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 222
+      },
+      "value": {
+        "role": "Homecare | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 234
+      }
+    },
+    {
+      "id": "pub-homecare",
+      "channel": "Contracts",
+      "subChannel": "Homecare",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Homecare | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 223
+      },
+      "value": {
+        "role": "Homecare | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 235
+      }
+    },
+    {
+      "id": "homecare",
+      "channel": "Contracts",
+      "subChannel": "Homecare",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Homecare | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 224
+      },
+      "value": {
+        "role": "Homecare | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 236
+      }
+    },
+    {
+      "id": "cur-hospital",
+      "channel": "Contracts",
+      "subChannel": "Hospital",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Hospital | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 274
+      },
+      "value": {
+        "role": "Hospital | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 286
+      }
+    },
+    {
+      "id": "pub-hospital",
+      "channel": "Contracts",
+      "subChannel": "Hospital",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Hospital | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 275
+      },
+      "value": {
+        "role": "Hospital | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 287
+      }
+    },
+    {
+      "id": "hospital",
+      "channel": "Contracts",
+      "subChannel": "Hospital",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Hospital | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 276
+      },
+      "value": {
+        "role": "Hospital | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 288
+      }
+    },
+    {
+      "id": "cur-hcl",
+      "channel": "Contracts",
+      "subChannel": "Healthcare Logistics",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Healthcare Logistics | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 305
+      },
+      "value": {
+        "role": "Healthcare Logistics | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 317
+      }
+    },
+    {
+      "id": "pub-hcl",
+      "channel": "Contracts",
+      "subChannel": "Healthcare Logistics",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Healthcare Logistics | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 306
+      },
+      "value": {
+        "role": "Healthcare Logistics | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 318
+      }
+    },
+    {
+      "id": "hcl",
+      "channel": "Contracts",
+      "subChannel": "Healthcare Logistics",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Healthcare Logistics | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 307
+      },
+      "value": {
+        "role": "Healthcare Logistics | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 319
+      }
+    },
+    {
+      "id": "cur-competitor",
+      "channel": "Contracts",
+      "subChannel": "Competitor",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Competitor | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 336
+      },
+      "value": {
+        "role": "Competitor | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 348
+      }
+    },
+    {
+      "id": "pub-competitor",
+      "channel": "Contracts",
+      "subChannel": "Competitor",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Competitor | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 337
+      },
+      "value": {
+        "role": "Competitor | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 349
+      }
+    },
+    {
+      "id": "competitor",
+      "channel": "Contracts",
+      "subChannel": "Competitor",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Competitor | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 338
+      },
+      "value": {
+        "role": "Competitor | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 350
+      }
+    },
+    {
+      "id": "cur-nursing",
+      "channel": "Contracts",
+      "subChannel": "Nursing Home",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Nursing Home | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 367
+      },
+      "value": {
+        "role": "Nursing Home | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 379
+      }
+    },
+    {
+      "id": "pub-nursing",
+      "channel": "Contracts",
+      "subChannel": "Nursing Home",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Nursing Home | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 368
+      },
+      "value": {
+        "role": "Nursing Home | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 380
+      }
+    },
+    {
+      "id": "nursing",
+      "channel": "Contracts",
+      "subChannel": "Nursing Home",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Nursing Home | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 369
+      },
+      "value": {
+        "role": "Nursing Home | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 381
+      }
+    },
+    {
+      "id": "cur-retail",
+      "channel": "Out of Pocket",
+      "subChannel": "Retail",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Retail | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 398
+      },
+      "value": {
+        "role": "Retail | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 410
+      }
+    },
+    {
+      "id": "pub-retail",
+      "channel": "Out of Pocket",
+      "subChannel": "Retail",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Retail | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 399
+      },
+      "value": {
+        "role": "Retail | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 411
+      }
+    },
+    {
+      "id": "retail",
+      "channel": "Out of Pocket",
+      "subChannel": "Retail",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Retail | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 400
+      },
+      "value": {
+        "role": "Retail | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 412
+      }
+    },
+    {
+      "id": "cur-private",
+      "channel": "Contracts",
+      "subChannel": "Private Order",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Private Order | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 429
+      },
+      "value": {
+        "role": "Private Order | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 441
+      }
+    },
+    {
+      "id": "pub-private",
+      "channel": "Contracts",
+      "subChannel": "Private Order",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Private Order | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 430
+      },
+      "value": {
+        "role": "Private Order | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 442
+      }
+    },
+    {
+      "id": "private",
+      "channel": "Contracts",
+      "subChannel": "Private Order",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Private Order | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 431
+      },
+      "value": {
+        "role": "Private Order | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 443
+      }
+    },
+    {
+      "id": "cur-internal",
+      "channel": "Contracts",
+      "subChannel": "Internal Account",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Internal Account | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 460
+      },
+      "value": {
+        "role": "Internal Account | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 472
+      }
+    },
+    {
+      "id": "pub-internal",
+      "channel": "Contracts",
+      "subChannel": "Internal Account",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Internal Account | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 461
+      },
+      "value": {
+        "role": "Internal Account | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 473
+      }
+    },
+    {
+      "id": "internal",
+      "channel": "Contracts",
+      "subChannel": "Internal Account",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Internal Account | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 462
+      },
+      "value": {
+        "role": "Internal Account | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 474
+      }
+    },
+    {
+      "id": "cur-unassigned",
+      "channel": "Unassigned",
+      "subChannel": "Unassigned",
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Unassigned | Cur Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Cur Selling units",
+        "row": 491
+      },
+      "value": {
+        "role": "Unassigned | Cur Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Cur Value \u00a3",
+        "row": 503
+      }
+    },
+    {
+      "id": "pub-unassigned",
+      "channel": "Unassigned",
+      "subChannel": "Unassigned",
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Unassigned | Pub Proj Units",
+        "section": "Ex-Factory",
+        "measure": "Pub Selling units",
+        "row": 492
+      },
+      "value": {
+        "role": "Unassigned | Pub Proj Value",
+        "section": "Ex-Factory",
+        "measure": "Pub Value \u00a3",
+        "row": 504
+      }
+    },
+    {
+      "id": "unassigned",
+      "channel": "Unassigned",
+      "subChannel": "Unassigned",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Unassigned | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "row": 493
+      },
+      "value": {
+        "role": "Unassigned | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "row": 505
+      }
+    },
+    {
+      "id": "cur-ads",
+      "channel": "Sector total",
+      "subChannel": null,
+      "kind": "current",
+      "basis": "EF",
+      "units": {
+        "role": "Sector | Cur Proj Units",
+        "section": "Sector Total",
+        "measure": "Sector | Cur Selling units",
+        "row": 516
+      },
+      "value": {
+        "role": "Sector | Cur Proj Value",
+        "section": "Sector Total",
+        "measure": "Sector | Cur Value \u00a3",
+        "row": 519
+      }
+    },
+    {
+      "id": "pub-ads",
+      "channel": "Sector total",
+      "subChannel": null,
+      "kind": "published",
+      "basis": "EF",
+      "units": {
+        "role": "Sector | Pub Proj Units",
+        "section": "Sector Total",
+        "measure": "Sector | Pub Selling units",
+        "row": 517
+      },
+      "value": {
+        "role": "Sector | Pub Proj Value",
+        "section": "Sector Total",
+        "measure": "Sector | Pub Value \u00a3",
+        "row": 520
+      }
+    },
+    {
+      "id": "ads",
+      "channel": "Sector total",
+      "subChannel": null,
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Sector | ADS Units",
+        "section": "Sector Total",
+        "measure": "Sector | ADS Selling units",
+        "row": 518
+      },
+      "value": {
+        "role": "Sector | ADS Value",
+        "section": "Sector Total",
+        "measure": "Sector | ADS Value \u00a3",
+        "row": 521
+      }
+    },
+    {
+      "id": "abbott",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "IMS Abbott Units",
+        "section": "Market and Share Working",
+        "measure": "IMS Abbott Selling units",
+        "row": 67
+      },
+      "value": {
+        "role": "IMS Abbott Value",
+        "section": "Market and Share Working",
+        "measure": "IMS Abbott Value \u00a3",
+        "row": 82
+      }
+    },
+    {
+      "id": "market",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "IMS Market Units",
+        "section": "Market and Share Working",
+        "measure": "IMS Market Selling units",
+        "row": 69
+      },
+      "value": {
+        "role": "IMS Market Value",
+        "section": "Market and Share Working",
+        "measure": "IMS Market Value \u00a3",
+        "row": 84
+      }
+    },
+    {
+      "id": "pi",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "PI Units",
+        "section": "Market and Share Working",
+        "measure": "PI Selling units",
+        "row": 77
+      },
+      "value": {
+        "role": "PI Value",
+        "section": "Market and Share Working",
+        "measure": "PI Value \u00a3",
+        "row": 92
+      }
+    },
+    {
+      "id": "share",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "Abbott Volume Share",
+        "section": "Market and Share Working",
+        "measure": "Abbott Volume Share",
+        "row": 66
+      },
+      "value": {
+        "role": "Abbott Value Share",
+        "section": "Market and Share Working",
+        "measure": "Abbott Value Share",
+        "row": 81
+      }
+    },
+    {
+      "id": "net",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "Total IMS minus PI Units",
+        "section": "Ex-Factory",
+        "measure": "Total IMS minus PI Selling units",
+        "row": 102
+      },
+      "value": {
+        "role": "Total IMS minus PI Value",
+        "section": "Ex-Factory",
+        "measure": "IMS minus PI Value \u00a3",
+        "row": 107
+      }
+    }
+  ]
+}
