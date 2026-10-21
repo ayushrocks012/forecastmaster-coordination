@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "date": "2026-10-21",
+  "scope": "Sketch-led two-column selector and lean line graph; no live changes",
+  "preservedVersions": {
+    "design/executive-review-r07/": {
+      "files": 13,
+      "recordsSHA256": "4d98b7dc4cf24bc11e510b97d2d166d0ad961073c098cc505a5ef9af4f542dda"
+    },
+    "design/executive-overview-r08/": {
+      "files": 17,
+      "recordsSHA256": "063132696eb6ea221607e726dfa5f9dd75617312eb1b44eafaeacd25f51dfb17"
+    },
+    "design/executive-period-review-r09/": {
+      "files": 17,
+      "recordsSHA256": "7e891ac74b46b2a9b743c15f1028d418f0008b4dc337fe0c7d87257772182c63"
+    },
+    "design/executive-gm-review-r10/": {
+      "files": 14,
+      "recordsSHA256": "c064a745a3783f30d83651e35d61049d485bdb716e7bd00104484a73d32ad716"
+    },
+    "design/executive-month-review-r11/": {
+      "files": 14,
+      "recordsSHA256": "d87dd9354c23d5dac14d87666a27dc6d437cbd1a94261b17924e2b8af874066a"
+    },
+    "design/sop-build-up-r01/": {
+      "files": 16,
+      "recordsSHA256": "e83a16621f43d01559301a6687f0ef4702d6fb21fcfc120e03a53c716d003cfa"
+    },
+    "design/sop-side-panel-r02/": {
+      "files": 16,
+      "recordsSHA256": "3fcdd09280756252e7a71e2af6b8cedd1c225714f656114951865da2ddd86156"
+    }
+  },
+  "unchangedCalculationAndFixtureHashes": {
+    "source": "ed145f0bffc1ace7a2156d01d30b67e33c983746e2f814fb0f14eb23bf2deb71",
+    "groups": "afb323ac0e39e974f59cd6a171021a19ee0a741836a5553fbe7ed10deb391fd9",
+    "amount": "863749d3114147ac1ec6628656e9bfcdea7d4faf4d6a3f742855c47eda66e8c8",
+    "periodMonths": "b68f109647cb9bd6fca6043c95b799ff4dd1704bb91554d865238a19891b8e65",
+    "chartMonths": "ddd4f37d0d66625c19806114baa59bec1b2e2cf3c447f83089f9f986cd1d026d",
+    "buildComponents": "0a056e1ac2567400978ffb232f75ffd2cbc7c7456a2543091354093c39dca4dc",
+    "sectors": "99c436383896ccf32378259faefdbc56736277e3d2ecc5b2b4f4e099c2b1e81b",
+    "rows": "a8c6667c3d4367b6637c4f276c950a36c5b431bc9a7c7196a3d47be978522106"
+  },
+  "newFragmentSHA256": "bd5c8c4b8167d688d6fd9935ccc0533888faa84112d8cd93dd9ca9fdaba45f30",
+  "numericParity": {
+    "scenarios": 5,
+    "cells": 385
+  }
+}

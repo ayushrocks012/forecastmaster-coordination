@@ -380,3 +380,17 @@ anchored-panel design direction. Exact receiving-version selection behavior,
 measure binding, layout reflow and production speed remain unqualified. The
 prototype does not claim a freely draggable Power BI window. No live Power BI
 or application business changes were made.
+
+## 21 October 2026 — R03 follows the user's sketch
+
+The user requested lean lines and supplied a sketch of two straight toggle
+columns beside a graph, with the table below it. R03 at
+`design/sop-channel-table-r03/` follows that arrangement. It retains channel
+context, independent toggles, shared graph/table selections, top period/driver
+controls and optional monthly columns. Bar view is removed, including restoration
+from old state. R01, R02 and R07–R11 remain preserved.
+
+Local checks pass for the new arrangement and retained behavior: 58 numerical
+reconciliations, 385 raw/formatted cells matching R01 across five scenarios,
+keyboard/hover/touch interactions and responsive light/dark rendering. These
+are synthetic design checks. No live Power BI or application changes were made.
