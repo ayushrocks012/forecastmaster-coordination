@@ -1,0 +1,61 @@
+{
+  "schema": "FM_SOP_SUMMARY_CALCULATION_CONTRACT_R12",
+  "sourceEvidence": {
+    "src/smart_demand_manager/infrastructure/excel/channel_bridge/reporting_oracle.py": {
+      "SHA256": "b9aca57c2f2acb11542c5660d669cb69753a8a94927309dfa6d57623a047a667"
+    },
+    "src/smart_demand_manager/infrastructure/excel/channel_bridge/v18_template.py": {
+      "SHA256": "03e19945057cb55993de2fb55ddb515536a56fa56c740e402fa8b51f39c91155"
+    },
+    "docs/business_rules/BR-005_demand_review_period_windows.md": {
+      "SHA256": "ef182f7f12a9fe5cac76b846f2fe497a617e7552d33eba93483424fbe29e54f0"
+    },
+    "docs/workbooks/sop_summary_reference_analysis.md": {
+      "SHA256": "c4a1dc1caeb8fba73a5c57cf06fa72abf7b411f423d3c92a93f028c6d3c5e3b9"
+    }
+  },
+  "runRateEligibleIds": [
+    "community",
+    "wholesaler",
+    "ni",
+    "homecare",
+    "hospital",
+    "hcl",
+    "competitor",
+    "nursing",
+    "retail",
+    "private",
+    "internal",
+    "unassigned",
+    "ads",
+    "abbott",
+    "market",
+    "pi",
+    "net"
+  ],
+  "growthEligibleIds": [
+    "community",
+    "wholesaler",
+    "ni",
+    "homecare",
+    "hospital",
+    "hcl",
+    "competitor",
+    "nursing",
+    "retail",
+    "private",
+    "internal",
+    "unassigned",
+    "ads",
+    "abbott",
+    "market"
+  ],
+  "runRate": "Complete selected period amount divided by its month count: FY 12, YTD through the measure cutoff, YTG after its cutoff. Source amounts retain their calendar basis.",
+  "growth": "Current complete amount / complete amount for the exact same months shifted back 12 - 1. Undefined or zero prior stays unavailable; numeric zero current is valid.",
+  "exclusions": "Share has no run-rate or growth row. PI and net IMS have run-rate but no growth row, matching reporting_oracle.BLOCKS.",
+  "monthlyView": "Run-rate rows suppressed because each column is already one month; growth compares that month with the same month last year.",
+  "spacerPx": 6,
+  "limits": "HTML design using synthetic observations; source code/rule lookup is not a live workbook qualification.",
+  "spacing": "One small visible gap between every selected measure block, including Share and Abbott IMS, and at Sub-channel/Channel boundaries. Optional run-rate/growth rows stay within their measure block.",
+  "calendarScope": "Summary period years follow the inclusive review month range. FY retains Jan-Dec and YTD/YTG retain measure-specific cutoff months; Monthly uses exact selected months."
+}

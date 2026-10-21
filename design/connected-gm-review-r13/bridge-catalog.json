@@ -1,0 +1,903 @@
+{
+  "schema": "FM_SOP_EXECUTIVE_BRIDGE_CATALOG_R09",
+  "sources": {
+    "core-oral": {
+      "schema": "SDM_V18_MODEL_BINDINGS_V1",
+      "descriptorSHA256": "814ceadd7c96f7d205785cc6e006205d13ab85211324f4c2592573416908d5e8",
+      "kind": "Retained neutral model identities; no forecast values"
+    },
+    "paed-sip": {
+      "schema": "SDM_V18_MODEL_BINDINGS_V1",
+      "descriptorSHA256": "260a0a64e43fd3e456773b88272af4e35c41a97c60fe8d4dd1b574c95f763bf3",
+      "kind": "Retained neutral model identities; no forecast values"
+    }
+  },
+  "sanitization": "Whitelisted Channel/Sub Channel/Section/Measure identities and source row positions only. No workbook cells, values, formulas, products or customers.",
+  "presentationPolicy": "All 13 source contexts audited across 29 retained sector definitions. Retail precedes Private Order/Internal Account; Contracts resumes afterwards. Homecare/Hospital retain ADS Units/Value only at the user's explicit request. Row positions vary by sector; bind by the full source identity, not one row number.",
+  "displayOrder": [
+    "share",
+    "abbott",
+    "market",
+    "pi",
+    "net",
+    "community",
+    "wholesaler",
+    "ni",
+    "homecare",
+    "hospital",
+    "hcl",
+    "competitor",
+    "nursing",
+    "retail",
+    "private",
+    "internal",
+    "unassigned",
+    "ads"
+  ],
+  "bindings": [
+    {
+      "id": "community",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Community ADS Units",
+        "section": "Ex-Factory",
+        "measure": "Community ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 103,
+            "max": 103,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 103,
+            "max": 103,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Community ADS Value",
+        "section": "Ex-Factory",
+        "measure": "Community ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 108,
+            "max": 108,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 108,
+            "max": 108,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "wholesaler",
+      "channel": "Community",
+      "subChannel": "Wholesaler",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Wholesaler | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 114,
+            "max": 114,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 114,
+            "max": 114,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Wholesaler | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 123,
+            "max": 123,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 123,
+            "max": 123,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "ni",
+      "channel": "Community",
+      "subChannel": "Northern Ireland",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Northern Ireland | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 136,
+            "max": 136,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 136,
+            "max": 136,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Northern Ireland | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 145,
+            "max": 145,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 145,
+            "max": 145,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "homecare",
+      "channel": "Contracts",
+      "subChannel": "Homecare",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Homecare | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 217,
+            "max": 315,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 217,
+            "max": 245,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Homecare | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 229,
+            "max": 327,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 229,
+            "max": 257,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "hospital",
+      "channel": "Contracts",
+      "subChannel": "Hospital",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Hospital | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 269,
+            "max": 367,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 269,
+            "max": 297,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Hospital | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 281,
+            "max": 379,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 281,
+            "max": 309,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "hcl",
+      "channel": "Contracts",
+      "subChannel": "Healthcare Logistics",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Healthcare Logistics | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 300,
+            "max": 398,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 300,
+            "max": 328,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Healthcare Logistics | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 312,
+            "max": 410,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 312,
+            "max": 340,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "competitor",
+      "channel": "Contracts",
+      "subChannel": "Competitor",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Competitor | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 331,
+            "max": 429,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 331,
+            "max": 359,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Competitor | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 343,
+            "max": 441,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 343,
+            "max": 371,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "nursing",
+      "channel": "Contracts",
+      "subChannel": "Nursing Home",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Nursing Home | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 362,
+            "max": 460,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 362,
+            "max": 390,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Nursing Home | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 374,
+            "max": 472,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 374,
+            "max": 402,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "retail",
+      "channel": "Out of Pocket",
+      "subChannel": "Retail",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Retail | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 393,
+            "max": 491,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 393,
+            "max": 421,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Retail | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 405,
+            "max": 503,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 405,
+            "max": 433,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "private",
+      "channel": "Contracts",
+      "subChannel": "Private Order",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Private Order | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 424,
+            "max": 522,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 424,
+            "max": 452,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Private Order | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 436,
+            "max": 534,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 436,
+            "max": 464,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "internal",
+      "channel": "Contracts",
+      "subChannel": "Internal Account",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Internal Account | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 455,
+            "max": 553,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 455,
+            "max": 483,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Internal Account | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 467,
+            "max": 565,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 467,
+            "max": 495,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "unassigned",
+      "channel": "Unassigned",
+      "subChannel": "Unassigned",
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Unassigned | ADS Units",
+        "section": "Ex-Factory",
+        "measure": "ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 486,
+            "max": 584,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 486,
+            "max": 514,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Unassigned | ADS Value",
+        "section": "Ex-Factory",
+        "measure": "ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 498,
+            "max": 596,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 498,
+            "max": 526,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "ads",
+      "channel": "Sector total",
+      "subChannel": null,
+      "kind": "ads",
+      "basis": "EF",
+      "units": {
+        "role": "Sector | ADS Units",
+        "section": "Sector Total",
+        "measure": "Sector | ADS Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 511,
+            "max": 609,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 511,
+            "max": 539,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Sector | ADS Value",
+        "section": "Sector Total",
+        "measure": "Sector | ADS Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 514,
+            "max": 612,
+            "distinctPositions": 8,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 514,
+            "max": 542,
+            "distinctPositions": 4,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "abbott",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "IMS Abbott Units",
+        "section": "Market and Share Working",
+        "measure": "IMS Abbott Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 67,
+            "max": 67,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 67,
+            "max": 67,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "IMS Abbott Value",
+        "section": "Market and Share Working",
+        "measure": "IMS Abbott Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 82,
+            "max": 82,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 82,
+            "max": 82,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "market",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "IMS Market Units",
+        "section": "Market and Share Working",
+        "measure": "IMS Market Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 69,
+            "max": 69,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 69,
+            "max": 69,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "IMS Market Value",
+        "section": "Market and Share Working",
+        "measure": "IMS Market Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 84,
+            "max": 84,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 84,
+            "max": 84,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "pi",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "PI Units",
+        "section": "Market and Share Working",
+        "measure": "PI Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 77,
+            "max": 77,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 77,
+            "max": 77,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "PI Value",
+        "section": "Market and Share Working",
+        "measure": "PI Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 92,
+            "max": 92,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 92,
+            "max": 92,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "share",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "Abbott Volume Share",
+        "section": "Market and Share Working",
+        "measure": "Abbott Volume Share",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 66,
+            "max": 66,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 66,
+            "max": 66,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Abbott Value Share",
+        "section": "Market and Share Working",
+        "measure": "Abbott Value Share",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 81,
+            "max": 81,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 81,
+            "max": 81,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    },
+    {
+      "id": "net",
+      "channel": "Community",
+      "subChannel": null,
+      "kind": "IMS",
+      "basis": "IMS",
+      "units": {
+        "role": "Total IMS minus PI Units",
+        "section": "Ex-Factory",
+        "measure": "Total IMS minus PI Selling units",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 102,
+            "max": 102,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 102,
+            "max": 102,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      },
+      "value": {
+        "role": "Total IMS minus PI Value",
+        "section": "Ex-Factory",
+        "measure": "IMS minus PI Value \u00a3",
+        "rowRangesByDriver": {
+          "core-oral": {
+            "min": 107,
+            "max": 107,
+            "distinctPositions": 1,
+            "occurrences": 20
+          },
+          "paed-sip": {
+            "min": 107,
+            "max": 107,
+            "distinctPositions": 1,
+            "occurrences": 9
+          }
+        }
+      }
+    }
+  ],
+  "contextOrder": [
+    {
+      "channel": "Community",
+      "subChannel": null
+    },
+    {
+      "channel": "Community",
+      "subChannel": "Wholesaler"
+    },
+    {
+      "channel": "Community",
+      "subChannel": "Northern Ireland"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Homecare"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Hospital"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Healthcare Logistics"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Competitor"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Nursing Home"
+    },
+    {
+      "channel": "Out of Pocket",
+      "subChannel": "Retail"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Private Order"
+    },
+    {
+      "channel": "Contracts",
+      "subChannel": "Internal Account"
+    },
+    {
+      "channel": "Unassigned",
+      "subChannel": "Unassigned"
+    },
+    {
+      "channel": "Sector total",
+      "subChannel": null
+    }
+  ]
+}

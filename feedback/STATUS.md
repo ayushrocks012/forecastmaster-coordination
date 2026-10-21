@@ -620,3 +620,36 @@ layouts, hover and zero warm requests/script errors also pass.
 All prior designs remain preserved and observations remain synthetic. No live
 Power BI report, Fabric item, application source or workbook was changed. Live
 source binding, report performance and implementation remain pending approval.
+
+## 21 October 2026 — R13 applies the final GM refinements to both HTML pages
+
+The user authorized updating both HTML designs, saving a before-change version
+and syncing Coordination while leaving Power BI unchanged. R13 combines the
+pages in one offline preview with Explore in S&OP / Back to Demand review.
+Affiliate, cycle, sectors, review months and Units/Value carry across; each page
+retains its own explicit measure/context and presentation choices. Demand
+review now also limits summary years to the calendar range and has a dynamic
+FY/YTG shortcut. It starts with Total, driver rows, 12M and collapsed files.
+
+Both pages have independent Hide/Show and matching source-selection status:
+resolved ADS IDs, separate IMS/EF cutoffs and a labelled sample refresh. Source
+versions expand on demand. Line emphasis from legend/table hover or keyboard
+focus preserves selections; Share retains its right axis. Real blank source
+Sub-channels display as a dash with explanatory tooltip. S&OP measures are not
+automatically selected by navigation.
+
+Eight local integration groups pass, including bidirectional scope transfer,
+retained local state, calendar restrictions, ADS precedence, line emphasis,
+keyboard operation, responsive light/dark layouts and combined saved-state
+restore. There are no script errors or warm network requests. Numeric checks
+preserve 672 Demand observations and 648 S&OP observations against their saved
+baseline pages. Source audit/catalogue/rules and calculation functions remain
+preserved, alongside all earlier saved designs. The named checkpoint binds
+Demand R11 and S&OP R12 before the connected revision.
+
+The two legacy illustrative numeric models remain independent. The shared
+source-status display is design behavior, not proof of live source binding or
+numeric reconciliation between those models. Binding both pages to the same
+actual revisions, reconciling matching scopes/periods, cache invalidation and
+measuring Power BI interaction speed remain unexecuted migration gates. No
+Power BI report, Fabric item, application source or workbook was changed.
