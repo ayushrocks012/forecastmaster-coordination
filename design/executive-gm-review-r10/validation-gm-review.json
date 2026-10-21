@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "sourceSha256": "a97a90d585f4bb282459aa62a1989ea533c29b8672692c8fc1a1c6ad7d138c62",
+  "baseline": "../executive-period-review-r09",
+  "checks": [
+    "Review period beside cycle and above overview",
+    "Default chart ends at selected review period",
+    "Custom chart dates retained; follow-review restores alignment",
+    "Offsetting driver movements remain explicit",
+    "One shared searchable driver/sector hierarchy",
+    "Drivers expand without changing scope or totals",
+    "Flat sector comparison and Both rows remain available",
+    "Graph/table presentation choices remain independent",
+    "Ranking explicitly selects period and trend window",
+    "Row names remain frozen during horizontal scrolling",
+    "Partial scope is labelled Selected total/Selected plan",
+    "Variance headings distinguish Units, pounds and percentage points",
+    "All raw and formatted values match R09 across seven scenarios",
+    "ADS policy has a separate regression check",
+    "Empty selections remain explicit",
+    "No variance bars or monthly detail table",
+    "Responsive at 1024, 736, 390 and 320 pixels",
+    "Light and dark screenshots",
+    "Warm local interactions make no requests",
+    "No JavaScript errors"
+  ],
+  "parity": [
+    {
+      "scenario": "all tiers FY",
+      "cells": 49,
+      "sha256": "27bcd25dab48a52a5675262a1877c5d80335bc75bbbca16ff93e13a71271f879"
+    },
+    {
+      "scenario": "FY and YTG",
+      "cells": 98,
+      "sha256": "5d3ff3d77086f5ef92d622614391356674b78f19ab5ccc11e31ae7e4e4fa0a58"
+    },
+    {
+      "scenario": "partial sectors",
+      "cells": 35,
+      "sha256": "6392055234c0e0e5fee9df43388fff5c14ebd9de773402a7cd53410a30929133"
+    },
+    {
+      "scenario": "weighted share",
+      "cells": 98,
+      "sha256": "88a112ff8e864cb596d97c310e45865e9d60dfdbd54fb0a74c1f8d1453ffc3a1"
+    },
+    {
+      "scenario": "value",
+      "cells": 49,
+      "sha256": "e24239938a2b127dca71cfcd0cac25cbbe7eee210b96d96bc195404d3968ab9d"
+    },
+    {
+      "scenario": "multiple cycles and measures",
+      "cells": 392,
+      "sha256": "366bcd1f2076652641f0fa788ead776298c87ec2b81574deebc84220000336f5"
+    },
+    {
+      "scenario": "ex-factory cutoff",
+      "cells": 98,
+      "sha256": "26a21cbfeadf665d9937d6837ea091f9b51de1b85acfaf1cc1256fe3dd3cab6b"
+    }
+  ],
+  "total": {
+    "plan": 16843773.686148662,
+    "delta": 30025.638178564608
+  },
+  "frozen": {
+    "before": 20,
+    "after": 20,
+    "scroll": 412,
+    "position": "sticky"
+  },
+  "dimensions": [
+    {
+      "width": 992,
+      "scroll": 992,
+      "plots": [
+        {
+          "width": 934,
+          "svg": 934
+        }
+      ]
+    },
+    {
+      "width": 704,
+      "scroll": 704,
+      "plots": [
+        {
+          "width": 658,
+          "svg": 658
+        }
+      ]
+    },
+    {
+      "width": 358,
+      "scroll": 358,
+      "plots": [
+        {
+          "width": 318,
+          "svg": 318
+        }
+      ]
+    },
+    {
+      "width": 288,
+      "scroll": 288,
+      "plots": [
+        {
+          "width": 248,
+          "svg": 248
+        }
+      ]
+    }
+  ],
+  "syntheticPerformance": {
+    "targetMs": 200,
+    "samples": [
+      {
+        "renderMs": 5.900000000372529,
+        "paintMs": 23.90000000037253
+      },
+      {
+        "renderMs": 6.7999999998137355,
+        "paintMs": 31.799999999813735
+      },
+      {
+        "renderMs": 6.6000000005587935,
+        "paintMs": 31.90000000037253
+      },
+      {
+        "renderMs": 7.099999999627471,
+        "paintMs": 31.5
+      },
+      {
+        "renderMs": 6.2000000001862645,
+        "paintMs": 31.700000000186265
+      },
+      {
+        "renderMs": 7.599999999627471,
+        "paintMs": 31.799999999813735
+      },
+      {
+        "renderMs": 6.599999999627471,
+        "paintMs": 31.899999999441206
+      },
+      {
+        "renderMs": 6.7000000001862645,
+        "paintMs": 32
+      },
+      {
+        "renderMs": 6.099999999627471,
+        "paintMs": 32
+      },
+      {
+        "renderMs": 6.7000000001862645,
+        "paintMs": 31.899999999441206
+      },
+      {
+        "renderMs": 6.099999999627471,
+        "paintMs": 32
+      },
+      {
+        "renderMs": 6.8999999994412065,
+        "paintMs": 31.799999999813735
+      },
+      {
+        "renderMs": 6.3999999994412065,
+        "paintMs": 31.699999999254942
+      },
+      {
+        "renderMs": 7,
+        "paintMs": 31.799999999813735
+      },
+      {
+        "renderMs": 7.7000000001862645,
+        "paintMs": 31.90000000037253
+      },
+      {
+        "renderMs": 6.900000000372529,
+        "paintMs": 31.200000000186265
+      },
+      {
+        "renderMs": 6,
+        "paintMs": 32.10000000055879
+      },
+      {
+        "renderMs": 6.699999999254942,
+        "paintMs": 31.799999999813735
+      },
+      {
+        "renderMs": 6.300000000745058,
+        "paintMs": 31.100000000558794
+      },
+      {
+        "renderMs": 6.599999999627471,
+        "paintMs": 31.59999999962747
+      }
+    ],
+    "renderP95Ms": 7.599999999627471,
+    "productionPowerBI": "NOT_MEASURED"
+  }
+}

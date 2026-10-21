@@ -782,8 +782,8 @@
       "SHA256": "c5fa55949584897c04633931c8d4a4cd1da2c3a47fc077d413d05778dca89d30"
     },
     "design/index.html": {
-      "Bytes": 3044,
-      "SHA256": "5c625377ef03bfec7834a18b55115cace2a6744584b7095e61a52226189a4b98"
+      "Bytes": 3576,
+      "SHA256": "9c0d0adb163903722594ffcb3fe67f978dc98fe10864c43813eb6fefa934b903"
     },
     "design/checkpoints/driver-and-sector-review-r07.json": {
       "Bytes": 920,
@@ -856,6 +856,62 @@
     "design/executive-period-review-r09/validation-numeric-table.json": {
       "Bytes": 1295,
       "SHA256": "0cb7219058be4a1c13a3c62bc2e1207de5d00af1b49682c485c604e20ed5f752"
+    },
+    "design/executive-gm-review-r10/fy-and-ytg.png": {
+      "Bytes": 200976,
+      "SHA256": "490bc3a529a16943053f929d7892ccc7124a88d1149b7b7c5fbed46c23551b62"
+    },
+    "design/executive-gm-review-r10/sectors.png": {
+      "Bytes": 180121,
+      "SHA256": "2a681479816ba25dfb68cc55faed124e316ba45a6e516ae624a61e2a41e67f5f"
+    },
+    "design/executive-gm-review-r10/preservation.json": {
+      "Bytes": 1661,
+      "SHA256": "46bd413a1417202c0a92c8caf64bd4e11e613ce508153b4f89e93799e99d5cef"
+    },
+    "design/executive-gm-review-r10/overview.png": {
+      "Bytes": 173684,
+      "SHA256": "ce0de7986e3a08075bf7b9b8ca8927d4cba92721e79391369d03996372330899"
+    },
+    "design/executive-gm-review-r10/check-ads-default.cjs": {
+      "Bytes": 6474,
+      "SHA256": "b60ba570c557c0e732c8b1fc28e4a34c891c62ab5c53057a8551ed7780689351"
+    },
+    "design/executive-gm-review-r10/dark.png": {
+      "Bytes": 202609,
+      "SHA256": "bf8c847a0caa5acacb236bb76bc2c9d944964cad0e01df37a1e70ffa25fc1126"
+    },
+    "design/executive-gm-review-r10/check-gm-review.cjs": {
+      "Bytes": 16245,
+      "SHA256": "f5be0958e188c37de19629152ab6a9d507c86a403900fe551c37c5a5cad4e834"
+    },
+    "design/executive-gm-review-r10/index.html": {
+      "Bytes": 179944,
+      "SHA256": "d57c02f54e2a27b4610b4cfe04bed45c237602fd09f9d090558f72c44901ca43"
+    },
+    "design/executive-gm-review-r10/validation-ads.json": {
+      "Bytes": 2484,
+      "SHA256": "78000f001c522a68797ac92dae43e426731dcf6450c13db3cef8b74689e72f1e"
+    },
+    "design/executive-gm-review-r10/README.md": {
+      "Bytes": 4460,
+      "SHA256": "2efbb93ee57954d482ebc7320373591037980ec703bda1706bedcbd3efcb15d1"
+    },
+    "design/executive-gm-review-r10/driver-and-sectors.png": {
+      "Bytes": 232021,
+      "SHA256": "980fc28b06c9d07e0f4c8d33ef2f844c181cb431c94859ac0d674789bd620b35"
+    },
+    "design/executive-gm-review-r10/expanded-drivers.png": {
+      "Bytes": 186198,
+      "SHA256": "b66cfa06ceed7f0cab536f50fbfeb43b5f315c2ff719a865c046b237f59c2368"
+    },
+    "design/executive-gm-review-r10/review.fragment.html": {
+      "Bytes": 82502,
+      "SHA256": "a97a90d585f4bb282459aa62a1989ea533c29b8672692c8fc1a1c6ad7d138c62"
+    },
+    "design/executive-gm-review-r10/validation-gm-review.json": {
+      "Bytes": 5049,
+      "SHA256": "8fcb91f5b4b9b318eeffe81f038cfc1fe286560399d7bac0188acf4282f7a51d"
     }
   }
 }

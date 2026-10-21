@@ -294,3 +294,28 @@ standard numeric variance table without the small bars beneath Absolute.
 Before/after numeric values and displayed number strings agree across default,
 FY/YTG and multiple-measure/cycle views. The preview and screenshots are
 regenerated. R07 and R08 remain unchanged, and no live Power BI changes were made.
+
+## 21 October 2026 — R10 GM review proposal
+
+The user approved applying the six GM-review refinements to HTML only and
+explicitly retained the Power BI pause. R10 is separately saved at
+`design/executive-gm-review-r10/`; open it from `design/index.html`.
+
+Period selection now precedes the overview, the chart follows the selected
+review period, and driver totals expand into sectors. Flat sector and Both
+views remain available with one shared scope, explicit ranking periods,
+frozen row names, unit-aware variance headings and selected-total labels.
+ADS defaults, matching-file access and all numeric values remain intact.
+
+Browser checks passed: 819 raw/formatted numeric cells match preserved R09
+across seven scenarios; source-selection regressions, responsive layout and
+light/dark rendering pass. The synthetic warm-render measurement is recorded
+in `validation-gm-review.json`, with no requests during warm interactions.
+It is not a measurement of company Power BI response time or production cache
+invalidation. The GitNexus HTML-symbol/change-scope checks were unavailable or
+incomplete; the source-preservation receipt and browser checks are the bounded
+verification here. R07, R08 and R09 remain unchanged.
+
+Pending: user design approval, followed by separately authorized Power BI
+implementation and realistic performance/freshness validation. No report,
+model, custom visual package, notebook, function or schedule was changed.
