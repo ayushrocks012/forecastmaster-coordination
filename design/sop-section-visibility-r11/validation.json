@@ -1,0 +1,33 @@
+{
+  "schema": "FM_SOP_SECTION_VISIBILITY_R11_VALIDATION",
+  "checkedAt": "2026-10-21T21:01:26.045Z",
+  "checks": [
+    "Section and the top Selected scope filter are removed. Affiliate, cycle, Units/Value, calendars and shared driver/sector scope remain; graph/table start empty.",
+    "Community blank, Wholesaler and Northern Ireland occupy separate aligned rows. Every blank-context measure ends above Wholesaler; each child has its own ADS control and breathing room.",
+    "The 18 exposed measures are direct source identities, with Cur/Pub excluded. Retained bridge positions confirm unit Share 66 before Abbott IMS 67, and value Share 81 before Abbott IMS 82.",
+    "The summary keeps one column-header row and merged hierarchy labels, with six genuine blank spacers between the selected business blocks. Spacer rows carry no values and do not split Share from Abbott IMS.",
+    "Independent run-rate/growth switches add only bridge-eligible rows below amounts. Share stays percentage-only; PI/net omit growth. Merged-cell geometry includes derived/spacer rows, while graph markup and selected measures remain unchanged.",
+    "384 direct fixture comparisons verify FY/YTD/YTG run-rate month counts and exact prior-year windows for Units/Value, both cycles and both cutoff bases. Zero current remains valid; missing/zero prior stays blank; growth uses complete totals.",
+    "Run-rate Value rows retain GBP and growth rows remain percentages. Monthly columns suppress redundant run-rate rows while preserving the switch choice; monthly growth compares the same month last year. Switches remain independent.",
+    "Every context and measure requires explicit selection. Child ADS and legend toggles affect only their own line/table row. Parent/context off removes only dependent results and restores remembered choices on re-enable.",
+    "Units/Value updates Share, Abbott IMS, Market, PI, net IMS and each context ADS label throughout; Share retains the same graph’s right axis.",
+    "Other source Channels follow in their own aligned contexts. Contracts has only real children, each with an independent ADS toggle and no fabricated total or IMS allocation.",
+    "All 13 selector contexts and summary records follow the audited source order, including Retail before Private Order/Internal Account. Every remaining context exposes only its own independently toggled ADS; Contracts continuation introduces no extra Channel filter.",
+    "Select matches/all adds only the requested 18 source measures. Affiliate gates results. Total/Drivers/Sectors beside the graph changes presentation without changing included sectors or measures.",
+    "216 retained measure/period/cycle/dimension values match saved R10's synthetic observations exactly.",
+    "64 checks preserve Community/sector totals, weighted Share and FY=YTD+YTG in both dimensions; no arithmetic change accompanies the layout simplification.",
+    "Visible calendar dates, summary periods and Monthly columns retain their separate roles. Hiding the left selector preserves every choice.",
+    "All eight visibility combinations work through local Hide/Show controls. Hidden sections retain compact accessible restore headings, selections and table values. Selector collapse widens/redraws the graph; keyboard restore, hidden-state updates and restored host state preserve current periods, Units/Value and derived-row settings.",
+    "Light/dark responsive layouts fit 1080/1024/736/390/320px, with visible chart labels, cross-series hover, no script errors and no warm network requests."
+  ],
+  "visibilityCombinations": 8,
+  "sourceBindings": 18,
+  "auditedContexts": 13,
+  "sourceIdentityMatches": 1044,
+  "derivedComparisons": 384,
+  "retainedValueComparisons": 216,
+  "reconciliationComparisons": 64,
+  "errors": [],
+  "warmNetworkRequests": 0,
+  "note": "Synthetic HTML design and retained metadata qualification only; no live source binding, report deployment or Power BI speed claim."
+}

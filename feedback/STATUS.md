@@ -572,3 +572,23 @@ the index. All displayed values are synthetic. This is not live Excel/Fabric
 source binding, Power BI deployment or measured report-performance evidence.
 The approved first page, application source and workbooks remain unchanged;
 Power BI implementation is still paused for design approval.
+
+## 21 October 2026 — R11 adds independent section visibility
+
+The user requested a local Hide control for the selector, graph and S&OP summary.
+The separately saved R11 places Hide at the top right of each section. A collapsed
+section keeps a compact heading and Show control. The selector's former detached
+button is removed; collapsing it releases the left column so results widen.
+Hidden sections retain all selections, calendar/summary periods and run-rate/
+growth settings. Showing them restores current content and correct graph width.
+
+Local browser checks pass 17 integration groups, including all eight visibility
+combinations, top-right controls, keyboard restore, hidden-state changes and
+saved host-state restoration. They also retain 216 amount comparisons with R10,
+384 derived comparisons, 64 reconciliations, responsive light/dark layouts and
+zero warm network requests/script errors. Source catalogue, source audit and
+summary-rule bytes are unchanged; prior saved designs remain preserved.
+
+The numbers remain synthetic. This is HTML design work only: the approved first
+page, live Power BI report, Fabric items, application source and workbooks were
+not changed. Live implementation remains paused for design approval.
