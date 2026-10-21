@@ -332,3 +332,31 @@ points after date changes, reversed ranges, retained executive interactions,
 source selection and responsive layout. All 819 numeric cells again agree with
 preserved R09. R10 and previous versions remain unchanged. This is an HTML-only
 proposal; production installation and speed/freshness validation remain paused.
+
+## 21 October 2026 — separate S&OP build-up page R01
+
+The user accepted the first-page R11 design and requested a second page that
+builds its graph and table from the same progressive selections. The new
+`design/sop-build-up-r01/` proposal is separately saved and linked in the chooser.
+R07–R11 retain their recorded bytes.
+
+The measure hierarchy follows Community's Market/share/Abbott/PI/net/factor
+observations, Community Ex-factory ADS and its Wholesaler/Northern Ireland
+children, plus Contracts and its seven source subchannels. No additional
+cross-channel Contracts total is introduced. Units/Value switch together;
+percentages are separate from amount graphs. The table offers FY/YTD/YTG or
+the visible month range, while driver/sector scope is shared with the graph.
+Optional stacked composition assigns each of eleven publishing leaves once,
+even when selected parents and children overlap.
+
+Synthetic browser validation passed 58 reconciliation comparisons, selection
+and grouping interactions, distinct IMS/EF cutoffs, monthly/summary independence,
+hover/touch details, empty states, responsive widths and light/dark rendering.
+Warm local interactions generated no network requests. The saved timings do
+not measure company Power BI performance. Current repository contracts informed
+the hierarchy; workbook inputs were not read or copied. The existing GitNexus
+HTML coverage limitation is retained rather than claiming a complete graph gate.
+
+Pending: second-page design review, followed by separately authorized live
+implementation, reviewed ADS source binding and actual freshness/performance
+qualification. No application business code or Power BI/Fabric items changed.

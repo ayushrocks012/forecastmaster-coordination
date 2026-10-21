@@ -4,7 +4,7 @@ A separate repository for exchanging ForecastMaster setup scripts, office-laptop
 
 This repository is public. Files and screenshots committed here are publicly visible.
 
-- **Executive review design comparison:** pull this repo and open `design/index.html` in a browser. [R11 — Month Range Review](design/executive-month-review-r11/README.md) is the latest HTML-only proposal, restoring visible month calendars and moving FY/YTG back to the summary. R07–R10 remain preserved; R07 also has the named tag `design-driver-sector-r07`. Power BI remains unchanged pending design approval.
+- **Design review:** pull this repo and open `design/index.html` in a browser. [Second page — S&OP build-up R01](design/sop-build-up-r01/README.md) adds progressively selected measures, channel hierarchy, Units/Value and FY/YTD/YTG or monthly columns. It is ready for review with synthetic data. [R11 — Month Range Review](design/executive-month-review-r11/README.md) is the approved first-page design and remains unchanged. R07–R10 remain preserved; R07 also has the named tag `design-driver-sector-r07`. Live Power BI implementation remains paused.
 - [R09 — Executive Period Review](design/executive-period-review-r09/README.md) adds FY/YTG overview comparison and explicit trend-history dates. Its variance table now uses numeric values without the small variance bars, as requested; every number is retained.
 - Current notebook updater: [INSTALL NOTEBOOK R05.4.txt](handoff/notebook-r05.4/INSTALL%20NOTEBOOK%20R05.4.txt)
 - Current authentication correction: [hourly user context setup](handoff/pipeline-user-context-r01/README.md)

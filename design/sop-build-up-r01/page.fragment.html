@@ -1,0 +1,323 @@
+<script>/* BUNDLED_D3_V7_9_0 */</script>
+<style>
+#fm-sop-build-up{color-scheme:light dark;--sb-bg:light-dark(#f5f7fa,#131b25);--sb-panel:light-dark(#fff,#1b2633);--sb-text:light-dark(#182c41,#e7edf5);--sb-muted:light-dark(#52667b,#afbed0);--sb-line:light-dark(#dce3eb,#354657);--sb-soft:light-dark(#edf3f7,#263644);--sb-accent:light-dark(#096b76,#73cbd0);--sb-selected:light-dark(#e7f3f4,#203e46);--sb-hover:light-dark(#f0f6f8,#2a3c4b);--sb-s1:light-dark(#087f83,#6cd1d0);--sb-s2:light-dark(#3268b2,#88b8fa);--sb-s3:light-dark(#a86713,#f0b764);--sb-s4:light-dark(#7b55a6,#c2a0ed);--sb-s5:light-dark(#b34c65,#f19db2);--sb-s6:light-dark(#537c2b,#b2d683);font:14px/1.45 'Segoe UI',Arial,sans-serif;color:var(--sb-text);width:100%}
+#fm-sop-build-up *{box-sizing:border-box}
+#fm-sop-build-up button,#fm-sop-build-up input,#fm-sop-build-up select{font:inherit;color:inherit}
+#fm-sop-build-up button,#fm-sop-build-up select{background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:4px;padding:6px 10px;min-height:32px;max-width:100%}
+#fm-sop-build-up button:hover{background:var(--sb-hover)}
+#fm-sop-build-up input[type=checkbox]{accent-color:var(--sb-accent);width:15px;height:15px;flex:none;margin:0}
+#fm-sop-build-up input[type=month],#fm-sop-build-up input[type=search]{background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:4px;padding:6px 8px;min-height:32px;min-width:0;max-width:100%}
+#fm-sop-build-up h1{font-size:20px;line-height:1.25;font-weight:600;margin:0}
+#fm-sop-build-up h2{font-size:14px;font-weight:600;margin:0}
+#fm-sop-build-up h3{font-size:13px;font-weight:600;margin:0}
+#fm-sop-build-up .sb-shell{background:var(--sb-bg);border:1px solid var(--sb-line);border-radius:8px}
+#fm-sop-build-up .sb-header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:17px 20px;border-bottom:1px solid var(--sb-line);background:var(--sb-panel);border-radius:8px 8px 0 0}
+#fm-sop-build-up .sb-brand{display:flex;align-items:center;gap:12px}
+#fm-sop-build-up .sb-mark{height:32px;width:5px;background:var(--sb-accent)}
+#fm-sop-build-up .sb-sub,#fm-sop-build-up .sb-detail{font-size:12px;color:var(--sb-muted)}
+#fm-sop-build-up .sb-sub{margin-top:3px}
+#fm-sop-build-up .sb-preview{font-size:12px;color:var(--sb-muted);padding-right:85px}
+#fm-sop-build-up .sb-main{padding:14px 18px 18px;display:grid;gap:13px}
+#fm-sop-build-up .sb-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;min-width:0}
+#fm-sop-build-up .sb-inline{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;min-width:0}
+#fm-sop-build-up .sb-months{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--sb-muted);max-width:100%}
+#fm-sop-build-up .sb-months label{display:flex;align-items:center;gap:6px}
+#fm-sop-build-up .sb-months input{width:145px}
+#fm-sop-build-up .sb-filters{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px 12px;position:relative;z-index:20}
+#fm-sop-build-up .sb-field{min-width:0;position:relative}
+#fm-sop-build-up .sb-fieldlabel{display:block;font-size:12px;color:var(--sb-muted);margin-bottom:4px}
+#fm-sop-build-up .sb-pick{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;height:35px}
+#fm-sop-build-up .sb-pick span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#fm-sop-build-up .sb-popup{position:absolute;top:calc(100% + 5px);left:0;background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:5px;padding:8px;width:270px;max-width:calc(100vw - 42px);box-shadow:0 8px 22px light-dark(#142c4426,#0005);z-index:30}
+#fm-sop-build-up .sb-popup input[type=search]{width:100%;font-size:13px;margin-bottom:5px}
+#fm-sop-build-up .sb-option{display:flex;align-items:center;gap:8px;padding:6px 4px;font-size:13px;overflow-wrap:anywhere}
+#fm-sop-build-up .sb-option:hover{background:var(--sb-hover)}
+#fm-sop-build-up .sb-panel{background:var(--sb-panel);border:1px solid var(--sb-line);border-radius:5px;min-width:0}
+#fm-sop-build-up .sb-head{padding:10px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#fm-sop-build-up .sb-toolbar{padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--sb-line)}
+#fm-sop-build-up .sb-toolbar button,#fm-sop-build-up .sb-toolbar select{font-size:12px}
+#fm-sop-build-up .sb-check{display:inline-flex;gap:7px;align-items:center;font-size:13px;min-height:28px;overflow-wrap:anywhere}
+#fm-sop-build-up .sb-scope{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;padding:0 12px 10px}
+#fm-sop-build-up .sb-children{display:flex;gap:4px 18px;flex-wrap:wrap;margin:3px 0 0 22px;padding-left:11px;border-left:2px solid var(--sb-line)}
+#fm-sop-build-up .sb-parent{font-weight:600}
+#fm-sop-build-up .sb-caption{padding:0 12px 9px;font-size:12px;color:var(--sb-muted)}
+#fm-sop-build-up .sb-measure-summary{padding:10px 12px;font-size:13px;min-height:42px}
+#fm-sop-build-up .sb-measure-summary strong{font-weight:600}
+#fm-sop-build-up .sb-measure-summary .sb-detail{margin-left:9px;overflow-wrap:anywhere}
+#fm-sop-build-up .sb-trees{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;padding:10px 12px}
+#fm-sop-build-up .sb-tree-group{min-width:0}
+#fm-sop-build-up .sb-tree-title{padding-bottom:5px;display:flex;justify-content:space-between;gap:6px;align-items:baseline}
+#fm-sop-build-up .sb-tree-path{font-size:11px;color:var(--sb-muted);margin:0 0 5px;overflow-wrap:anywhere}
+#fm-sop-build-up .sb-tree-item{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:13px;min-height:28px}
+#fm-sop-build-up .sb-tree-item[data-depth="1"]{margin-left:22px;padding-left:11px;border-left:2px solid var(--sb-line)}
+#fm-sop-build-up .sb-tree-item .sb-small{font-size:11px;color:var(--sb-muted);margin-left:auto}
+#fm-sop-build-up .sb-selection-search{width:230px;font-size:12px!important}
+#fm-sop-build-up .sb-view{display:inline-flex;flex-wrap:wrap}
+#fm-sop-build-up .sb-view button{font-size:12px;border-radius:0}
+#fm-sop-build-up .sb-view button:first-child{border-radius:4px 0 0 4px}
+#fm-sop-build-up .sb-view button:last-child{border-radius:0 4px 4px 0}
+#fm-sop-build-up .sb-view button[aria-pressed=true]{background:var(--sb-selected);color:var(--sb-accent);font-weight:500}
+#fm-sop-build-up .sb-plot-title{font-size:13px;font-weight:600;padding:4px 0}
+#fm-sop-build-up .sb-charts{display:grid;gap:14px;padding:8px 12px 0}
+#fm-sop-build-up .sb-plot{position:relative;min-width:0;height:270px}
+#fm-sop-build-up .sb-plot svg{display:block;width:100%;height:100%;font:12px 'Segoe UI',Arial,sans-serif;overflow:visible}
+#fm-sop-build-up .sb-plot svg text{fill:var(--sb-muted)}
+#fm-sop-build-up .sb-plot .axis-title{fill:var(--sb-text)}
+#fm-sop-build-up .sb-plot .domain,#fm-sop-build-up .sb-plot .tick line{stroke:var(--sb-line)}
+#fm-sop-build-up .sb-plot .tick text{font-size:12px}
+#fm-sop-build-up .sb-plot .sb-grid line{stroke:var(--sb-line)}
+#fm-sop-build-up .sb-tooltip{position:absolute;pointer-events:none;background:var(--sb-panel);color:var(--sb-text);border:1px solid var(--sb-line);border-radius:4px;padding:8px 10px;box-shadow:0 5px 20px light-dark(#142c4426,#0005);font-size:12px;z-index:10;max-width:calc(100% - 8px)}
+#fm-sop-build-up .sb-tooltip div{display:flex;justify-content:space-between;gap:12px;margin-top:3px}
+#fm-sop-build-up .sb-legend{display:flex;gap:6px 15px;flex-wrap:wrap;padding:7px 12px 11px;font-size:12px}
+#fm-sop-build-up .sb-legend button{padding:2px 0;background:transparent;border:0;min-height:25px;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--sb-text)}
+#fm-sop-build-up .sb-swatch{display:inline-block;width:17px;height:3px;background:var(--sb-series)}
+#fm-sop-build-up .sb-tablewrap{width:100%;overflow-x:auto;scrollbar-width:thin}
+#fm-sop-build-up .sb-table{border-collapse:collapse;width:100%;font-size:12px;table-layout:fixed}
+#fm-sop-build-up .sb-table th{padding:8px 10px;background:var(--sb-soft);font-weight:500;text-align:right;border-top:1px solid var(--sb-line)}
+#fm-sop-build-up .sb-table td{padding:8px 10px;border-top:1px solid var(--sb-line);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#fm-sop-build-up .sb-table th:first-child,#fm-sop-build-up .sb-table td:first-child{text-align:left;white-space:normal;position:sticky;left:0;z-index:2;background:var(--sb-panel)}
+#fm-sop-build-up .sb-table th:first-child{z-index:3;background:var(--sb-soft)}
+#fm-sop-build-up .sb-table th small{display:block;font-size:11px;font-weight:400;color:var(--sb-muted);margin-top:2px}
+#fm-sop-build-up .sb-table .sb-subtotal td{font-weight:600;background:var(--sb-hover)}
+#fm-sop-build-up .sb-table .sb-total td{font-weight:600;background:var(--sb-selected)}
+#fm-sop-build-up .sb-table .sb-child td:first-child{padding-left:33px}
+#fm-sop-build-up .sb-table .sb-context td{color:var(--sb-muted);background:var(--sb-soft);font-size:11px;text-align:left;padding-top:5px;padding-bottom:5px}
+#fm-sop-build-up .sb-table .sb-group td{font-weight:600;text-align:left;background:var(--sb-soft)}
+#fm-sop-build-up .sb-table .sb-basis{color:var(--sb-muted);font-size:11px;text-align:left}
+#fm-sop-build-up .sb-foot{font-size:11px;color:var(--sb-muted);display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap}
+#fm-sop-build-up .sb-note{font-size:12px;color:var(--sb-muted);padding:8px 12px;border-top:1px solid var(--sb-line)}
+#fm-sop-build-up .sb-empty{padding:20px 12px;text-align:center;font-size:13px;color:var(--sb-muted)}
+#fm-sop-build-up [hidden]{display:none!important}
+@media(max-width:760px){#fm-sop-build-up .sb-main{padding:12px;gap:12px}#fm-sop-build-up .sb-header{padding:14px 13px}#fm-sop-build-up .sb-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#fm-sop-build-up .sb-preview{padding-right:0}#fm-sop-build-up .sb-trees{grid-template-columns:1fr}#fm-sop-build-up .sb-selection-search{max-width:100%}}
+@media(max-width:430px){#fm-sop-build-up .sb-main{padding:9px}#fm-sop-build-up h1{font-size:18px}#fm-sop-build-up .sb-scope{grid-template-columns:1fr}#fm-sop-build-up .sb-months label{flex-wrap:wrap}}
+@media(pointer:coarse){#fm-sop-build-up button,#fm-sop-build-up .sb-check,#fm-sop-build-up .sb-tree-item{min-height:42px}#fm-sop-build-up input[type=search]{font-size:16px!important}}
+</style>
+<div id="fm-sop-build-up" aria-label="ForecastMaster S&OP build-up design">
+ <div class="sb-shell">
+  <header class="sb-header"><div class="sb-brand"><span class="sb-mark" aria-hidden="true"></span><div><h1>ForecastMaster · S&amp;OP build-up</h1><div class="sb-sub">Second page · selection builds the graph and table</div></div></div><span class="sb-preview">Design preview · sample data</span></header>
+  <main class="sb-main">
+   <div class="sb-row"><strong>United Kingdom</strong><div class="sb-months"><span>Chart &amp; monthly table</span><label>From <input type="month" id="sb-start" aria-label="First month" value="2026-01" min="2024-01" max="2029-12"></label><label>To <input type="month" id="sb-end" aria-label="Last month" value="2026-12" min="2024-01" max="2029-12"></label></div></div>
+   <div class="sb-filters" id="sb-filters"><div class="sb-field"><label class="sb-fieldlabel" for="sb-units">Display</label><select id="sb-units" style="width:100%"><option value="units">Selling units</option><option value="value">Value · GBP</option></select></div><div class="sb-field"><label class="sb-fieldlabel" for="sb-grouping">Selected scope</label><select id="sb-grouping" style="width:100%"><option value="combined">Combined total</option><option value="driver">By growth driver</option><option value="sector">By sector</option></select></div></div>
+   <div class="sb-detail" id="sb-cutoffs" aria-live="polite"></div>
+   <section class="sb-panel" aria-label="Growth driver and sector selection"><div class="sb-head"><h2>Growth drivers &amp; sectors</h2><div class="sb-inline"><button type="button" id="sb-all-scope">Select all</button><button type="button" id="sb-clear-scope">Clear all</button></div></div><div class="sb-scope" id="sb-scope"></div><div class="sb-caption" id="sb-scope-caption" aria-live="polite"></div></section>
+   <details class="sb-panel" id="sb-measure-section" aria-label="Measures included in graph and table"><summary class="sb-measure-summary"><strong>Choose S&amp;OP measures</strong><span class="sb-detail" id="sb-measure-summary"></span></summary><div class="sb-head"><span class="sb-detail">Every checked measure appears in both graph and table</span></div><div class="sb-toolbar"><input type="search" id="sb-row-search" class="sb-selection-search" placeholder="Find Market, PI, Wholesaler…" aria-label="Search measures"><div class="sb-inline"><button type="button" id="sb-all-rows">Select all shown</button><button type="button" id="sb-clear-rows">Clear all</button></div></div><div class="sb-trees" id="sb-trees"></div><div class="sb-caption" id="sb-row-caption" aria-live="polite"></div></details>
+   <section class="sb-panel" aria-label="S&OP selected measure graphs"><div class="sb-head"><h2>Selected measures</h2><div class="sb-view" role="group" aria-label="Chart view"><button type="button" data-chart="lines" aria-pressed="true">Compare lines</button><button type="button" data-chart="build" aria-pressed="false">Ex-factory build-up</button></div></div><div class="sb-caption" id="sb-graph-context"></div><div class="sb-charts" id="sb-charts"></div><div class="sb-legend" id="sb-legend"></div><div class="sb-caption" id="sb-chart-reading"></div></section>
+   <section class="sb-panel" aria-label="S&OP summary"><div class="sb-head"><h2>S&amp;OP summary</h2><div class="sb-view" role="group" aria-label="Table columns"><button type="button" data-table="periods" aria-pressed="true">FY / YTD / YTG</button><button type="button" data-table="monthly" aria-pressed="false">Monthly</button></div></div><div class="sb-toolbar"><div id="sb-period-field" style="width:210px;max-width:100%"></div><span class="sb-detail" id="sb-table-context"></span></div><div class="sb-tablewrap"><table class="sb-table" id="sb-summary"></table></div><div class="sb-note">IMS and matched Community diagnostics use the IMS cutoff. Published channel ADS uses the Ex-factory cutoff. Parent totals and their indented children are views of the same demand.</div></section>
+   <footer class="sb-foot"><span>Illustrative data · saved ADS source binding follows the approved review-page design</span><span id="sb-live" aria-live="polite">Local interactions</span></footer>
+  </main>
+ </div>
+</div>
+<script>
+(() => {
+ const root=document.getElementById('fm-sop-build-up');if(!root)return;
+ const $=s=>root.querySelector(s),$$=s=>[...root.querySelectorAll(s)],esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const drivers={oral:'Core Oral',paed:'Paed SIP'};
+ const sectors=[{id:'compact',name:'Compact',driver:'oral',base:440000,slope:4300,share:.18,price:6.2},{id:'juce',name:'Juce',driver:'oral',base:310000,slope:2300,share:.15,price:5.4},{id:'paed-standard',name:'Paed standard',driver:'paed',base:190000,slope:2300,share:.22,price:7.1},{id:'paed-energy',name:'Paed energy',driver:'paed',base:125000,slope:1400,share:.20,price:8.2}];
+ const leaves=['wholesaler','ni','homecare','hospital','hcl','competitor','nursing','private','internal','retail','unassigned'];
+ const contractLeaves=leaves.slice(2,9),communityLeaves=leaves.slice(0,2);
+ const rows=[
+  {id:'market',name:'IMS Market',group:'community',basis:'ims',color:1},
+  {id:'share',name:'Abbott share',group:'community',basis:'ims',ratio:true,color:2},
+  {id:'abbott',name:'Abbott IMS',group:'community',basis:'ims',color:2},
+  {id:'pi',name:'Parallel imports (PI)',group:'community',basis:'ims',hint:'Deduction from Abbott IMS',color:3},
+  {id:'net',name:'Abbott IMS minus PI',group:'community',basis:'ims',color:4},
+  {id:'factor',name:'Community factor / effective uplift',group:'community',basis:'ims',ratio:true,hint:'Matched IMS calendar',color:6},
+  {id:'community-ims',name:'Community ADS · IMS calendar',group:'community',basis:'ims',hint:'Reconciliation only',color:5},
+  {id:'community',name:'Community Ex-factory ADS',group:'community',basis:'ef',leafIds:communityLeaves,color:5},
+  {id:'wholesaler',name:'Wholesaler',group:'community',basis:'ef',parent:'community',leafIds:['wholesaler'],color:2},
+  {id:'ni',name:'Northern Ireland',group:'community',basis:'ef',parent:'community',leafIds:['ni'],color:3},
+  {id:'contracts',name:'Total Contracts ADS',group:'contracts',basis:'ef',leafIds:contractLeaves,color:4},
+  {id:'homecare',name:'Homecare',group:'contracts',basis:'ef',parent:'contracts',leafIds:['homecare'],color:1},
+  {id:'hospital',name:'Hospital',group:'contracts',basis:'ef',parent:'contracts',leafIds:['hospital'],color:5},
+  {id:'hcl',name:'Healthcare Logistics',group:'contracts',basis:'ef',parent:'contracts',leafIds:['hcl'],color:6},
+  {id:'competitor',name:'Competitor',group:'contracts',basis:'ef',parent:'contracts',leafIds:['competitor'],color:3},
+  {id:'nursing',name:'Nursing Home',group:'contracts',basis:'ef',parent:'contracts',leafIds:['nursing'],color:2},
+  {id:'private',name:'Private Order',group:'contracts',basis:'ef',parent:'contracts',leafIds:['private'],color:5},
+  {id:'internal',name:'Internal Account',group:'contracts',basis:'ef',parent:'contracts',leafIds:['internal'],color:6},
+  {id:'retail',name:'Retail · Out of Pocket',group:'retail',basis:'ef',leafIds:['retail'],color:6},
+  {id:'unassigned',name:'Unassigned',group:'unassigned',basis:'ef',leafIds:['unassigned'],color:3},
+  {id:'ads',name:'Total ADS · all channels',group:'all',basis:'ef',leafIds:leaves,color:1}
+ ];
+ const rowMap=new Map(rows.map(r=>[r.id,r]));
+ const cycles=[{id:'2026-10',name:'October 2026'},{id:'2026-07',name:'July 2026'}],channels=[{id:'community',name:'Community'},{id:'contracts',name:'Contracts'},{id:'retail',name:'Retail / Out of Pocket'},{id:'unassigned',name:'Unassigned'}];
+ const periods=[{id:'2026:FY',name:'2026 FY'},{id:'2026:YTD',name:'2026 YTD'},{id:'2026:YTG',name:'2026 YTG'},{id:'2027:FY',name:'2027 FY'}];
+ const defaults={cycles:['2026-10'],channels:['community'],sectors:['compact','juce'],rows:['market','abbott','community'],display:'units',grouping:'combined',chart:'lines',table:'periods',periods:['2026:FY','2026:YTD','2026:YTG'],monthStart:'2026-01',monthEnd:'2026-12',search:''};
+ const schema='fm-sop-build-up-r01',saved=window.openai?.widgetState?.modelContent;
+ let state={...defaults,...(saved?.schema===schema?saved.state:{})};
+ for(const key of ['cycles','channels','sectors','rows','periods'])state[key]=Array.isArray(state[key])?[...state[key]]:[...defaults[key]];
+ const rawCache=new Map(),pickers=new Map(),timings=[];
+ const monthIndex=iso=>(Number(iso.slice(0,4))-2024)*12+Number(iso.slice(5,7))-1;
+ const monthDate=t=>new Date(Date.UTC(2024+Math.floor(t/12),t%12,1));
+ const monthName=t=>monthDate(t).toLocaleDateString('en-GB',{month:'short',year:'2-digit',timeZone:'UTC'});
+ const cut=(cycle,basis)=>monthIndex(cycle)-(basis==='ims'?2:1);
+ const color=row=>getComputedStyle(root).getPropertyValue('--sb-s'+row.color).trim();
+ const sum=values=>values.length&&values.every(v=>typeof v==='number'&&Number.isFinite(v))?values.reduce((a,b)=>a+b,0):null;
+ const ratio=(n,d)=>n==null||d==null||d===0?null:n/d;
+ const fmt=(v,kind='amount',full=false)=>v==null||!Number.isFinite(v)?'—':kind==='ratio'?(v*100).toFixed(1)+'%':(state.display==='value'?'£':'')+(full?Math.round(v).toLocaleString('en-GB'):Math.abs(v)>=1e6?(v/1e6).toFixed(2)+'m':Math.abs(v)>=1e3?(v/1e3).toFixed(1)+'k':Math.round(v).toLocaleString('en-GB'));
+ function source(sector,t,cycle){
+  const key=sector.id+'|'+t+'|'+cycle;if(rawCache.has(key))return rawCache.get(key);
+  if(t<0||t>71)return null;
+  const market=(sector.base+sector.slope*t)*(1+.035*Math.sin((t%12-1)*Math.PI/6)),share=sector.share+.00038*t,abbott=market*share,pi=abbott*.04,net=abbott-pi;
+  const future=t>cut(cycle,'ef'),uplift=sector.driver==='oral'?.10:.06,valueUplift=sector.driver==='oral'?.14:.09;
+  const community=net*(future?1+uplift:1.035),communityValue=net*sector.price*(future?1+valueUplift:1.03);
+  const historicSplit=m=>.87+.012*Math.sin(m/3),past=Array.from({length:12},(_,i)=>cut(cycle,'ef')-11+i);
+  const historicalNet=m=>{const base=(sector.base+sector.slope*m)*(1+.035*Math.sin((m%12-1)*Math.PI/6));return base*(sector.share+.00038*m)*.96*1.035;};
+  const split=future?sum(past.map(m=>historicalNet(m)*historicSplit(m)))/sum(past.map(historicalNet)):historicSplit(t);
+  const contractDelta=future?(sector.driver==='oral'?1600:-350):0,shipment=future&&t%12===9?1200:0;
+  const u={market,abbott,pi,net,community,wholesaler:community*split,ni:community*(1-split),homecare:net*.22+contractDelta+shipment,hospital:net*.18+(future?(sector.driver==='oral'?-700:900):0),hcl:net*.025,competitor:net*.018,nursing:net*.032,private:net*.012,internal:net*.015,retail:net*.035,unassigned:net*.01};
+  u.contracts=sum(contractLeaves.map(id=>u[id]));u.ads=sum(leaves.map(id=>u[id]));
+  const v={};for(const [id,value]of Object.entries(u))v[id]=value*sector.price;
+  v.community=communityValue;v.wholesaler=communityValue*split;v.ni=communityValue*(1-split);
+  for(const id of contractLeaves)v[id]=u[id]*sector.price*1.04;
+  v.contracts=sum(contractLeaves.map(id=>v[id]));v.retail=u.retail*sector.price*.98;v.unassigned=u.unassigned*sector.price;v.ads=sum(leaves.map(id=>v[id]));
+  const result={units:u,value:v};rawCache.set(key,result);return result;
+ }
+ function groups(){
+  const selected=sectors.filter(s=>state.sectors.includes(s.id));
+  if(!selected.length)return [];
+  if(state.grouping==='sector')return selected.map(s=>({id:s.id,name:drivers[s.driver]+' · '+s.name,sectors:[s]}));
+  if(state.grouping==='driver')return Object.keys(drivers).map(id=>({id,name:drivers[id],sectors:selected.filter(s=>s.driver===id)})).filter(g=>g.sectors.length);
+  return [{id:'combined',name:Object.keys(drivers).filter(id=>selected.some(s=>s.driver===id)).map(id=>drivers[id]).join(' + ')+' · selected total',sectors:selected}];
+ }
+ const availableRows=()=>rows.filter(r=>r.group==='all'||state.channels.includes(r.group));
+ const activeRows=()=>availableRows().filter(r=>state.rows.includes(r.id));
+ function amount(row,group,months,cycle){
+  if(!group.sectors.length||!months.length)return null;
+  const collect=id=>sum(group.sectors.flatMap(sector=>months.map(t=>source(sector,t,cycle)?.[state.display]?.[id]??null)));
+  if(row.id==='share')return ratio(collect('abbott'),collect('market'));
+  if(row.id==='factor'){const c=collect('community'),n=collect('net');return ratio(c==null||n==null?null:c-n,n);}
+  return collect(row.id==='community-ims'?'community':row.id);
+ }
+ function periodMonths(row,id,cycle){
+  const [year,kind]=id.split(':'),first=(Number(year)-2024)*12,month=((cut(cycle,row.basis)%12)+12)%12;
+  const start=kind==='YTG'?month+1:0,end=kind==='YTD'?month:11;
+  return Array.from({length:Math.max(0,end-start+1)},(_,i)=>first+start+i);
+ }
+ function chartMonths(){return Array.from({length:Math.max(0,monthIndex(state.monthEnd)-monthIndex(state.monthStart)+1)},(_,i)=>monthIndex(state.monthStart)+i);}
+ function persist(){if(window.openai?.setWidgetState)Promise.resolve(window.openai.setWidgetState({modelContent:{schema,state},privateContent:null})).catch(()=>{});}
+ function picker(parent,key,label,options){
+  const node=document.createElement('div');node.className='sb-field';node.dataset.filter=key;
+  node.innerHTML='<span class="sb-fieldlabel" id="sb-label-'+key+'">'+label+'</span><button type="button" class="sb-pick" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="sb-label-'+key+' sb-value-'+key+'"><span id="sb-value-'+key+'"></span><span aria-hidden="true">▾</span></button><div class="sb-popup" role="dialog" aria-label="'+label+' choices" hidden><input type="search" aria-label="Search '+label.toLowerCase()+'" placeholder="Search…"><div class="sb-options"></div></div>';
+  parent.append(node);const button=node.querySelector('button'),popup=node.querySelector('.sb-popup'),search=node.querySelector('input'),list=node.querySelector('.sb-options');
+  function caption(){const selected=options.filter(o=>state[key].includes(o.id));button.firstElementChild.textContent=selected.length===1?selected[0].name:selected.length===options.length?'All '+label.toLowerCase():selected.length?selected.length+' selected':'Choose '+label.toLowerCase();}
+  function choices(){const q=search.value.toLowerCase();list.innerHTML=options.filter(o=>o.name.toLowerCase().includes(q)).map(o=>'<label class="sb-option"><input type="checkbox" value="'+o.id+'" '+(state[key].includes(o.id)?'checked':'')+'>'+esc(o.name)+'</label>').join('')||'<div class="sb-detail">No matching choices</div>';list.querySelectorAll('input').forEach(input=>input.addEventListener('change',()=>{state[key]=input.checked?[...new Set([...state[key],input.value])]:state[key].filter(id=>id!==input.value);update();}));}
+  function close(){popup.hidden=true;button.setAttribute('aria-expanded','false');}
+  button.addEventListener('click',()=>{const open=popup.hidden;pickers.forEach(p=>p.close());if(open){search.value='';choices();popup.hidden=false;button.setAttribute('aria-expanded','true');const rect=node.getBoundingClientRect(),bounds=root.getBoundingClientRect();popup.style.left=rect.left+270>bounds.right?'auto':'0';popup.style.right=rect.left+270>bounds.right?'0':'auto';search.focus();}});
+  node.addEventListener('keydown',event=>{if(event.key==='Escape'){close();button.focus();}});search.addEventListener('input',choices);pickers.set(key,{caption,close,node});caption();
+ }
+ const filterBox=$('#sb-filters');picker(filterBox,'cycles','Demand cycle',cycles);picker(filterBox,'channels','Channel',channels);
+ filterBox.prepend(pickers.get('channels').node);filterBox.prepend(pickers.get('cycles').node);
+ picker($('#sb-period-field'),'periods','Summary periods',periods);
+ root.addEventListener('pointerdown',event=>pickers.forEach(p=>{if(!p.node.contains(event.target))p.close();}));
+ function renderScope(){
+  $('#sb-scope').innerHTML=Object.entries(drivers).map(([id,name])=>{const children=sectors.filter(s=>s.driver===id),count=children.filter(s=>state.sectors.includes(s.id)).length;return '<div><label class="sb-check sb-parent"><input type="checkbox" data-driver="'+id+'" data-partial="'+(count>0&&count<children.length)+'" '+(count===children.length?'checked':'')+'>'+name+'</label><div class="sb-children">'+children.map(s=>'<label class="sb-check"><input type="checkbox" data-sector="'+s.id+'" '+(state.sectors.includes(s.id)?'checked':'')+'>'+s.name+'</label>').join('')+'</div></div>';}).join('');
+  $$('[data-driver]').forEach(input=>{input.indeterminate=input.dataset.partial==='true';input.addEventListener('change',()=>{const ids=sectors.filter(s=>s.driver===input.dataset.driver).map(s=>s.id);state.sectors=input.checked?[...new Set([...state.sectors,...ids])]:state.sectors.filter(id=>!ids.includes(id));update();});});
+  $$('[data-sector]').forEach(input=>input.addEventListener('change',()=>{state.sectors=input.checked?[...new Set([...state.sectors,input.dataset.sector])]:state.sectors.filter(id=>id!==input.dataset.sector);update();}));
+  $('#sb-scope-caption').textContent=state.sectors.length+' of '+sectors.length+' sectors selected · graph and table share this scope';
+ }
+ function renderTree(){
+  const labels={community:'Community',contracts:'Contracts',retail:'Retail',unassigned:'Unassigned',all:'Whole-business ADS'},paths={community:'Market × Share → Abbott − PI → Net IMS → Factor → Community ADS',contracts:'Total Contracts ADS = the seven publishing subchannels'};
+  const q=state.search.trim().toLowerCase(),visible=availableRows().filter(r=>(r.name+' '+labels[r.group]).toLowerCase().includes(q));
+  $('#sb-trees').innerHTML=Object.keys(labels).map(group=>{const members=visible.filter(r=>r.group===group);return members.length?'<div class="sb-tree-group"><div class="sb-tree-title"><h3>'+labels[group]+'</h3><span class="sb-detail">'+members.filter(r=>state.rows.includes(r.id)).length+' selected</span></div>'+(paths[group]?'<div class="sb-tree-path">'+esc(paths[group])+'</div>':'')+members.map(r=>'<label class="sb-tree-item" data-depth="'+(r.parent?1:0)+'"><input type="checkbox" data-measure="'+r.id+'" '+(state.rows.includes(r.id)?'checked':'')+'><span>'+esc(r.name)+'</span>'+(r.ratio?'<span class="sb-small">%</span>':r.hint?'<span class="sb-small">'+esc(r.hint)+'</span>':'')+'</label>').join('')+'</div>':'';}).join('')||'<div class="sb-empty">No matching measures</div>';
+  $$('[data-measure]').forEach(input=>input.addEventListener('change',()=>{const id=input.dataset.measure;state.rows=input.checked?[...new Set([...state.rows,id])]:state.rows.filter(x=>x!==id);update();}));
+  $('#sb-row-caption').textContent=activeRows().length+' measures selected · Units/Value changes the same view · indented rows remain under their channel subtotal';
+  $('#sb-measure-summary').textContent=activeRows().length?activeRows().map(r=>r.name).join(' · '):'Select Market, Abbott, channel ADS or a subchannel';
+ }
+ function buildComponents(selected=activeRows()){
+  const selectedEF=selected.filter(r=>r.leafIds),map=new Map();
+  for(const leaf of leaves){const owner=selectedEF.filter(r=>r.leafIds.includes(leaf)).sort((a,b)=>a.leafIds.length-b.leafIds.length)[0];if(!owner)continue;if(!map.has(owner.id))map.set(owner.id,{...owner,assigned:[]});map.get(owner.id).assigned.push(leaf);}
+  return [...map.values()].map(r=>({...r,label:r.name+(r.assigned.length<r.leafIds.length?' · remaining':'')}));
+ }
+ function drawPlot(plot,group,cycle,selected,kind){
+  const width=Math.floor(plot.getBoundingClientRect().width),height=270;if(width<120)return;
+  const months=chartMonths(),m={l:67,r:18,t:29,b:44},last=months.at(-1),first=months[0];if(first==null)return;
+  const isRatio=kind==='ratio',isStack=kind==='stack',components=isStack?buildComponents(selected):[];
+  const lines=isStack?[]:selected.map(row=>({row,points:months.map(t=>({x:t,y:amount(row,group,[t],cycle)}))}));
+  const stackData=months.map(t=>({month:t,...Object.fromEntries(components.map(c=>[c.id,sum(c.assigned.map(id=>amount(rowMap.get(id),group,[t],cycle)))]))}));
+  const validStack=stackData.every(d=>components.every(c=>d[c.id]!=null));
+  const stacked=isStack&&validStack?d3.stack().keys(components.map(c=>c.id))(stackData):[];
+  const values=isStack?stacked.flatMap(s=>s.flatMap(v=>[v[0],v[1]])):lines.flatMap(s=>s.points.map(p=>p.y)).filter(v=>v!=null&&Number.isFinite(v));
+  if(!values.length){plot.innerHTML='<div class="sb-empty">No complete values for this selection</div>';return;}
+  const extent=d3.extent(values),pad=Math.max((extent[1]-extent[0])*.1,Math.abs(extent[1])*.04,.00001),y=d3.scaleLinear().domain([isStack?(extent[0]<0?extent[0]-pad:0):extent[0]<0?extent[0]-pad:Math.max(0,extent[0]-pad),extent[1]+pad]).range([height-m.b,m.t]);
+  const barWidth=Math.max(2,(width-m.l-m.r)/months.length*.65),inset=isStack?barWidth/2+1:4;
+  const x=d3.scaleLinear().domain(first===last?[first-.5,last+.5]:[first,last]).range([m.l+inset,width-m.r-inset]);
+  const svg=d3.create('svg').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',group.name+' · '+(isStack?'Ex-factory build-up':isRatio?'Share and factor':'Selected amounts'));
+  svg.append('title').text(group.name+' · '+(isStack?'Non-overlapping Ex-factory components':isRatio?'Selected percentages':'Selected S&OP measures'));
+  const clip='sb-clip-'+cycle+'-'+group.id+'-'+kind;
+  svg.append('defs').append('clipPath').attr('id',clip).append('rect').attr('x',m.l).attr('y',m.t).attr('width',width-m.l-m.r).attr('height',height-m.t-m.b);
+  svg.append('text').attr('class','axis-title').attr('data-axis','y').attr('x',m.l).attr('y',15).text(isRatio?'Share / uplift (%)':state.display==='value'?'Value (GBP)':'Selling units');
+  const ticks=y.ticks(4);const grid=svg.append('g').attr('class','sb-grid');ticks.forEach(v=>grid.append('line').attr('x1',m.l).attr('x2',width-m.r).attr('y1',y(v)).attr('y2',y(v)));
+  svg.append('g').attr('transform',`translate(${m.l},0)`).call(d3.axisLeft(y).tickValues(ticks).tickSize(0).tickPadding(8).tickFormat(v=>isRatio?(v*100).toFixed(0)+'%':fmt(v)));
+  const count=width<400?3:width<700?5:7,xt=[...new Set(Array.from({length:Math.min(count,months.length)},(_,i)=>months[Math.round(i*(months.length-1)/Math.max(1,Math.min(count,months.length)-1))]))];
+  const axis=svg.append('g').attr('transform',`translate(0,${height-m.b})`).call(d3.axisBottom(x).tickValues(xt).tickSize(0).tickPadding(10).tickFormat(monthName));axis.selectAll('.tick text').attr('text-anchor',(t,i)=>i===0?'start':i===xt.length-1?'end':'middle');
+  svg.append('rect').attr('data-chart-frame','').attr('x',m.l).attr('y',m.t).attr('width',width-m.l-m.r).attr('height',height-m.t-m.b).attr('fill','none').attr('stroke','var(--sb-line)');
+  svg.append('text').attr('class','axis-title').attr('data-axis','x').attr('x',(m.l+width-m.r)/2).attr('y',height-3).attr('text-anchor','middle').text('Demand month');
+  const marks=svg.append('g').attr('clip-path',`url(#${clip})`);
+  const cutoffs=[...new Set(selected.map(r=>cut(cycle,r.basis)))];cutoffs.forEach(c=>{if(c>=first&&c<last)marks.append('line').attr('x1',x(c+.5)).attr('x2',x(c+.5)).attr('y1',m.t).attr('y2',height-m.b).attr('stroke','var(--sb-muted)').attr('stroke-dasharray','3 5');});
+  if(isStack){
+   for(const stack of stacked){const component=components.find(c=>c.id===stack.key);for(let i=0;i<stack.length;i++){const v=stack[i],t=months[i];marks.append('rect').attr('data-stack-component',component.id).attr('data-month',t).attr('data-value',v[1]-v[0]).attr('x',x(t)-barWidth/2).attr('y',y(v[1])).attr('width',barWidth).attr('height',Math.max(0,y(v[0])-y(v[1]))).attr('fill',color(component)).attr('opacity',t>cut(cycle,'ef')?.65:1);}}
+  }else{
+   const line=d3.line().defined(p=>p.y!=null).x(p=>x(p.x)).y(p=>y(p.y));
+   for(const series of lines)for(const forecast of [false,true]){const c=cut(cycle,series.row.basis),points=series.points.map(p=>({...p,y:(forecast?p.x>=c:p.x<=c)?p.y:null}));marks.append('path').datum(points).attr('data-series',series.row.id).attr('data-kind',forecast?'forecast':'actual').attr('d',line).attr('fill','none').attr('stroke',color(series.row)).attr('stroke-width',2.3).attr('stroke-dasharray',forecast?'7 4':null);}
+  }
+  const hover=svg.append('g').attr('pointer-events','none');
+  const overlay=svg.append('rect').attr('data-chart-hit','').attr('data-chart-hover-overlay','cross-series').attr('x',m.l).attr('y',m.t).attr('width',width-m.l-m.r).attr('height',height-m.t-m.b).attr('fill','transparent');
+  plot.replaceChildren(svg.node());const tip=document.createElement('div');tip.className='sb-tooltip';tip.setAttribute('role','tooltip');tip.hidden=true;plot.append(tip);let pinned=false;
+  function show(event){const rect=plot.getBoundingClientRect(),px=Math.max(m.l,Math.min(width-m.r,event.clientX-rect.left)),t=x.invert(px),i=Math.max(0,Math.min(months.length-1,Math.floor(t-first))),a=t-first-i;hover.selectAll('*').remove();hover.append('line').attr('data-chart-hover-guide','').attr('x1',px).attr('x2',px).attr('y1',m.t).attr('y2',height-m.b).attr('stroke','var(--sb-muted)');const entries=[];
+   if(isStack){const nearest=Math.max(0,Math.min(months.length-1,Math.round(t-first)));for(const c of components)entries.push({name:c.label,value:stackData[nearest][c.id]});}
+   else for(const s of lines){const one=s.points[i],two=s.points[Math.min(i+1,s.points.length-1)];if(one?.y==null||two?.y==null)continue;const value=one.y+(two.y-one.y)*a;entries.push({name:s.row.name,value});hover.append('circle').attr('data-chart-hover-marker','').attr('cx',px).attr('cy',y(value)).attr('r',3).attr('fill',color(s.row));}
+   tip.innerHTML='<strong>'+monthName(Math.round(t))+'</strong>'+entries.map(e=>'<div><span>'+esc(e.name)+'</span><span>'+fmt(e.value,isRatio?'ratio':'amount',true)+'</span></div>').join('');tip.hidden=!entries.length;tip.style.left=Math.max(4,Math.min(width-tip.offsetWidth-4,px+12))+'px';tip.style.top=Math.max(22,Math.min(height-tip.offsetHeight-5,event.clientY-rect.top-15))+'px';
+  }
+  overlay.on('pointermove',event=>{if(!pinned)show(event);}).on('pointerleave',()=>{if(!pinned){hover.selectAll('*').remove();tip.hidden=true;}}).on('pointerdown',event=>{pinned=!pinned;show(event);});
+ }
+ function renderCharts(){
+  const selected=activeRows(),scope=groups(),box=$('#sb-charts');box.replaceChildren();
+  $('#sb-graph-context').textContent=(state.display==='value'?'Value in GBP':'Selling units')+' · '+monthName(monthIndex(state.monthStart))+'–'+monthName(monthIndex(state.monthEnd))+' · IMS stays national for the selected driver/sector scope';
+  if(!selected.length||!scope.length||!state.cycles.length){box.innerHTML='<div class="sb-empty">Select a demand cycle, driver or sector, and at least one measure.</div>';$('#sb-legend').replaceChildren();return;}
+  for(const cycle of state.cycles)for(const group of scope){
+   const amountRows=selected.filter(r=>!r.ratio),ratioRows=selected.filter(r=>r.ratio),panels=state.chart==='build'?[{kind:'amount',rows:amountRows.filter(r=>!r.leafIds),label:'Upstream IMS'},{kind:'stack',rows:amountRows.filter(r=>r.leafIds),label:'Selected Ex-factory composition'},{kind:'ratio',rows:ratioRows,label:'Share and Community uplift'}]:[{kind:'amount',rows:amountRows,label:'Selected measures'},{kind:'ratio',rows:ratioRows,label:'Share and Community uplift'}];
+   for(const panel of panels){if(!panel.rows.length)continue;const block=document.createElement('div');block.className='sb-plot-block';const title=document.createElement('div');title.className='sb-plot-title';title.textContent=panel.label+' · '+group.name+(state.cycles.length>1?' · '+cycle:'');block.append(title);const plot=document.createElement('div');plot.className='sb-plot';plot.dataset.group=group.id;plot.dataset.cycle=cycle;plot.dataset.kind=panel.kind;block.append(plot);box.append(block);drawPlot(plot,group,cycle,panel.rows,panel.kind);}
+  }
+  const legendRows=state.chart==='build'?[...selected.filter(r=>!r.leafIds),...buildComponents(selected)]:selected;
+  $('#sb-legend').innerHTML=legendRows.map(row=>'<button type="button" data-toggle-row="'+row.id+'" aria-pressed="true"><span class="sb-swatch" style="--sb-series:'+color(row)+'"></span>'+esc(row.label||row.name)+'</button>').join('');
+  $('#sb-chart-reading').textContent=state.chart==='build'?'Bars show separate parts once; lighter bars are forecast. Parent totals stay in the table. Lines: solid actuals, dashed forecast.':'Solid: actuals · Dashed: forecast · Percentages have a separate labelled graph';
+  $$('[data-toggle-row]').forEach(button=>button.addEventListener('click',()=>{state.rows=state.rows.filter(id=>id!==button.dataset.toggleRow);update();}));
+ }
+ function tableColumns(){return state.table==='monthly'?chartMonths().map(t=>({id:'month:'+t,name:monthName(t),month:t})):periods.filter(p=>state.periods.includes(p.id));}
+ function renderTable(){
+  const selected=activeRows(),scope=groups(),cols=tableColumns(),table=$('#sb-summary');
+  $('#sb-period-field').hidden=state.table==='monthly';
+  $('#sb-table-context').textContent=state.table==='monthly'?'Monthly columns use the From/To calendars above':'FY = Jan–Dec · YTD/YTG follow each row’s IMS or EF cutoff';
+  table.style.minWidth=(330+cols.length*145)+'px';
+  let html='<colgroup><col style="width:265px"><col style="width:65px">'+cols.map(()=>'<col style="width:145px">').join('')+'</colgroup><thead><tr><th scope="col">Selected S&amp;OP measure</th><th scope="col">Calendar</th>'+cols.map(c=>'<th scope="col">'+esc(c.name)+(c.month!=null?'':'<small>'+esc(c.id.endsWith('FY')?'Jan–Dec':c.id.endsWith('YTD')?'Through row cutoff':'After row cutoff')+'</small>')+'</th>').join('')+'</tr></thead><tbody>';
+  for(const cycle of state.cycles)for(const group of scope){
+   if(scope.length>1||state.cycles.length>1)html+='<tr class="sb-group"><td colspan="'+(cols.length+2)+'">'+esc(group.name+' · '+cycle)+'</td></tr>';
+   const contextShown=new Set();
+   for(const row of selected){
+    if(row.parent&&!selected.some(r=>r.id===row.parent)&&!contextShown.has(row.parent)){const parent=rowMap.get(row.parent);html+='<tr class="sb-context" data-context="'+row.parent+'"><td>'+esc(parent.name)+'</td><td colspan="'+(cols.length+1)+'">Parent context · not selected as a measure</td></tr>';contextShown.add(row.parent);}
+    html+='<tr data-row="'+row.id+'" data-group="'+group.id+'" data-cycle="'+cycle+'" class="'+(row.parent?'sb-child':row.id==='ads'?'sb-total':row.leafIds&&row.leafIds.length>1?'sb-subtotal':'')+'"><td>'+esc(row.name)+'</td><td class="sb-basis">'+(row.basis==='ims'?'IMS':'EF')+'</td>';
+    for(const col of cols){const months=col.month!=null?[col.month]:periodMonths(row,col.id,cycle),value=amount(row,group,months,cycle),dates=months.length?monthName(months[0])+'–'+monthName(months.at(-1)):'No months';html+='<td data-column="'+col.id+'" data-value="'+(value==null?'':value)+'" data-tooltip="'+esc(dates+' · '+fmt(value,row.ratio?'ratio':'amount',true))+'">'+fmt(value,row.ratio?'ratio':'amount')+'</td>';}
+    html+='</tr>';
+   }
+  }
+  if(!selected.length||!scope.length||!cols.length||!state.cycles.length)html+='<tr><td colspan="'+(cols.length+2)+'" class="sb-empty">Select a cycle, driver or sector, measures and summary periods.</td></tr>';
+  table.innerHTML=html+'</tbody>';
+ }
+ function update(save=true){
+  const start=performance.now();pickers.forEach(p=>p.caption());$('#sb-units').value=state.display;$('#sb-grouping').value=state.grouping;$('#sb-start').value=state.monthStart;$('#sb-end').value=state.monthEnd;$('#sb-row-search').value=state.search;
+  $$('[data-chart]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.chart===state.chart)));$$('[data-table]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.table===state.table)));
+  $('#sb-cutoffs').textContent=state.cycles.map(c=>c+' · IMS through '+monthName(cut(c,'ims'))+' · Ex-factory through '+monthName(cut(c,'ef'))).join(' | ')+' · Sample data';
+  renderScope();renderTree();renderCharts();renderTable();$('#sb-live').textContent='Illustrative data · local selections';if(save)persist();timings.push(performance.now()-start);if(timings.length>40)timings.shift();
+ }
+ $('#sb-units').addEventListener('change',e=>{state.display=e.target.value;update();});$('#sb-grouping').addEventListener('change',e=>{state.grouping=e.target.value;update();});
+ $('#sb-all-scope').addEventListener('click',()=>{state.sectors=sectors.map(s=>s.id);update();});$('#sb-clear-scope').addEventListener('click',()=>{state.sectors=[];update();});
+ $('#sb-all-rows').addEventListener('click',()=>{state.rows=[...new Set([...state.rows,...$$('[data-measure]').map(input=>input.dataset.measure)])];update();});$('#sb-clear-rows').addEventListener('click',()=>{state.rows=[];update();});
+ $('#sb-row-search').addEventListener('input',e=>{state.search=e.target.value;renderTree();persist();});
+ $$('[data-chart]').forEach(button=>button.addEventListener('click',()=>{state.chart=button.dataset.chart;update();}));$$('[data-table]').forEach(button=>button.addEventListener('click',()=>{state.table=button.dataset.table;update();}));
+ for(const [id,key,other]of [['#sb-start','monthStart','monthEnd'],['#sb-end','monthEnd','monthStart']])$(id).addEventListener('change',e=>{if(!e.target.value)return;state[key]=e.target.value;if(state.monthStart>state.monthEnd)state[other]=e.target.value;update();});
+ let resizeTimer;new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(renderCharts,80);}).observe(root);
+ window.addEventListener('openai:set_globals',event=>{const next=event.detail?.globals?.widgetState?.modelContent;if(next?.schema===schema&&next.state){state={...defaults,...next.state};update(false);}});
+ root.sopDesign={getState:()=>JSON.parse(JSON.stringify(state)),setState:patch=>{state={...state,...patch};update();},rows,sectors,leaves,contractLeaves,groups,activeRows,availableRows,source,amount,periodMonths,chartMonths,buildComponents,getTimings:()=>timings.slice(),sum,ratio};
+ update(false);
+})();
+</script>

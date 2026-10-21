@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "date": "2026-10-21",
+  "scope": "Separate synthetic second-page proposal; approved first page unchanged",
+  "preservedVersions": {
+    "design/executive-review-r07/": {
+      "files": 13,
+      "recordsSha256": "4d98b7dc4cf24bc11e510b97d2d166d0ad961073c098cc505a5ef9af4f542dda"
+    },
+    "design/executive-overview-r08/": {
+      "files": 17,
+      "recordsSha256": "063132696eb6ea221607e726dfa5f9dd75617312eb1b44eafaeacd25f51dfb17"
+    },
+    "design/executive-period-review-r09/": {
+      "files": 17,
+      "recordsSha256": "7e891ac74b46b2a9b743c15f1028d418f0008b4dc337fe0c7d87257772182c63"
+    },
+    "design/executive-gm-review-r10/": {
+      "files": 14,
+      "recordsSha256": "c064a745a3783f30d83651e35d61049d485bdb716e7bd00104484a73d32ad716"
+    },
+    "design/executive-month-review-r11/": {
+      "files": 14,
+      "recordsSha256": "d87dd9354c23d5dac14d87666a27dc6d437cbd1a94261b17924e2b8af874066a"
+    }
+  },
+  "approvedR11FragmentSha256": "763a148dfbbc23fc09750562a0d71ae6730e202f3476ac6c5b6a4314257733c1",
+  "newFragmentSha256": "9658fd722257cd056e3f7c98a137402cb3190647d70e40de5bc491ed0f91a385",
+  "productionChanges": false
+}
