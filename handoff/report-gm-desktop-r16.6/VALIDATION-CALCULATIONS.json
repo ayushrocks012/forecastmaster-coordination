@@ -1,0 +1,19 @@
+{
+  "evidence": "SYNTHETIC independent bridge-identity/period oracle; company source reconciliation pending",
+  "numericAndRenderedAssertions": 1728,
+  "all18SOPMeasures": true,
+  "unitsAndValue": true,
+  "sourceShareVersusDisplayedAmounts": true,
+  "exactFY_YTD_YTG_H1_H2": true,
+  "separateIMS_EFCutoffs": true,
+  "runRateAndExactSamePeriodPY": true,
+  "exfactoryPublishingLeavesCountedOnce": true,
+  "netIMSAndChannelAmountsFromSource": true,
+  "negativeAndMissingDetailPreserved": true,
+  "singleSectorStrict": true,
+  "unavailableVsNumericZeroExplained": true,
+  "zeroAndMissingDerivedRules": true,
+  "monthlyRunRateSuppressed": true,
+  "noNewModelFetch": true,
+  "browserErrors": []
+}

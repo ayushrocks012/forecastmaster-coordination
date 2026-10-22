@@ -1,0 +1,18 @@
+{
+  "evidence": "Incomplete GitNexus evidence supplemented by direct aggregate/period/UI tracing and independent synthetic oracles",
+  "preChangeTargets": [
+    "availableParts",
+    "scopeParts",
+    "scopeFit",
+    "scopeDemand",
+    "demand",
+    "sop",
+    "renderSummary",
+    "setHTML"
+  ],
+  "preChangeStatus": "ACTIONABLE_PARTIAL or AMBIGUOUS / UNKNOWN; transient quick-graph lock error retried for scopeFit",
+  "riskLowerBound": "MEDIUM",
+  "finalScope": "GitNexus impact gate\nscope=staged changed_symbols=0 affected_processes=0 risk=low threshold_risk=low engine=f1-diff-impact analysis_incomplete=1 interface_classification_incomplete=1 overlay_only=0 signature_changes=0 breaking_changes=0\nthresholds=max_risk:medium max_symbols:200 max_processes:100 allow_untracked:0 allow_unindexed:0 max_breaking_changes:off\n\ngitnexus-impact-gate: diff-impact run failed (failing closed)\n\n\nGate failed:\n  - analysis incomplete: diff-impact run failed (failing closed)",
+  "finalDetectChanges": "{\"schema\":\"f1.operation-result/v2\",\"operation\":\"diff-impact\",\"transport\":\"local\",\"domainStatus\":\"UNAVAILABLE\",\"success\":false,\"legacy\":{\"success\":false,\"status\":\"unavailable\",\"partial\":false},\"totals\":{\"affected\":0,\"processes\":0,\"changedSymbols\":0,\"interfaceChanges\":0,\"directTests\":0,\"broaderRegressionTests\":0,\"relationshipAttestations\":0,\"blockers\":0,\"coverage.inventory\":0,\"coverage.references\":0},\"shown\":{\"affected\":0,\"processes\":0,\"changedSymbols\":0,\"interfaceChanges\":0,\"directTests\":0,\"broaderRegressionTests\":0,\"relationshipAttestations\":0,\"coverage.inventory\":0,\"coverage.references\":0},\"generation\":\"sha256:74f1c95aca992372b416f3d1f49d0b34e641ffe7eff940ca71df97653a931706\",\"freshness\":[],\"refreshing\":false,\"staleness\":null,\"authority\":{\"status\":\"HEALTHY\",\"generation\":\"sha256:74f1c95aca992372b416f3d1f49d0b34e641ffe7eff940ca71df97653a931706\"},\"retrievalMode\":null,\"retrievalCapabilities\":{},\"coverage\":{\"inventory\":[],\"references\":[]},\"declaredFallbackScope\":null,\"knownResult\":{\"reason\":{\"code\":\"AUTHORITY_DRIFT_BLOCKS_CONCLUSION\",\"operation\":\"diff-impact\"}},\"groupedBlockers\":[],\"truncation\":{\"active\":false,\"source\":null,\"blockers\":null},\"resultFingerprint\":\"0194a6ad5dd2557e6399b680da0e0c496a579c0616f46e32b53631a9daf5115f\",\"limitations\":[],\"tokenizer\":{\"name\":\"gpt-tokenizer\",\"version\":\"4.0.0\",\"packageIntegrity\":\"sha512-YAWIyzvuVUHEfW7tFfFAxH8qQb+Q3RU9nYOTy7skMNX5qzU6Q8jxTHZLyO56ug1vYvCR7wndzpd3jwD86/mhjQ==\",\"packageManifestSha256\":\"5c1517b19eb0165a04f1eeab33bc0843b5d338cd3b517a26710ee0af5144b7ee\"},\"responseBounds\":{\"maxBytes\":32768,\"maxTokens\":2000,\"measuredBytes\":1616,\"measuredTokens\":533}}",
+  "zeroImpactClaim": false
+}

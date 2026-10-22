@@ -1,5 +1,44 @@
 # Company setup status
 
+## 22 October 2026 — R16.6 corrects aggregate Share and shortens Demand table
+
+The operator's R16.5 screenshots show numeric S&OP results and an aggregate Share
+that does not equal the visible Abbott/Market ratio. Direct tracing and a replay
+against R16.5 reproduce the paired-member mask defect: missing Abbott removed
+valid Market from the ratio denominator while Market's amount row retained it.
+R16.6 aggregates the two sides independently under SUM_AVAILABLE_V1, then divides
+the period totals. Both Demand/S&OP Units and Value Shares use that rule. Source
+values, missing flags and strict single-tier behavior remain unchanged. Known
+mixed-currency value populations use the same configured FX basis on both sides.
+
+The operator clarified that the reported year-formatting difference meant dash
+versus $0. These remain unavailable versus numeric-zero states; S&OP cell tooltips
+explain them. No historical blank was converted to zero. A later request also
+removes the repeated Demand header date subtitles and two-line sector/driver
+labels. Exact ranges remain in tooltips; flat labels are Sector – Driver, while
+hierarchy view names the driver once. Partial counts move to tooltips. In local
+before/after tests, row height falls from about 52px to 29px, with 80 numeric cells
+preserved and expansion retained. Native scale/height still needs receiving review.
+
+A bounded independent synthetic review passes 1,728 numeric/rendered assertions
+across all 18 displayed S&OP measures, Units/Value, exact FY/YTD/YTG/H1/H2 windows,
+IMS/EF cutoffs, run rate, same-period PY growth, source net/channel amounts, signed
+leaves counted once and Demand reconciliation. A further 720 randomized oracle
+comparisons test asymmetric missingness, ratio populations and mixed-rate/cache
+behavior. Existing numeric/selection/cache/FX/hover and hierarchy controls pass.
+This is report-runtime evidence, not an exhaustive workbook/formula audit or
+actual company-source reconciliation. The source workbook/data was not changed.
+
+TypeScript/package lint and ten available project-schema checks pass. Two retained
+visualContainer 2.14.0 schema URLs remain unavailable. GitNexus impact/scope remains
+partial/UNKNOWN; direct tracing/tests supplement it. All 56 R16.5 tracked files
+are byte-preserved. The original connection/feed, native Refresh Demand and
+rollback source are retained in a new private PBIP/ZIP. No company model/Fabric/
+Service item was changed or published. No setup/model refresh is needed. Native
+rendering/zoom/drag, company reconciliation, measured speed and publication remain
+receiving gates. Public receipts contain synthetic observations only.
+
+
 ## 22 October 2026 — R16.5 corrects interpolated monthly hover
 
 The operator reported tooltip amounts changing on tiny pointer movements although

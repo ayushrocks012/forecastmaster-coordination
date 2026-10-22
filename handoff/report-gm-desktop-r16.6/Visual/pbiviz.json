@@ -1,0 +1,26 @@
+{
+  "visual": {
+    "name": "forecastMasterGMReview",
+    "displayName": "ForecastMaster GM Review R16.6",
+    "guid": "ForecastMasterGMReviewR16",
+    "visualClassName": "Visual",
+    "version": "16.0.6.0",
+    "description": "Coordinated forecast review with source cards, linear trend benchmarks and dynamic periods.",
+    "supportUrl": "https://learn.microsoft.com/power-bi/developer/visuals/develop-power-bi-visuals",
+    "gitHubUrl": ""
+  },
+  "apiVersion": "5.11.1",
+  "author": {
+    "name": "ForecastMaster",
+    "email": "forecastmaster@example.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": null,
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": null,
+  "stringResources": [],
+  "version": "4.1.0.0"
+}

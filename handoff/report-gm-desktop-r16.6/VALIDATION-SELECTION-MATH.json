@@ -1,0 +1,22 @@
+{
+  "evidence": "SYNTHETIC calculation selection regression",
+  "allTierPlan": 3508,
+  "allTierBenchmark": 3189.5128205128203,
+  "selectedTierPlan": 1754,
+  "selectedTierBenchmark": 1554,
+  "selectedVariance": 200,
+  "ytgVariance": 200,
+  "ytdVariance": 0,
+  "aggregateWindowAvailable": true,
+  "individualMissingHistoryExplained": {
+    "sector": "One missing history month",
+    "driver": "d_c0cfe1355b5e8027",
+    "window": 12,
+    "missing": 1,
+    "first": "2025-09",
+    "last": "2026-08"
+  },
+  "sumAvailableSOPMatchesDemand": true,
+  "stableSelectionAfterSourceReorder": true,
+  "noImputation": true
+}

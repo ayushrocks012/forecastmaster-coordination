@@ -1,0 +1,36 @@
+FORECASTMASTER GM REVIEW R16.6 - SHARE TOTALS AND COMPACT EXECUTIVE TABLE
+
+Keep R16.5/ZIP unchanged. This is a separate report-only update.
+Do NOT rerun reporting setup or trigger a model refresh to install it.
+
+1. Close the old project in Power BI Desktop.
+2. Extract the WHOLE R16.6 ZIP into a NEW ordinary folder on the work laptop.
+3. Open ForecastMaster GM Review / ForecastMaster GM Review.pbip. Keep its .Report
+   folder beside it. Wait for saved data; confirm R16.6 in the header.
+4. In S&OP, select the same Affiliate/cycle, Core Oral/all its tiers, Value and
+   2024 FY. Set your normal plan rate if viewing USD. Choose Community, its
+   blank subchannel, Share, Abbott IMS and Market.
+5. Compare Share to Abbott IMS total divided by Market total for that same period.
+   Use underlying precision if available; displayed rounded amounts are approximate.
+   Repeat with one sector, a subset, all sectors, then Units and another year.
+6. A missing Abbott sector must not remove its valid Market from the total Share
+   denominator. An individually unavailable sector stays unavailable; a zero
+   denominator is undefined. Confirm against the bridge before publishing.
+7. Dash versus $0: dash means unavailable; $0 is numeric zero. Hover an S&OP cell
+   to see the explanation. Historical blanks have not been replaced by zero.
+8. In Demand Review's Executive summary, choose Sectors. Labels are now one line,
+   e.g. Sector - Growth driver. Year headings omit the repeated date subtitles;
+   hover a heading for exact dates. Drivers + sectors shows the driver once.
+   Check expansion/sorting and your normal FY/YTD/YTG and 6M/12M/24M comparisons.
+9. Check all selected source measures, run rate and PY growth against a known
+   bridge period. Monthly hover, native zoom/fit and S&OP drag/Reset order remain.
+10. Save As a NEW PBIX after checking. The native Refresh Demand page is preserved;
+    do not click it solely to install this report. Report any mismatch before
+    publication/replacing the existing shared report.
+
+Local synthetic calculation/UI checks passed. Actual company reconciliation,
+native rendering/zoom/drag, measured speed and publication remain receiving checks.
+
+ROLLBACK
+Close R16.6 and reopen R16.5, or Original - before GM redesign.pbix.
+No source/model/rule restore is needed for this report-only rollback.

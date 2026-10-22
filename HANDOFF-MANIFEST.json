@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 30298,
-      "SHA256": "7e0ee040d40a94dd5e6af29a14e503cae60b5c753f90e534115caeab6e1475c8"
+      "Bytes": 31816,
+      "SHA256": "f6f3cf685304c4a4acedb6c023c1d2169c7f2a2a6b689a4475bcc6429fb49dc9"
     },
     "README.md": {
       "Bytes": 4984,
       "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 62000,
-      "SHA256": "009e648e02d7ff325c74002136d874efb2dd715ea9218add55a37cd7f2092b07"
+      "Bytes": 64658,
+      "SHA256": "ee7ee3c57a7e9b25d847c8ffeb7cfc73d82f558de0a465b55c851f780e2e7531"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3266,6 +3266,258 @@
       "SHA256": "48be530fb783bcf0f29c43a81c8f05bba0ae9bfc6acfe12a60a0f6a1eb524948"
     },
     "handoff/report-gm-desktop-r16.5/sanitize_generated.cjs": {
+      "Bytes": 916,
+      "SHA256": "1c88e0e17c447fdf226ba33fa20345530c187cd18fc290ba90c2f41153ce97cf"
+    },
+    "handoff/report-gm-desktop-r16.6/.gitignore": {
+      "Bytes": 96,
+      "SHA256": "de7883705eab47d9fea1fea04e3a2a0ad30a6167e34156dd79419ee73e424073"
+    },
+    "handoff/report-gm-desktop-r16.6/GM-RULES.json": {
+      "Bytes": 6913,
+      "SHA256": "012e07b67c7112a0835565b7415da22915385cd810e5226226ccd43b628b797c"
+    },
+    "handoff/report-gm-desktop-r16.6/OPEN FIRST.txt": {
+      "Bytes": 2345,
+      "SHA256": "5ef56d60abc7eea62fd88a409bb18d3e9730ccec06a3b6bb95a2368455a0aa94"
+    },
+    "handoff/report-gm-desktop-r16.6/README.md": {
+      "Bytes": 6218,
+      "SHA256": "9ea6fb851752024fa3b3ee07ad53defcf9e8418a2d3569c8430b923fc65aedfe"
+    },
+    "handoff/report-gm-desktop-r16.6/SETUP REPORTING FEED.py": {
+      "Bytes": 18130,
+      "SHA256": "01686e71eb4156654b0dda1338d6dcc85e8317ae64c55b5b3022187874a2c084"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-AGGREGATE.json": {
+      "Bytes": 453,
+      "SHA256": "461dacbfac3821d8d443e6b72722f691cdaaec6e5b823c542f80bc771c34c589"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-BROWSER.json": {
+      "Bytes": 869,
+      "SHA256": "14233da4abcd763cb258b1bbc530e10de5165c2528992d50b3fde203458c46eb"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-BUILD.json": {
+      "Bytes": 323,
+      "SHA256": "a270b7b16e9660e460292ec136057134ba30f0499058963552754f293bac30eb"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-CALCULATIONS.json": {
+      "Bytes": 691,
+      "SHA256": "41a4422fed19d02c1c519b6a63fe347561ad9c3f11d02701da2ede041aba4708"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-COMPACT-SUMMARY.json": {
+      "Bytes": 420,
+      "SHA256": "64a7158510475639722707970cc10d5e5aeed65307c44b680ae7a3184833ad45"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-GRAPH.json": {
+      "Bytes": 2808,
+      "SHA256": "ac9777a36551bc738d4edb4753fe1db31d5067f52d8d96d5fa126d3e0816ff52"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-MONTHLY-HOVER.json": {
+      "Bytes": 1591,
+      "SHA256": "7997665ecc3360531f7700045d94bd3e3d622291338ffb046577504d1c406a8d"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-PRESERVATION.json": {
+      "Bytes": 593,
+      "SHA256": "9959cc65b64fbc5ce6a588c611cce4294fa3ce43cc892e2e8472bb45571e150e"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-PROJECT.json": {
+      "Bytes": 1152,
+      "SHA256": "3aa713df8fab8123c8cf5461dda71c4a9a1cc0c27a844133e1e743cf47645a16"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-RATIOS.json": {
+      "Bytes": 462,
+      "SHA256": "bf24dfecd97933b3e4a67e24af5ef439bd770fd3795b1e8bf26a1c73e067e040"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-REVIEW.json": {
+      "Bytes": 735,
+      "SHA256": "df5f19c894e22d408d08d09b218da20f138ee6f5be7750e8f5eca45127cc391e"
+    },
+    "handoff/report-gm-desktop-r16.6/VALIDATION-SELECTION-MATH.json": {
+      "Bytes": 610,
+      "SHA256": "47a045188ad7b1a497e10bd6da2d50d0b4b4ce952e4edd5e551b6962eaaf31b2"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/assets/icon.png": {
+      "Bytes": 1541,
+      "SHA256": "1948e7500284e4f25fc80df9d2938fd84b2ef433fd2486a74801e5eebb6c48e2"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/capabilities.json": {
+      "Bytes": 3261,
+      "SHA256": "886838e9cf4ccea967304ce5512cdbb2b0ae940b085ce72e93373aa426a87bad"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/dist/ForecastMasterGMReviewR16.16.0.6.0.pbiviz": {
+      "Bytes": 88828,
+      "SHA256": "f7fa951d380bc82ee25371c864a9bb312debe611bdf348cdc738253de363c932"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/dist/package.json": {
+      "Bytes": 710,
+      "SHA256": "8aee0e90386b067f75571780b51e40e37bdf524e85a2ec286146127c380b56f2"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/package-lock.json": {
+      "Bytes": 286995,
+      "SHA256": "74edb2d5d4c91005de40d4749793a9c4e329fde0261b6c74942de02616f1e721"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/package.json": {
+      "Bytes": 777,
+      "SHA256": "0c39f07720b642f35ab7d84b8000b58049919c0c858eae7b56eef9e4e1d53566"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/pbiviz.json": {
+      "Bytes": 781,
+      "SHA256": "8c4129122bb82956788c6de3bc3954a205c3359ff4fa66713558b93091ae43da"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/engine.ts": {
+      "Bytes": 217716,
+      "SHA256": "298d0ebc7430d01f81af49d9a8e2b92368bfe3b1146eb5909944357c98680f56"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/files.ts": {
+      "Bytes": 636,
+      "SHA256": "442155d91953a15a0f1170b9b7f7d8ef23e69236971cf54ece3198d05bd8c326"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/hierarchy-drag.ts": {
+      "Bytes": 4228,
+      "SHA256": "66cc7422a2d09286ff22fb8574c4c765289bddce0e8843cddc583da1410383ab"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/layout.ts": {
+      "Bytes": 3702,
+      "SHA256": "6206001515704d8393bfb4450619f0d64e92139174fc2e4ceb018d5c7d29610e"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/live.ts": {
+      "Bytes": 18591,
+      "SHA256": "3fa063f934abdd1224b2582dcb1f2727312387acac5556fa9c6f737e56a3a227"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/period-picker.ts": {
+      "Bytes": 3209,
+      "SHA256": "2766f60a2a4f79f9b44e2345f1a9b6596f6cd40f44529b694c013eefc459d2eb"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/review-order.ts": {
+      "Bytes": 1398,
+      "SHA256": "a54951931374e215ac94a71e69994eaa81ef68573168208222494b3b792e4c09"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/scope-ui.ts": {
+      "Bytes": 5521,
+      "SHA256": "af73f56d6409b3190b1c1478a130dd69bb6e1902929f6ef28eb68a1bdb85eef3"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/scope.ts": {
+      "Bytes": 3400,
+      "SHA256": "ce1ef6f54d9c64535d32137e5301358fea250ce6a2f26c94791664ecf0a75151"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/src/visual.ts": {
+      "Bytes": 4270,
+      "SHA256": "d1ec8687bfa1b86902296f455677000b8eab2230924a212db2a96876b5514bee"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/style/visual.less": {
+      "Bytes": 26,
+      "SHA256": "c7538c9d88b26c5dd5b8f74dc2a862b9398ab6e72e3e55b63e304b7468cc1bf6"
+    },
+    "handoff/report-gm-desktop-r16.6/Visual/tsconfig.json": {
+      "Bytes": 409,
+      "SHA256": "f599c61e3f7cb2fed71c3d1e3ab88a8809abd0f38dcff8433f1abb93efd735fa"
+    },
+    "handoff/report-gm-desktop-r16.6/build_fixture.py": {
+      "Bytes": 3375,
+      "SHA256": "5c1fe4a374caf7a2c5039edc7fa52db985fad148cf5126d021ef1f9c82cebac6"
+    },
+    "handoff/report-gm-desktop-r16.6/build_setup.py": {
+      "Bytes": 5481,
+      "SHA256": "f14cc72c78c20123b14c58d192b228f2ce3bb42c72a32de976c5a9e74c80783f"
+    },
+    "handoff/report-gm-desktop-r16.6/build_visual.py": {
+      "Bytes": 12263,
+      "SHA256": "350124cce80d67d31a80651e253856bd5ca5f1c0d56ec020e14f4fc8bba1b8f8"
+    },
+    "handoff/report-gm-desktop-r16.6/check-aggregate.cjs": {
+      "Bytes": 3453,
+      "SHA256": "7daf5836349803c80dd49159eaf787faaf1f4f171295c62bc49298c0a5a4008c"
+    },
+    "handoff/report-gm-desktop-r16.6/check-calculations.cjs": {
+      "Bytes": 9324,
+      "SHA256": "5264a00a2e76b63c004a120ef62faca5b9fd65d1c7839e0de63234a5e25d4297"
+    },
+    "handoff/report-gm-desktop-r16.6/check-compact-summary.cjs": {
+      "Bytes": 3481,
+      "SHA256": "7fd3775a1fd725cd5a21690e5ad62d112e08e4a26671a10ae3ea5a95cf331835"
+    },
+    "handoff/report-gm-desktop-r16.6/check-layout.cjs": {
+      "Bytes": 12162,
+      "SHA256": "9d001a499f47e4bfab62fd9d24797efdc511210a9a9ec5af3bc42fb0a7e94f77"
+    },
+    "handoff/report-gm-desktop-r16.6/check-math.cjs": {
+      "Bytes": 2620,
+      "SHA256": "238d495b1d891e0024baf0d3ab0eee87d0571df2ca20f10dc1ff1e0794634f2f"
+    },
+    "handoff/report-gm-desktop-r16.6/check-monthly-hover.cjs": {
+      "Bytes": 8112,
+      "SHA256": "fa19172041fb0539c68aba08b84c30a48c8e58c2174c88a665e40e7d7daeafac"
+    },
+    "handoff/report-gm-desktop-r16.6/check-native-canvas.cjs": {
+      "Bytes": 4441,
+      "SHA256": "4933de258df3e44f0a3324d8c22eeb2a2cdc272ac0f6696fbe9adf649c6b7ef9"
+    },
+    "handoff/report-gm-desktop-r16.6/check-order.cjs": {
+      "Bytes": 2013,
+      "SHA256": "899fceffdb8cc065f9b20c59954b1f91eb00616b7ad9c9f1e998b196f6a2a04b"
+    },
+    "handoff/report-gm-desktop-r16.6/check-package.cjs": {
+      "Bytes": 6395,
+      "SHA256": "cbda6ef8515bbd48c4ee0cbec849fe307dc255aecb3b5503f7597510406c35b8"
+    },
+    "handoff/report-gm-desktop-r16.6/check-preservation.cjs": {
+      "Bytes": 1937,
+      "SHA256": "1bd3812bf6b6c45bf34bf8801a0ba4e519eabc1f0851b10e9b5aadf13a912753"
+    },
+    "handoff/report-gm-desktop-r16.6/check-ratios.cjs": {
+      "Bytes": 6546,
+      "SHA256": "356a48081110c196dca3994ac768a98dcbedb8fdb0dd17433559be4c9c67675d"
+    },
+    "handoff/report-gm-desktop-r16.6/check-reader.cjs": {
+      "Bytes": 6091,
+      "SHA256": "939704336e34e4ff6848d6cc985f56f3e7253228187091cb7289d0bfd03b7ec8"
+    },
+    "handoff/report-gm-desktop-r16.6/check-review.cjs": {
+      "Bytes": 9216,
+      "SHA256": "552600d1e27f3f4da58b9d1317e6ddb575cd5c916f43cc60e8ca11b420d18470"
+    },
+    "handoff/report-gm-desktop-r16.6/check-scope.cjs": {
+      "Bytes": 3460,
+      "SHA256": "b9410c50a9f0375ee64db5188b4303328b89503fee39d52d252eb945ea191052"
+    },
+    "handoff/report-gm-desktop-r16.6/check-selection-math.cjs": {
+      "Bytes": 3434,
+      "SHA256": "5cdfcb33c29313f46053d21a676cab8529ed78ebd8ca4cb663f8a43f277e2214"
+    },
+    "handoff/report-gm-desktop-r16.6/check-viewport.cjs": {
+      "Bytes": 5235,
+      "SHA256": "155c21a017444217641f02abaad5bd8ad850205db6e96f4bd2efa0ea76917a76"
+    },
+    "handoff/report-gm-desktop-r16.6/check_project.py": {
+      "Bytes": 4051,
+      "SHA256": "b6e8152c2b8b38f4a6bc939491f823f2eb0e69010ca052561f45fa7fe6c4047e"
+    },
+    "handoff/report-gm-desktop-r16.6/compact.css": {
+      "Bytes": 8703,
+      "SHA256": "1e81a8b93ba5c65e65a2452c0c04e68974a60365131cc61bfeebd66698a138ec"
+    },
+    "handoff/report-gm-desktop-r16.6/compact_adapters.py": {
+      "Bytes": 11370,
+      "SHA256": "ad66861baf3c8cd01053188d33b660e96707094a24ed8e7492d120ba8d587cb2"
+    },
+    "handoff/report-gm-desktop-r16.6/compact_summary.py": {
+      "Bytes": 1456,
+      "SHA256": "eafaef2dce6c5ae9c85bf8f6c39f000721968527ce340d39689f2a1e3c79ac09"
+    },
+    "handoff/report-gm-desktop-r16.6/monthly_hover.py": {
+      "Bytes": 2346,
+      "SHA256": "9ccdfe4a52cd9cba0e460ab0693d11f0ccd60a49e6d34d188d2f4179de661e54"
+    },
+    "handoff/report-gm-desktop-r16.6/prepare_project.py": {
+      "Bytes": 8565,
+      "SHA256": "0c83ddd3fc42cf64ea9043f7294051f2903b090e546d504f7a37726e66d4a7f2"
+    },
+    "handoff/report-gm-desktop-r16.6/review_adapters.py": {
+      "Bytes": 6421,
+      "SHA256": "48be530fb783bcf0f29c43a81c8f05bba0ae9bfc6acfe12a60a0f6a1eb524948"
+    },
+    "handoff/report-gm-desktop-r16.6/sanitize_generated.cjs": {
       "Bytes": 916,
       "SHA256": "1c88e0e17c447fdf226ba33fa20345530c187cd18fc290ba90c2f41153ce97cf"
     }

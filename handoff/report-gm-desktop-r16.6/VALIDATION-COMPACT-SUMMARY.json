@@ -1,0 +1,13 @@
+{
+  "evidence": "SYNTHETIC before/after packaged table in Edge; native receiving check pending",
+  "sectorLabelOneLine": true,
+  "driverNotRepeatedInHierarchy": true,
+  "headerRangesInTooltipOnly": true,
+  "numericCellsPreserved": 80,
+  "beforeRowHeight": 52.328125,
+  "afterRowHeight": 29,
+  "beforeHeaderHeight": 115.109375,
+  "afterHeaderHeight": 97.171875,
+  "driverExpansionRetained": true,
+  "browserErrors": []
+}

@@ -1,0 +1,12 @@
+{
+  "evidence": "SYNTHETIC independent calculation oracle; live reconciliation pending",
+  "oldAsymmetricMissingShareDefectReproduced": true,
+  "independentNumeratorAndDenominatorTotals": true,
+  "singleTierMissingPreserved": true,
+  "randomOracleAssertions": 720,
+  "unitsAndValueAmounts": true,
+  "zeroAndEmptyPopulation": true,
+  "weightedPeriodNotAveragePercent": true,
+  "multiCurrencyWeightsAndMissingRates": true,
+  "singleCurrencyShareFXNeutral": true
+}
