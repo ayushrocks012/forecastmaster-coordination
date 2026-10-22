@@ -1,0 +1,5 @@
+{
+  "Checks": 2593,
+  "Failures": [],
+  "Evidence": "Actual local Power BI Analysis Services engine; synthetic only. No receiving UI/export/Service gate claimed."
+}

@@ -1,0 +1,6 @@
+{
+  "Checks": 12,
+  "Status": "PASS",
+  "Errors": [],
+  "Evidence": "Packaged control in headless Edge with mocked Power BI host; not native host filter/sync acceptance."
+}

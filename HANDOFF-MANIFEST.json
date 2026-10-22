@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 31816,
-      "SHA256": "f6f3cf685304c4a4acedb6c023c1d2169c7f2a2a6b689a4475bcc6429fb49dc9"
+      "Bytes": 33806,
+      "SHA256": "53fd0c003146db7ee39fafae8460c51bcd51548d3feec3cee3f7a15513e44d06"
     },
     "README.md": {
       "Bytes": 4984,
       "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 64658,
-      "SHA256": "ee7ee3c57a7e9b25d847c8ffeb7cfc73d82f558de0a465b55c851f780e2e7531"
+      "Bytes": 67056,
+      "SHA256": "1ff70f9617142542edbb894ee119e8541a9c64ab635c8a49ba3c5999926e146e"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3520,6 +3520,154 @@
     "handoff/report-gm-desktop-r16.6/sanitize_generated.cjs": {
       "Bytes": 916,
       "SHA256": "1c88e0e17c447fdf226ba33fa20345530c187cd18fc290ba90c2f41153ce97cf"
+    },
+    "handoff/report-native-r17/.gitignore": {
+      "Bytes": 50,
+      "SHA256": "a493cc8799bd736a007eab3799b4ede470542a5b5c92602bbb7c6672c5df27b5"
+    },
+    "handoff/report-native-r17/Controls/.gitignore": {
+      "Bytes": 54,
+      "SHA256": "32e1c860a156b669beea2619dea292176c2e1db0750235dba27c52ad56b71212"
+    },
+    "handoff/report-native-r17/Controls/assets/icon.png": {
+      "Bytes": 1541,
+      "SHA256": "1948e7500284e4f25fc80df9d2938fd84b2ef433fd2486a74801e5eebb6c48e2"
+    },
+    "handoff/report-native-r17/Controls/capabilities.json": {
+      "Bytes": 2415,
+      "SHA256": "7620dc88dd71c602978d0b0e0b3dde20e3042d84f0f56a19b0314c51b58f45f2"
+    },
+    "handoff/report-native-r17/Controls/dist/ForecastMasterNativeControlsR17.17.0.0.0.pbiviz": {
+      "Bytes": 7614,
+      "SHA256": "ab2dda06dc50bbda227fc8bbc4e5af5de274199bb39b071094f928fc5a07e3bb"
+    },
+    "handoff/report-native-r17/Controls/package-lock.json": {
+      "Bytes": 287007,
+      "SHA256": "88a322d2484be1d6e5496e49af62bbfd4194109360ef1feee8f2d2f57513efd3"
+    },
+    "handoff/report-native-r17/Controls/package.json": {
+      "Bytes": 807,
+      "SHA256": "db20ea72b9045e6e9c4cb5fe695f5f1d318ae49e3af96e46b662ab735681645a"
+    },
+    "handoff/report-native-r17/Controls/pbiviz.json": {
+      "Bytes": 808,
+      "SHA256": "156c1593bfb83313a901dd4dbc778c7f084c7c98ee570606b0b563e5d627a297"
+    },
+    "handoff/report-native-r17/Controls/src/catalog.ts": {
+      "Bytes": 4658,
+      "SHA256": "27e1a709e544c2e79fe9fba04a41fb553688fc257f1bf699b05eedd36d2bfdd9"
+    },
+    "handoff/report-native-r17/Controls/src/state.ts": {
+      "Bytes": 2758,
+      "SHA256": "44bf265a53858c018f583ad44790eb47aa1d6b5941098706bfd1735e0fd8e95b"
+    },
+    "handoff/report-native-r17/Controls/src/visual.ts": {
+      "Bytes": 11734,
+      "SHA256": "237235b162e965b9e0a1a83fe59f2b246cd0496a710b5ebfc6775f7dd0bdfd14"
+    },
+    "handoff/report-native-r17/Controls/style/visual.less": {
+      "Bytes": 1364,
+      "SHA256": "4f511951927575751f53f351fb79f4103fd24be39079232870b51199378fe933"
+    },
+    "handoff/report-native-r17/Controls/tsconfig.json": {
+      "Bytes": 409,
+      "SHA256": "f599c61e3f7cb2fed71c3d1e3ab88a8809abd0f38dcff8433f1abb93efd735fa"
+    },
+    "handoff/report-native-r17/OPEN FIRST.txt": {
+      "Bytes": 3019,
+      "SHA256": "de6e293d5a946da6834d7ad7151dcbda3995c4222cd1c13ff1c8e69b9d74fc9a"
+    },
+    "handoff/report-native-r17/README.md": {
+      "Bytes": 13142,
+      "SHA256": "212e6ff220110f8057644e1c9becf1bfd1d1c5cb24633648e498c105d9beb222"
+    },
+    "handoff/report-native-r17/VALIDATION-CONTROLS.json": {
+      "Bytes": 172,
+      "SHA256": "6f70d947d9ce1f04a6b953b80b5f349f0c16e308964a55aa495be847f8d87ea2"
+    },
+    "handoff/report-native-r17/VALIDATION-GITNEXUS.json": {
+      "Bytes": 503,
+      "SHA256": "930d2386952da8d466a77286787d5a93ecc9a1792183903dbc6a7fe224c666ed"
+    },
+    "handoff/report-native-r17/VALIDATION-NATIVE-DAX.json": {
+      "Bytes": 164,
+      "SHA256": "f5860cf240a8613055886106092ea837cd1b245ee28c9a170aa821ec837f1d5a"
+    },
+    "handoff/report-native-r17/VALIDATION-NATIVE-EDGES.json": {
+      "Bytes": 167,
+      "SHA256": "d6847a26dd2fff6142160d61a1f0b592da798eb7ab3863ba84cb9cd18f14dac0"
+    },
+    "handoff/report-native-r17/VALIDATION-NATIVE-FX.json": {
+      "Bytes": 152,
+      "SHA256": "4938c9f6475304b583d015d52d9d1cbf715d17e0038780f8e3c7ec610541e8c5"
+    },
+    "handoff/report-native-r17/VALIDATION-PBIR.json": {
+      "Bytes": 901,
+      "SHA256": "4e0f9e5872370ba915e1eb0b3fac3f298f274eafe6a48fc22b6473e0c324101a"
+    },
+    "handoff/report-native-r17/VALIDATION-PREVIEW-PBIR.json": {
+      "Bytes": 219,
+      "SHA256": "79bc0bb47067fca4179600f839525561cc80506d0d8f3ebe9dff31e2d50fafeb"
+    },
+    "handoff/report-native-r17/VALIDATION-QUALIFICATION.json": {
+      "Bytes": 1728,
+      "SHA256": "3e05a0728a278e4730415528df94ff058c91b531a214715a3907a2531ba82a1f"
+    },
+    "handoff/report-native-r17/VALIDATION-STRUCTURE.json": {
+      "Bytes": 268,
+      "SHA256": "7d39ce033e28c0957e585548a74089ada5817d50330d662fa90a61155942ca95"
+    },
+    "handoff/report-native-r17/build_delivery.py": {
+      "Bytes": 3085,
+      "SHA256": "42cd3c4e7dd2e7d4cca059998ed71e7eb52707ac66d440dcf700c0c2be134bd6"
+    },
+    "handoff/report-native-r17/build_preview.py": {
+      "Bytes": 3585,
+      "SHA256": "851ba248a8bce531b95da39ae1162533aa13f2e365486727edd705a162814d44"
+    },
+    "handoff/report-native-r17/installation.py": {
+      "Bytes": 10592,
+      "SHA256": "9f1ef0b6c6009fe5efa15ee6b55ccd56c7152045410303f30ab9e2e730db0a72"
+    },
+    "handoff/report-native-r17/native_model.py": {
+      "Bytes": 36621,
+      "SHA256": "798e597c17bb048264b9613cb125bd344bebfa20a0c5da5137764633c3ff9e28"
+    },
+    "handoff/report-native-r17/prepare_project.py": {
+      "Bytes": 25627,
+      "SHA256": "f2f058eeb4e21a4b2c3d1acbc456ba75bcef4ebd5f50a69be62a8c15c156d214"
+    },
+    "handoff/report-native-r17/tests/build_controls_fixture.py": {
+      "Bytes": 1853,
+      "SHA256": "0af12395d7305821c2c9e56334bef3a8bd44026414ba9505279018b71eb70e3e"
+    },
+    "handoff/report-native-r17/tests/check_controls.cjs": {
+      "Bytes": 4797,
+      "SHA256": "6b90b6afa08edc979a9df321554c00edc71ad81d39705acf3945bdb9dd55a21c"
+    },
+    "handoff/report-native-r17/tests/check_model.py": {
+      "Bytes": 3119,
+      "SHA256": "6e4cf3cc1207e5e943105d31e0d6380f363543a4d8b2d96aae0f76807e2d0b3a"
+    },
+    "handoff/report-native-r17/tests/check_project.py": {
+      "Bytes": 2125,
+      "SHA256": "263e907c272141530a376a94bd8740513ff1a55a94bfc4893d864913a143920f"
+    },
+    "handoff/report-native-r17/tests/edge_cases.py": {
+      "Bytes": 6028,
+      "SHA256": "3e4444f16281183fc31b18237ade5eac0f5b51ddac16e37b1195225d5083d92a"
+    },
+    "handoff/report-native-r17/tests/fx_cases.py": {
+      "Bytes": 3517,
+      "SHA256": "951c4f2d3f3a9b5cf00cb42cab8082758344faf7d407a5b0579ee56935e68e2e"
+    },
+    "handoff/report-native-r17/tests/native_fixture.py": {
+      "Bytes": 18805,
+      "SHA256": "65fcad565dd725bea9a286390d2b5d6a2ec414c30fe87a0f1d20a0f88157a7ba"
+    },
+    "handoff/report-native-r17/tests/run_native_engine.ps1": {
+      "Bytes": 2829,
+      "SHA256": "c96d9287dae7d8cd5bad7c54dd609e4e2d35bdb20c52fc35735c235a0777d8e1"
     }
   }
 }

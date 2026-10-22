@@ -1,0 +1,11 @@
+{
+  "Gate": "staged change_scope",
+  "Status": "UNKNOWN - failed closed",
+  "AnalysisIncomplete": true,
+  "InterfaceClassificationIncomplete": true,
+  "Reason": "diff-impact run failed; zero reported symbols/processes is not complete impact evidence.",
+  "Scope": "New native handoff plus authorized root instructions/status; no old business functions edited.",
+  "ProductionRelease": "NO-GO",
+  "DetectChangesDomainStatus": "UNAVAILABLE",
+  "DetectChangesReason": "AUTHORITY_DRIFT_BLOCKS_CONCLUSION"
+}

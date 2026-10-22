@@ -1,0 +1,5 @@
+{
+  "Checks": 16,
+  "Failures": [],
+  "Evidence": "Actual local native Power BI engine; synthetic saved-version, blank-tier, classification and export-value checks."
+}

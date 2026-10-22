@@ -966,3 +966,42 @@ numeric reconciliation between those models. Binding both pages to the same
 actual revisions, reconciling matching scopes/periods, cache invalidation and
 measuring Power BI interaction speed remain unexecuted migration gates. No
 Power BI report, Fabric item, application source or workbook was changed.
+
+
+## 22 October 2026 — published R16.6 reported; native R17 candidate prepared
+
+The operator reported that ForecastMaster Review was successfully published and
+replaced. This records the user's report; no independent Service report-ID or
+access check was performed here. The saved R16.6 project and ZIP remain intact.
+
+The next authorized task is a native Power BI rebuild without silently losing
+functions. The separate [R17 package](../handoff/report-native-r17/README.md)
+creates native Demand/S&OP pages, charts, matrices, slicers, bookmarks and clean
+export tables. A small selector/rate control retains hierarchical gates,
+sibling order and unrestricted finite plan-rate entry; it renders no sales
+figures. Original Refresh Demand, live connection and the full R16.6 Advanced
+workspace remain preserved in the candidate. The Smart Demand Manager checkout
+and workbooks were not edited.
+
+Local numerical evidence: 2,593 primary checks, 3,888 FX checks and 16
+scenario/export/blank-tier checks passed in the actual local Power BI Analysis
+Services engine, with independent fabricated-data oracles. Twelve packaged
+controller checks passed in Edge with a mocked Power BI host. All 129 candidate
+PBIR JSON files with reachable published schemas passed; two unchanged legacy
+visual-schema URLs returned 404. All 122 synthetic-preview PBIR schema checks
+passed. No company source amounts were read for these tests.
+
+Private Downloads deliveries are ForecastMaster Native Preview R17 -
+SYNTHETIC.zip and ForecastMaster Native Review R17 - Candidate.zip. The sample
+has no company connection or real refresh page; its semantic model matches the
+native-engine fixture. The company candidate's first step is read-only PROBE,
+not installation or publication. Actual source storage mode remains UNKNOWN;
+the current additive adapter supports Direct Lake on SQL only.
+
+**Release status: NO-GO for production replacement.** Computer Use could not
+initialize in this WSL chat; actual rendering, native zoom/Fit/secondary axis,
+line styling, all/empty bookmark behavior, preference sync, native exports,
+run-rate/PY column visibility, exact largest-gap ranking, company calculations
+and speed remain open gates. The README records the differences explicitly.
+Neither new report nor native model support was installed/published in Fabric.
+GitNexus coverage remains partial and cannot establish zero impact.

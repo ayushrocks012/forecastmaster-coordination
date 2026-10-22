@@ -1,0 +1,129 @@
+{
+  "dataRoles": [
+    {
+      "name": "RowID",
+      "displayName": "RowID",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Channel",
+      "displayName": "Channel",
+      "kind": "Grouping"
+    },
+    {
+      "name": "SubChannel",
+      "displayName": "SubChannel",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Measure",
+      "displayName": "Measure",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Display",
+      "displayName": "Display",
+      "kind": "Grouping"
+    },
+    {
+      "name": "ChannelRank",
+      "displayName": "ChannelRank",
+      "kind": "Grouping"
+    },
+    {
+      "name": "SubRank",
+      "displayName": "SubRank",
+      "kind": "Grouping"
+    },
+    {
+      "name": "MeasureRank",
+      "displayName": "MeasureRank",
+      "kind": "Grouping"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "RowID"
+              }
+            },
+            {
+              "for": {
+                "in": "Channel"
+              }
+            },
+            {
+              "for": {
+                "in": "SubChannel"
+              }
+            },
+            {
+              "for": {
+                "in": "Measure"
+              }
+            },
+            {
+              "for": {
+                "in": "Display"
+              }
+            },
+            {
+              "for": {
+                "in": "ChannelRank"
+              }
+            },
+            {
+              "for": {
+                "in": "SubRank"
+              }
+            },
+            {
+              "for": {
+                "in": "MeasureRank"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "top": {
+              "count": 1000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "general": {
+      "properties": {
+        "filter": {
+          "type": {
+            "filter": true
+          }
+        },
+        "preferences": {
+          "type": {
+            "text": true
+          }
+        },
+        "currencies": {
+          "type": {
+            "text": true
+          }
+        },
+        "variant": {
+          "type": {
+            "text": true
+          }
+        }
+      }
+    }
+  },
+  "supportsHighlight": false,
+  "supportsSynchronizingFilterState": true,
+  "privileges": [],
+  "supportsKeyboardFocus": true
+}

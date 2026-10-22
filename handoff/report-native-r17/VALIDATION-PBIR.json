@@ -1,0 +1,17 @@
+{
+  "Checked": 129,
+  "Failures": [],
+  "UnavailableOriginalSchemas": [
+    {
+      "File": "ForecastMaster Native Review/ForecastMaster Native Review.Report/definition/pages/advancedreview/visuals/demandreviewworkspace/visual.json",
+      "Schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "Error": "HTTP Error 404: Not Found"
+    },
+    {
+      "File": "ForecastMaster Native Review/ForecastMaster Native Review.Report/definition/pages/refreshdemand/visuals/bb4c7f4f8fe28cf5983f/visual.json",
+      "Schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "Error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+}

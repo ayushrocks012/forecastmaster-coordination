@@ -1,0 +1,5 @@
+{
+  "Checks": 3888,
+  "Failures": [],
+  "Evidence": "Local native Power BI engine. Synthetic GBP/EUR/USD only; no live multi-affiliate qualification."
+}

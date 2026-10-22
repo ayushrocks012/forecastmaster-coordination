@@ -1,0 +1,32 @@
+{
+  "Release": "R17 qualification candidate; not a production replacement",
+  "NativeEngineCalculationChecks": 6497,
+  "NativeEngineCalculationFailures": 0,
+  "PackagedControlMockHostChecks": 12,
+  "RenderedDesktop": false,
+  "RenderedService": false,
+  "NativeExportsInHost": false,
+  "CompanyReconciliation": false,
+  "CompanyPerformanceMeasured": false,
+  "CompanyModelMode": "UNKNOWN until read-only probe",
+  "CompanyModelOrReportChanged": false,
+  "OpenParityItems": [
+    "Actual legend/secondary-axis and line styling",
+    "Native all/empty selection bookmarks and sync",
+    "Run-rate/PY empty-column behavior",
+    "Exact largest-absolute-gap shortcut and rank period",
+    "Hide/show display and native Focus instead of automatic HTML reflow",
+    "Actual model adapter compatibility and SQL source preference parser",
+    "Host filter application, sibling order, rates, personal bookmarks and export identities"
+  ],
+  "ComputerUse": "Initialization failed: sandboxCwd is not a local file URI for this WSL chat. No UI gate claimed.",
+  "SourceSHA256": {
+    "native_model.py": "798e597c17bb048264b9613cb125bd344bebfa20a0c5da5137764633c3ff9e28",
+    "prepare_project.py": "f2f058eeb4e21a4b2c3d1acbc456ba75bcef4ebd5f50a69be62a8c15c156d214",
+    "installation.py": "9f1ef0b6c6009fe5efa15ee6b55ccd56c7152045410303f30ab9e2e730db0a72",
+    "build_delivery.py": "42cd3c4e7dd2e7d4cca059998ed71e7eb52707ac66d440dcf700c0c2be134bd6",
+    "build_preview.py": "851ba248a8bce531b95da39ae1162533aa13f2e365486727edd705a162814d44",
+    "Controls/src/state.ts": "44bf265a53858c018f583ad44790eb47aa1d6b5941098706bfd1735e0fd8e95b",
+    "Controls/src/visual.ts": "237235b162e965b9e0a1a83fe59f2b246cd0496a710b5ebfc6775f7dd0bdfd14"
+  }
+}

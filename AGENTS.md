@@ -78,3 +78,32 @@ R16.5 at `handoff/report-gm-desktop-r16.5/` corrects the operator's changing mon
 
 
 R16.6 at `handoff/report-gm-desktop-r16.6/` supersedes the paired-member ratio rule in earlier report candidates. Aggregate Share must divide the independently available Abbott and Market amount totals for the same selection/calendar, matching displayed totals; a missing numerator must not silently remove valid Market. Never average monthly/sector percentages. Preserve strict missing leaf detail, required-month/source guards and zero denominator behavior. Mixed-currency Value Shares require one configured currency basis on both sides; unknown currencies/missing rates remain unavailable, with existing single-known-currency neutrality retained. The operator clarified that the year-formatting concern was dash versus $0: preserve unavailable versus numeric zero, explaining it in the tooltip rather than filling history. Demand table headings omit visible date-range subtitles (ranges remain tooltips); flat sector labels are one line Sector – Driver, hierarchy names its driver once, partial counts move to tooltips and body padding is smaller. No numeric cells are removed. Local bounded audits cover the 18 S&OP measures, period windows, run rate/PY growth, Demand/leaf reconciliation and Share populations with independent synthetic oracles; they are not company/workbook-wide qualification. Preserve all R16.5 bytes, source/transport/leaf logic, setup/model/feed, native Refresh Demand and rollback PBIX. No setup/model rerun or company publication. Native/reconciliation/speed remain receiving checks.
+
+
+On 22 October 2026 the user reported successfully publishing and replacing
+ForecastMaster Review with R16.6, then explicitly requested a native Power BI
+rebuild preserving all functions and allowing custom components only when
+necessary. This authorizes `handoff/report-native-r17/`, a separate qualification
+candidate, not replacing production from this host. Its native charts, matrices,
+slicers, navigation, bookmarks and clean export tables use additive native DAX.
+A small new custom control owns only gated Channel/Sub-channel/Measure choices,
+sibling order and free-form per-currency rate input. Preserve the complete
+R16.6 Advanced workspace and the original native Refresh Demand page/connection.
+The private source project and both receiving ZIPs remain outside this public
+repository. Only neutral source, metadata, synthetic tests and counts-only
+receipts belong here.
+
+R17 passed 6,497 independent-oracle numerical checks in a task-owned local Power
+BI Analysis Services engine and 12 packaged-control checks with a mocked host.
+These do not establish Desktop rendering, native filter/sync acceptance,
+Service behavior, export formatting, company reconciliation or performance.
+Computer Use initialization failed for this WSL chat. The actual company model
+mode is UNKNOWN from the thin report: the generated notebook defaults to
+read-only PROBE. The current additive adapter supports Direct Lake on SQL only;
+do not convert Import/DirectQuery/OneLake modes or change security to make it fit.
+PREPARE/APPLY require their explicit later stages and preserve old tables/roles,
+back up the definition, use the existing writer lease and disable purging. The
+exactness ledger lists unresolved UI/feature differences, including largest-gap
+ranking; R17 remains NO-GO for replacing production until they pass. A fallback
+is preservation, not evidence of native parity. Do not repeat R16 reporting-feed
+setup or run a company refresh simply because the native candidate was prepared.

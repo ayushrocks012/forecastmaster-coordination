@@ -1,0 +1,10 @@
+{
+  "Status": "PASS",
+  "StaticStateTokens": 18027,
+  "NativeBusinessMeasures": 41,
+  "AdditiveTables": 20,
+  "OldTablesAndSecurityPreserved": true,
+  "UnsupportedModesAndConflictsRefused": true,
+  "PrivateNotebookDefaultsToProbe": true,
+  "CompanyExecution": false
+}
