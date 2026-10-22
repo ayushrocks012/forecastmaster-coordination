@@ -1,0 +1,27 @@
+{
+  "Evidence": "Operator supplied a refresh-history photo and then the full error text on 22 October 2026.",
+  "TargetFromConversation": {
+    "TestModelName": "ForecastMaster Native OneLake R17.1 - TEST",
+    "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+    "ModelIdentityVisibleInPhoto": false
+  },
+  "VisibleRefreshResult": {
+    "Type": "On demand",
+    "DataStatus": "Failed",
+    "DataDurationSeconds": 10,
+    "InitialPhotoWasTruncated": true
+  },
+  "CompleteOperatorError": "Data source error: We cannot refresh this dataset because the dataset contains calculated tables or calculated columns referring to Direct Lake data source. Please configure the dataset to use an explicit connection with granular access control to access this data source and then try again.",
+  "Confirmed": {
+    "EarlierModelCreationPassed": true,
+    "RefreshSucceeded": false,
+    "FullServiceErrorAvailable": true,
+    "ServerRequiresExplicitConnectionWithGranularAccessControl": true,
+    "ActualItemConnectionBindingInspected": false,
+    "UniversalDirectLakeCalculationIncompatibilityEstablished": false
+  },
+  "NextStep": "Map only TEST to an existing matching shareable cloud connection or create one using prefilled source fields and the operator's company OAuth account; apply and refresh TEST once.",
+  "NativeReportOpeningGate": "HOLD until processing succeeds",
+  "ProductionReplacement": false,
+  "ChangedCompanyModelOrConnectionFromThisHost": false
+}

@@ -1,0 +1,61 @@
+R17.1 - FIX THE EXISTING TEST MODEL'S CLOUD CONNECTION
+
+CONFIRMED ERROR
+The operator copied the full message: refresh of calculated tables/columns that
+refer to Direct Lake requires an explicit connection with granular access control.
+This identifies a connection requirement. It does not establish that OneLake
+calculated tables are universally unsupported. No model recreation is needed.
+
+TARGET ONLY
+Workspace: UK-ANI-Demand
+Semantic model: ForecastMaster Native OneLake R17.1 - TEST
+Model ID: 31d00232-ac03-48fe-af39-f2e4bae82443
+
+1. OPEN THE TEST MODEL'S CONNECTION SETTINGS
+In the Fabric workspace, find that TEST semantic model. Choose ... > Settings.
+Expand Gateway and cloud connections, then Cloud connections.
+
+2. MAP TO AN EXPLICIT SHAREABLE CLOUD CONNECTION
+Look at the Maps to dropdown for the existing OneLake source.
+- If an existing, approved shareable connection matches THIS source, select it
+  as-is. Do not edit that connection's credentials or settings.
+- If none is available, choose Maps to > Create a connection. The connection
+  dialog should be prefilled from the model's existing source.
+  Select Cloud if asked. Name it: ForecastMaster Native TEST - OneLake
+  Keep the prefilled connection type, source URL/path and other source fields.
+  Use Organizational account / OAuth 2.0 and sign in with your normal company
+  account when prompted, then choose Create. Do not enter passwords/tokens in
+  this chat or paste credentials into notebook code.
+  Select this new connection in Maps to if it is not selected automatically.
+
+Do not switch to SQL, enter a different lakehouse or use a gateway. Do not
+change the original ForecastMaster Demand Model or its connection. This step
+maps only the TEST model. It does not grant other people connection access.
+
+3. APPLY, THEN REFRESH THE TEST MODEL ONCE
+Choose Apply to save the mapping. Return to the workspace and use the TEST
+semantic model's ... > Refresh now once. Check its Refresh history and send the
+status. If it fails, send the new full error; do not repeat refresh to clear it.
+
+WHY THIS ROUTE
+Microsoft states that shareable cloud connections always enforce granular access
+control. Mapping this TEST model to one satisfies the explicit-connection/GAC
+requirement without changing tenant or workspace settings. Do not disable SSO
+or change organization-wide policies as a workaround.
+
+IF THE OPTIONS ARE DIFFERENT
+If Maps to / Create a connection is missing, disabled, or the source fields are
+not prefilled, send the exact labels/options shown there before making changes.
+Do not guess an endpoint or ask IT to enable a tenant setting. No company
+connection configuration has been verified from this host.
+
+AFTER COMPLETED
+Continue with the previously supplied TEST-bound PBIP in the separate Desktop
+folder. Send the refresh result and then check the native pages. Do not publish
+or replace R16.6: company rendering, exports, refresh propagation and business
+parity remain separate checks. Keep the existing TEST model and report ZIP.
+
+Microsoft's exact connection mapping and GAC instructions:
+https://learn.microsoft.com/en-us/power-bi/connect-data/service-create-share-cloud-data-sources#assign-a-shareable-cloud-connection-to-a-semantic-model
+https://learn.microsoft.com/en-us/power-bi/connect-data/service-create-share-cloud-data-sources#granular-access-control
+https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-security-integration

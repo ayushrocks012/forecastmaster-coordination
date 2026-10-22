@@ -1,9 +1,11 @@
 # Current native report step - 22 October 2026
 
 The two receiving probes confirmed **Direct Lake on OneLake**, and the separate
-R17.1 TEST model has now been created. Continue with
-[Refresh and open the TEST candidate](handoff/report-native-onelake-r17.1/NEXT%20-%20REFRESH%20AND%20OPEN%20TEST.txt).
-Do not rerun the creation cell.
+R17.1 TEST model was created. Its first reported refresh FAILED; the complete
+error requires an explicit connection with granular access control. Continue with
+[Fix the TEST connection](handoff/report-native-onelake-r17.1/FIX%20TEST%20CONNECTION%20-%20STEPS.txt).
+Do not rerun creation. Map only the TEST model to a matching shareable cloud
+connection, apply, then refresh it once. No tenant/workspace setting change.
 Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
 R16.6 report. Test-model creation, processing, business parity and publication
 are separate stages. The repository and original setup instructions follow.

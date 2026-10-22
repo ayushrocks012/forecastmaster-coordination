@@ -1,9 +1,20 @@
 # OneLake R17.1 isolated qualification candidate
 
+**Latest receiving result, 22 October 2026: TEST refresh failed.** The operator
+subsequently copied the complete error: calculated tables/columns referring to
+Direct Lake require an explicit connection with granular access control (GAC).
+Continue with [FIX TEST CONNECTION - STEPS.txt](FIX%20TEST%20CONNECTION%20-%20STEPS.txt).
+It maps only this TEST model to a matching shareable cloud connection, then
+requests one refresh. Microsoft states that shareable connections always enforce
+GAC. The current actual binding is not yet known; no company connection was
+changed by this host. Do not recreate the model, convert source mode, disable
+SSO, or change tenant/workspace settings from this error. A successful connection
+fix and processing result must still be received before native report acceptance.
+
 **Receiving update, 22 October 2026:** the operator supplied a successful creation
 and readback result for **ForecastMaster Native OneLake R17.1 - TEST**, ID
 `31d00232-ac03-48fe-af39-f2e4bae82443`. The original model was unchanged and the
-20 helper definitions were confirmed. Processing and rendering remain unverified.
+20 helper definitions were confirmed. Successful processing and rendering remain unverified.
 Continue with [NEXT - REFRESH AND OPEN TEST.txt](NEXT%20-%20REFRESH%20AND%20OPEN%20TEST.txt);
 do not rerun creation.
 

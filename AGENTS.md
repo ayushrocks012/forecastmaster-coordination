@@ -185,3 +185,20 @@ changes only the project path and model connection; 136 report payloads retain
 their bytes. It omits the stale SQL installer/probe and preserves the old ZIP.
 No feature/calculation gap is closed by this binding, and production R16.6 must
 not be replaced from this qualification step.
+
+The next operator photo on 22 October reports a failed 10-second data refresh;
+the subsequent copied full error explicitly requires an explicit connection with
+granular access control for calculations referring to Direct Lake. TEST identity
+is from the conversation, not visible in the photo. Immediate instructions are
+report-native-onelake-r17.1/FIX TEST CONNECTION - STEPS.txt: map only TEST to a
+matching shareable cloud connection (or create through prefilled source fields
+and company OAuth), Apply, then refresh TEST once. Microsoft states shareable
+cloud connections always enforce GAC. Do not recreate the model, disable SSO,
+change source mode or request tenant/workspace admin changes. If Maps to/create
+or source defaults are unavailable, obtain the exact UI options instead of
+guessing an endpoint. The creation code has no explicit connection-binding step;
+the actual company mappings remain uninspected from this host. The error does
+not establish universal OneLake calculated-table incompatibility. Preserve the
+created TEST item, production R16.6, candidate ZIP and business code. Keep the
+packaged NEXT instructions byte-preserved and put current guidance in the FIX
+document/README so the report package remains reproducible.

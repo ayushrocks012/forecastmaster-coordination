@@ -2,7 +2,10 @@ FORECASTMASTER ONELAKE R17.1 - CREATE A SEPARATE TEST MODEL
 
 CREATION NOW COMPLETE - OPERATOR RESULT RECEIVED 22 OCTOBER 2026
 The existing TEST model ID is 31d00232-ac03-48fe-af39-f2e4bae82443.
-Do not rerun the creation cell. Continue with NEXT - REFRESH AND OPEN TEST.txt.
+Do not rerun the creation cell. The reported refresh failed and requires an
+explicit connection with granular access control. Continue with FIX TEST
+CONNECTION - STEPS.txt first. After a successful refresh, the existing NEXT -
+REFRESH AND OPEN TEST.txt supplies the Desktop-opening steps.
 The creation instructions below are retained for the original package history.
 
 Your two probes are complete. They confirmed Direct Lake on OneLake via

@@ -1130,3 +1130,33 @@ Desktop rendering/zoom/export and reconciliation remain unverified. No business
 visual or numerical code changed in this handoff. R17's feature/calculation gaps
 remain open and production R16.6 is still the working version. Coordination is
 not registered in GitNexus; direct package tracing supplies bounded evidence.
+
+## 22 October 2026 — TEST refresh requires an explicit connection with GAC
+
+The operator supplied a failed-refresh photo (10-second data attempt), then
+copied the complete error. It explicitly identifies calculated tables/columns
+referring to Direct Lake and requires an explicit connection with granular
+access control. The TEST association comes from the conversation; the model
+name is not visible in the photo. The earlier creation/readback remains
+confirmed. No successful processing or native rendering/export/company
+calculation acceptance is established. The value-free error is retained in
+feedback/logs/2026-10-22-native-r171-refresh-failed.json; the raw photo is not
+copied into the public repository.
+
+FIX TEST CONNECTION - STEPS.txt now owns the immediate receiving step. Map only
+TEST to a matching existing shareable cloud connection, or create a Cloud
+connection through Maps to > Create a connection with the existing source
+fields prefilled and normal company OAuth sign-in. Apply and refresh TEST once,
+then supply the result. Microsoft documents that shareable cloud connections
+always enforce GAC. This avoids tenant/workspace policy changes and does not
+require disabling SSO, changing source mode, switching to SQL or recreating the
+model. If these UI controls/source defaults are unavailable, request the exact
+options shown before choosing a further remedy. No broad source-mode probe.
+
+Direct tracing confirms that the create-only script contains no explicit
+shareable-connection binding call. The actual original/TEST connection mappings
+have not been inspected from this host, and no binding has been changed here.
+The error does not establish universal OneLake calculation incompatibility.
+Production R16.6, the create cell, TEST report ZIP and business code retain their
+bytes. The packaged NEXT instructions remain byte-preserved for reproducibility;
+current repository instructions explicitly require the connection fix first.
