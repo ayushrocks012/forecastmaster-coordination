@@ -1,8 +1,9 @@
 # Current native report step - 22 October 2026
 
-The two receiving probes confirmed **Direct Lake on OneLake**. For the next
-isolated TEST model step open
-[OneLake R17.1 instructions](handoff/report-native-onelake-r17.1/OPEN%20FIRST%20-%20ONELAKE.txt).
+The two receiving probes confirmed **Direct Lake on OneLake**, and the separate
+R17.1 TEST model has now been created. Continue with
+[Refresh and open the TEST candidate](handoff/report-native-onelake-r17.1/NEXT%20-%20REFRESH%20AND%20OPEN%20TEST.txt).
+Do not rerun the creation cell.
 Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
 R16.6 report. Test-model creation, processing, business parity and publication
 are separate stages. The repository and original setup instructions follow.

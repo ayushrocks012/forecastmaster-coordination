@@ -1,0 +1,74 @@
+FORECASTMASTER ONELAKE R17.1 - REFRESH AND OPEN THE EXISTING TEST CANDIDATE
+
+CREATION PASSED
+The operator's receiving output confirmed the TEST model was created, the 20
+native helpers were present, and the original tables/roles were copied exactly.
+The original model was unchanged. Do not rerun CREATE ONELAKE TEST MODEL.py.
+
+TEST model: ForecastMaster Native OneLake R17.1 - TEST
+TEST model ID: 31d00232-ac03-48fe-af39-f2e4bae82443
+Workspace: UK-ANI-Demand
+
+1. REFRESH THIS TEST SEMANTIC MODEL IN FABRIC
+- Open the UK-ANI-Demand workspace in the Fabric browser. Reload the workspace
+  list if the new item is not visible.
+- Find ForecastMaster Native OneLake R17.1 - TEST. Its Type must be Semantic model.
+- On THAT item's ... menu, choose Refresh now once.
+- Open its refresh history: ... > Settings > Refresh history, or the model's
+  Refresh > Refresh history option. Wait for Completed. Open details if it has
+  warnings. Direct Lake framing may also appear on a Direct Lake history tab.
+- If it fails or requires a connection setting, STOP and send the exact error
+  details. Do not change credentials, source mode or tenant settings to bypass it.
+  If no refresh record/status appears, report what the page shows; do not keep
+  clicking Refresh now. Successful Direct Lake framing is not always listed as
+  a separate history row.
+
+This step refreshes the new test model only. Do not use the report's existing
+Refresh Demand button for this test: that is the production ingestion/refresh
+path and does not refresh the separate test model.
+
+2. IF COMPLETED, PULL THE REPORT COPY ON THE WORK LAPTOP
+Open Coordination in VS Code > PowerShell terminal and run:
+
+  git pull --ff-only
+  explorer.exe .\handoff\report-native-onelake-r17.1\candidate
+
+Find: ForecastMaster Native Review R17.1 TEST.zip
+Right-click > Extract All. Choose a NEW Desktop folder:
+  ForecastMaster Native Review R17.1 TEST
+
+3. OPEN THE EXTRACTED PBIP
+Open this file from that Desktop folder:
+  ForecastMaster Native Review R17.1 TEST.pbip
+
+Expected path (replace YOUR-WINDOWS-USER with your work-laptop username):
+  C:\Users\YOUR-WINDOWS-USER\Desktop\ForecastMaster Native Review R17.1 TEST\ForecastMaster Native Review R17.1 TEST.pbip
+
+The .Report folder must remain beside the .pbip file. Open the extracted file,
+not a file inside the ZIP. Use your normal company Power BI sign-in if prompted.
+This thin report is already connected to the TEST model named above, not the
+original ForecastMaster Demand Model. No local model installation is needed.
+
+4. CHECK THE NATIVE PAGES
+- Open Demand review and S&OP review. Keep native Export data and Focus mode
+  available for inspection. The original advanced workspace is a qualification
+  fallback; it is not evidence that all behavior is now native.
+- Choose UK, October 2026, Core Oral and a supported measure. For S&OP, explicitly
+  enable a Channel, its Sub-channel/blank context and Measure. The graph/table
+  require those selections.
+- Check that native figures load. Try View > Page view > Fit to width / Fit to
+  page, and the zoom slider. On a native matrix, inspect ... > Export data.
+- Send the TEST model's refresh status plus screenshots of both native pages,
+  or copy the first complete error. If refresh finished with warnings, include
+  those details as well.
+
+KEEP THIS AS A TEST
+Do not publish or replace ForecastMaster Review. Creation, processing, rendering,
+export and numerical/business parity are separate checks. This copy changes only
+the model connection and project path; it does not fix R17's already documented
+feature/calculation gaps. R16.6 remains the working published report.
+
+Microsoft references:
+https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data
+https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-how-it-works
+https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report

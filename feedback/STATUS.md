@@ -1102,3 +1102,31 @@ returned UNAVAILABLE/AUTHORITY_DRIFT_BLOCKS_CONCLUSION. Direct tracing and the
 focused tests provide bounded fallback evidence, not a zero-impact graph claim.
 The R17 capability gaps and additional numerical parity cases remain open.
 No company installation, production refresh or report replacement was performed.
+
+## 22 October 2026 — TEST model creation confirmed; processing is next
+
+The operator supplied successful ONELAKE_TEST_CREATED output for ForecastMaster
+Native OneLake R17.1 - TEST, ID 31d00232-ac03-48fe-af39-f2e4bae82443. Readback
+reported the original model unchanged, all old tables and roles copied exactly,
+20 calculated helper definitions confirmed, no sales-amount query, no refresh
+request and no publication. This supersedes the unverified creation status
+above; it does not prove processing or preview query support. The supplied
+operation IDs and value-free output are in the dated feedback log.
+
+The next receiving step is a single Refresh now of this TEST semantic model in
+the Fabric workspace. Use its refresh history/status and stop on a failure or
+connection prompt. The existing report Refresh Demand button targets the original
+ingestion/model path and does not refresh this separate TEST item. Direct Lake
+successful framing is not always listed as a separate history row; do not turn
+an absent row into repeated refresh requests or a claimed processing pass.
+
+The separately bound thin-report ZIP is now candidate/ForecastMaster Native
+Review R17.1 TEST.zip under the OneLake package. Its project and connection
+reference the new TEST model. Exactly two project payloads change (PBIP path,
+PBIR connection); 136 other project files retain source bytes. The original
+candidate ZIP remains unchanged. The old SQL setup/probe is omitted from the new
+ZIP. Five local binding/preservation checks pass; actual company refresh,
+Desktop rendering/zoom/export and reconciliation remain unverified. No business
+visual or numerical code changed in this handoff. R17's feature/calculation gaps
+remain open and production R16.6 is still the working version. Coordination is
+not registered in GitNexus; direct package tracing supplies bounded evidence.

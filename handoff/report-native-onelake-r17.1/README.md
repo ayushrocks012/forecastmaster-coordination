@@ -1,5 +1,21 @@
 # OneLake R17.1 isolated qualification candidate
 
+**Receiving update, 22 October 2026:** the operator supplied a successful creation
+and readback result for **ForecastMaster Native OneLake R17.1 - TEST**, ID
+`31d00232-ac03-48fe-af39-f2e4bae82443`. The original model was unchanged and the
+20 helper definitions were confirmed. Processing and rendering remain unverified.
+Continue with [NEXT - REFRESH AND OPEN TEST.txt](NEXT%20-%20REFRESH%20AND%20OPEN%20TEST.txt);
+do not rerun creation.
+
+The separate `candidate/ForecastMaster Native Review R17.1 TEST.zip` is connected
+to that TEST model. `bind_test_report.py` changes only the copied project path
+and model connection; 136 report payloads, including every visual and the original
+Refresh Demand page, retain their bytes. The ZIP contains the thin report and
+current instructions, with the obsolete SQL installer/probe excluded. The old
+R17 ZIP stays unchanged. Five local package tests verify binding and preservation;
+they do not establish company refresh, rendering or export success. This copy
+does not address the previously documented R17 feature/calculation gaps.
+
 Start with [OPEN FIRST - ONELAKE.txt](OPEN%20FIRST%20-%20ONELAKE.txt). The operator's
 22 October 2026 source-route result confirmed the fact partition references an
 M `AzureStorage.DataLake` expression, with `directLake` storage. This is Direct

@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 38262,
-      "SHA256": "4d24968c173ac17df1b68776254a389add94f1522fec6e7c8d54927c91f0d243"
+      "Bytes": 39181,
+      "SHA256": "9c21aa66c6481a6d80135c4b666fa5509f43e1944472b1ee31c088e2209b1dd3"
     },
     "README.md": {
       "Bytes": 4984,
       "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 73231,
-      "SHA256": "e1cb9bf75f27b79d7efe92ebb8c1db87b6b1e93f8228d7802d2a0dc49d2d5a70"
+      "Bytes": 75093,
+      "SHA256": "04624b901c8dda447818edc7329b7ef9129b33e3cf52a32a0df20f38ed5d9482"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 5146,
-      "SHA256": "3714e17c54090114cadb100dfae45e9f9b0b73e7e098951b178965a163ea9063"
+      "Bytes": 5226,
+      "SHA256": "cf3fd4e5d63132ee25a9544893282a788909b2c9fd0743a93c40108518dc5978"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -3754,8 +3754,8 @@
       "SHA256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     "handoff/report-native-onelake-r17.1/OPEN FIRST - ONELAKE.txt": {
-      "Bytes": 2945,
-      "SHA256": "c1b1bb94f00d0fc93b484f0cf8a63506c3f4e7a3fd5766cbd6c52d60bbcf96dd"
+      "Bytes": 3238,
+      "SHA256": "cad094bb61fb3ab48b32257f9b8fa3a398325a5be192c9d655443ffcc533f94a"
     },
     "handoff/report-native-onelake-r17.1/VALIDATION-CANDIDATE.json": {
       "Bytes": 233,
@@ -3778,8 +3778,8 @@
       "SHA256": "845ac00b67bef3fbc61f0bf248fc0663b7e08055cca1e4e29673fbc8a9e0d35a"
     },
     "handoff/report-native-onelake-r17.1/README.md": {
-      "Bytes": 5648,
-      "SHA256": "2fca28623fe14812f668b1a24fa976820c4ffe1f27f942d36fa8c90898c78794"
+      "Bytes": 6722,
+      "SHA256": "11d08d3a3535e4fe709dd74a215f9eb6c280c466360f6556ab3e9ef2465ab6c9"
     },
     "handoff/report-native-onelake-r17.1/build_candidate.py": {
       "Bytes": 10310,
@@ -3796,6 +3796,34 @@
     "handoff/report-native-onelake-r17.1/VALIDATION-IMPACT.json": {
       "Bytes": 647,
       "SHA256": "62f57342ad20cad9515ae1428cc3288e9388881f5cf80f8e0cafca9a63d5abe6"
+    },
+    "feedback/logs/2026-10-22-native-r171-test-model-created.json": {
+      "Bytes": 1223,
+      "SHA256": "9b8b764a35c04045fd70a0fdfefd4d8cd57577eb46e25e9cbe9b7926897e1800"
+    },
+    "handoff/report-native-onelake-r17.1/NEXT - REFRESH AND OPEN TEST.txt": {
+      "Bytes": 3885,
+      "SHA256": "69fcc01f76dc9a322b9a595d76d16a5b58f229f39c2daf1c43bc0cd29c7d42a9"
+    },
+    "handoff/report-native-onelake-r17.1/VALIDATION-REPORT-BINDING.json": {
+      "Bytes": 465,
+      "SHA256": "c67b3e511dfc5f8574e79cf44395f772f0154b7e9b284f2ffe50c147bc7a528f"
+    },
+    "handoff/report-native-onelake-r17.1/bind_test_report.py": {
+      "Bytes": 6254,
+      "SHA256": "b31019a95084cffb13fa13c3b5c26ad488501edf952fbc5c18b7c6bde12b7c79"
+    },
+    "handoff/report-native-onelake-r17.1/candidate/ForecastMaster Native Review R17.1 TEST.zip": {
+      "Bytes": 230863,
+      "SHA256": "49b14405b512e1693e649226d81ebcc7857ee55ff0aae6fd98d3223813859713"
+    },
+    "handoff/report-native-onelake-r17.1/candidate/PACKAGE-CHECK.json": {
+      "Bytes": 25549,
+      "SHA256": "6b67ac4a75234a3c5848a9462e137bd85adde6b0272cd84541bdc9007109b126"
+    },
+    "handoff/report-native-onelake-r17.1/tests/check_report_binding.py": {
+      "Bytes": 5161,
+      "SHA256": "546a86868c702ca8d30e182197fc327f8653a649d939ab051186327906760d7c"
     }
   }
 }

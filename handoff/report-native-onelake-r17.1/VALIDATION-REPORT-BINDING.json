@@ -1,0 +1,13 @@
+{
+  "Tests": 5,
+  "Passed": true,
+  "Evidence": "Local ZIP/project/binding checks only; no company calls or Desktop rendering.",
+  "SourceZIPUnchanged": true,
+  "UnchangedProjectPayloads": 136,
+  "ChangedProjectPayloads": 2,
+  "OriginalConnectionTargetReplacedOnlyInCopy": true,
+  "GraphConclusion": "UNKNOWN; GitNexus reports Coordination is not registered.",
+  "CompanyProcessing": "UNVERIFIED",
+  "CompanyNativeRendering": "UNVERIFIED",
+  "Publication": false
+}

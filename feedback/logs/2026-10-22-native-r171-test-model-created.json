@@ -1,0 +1,29 @@
+{
+  "Evidence": "Operator supplied output from CREATE ONELAKE TEST MODEL.py on 22 October 2026.",
+  "OperationIDs": [
+    "a8be36dd-cfac-4a41-b9f0-7e07c210bf94",
+    "929e0378-7a17-4d97-8276-80d4423416c4",
+    "e89c9e00-1ce8-44eb-9ddf-959b3cc29440",
+    "c719b49c-9e4f-4332-8f7c-34e530c4ec5e",
+    "01658065-2f26-421a-83e7-070d448e4541"
+  ],
+  "Result": {
+    "Stage": "ONELAKE_TEST_CREATED",
+    "TestModelName": "ForecastMaster Native OneLake R17.1 - TEST",
+    "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+    "OriginalModelUnchanged": true,
+    "OriginalTablesCopiedExactly": true,
+    "OriginalRolesCopiedExactly": true,
+    "NativeCalculatedHelpers": 20,
+    "HelperDefinitionsConfirmed": true,
+    "SourceAmountsQueried": false,
+    "OriginalModelUpdated": false,
+    "RefreshRequested": false,
+    "ReportPublished": false,
+    "DirectLakeCalculatedTablePreview": "Company processing still unverified",
+    "R166Parity": "NOT COMPLETE; qualification candidate only"
+  },
+  "NextReceivingStep": "Refresh the existing TEST semantic model once, then open the separately TEST-bound thin-report copy if completed.",
+  "CompanyProcessingOrNativeRenderingConfirmed": false,
+  "ProductionReportReplaced": false
+}

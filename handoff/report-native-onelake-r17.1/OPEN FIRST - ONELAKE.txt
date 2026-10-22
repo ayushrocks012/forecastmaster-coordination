@@ -1,5 +1,10 @@
 FORECASTMASTER ONELAKE R17.1 - CREATE A SEPARATE TEST MODEL
 
+CREATION NOW COMPLETE - OPERATOR RESULT RECEIVED 22 OCTOBER 2026
+The existing TEST model ID is 31d00232-ac03-48fe-af39-f2e4bae82443.
+Do not rerun the creation cell. Continue with NEXT - REFRESH AND OPEN TEST.txt.
+The creation instructions below are retained for the original package history.
+
 Your two probes are complete. They confirmed Direct Lake on OneLake via
 AzureStorage.DataLake, one entity partition and no installed fm_native_* tables.
 Do not run the old R17 SQL PREPARE/APPLY or NATIVE VIEWS.sql for this model.

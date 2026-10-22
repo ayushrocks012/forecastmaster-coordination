@@ -172,3 +172,16 @@ the engine sources are calculated/import and do not prove the Direct Lake previe
 or Desktop/Service rendering/export. Keep R17's unresolved native feature and
 calculation parity gaps explicit. Do not replace production R16.6 from this
 create-only step. Preserve the original ZIP and source adapter bytes.
+
+Later on 22 October the operator confirmed ONELAKE_TEST_CREATED for TEST model
+31d00232-ac03-48fe-af39-f2e4bae82443, with all preservation/readback flags true
+and RefreshRequested false. Creation is now confirmed; processing and native
+rendering are not. Do not rerun the create cell. Current receiving instructions
+are report-native-onelake-r17.1/NEXT - REFRESH AND OPEN TEST.txt. They refresh the
+TEST model once in Fabric, then open the TEST-bound thin report from candidate/
+if processing completed. The existing Refresh Demand button still targets the
+original refresh path and is not the TEST-model refresh control. The new ZIP
+changes only the project path and model connection; 136 report payloads retain
+their bytes. It omits the stale SQL installer/probe and preserves the old ZIP.
+No feature/calculation gap is closed by this binding, and production R16.6 must
+not be replaced from this qualification step.
