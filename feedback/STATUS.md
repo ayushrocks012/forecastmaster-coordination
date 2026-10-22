@@ -1027,3 +1027,23 @@ linked hover emphasis and automatic reflow. Source inspection also found
 cross-year YTD/YTG, mixed-cutoff and negative-benchmark percentage differences.
 They were not covered by the existing 6,497 checks and are not accepted parity.
 The native implementation remains a NO-GO candidate; production R16.6 is intact.
+
+
+## 22 October 2026 — readable metadata probe replaces the paste-heavy step
+
+The operator's Notepad screenshot showed the combined installer's encoded
+payload; they reported a failed paste into Fabric. The original source measured
+331,830 bytes and its longest line was 318,966 characters. This is packaged data,
+not evidence of file corruption. The exact clipboard/editor limit was not
+observed. A separate 4,021-byte, 81-line metadata-only probe now avoids that
+payload. Its max source line is 96 characters, and it contains no installation,
+lease, sales query, write, refresh or publication action.
+
+`READABLE PROBE - STEPS.txt` copies the new source directly from Coordination
+with PowerShell Get-Content -Raw -Encoding UTF8 | Set-Clipboard, then targets one
+new code cell in the screenshot-confirmed ForecastMaster_GM_Setup notebook.
+The optional one-cell READ ONLY.ipynb has identical source and no saved outputs.
+Eleven mocked API checks pass. No live company API, actual clipboard paste,
+notebook execution, model/report update or source arithmetic change was made.
+Original candidate/preview ZIP bytes and qualified native business code remain
+unchanged, and the native candidate remains NO-GO for replacing R16.6.

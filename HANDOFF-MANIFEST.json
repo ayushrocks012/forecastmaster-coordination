@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 35195,
-      "SHA256": "a930d72d3d8b62b0c27e1a757e9ab834dfaf3964bba3078b79a6101b74e9bf26"
+      "Bytes": 36075,
+      "SHA256": "5cadf2d5306d2687799b3e486fd60b2be5cfd9aceaafaae6affb73f1e11a0a1d"
     },
     "README.md": {
       "Bytes": 4984,
       "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 68428,
-      "SHA256": "3c03defa9b5c9fd814e75f89375b565d3da754c2cc5422d4a317eff40baad6af"
+      "Bytes": 69655,
+      "SHA256": "c606033bb7f334363e7d2ad846916b14b99f95a8c3dc946e8405eea3524064c9"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3574,12 +3574,12 @@
       "SHA256": "f599c61e3f7cb2fed71c3d1e3ab88a8809abd0f38dcff8433f1abb93efd735fa"
     },
     "handoff/report-native-r17/OPEN FIRST.txt": {
-      "Bytes": 3386,
-      "SHA256": "a999d1d4f7f9f4d42f0102175e2e87f4cd0bbcb630df7350257c802aceb498d3"
+      "Bytes": 3254,
+      "SHA256": "29528e948c677e106c3d3f782a0cb9aa51047045d335dcd5096ee2615caccfac"
     },
     "handoff/report-native-r17/README.md": {
-      "Bytes": 14642,
-      "SHA256": "8f33b9569f3362c2feb84bcf73ed9bebdc9365105310d0b5c3577b12526b2604"
+      "Bytes": 15946,
+      "SHA256": "1004da419973d54b2fc232ce011bd7af7d6293ad98fd35093c9fd700cd28c80f"
     },
     "handoff/report-native-r17/VALIDATION-CONTROLS.json": {
       "Bytes": 172,
@@ -3698,8 +3698,28 @@
       "SHA256": "73ce6c7af2ef6e4deb1faf7762f8988e088a96fa8713d51e3a534f7c89e03f52"
     },
     "handoff/report-native-r17/WORK LAPTOP - OPEN CANDIDATE.txt": {
-      "Bytes": 2297,
-      "SHA256": "75349e85ecd12b09d2a1c5781f4861a509e26640d32a38670d4e5b6c4ee13a59"
+      "Bytes": 2508,
+      "SHA256": "209dea7d96ad2cbdf67a5b629b142376c29876f0672e4a535f297e410aa7ce4c"
+    },
+    "handoff/report-native-r17/ForecastMaster Native Probe - READ ONLY.ipynb": {
+      "Bytes": 5655,
+      "SHA256": "26598ef5973e4be2a8c80c4ce4a53e2343dae2a7f7e97580d9a9c9beb51eb1d1"
+    },
+    "handoff/report-native-r17/PROBE ONLY - READABLE.py": {
+      "Bytes": 4021,
+      "SHA256": "64d36f84d37092ac5fa7c947f31b1a9938fa67ba2ee392c506c6131dd4356337"
+    },
+    "handoff/report-native-r17/READABLE PROBE - STEPS.txt": {
+      "Bytes": 1889,
+      "SHA256": "692144d6bafe5b7b6d0281a7913327b44f33095a5eee479d1e5919ca78def16c"
+    },
+    "handoff/report-native-r17/VALIDATION-READABLE-PROBE.json": {
+      "Bytes": 361,
+      "SHA256": "2513283cfe8554470b0eb32f787e96e34879c6c83d6e2233b1ea5f7e42671a96"
+    },
+    "handoff/report-native-r17/tests/check_readable_probe.py": {
+      "Bytes": 8241,
+      "SHA256": "ecba435c7c410559d27727095279b8d6acbe1eb8a628016db107fa3f50d442f9"
     }
   }
 }

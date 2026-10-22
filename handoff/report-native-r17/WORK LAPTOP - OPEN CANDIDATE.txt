@@ -13,15 +13,20 @@ contains no cached sales model and requires your normal company sign-in.
 3. Right-click ForecastMaster Native Review R17 - Candidate.zip > Extract All.
    Use a NEW Desktop folder named ForecastMaster Native Review R17.
    Leave R16.6 and the published ForecastMaster Review unchanged.
-4. Open PROBE NATIVE MODEL.py as TEXT in VS Code or Notepad. Do not run it as
-   a local Python file. Copy all of its text.
-5. In Fabric, open the existing separate UNSCHEDULED reporting-setup notebook
-   attached to the ForecastMaster lakehouse. Do not edit the refresh worker.
-   Paste the copied text into a NEW cell. Leave MODE = "PROBE" unchanged.
-6. Run that new cell ONCE. It reads model metadata only; it does not install
-   objects, read sales amounts, publish or trigger Refresh Demand.
-7. Copy its complete short output into this chat. It tells us whether the
-   existing model is compatible with the native support adapter.
+4. Use the NEW small probe in the repository, not the old combined installer
+   inside the ZIP. From the same PowerShell terminal, run:
+
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-r17\PROBE ONLY - READABLE.py" | Set-Clipboard
+
+5. In Fabric, open ForecastMaster_GM_Setup (Type: Notebook). Add a NEW Python
+   code cell at the bottom. Keep existing setup cells unchanged.
+6. Click inside the new code editor and press Ctrl+V. Leave MODE = "PROBE".
+   Run ONLY that new cell using its play button. Do not use Run all.
+7. Copy its complete short output into this chat. It reads model metadata only
+   and identifies whether the current native source adapter is compatible.
+
+READABLE PROBE - STEPS.txt has focused clipboard troubleshooting. The original
+ZIP is retained, but its 332 KB combined installer is unnecessary for this step.
 
 The extracted report entry point is:
   ForecastMaster Native Review\ForecastMaster Native Review.pbip

@@ -1,0 +1,9 @@
+{
+  "Tests": 11,
+  "Passed": true,
+  "SourceBytes": 4021,
+  "MaximumSourceLineLength": 96,
+  "Evidence": "Mock Fabric metadata API only; no live company execution.",
+  "OriginalInstallerZIPUnchanged": true,
+  "GitNexusChangeScope": "UNKNOWN: diff-impact failed closed; incomplete graph evidence. New standalone helper and docs only; business code preserved."
+}

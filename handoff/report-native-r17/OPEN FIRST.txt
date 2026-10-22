@@ -20,16 +20,14 @@ Use this to inspect native layout, chart axes, zoom, slicers and export.
 Do not publish the sample preview as the company report.
 
 FIRST COMPANY STEP ON THE WORK LAPTOP - READ ONLY
-1. Open the existing separate, unscheduled Fabric setup notebook attached to
-   the existing ForecastMaster lakehouse.
-2. Open PROBE NATIVE MODEL.py from this extracted folder. Copy it into a NEW
-   notebook cell. Leave MODE = "PROBE" unchanged.
-3. Run that cell once. It reads model metadata only; it does not read sales
-   amounts, write tables, refresh data, publish, or change the model/report.
-4. Retain its short output. Compatibility with the current source mode must be
-   confirmed before preparing the model additions. If unsupported, keep the
-   current model mode and use that result to adapt the candidate; do not switch
-   modes or remove security.
+Use READABLE PROBE - STEPS.txt and PROBE ONLY - READABLE.py directly from the
+Coordination repository. The old combined installer in the ZIP has a very long
+compressed line and is not needed for this metadata-only step.
+
+Open ForecastMaster_GM_Setup in Fabric. Paste the readable file into ONE NEW
+Python code cell and run only that cell, with MODE = "PROBE". Retain old cells.
+The probe reads metadata only; it cannot install, query sales, refresh or publish.
+Send its short output so the actual source mode can be checked first.
 
 AFTER SOURCE COMPATIBILITY AND THE OFFLINE UI CHECKS ARE CONFIRMED
 The same notebook cell has separate PREPARE and APPLY stages. PREPARE adds new

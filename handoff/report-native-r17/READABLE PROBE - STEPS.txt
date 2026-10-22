@@ -1,0 +1,36 @@
+READABLE PROBE - FIX FOR THE LONG RANDOM-LOOKING TEXT
+
+The original PROBE NATIVE MODEL.py includes a compressed installer payload.
+It is about 332 KB and has a line about 319,000 characters long. That bundled
+payload is not needed for a metadata-only probe. The original ZIP is preserved.
+
+USE THE NEW 4 KB FILE DIRECTLY FROM COORDINATION:
+  handoff\report-native-r17\PROBE ONLY - READABLE.py
+
+ON THE WORK LAPTOP:
+1. In VS Code, open forecastmaster-coordination. Open a POWERSHELL terminal.
+2. Run these two commands from the repository folder:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-r17\PROBE ONLY - READABLE.py" | Set-Clipboard
+
+   The second command COPIES code. It does not run Python or connect to Fabric.
+3. In Fabric, open ForecastMaster_GM_Setup (Type: Notebook).
+4. Add a NEW Python/PySpark code cell at the bottom. If your newly added cell
+   contains a partial old paste, clear ONLY that new cell. Keep old setup cells.
+5. Click inside the blank code editor and press Ctrl+V. It should paste 81 lines
+   of readable Python, with no giant random-looking data block. MODE is PROBE.
+6. Click the play button beside ONLY that new cell. Do not use Run all.
+7. Send the short output or exact error to this chat.
+
+This replacement reads model metadata only. It cannot PREPARE/APPLY, write
+lakehouse tables, query sales, trigger Refresh Demand or publish a report.
+Local mocked API checks passed. Company execution remains unverified.
+
+OPTIONAL FALLBACK:
+ForecastMaster Native Probe - READ ONLY.ipynb contains the identical single cell
+and no saved outputs, if a notebook-file import is needed instead of clipboard.
+
+The documented metadata API uses POST getDefinition to retrieve definitions;
+this is a read operation, not updateDefinition:
+https://learn.microsoft.com/en-us/rest/api/fabric/semanticmodel/items/get-semantic-model-definition

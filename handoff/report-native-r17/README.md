@@ -31,6 +31,26 @@ For the feature comparison, read **CAPABILITIES-VS-R16.6.md**.
 Start with the preview and then the read-only probe. A successful probe does not
 install the report or satisfy its receiving checks.
 
+## Readable metadata probe
+
+Use **READABLE PROBE - STEPS.txt** and **PROBE ONLY - READABLE.py** from this
+repository. The original ZIP contains a combined installer with a 318,966-character
+encoded line; carrying that installer into the read-only probe was unnecessary.
+The new probe is 4,021 bytes with a maximum line length of 96 characters. It
+contains no installer payload, writer lease or write/refresh/publication route.
+A PowerShell command in the instructions copies its exact UTF-8 contents to the
+clipboard without executing it locally. Paste into one new cell in
+**ForecastMaster_GM_Setup**, the notebook identified in the receiving screenshot.
+
+An optional one-cell **ForecastMaster Native Probe - READ ONLY.ipynb** has the
+same source and no saved outputs. Eleven mocked API tests cover synchronous and
+asynchronous reads, unsupported sources, existing native objects, failures and
+timeout. They do not establish live company success or clipboard/UI acceptance.
+The original candidate ZIP, installer and qualified business code remain intact.
+
+API references: [model definition read](https://learn.microsoft.com/en-us/rest/api/fabric/semanticmodel/items/get-semantic-model-definition),
+[operation polling](https://learn.microsoft.com/en-us/rest/api/fabric/articles/long-running-operation).
+
 ## Native first
 
 The two main pages use native line charts, native matrices, searchable slicers,

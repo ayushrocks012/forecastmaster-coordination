@@ -128,3 +128,16 @@ records cross-year YTD/YTG, mixed-cutoff and negative-benchmark percentage
 calculation differences. The earlier local numerical checks do not establish
 parity for these paths. Preserve the candidate's NO-GO status and R16.6 fallback;
 recording the differences does not authorize changing business semantics.
+
+
+On 22 October 2026 the operator reported that the ZIP's large encoded probe text
+would not paste into Fabric. The original combined installer was 331,830 bytes
+with a 318,966-character line. Preserve it and the original ZIP; use the separate
+`PROBE ONLY - READABLE.py` for metadata inspection. It is 4,021 bytes, max line
+96, with no installer, lease, data query, refresh or publication path. Current
+receiving instructions name the screenshot-confirmed ForecastMaster_GM_Setup
+notebook and copy exact source with Get-Content -Raw -Encoding UTF8 | Set-Clipboard
+before pasting into one NEW cell. Never Run all or edit old setup cells. The
+optional READ ONLY.ipynb contains identical code and empty outputs. Eleven local
+mocked API tests pass; company/API/clipboard execution remains unverified. This
+metadata-only repair changes no native business measures or release decision.
