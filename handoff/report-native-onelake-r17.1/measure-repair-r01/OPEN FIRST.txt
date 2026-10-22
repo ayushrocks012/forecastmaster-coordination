@@ -1,0 +1,54 @@
+FORECASTMASTER R17.1 - REPAIR INHERITED TEST FEED SYNTAX
+
+Latest receiving result: TEST refresh completed WITH WARNINGS on 22 October 2026.
+The earlier explicit-connection error did not recur. Nine old FM UI measures
+contain displayFolder metadata at the end of their DAX expressions. This is a
+model-definition syntax defect; it is not a missing-sales or numeric-zero issue.
+Do not treat the warning result as clean report acceptance.
+
+This cell repairs ONLY the existing TEST model:
+  ForecastMaster Native OneLake R17.1 - TEST
+  31d00232-ac03-48fe-af39-f2e4bae82443
+
+It moves only the exact terminal displayFolder: Forecast review\Visual feed
+line from nine allowlisted FM UI expressions into each measure's displayFolder
+property. The DAX before that line is retained. Before applying, it saves and
+reads back the current TEST definition and connection inventory privately under
+the company lakehouse's Files/ForecastMasterRefreshState/report-upgrades/.
+It verifies the TEST identity, guards concurrent definition/connection changes,
+disallows data purging and checks the rest of the definition and cloud mapping
+afterward. It never targets the original model, source tables, production report,
+permissions, connection configuration, refresh worker or scheduled pipelines.
+It makes no sales query and requests no explicit model refresh.
+
+ON YOUR WORK LAPTOP
+1. Open forecastmaster-coordination in VS Code and its PowerShell terminal.
+2. Run:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-onelake-r17.1\measure-repair-r01\REPAIR TEST FEED.py" | Set-Clipboard
+
+3. In Fabric open UK-ANI-Demand > ForecastMaster_GM_Setup.
+4. Add ONE NEW Python/PySpark code cell and paste with Ctrl+V.
+5. Run ONLY that cell with the play button beside it. Never Run all; keep the
+   old creation/setup cells unchanged. Wait for its short result.
+   Alternatively IMPORT ForecastMaster TEST Feed Repair R01.ipynb as a separate
+   unscheduled notebook and run its one code cell. Do not open its JSON in Notepad.
+6. If Stage is TEST_FEED_REPAIRED (normally MeasuresChanged: 9), or
+   TEST_FEED_ALREADY_CLEAN, return to UK-ANI-Demand. Beside the TEST semantic
+   model named above, choose ... > Refresh now ONCE.
+7. Inspect TEST Refresh history. Send the repair output and refresh status here,
+   including any remaining warning details. Use this TEST item's Refresh now,
+   not the report's Refresh Demand button, which targets the original worker.
+
+STOP if identity, backup, connection, concurrency or readback checks fail. Send
+the short error and retain the existing TEST. No automatic retry or recreation.
+The script prints the private backup path before requesting the single update;
+retain it if an operation fails or its result is unconfirmed. Do not publish.
+
+Local synthetic tests are separate from company repair/clean-refresh acceptance.
+This syntax fix does not close R17's previously documented capability/parity gaps.
+
+DOCUMENTED API
+https://learn.microsoft.com/en-us/rest/api/fabric/semanticmodel/items/update-semantic-model-definition
+https://learn.microsoft.com/en-us/rest/api/fabric/core/items/list-item-connections

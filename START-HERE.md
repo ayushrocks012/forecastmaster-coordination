@@ -1,11 +1,12 @@
 # Current native report step - 22 October 2026
 
-The two receiving probes confirmed **Direct Lake on OneLake**, and the separate
-R17.1 TEST model was created. Its first reported refresh FAILED; the complete
-error requires an explicit connection with granular access control. Continue with
-[Fix the TEST connection](handoff/report-native-onelake-r17.1/FIX%20TEST%20CONNECTION%20-%20STEPS.txt).
-Do not rerun creation. Map only the TEST model to a matching shareable cloud
-connection, apply, then refresh it once. No tenant/workspace setting change.
+The separate R17.1 OneLake TEST model now refreshes **with warnings**. The earlier
+connection error did not recur; nine inherited feed formulas contain terminal
+`displayFolder` metadata. Continue with
+[Repair the TEST feed syntax](handoff/report-native-onelake-r17.1/measure-repair-r01/OPEN%20FIRST.txt).
+Run its one new cell in ForecastMaster_GM_Setup, then refresh TEST once and send
+the result. It backs up TEST privately and checks definition/cloud preservation.
+Do not rerun creation or the older reporting setup. No source or policy change.
 Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
 R16.6 report. Test-model creation, processing, business parity and publication
 are separate stages. The repository and original setup instructions follow.

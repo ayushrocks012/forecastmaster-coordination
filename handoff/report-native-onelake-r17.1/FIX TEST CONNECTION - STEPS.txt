@@ -1,3 +1,10 @@
+LATEST UPDATE - 22 OCTOBER 2026
+The subsequent TEST refresh completed WITH WARNINGS. The earlier connection
+error did not recur. Continue with measure-repair-r01/OPEN FIRST.txt to repair
+the nine inherited expressions containing terminal displayFolder metadata.
+The connection instructions below are retained for history; do not recreate
+the connection or TEST model solely because of the syntax warnings.
+
 R17.1 - FIX THE EXISTING TEST MODEL'S CLOUD CONNECTION
 
 CONFIRMED ERROR

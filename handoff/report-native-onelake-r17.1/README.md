@@ -1,6 +1,16 @@
 # OneLake R17.1 isolated qualification candidate
 
-**Latest receiving result, 22 October 2026: TEST refresh failed.** The operator
+**Latest receiving result, 22 October 2026: TEST refresh completed with warnings.**
+The earlier connection error did not recur. Nine inherited FM UI measures contain
+terminal `displayFolder` text in DAX. Continue with
+[TEST feed syntax repair R01](measure-repair-r01/OPEN%20FIRST.txt), which backs up
+the existing TEST, moves only the reported terminal metadata, and checks the
+remaining definition and cloud mapping. Nineteen local synthetic/mock tests pass;
+actual company repair and a warning-free refresh remain unverified. No original
+model, source data, native business formula or report ZIP is changed by this
+handoff. Keep production R16.6 in place and do not rerun model creation.
+
+**Earlier receiving result, 22 October 2026: TEST refresh failed.** The operator
 subsequently copied the complete error: calculated tables/columns referring to
 Direct Lake require an explicit connection with granular access control (GAC).
 Continue with [FIX TEST CONNECTION - STEPS.txt](FIX%20TEST%20CONNECTION%20-%20STEPS.txt).

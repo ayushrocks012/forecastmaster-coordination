@@ -1160,3 +1160,32 @@ The error does not establish universal OneLake calculation incompatibility.
 Production R16.6, the create cell, TEST report ZIP and business code retain their
 bytes. The packaged NEXT instructions remain byte-preserved for reproducibility;
 current repository instructions explicitly require the connection fix first.
+
+## 22 October 2026 — TEST refresh completes with inherited-feed syntax warnings
+
+The operator's latest photo reports Completed with warnings: data stage completed
+in 26 seconds and query cache in less than one second. The copied details identify
+nine old FM UI measures with terminal `displayFolder: Forecast review\Visual feed`
+inside their DAX expressions. The earlier explicit-connection error did not recur.
+The current actual cloud mapping and production's expressions have not been
+independently read by this host. No clean processing or report acceptance is
+established by this warning status. The value-free receiving log is
+feedback/logs/2026-10-22-native-r171-refresh-warnings.json.
+
+The new measure-repair-r01 package targets the existing TEST identity only. It
+verifies a private company backup, moves only the exact terminal metadata on
+nine allowlisted expressions, disallows purging and checks all remaining model
+definition values and the cloud mapping afterward. It refuses unexpected shapes
+or concurrent changes and never retries an update automatically. It makes no
+sales query, explicit refresh, source/connection/permission edit, original-model
+write or publication request. The earlier create cell and both report ZIPs retain
+their bytes. Run its one new cell in ForecastMaster_GM_Setup, then one TEST
+Refresh now and supply the outcome; no Run all or recreation.
+
+Nineteen synthetic metadata/API/filesystem tests pass, including the full public
+feed-formula templates with the reported suffix injected. This is body and API
+scope preservation evidence, not live Direct Lake processing. Company repair,
+clean refresh, native UI/export, performance and R16.6 parity remain pending.
+GitNexus structure was unregistered; edit-impact reported authority drift and
+quick-graph returned ACTIONABLE_PARTIAL. Direct tracing and focused tests are
+bounded fallback evidence, not a claim of zero impact. Production remains R16.6.

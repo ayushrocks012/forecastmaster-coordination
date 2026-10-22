@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 40427,
-      "SHA256": "3af7153944621a1ca8a1d6a5f39ab9b70990ae24985ac54822ba41c3047eaf62"
+      "Bytes": 41694,
+      "SHA256": "2fb245e7ea23050881654ce13384f0ad6bb3b6110f8c041e6517528484f1b43a"
     },
     "README.md": {
       "Bytes": 5085,
       "SHA256": "51508153ea4fa9d95dd1bfb401c7a8b238b0e2a83f77a2df6bbd381694a6d006"
     },
     "feedback/STATUS.md": {
-      "Bytes": 77055,
-      "SHA256": "2058a8d13b748d5beda1f6728b87aba8560195adfde5eecbac5e541ddf66a5f7"
+      "Bytes": 78999,
+      "SHA256": "83144c32b572990ba2097803d4a2dff6c1f4b3ab9420e222fd54d733fb45fde9"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 5440,
-      "SHA256": "b3de7d76dcbf3886df8f82515ed057a4e2a7e994e965ea204bd364fcbe2c20f6"
+      "Bytes": 5489,
+      "SHA256": "9635b208432e2455200bccfe302c3bc5cbc4b9f6446c733d4cf1b1ea0c6e1578"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -3754,8 +3754,8 @@
       "SHA256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     "handoff/report-native-onelake-r17.1/OPEN FIRST - ONELAKE.txt": {
-      "Bytes": 3447,
-      "SHA256": "3d6cfec8ccbb21699ac94be92cb35f9a2676f522d285e65170b83bce6aa07e92"
+      "Bytes": 3510,
+      "SHA256": "72637257c308c6d2cce94d4af5563451392db160a335216c8f498419c88c4dcd"
     },
     "handoff/report-native-onelake-r17.1/VALIDATION-CANDIDATE.json": {
       "Bytes": 233,
@@ -3778,8 +3778,8 @@
       "SHA256": "845ac00b67bef3fbc61f0bf248fc0663b7e08055cca1e4e29673fbc8a9e0d35a"
     },
     "handoff/report-native-onelake-r17.1/README.md": {
-      "Bytes": 7537,
-      "SHA256": "c85ac12c1018b3562986ffd7d14852ab188d772e7b2293b045e575df8d517e25"
+      "Bytes": 8229,
+      "SHA256": "69d656186f5c450e1eeea2a04e0799182f4086ca611ce4a521eab8a1f28526a8"
     },
     "handoff/report-native-onelake-r17.1/build_candidate.py": {
       "Bytes": 10310,
@@ -3862,8 +3862,40 @@
       "SHA256": "36741f7740530bf744c4b6d1d2ff06f3b17e0b9fd781f6512f96e84c27cada78"
     },
     "handoff/report-native-onelake-r17.1/FIX TEST CONNECTION - STEPS.txt": {
-      "Bytes": 3440,
-      "SHA256": "307e70005fd456a0755b0aba28777dd124d2d019d09ff6eaa4abf91534f3daea"
+      "Bytes": 3847,
+      "SHA256": "771e9fe9da90018050047e66e6f1e718c788785e53b70bc13cb1a6632edd7611"
+    },
+    "feedback/logs/2026-10-22-native-r171-refresh-warnings.json": {
+      "Bytes": 817,
+      "SHA256": "499110bb9d4cd0789af5f3e04992ca880ac91fb8076bf0536410e796b5a0ab56"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/ForecastMaster TEST Feed Repair R01.ipynb": {
+      "Bytes": 14203,
+      "SHA256": "7b0893ea4275c360aa6682894d333681374b60461b44e619b580c2cce32ce67b"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/OPEN FIRST.txt": {
+      "Bytes": 3151,
+      "SHA256": "850769507cfd414c5044929773f2bff3ba10cf5619a4a62cdd5f9cb8176515dc"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/README.md": {
+      "Bytes": 2140,
+      "SHA256": "33198ebb471ea36c87ec4fa59359b0e76109105a2252ec5a55e1390612807d30"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/REPAIR TEST FEED.py": {
+      "Bytes": 11066,
+      "SHA256": "1d4a44ec38bc2ff5454da9c7e2b352f43868a0c4bd867d143c69dfc6f5f6a3ba"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/VALIDATION.json": {
+      "Bytes": 498,
+      "SHA256": "a23161055996ecf0efd9f078a7fcd499f01774368aa76ee1d5be92751b967bb3"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/build_notebook.py": {
+      "Bytes": 1158,
+      "SHA256": "ddcaa27931ffb01e1aa6a9ee448dd30afd833148e6d15e6f14ed4aef51090a62"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r01/tests/check_repair.py": {
+      "Bytes": 14734,
+      "SHA256": "569da089425cd869e941f046e4dd5f18ce438d517218197f92dd641618c4d36a"
     }
   }
 }

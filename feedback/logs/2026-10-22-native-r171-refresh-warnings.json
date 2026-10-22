@@ -1,0 +1,15 @@
+{
+  "Evidence": "Operator-supplied refresh-history photo and copied warning text, 22 October 2026",
+  "ModelAssociation": "Existing R17.1 TEST from the conversation; name not visible in refresh-history crop",
+  "Status": "Completed with warnings",
+  "DataStage": "Completed in 26 seconds",
+  "QueryCacheStage": "Completed in less than 1 second",
+  "PreviousExplicitConnectionErrorRepeated": false,
+  "WarningFamily": "DAX syntax error at terminal displayFolder metadata in nine inherited FM UI measures",
+  "WarningMeasureCount": 9,
+  "CleanRefreshAccepted": false,
+  "CompanyRepairExecutedByThisHost": false,
+  "CurrentCloudMappingIndependentlyRead": false,
+  "Next": "Run measure-repair-r01 on existing TEST only, then one TEST Refresh now and send outcome",
+  "RawPhotoAndCompanyModelDefinitionCommitted": false
+}

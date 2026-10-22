@@ -202,3 +202,20 @@ not establish universal OneLake calculated-table incompatibility. Preserve the
 created TEST item, production R16.6, candidate ZIP and business code. Keep the
 packaged NEXT instructions byte-preserved and put current guidance in the FIX
 document/README so the report package remains reproducible.
+
+Later on 22 October the operator supplied TEST refresh Completed with warnings
+(data stage 26 seconds, query cache less than one second). Nine inherited FM UI
+expressions end in displayFolder: Forecast review\Visual feed, which belongs to
+metadata rather than DAX. The earlier explicit-connection error did not recur;
+actual cloud mapping and production expressions were not independently inspected.
+Use report-native-onelake-r17.1/measure-repair-r01/OPEN FIRST.txt. Its new readable
+cell targets only existing TEST 31d00232-ac03-48fe-af39-f2e4bae82443, backs up the
+definition privately, moves the exact suffix on nine allowlisted measures and
+checks full definition and cloud-mapping preservation. Unknown shapes, backup
+failure or concurrent metadata changes refuse writes; purge is disabled and
+updates are not retried. Nineteen local synthetic/mock checks pass, including
+public feed-template body preservation. Company repair and warning-free refresh
+are pending. No source data, native arithmetic, source mode, security, refresh
+worker or original model is changed. Do not rerun creation or the old setup;
+keep both report ZIPs and packaged NEXT text byte-preserved. Native capability
+and calculation parity gaps remain open. Production R16.6 stays in place.
