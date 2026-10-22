@@ -1,0 +1,22 @@
+{
+  "Version": "Hourly targeted R01 quick installer",
+  "LocalTests": 45,
+  "InstallerTests": 17,
+  "RuntimeTests": 28,
+  "MypyStrict": "PASS: install_hourly.py and build_quick.py",
+  "Bandit": "PASS: install_hourly.py and build_quick.py",
+  "Ruff": "PASS: E,F,B,UP,I excluding E501",
+  "NotebookRuntimePatch": "Identical to previously reviewed hourly-targeted-r01 cells 4,8,10,12",
+  "FunctionsChanges": [
+    "prepareMetadataDecision",
+    "checkDemandChangesR05"
+  ],
+  "OtherNativeFunctionDefinitions": "Preserved",
+  "FabricInstallation": "NOT_RUN",
+  "DemandRefreshStartedByAgent": false,
+  "CapacityMeasurement": "NOT_RUN",
+  "APIReferences": [
+    "https://learn.microsoft.com/en-us/rest/api/fabric/notebook/items/get-notebook-definition",
+    "https://learn.microsoft.com/en-us/rest/api/fabric/notebook/items/update-notebook-definition"
+  ]
+}

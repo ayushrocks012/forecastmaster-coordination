@@ -12,7 +12,7 @@ This repository is public. Files and screenshots committed here are publicly vis
 - Current published Functions source: [ForecastMaster-Actions-R06-native.txt](handoff/native-adhoc-r01/ForecastMaster-Actions-R06-native.txt)
 - Native ad hoc extension, installed and tested through the company report button:
   [native setup and receiving steps](handoff/native-adhoc-r01/README.md)
-- Prepared hourly targeted refresh patch, **not yet installed**: [OPEN THIS FIRST](handoff/hourly-targeted-r01/OPEN%20THIS%20FIRST.txt)
+- Prepared hourly targeted refresh patch, **not yet installed**: [OPEN THIS FIRST](handoff/hourly-targeted-r01/OPEN%20THIS%20FIRST.txt); [quicker single-cell updater](handoff/hourly-targeted-r01/quick-install/START%20QUICK%20UPDATE.txt)
 - Prepared report performance update, paused for design review: [R04.2 cycle feed](handoff/report-cycle-cache-r04.2/README.md)
 - Company setup state: [feedback/STATUS.md](feedback/STATUS.md)
 - Screenshot exchange: [feedback/screenshots](feedback/screenshots)

@@ -1,0 +1,32 @@
+{
+  "Files": {
+    "01 - UPDATE HOURLY NOTEBOOK.txt": {
+      "Bytes": 25430,
+      "SHA256": "ae5efa1f68c027f81a303c8c2739452454aa4e9d1a39266277d7a1a1a5f042cd"
+    },
+    "02 - PASTE CURRENT FUNCTIONS.txt": {
+      "Bytes": 19600,
+      "SHA256": "f59811b9ea0c8073f830c3839e421937739bb4c780fcdac8cb10062e3b045ef7"
+    },
+    "START QUICK UPDATE.txt": {
+      "Bytes": 5403,
+      "SHA256": "dfd5f77e314acea34de4229a33ad67b75a43e2847efd82c8f30ca63a02ff02a7"
+    },
+    "VALIDATION.json": {
+      "Bytes": 852,
+      "SHA256": "d2da64de2d2a4b95c1a25dba79bc655923be7345271e9cff541aeb5e022ef051"
+    },
+    "build_quick.py": {
+      "Bytes": 3585,
+      "SHA256": "098f1d7804e65ce184c098dad4187bf138951a156df3a4f5f2a796dccf097e44"
+    },
+    "install_hourly.py": {
+      "Bytes": 8100,
+      "SHA256": "766df9ad0c8fbdd94609ac9a3d71bc3aab4260fa788210d266cf8d9061cd6eb6"
+    },
+    "test_install_hourly.py": {
+      "Bytes": 10674,
+      "SHA256": "f603d418a16efe6eb3ee0385fd3e8bfa18d792e917b5159d86d154b8eb47620c"
+    }
+  }
+}

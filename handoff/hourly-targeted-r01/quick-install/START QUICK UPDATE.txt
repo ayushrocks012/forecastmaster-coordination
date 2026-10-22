@@ -1,0 +1,104 @@
+QUICK HOURLY UPDATE - existing ForecastMaster_Refresh
+
+The operator has downloaded a backup and the hourly schedule was shown inactive.
+This shortcut replaces the earlier four-cell manual notebook editing procedure.
+The same reviewed runtime patch is used; this is an installer, not another worker.
+No Python installation is required on the receiving laptop.
+
+1. RECEIVE AND COPY THE UPDATER
+
+Open VS Code on the work laptop, with forecastmaster-coordination open.
+Use Terminal > New Terminal (PowerShell). From the repository folder, run:
+
+  git pull --ff-only
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\quick-install\01 - UPDATE HOURLY NOTEBOOK.txt" | Set-Clipboard
+
+If Git refuses the pull, keep its message and send it in chat. If you prefer to
+open the file in VS Code, select all its contents and copy instead. The path is:
+  handoff/hourly-targeted-r01/quick-install/01 - UPDATE HOURLY NOTEBOOK.txt
+
+2. RUN THE UPDATER IN A BLANK SETUP NOTEBOOK
+
+Keep the hourly schedule inactive. Close the ForecastMaster_Refresh editor tab
+now that its backup is saved, so an old open editor cannot save stale contents.
+
+Go to the UK-ANI-Demand workspace list. Choose New item, search Notebook and
+choose Notebook to open one blank notebook. This is only a one-time setup page;
+leave it unscheduled. It does not need a Lakehouse attachment.
+
+Click inside its first code cell and paste the copied updater. Press Shift+Enter
+once to execute that cell. Allow its connection/startup to finish.
+
+The cell checks the identity of the existing ForecastMaster_Refresh, acquires
+its existing shared writer lock and checks the four saved cells against the
+reviewed before/after code. Unknown code makes it stop before updating anything.
+It preserves all other cells, parameters, metadata, item ID and Lakehouse setup.
+A full definition backup is written/read back before the update, and the saved
+new definition is then verified. No workbook is read and no demand refresh starts.
+
+Expected final result:
+  Status: HOURLY_NOTEBOOK_UPDATED
+or, if already installed:
+  Status: HOURLY_NOTEBOOK_ALREADY_UPDATED
+
+Send that final message/photo before starting a demand refresh. An error is not
+proof of installation; send its exact text. Do not repeatedly rerun after an
+"update sent" or "pending" result until its operation/readback is checked.
+
+3. COMPLETE THE DETECTOR UPDATE
+
+The notebook update does not publish Functions. This second file is the complete
+known R06 native Functions source with only the two reviewed detector changes:
+  02 - PASTE CURRENT FUNCTIONS.txt
+
+Open the existing ForecastMaster_Actions User Data Functions item. Copy/save its
+current full code as the Functions backup. Confirm it is the R06-NATIVE-R01 source
+with submitNativeRefreshR06. If extra custom functions/changes exist, send its
+source for the two small targeted edits instead of replacing those customizations.
+
+In VS Code terminal copy the prepared full source:
+
+  Get-Content -Raw -Encoding UTF8 ".\handoff\hourly-targeted-r01\quick-install\02 - PASTE CURRENT FUNCTIONS.txt" | Set-Clipboard
+
+Replace the existing R06 source in the Functions editor, save and publish.
+The native-button producer and all other existing function definitions are
+preserved. The two changes recover from a missing/invalid metadata-success
+baseline without suppressing discovery/network/permission failures.
+
+4. VERIFY, THEN RESUME
+
+Reopen the existing ForecastMaster_Refresh. Run the existing ForecastMaster_Hourly
+pipeline once. No source change should return UNCHANGED and skip Spark. The next
+legitimate addition/correction should use FILES; removal/rename or invalid state
+should use ALL. First changed execution can synchronize the new model marker once.
+
+Inspect Status, RefreshMode, failed files, StageErrors and ModelRefresh. Keep
+revision history and metadata-success.json intact. Resume the original schedule
+after successful receiving checks. The separate native ad hoc notebook and any
+production/test reports are not changed by this installer.
+
+ROLLBACK
+
+Keep the schedule inactive and let current runs finish. Restore the downloaded
+notebook backup and the Functions backup to their same existing items. No table
+schema migration is introduced; data/history rollback is not needed for code-only
+rollback. The extra model-success.json can remain; old code ignores it.
+
+LOCAL EVIDENCE
+
+45 tests pass: 28 runtime/scope/retry tests plus 17 installer/preservation/failure
+checks. Tests exercise the exact packed cell with API stubs, saved-code guards,
+backup verification, concurrency detection, one-shot update, long-running API
+completion, saved readback and repeat execution. The Functions file preserves
+all definitions except prepareMetadataDecision/checkDemandChangesR05.
+Strict mypy and Bandit pass on the two new runtime/build modules; bounded Ruff
+passes on all three Python files. All old handoff package bytes remain preserved.
+
+Company installation, Spark/Delta execution of the patch and measured CU savings
+remain separate receiving gates. The updater has not been run against Fabric by
+the preparing agent.
+
+API references:
+https://learn.microsoft.com/en-us/rest/api/fabric/notebook/items/get-notebook-definition
+https://learn.microsoft.com/en-us/rest/api/fabric/notebook/items/update-notebook-definition
+https://learn.microsoft.com/en-us/rest/api/fabric/articles/item-management/definitions/notebook-definition

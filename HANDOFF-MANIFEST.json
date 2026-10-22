@@ -1038,8 +1038,8 @@
       "SHA256": "9c21aa66c6481a6d80135c4b666fa5509f43e1944472b1ee31c088e2209b1dd3"
     },
     "README.md": {
-      "Bytes": 4984,
-      "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
+      "Bytes": 5085,
+      "SHA256": "51508153ea4fa9d95dd1bfb401c7a8b238b0e2a83f77a2df6bbd381694a6d006"
     },
     "feedback/STATUS.md": {
       "Bytes": 75093,
@@ -3824,6 +3824,38 @@
     "handoff/report-native-onelake-r17.1/tests/check_report_binding.py": {
       "Bytes": 5161,
       "SHA256": "546a86868c702ca8d30e182197fc327f8653a649d939ab051186327906760d7c"
+    },
+    "handoff/hourly-targeted-r01/quick-install/01 - UPDATE HOURLY NOTEBOOK.txt": {
+      "Bytes": 25430,
+      "SHA256": "ae5efa1f68c027f81a303c8c2739452454aa4e9d1a39266277d7a1a1a5f042cd"
+    },
+    "handoff/hourly-targeted-r01/quick-install/02 - PASTE CURRENT FUNCTIONS.txt": {
+      "Bytes": 19600,
+      "SHA256": "f59811b9ea0c8073f830c3839e421937739bb4c780fcdac8cb10062e3b045ef7"
+    },
+    "handoff/hourly-targeted-r01/quick-install/MANIFEST.json": {
+      "Bytes": 1022,
+      "SHA256": "ce3109d5ddfb5cc257fe7ce3865d8c225510e0214eb6b1da3bbd8fb83d81b7b6"
+    },
+    "handoff/hourly-targeted-r01/quick-install/START QUICK UPDATE.txt": {
+      "Bytes": 5403,
+      "SHA256": "dfd5f77e314acea34de4229a33ad67b75a43e2847efd82c8f30ca63a02ff02a7"
+    },
+    "handoff/hourly-targeted-r01/quick-install/VALIDATION.json": {
+      "Bytes": 852,
+      "SHA256": "d2da64de2d2a4b95c1a25dba79bc655923be7345271e9cff541aeb5e022ef051"
+    },
+    "handoff/hourly-targeted-r01/quick-install/build_quick.py": {
+      "Bytes": 3585,
+      "SHA256": "098f1d7804e65ce184c098dad4187bf138951a156df3a4f5f2a796dccf097e44"
+    },
+    "handoff/hourly-targeted-r01/quick-install/install_hourly.py": {
+      "Bytes": 8100,
+      "SHA256": "766df9ad0c8fbdd94609ac9a3d71bc3aab4260fa788210d266cf8d9061cd6eb6"
+    },
+    "handoff/hourly-targeted-r01/quick-install/test_install_hourly.py": {
+      "Bytes": 10674,
+      "SHA256": "f603d418a16efe6eb3ee0385fd3e8bfa18d792e917b5159d86d154b8eb47620c"
     }
   }
 }
