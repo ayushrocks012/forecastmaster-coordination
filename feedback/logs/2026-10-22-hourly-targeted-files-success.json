@@ -1,0 +1,85 @@
+{
+  "EvidenceSource": "Operator-supplied Fabric outputs in this chat; not a live API query by the agent",
+  "ObservedDate": "2026-10-22",
+  "NotebookInstallation": {
+    "Status": "HOURLY_NOTEBOOK_UPDATED",
+    "NotebookID": "e2e0952d-4317-4936-bf0f-2c34698371dc",
+    "ChangedCells": [
+      4,
+      8,
+      10,
+      12
+    ],
+    "Backup": "Files/ForecastMasterRefreshState/upgrades/hourly-files-r01-20261022T124910050116Z.json",
+    "WorkbookReads": 0,
+    "RefreshStarted": false
+  },
+  "FunctionsPublication": "Operator confirmed published successfully before the run",
+  "MetadataDetector": {
+    "Function": "checkDemandChangesR05",
+    "InvocationID": "fd2abf42-878c-439b-bcf0-7d42a14aeb4f",
+    "Status": "CHANGED",
+    "NeedsRefresh": true,
+    "CurrentFiles": 8,
+    "ChangedFiles": [
+      "2026/10 Oct 26/Bridge Files/UK_Core Oral_Bridge_Oct 26_EF-Sep 26_IMS-Aug 26_ADS.xlsm",
+      "2026/10 Oct 26/Bridge Files/UK_Paed SIP_Bridge_Oct 26_EF-Sep 26_IMS-Aug 26_ADS.xlsm"
+    ],
+    "RemovedFiles": [],
+    "WorkbookContentsRead": false,
+    "CapturedAtUtc": "2026-10-22T13:29:18.115757+00:00",
+    "Fingerprint": "e69eb5a727d872dfc755b40e697226ed66bc85215c3b36592163ed67d5c9515b",
+    "DirectoriesListed": 291,
+    "ListingSeconds": 62.052,
+    "ActivityDurationSeconds": 68
+  },
+  "NotebookRun": {
+    "ActivityStatus": "Succeeded",
+    "RunID": "4334a8e0-9085-4e10-be2f-cd8a910f2da3",
+    "SessionID": "6be85012-d5db-4a39-b7f5-8a94b91096b3",
+    "RunStartTime": "2026-10-22T13:29:29.7059927Z",
+    "RunEndTime": "2026-10-22T13:33:42.4667036Z",
+    "ActivityDurationSeconds": 261
+  },
+  "WorkerResult": {
+    "Status": "SUCCESS",
+    "Mode": "HOURLY",
+    "RefreshMode": "FILES",
+    "BatchID": "5e9e54d3-8cb0-44fe-b20c-263bfd6d3994",
+    "RunID": "a4f2fde6-8184-4d1b-87d1-0ff469b46bf9",
+    "StartedAtUtc": "2026-10-22T13:29:44.669036+00:00",
+    "FinishedAtUtc": "2026-10-22T13:33:40.210263+00:00",
+    "FileResults": {
+      "SUCCEEDED": 2
+    },
+    "UpdatedFiles": 2,
+    "DecodedChangedFiles": 2,
+    "CurrentReportFiles": 8,
+    "ContentChecksRequested": 2,
+    "StoragePolicy": "RETAIN_IMPORTED_REVISIONS",
+    "ReportSelectionPolicy": "CURRENT_FILE_PER_PATH",
+    "StageErrors": [],
+    "SecondsAfterSessionReady": 226.276,
+    "MetadataFingerprint": "e69eb5a727d872dfc755b40e697226ed66bc85215c3b36592163ed67d5c9515b",
+    "BaselineReceipt": "metadata-baselines/5e9e54d3-8cb0-44fe-b20c-263bfd6d3994.json",
+    "ModelRefresh": {
+      "Status": "COMPLETED",
+      "RequestID": "ae66b514-0467-44aa-a203-badc9904240f",
+      "Confirmation": "RequestID"
+    }
+  },
+  "ReceivingGates": {
+    "NotebookInstalled": "CONFIRMED",
+    "FunctionsPublished": "OPERATOR_CONFIRMED",
+    "ChangedFilesTargetedRun": "CONFIRMED: 2 source revisions processed in FILES mode; 8 current report files",
+    "ModelCompletion": "CONFIRMED_BY_REQUEST_ID",
+    "UnchangedRunSkipsNotebookAfterPatch": "PENDING",
+    "ScheduleReenabledAfterPatch": "PENDING",
+    "OlderCycleCorrectionInFabric": "NOT_RUN",
+    "RemovalRenameInFabric": "NOT_RUN",
+    "FailureRetryInjectionInFabric": "NOT_RUN",
+    "IndependentHistoricalRowAudit": "NOT_RUN",
+    "MeasuredCUBeforeAfter": "NOT_RUN"
+  },
+  "Interpretation": "FILES targets only changed source paths in Spark. The metadata detector still lists 291 directories; Spark session startup, required Delta work and model refresh remain. No measured percentage saving or all-scenario cloud acceptance is claimed."
+}
