@@ -1,6 +1,14 @@
 # OneLake R17.1 isolated qualification candidate
 
-**Current receiving step: [TEST feed repair R02](measure-repair-r02/OPEN%20FIRST.txt).**
+**Current receiving step: [open the TEST report in Desktop](OPEN%20TEST%20REPORT%20-%20STEPS.txt).**
+The operator supplied R02 success for nine measures with full backup verification
+and model/cloud-preservation flags, followed by a TEST refresh Completed with no
+warnings. These are company receiving results reported by the operator, not a
+new query from this host. Do not rerun creation, setup, repair or refresh for the
+Desktop-opening step. Native rendering, export, zoom, numerical reconciliation
+and the documented R17 parity gaps remain unqualified. Production stays R16.6.
+
+**Earlier receiving step: [TEST feed repair R02](measure-repair-r02/OPEN%20FIRST.txt).**
 The operator's R01 repair stopped at the backup comparison before reaching a
 model write. R02 verifies a complete copied backup by UTF-8 length/SHA256 and
 retains the same nine-measure fix and model/cloud preservation checks. The exact

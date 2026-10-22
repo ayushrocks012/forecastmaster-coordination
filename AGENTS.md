@@ -234,3 +234,15 @@ Unicode files, truncated/same-length corrupt copies and cleanup. Actual company
 R02 verification, repair and clean refresh remain pending. Preserve all R01
 files and partial company backups; run one NEW R02 cell, never Run all or the
 old failed cell. Refresh TEST once only after a successful repair result.
+
+The operator subsequently supplied R02 TEST_FEED_REPAIRED with nine measures,
+full-file UTF-8 backup hash/length verification, remaining definition preserved
+and cloud mapping preserved. They then reported TEST refresh Completed with no
+warnings. Company repair and clean TEST processing are now receiving-confirmed;
+this host did not independently query that run. Continue with report-native-
+onelake-r17.1/OPEN TEST REPORT - STEPS.txt and the existing TEST-bound ZIP.
+Do not rerun creation/setup/repair/refresh merely to open the report. Desktop
+rendering, filters, native zoom/export, company numerical reconciliation,
+refresh propagation, performance and the documented R17 feature/calculation
+parity gaps remain open. Keep production R16.6 in place. All existing source,
+creation/repair code, local test receipts and both report ZIPs remain unchanged.

@@ -1,13 +1,11 @@
 # Current native report step - 22 October 2026
 
-The R17.1 TEST feed repair R01 stopped at backup verification **before any model
-write**. Continue with
-[TEST feed repair R02](handoff/report-native-onelake-r17.1/measure-repair-r02/OPEN%20FIRST.txt).
-It verifies the complete backup file by UTF-8 byte count/SHA256 rather than a
-preview read. Run its one NEW cell in ForecastMaster_GM_Setup; refresh TEST once
-only after repair succeeds. The nine inherited DAX metadata warnings remain
-unresolved until company repair/readback and a clean refresh are confirmed.
-Do not rerun creation or the older reporting setup. No source or policy change.
+The operator confirmed **R02 repair succeeded and TEST refresh Completed with
+no warnings**. Continue with
+[Open the TEST report in Desktop](handoff/report-native-onelake-r17.1/OPEN%20TEST%20REPORT%20-%20STEPS.txt).
+Pull Coordination, extract the existing TEST ZIP to a new Desktop folder and
+open its .pbip. Do not repeat creation/setup/repair or refresh for this step.
+Native rendering, zoom/export and company numerical parity remain separate checks.
 Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
 R16.6 report. Test-model creation, processing, business parity and publication
 are separate stages. The repository and original setup instructions follow.

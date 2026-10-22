@@ -1,0 +1,34 @@
+{
+  "Evidence": "Operator-supplied R02 receipt and subsequent clean refresh confirmation, 22 October 2026",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "Repair": {
+    "Stage": "TEST_FEED_REPAIRED",
+    "RepairVersion": "R02",
+    "BackupVerification": "FULL_FILE_UTF8_SHA256_AND_LENGTH",
+    "MeasuresChanged": 9,
+    "OtherModelDefinitionPreserved": true,
+    "CloudConnectionPreserved": true,
+    "OriginalModelWriteRequested": false,
+    "SourceAmountsQueried": false,
+    "RefreshRequested": false,
+    "ReportPublished": false,
+    "BackupFolderWithinCompanyLakehouse": "Files/ForecastMasterRefreshState/report-upgrades/Native-R171-Feed-R02/20261022T145126-b94d2f6c-044b-4b15-bce2-7eafb73979c3",
+    "OperationIDs": [
+      "74282a0f-7606-44c5-a222-9b5062d6e47b",
+      "be8e6789-df86-41e5-864e-12851aa17937",
+      "16af7802-89cb-42dd-8206-3098922c6259",
+      "415fab8e-a8f3-489f-acb6-96e071f9bf84"
+    ]
+  },
+  "SubsequentTestRefresh": {
+    "Status": "Completed",
+    "Warnings": false,
+    "Evidence": "Operator text confirmation; not independently queried by this host"
+  },
+  "Next": "Open the existing TEST-bound thin report in Desktop",
+  "NativeDesktopRendering": "PENDING",
+  "NativeExportAndZoom": "PENDING",
+  "CompanyNumericalParity": "PENDING",
+  "R17CapabilityGapsClosed": false,
+  "ProductionReportReplaced": false
+}

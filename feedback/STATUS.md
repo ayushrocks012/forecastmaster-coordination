@@ -1245,3 +1245,25 @@ These simulations do not prove the receiving mismatch cause or live Fabric
 success. GitNexus edit-impact remained UNAVAILABLE with authority drift; direct
 tracing and focused tests provide bounded fallback. Company R02 full-file
 verification, repair, warning-free refresh and native/R16.6 parity remain pending.
+
+## 22 October 2026 — R02 repair and clean TEST refresh confirmed by operator
+
+The operator supplied TEST_FEED_REPAIRED for TEST
+31d00232-ac03-48fe-af39-f2e4bae82443: RepairVersion R02, nine measures changed,
+full-file UTF-8 byte count/SHA256 verification, remaining definition preserved
+and cloud mapping preserved. The receipt reported no original-model write,
+source amount query, explicit refresh or report publication. Its private company
+backup remains under Native-R171-Feed-R02/20261022T145126-b94d2f6c-044b-4b15-bce2-
+7eafb73979c3. The next operator message confirms TEST refresh Completed with no
+warnings. These results supersede the earlier pending repair/processing state;
+the run was not independently queried by this host. The receiving record is
+feedback/logs/2026-10-22-native-r171-repaired-and-refresh-clean.json.
+
+Continue with OPEN TEST REPORT - STEPS.txt. The existing candidate ZIP is still
+byte-identical (49b14405b512e1693e649226d81ebcc7857ee55ff0aae6fd98d3223813859713)
+and bound to the correct TEST model ID/name. Extract it to a new Desktop folder
+and open its PBIP; no further model setup, repair or refresh is needed just to
+open it. Native rendering/selection/zoom/export, company reconciliation,
+refresh propagation/performance and the R17 capability/calculation gaps remain
+unqualified. Production R16.6 is not replaced. No creation/repair code, old local
+validation receipt, report payload or source data is changed by this status step.

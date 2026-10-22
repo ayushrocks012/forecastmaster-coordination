@@ -1,0 +1,50 @@
+FORECASTMASTER NATIVE R17.1 - OPEN THE TEST REPORT IN DESKTOP
+
+CONFIRMED BY OPERATOR - 22 OCTOBER 2026
+R02 repaired nine inherited measures and confirmed full definition/cloud-mapping
+preservation. The subsequent TEST model refresh Completed with NO warnings.
+No further creation, setup, repair or model refresh is required for this step.
+
+ON YOUR WORK LAPTOP
+1. Open forecastmaster-coordination in VS Code > Terminal > New Terminal.
+   Use PowerShell and run:
+
+   git pull --ff-only
+   explorer.exe .\handoff\report-native-onelake-r17.1\candidate
+
+2. Right-click ForecastMaster Native Review R17.1 TEST.zip > Extract All.
+   Choose a NEW Desktop folder named ForecastMaster Native Review R17.1 TEST.
+   Extract the complete ZIP, not individual files.
+
+3. In the extracted folder open:
+   ForecastMaster Native Review R17.1 TEST.pbip
+
+   Expected location (replace YOUR-WINDOWS-USER):
+   C:\Users\YOUR-WINDOWS-USER\Desktop\ForecastMaster Native Review R17.1 TEST\ForecastMaster Native Review R17.1 TEST.pbip
+
+   Keep ForecastMaster Native Review R17.1 TEST.Report beside the .pbip file.
+   Open from the extracted folder, never from inside the ZIP. Use your normal
+   company Power BI account if a sign-in prompt appears. The thin report is
+   already bound to TEST model 31d00232-ac03-48fe-af39-f2e4bae82443; no rebind or
+   local model installer is required.
+
+4. In Desktop select Demand review. Choose UK, October 2026, Core Oral,
+   Market units and Selling units, where those choices are available.
+   Confirm native chart/table figures load. Try View > Page view > Fit to width
+   and Fit to page, and the native zoom slider.
+
+5. Select S&OP review. Choose Community > its blank sub-channel context >
+   Market units. Explicit Channel/context/Measure choices are required here.
+   Confirm the native chart/table load. Then add Unit share % to inspect its
+   percentage axis. Send screenshots of both native pages, or the first error.
+
+The candidate also retains Advanced workspace (R16.6 fallback), Export data,
+and Refresh Demand. Native matrix export can be checked after initial rendering.
+The Refresh Demand button still targets the ORIGINAL production refresh path;
+it is not a control for refreshing this separate TEST model.
+
+KEEP AS A TEST
+Do not publish or replace the existing ForecastMaster Review. A clean semantic
+model refresh confirms processing only. Native rendering/filter/zoom/export,
+company numerical reconciliation, refresh propagation and performance still need
+receiving checks. The documented R17 capability/calculation gaps remain open.

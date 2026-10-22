@@ -2,12 +2,10 @@ FORECASTMASTER ONELAKE R17.1 - CREATE A SEPARATE TEST MODEL
 
 CREATION NOW COMPLETE - OPERATOR RESULT RECEIVED 22 OCTOBER 2026
 The existing TEST model ID is 31d00232-ac03-48fe-af39-f2e4bae82443.
-Do not rerun the creation cell. Latest refresh completed WITH WARNINGS in nine
-inherited feed expressions. The R01 repair stopped at backup verification before
-any model write. Continue with measure-repair-r02/OPEN FIRST.txt instead.
-The earlier connection error did not recur. Actual company repair and a clean
-refresh remain pending. After that, the existing NEXT - REFRESH AND OPEN TEST.txt
-supplies the Desktop-opening steps.
+R02 repaired nine inherited feed expressions and the operator confirmed the
+subsequent TEST refresh Completed with NO warnings. Continue with OPEN TEST
+REPORT - STEPS.txt. No creation, setup, repair or refresh rerun for this step.
+Native rendering/export/zoom and company numerical parity are still unverified.
 The creation instructions below are retained for the original package history.
 
 Your two probes are complete. They confirmed Direct Lake on OneLake via
