@@ -1,0 +1,32 @@
+ON THE WORK LAPTOP - OPEN THE NATIVE SAMPLE PREVIEW
+
+1. Open your existing forecastmaster-coordination folder in VS Code.
+2. Choose Terminal > New Terminal. The terminal must be inside this repository.
+3. Run:
+
+   git pull --ff-only
+   explorer.exe .\handoff\report-native-r17\preview
+
+4. In File Explorer, right-click:
+   ForecastMaster Native Preview R17 - SYNTHETIC.zip
+   Choose Extract All. Extract into a NEW Desktop folder named:
+   ForecastMaster Native Preview R17
+5. Open the extracted folder. Double-click:
+   ForecastMaster Native Preview - SYNTHETIC.pbip
+
+The extraction contains the .pbip and its .Report/.SemanticModel folders.
+Keep all of them together. Open the extracted PBIP, not a file inside the ZIP.
+All figures are fabricated. This preview has no company connection or real
+Refresh Demand action. Do not publish it over ForecastMaster Review.
+
+The repository's documented default location is:
+  %USERPROFILE%\source\forecastmaster-coordination
+Your actual clone can be elsewhere; use the folder already open in VS Code.
+
+REAL COMPANY DATA - A SEPARATE PRIVATE FILE
+ForecastMaster Native Review R17 - Candidate.zip was created on the preparation
+laptop at C:\Users\Ayush\Downloads. It is not in this public Git repository.
+Copy that ZIP to the work laptop using your approved private file-transfer route.
+Extract it into a NEW folder. Its OPEN FIRST.txt starts with the read-only
+PROBE NATIVE MODEL.py step; leave MODE = "PROBE". Do not run PREPARE/APPLY or
+publish the report simply because the preview opened.

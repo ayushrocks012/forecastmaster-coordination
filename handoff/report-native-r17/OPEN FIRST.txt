@@ -9,6 +9,9 @@ plan-rate entry. Exact native parity and real company performance are not yet
 confirmed. README.md lists the remaining differences explicitly.
 
 OPTIONAL FIRST LOOK - NO COMPANY CONNECTION
+On the other laptop, start with WORK LAPTOP - OPEN PREVIEW.txt. The synthetic
+ZIP is now included in this repository under report-native-r17/preview/.
+The company-connected candidate ZIP is private and must be transferred separately.
 Extract ForecastMaster Native Preview R17 - SYNTHETIC.zip. Open the PBIP named
 ForecastMaster Native Preview - SYNTHETIC.pbip. Every figure is fabricated.
 Use this to inspect native layout, chart axes, zoom, slicers and export.

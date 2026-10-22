@@ -11,12 +11,18 @@ evidence for those bounded checks, not proof of complete UI or business parity.
 
 ## Open the result
 
-The private delivery contains two separate ZIPs in the user's Downloads folder:
+For the other laptop, follow **WORK LAPTOP - OPEN PREVIEW.txt**. After pulling
+Coordination, the sample ZIP is at
+`handoff/report-native-r17/preview/ForecastMaster Native Preview R17 - SYNTHETIC.zip`.
+Extract it before opening the PBIP; keep the report and semantic-model folders
+beside it. No builder, Python or npm step is required to view this preview.
 
-- **ForecastMaster Native Preview R17 - SYNTHETIC.zip**: open the labelled PBIP
+The original preparation laptop also has these two ZIPs in its Downloads folder:
+
+- **ForecastMaster Native Preview R17 - SYNTHETIC.zip** (also synced in `preview/`): open the labelled PBIP
   after extraction to inspect native visuals using fabricated data, with no
   company connection or real refresh action. Desktop rendering is unverified.
-- **ForecastMaster Native Review R17 - Candidate.zip**: company-bound thin report
+- **ForecastMaster Native Review R17 - Candidate.zip** (private; transfer separately): company-bound thin report
   and a default read-only model probe. Do not publish this over production yet.
 
 Start with the preview and then the read-only probe. A successful probe does not

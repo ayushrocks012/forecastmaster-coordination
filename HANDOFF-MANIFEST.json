@@ -3574,12 +3574,12 @@
       "SHA256": "f599c61e3f7cb2fed71c3d1e3ab88a8809abd0f38dcff8433f1abb93efd735fa"
     },
     "handoff/report-native-r17/OPEN FIRST.txt": {
-      "Bytes": 3019,
-      "SHA256": "de6e293d5a946da6834d7ad7151dcbda3995c4222cd1c13ff1c8e69b9d74fc9a"
+      "Bytes": 3253,
+      "SHA256": "af5fc1538d6a87617fc77650334dcee995475d09f16e48711a578425a86817a5"
     },
     "handoff/report-native-r17/README.md": {
-      "Bytes": 13142,
-      "SHA256": "212e6ff220110f8057644e1c9becf1bfd1d1c5cb24633648e498c105d9beb222"
+      "Bytes": 13559,
+      "SHA256": "07a524d07560a60421f1106424377dbf0932ee0ada783d90b37e872693875918"
     },
     "handoff/report-native-r17/VALIDATION-CONTROLS.json": {
       "Bytes": 172,
@@ -3668,6 +3668,14 @@
     "handoff/report-native-r17/tests/run_native_engine.ps1": {
       "Bytes": 2829,
       "SHA256": "c96d9287dae7d8cd5bad7c54dd609e4e2d35bdb20c52fc35735c235a0777d8e1"
+    },
+    "handoff/report-native-r17/preview/ForecastMaster Native Preview R17 - SYNTHETIC.zip": {
+      "Bytes": 537210,
+      "SHA256": "7a8c1805eb527225fad07f389da615baf924986f190277da5090f19310db47b4"
+    },
+    "handoff/report-native-r17/WORK LAPTOP - OPEN PREVIEW.txt": {
+      "Bytes": 1534,
+      "SHA256": "d5eac0ce4bbef367d2586cd75f4ae8c2ca71dcca3b5393aa893723e7d8ed01c3"
     }
   }
 }
