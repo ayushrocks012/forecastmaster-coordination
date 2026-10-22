@@ -1,0 +1,24 @@
+{
+  "Evidence": "Operator supplied output from SOURCE ROUTE - READ ONLY.py on 22 October 2026.",
+  "Result": {
+    "Mode": "PROBE",
+    "ProbeVersion": "SOURCE-ROUTE-R02",
+    "FactPartitionCount": 1,
+    "StorageModes": ["directLake"],
+    "EntitySourceKeys": ["entityName", "expressionSource", "schemaName", "type"],
+    "HasExpressionSourceReference": true,
+    "HasDataSourceReference": false,
+    "SchemaIsDbo": true,
+    "EntityMatchesFactName": true,
+    "ExpressionHints": [{"ReferencedByFact": true, "Kind": "m", "ConnectorHints": ["AzureStorage.DataLake"]}],
+    "DataSourceHints": [],
+    "ConnectionValuesPrinted": false,
+    "SourceAmountsRead": false,
+    "ModelUpdated": false,
+    "NextStep": "Inspect this source shape before adapting the installer."
+  },
+  "Interpretation": "Confirmed Direct Lake on OneLake. Original SQL-only R17 PREPARE/APPLY is incompatible.",
+  "CompanyNativeInstallation": false,
+  "NextReceivingStep": "Separate OneLake R17.1 TEST model creation; no production update.",
+  "ProductionParity": false
+}

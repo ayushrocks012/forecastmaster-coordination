@@ -1065,3 +1065,40 @@ clipboard/new-cell workflow in ForecastMaster_GM_Setup. Eight mocked source
 shape/privacy checks pass. No installer/model/business calculation change,
 storage-mode conversion, company refresh or publication was performed. The
 source route and native deployment remain pending the additional result.
+
+## 22 October 2026 — OneLake route confirmed; isolated R17.1 candidate prepared
+
+The operator's second read-only result confirms one Direct Lake entity fact
+partition, a named M expression using AzureStorage.DataLake, dbo schema and a
+matching fact entity. No dataSource reference or connection values were printed;
+source amounts were not read and the model was not updated. This supersedes
+the unresolved-route statements above. The raw value-free result is retained in
+feedback/logs/2026-10-22-native-r17-source-route.json. The original SQL-only R17
+PREPARE/APPLY cannot serve this route; its ZIP and business source remain intact.
+
+handoff/report-native-onelake-r17.1/ is a separate create-only qualification path.
+It creates ForecastMaster Native OneLake R17.1 - TEST, preserving the original
+Direct Lake tables and roles in that new model and adding 20 calculated metadata
+helpers. It has no original-model update, Delta write, worker installation,
+refresh, permission edit or report-publication endpoint. Existing test names and
+concurrent metadata changes are refused; create calls are not retried. The
+readable Python and single-code-cell notebook contain identical code, about
+62 KB, without the former giant encoded line. Receiving steps still use one new
+cell in ForecastMaster_GM_Setup; no Run all and no edits to the old setup cells.
+
+The chart helper uses catalogue identities instead of every rank permutation;
+table drag ordering retains the existing rank tokens. The model dependencies
+could keep source metadata inside the existing model refresh path, but Direct
+Lake referenced calculated tables are a Microsoft preview feature. Actual
+company creation, processing and source-change propagation remain unverified.
+The separate test model is not wired into the production worker schedule.
+
+Eleven local mocked preservation/API tests and 2,654 local Power BI engine
+checks pass. The latter use fabricated calculated/import sources and cover the
+prior numeric oracle plus dynamic metadata and chart selection at varied ranks.
+They do not qualify the Direct Lake preview or any company/native UI/export
+gate. GitNexus could not map Coordination: structure was unregistered and impact
+returned UNAVAILABLE/AUTHORITY_DRIFT_BLOCKS_CONCLUSION. Direct tracing and the
+focused tests provide bounded fallback evidence, not a zero-impact graph claim.
+The R17 capability gaps and additional numerical parity cases remain open.
+No company installation, production refresh or report replacement was performed.

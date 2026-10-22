@@ -1,5 +1,13 @@
 ON THE WORK LAPTOP - COMPANY-CONNECTED NATIVE R17 CANDIDATE
 
+CURRENT SOURCE ROUTE - 22 OCTOBER 2026
+Both probes are complete. The company model is Direct Lake on OneLake, using
+AzureStorage.DataLake. The original SQL installer below does not apply to it.
+Do not run PREPARE/APPLY or NATIVE VIEWS.sql. Open instead:
+  ..\report-native-onelake-r17.1\OPEN FIRST - ONELAKE.txt
+This creates a separate TEST model. Keep production R16.6 and the original ZIP.
+The original candidate/report-opening instructions follow for reference.
+
 The candidate is now in Coordination. No private file transfer or builder is
 needed. This is a thin report: it retains the company-model connection, but
 contains no cached sales model and requires your normal company sign-in.

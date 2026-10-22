@@ -1,0 +1,15 @@
+{
+  "Checks": 2654,
+  "Failures": [],
+  "Evidence": "Local Power BI engine, all source facts synthetic/calculated. No company data.",
+  "ReceivingDirectLakePreview": "UNVERIFIED",
+  "DesktopUIOrExport": "UNVERIFIED",
+  "CurrentFixtureMatchesRetainedEngineInput": true,
+  "EngineInputSHA256": "6cbacc1a25cd1b49b574d6e307dc5979979cb6de80487cfaca7827e205b7cd52",
+  "EngineResultSHA256": "152146e15d276577d25c93f0e0966548ea31871d28992eae880924ec9d740552",
+  "SourceSHA256": {
+    "handoff/report-native-onelake-r17.1/onelake_model.py": "99b264563346a9bd1711ebd2c7835f24dd100e56dcba30d2ed779b5e5761acae",
+    "handoff/report-native-onelake-r17.1/tests/engine_fixture.py": "db279e94c2e2adc1317f4cae0cc58e530098b55d605c584d9bb0cc14e3e11a54",
+    "handoff/report-native-r17/native_model.py": "798e597c17bb048264b9613cb125bd344bebfa20a0c5da5137764633c3ff9e28"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "Tests": 11,
+  "Passed": true,
+  "Evidence": "Local synthetic metadata and mocked Fabric API only.",
+  "CompanyCreatedOrUpdated": false,
+  "DirectLakePreviewProcessing": "UNVERIFIED",
+  "BusinessParityWithR166": "NOT COMPLETE"
+}

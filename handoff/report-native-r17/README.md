@@ -53,6 +53,18 @@ API references: [model definition read](https://learn.microsoft.com/en-us/rest/a
 
 ## Receiving source-mode result
 
+**Latest result, 22 October 2026:** the second read-only probe confirmed the
+fact partition references an M `AzureStorage.DataLake` expression. The company
+model is Direct Lake on OneLake. Both probes are complete; no model was changed.
+Do not use this frozen ZIP's SQL PREPARE/APPLY or `NATIVE VIEWS.sql`.
+Continue with [OneLake R17.1 OPEN FIRST](../report-native-onelake-r17.1/OPEN%20FIRST%20-%20ONELAKE.txt),
+which creates a separate TEST semantic model and retains production R16.6.
+Its Direct Lake calculated-table preview processing and company acceptance
+remain unverified. It does not close the R17 capability/parity gaps.
+
+The following records the earlier diagnostic sequence, now superseded by the
+confirmed OneLake route:
+
 The operator's first probe on 22 October 2026 reported one `directLake` / `entity`
 fact partition, 15 model tables, zero native tables and zero model-defined roles,
 with no source amounts queried and no model update. The initial expression-only

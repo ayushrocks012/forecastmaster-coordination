@@ -155,3 +155,20 @@ STEPS.txt; it emits only property names and allowlisted connector/type hints,
 not connection values. Eight local mocked source/privacy checks pass. Keep the
 original probe/installer ZIP/business code intact until actual source shape is
 known. Model-role count zero is not a verdict on workspace/item authorization.
+
+The operator's second probe on 22 October confirms the fact's named M expression
+uses AzureStorage.DataLake: the company model is Direct Lake on OneLake. This
+supersedes the unresolved route above. Both probes are complete; do not request
+another broad source-mode probe or use the old SQL-only R17 PREPARE/APPLY.
+The new receiving package is handoff/report-native-onelake-r17.1/OPEN FIRST -
+ONELAKE.txt. It creates one separate ForecastMaster Native OneLake R17.1 - TEST
+model only, copying the original tables/roles/source without modifying production.
+Twenty calculated metadata helpers replace the SQL views/static Delta helpers.
+Calculated tables referencing Direct Lake are a Microsoft preview capability:
+company creation, processing and actual refresh propagation remain gates.
+The separate TEST model is not scheduled by the production refresh worker.
+Eleven mocked API/preservation tests and 2,654 synthetic local engine checks pass;
+the engine sources are calculated/import and do not prove the Direct Lake preview
+or Desktop/Service rendering/export. Keep R17's unresolved native feature and
+calculation parity gaps explicit. Do not replace production R16.6 from this
+create-only step. Preserve the original ZIP and source adapter bytes.

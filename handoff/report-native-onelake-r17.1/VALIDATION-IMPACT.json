@@ -1,0 +1,13 @@
+{
+  "GraphConclusion": "UNKNOWN",
+  "StructureQuery": "Coordination repository not registered by GitNexus.",
+  "Impact": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+  "ChangeScope": "Failed closed: analysis_incomplete and interface_classification_incomplete.",
+  "ZeroImpactClaim": false,
+  "BoundedFallback": [
+    "Directly traced native_model.extend_model, measures, source metadata, report helper relationships and candidate API calls.",
+    "Original R17 source/installer/ZIPs remain byte-preserved.",
+    "11 mocked API/preservation tests and 2654 synthetic local Power BI engine checks passed."
+  ],
+  "LiveCompanyMutation": false
+}

@@ -1,3 +1,12 @@
+# Current native report step - 22 October 2026
+
+The two receiving probes confirmed **Direct Lake on OneLake**. For the next
+isolated TEST model step open
+[OneLake R17.1 instructions](handoff/report-native-onelake-r17.1/OPEN%20FIRST%20-%20ONELAKE.txt).
+Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
+R16.6 report. Test-model creation, processing, business parity and publication
+are separate stages. The repository and original setup instructions follow.
+
 # Connect the Abbott laptop using VS Code and SSH
 
 Use the GitHub account `ayushrocks012`. Open **VS Code → Terminal → New Terminal** and choose **PowerShell** from the terminal profile dropdown. These steps use a laptop-specific SSH key and repository-local Git settings; they do not need the Windows ssh-agent service or an elevated terminal.

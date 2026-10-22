@@ -1,0 +1,60 @@
+FORECASTMASTER ONELAKE R17.1 - CREATE A SEPARATE TEST MODEL
+
+Your two probes are complete. They confirmed Direct Lake on OneLake via
+AzureStorage.DataLake, one entity partition and no installed fm_native_* tables.
+Do not run the old R17 SQL PREPARE/APPLY or NATIVE VIEWS.sql for this model.
+
+THIS STEP
+Creates one NEW semantic model in UK-ANI-Demand named:
+  ForecastMaster Native OneLake R17.1 - TEST
+
+It retains the original tables and source connection in the new test model and
+adds 20 calculated metadata helpers. It never updates the original model or
+report, changes source tables, installs a refresh worker, changes permissions,
+refreshes the original model, or publishes a report. It does not query sales
+amounts. The original ForecastMaster Demand Model and published R16.6 remain
+the working version. No new authentication setup or tenant-admin request.
+
+ON THE WORK LAPTOP
+1. Open your forecastmaster-coordination folder in VS Code. Open its PowerShell
+   terminal. Run these two lines:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-onelake-r17.1\CREATE ONELAKE TEST MODEL.py" | Set-Clipboard
+
+2. In the Fabric browser, open UK-ANI-Demand > ForecastMaster_GM_Setup.
+3. Add ONE NEW Python/PySpark code cell. Paste with Ctrl+V.
+4. Run ONLY that cell using the play button next to it. Do not choose Run all.
+   Leave all existing setup and refresh cells as they are.
+5. Wait for the result, then send the complete short output to this chat.
+
+The pasted file is about 62 KB of readable Python, with no giant encoded payload.
+You do not need to copy anything out of Notepad or copy the JSON of a notebook.
+Alternatively, Fabric can IMPORT the supplied .ipynb as a separate notebook;
+open it in Fabric rather than opening its JSON in Notepad. Use either method
+once. Both contain the exact same single code cell.
+
+EXPECTED RESULT
+  Stage: ONELAKE_TEST_CREATED
+  TestModelName: ForecastMaster Native OneLake R17.1 - TEST
+  TestModelID: a NEW identifier
+  OriginalModelUnchanged: true
+  OriginalTablesCopiedExactly: true
+  OriginalRolesCopiedExactly: true
+  NativeCalculatedHelpers: 20
+  HelperDefinitionsConfirmed: true
+  OriginalModelUpdated: false
+  RefreshRequested: false
+  ReportPublished: false
+
+If it reports that TEST already exists, keep it and send the output. Do not
+delete, overwrite, rename, or rerun it to clear the guard. If a create operation
+times out, its printed operation ID and workspace TEST item must be checked
+before any retry. The script never automatically retries a creation.
+
+STOP AFTER THIS STEP
+Creation/readback alone does not prove processing or business parity. Calculated
+tables referencing Direct Lake are a Microsoft preview capability. The next
+receiving gate is processing and checking this TEST model only. A creation
+success label does not establish processing, production installation or parity.
+The existing R17 capability gaps and R16.6 fallback still apply.

@@ -1,5 +1,12 @@
 SECOND READ-ONLY CHECK - IDENTIFY THE DIRECT LAKE SOURCE ROUTE
 
+COMPLETED: the operator's 22 October result confirms AzureStorage.DataLake and
+therefore Direct Lake on OneLake. Do not repeat this probe or run the old SQL
+PREPARE/APPLY. The next receiving file is:
+  ..\report-native-onelake-r17.1\OPEN FIRST - ONELAKE.txt
+It creates a separate TEST model; production R16.6 stays in place.
+The original diagnostic instructions below are historical.
+
 The first probe succeeded: one Direct Lake entity partition, 15 model tables,
 no fm_native_* tables and no update. Its SQL connector-text check returned false.
 That result alone does not distinguish an M connection expression, a named

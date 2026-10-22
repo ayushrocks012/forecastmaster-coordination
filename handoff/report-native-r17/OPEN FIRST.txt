@@ -1,5 +1,14 @@
 FORECASTMASTER NATIVE REVIEW R17 - QUALIFICATION CANDIDATE
 
+CURRENT COMPANY ROUTE - TWO PROBES COMPLETE, 22 OCTOBER 2026
+The source is confirmed Direct Lake on OneLake (AzureStorage.DataLake).
+This preserved R17 ZIP has a SQL-only installer. Do not run its PREPARE/APPLY
+or NATIVE VIEWS.sql. The current receiving step is the separate TEST model:
+  ..\report-native-onelake-r17.1\OPEN FIRST - ONELAKE.txt
+It does not update the original model or report. R17 parity remains incomplete.
+The earlier probe/SQL instructions below are retained for package history;
+they are superseded for this company's confirmed source route.
+
 Keep the published ForecastMaster Review (R16.6) as it is.
 Do not publish this candidate over it yet.
 
@@ -19,7 +28,7 @@ ForecastMaster Native Preview - SYNTHETIC.pbip. Every figure is fabricated.
 Use this to inspect native layout, chart axes, zoom, slicers and export.
 Do not publish the sample preview as the company report.
 
-FIRST COMPANY STEP ON THE WORK LAPTOP - READ ONLY
+HISTORICAL FIRST COMPANY STEP - NOW COMPLETED
 Use READABLE PROBE - STEPS.txt and PROBE ONLY - READABLE.py directly from the
 Coordination repository. The old combined installer in the ZIP has a very long
 compressed line and is not needed for this metadata-only step.
@@ -29,7 +38,7 @@ Python code cell and run only that cell, with MODE = "PROBE". Retain old cells.
 The probe reads metadata only; it cannot install, query sales, refresh or publish.
 Send its short output so the actual source mode can be checked first.
 
-AFTER SOURCE COMPATIBILITY AND THE OFFLINE UI CHECKS ARE CONFIRMED
+HISTORICAL SQL-ONLY INSTALLATION PATH - DO NOT USE FOR THIS ONELAKE MODEL
 The same notebook cell has separate PREPARE and APPLY stages. PREPARE adds new
 metadata tables under the existing writer lease. Run NATIVE VIEWS.sql in the
 existing lakehouse SQL endpoint, verify its five views, then APPLY the additive
