@@ -1,5 +1,33 @@
 # Company setup status
 
+## 22 October 2026 — R16.5 corrects interpolated monthly hover
+
+The operator reported tooltip amounts changing on tiny pointer movements although
+the source data is monthly. Direct source inspection and a synthetic replay of
+the preserved R16.4 package reproduce this in both Demand and S&OP: the label
+rounded to a month while the amount interpolated between adjacent month points.
+
+R16.5 reads the nearest existing monthly point and snaps guide/markers to it.
+Values stay fixed until the nearest month changes. Blank points are not filled;
+zero, a valid neighbour, the final month and a single-month view remain usable.
+If no selected series has data, the tooltip says so. Pinning and logical zoom
+coordinates are retained; drawn lines and numerical calculations are unchanged.
+
+Local package tests pass for both modes at 50%, 80% and 100%, exact actual/
+forecast/trend amounts, USD conversion and weighted Share, boundaries/pinning,
+blank/zero and endpoints. The viewport regression now requires identical monthly
+tooltips across zoom, replacing its former interpolation tolerance. TypeScript,
+package lint/build, aggregate/selection/cache/FX and ten available project-schema
+checks pass. Two retained schema URLs remain unavailable. The full R16.4 numeric
+engine, source/transport, layout/viewport/order, setup/rules and all 59 tracked
+R16.4 files are byte-preserved. GitNexus remains partial/UNKNOWN and is supplemented
+by direct tracing and focused tests. Original connection/feed, native Refresh
+Demand and rollback source remain preserved in a new private PBIP/ZIP. No company
+source/model/Fabric/Service content was modified. Setup/model refresh must not be
+repeated for this update. Native rendering/zoom/drag, company reconciliation,
+measured speed and publication remain receiving gates.
+
+
 ## 22 October 2026 — R16.3 received; R16.4 native canvas, periods and ordering
 
 The operator's screenshots confirm R16.3 opens with the compact cascading scope

@@ -1,0 +1,62 @@
+{
+  "evidence": "SYNTHETIC packaged visual in Edge; native receiving check pending",
+  "priorR16_4InterpolationReproducedInBothViews": true,
+  "monthlyHoverChecks": [
+    {
+      "mode": "demand",
+      "width": 1440,
+      "stableWithinMonth": true,
+      "exactMonthlyValues": true,
+      "guideAndMarkersSnapped": true,
+      "boundariesAndPin": true
+    },
+    {
+      "mode": "demand",
+      "width": 720,
+      "stableWithinMonth": true,
+      "exactMonthlyValues": true,
+      "guideAndMarkersSnapped": true,
+      "boundariesAndPin": true
+    },
+    {
+      "mode": "demand",
+      "width": 1152,
+      "stableWithinMonth": true,
+      "exactMonthlyValues": true,
+      "guideAndMarkersSnapped": true,
+      "boundariesAndPin": true
+    },
+    {
+      "mode": "sop",
+      "width": 1440,
+      "stableWithinMonth": true,
+      "exactMonthlyValues": true,
+      "guideAndMarkersSnapped": true,
+      "boundariesAndPin": true
+    },
+    {
+      "mode": "sop",
+      "width": 720,
+      "stableWithinMonth": true,
+      "exactMonthlyValues": true,
+      "guideAndMarkersSnapped": true,
+      "boundariesAndPin": true
+    },
+    {
+      "mode": "sop",
+      "width": 1152,
+      "stableWithinMonth": true,
+      "exactMonthlyValues": true,
+      "guideAndMarkersSnapped": true,
+      "boundariesAndPin": true
+    }
+  ],
+  "weightedShareExact": true,
+  "USDValueForecastAndTrendExact": true,
+  "missingMonthNeverInterpolated": true,
+  "numericZeroVisible": true,
+  "validMonthBesideGapVisible": true,
+  "oneMonthAndFinalMonthSupported": true,
+  "modelFetches": 0,
+  "browserErrors": []
+}

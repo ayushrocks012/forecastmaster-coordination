@@ -1,0 +1,10 @@
+{
+  "packageVersion": "16.0.5.0",
+  "typescript": "PASS",
+  "packageLint": "PASS",
+  "packageBuild": "PASS",
+  "packageSHA256": "fba9e83ab8714bc28cd698ec4e7da30dd9489843b8c3ed43670ad0563776e777",
+  "optionalFeatureRecommendationsQualified": false,
+  "companyNativeRender": "PENDING",
+  "companyPerformance": "UNMEASURED"
+}

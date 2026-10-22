@@ -1,0 +1,30 @@
+FORECASTMASTER GM REVIEW R16.5 - EXACT MONTHLY HOVER
+
+Keep R16.4 and its ZIP. This is a separate report-only correction to graph hover.
+Do NOT repeat reporting setup or trigger a model refresh to install this update.
+
+1. Close the old project in Power BI Desktop.
+2. Extract the WHOLE R16.5 ZIP into a NEW ordinary folder on the work laptop.
+3. Open ForecastMaster GM Review / ForecastMaster GM Review.pbip, retaining the
+   .Report folder beside it. Wait for saved data; confirm R16.5 in the header.
+4. Choose a known driver/measure. Hover close to a monthly point and move slightly
+   left/right: the month and amount should stay fixed until the nearest month
+   changes. The guide and markers should sit on the selected monthly point.
+5. Check one actual month and one forecast month against the bridge. Repeat in
+   S&OP, with Share on the right axis, then Value/USD with your plan rate.
+6. A missing point must not acquire an interpolated amount. Numeric zero remains
+   visible. Check the last month, a one-month calendar and click-to-pin.
+7. Try native 80%/100% zoom: the same selected month should show the SAME value.
+   R16.4's taller canvas and Fit to width remain. Native zoom/drag, company totals
+   and measured speed still need your separate receiving checks.
+8. Save as a NEW PBIX after checking. Verify the preserved Refresh Demand page.
+   Send any mismatch before publishing/replacing the existing shared report.
+
+R16.4 FEATURES RETAINED
+Shared driver/tier/review-period dropdowns, period headline matrix, compact lower
+executive controls, S&OP hierarchy drag/Reset order, and native page zoom controls.
+No internal zoom toolbar has been added. Calculations and model/feed are unchanged.
+
+ROLLBACK
+Close R16.5 and reopen R16.4, or Original - before GM redesign.pbix.
+No source/model/rule restore is needed for this report-only rollback.
