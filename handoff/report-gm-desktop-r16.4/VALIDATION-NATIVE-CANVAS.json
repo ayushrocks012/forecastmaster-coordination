@@ -1,0 +1,86 @@
+{
+  "evidence": "SYNTHETIC native-page geometry simulation in Edge; actual Power BI Desktop and Service acceptance pending",
+  "pageSize": [
+    1440,
+    2400
+  ],
+  "defaultDisplay": "FitToWidth",
+  "noAddedZoomToolbar": true,
+  "nativeStyleZoomExposesMoreLogicalContent": [
+    {
+      "scale": 1,
+      "logicalVisibleHeight": 800,
+      "innerScroll": false,
+      "nativeScroll": true,
+      "contentHeight": 1680.5625,
+      "windowHeight": 800,
+      "cachedApp": true,
+      "unchanged": true,
+      "fetches": 0,
+      "persists": 0,
+      "bottomReachable": true
+    },
+    {
+      "scale": 0.8,
+      "logicalVisibleHeight": 1000,
+      "innerScroll": false,
+      "nativeScroll": true,
+      "contentHeight": 1350.5,
+      "windowHeight": 800,
+      "cachedApp": true,
+      "unchanged": true,
+      "fetches": 0,
+      "persists": 0,
+      "bottomReachable": true
+    },
+    {
+      "scale": 0.5,
+      "logicalVisibleHeight": 1600,
+      "innerScroll": false,
+      "nativeScroll": true,
+      "contentHeight": 857.328125,
+      "windowHeight": 800,
+      "cachedApp": true,
+      "unchanged": true,
+      "fetches": 0,
+      "persists": 0,
+      "bottomReachable": true
+    },
+    {
+      "scale": 0.3333333333333333,
+      "logicalVisibleHeight": 2400,
+      "innerScroll": false,
+      "nativeScroll": false,
+      "contentHeight": 582.828125,
+      "windowHeight": 800,
+      "cachedApp": true,
+      "unchanged": true,
+      "fetches": 0,
+      "persists": 0,
+      "bottomReachable": true
+    },
+    {
+      "scale": 1,
+      "logicalVisibleHeight": 800,
+      "innerScroll": false,
+      "nativeScroll": true,
+      "contentHeight": 1680.5625,
+      "windowHeight": 800,
+      "cachedApp": true,
+      "unchanged": true,
+      "fetches": 0,
+      "persists": 0,
+      "bottomReachable": true
+    }
+  ],
+  "defaultSOPFitsCanvas": {
+    "content": 2193.9375,
+    "capacity": 2400,
+    "innerScroll": false
+  },
+  "overflowSafetyScroller": {
+    "active": true,
+    "atBottom": true
+  },
+  "browserErrors": []
+}

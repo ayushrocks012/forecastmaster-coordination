@@ -1,5 +1,46 @@
 # Company setup status
 
+## 22 October 2026 — R16.3 received; R16.4 native canvas, periods and ordering
+
+The operator's screenshots confirm R16.3 opens with the compact cascading scope
+and two native pages. Native zoom still exposed roughly the same viewport, and
+the operator explicitly preferred familiar native controls over an internal zoom
+toolbar. A tiny outer margin at Fit to width was reported; that alone does not
+establish a rendering defect. R16.4 is a separate report-only candidate with a
+1440 x 2400 native canvas/matching visual, opening at FitToWidth. Its default
+synthetic Demand/S&OP content fits that height, allowing native-style zoom to
+expose more content. Very large expanded detail retains a safety content scroller.
+Actual native Desktop/Service zoom acceptance remains unexecuted here.
+
+The same third Review summary period dropdown now sits beside driver/tier choices
+on both modes, with search and filtered Select all/Clear all. Selected periods
+carry across mode navigation, stay constrained to Review months' years and remain
+empty after explicit clearing. FY/YTD/YTG and exact H1/H2 windows are supported.
+The Demand headline compares every selected period in one Plan/trend matrix.
+Actuals-only periods say so and omit redundant table variance columns; detection
+uses exact months against saved cutoffs, including past FY and future YTD cases.
+The lower executive toolbar keeps Table rows left, Trend comparisons right, and
+the shared-scope caption/Hide alongside the heading.
+
+S&OP allows hold-drag within each hierarchy level and Reset order. The table and
+graph legend follow that order. Default grouping keeps all Contracts contexts
+together; source order within parents and the source catalogue remain unchanged.
+Pointer tests verify all three move levels, rejected cross-parent movement,
+keyboard/cancel, reset and saved-order restore without changing values or ticks.
+
+Local TypeScript/package lint, synthetic numeric/transport regressions, 500-tier
+cascade, period integration, pointer dragging and canvas geometry pass. Browser
+interactions/resize use the cached data without new fetches. Ten available schema
+checks pass; two preserved 2.14.0 visualContainer schema URLs return 404. The full
+R16.3 engine/source helpers/setup/rules and all older tracked handoff files remain
+byte-preserved. Original connection/feed expressions, native Refresh Demand and
+rollback PBIX bytes are retained in a separate private project/ZIP. GitNexus
+impact/scope evidence remains partial/UNKNOWN and is supplemented by direct
+tracing and focused tests. No company source/model/Service item was modified.
+Do not repeat the successful setup. Native zoom/drag, company reconciliation,
+measured speed and publication remain receiving gates.
+
+
 ## 22 October 2026 — R16.2 received; R16.3 corrects totals and navigation
 
 The operator's R16.2 screenshots confirm native loading and numeric results in

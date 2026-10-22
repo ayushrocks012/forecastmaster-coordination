@@ -1,0 +1,61 @@
+FORECASTMASTER GM REVIEW R16.4 - NATIVE CANVAS AND SHARED SUMMARY PERIODS
+
+Keep R16.3 and its ZIP unchanged. Extract R16.4 into a NEW ordinary folder.
+The successful reporting setup and model refresh do NOT need repeating.
+This is a report-only update. Do not rerun the setup notebook.
+
+1. Close the old project in Power BI Desktop.
+2. Extract the WHOLE R16.4 ZIP to a new folder on the work laptop.
+3. Open ForecastMaster GM Review / ForecastMaster GM Review.pbip.
+   Keep its .Report folder beside it. Use the existing company account.
+4. Wait for saved data; confirm Connected model - R16.4 in the header.
+   The native pages remain GM Review and Refresh Demand. Both review modes
+   share one visual instance, model load and scope.
+
+TEST NATIVE ZOOM FIRST
+5. Choose View > Page view > Fit to width. Use the OUTER Power BI page scroll
+   to reach the executive summary. This candidate has a taller native canvas.
+6. Try the native slider at 100%, 80%, then 60%. Text and graphs should scale,
+   and progressively MORE of the dashboard should become visible vertically.
+   The canvas itself getting smaller is normal. Selections must stay intact.
+7. Choose Fit to page. The taller complete report canvas should fit the window,
+   so its text will be smaller. Return to Fit to width for normal reading.
+   A small margin around the native canvas is normal Desktop editing space.
+   Expanded detail can still need the visual's safety overflow scrollbar.
+   Native Desktop/Service behavior is NOT established by the local browser test.
+
+CHECK DEMAND AND SHARED PERIODS
+8. Choose Affiliate/cycle, Core Oral and its Forecast tiers. Beside those choices,
+   open Review summary period. Set Review months to Jan 2026-Dec 2027 and select
+   2026 FY, 2026 YTD, 2026 YTG and 2027 FY. Search/Select all/Clear all are available.
+9. The headline should show each selected period as a column with Plan and
+   overcall/undercall versus the graph's chosen 6M/12M/24M trend. Actuals-only
+   periods say Actuals only and omit redundant table variance columns.
+10. The lower Executive summary keeps Table rows left and Trend comparisons
+    right. Check known bridge totals, Units, Value and required USD plan rates.
+    Aggregate available-value history and individual tier gaps retain R16.3 rules.
+11. Narrow Review months to 2026 only. No 2027 period should remain selected or
+    offered. Clear all periods, switch views and confirm it stays cleared.
+
+CHECK S&OP ORDER
+12. Explore in S&OP carries review periods, scope, dates, Display and plan rates.
+    The top controls retain their positions. Choose channels, source subchannels
+    (or blank) and measures explicitly, or use the existing Select all.
+13. Hold and drag a measure within its subchannel; drag a subchannel within its
+    channel; drag a channel among channels. The summary and graph legend follow.
+    A subchannel must not move to another channel. Values/ticks must not change.
+    Alt+Up/Down also moves the focused item. Reset order restores grouped bridge
+    order, including all Contracts subchannels together. Save/reopen checks order.
+14. Check the separate Refresh Demand page and its preserved native button.
+    Do not click it merely to install this report update.
+
+SAVE AND RETURN RESULTS
+15. Save As a NEW PBIX. Send results of native zoom plus any display/number mismatch
+    before publication. Local synthetic checks passed; company reconciliation,
+    native rendering, measured speed and published-button behavior remain pending.
+16. Once receiving checks pass, publish the NEW report first while retaining the
+    existing shared report, then verify published rendering/button separately.
+
+ROLLBACK
+Close R16.4 and reopen R16.3 or Original - before GM redesign.pbix.
+No source/model/rule restore is needed for this report-only rollback.

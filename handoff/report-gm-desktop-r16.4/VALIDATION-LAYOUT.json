@@ -1,0 +1,54 @@
+{
+  "evidence": "SYNTHETIC packaged visual in Edge; company Desktop test pending",
+  "initial": {
+    "rawDrivers": 5,
+    "drivers": 2,
+    "tiers": 4,
+    "sopTiers": 4,
+    "excluded": 3,
+    "choices": 3,
+    "oldTree": 0,
+    "height": 137.234375,
+    "channelsHidden": true
+  },
+  "scaled": {
+    "drivers": 10,
+    "tiers": 500,
+    "height": 137.234375
+  },
+  "sop": {
+    "tiers": 450,
+    "choices": 3,
+    "height": 137.234375,
+    "offHeights": [
+      50.5,
+      51,
+      60.1875,
+      51,
+      59.6875
+    ],
+    "sources": 9
+  },
+  "gapCase": {
+    "plan": 310800,
+    "benchmark": 314875.64102564106,
+    "totalWarning": false,
+    "selectedPlan": 233100,
+    "selectedBenchmark": 233100,
+    "leafBenchmark": null,
+    "leafWarning": true,
+    "note": "Some trend comparisons unavailable · 1 displayed scopes need complete historyCore Oral · Tier Two · Market value: 12M history has 1 unavailable month (2025-09 to 2026-08). The displayed scope needs a numeric monthly total throughout the training window.",
+    "reselected": 314875.64102564106,
+    "shortcutVisible": false
+  },
+  "singleHeadlineWithAllSelectedPeriodsInTable": true,
+  "tiersCascadeFromSelectedDrivers": true,
+  "parentChoiceSurvivesClearingTiers": true,
+  "unexpectedInnerScrollbars": [],
+  "searchAndFilteredBulkSelection": true,
+  "clearAllPreserved": true,
+  "dropdownRemainsOpen": true,
+  "unitsExfactoryFilterVisibility": true,
+  "browserErrors": [],
+  "localInteractionsWithoutNewFetch": true
+}

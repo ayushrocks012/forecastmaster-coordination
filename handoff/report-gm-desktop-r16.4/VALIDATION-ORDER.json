@@ -1,0 +1,10 @@
+{
+  "evidence": "SYNTHETIC presentation permutation invariants",
+  "groupedHierarchy": true,
+  "sourceOrderRetainedWithinParents": true,
+  "siblingMovesOnly": true,
+  "invalidCrossParentMovesBlocked": true,
+  "malformedSavedOrderSanitized": true,
+  "sourceCatalogueImmutable": true,
+  "resetDeterministic": true
+}

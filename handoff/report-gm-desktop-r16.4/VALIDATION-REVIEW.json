@@ -1,0 +1,22 @@
+{
+  "evidence": "SYNTHETIC final packaged visual in Edge; native Desktop drag/zoom pending",
+  "periodDropdownsShared": true,
+  "searchAndFilteredBulk": true,
+  "emptyPreserved": true,
+  "calendarYearConstraint": true,
+  "halfYearWindowsExact": true,
+  "allSelectedPeriodsInHeadline": true,
+  "actualOnlyClassificationUsesSavedCutoff": true,
+  "noActualOnlyVarianceColumns": true,
+  "compactExecutiveToolbar": true,
+  "holdDragMeasuresSubchannelsChannels": true,
+  "crossParentMoveBlocked": true,
+  "tableFollowsSelector": true,
+  "resetOrder": true,
+  "plainClickStillSelects": true,
+  "keyboardAndCancel": true,
+  "orderRestoredAfterReload": true,
+  "selectionAndAmountsUnchanged": true,
+  "browserErrors": [],
+  "modelFetches": 0
+}

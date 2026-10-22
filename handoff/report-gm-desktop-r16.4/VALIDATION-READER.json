@@ -1,0 +1,39 @@
+{
+  "evidence": "SYNTHETIC decoder regression; company payload not available",
+  "reportedR16ErrorReproduced": true,
+  "bstTimestampRegressionReproduced": true,
+  "timezoneChecks": [
+    {
+      "zone": "Europe/London",
+      "sourceMonths": 84,
+      "decodedMonths": 84
+    },
+    {
+      "zone": "UTC",
+      "sourceMonths": 84,
+      "decodedMonths": 84
+    },
+    {
+      "zone": "America/New_York",
+      "sourceMonths": 84,
+      "decodedMonths": 84
+    },
+    {
+      "zone": "Asia/Kolkata",
+      "sourceMonths": 84,
+      "decodedMonths": 84
+    }
+  ],
+  "dateObjectsAndEpochs": true,
+  "exactRepeatsCountOnce": true,
+  "conflictingAmountsBlocked": true,
+  "conflictingMissingCountsBlocked": true,
+  "zeroPreserved": true,
+  "distinctBlankGroupsRetained": true,
+  "metadataOnlyRowsExcluded": true,
+  "differentDatesNotFoldedTogether": true,
+  "sourceMetadataConflictBlocked": true,
+  "calendarMetadataConflictBlocked": true,
+  "largeBoundaryRows": 10001,
+  "largeBoundarySum": 50005000
+}

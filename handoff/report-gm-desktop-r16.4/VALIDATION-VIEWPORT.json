@@ -1,0 +1,245 @@
+{
+  "evidence": "SYNTHETIC Edge host viewport simulation; native Power BI zoom test pending",
+  "matchingHeaders": {
+    "demand": {
+      "active": "demand",
+      "calendar": {
+        "x": 19,
+        "y": 163.296875,
+        "width": 1402,
+        "height": 33.390625
+      },
+      "status": {
+        "x": 19,
+        "y": 206.6875,
+        "width": 1402,
+        "height": 18
+      },
+      "filters": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 1402,
+        "height": 56.390625
+      },
+      "affiliate": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "cycle": {
+        "x": 301.796875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "display": {
+        "x": 1150.1875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "scope": {
+        "x": 19,
+        "y": 335.078125,
+        "width": 1402,
+        "height": 137.234375
+      }
+    },
+    "sop": {
+      "active": "sop",
+      "calendar": {
+        "x": 19,
+        "y": 163.296875,
+        "width": 1402,
+        "height": 33.390625
+      },
+      "status": {
+        "x": 19,
+        "y": 206.6875,
+        "width": 1402,
+        "height": 18
+      },
+      "filters": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 1402,
+        "height": 56.390625
+      },
+      "affiliate": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "cycle": {
+        "x": 301.796875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "display": {
+        "x": 1150.1875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "scope": {
+        "x": 19,
+        "y": 335.078125,
+        "width": 1402,
+        "height": 137.234375
+      }
+    },
+    "valueDemand": {
+      "active": "demand",
+      "calendar": {
+        "x": 19,
+        "y": 163.296875,
+        "width": 1402,
+        "height": 33.390625
+      },
+      "status": {
+        "x": 19,
+        "y": 206.6875,
+        "width": 1402,
+        "height": 18
+      },
+      "filters": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 1402,
+        "height": 56.390625
+      },
+      "affiliate": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "cycle": {
+        "x": 301.796875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "display": {
+        "x": 1150.1875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "scope": {
+        "x": 19,
+        "y": 335.078125,
+        "width": 1402,
+        "height": 137.234375
+      }
+    },
+    "valueSOP": {
+      "active": "sop",
+      "calendar": {
+        "x": 19,
+        "y": 163.296875,
+        "width": 1402,
+        "height": 33.390625
+      },
+      "status": {
+        "x": 19,
+        "y": 206.6875,
+        "width": 1402,
+        "height": 18
+      },
+      "filters": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 1402,
+        "height": 56.390625
+      },
+      "affiliate": {
+        "x": 19,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "cycle": {
+        "x": 301.796875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "display": {
+        "x": 1150.1875,
+        "y": 268.6875,
+        "width": 270.796875,
+        "height": 56.390625
+      },
+      "scope": {
+        "x": 19,
+        "y": 335.078125,
+        "width": 1402,
+        "height": 137.234375
+      }
+    }
+  },
+  "sourceStatusConsistent": true,
+  "scaledHoverCoordinatesCorrect": true,
+  "resizeOnlyWithoutDataViews": [
+    {
+      "tooltip": "Apr 26\nTotal · Actuals\n£25,348",
+      "width": 720,
+      "height": 405,
+      "scale": 0.5,
+      "titleHeight": 12.5,
+      "appPreserved": true,
+      "statePreserved": true,
+      "fetches": 0,
+      "persists": 0
+    },
+    {
+      "tooltip": "Apr 26\nTotal · Actuals\n£25,350",
+      "width": 1152,
+      "height": 648,
+      "scale": 0.8,
+      "titleHeight": 20,
+      "appPreserved": true,
+      "statePreserved": true,
+      "fetches": 0,
+      "persists": 0
+    },
+    {
+      "tooltip": "Apr 26\nTotal · Actuals\n£25,350",
+      "width": 1440,
+      "height": 810,
+      "scale": 1,
+      "titleHeight": 25,
+      "appPreserved": true,
+      "statePreserved": true,
+      "fetches": 0,
+      "persists": 0
+    },
+    {
+      "tooltip": "Apr 26\nTotal · Actuals\n£25,350",
+      "width": 1483,
+      "height": 834.1875,
+      "scale": 1.02986,
+      "titleHeight": 25.734375,
+      "appPreserved": true,
+      "statePreserved": true,
+      "fetches": 0,
+      "persists": 0
+    },
+    {
+      "tooltip": "Apr 26\nTotal · Actuals\n£25,350",
+      "width": 1440,
+      "height": 810,
+      "scale": 1,
+      "titleHeight": 25,
+      "appPreserved": true,
+      "statePreserved": true,
+      "fetches": 0,
+      "persists": 0
+    }
+  ],
+  "browserErrors": []
+}
