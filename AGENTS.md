@@ -246,3 +246,40 @@ rendering, filters, native zoom/export, company numerical reconciliation,
 refresh propagation, performance and the documented R17 feature/calculation
 parity gaps remain open. Keep production R16.6 in place. All existing source,
 creation/repair code, local test receipts and both report ZIPs remain unchanged.
+
+The next operator Desktop photo shows Native R17.1 TEST with a resource-exceeded
+visual, an otherwise loading chart and blank action buttons. Full See details
+text is pending; memory-vs-timeout is unconfirmed. Current package is handoff/
+report-native-r17.2/OPEN FIRST - WORK LAPTOP.txt. The old generator stored actions
+under visual.objects and omitted native default-state text/show entries. R17.2
+corrects these using Microsoft's authoring pattern. Desktop EDIT mode still
+requires Ctrl+click; this is distinct from those malformed definitions.
+
+R17.2 batches facts by file/month/component before per-sector missing checks,
+preserving available-member, zero, FX and source guards. A cheaper scenario-
+visibility attempt failed regression and is not delivered. The revision adds
+fm_native_periods/fm_native_headline and one native grouping relationship; all
+original source/feed/security/cloud objects remain preserved. Aligned native
+filters, linked driver/tier dropdowns, header plan rates and a cycle-year opening
+range are configured. H1/H2, cross-year masks, signed benchmark %, multiple
+chart trends and S&OP breakdowns have synthetic local engine evidence.
+
+The paired updater/report targets only EXISTING TEST
+31d00232-ac03-48fe-af39-f2e4bae82443; its name stays ForecastMaster Native OneLake
+R17.1 - TEST. R02's full-file private backup verification, concurrency/cloud
+guards, no-purge and no-write-retry rules remain. Run one NEW code cell in
+ForecastMaster_GM_Setup, refresh TEST once on success, then open the new R17.2
+ZIP. No company action was executed from this host. Preserve all previous
+packages/backups and production R16.6. Refresh Demand still targets the original
+production worker, not TEST. Native Demand multi-measure, exact ranking/pin/
+hover and automatic Hide reflow remain open gaps, with other receiving gates.
+
+R17.2 receipts cover core/FX/export/scenario engine regressions, separate signed/
+mixed/overlay/sector cases, a fabricated 10-driver x 50-sector query, mocked
+updates and PBIR checks. Query fixtures use explicit UTF-8 reads to preserve
+invisible ordering suffixes. No company amount was queried. The UI bridge failed
+before selecting a window; a task-owned native engine was tested separately on
+fabricated calculated/import sources. Company Direct Lake/UI/export/performance
+are unverified. GitNexus Coordination authority remained unavailable; direct
+tracing and preservation checks provide bounded fallback, not a zero-impact
+graph conclusion.

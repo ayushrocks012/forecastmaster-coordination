@@ -1,0 +1,94 @@
+FORECASTMASTER NATIVE R17.2 TEST - START HERE
+
+This revision addresses the blank/inactive blue buttons and repeated fact scans
+seen in your R17.1 TEST screenshot. It also brings the native pages closer to
+R16.6. It is still a TEST candidate, not a production replacement.
+
+1. PULL THE NEW FILES ON YOUR WORK LAPTOP
+   Open forecastmaster-coordination in VS Code. Terminal > New Terminal >
+   PowerShell. From the repository folder run:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-r17.2\UPDATE EXISTING TEST TO R17.2.py" | Set-Clipboard
+
+   The full readable Python cell is now on your clipboard. Do not copy ZIP
+   contents or notebook JSON into a code cell.
+
+2. UPDATE THE EXISTING TEST MODEL ONLY
+   In Fabric open workspace UK-ANI-Demand, then notebook ForecastMaster_GM_Setup.
+   Add a NEW Python/PySpark code cell, paste, and run ONLY that new cell.
+   Do not choose Run all or rerun earlier creation/repair/setup cells.
+
+   Alternatively import ForecastMaster Native TEST R17.2.ipynb as a NEW,
+   unscheduled notebook in this workspace and run its single code cell.
+
+   Expected result: Stage TEST_R172_UPDATED, or TEST_R172_ALREADY_INSTALLED.
+   The existing semantic model keeps its name:
+     ForecastMaster Native OneLake R17.1 - TEST
+   ID: 31d00232-ac03-48fe-af39-f2e4bae82443
+
+   The cell privately backs up and verifies the complete TEST definition and
+   existing cloud mapping, updates native reporting measures, adds two metadata
+   helpers and one native grouping relationship, and checks preservation.
+   It does not query sales amounts, change connections/source/security, create
+   another model, explicitly refresh, or write to the production model.
+
+   If it errors, stop here and send the full error/output. Keep the backup.
+
+3. REFRESH TEST ONCE AFTER THAT SUCCESS
+   Return to UK-ANI-Demand. Beside ForecastMaster Native OneLake R17.1 - TEST,
+   choose ... > Refresh now. Wait for Completed without warnings.
+   If failed or warning-bearing, send the details before opening the new report.
+
+4. EXTRACT AND OPEN THE NEW REPORT
+   In the same VS Code terminal run:
+
+   explorer.exe .\handoff\report-native-r17.2\candidate
+
+   Right-click ForecastMaster Native Review R17.2 TEST.zip > Extract All.
+   Extract the COMPLETE ZIP to a NEW Desktop folder. Open from that folder:
+
+   ForecastMaster Native Review R17.2 TEST.pbip
+
+   Keep ForecastMaster Native Review R17.2 TEST.Report beside the .pbip.
+   Open the NEW R17.2 report, not the old R17.1 window, and not inside the ZIP.
+   It is already connected to the same TEST model; no rebind is required.
+
+5. CHECK THESE TWO PAGES
+   Demand review defaults to UK, October 2026, Market, Units, 2026 FY and the
+   selected cycle year's January-December chart range. Select Core Oral.
+   Confirm the summary and monthly chart load. Add 2026 YTD/YTG and 2027 FY to
+   Review summary period (extend Review months into 2027 to expose that year).
+   Whole-driver totals use available sectors; a missing leaf remains blank.
+
+   In Desktop EDIT mode hold CTRL while clicking navigation/bookmark buttons.
+   Native slicers use ordinary clicks. In Service reading mode buttons use a
+   single click. Labels/actions are corrected in this package.
+
+   Choose S&OP review. In Build your view choose Community, its blank context,
+   then Market units and Unit share %. Check amounts/share, sibling drag/reset
+   order, and Total/Drivers/Sectors breakdown. Selections should carry between
+   pages. Plan rates is at the same header position on both pages.
+
+   Try native Fit to width/Fit to page, zoom slider, Focus mode, and Export data
+   from a native matrix. Click a MONTHLY point to inspect the monthly readout;
+   clicking the chart should not change the summary's selected scope.
+
+   Send screenshots of both pages, or the first error's full See details text.
+   Local schema/engine checks cannot confirm the company visual renders or its
+   capacity limits. The small margin around a native page can be normal.
+
+KEEP PRODUCTION R16.6 IN PLACE
+No Publish/Replace step is requested. The preserved Refresh Demand page still
+targets the ORIGINAL refresh worker; it is not this separate TEST model's
+refresh control. Use the semantic model's Refresh now during qualification.
+Earlier report ZIPs, R02 repair, and private company backups remain intact.
+
+WHAT IS CLOSER / WHAT REMAINS
+See CAPABILITIES-VS-R16.6.md. Multiple chart trends, H1/H2, S&OP driver/sector
+breakdowns, cross-year periods and negative benchmark % are implemented here.
+Native Demand still selects one measure at a time. Exact R16.6 gap-ranking,
+click-pinned tooltip, linked hover and automatic Hide reflow are not reproduced.
+The complete R16.6 Advanced workspace is retained as a fallback; fallback is
+not native parity. Company numerical reconciliation and UI/export/performance
+acceptance remain required before replacing the published report.

@@ -4,6 +4,8 @@ A separate repository for exchanging ForecastMaster setup scripts, office-laptop
 
 This repository is public. Files and screenshots committed here are publicly visible.
 
+- **Current native report TEST revision:** [R17.2 — open first on the work laptop](handoff/report-native-r17.2/OPEN%20FIRST%20-%20WORK%20LAPTOP.txt). Corrected buttons, batched DAX and a layout closer to R16.6; one guarded update to the existing TEST, then the new TEST report ZIP. Company UI/capacity and full parity remain unqualified; keep production R16.6.
+
 - **Design review:** pull this repo and open `design/index.html`. [Both pages — Currency plan review R15](design/currency-plan-review-r15/README.md) offers a simple rate per source currency, with no country or year in the rate editor. **Plan rates** stays visible in both headers, including Units view. Value offers GBP/USD; the conversion model defaults multiple Affiliates to USD and converts each currency before summing. Rates are not prefilled. The [saved checkpoint](design/checkpoints/before-currency-plan-review-r15.json) preserves all 31 [R14](design/plan-rate-review-r14/README.md) files; R13 and all earlier designs remain available in the chooser. The visible illustrative base remains UK/GBP; isolated multi-currency fixtures check future plumbing, not live source binding. Power BI remains unchanged.
 - [R09 — Executive Period Review](design/executive-period-review-r09/README.md) adds FY/YTG overview comparison and explicit trend-history dates. Its variance table now uses numeric values without the small variance bars, as requested; every number is retained.
 - Current notebook updater: [INSTALL NOTEBOOK R05.4.txt](handoff/notebook-r05.4/INSTALL%20NOTEBOOK%20R05.4.txt)

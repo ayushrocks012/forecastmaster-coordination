@@ -1,0 +1,24 @@
+{
+  "FrozenSourceZIP": "49b14405b512e1693e649226d81ebcc7857ee55ff0aae6fd98d3223813859713",
+  "PreservedPayloads": {
+    "definition/pages/advancedreview/page.json": "ce662dc3646816225d98bff6cc6da8cb8f9bad5cdd320f8ee0374b9fd409c55f",
+    "definition/pages/advancedreview/visuals/demandreviewworkspace/visual.json": "c58968144a00e35f2c2397a4a0ba9141d78037a5a7850e863db1e99f145d0091",
+    "definition/pages/refreshdemand/page.json": "bc1228db24da4ebeea18d485f970b072bce6bcc09b33d1f6fbae6a632f6615b7",
+    "definition/pages/refreshdemand/visuals/refreshhelp/visual.json": "a2e3a251effac2633d0c75e9911ec475ff27dd57d2656b8de640980f4acd17f3",
+    "definition/pages/refreshdemand/visuals/refreshheading/visual.json": "09e196868435e6ae1cdcbf527ac2a7e9743b68691be5a4dc2fcccffe3c211fff",
+    "definition/pages/refreshdemand/visuals/bb4c7f4f8fe28cf5983f/visual.json": "17786ec10e478800908c021cfcb56ef18baf6a833f0a4e4165b035036a122f76",
+    "CustomVisuals/ForecastMasterNativeControlsR17/package.json": "6abd9bcaa015de392cbf41bae679d606163d825fb86171f18d2938b18b09d2ff",
+    "CustomVisuals/ForecastMasterGMReviewR16/package.json": "8aee0e90386b067f75571780b51e40e37bdf524e85a2ec286146127c380b56f2",
+    "CustomVisuals/ForecastMasterGMReviewR16/resources/ForecastMasterGMReviewR16.pbiviz.json": "c2efca3136a6df03e1f79e4774027e63925bfab45bd97803abb6858bae208535",
+    "CustomVisuals/ForecastMasterNativeControlsR17/resources/ForecastMasterNativeControlsR17.pbiviz.json": "5e073d4fb53c6ab21cbbdfb5210320b5494fb9c7a467d4364df58c2bc914f856"
+  },
+  "TESTBindingPreserved": true,
+  "CompanyModelIncluded": false,
+  "DesktopRendering": "PENDING",
+  "ProductionReplacement": "NOT QUALIFIED",
+  "CandidateZIP": "ForecastMaster Native Review R17.2 TEST.zip",
+  "Bytes": 257931,
+  "SHA256": "aea0d12b56e985246a0730a6095f4088e43ab451bc87d0f28f28ca30fa15dc16",
+  "PublishRequested": false,
+  "CompanyModelUpdatedFromThisHost": false
+}

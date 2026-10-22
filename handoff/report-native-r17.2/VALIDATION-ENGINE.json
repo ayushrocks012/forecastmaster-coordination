@@ -1,0 +1,175 @@
+{
+  "main": {
+    "Checks": 2675,
+    "Failures": [],
+    "Evidence": "Local Power BI engine, all source facts synthetic/calculated. No company data.",
+    "ReceivingDirectLakePreview": "UNVERIFIED",
+    "DesktopUIOrExport": "UNVERIFIED",
+    "RetainedInputMatches": true
+  },
+  "scale": {
+    "Drivers": 10,
+    "SectorsPerDriver": 50,
+    "SyntheticFactRows": 816000,
+    "HeadlineNumericCells": 10,
+    "Failures": [],
+    "CompanyPerformanceOrDirectLake": "PENDING",
+    "ElapsedMs": 683.9782,
+    "RetainedInputMatches": true
+  },
+  "signed": {
+    "Variant": "signed",
+    "Failures": [],
+    "Rows": 1,
+    "SyntheticOnly": true,
+    "ReceivingPerformanceOrUI": "PENDING",
+    "RetainedInputMatches": true
+  },
+  "mixed": {
+    "Variant": "mixed",
+    "Failures": [],
+    "Rows": 1,
+    "SyntheticOnly": true,
+    "ReceivingPerformanceOrUI": "PENDING",
+    "RetainedInputMatches": true
+  },
+  "overlays": {
+    "Variant": "overlays",
+    "Failures": [],
+    "Rows": 2,
+    "SyntheticOnly": true,
+    "ReceivingPerformanceOrUI": "PENDING",
+    "RetainedInputMatches": true
+  },
+  "sectors": {
+    "Variant": "sectors",
+    "Failures": [],
+    "Rows": 4,
+    "SyntheticOnly": true,
+    "ReceivingPerformanceOrUI": "PENDING",
+    "RetainedInputMatches": true
+  },
+  "FX": {
+    "Checks": 3888,
+    "Failures": [],
+    "Evidence": "Local native Power BI engine. Synthetic GBP/EUR/USD only; no live multi-affiliate qualification."
+  },
+  "Edges": {
+    "Checks": 16,
+    "Failures": [],
+    "Evidence": "Actual local native Power BI engine; synthetic saved-version, blank-tier, classification and export-value checks."
+  },
+  "Summary": {
+    "CoreFXEdgeChecks": 6579,
+    "CompanyAmountQueries": false,
+    "SourceMode": "All sources fabricated calculated/import, not company Direct Lake",
+    "CompanyUIExportPerformance": "PENDING",
+    "ProductionReplaced": false
+  },
+  "SourceSHA256": {
+    "build_cell.py": "09116cebced87604e235d8d5165750b538e7f7a9c34ec9ae6e7aafc6cae98b04",
+    "prepare_project.py": "12548fbf7d5d422af9cd201f34c79165e60c93ea8259e20277e6faa3a7a6d650",
+    "model.py": "bf490eb58ea9234613ff829f7601dc64601fb2446286d2a85141294b2911c991",
+    "UPDATE EXISTING TEST TO R17.2.py": "36a93dd9a02fcdfbc7d562a70b38b8fe75d892a423c3d82ad6d510315aeb8901",
+    "tests/engine_fixture.py": "e0213beb2234e8da0e8d1e5d4547f33a2a113fbef592bd1f6e2872974f3849ce",
+    "tests/regression_extras.py": "1c02c2d4e4d106bab68cdcc1fb1956590e943256b9f8506c31a81435302c6584",
+    "tests/scale_fixture.py": "886b2c6be015f4b76b45edc69c861130096e6c401b6145ebb8da3030f8dc77ad",
+    "tests/check_report.py": "189b994ca888f6fd946021077504b91b15630d1a2188d8cdd3e302caebdf4f3b",
+    "tests/additional_fixture.py": "3519159317a9455f01e68604ddff5527ad84caedda17593e66e53a64d24a8456",
+    "tests/run_engine.ps1": "e2b894608df4973951eacff37d2ad1090166810c38213fbe90d050dec35b6146",
+    "tests/check_update.py": "e9038b6d8d71920a28c5a22f96cf8d02882d4c04b24a3f42d7fab19f93e7ff46"
+  },
+  "RetainedSyntheticEvidence": {
+    "FinalCore": {
+      "ModelSHA256": "31a1c4baf900640d88c9b75cd50c6422755319166ec584bc76317e238a387e0a",
+      "QueriesSHA256": {
+        "edge-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "fx-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "queries.json": "d7462428414943999984329bc5cdc00c2c0cb524befc19eb8d37448e47192e52"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "fx-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "queries-results.json": "8d587ed02a43417d2dfd862d4a21cf64b86bf883c913896658aa716d58dc53cc"
+      }
+    },
+    "Final": {
+      "ModelSHA256": "31a1c4baf900640d88c9b75cd50c6422755319166ec584bc76317e238a387e0a",
+      "QueriesSHA256": {
+        "edge-queries.json": "8dee3f98264560d1154e164177025dcf55a6b6512e31ffba9c6ec9e434027b57",
+        "fx-queries.json": "2582fe48a6b6f01adaed185d6380340687b485829e2e29c0b62df0215a72ec1c",
+        "queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "03ebe4b938be434407649ecf68085951686cfa2a68067c9fe24086671d9c407f",
+        "fx-queries-results.json": "4d69c41789eb5091d28b9b892ac83dd39762e8a60a172d2c3a1f8ebf902d9177",
+        "queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d"
+      }
+    },
+    "FinalScale": {
+      "ModelSHA256": "ad0b85aea5bf5c7b00b63ef096b3fc806ef41decd161d7bf2579bbb4a43f1b3d",
+      "QueriesSHA256": {
+        "edge-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "fx-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "queries.json": "50d11f75b3fdb5a152cf23a7094e93eb07fafb4bb9ba41e64a475a3f588585c0"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "fx-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "queries-results.json": "9c51708cc196d9f8b1e68cd965eba54598a0dc19f54d1ab4e39d2833149de139"
+      }
+    },
+    "FinalSigned": {
+      "ModelSHA256": "2b782e29a6cb6613e024a59eb3cabf1cab9feab4a4c616d2feab4ac8aa7fcb97",
+      "QueriesSHA256": {
+        "edge-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "fx-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "queries.json": "e7154409058a0c32562b27851f5fbb81d80f6769fc918c915b8344903e7aa412"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "fx-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "queries-results.json": "640addd2fb580ef4c918aeba664046326c9d2ef6757307135efcae54c392383c"
+      }
+    },
+    "FinalMixed": {
+      "ModelSHA256": "6f8cc92746bed10ec0074bae4065438c288af4fb762dee182b53e18156310c10",
+      "QueriesSHA256": {
+        "edge-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "fx-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "queries.json": "ec94f501cd7ed548fb757aaee21b2afeac2ac546bd24ffbf9d35a90bb357d4cc"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "fx-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "queries-results.json": "f0f132c07cb53922eb4c974bdc7fa6eecc01bcd92b1737f3419f36ac17e0c53b"
+      }
+    },
+    "FinalOverlays": {
+      "ModelSHA256": "31a1c4baf900640d88c9b75cd50c6422755319166ec584bc76317e238a387e0a",
+      "QueriesSHA256": {
+        "edge-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "fx-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "queries.json": "87648ab7af27ac8da88677414e9071ac9b2cf37235e5ac8f0d9734b8c7e1450c"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "fx-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "queries-results.json": "9e5ebb126293f7dbf7a7bdb9510886e5f66fee4fe59846ff68f3a56b768a20c3"
+      }
+    },
+    "FinalSectors": {
+      "ModelSHA256": "31a1c4baf900640d88c9b75cd50c6422755319166ec584bc76317e238a387e0a",
+      "QueriesSHA256": {
+        "edge-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "fx-queries.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "queries.json": "0d2f0d0dabcd7b713d5eeceb10c9e969b4bdbef382a10fef675d75b4cff4782e"
+      },
+      "ResultSHA256": {
+        "edge-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "fx-queries-results.json": "84b1c14e68260082e3e79edff0a78f4ebf1942cfd6c593246044ec2149cbb87d",
+        "queries-results.json": "e0f46c80174871a6d29477e74079b15bad41664831694d2f542cdb2d6b168c26"
+      }
+    }
+  }
+}

@@ -1,14 +1,18 @@
-# Current native report step - 22 October 2026
+# Current native report step - R17.2 TEST, 22 October 2026
 
-The operator confirmed **R02 repair succeeded and TEST refresh Completed with
-no warnings**. Continue with
-[Open the TEST report in Desktop](handoff/report-native-onelake-r17.1/OPEN%20TEST%20REPORT%20-%20STEPS.txt).
-Pull Coordination, extract the existing TEST ZIP to a new Desktop folder and
-open its .pbip. Do not repeat creation/setup/repair or refresh for this step.
-Native rendering, zoom/export and company numerical parity remain separate checks.
-Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
-R16.6 report. Test-model creation, processing, business parity and publication
-are separate stages. The repository and original setup instructions follow.
+R02 repair and a warning-free TEST refresh were confirmed. The first native
+Desktop screenshot then showed a resource error and blank/inactive buttons.
+Use [R17.2 work-laptop steps](handoff/report-native-r17.2/OPEN%20FIRST%20-%20WORK%20LAPTOP.txt):
+pull Coordination, run ONE new TEST-only update cell in **ForecastMaster_GM_Setup**,
+refresh that TEST once after success, then extract/open the NEW R17.2 TEST ZIP.
+The existing TEST model and connection stay in place. Do not recreate it or run
+old SQL setup/repair cells. Keep published R16.6 in production.
+
+R17.2 corrects button definitions, batches monthly fact reads, and brings the
+native pages closer to R16.6. Local engine/schema checks pass; company
+performance, rendering, export and numerical reconciliation remain receiving
+gates. [Capability gaps](handoff/report-native-r17.2/CAPABILITIES-VS-R16.6.md)
+are explicit. Original repository/setup instructions follow.
 
 # Connect the Abbott laptop using VS Code and SSH
 

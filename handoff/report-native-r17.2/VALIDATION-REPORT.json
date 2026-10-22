@@ -1,0 +1,22 @@
+{
+  "Checked": 143,
+  "Failures": [],
+  "UnavailableOriginalSchemas": [
+    {
+      "File": "ForecastMaster Native Review R17.2 TEST.Report/definition/pages/advancedreview/visuals/demandreviewworkspace/visual.json",
+      "Schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "Error": "HTTP Error 404: Not Found"
+    },
+    {
+      "File": "ForecastMaster Native Review R17.2 TEST.Report/definition/pages/refreshdemand/visuals/bb4c7f4f8fe28cf5983f/visual.json",
+      "Schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+      "Error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified.",
+  "StructuralReportTests": 7,
+  "MockedUpdateTests": 8,
+  "UpdatePrewriteGuardSubcases": 10,
+  "UICheck": "Unavailable: local computer-use bridge failed before selecting a window; not a rendered acceptance.",
+  "CandidateZIP_SHA256": "aea0d12b56e985246a0730a6095f4088e43ab451bc87d0f28f28ca30fa15dc16"
+}

@@ -1267,3 +1267,30 @@ open it. Native rendering/selection/zoom/export, company reconciliation,
 refresh propagation/performance and the R17 capability/calculation gaps remain
 unqualified. Production R16.6 is not replaced. No creation/repair code, old local
 validation receipt, report payload or source data is changed by this status step.
+
+## 22 October 2026 — Native R17.2 revision prepared after first Desktop failure
+
+The operator photo identifies the R17.1 TEST report. A monthly native chart
+loads, another visual reports available resources exceeded, and generated
+buttons appear blank. Full error details have been requested but are pending;
+the exact memory/timeout cause is unconfirmed.
+
+R17.2 corrects native action/text definitions and batches monthly fact retrieval
+by file/month/component, retaining per-sector missing checks and cohort/FX
+guards. It aligns the native top layouts, uses compact linked driver/tier
+dropdowns, moves plan rates to the header and opens a cycle-year calendar.
+Additional R16.6 period/trend/S&OP behavior is implemented; the capability ledger
+still lists unfinished gaps. This is not a qualified production replacement.
+No company model/report was written from this host.
+
+Current steps: handoff/report-native-r17.2/OPEN FIRST - WORK LAPTOP.txt. Run one
+new guarded cell in ForecastMaster_GM_Setup to update the EXISTING TEST, refresh
+TEST once after success, then open the NEW R17.2 TEST thin report ZIP. Its model
+identity/connection stay in place. Earlier ZIPs/creation/R02 bytes are preserved.
+The production R16.6 report and original model/refresh worker remain unchanged.
+
+Local receipts separate synthetic native-engine/500-sector evidence from
+static/schema checks and mocked external-update guards. A UI bridge startup
+failure prevented local Desktop render validation. Company performance,
+visuals/zoom/export, source propagation, numerical reconciliation and full
+R16.6 parity remain receiving gates.

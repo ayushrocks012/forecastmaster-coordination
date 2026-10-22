@@ -1,0 +1,20 @@
+{
+  "Date": "2026-10-22",
+  "OperatorReport": "R17.1 TEST Desktop photo: resource-exceeded visual, loading monthly chart, blank action buttons",
+  "ExactResourceDetails": "Requested, not yet provided",
+  "CompanyAmountQueriesFromThisHost": false,
+  "CompanyModelWritesFromThisHost": false,
+  "PreparedRevision": "R17.2 TEST",
+  "ReceivingSteps": "handoff/report-native-r17.2/OPEN FIRST - WORK LAPTOP.txt",
+  "ExistingTestModel": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "PublishedR166Replaced": false,
+  "LocalEvidence": [
+    "6579 core/FX/edge native engine checks",
+    "10 drivers x 50 sectors, 816000 synthetic rows, 10 correct headline cells",
+    "separate signed/mixed/overlay/sector cases",
+    "15 mocked update/report tests",
+    "143 PBIR schema documents; 2 preserved older schema URLs unavailable"
+  ],
+  "CompanyUIExportNumericParityPerformance": "PENDING",
+  "FullR166NativeParity": "INCOMPLETE; see current capability comparison"
+}
