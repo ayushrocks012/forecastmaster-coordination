@@ -1042,8 +1042,8 @@
       "SHA256": "51508153ea4fa9d95dd1bfb401c7a8b238b0e2a83f77a2df6bbd381694a6d006"
     },
     "feedback/STATUS.md": {
-      "Bytes": 78999,
-      "SHA256": "83144c32b572990ba2097803d4a2dff6c1f4b3ab9420e222fd54d733fb45fde9"
+      "Bytes": 80859,
+      "SHA256": "b69708e46a5dd4945801a60d63f94d4dac343eb1f3a287232b07530a03c05864"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3896,6 +3896,10 @@
     "handoff/report-native-onelake-r17.1/measure-repair-r01/tests/check_repair.py": {
       "Bytes": 14734,
       "SHA256": "569da089425cd869e941f046e4dd5f18ce438d517218197f92dd641618c4d36a"
+    },
+    "feedback/logs/2026-10-22-hourly-targeted-files-success.json": {
+      "Bytes": 3451,
+      "SHA256": "2ff9268d19029f94744e8eb5ea192d1c1a9dfa6692389d2d12e8e8a00d6cb94e"
     }
   }
 }

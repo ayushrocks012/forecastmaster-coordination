@@ -1161,6 +1161,36 @@ Production R16.6, the create cell, TEST report ZIP and business code retain thei
 bytes. The packaged NEXT instructions remain byte-preserved for reproducibility;
 current repository instructions explicitly require the connection fix first.
 
+
+## 22 October 2026 - targeted hourly FILES execution confirmed
+
+The operator confirmed the quick updater returned HOURLY_NOTEBOOK_UPDATED for
+the existing ForecastMaster_Refresh (cells 4, 8, 10, 12), with a retained native
+definition backup and no workbook reads or refresh from installation. The
+operator then published the prepared Functions source and manually ran
+ForecastMaster_Hourly successfully. This supersedes the installation-pending
+status of hourly-targeted-r01 for these receiving steps.
+
+The detector found eight files, exactly two changed October ADS workbooks
+(Core Oral and Paed SIP), no removals, and read no workbook contents. Its
+metadata listing still traversed 291 directories in 62.052 seconds (68-second
+activity). The worker's SUCCESS exit value explicitly reports RefreshMode FILES,
+two content checks, two SUCCEEDED/decoded revisions, eight current report files,
+no StageErrors and COMPLETED model refresh correlated by RequestID. The notebook
+activity took 261 seconds, with 226.276 seconds after session ready. These are
+observed durations, not a measured before/after CU saving.
+
+The receiving receipt is feedback/logs/2026-10-22-hourly-targeted-files-success.json.
+The retained-revision/current-file policies are reported by the worker; an
+independent historical-row audit was not performed. Legacy R05/R05.4 CodeVersion
+strings were retained; RefreshMode and the installed cell guards identify this
+patch's behavior. Next, with sources unchanged, manually rerun the same hourly
+pipeline once and confirm UNCHANGED / NeedsRefresh false with the notebook
+skipped. Schedule reactivation is pending that check. Historical-correction,
+removal/rename and injected-failure receiving cases remain unrun; local checks
+are recorded separately. No production or TEST report/model definitions were
+changed by this evidence-only handoff.
+
 ## 22 October 2026 — TEST refresh completes with inherited-feed syntax warnings
 
 The operator's latest photo reports Completed with warnings: data stage completed
