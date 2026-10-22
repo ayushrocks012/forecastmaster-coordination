@@ -1,0 +1,13 @@
+{
+  "Tests": 23,
+  "Passed": true,
+  "Evidence": "Synthetic metadata and mocked API/filesystem only; no company execution.",
+  "ActualCompanyRepair": "PENDING",
+  "ActualRefreshWithoutWarnings": "PENDING",
+  "GitNexusImpact": "UNKNOWN: Coordination unregistered; edit-impact AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+  "Fallback": "Direct create-model/feed source tracing and bounded preservation/API tests",
+  "BackupMethod": "Full private file copy with UTF-8 SHA256 and byte-length check; no fs.head",
+  "ReceivingR01FailureRootCause": "Comparison mismatch only; preview truncation not confirmed",
+  "ProductionModelWriteRequestedByLocalTests": false,
+  "NumericBusinessLogicChanged": false
+}

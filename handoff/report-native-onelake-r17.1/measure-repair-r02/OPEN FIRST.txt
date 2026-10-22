@@ -1,0 +1,43 @@
+FORECASTMASTER R17.1 TEST FEED REPAIR R02 - FULL BACKUP VERIFICATION
+
+Your R01 run stopped at the backup comparison BEFORE the model-update call.
+No model write was attempted in that run. Keep the TEST model and existing cloud
+connection. Keep any partial R01 backup; this revision uses a fresh backup folder.
+
+The old comparison used fs.head, which is a preview read. The actual returned
+length/content was not captured, so truncation/corruption is not proven.
+R02 copies each complete backup file to an isolated temporary driver directory,
+checks its UTF-8 byte count and SHA-256, and removes the temporary copy. The
+verified company OneLake backup is retained. Three bounded READ attempts allow
+for transient readback; a failed check still prevents any model update. It
+reports safe expected/observed sizes and the retained path if verification fails.
+
+The nine-measure repair, exact TEST target, pre-write concurrency checks, no-purge
+option and model/cloud preservation checks are unchanged. No source amount query,
+production-model write, connection edit, explicit refresh or publication occurs.
+
+WORK LAPTOP - ONE NEW CELL
+1. In VS Code open forecastmaster-coordination and its PowerShell terminal.
+2. Run:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-onelake-r17.1\measure-repair-r02\REPAIR TEST FEED.py" | Set-Clipboard
+
+3. In Fabric open UK-ANI-Demand > ForecastMaster_GM_Setup.
+4. Add a NEW Python/PySpark code cell, paste and run ONLY that cell. Do not Run all
+   or rerun the failed R01 cell, original creation cell or earlier reporting setup.
+   Alternatively import ForecastMaster TEST Feed Repair R02.ipynb as a separate
+   unscheduled notebook and run its one code cell. Do not paste notebook JSON.
+5. Wait for TEST_FEED_REPAIRED (RepairVersion R02, normally MeasuresChanged 9),
+   or TEST_FEED_ALREADY_CLEAN. If it errors, stop and send the error; do not refresh.
+6. After that success only, return to the workspace. Beside
+   ForecastMaster Native OneLake R17.1 - TEST choose ... > Refresh now ONCE.
+   TEST ID: 31d00232-ac03-48fe-af39-f2e4bae82443.
+7. Send the repair output and latest TEST Refresh history result, including
+   remaining warnings. Use the TEST model's Refresh now, not report Refresh Demand.
+
+Production R16.6 and all existing report ZIPs stay in place. Local checks are
+not company execution or native report acceptance. R17 parity gaps remain open.
+
+Microsoft documents full cross-filesystem copy and preview read separately:
+https://learn.microsoft.com/en-us/fabric/data-engineering/notebookutils/notebookutils-file-system

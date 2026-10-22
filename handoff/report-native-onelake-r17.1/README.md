@@ -1,5 +1,14 @@
 # OneLake R17.1 isolated qualification candidate
 
+**Current receiving step: [TEST feed repair R02](measure-repair-r02/OPEN%20FIRST.txt).**
+The operator's R01 repair stopped at the backup comparison before reaching a
+model write. R02 verifies a complete copied backup by UTF-8 length/SHA256 and
+retains the same nine-measure fix and model/cloud preservation checks. The exact
+R01 readback mismatch cause was not captured. Twenty-three local synthetic/mock
+tests pass; actual company R02 backup verification, repair and clean refresh are
+pending. R01, original creation files, model code and both report ZIPs retain
+their bytes. Do not rerun creation or the failed old repair cell.
+
 **Latest receiving result, 22 October 2026: TEST refresh completed with warnings.**
 The earlier connection error did not recur. Nine inherited FM UI measures contain
 terminal `displayFolder` text in DAX. Continue with

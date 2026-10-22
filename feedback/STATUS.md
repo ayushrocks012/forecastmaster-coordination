@@ -1219,3 +1219,29 @@ clean refresh, native UI/export, performance and R16.6 parity remain pending.
 GitNexus structure was unregistered; edit-impact reported authority drift and
 quick-graph returned ACTIONABLE_PARTIAL. Direct tracing and focused tests are
 bounded fallback evidence, not a claim of zero impact. Production remains R16.6.
+
+## 22 October 2026 — R01 repair stops before model write; R02 verifies full backup
+
+The operator supplied a RuntimeError traceback at R01's fs.head comparison after
+fs.put, before its model-update request. This confirms no model write was reached.
+The actual returned string/length was not captured, so neither preview truncation
+nor backup corruption is established. Existing cloud mapping, TEST model and
+any partial backup stay in place. The trace is summarized without model content
+in feedback/logs/2026-10-22-native-r171-repair-backup-stopped.json.
+
+measure-repair-r02 uses a full file copy to a private temporary Fabric-driver
+directory, then compares UTF-8 byte count and SHA256. It checks write/copy results,
+removes the temporary copy and keeps the company backup. At most three readback
+attempts allow transient reads; no backup write or model update is retried.
+Persistent failure still refuses any model write and emits only size/path
+diagnostics. All nine-measure/body and definition/cloud-preservation guards are
+retained. R01 and all old packages remain byte-preserved. The operator should
+run one new R02 cell and refresh TEST once only after its success result.
+
+Twenty-three local synthetic/mock tests pass, including original feed-body/API
+preservation, large Unicode files, truncated and same-length corrupt reads,
+false write/copy returns, bounded read recovery and temporary-file cleanup.
+These simulations do not prove the receiving mismatch cause or live Fabric
+success. GitNexus edit-impact remained UNAVAILABLE with authority drift; direct
+tracing and focused tests provide bounded fallback. Company R02 full-file
+verification, repair, warning-free refresh and native/R16.6 parity remain pending.

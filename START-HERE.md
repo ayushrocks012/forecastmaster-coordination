@@ -1,11 +1,12 @@
 # Current native report step - 22 October 2026
 
-The separate R17.1 OneLake TEST model now refreshes **with warnings**. The earlier
-connection error did not recur; nine inherited feed formulas contain terminal
-`displayFolder` metadata. Continue with
-[Repair the TEST feed syntax](handoff/report-native-onelake-r17.1/measure-repair-r01/OPEN%20FIRST.txt).
-Run its one new cell in ForecastMaster_GM_Setup, then refresh TEST once and send
-the result. It backs up TEST privately and checks definition/cloud preservation.
+The R17.1 TEST feed repair R01 stopped at backup verification **before any model
+write**. Continue with
+[TEST feed repair R02](handoff/report-native-onelake-r17.1/measure-repair-r02/OPEN%20FIRST.txt).
+It verifies the complete backup file by UTF-8 byte count/SHA256 rather than a
+preview read. Run its one NEW cell in ForecastMaster_GM_Setup; refresh TEST once
+only after repair succeeds. The nine inherited DAX metadata warnings remain
+unresolved until company repair/readback and a clean refresh are confirmed.
 Do not rerun creation or the older reporting setup. No source or policy change.
 Do not run the original R17 SQL PREPARE/APPLY for this model. Keep the published
 R16.6 report. Test-model creation, processing, business parity and publication

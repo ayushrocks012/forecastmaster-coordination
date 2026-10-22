@@ -219,3 +219,18 @@ are pending. No source data, native arithmetic, source mode, security, refresh
 worker or original model is changed. Do not rerun creation or the old setup;
 keep both report ZIPs and packaged NEXT text byte-preserved. Native capability
 and calculation parity gaps remain open. Production R16.6 stays in place.
+
+The operator's next R01 repair traceback stopped at fs.head backup comparison,
+before updateDefinition. No model write was reached. The returned preview size
+and contents were not captured; do not call truncation or corruption confirmed.
+Current receiving package is report-native-onelake-r17.1/measure-repair-r02/.
+It copies each full new backup to an isolated temporary Fabric-driver directory,
+verifies UTF-8 byte length and SHA256, removes the temporary copy and retains the
+company cloud backup. Three bounded read attempts accommodate transient reads;
+failed verification still refuses model writes. The nine-measure body repair,
+TEST-only identity, concurrency/cloud-preservation guards and no-purge option
+remain unchanged. Twenty-three local synthetic/mock tests pass, including large
+Unicode files, truncated/same-length corrupt copies and cleanup. Actual company
+R02 verification, repair and clean refresh remain pending. Preserve all R01
+files and partial company backups; run one NEW R02 cell, never Run all or the
+old failed cell. Refresh TEST once only after a successful repair result.

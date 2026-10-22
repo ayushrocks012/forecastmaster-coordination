@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 41694,
-      "SHA256": "2fb245e7ea23050881654ce13384f0ad6bb3b6110f8c041e6517528484f1b43a"
+      "Bytes": 42797,
+      "SHA256": "54fd35833aa51cc13f8071e1c6c6b298da18dc9a68eebe72d079d12add370873"
     },
     "README.md": {
       "Bytes": 5085,
       "SHA256": "51508153ea4fa9d95dd1bfb401c7a8b238b0e2a83f77a2df6bbd381694a6d006"
     },
     "feedback/STATUS.md": {
-      "Bytes": 80859,
-      "SHA256": "b69708e46a5dd4945801a60d63f94d4dac343eb1f3a287232b07530a03c05864"
+      "Bytes": 82586,
+      "SHA256": "e9125507ff1938e946d251b168cdaff4f29d4366215ab06ae4796136a820c947"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 5489,
-      "SHA256": "9635b208432e2455200bccfe302c3bc5cbc4b9f6446c733d4cf1b1ea0c6e1578"
+      "Bytes": 5534,
+      "SHA256": "9e72b96d518ba592f96c3ab6ef99dc0f0576e3032d185a8b8dda37af43dbf87a"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -3754,8 +3754,8 @@
       "SHA256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
     },
     "handoff/report-native-onelake-r17.1/OPEN FIRST - ONELAKE.txt": {
-      "Bytes": 3510,
-      "SHA256": "72637257c308c6d2cce94d4af5563451392db160a335216c8f498419c88c4dcd"
+      "Bytes": 3588,
+      "SHA256": "4a460bb9341edfd98467ee8e5beab0957871b0400ce3f010e9a7fe92a37a37f5"
     },
     "handoff/report-native-onelake-r17.1/VALIDATION-CANDIDATE.json": {
       "Bytes": 233,
@@ -3778,8 +3778,8 @@
       "SHA256": "845ac00b67bef3fbc61f0bf248fc0663b7e08055cca1e4e29673fbc8a9e0d35a"
     },
     "handoff/report-native-onelake-r17.1/README.md": {
-      "Bytes": 8229,
-      "SHA256": "69d656186f5c450e1eeea2a04e0799182f4086ca611ce4a521eab8a1f28526a8"
+      "Bytes": 8860,
+      "SHA256": "b9be9612068e0938b3e1bb81511ca13211ee5114c59fd02e5bd61c5c50f342cd"
     },
     "handoff/report-native-onelake-r17.1/build_candidate.py": {
       "Bytes": 10310,
@@ -3862,8 +3862,8 @@
       "SHA256": "36741f7740530bf744c4b6d1d2ff06f3b17e0b9fd781f6512f96e84c27cada78"
     },
     "handoff/report-native-onelake-r17.1/FIX TEST CONNECTION - STEPS.txt": {
-      "Bytes": 3847,
-      "SHA256": "771e9fe9da90018050047e66e6f1e718c788785e53b70bc13cb1a6632edd7611"
+      "Bytes": 4003,
+      "SHA256": "c0a40c9dc1f6807849e29e6cb7d6ec7323f99bbd079f8deccae6d334a5f540ab"
     },
     "feedback/logs/2026-10-22-native-r171-refresh-warnings.json": {
       "Bytes": 817,
@@ -3900,6 +3900,38 @@
     "feedback/logs/2026-10-22-hourly-targeted-files-success.json": {
       "Bytes": 3451,
       "SHA256": "2ff9268d19029f94744e8eb5ea192d1c1a9dfa6692389d2d12e8e8a00d6cb94e"
+    },
+    "feedback/logs/2026-10-22-native-r171-repair-backup-stopped.json": {
+      "Bytes": 671,
+      "SHA256": "eedea7316db5f4aae1221d46e702a3032aef9881f76ec51a0b6579b65f6b79c2"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/ForecastMaster TEST Feed Repair R02.ipynb": {
+      "Bytes": 16184,
+      "SHA256": "21f82e4a06a18f33a5a2f22b03f2ddf94cefd8a09000c785a293023897264841"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/OPEN FIRST.txt": {
+      "Bytes": 2601,
+      "SHA256": "4681f36f88e0635e721039451bbfadc4688a3fb3dfe74ace984d1cbc585b4d71"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/README.md": {
+      "Bytes": 2202,
+      "SHA256": "e89ecefa5465a30de691b9d313c9d88cedac022c8d379b6febf7dfe54789e4e2"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/REPAIR TEST FEED.py": {
+      "Bytes": 12657,
+      "SHA256": "09f8522e6d0ee8c6218bf4c4a2dc3793f23aefbf192645eea5fb565ed1fb8275"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/VALIDATION.json": {
+      "Bytes": 690,
+      "SHA256": "a27d38393c5681b32c97014dcff01c6078bcdab1881bd4e3de7ef756e991bf1c"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/build_notebook.py": {
+      "Bytes": 1219,
+      "SHA256": "94400d2a8255de29f948e1e9f9c87c2acd1776329e49d613ab7938d0c18afc41"
+    },
+    "handoff/report-native-onelake-r17.1/measure-repair-r02/tests/check_repair.py": {
+      "Bytes": 18029,
+      "SHA256": "1d5e1b1d7ad8176a0739a5933dfae2d77783b2d9ef6765eb96c39934ba70dd83"
     }
   }
 }
