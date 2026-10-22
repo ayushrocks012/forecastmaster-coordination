@@ -107,3 +107,24 @@ exactness ledger lists unresolved UI/feature differences, including largest-gap
 ranking; R17 remains NO-GO for replacing production until they pass. A fallback
 is preservation, not evidence of native parity. Do not repeat R16 reporting-feed
 setup or run a company refresh simply because the native candidate was prepared.
+
+
+On 22 October 2026 the user explicitly requested putting the company-connected
+R17 candidate in Coordination for remote pulling. This supersedes the earlier
+private-ZIP exclusion for this particular audited thin-report candidate only.
+The repository was verified public. `handoff/report-native-r17/candidate/`
+contains the original prepared ZIP, its company connection identifiers and a
+bounded package-check receipt. No stored credential patterns, cached sales
+model, PBIX/PBIT or local cache were found. Keep authentication tokens, exported
+company figures, full/cached models and private execution backups out of Git.
+Do not infer authorization to publish unrelated company artifacts. This package
+sync does not install or publish anything in Power BI/Fabric.
+
+`CAPABILITIES-VS-R16.6.md` records the more complete source comparison: native
+R17 currently omits multiple Demand measures, simultaneous chart trend windows,
+H1/H2, S&OP per-driver/per-sector summary rows, the exact gap-rank shortcut,
+click-pinned readout, linked hover emphasis and automatic HTML reflow. It also
+records cross-year YTD/YTG, mixed-cutoff and negative-benchmark percentage
+calculation differences. The earlier local numerical checks do not establish
+parity for these paths. Preserve the candidate's NO-GO status and R16.6 fallback;
+recording the differences does not authorize changing business semantics.

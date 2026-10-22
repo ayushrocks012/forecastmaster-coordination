@@ -1,0 +1,11 @@
+COMPANY-CONNECTED NATIVE R17 CANDIDATE
+
+Current work-laptop instructions are in the parent folder:
+  WORK LAPTOP - OPEN CANDIDATE.txt
+
+Current feature comparison:
+  CAPABILITIES-VS-R16.6.md
+
+The ZIP is the original prepared R17 qualification candidate. It retains the
+company connection, but it is not an installed native model or an approved
+replacement for production. Begin with the read-only model probe.

@@ -11,7 +11,9 @@ confirmed. README.md lists the remaining differences explicitly.
 OPTIONAL FIRST LOOK - NO COMPANY CONNECTION
 On the other laptop, start with WORK LAPTOP - OPEN PREVIEW.txt. The synthetic
 ZIP is now included in this repository under report-native-r17/preview/.
-The company-connected candidate ZIP is private and must be transferred separately.
+The company-connected candidate ZIP is now in candidate/. Follow
+WORK LAPTOP - OPEN CANDIDATE.txt. The user explicitly requested this synced
+thin-report package; it retains connection IDs, not stored authentication.
 Extract ForecastMaster Native Preview R17 - SYNTHETIC.zip. Open the PBIP named
 ForecastMaster Native Preview - SYNTHETIC.pbip. Every figure is fabricated.
 Use this to inspect native layout, chart axes, zoom, slicers and export.

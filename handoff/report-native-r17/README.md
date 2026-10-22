@@ -17,13 +17,16 @@ Coordination, the sample ZIP is at
 Extract it before opening the PBIP; keep the report and semantic-model folders
 beside it. No builder, Python or npm step is required to view this preview.
 
-The original preparation laptop also has these two ZIPs in its Downloads folder:
+Both ready-to-extract ZIPs are now synced through Coordination:
 
 - **ForecastMaster Native Preview R17 - SYNTHETIC.zip** (also synced in `preview/`): open the labelled PBIP
   after extraction to inspect native visuals using fabricated data, with no
   company connection or real refresh action. Desktop rendering is unverified.
-- **ForecastMaster Native Review R17 - Candidate.zip** (private; transfer separately): company-bound thin report
+- **ForecastMaster Native Review R17 - Candidate.zip** (in `candidate/`, explicitly requested by the user): company-connected thin report
   and a default read-only model probe. Do not publish this over production yet.
+
+For the company candidate, follow **WORK LAPTOP - OPEN CANDIDATE.txt**.
+For the feature comparison, read **CAPABILITIES-VS-R16.6.md**.
 
 Start with the preview and then the read-only probe. A successful probe does not
 install the report or satisfy its receiving checks.
@@ -134,11 +137,18 @@ company performance claim is made from the small synthetic model.
 | Local/USD, per-currency plan rates | Small custom editor, native DAX | Verify native filter/slicer sync and actual multi-affiliate mapping before claiming generic deployment |
 | Source versions and automatic ADS | Dynamic metadata views + native selection | Verify the SQL view rank/parser against actual file labels; do not rely solely on synthetic DAX |
 | Run-rate / PY switches | Native slicers and numeric measures | Verify automatic removal of entirely blank measure columns in both matrix modes; preserve Share/PI/net eligibility |
+| Multiple Demand measures / simultaneous chart trends | Single-select metric and chart trend | R16.6 supports several; native parity is unfinished. Multi-trend table comparisons remain |
+| Half-year periods / S&OP summary scope breakdown | Missing in the native pages | H1/H2 and S&OP per-driver/per-sector summary rows need implementation |
+| Tooltip pin and exact hover emphasis | Standard native interaction only | Custom click-to-pin and linked hover treatment are not reproduced |
 | Gap ranking and row sorting | Native matrix sorting | Exact saved largest-absolute-gap shortcut and its rank-period control are not yet reproduced; retain Advanced workspace until this passes |
 | Hide/Show | Native display-only bookmarks | Verify slicers and monthly/period table view survive hiding; native Focus mode provides full-size viewing. Automatic HTML reflow is not reproduced |
 | Personal bookmarks and personalization | Native report visuals/settings | Verify saved native selections, custom filter restoration and header actions in Service |
 | Native zoom/Fit/focus/export | Actual native visuals | Native engine tests do not verify UI. Receiving Desktop/Service checks remain mandatory |
 | Refresh Demand and published access | Existing page/connection preserved | Do not replace the Service report until the candidate is accepted |
+
+The additional source comparison also found cross-year YTD/YTG, mixed-cutoff
+and negative-benchmark percentage differences. See the comparison document;
+the existing synthetic checks do not qualify those cases.
 
 The full R16.6 fallback protects current functionality while these gaps are
 resolved. It is **not** a reason to mark native parity achieved.
@@ -172,8 +182,11 @@ Row labels are in a separate helper table from preference filters. This avoids
 DAX auto-exist removing currency tokens while a matrix evaluates one row. The
 actual engine checks cover the USD amount after that row filter.
 
-Keep generated company-bound projects, identifiers, model definitions and ZIPs
-outside this public Coordination repository. The original R16.6 package is
+The user subsequently explicitly requested syncing the connected thin-report
+candidate here. Its original ZIP is now in `candidate/`, with connection
+identifiers preserved and an archive/credential/cache audit receipt. Coordination
+is public. Keep credentials, exported company figures, cached/full data models
+and private execution/backup definitions outside it. The original R16.6 package is
 unchanged. GitNexus coverage is partial and is not proof of zero impact.
 
 Official feasibility references:

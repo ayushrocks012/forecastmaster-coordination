@@ -1005,3 +1005,25 @@ run-rate/PY column visibility, exact largest-gap ranking, company calculations
 and speed remain open gates. The README records the differences explicitly.
 Neither new report nor native model support was installed/published in Fabric.
 GitNexus coverage remains partial and cannot establish zero impact.
+
+
+## 22 October 2026 — connected candidate now available through Coordination
+
+The user explicitly asked to sync the connected candidate for remote pulling.
+The repository was checked and is public. The original prepared thin-report ZIP
+is now in `handoff/report-native-r17/candidate/`, with its company connection
+reference preserved. Its SHA256 is
+`feca03b94b2cf3fd5abacb46acf870e6f3d201c860224a7b5036c4bf1e3ed5b1`.
+The bounded package check found no stored credential patterns or cached sales
+model/PBIX/PBIT/local-cache files. This specific package was explicitly requested;
+credentials, exported business data, full models and private execution backups
+remain excluded. No company model/report was changed or published by this sync.
+
+`WORK LAPTOP - OPEN CANDIDATE.txt` gives pull/extract/read-only-PROBE steps.
+`CAPABILITIES-VS-R16.6.md` expands the earlier incomplete comparison: native R17
+is missing multi-measure Demand, simultaneous chart trend windows, half-year
+periods, driver/sector S&OP summary breakdown, exact gap ranking, pinned readout,
+linked hover emphasis and automatic reflow. Source inspection also found
+cross-year YTD/YTG, mixed-cutoff and negative-benchmark percentage differences.
+They were not covered by the existing 6,497 checks and are not accepted parity.
+The native implementation remains a NO-GO candidate; production R16.6 is intact.

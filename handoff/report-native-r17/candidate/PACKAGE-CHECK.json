@@ -1,0 +1,14 @@
+{
+  "Artifact": "ForecastMaster Native Review R17 - Candidate.zip",
+  "SHA256": "feca03b94b2cf3fd5abacb46acf870e6f3d201c860224a7b5036c4bf1e3ed5b1",
+  "Bytes": 452242,
+  "OriginalPreparedZIPPreserved": true,
+  "CompanyConnectionReferencePreserved": true,
+  "CompanyConnectionIdentifiersIncluded": true,
+  "StoredCredentialPatternHits": 0,
+  "CachedSalesOrModelBinariesFound": false,
+  "ProbeDefaultsToReadOnly": true,
+  "RepositoryVisibilityAtHandoff": "public",
+  "Scope": "User explicitly requested syncing this company-connected thin-report candidate to Coordination. No PBIX, credentials or cached sales data are included.",
+  "CompanyInstallationOrPublication": false
+}

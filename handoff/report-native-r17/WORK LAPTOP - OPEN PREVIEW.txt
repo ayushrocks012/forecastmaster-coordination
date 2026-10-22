@@ -23,10 +23,9 @@ The repository's documented default location is:
   %USERPROFILE%\source\forecastmaster-coordination
 Your actual clone can be elsewhere; use the folder already open in VS Code.
 
-REAL COMPANY DATA - A SEPARATE PRIVATE FILE
-ForecastMaster Native Review R17 - Candidate.zip was created on the preparation
-laptop at C:\Users\Ayush\Downloads. It is not in this public Git repository.
-Copy that ZIP to the work laptop using your approved private file-transfer route.
-Extract it into a NEW folder. Its OPEN FIRST.txt starts with the read-only
-PROBE NATIVE MODEL.py step; leave MODE = "PROBE". Do not run PREPARE/APPLY or
-publish the report simply because the preview opened.
+REAL COMPANY DATA - SYNCED THIN-REPORT CANDIDATE
+The company-connected ZIP is now in the same repository at:
+  handoff\report-native-r17\candidate\ForecastMaster Native Review R17 - Candidate.zip
+Follow WORK LAPTOP - OPEN CANDIDATE.txt. A separate private transfer is no longer
+required for that audited thin-report package. Start with the read-only model
+probe, not PREPARE/APPLY or publication. CAPABILITIES-VS-R16.6.md lists its gaps.

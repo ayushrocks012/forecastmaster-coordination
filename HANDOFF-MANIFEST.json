@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 33806,
-      "SHA256": "53fd0c003146db7ee39fafae8460c51bcd51548d3feec3cee3f7a15513e44d06"
+      "Bytes": 35195,
+      "SHA256": "a930d72d3d8b62b0c27e1a757e9ab834dfaf3964bba3078b79a6101b74e9bf26"
     },
     "README.md": {
       "Bytes": 4984,
       "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 67056,
-      "SHA256": "1ff70f9617142542edbb894ee119e8541a9c64ab635c8a49ba3c5999926e146e"
+      "Bytes": 68428,
+      "SHA256": "3c03defa9b5c9fd814e75f89375b565d3da754c2cc5422d4a317eff40baad6af"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3574,12 +3574,12 @@
       "SHA256": "f599c61e3f7cb2fed71c3d1e3ab88a8809abd0f38dcff8433f1abb93efd735fa"
     },
     "handoff/report-native-r17/OPEN FIRST.txt": {
-      "Bytes": 3253,
-      "SHA256": "af5fc1538d6a87617fc77650334dcee995475d09f16e48711a578425a86817a5"
+      "Bytes": 3386,
+      "SHA256": "a999d1d4f7f9f4d42f0102175e2e87f4cd0bbcb630df7350257c802aceb498d3"
     },
     "handoff/report-native-r17/README.md": {
-      "Bytes": 13559,
-      "SHA256": "07a524d07560a60421f1106424377dbf0932ee0ada783d90b37e872693875918"
+      "Bytes": 14642,
+      "SHA256": "8f33b9569f3362c2feb84bcf73ed9bebdc9365105310d0b5c3577b12526b2604"
     },
     "handoff/report-native-r17/VALIDATION-CONTROLS.json": {
       "Bytes": 172,
@@ -3674,8 +3674,32 @@
       "SHA256": "7a8c1805eb527225fad07f389da615baf924986f190277da5090f19310db47b4"
     },
     "handoff/report-native-r17/WORK LAPTOP - OPEN PREVIEW.txt": {
-      "Bytes": 1534,
-      "SHA256": "d5eac0ce4bbef367d2586cd75f4ae8c2ca71dcca3b5393aa893723e7d8ed01c3"
+      "Bytes": 1482,
+      "SHA256": "0ad9fc9e3ce20aa383d189273d8031c1b72447734f525c9b1de7cbd74186f290"
+    },
+    "handoff/report-native-r17/CAPABILITY-AUDIT.json": {
+      "Bytes": 833,
+      "SHA256": "1537c34a98f405468976bd555195fd13194646031410eadc5f4ee5a3026c779f"
+    },
+    "handoff/report-native-r17/candidate/ForecastMaster Native Review R17 - Candidate.zip": {
+      "Bytes": 452242,
+      "SHA256": "feca03b94b2cf3fd5abacb46acf870e6f3d201c860224a7b5036c4bf1e3ed5b1"
+    },
+    "handoff/report-native-r17/CAPABILITIES-VS-R16.6.md": {
+      "Bytes": 6950,
+      "SHA256": "cfd397109e688fc1ba55d761493430534f7f390a2fd139bf4148745a2307b8a9"
+    },
+    "handoff/report-native-r17/candidate/PACKAGE-CHECK.json": {
+      "Bytes": 674,
+      "SHA256": "ec0ba4413db768625048fa9474b028d3ddb5649c863a4ab83b6c72ab00a35a1c"
+    },
+    "handoff/report-native-r17/candidate/OPEN THIS FIRST.txt": {
+      "Bytes": 409,
+      "SHA256": "73ce6c7af2ef6e4deb1faf7762f8988e088a96fa8713d51e3a534f7c89e03f52"
+    },
+    "handoff/report-native-r17/WORK LAPTOP - OPEN CANDIDATE.txt": {
+      "Bytes": 2297,
+      "SHA256": "75349e85ecd12b09d2a1c5781f4861a509e26640d32a38670d4e5b6c4ee13a59"
     }
   }
 }

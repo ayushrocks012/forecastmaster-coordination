@@ -1,0 +1,16 @@
+{
+  "Evidence": "Bounded source comparison; no Desktop or Service rendering. No business code changed.",
+  "ProductionParity": false,
+  "KnownNativeFeatureGaps": 8,
+  "AdditionalCalculationParityCases": [
+    "Cross-year YTD/YTG windows",
+    "Different saved cutoffs",
+    "Negative benchmark denominator sign"
+  ],
+  "SourceSHA256": {
+    "handoff/report-gm-desktop-r16.6/Visual/src/engine.ts": "298d0ebc7430d01f81af49d9a8e2b92368bfe3b1146eb5909944357c98680f56",
+    "handoff/report-native-r17/native_model.py": "798e597c17bb048264b9613cb125bd344bebfa20a0c5da5137764633c3ff9e28",
+    "handoff/report-native-r17/prepare_project.py": "f2f058eeb4e21a4b2c3d1acbc456ba75bcef4ebd5f50a69be62a8c15c156d214",
+    "handoff/notebook-r05.4/Refresh/source/reporting.py": "ce469f99bfb44ffd649e67069432dc88d415f4e82c15ddd1761ea334627b4acf"
+  }
+}

@@ -1,0 +1,42 @@
+ON THE WORK LAPTOP - COMPANY-CONNECTED NATIVE R17 CANDIDATE
+
+The candidate is now in Coordination. No private file transfer or builder is
+needed. This is a thin report: it retains the company-model connection, but
+contains no cached sales model and requires your normal company sign-in.
+
+1. Open forecastmaster-coordination in VS Code, then Terminal > New Terminal.
+2. From that repository terminal, run:
+
+   git pull --ff-only
+   explorer.exe .\handoff\report-native-r17\candidate
+
+3. Right-click ForecastMaster Native Review R17 - Candidate.zip > Extract All.
+   Use a NEW Desktop folder named ForecastMaster Native Review R17.
+   Leave R16.6 and the published ForecastMaster Review unchanged.
+4. Open PROBE NATIVE MODEL.py as TEXT in VS Code or Notepad. Do not run it as
+   a local Python file. Copy all of its text.
+5. In Fabric, open the existing separate UNSCHEDULED reporting-setup notebook
+   attached to the ForecastMaster lakehouse. Do not edit the refresh worker.
+   Paste the copied text into a NEW cell. Leave MODE = "PROBE" unchanged.
+6. Run that new cell ONCE. It reads model metadata only; it does not install
+   objects, read sales amounts, publish or trigger Refresh Demand.
+7. Copy its complete short output into this chat. It tells us whether the
+   existing model is compatible with the native support adapter.
+
+The extracted report entry point is:
+  ForecastMaster Native Review\ForecastMaster Native Review.pbip
+
+The standard Desktop extraction path is therefore:
+  %USERPROFILE%\Desktop\ForecastMaster Native Review R17\ForecastMaster Native Review\ForecastMaster Native Review.pbip
+
+Opening that PBIP before native model support is installed can show missing
+fm_native_* fields. The ZIP is a qualification candidate, not a drop-in installed
+replacement. PREPARE, SQL views and APPLY are separate later model-support stages;
+do not change MODE or publish based only on a successful PROBE.
+
+For an immediate offline layout review, use the separate SYNTHETIC preview and
+WORK LAPTOP - OPEN PREVIEW.txt. It does not require model-support installation.
+
+CAPABILITIES-VS-R16.6.md lists the native feature gaps and calculation cases
+still needing reconciliation. The Advanced workspace preserves the R16.6
+runtime inside the company candidate, but is not proof of native parity.
