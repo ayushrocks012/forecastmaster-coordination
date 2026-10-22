@@ -45,3 +45,8 @@ WORK LAPTOP - OPEN PREVIEW.txt. It does not require model-support installation.
 CAPABILITIES-VS-R16.6.md lists the native feature gaps and calculation cases
 still needing reconciliation. The Advanced workspace preserves the R16.6
 runtime inside the company candidate, but is not proof of native parity.
+
+AFTER A RESULT WITH SQLSourceConfirmed = false:
+The first probe does not include the source-reference details needed to adapt
+the installer. Follow SOURCE ROUTE - STEPS.txt for one additional metadata-only
+check. Do not convert the model or run PREPARE/APPLY to bypass that guard.

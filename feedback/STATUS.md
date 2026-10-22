@@ -1047,3 +1047,21 @@ Eleven mocked API checks pass. No live company API, actual clipboard paste,
 notebook execution, model/report update or source arithmetic change was made.
 Original candidate/preview ZIP bytes and qualified native business code remain
 unchanged, and the native candidate remains NO-GO for replacing R16.6.
+
+
+## 22 October 2026 — first native source probe received
+
+The operator supplied the successful metadata-read output: one directLake entity
+fact partition, 15 existing tables, zero native helper tables and zero
+model-defined roles. SourceAmountsRead and ModelUpdated were false. The M-text
+SQL check was false and the adapter guard reported incompatibility. This is
+operator-supplied receiving evidence, not independent access from this host.
+
+The result does not identify the SQL/OneLake/source-reference route. The probe
+omitted the detailed source shape, so SOURCE ROUTE - READ ONLY.py now reports
+source-key names, reference flags, allowlisted connector/type/protocol hints
+and address-key names without their values. SOURCE ROUTE - STEPS.txt gives the
+clipboard/new-cell workflow in ForecastMaster_GM_Setup. Eight mocked source
+shape/privacy checks pass. No installer/model/business calculation change,
+storage-mode conversion, company refresh or publication was performed. The
+source route and native deployment remain pending the additional result.

@@ -141,3 +141,17 @@ before pasting into one NEW cell. Never Run all or edit old setup cells. The
 optional READ ONLY.ipynb contains identical code and empty outputs. Eleven local
 mocked API tests pass; company/API/clipboard execution remains unverified. This
 metadata-only repair changes no native business measures or release decision.
+
+
+On 22 October 2026 the operator supplied the first readable probe result:
+FactPartitionCount 1, SourceStorageModes [directLake], SourceType entity,
+SQLSourceConfirmed false, NativeTablesAlreadyPresent 0, ExistingTableCount 15,
+ExistingSecurityRoleCount 0, ModelUpdated false and SourceAmountsRead false.
+This confirms the reported Direct Lake entity layout, not its SQL/OneLake route.
+The original detector checked only named M connector text. Do not label the
+company source OneLake or change modes merely from that false result. The next
+read-only artifact is SOURCE ROUTE - READ ONLY.py, described by SOURCE ROUTE -
+STEPS.txt; it emits only property names and allowlisted connector/type hints,
+not connection values. Eight local mocked source/privacy checks pass. Keep the
+original probe/installer ZIP/business code intact until actual source shape is
+known. Model-role count zero is not a verdict on workspace/item authorization.

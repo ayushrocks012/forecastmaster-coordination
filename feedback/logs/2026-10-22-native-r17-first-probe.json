@@ -1,0 +1,20 @@
+{
+  "Evidence": "Operator-supplied metadata probe output, 22 October 2026; no independent live access.",
+  "Result": {
+    "Mode": "PROBE",
+    "FactPartitionCount": 1,
+    "SourceStorageModes": [
+      "directLake"
+    ],
+    "SourceType": "entity",
+    "SQLSourceConfirmed": false,
+    "NativeTablesAlreadyPresent": 0,
+    "ExistingTableCount": 15,
+    "ExistingSecurityRoleCount": 0,
+    "CompatibleWithCurrentAdapter": false,
+    "Reason": "Current adapter requires one existing Direct Lake on SQL entity partition.",
+    "SourceAmountsRead": false,
+    "ModelUpdated": false
+  },
+  "SourceRoute": "UNKNOWN until source-reference metadata received"
+}

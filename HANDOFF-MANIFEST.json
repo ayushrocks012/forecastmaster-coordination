@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 36075,
-      "SHA256": "5cadf2d5306d2687799b3e486fd60b2be5cfd9aceaafaae6affb73f1e11a0a1d"
+      "Bytes": 37011,
+      "SHA256": "b4d1572ca9cedfaddfbcd21deb0155669671c3dfbdbc97b3d9259adf9ec920b8"
     },
     "README.md": {
       "Bytes": 4984,
       "SHA256": "95a338b2b198712935a8ead10c5b381c9dec6a4be5cfda65952deee2023eea3a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 69655,
-      "SHA256": "c606033bb7f334363e7d2ad846916b14b99f95a8c3dc946e8405eea3524064c9"
+      "Bytes": 70713,
+      "SHA256": "a406e8bb56399a862c5212dc7a0281082c1d3d64ed8750099c3c4dcba4cf9c61"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3578,8 +3578,8 @@
       "SHA256": "29528e948c677e106c3d3f782a0cb9aa51047045d335dcd5096ee2615caccfac"
     },
     "handoff/report-native-r17/README.md": {
-      "Bytes": 15946,
-      "SHA256": "1004da419973d54b2fc232ce011bd7af7d6293ad98fd35093c9fd700cd28c80f"
+      "Bytes": 17234,
+      "SHA256": "adfba9584293062311ed30037caca058371c943960e356a483a008d9776ed8ea"
     },
     "handoff/report-native-r17/VALIDATION-CONTROLS.json": {
       "Bytes": 172,
@@ -3698,8 +3698,8 @@
       "SHA256": "73ce6c7af2ef6e4deb1faf7762f8988e088a96fa8713d51e3a534f7c89e03f52"
     },
     "handoff/report-native-r17/WORK LAPTOP - OPEN CANDIDATE.txt": {
-      "Bytes": 2508,
-      "SHA256": "209dea7d96ad2cbdf67a5b629b142376c29876f0672e4a535f297e410aa7ce4c"
+      "Bytes": 2790,
+      "SHA256": "decb43fd9c40c7d6686958392e39930acab761ba6eca70f48652ffb465b01d8a"
     },
     "handoff/report-native-r17/ForecastMaster Native Probe - READ ONLY.ipynb": {
       "Bytes": 5655,
@@ -3720,6 +3720,26 @@
     "handoff/report-native-r17/tests/check_readable_probe.py": {
       "Bytes": 8241,
       "SHA256": "ecba435c7c410559d27727095279b8d6acbe1eb8a628016db107fa3f50d442f9"
+    },
+    "feedback/logs/2026-10-22-native-r17-first-probe.json": {
+      "Bytes": 655,
+      "SHA256": "8f34b973975c105511622d5aec8bb5af94eccb1e8a506297e6e2a9aa27a97108"
+    },
+    "handoff/report-native-r17/SOURCE ROUTE - READ ONLY.py": {
+      "Bytes": 5013,
+      "SHA256": "f5b174af6aa2a651f5039ca6327a0e070a7b27548de91ddc3338b7606aaeb06b"
+    },
+    "handoff/report-native-r17/SOURCE ROUTE - STEPS.txt": {
+      "Bytes": 1328,
+      "SHA256": "dafc0bf8b595db9ca03694386b0cb103e7f9f61b61834b60cdec67789684b8be"
+    },
+    "handoff/report-native-r17/VALIDATION-SOURCE-ROUTE-PROBE.json": {
+      "Bytes": 393,
+      "SHA256": "c2763a99207559548714ed37717264ee7b3577955e912918c1d67744adb4677b"
+    },
+    "handoff/report-native-r17/tests/check_source_route_probe.py": {
+      "Bytes": 5687,
+      "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     }
   }
 }

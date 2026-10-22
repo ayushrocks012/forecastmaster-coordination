@@ -51,6 +51,26 @@ The original candidate ZIP, installer and qualified business code remain intact.
 API references: [model definition read](https://learn.microsoft.com/en-us/rest/api/fabric/semanticmodel/items/get-semantic-model-definition),
 [operation polling](https://learn.microsoft.com/en-us/rest/api/fabric/articles/long-running-operation).
 
+## Receiving source-mode result
+
+The operator's first probe on 22 October 2026 reported one `directLake` / `entity`
+fact partition, 15 model tables, zero native tables and zero model-defined roles,
+with no source amounts queried and no model update. The initial expression-only
+SQL check was false. This confirms Direct Lake but does not establish the route.
+Zero model-defined roles is not a check of workspace/item permissions.
+
+`SOURCE ROUTE - STEPS.txt` and `SOURCE ROUTE - READ ONLY.py` request the missing
+metadata shapes and connector hints. The latter reports no connection strings,
+endpoint values, credentials or amounts, and changes nothing. Eight mocked
+source/privacy tests pass. The original readable probe and installer ZIP remain
+unchanged. The installer is not adapted/approved from this incomplete result.
+
+Microsoft's [entity partition reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.analysisservices.tabular.entitypartitionsource)
+exposes both DataSource and ExpressionSource. Its
+[Direct Lake connection explanation](https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-security-integration)
+distinguishes SQL and OneLake connectors. Those references justify inspecting
+the actual metadata; they do not establish this company's route.
+
 ## Native first
 
 The two main pages use native line charts, native matrices, searchable slicers,

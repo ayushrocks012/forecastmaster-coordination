@@ -1,0 +1,9 @@
+{
+  "Tests": 8,
+  "Passed": true,
+  "SourceBytes": 5013,
+  "Evidence": "Synthetic mocked metadata only; connection values not echoed. Company source route remains unresolved.",
+  "BusinessCodeOrInstallerChanged": false,
+  "LiveCompanyExecution": false,
+  "GitNexusImpactAndScope": "UNKNOWN: authority drift / diff-impact failed closed. New metadata-only file; no business/installer change."
+}

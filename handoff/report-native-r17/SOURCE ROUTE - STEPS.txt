@@ -1,0 +1,26 @@
+SECOND READ-ONLY CHECK - IDENTIFY THE DIRECT LAKE SOURCE ROUTE
+
+The first probe succeeded: one Direct Lake entity partition, 15 model tables,
+no fm_native_* tables and no update. Its SQL connector-text check returned false.
+That result alone does not distinguish an M connection expression, a named
+structured/provider data source or an unrecognized source reference.
+
+ON THE WORK LAPTOP:
+1. Open Coordination in VS Code and use a PowerShell terminal in that folder.
+2. Run:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-r17\SOURCE ROUTE - READ ONLY.py" | Set-Clipboard
+
+3. In Fabric, open ForecastMaster_GM_Setup. Add a NEW Python code cell.
+4. Paste with Ctrl+V. Run ONLY that new cell using its play button.
+5. Send its complete short output to this chat.
+
+The code is about 5 KB, with short readable lines and no embedded installer.
+It reports metadata keys, source types and known connector hints, not connection
+string values, endpoint URLs, credentials or sales amounts. It changes nothing.
+Leave the existing model, source mode, refresh worker and setup cells intact.
+Do not run PREPARE/APPLY on the basis of the first result.
+
+Source interpretation remains pending. The current installer has not been
+changed or approved by this diagnostic. The original candidate ZIP is preserved.
