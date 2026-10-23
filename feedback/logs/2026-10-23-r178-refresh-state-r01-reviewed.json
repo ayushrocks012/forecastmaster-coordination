@@ -1,0 +1,95 @@
+{
+  "Evidence": "Operator-returned refresh-state R01 JSON; parsed and checked against its summary and preserved verifier",
+  "Attachment": {
+    "Bytes": 5162,
+    "SHA256": "b1cf34a5ea3ced811d37d720bad411bad10bed12876653f5a051e9fd5d76298f",
+    "RawAttachmentCopiedToPublicRepository": false
+  },
+  "Stage": "R178_REFRESH_STATE_READ_COMPLETED",
+  "ProbeRevision": "R01",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "ExactTESTConfirmed": true,
+  "HistoryHTTPStatus": 200,
+  "InstalledAtUTC": "2026-10-23T22:22:35.947732+00:00",
+  "RelevantHistory": [
+    {
+      "APIIndex": 0,
+      "Status": "Failed",
+      "RefreshType": "UNRECOGNIZED",
+      "RequestID": "7f24629a-4764-4dee-a712-a17854512b2e",
+      "StartTimeUTC": "2026-10-23T22:27:57.310000+00:00",
+      "EndTimeUTC": "2026-10-23T22:27:59.420000+00:00",
+      "StartedAtOrAfterInstall": true,
+      "ServiceErrorPresent": true,
+      "KnownErrorSignals": []
+    },
+    {
+      "APIIndex": 1,
+      "Status": "Completed",
+      "RefreshType": "OnDemand",
+      "RequestID": "0ec6a2b0-fd3a-4b80-a7a5-f0b414d5ffe2",
+      "StartTimeUTC": "2026-10-23T22:24:13.803000+00:00",
+      "EndTimeUTC": "2026-10-23T22:24:33.743000+00:00",
+      "StartedAtOrAfterInstall": true,
+      "ServiceErrorPresent": false,
+      "KnownErrorSignals": []
+    }
+  ],
+  "Summary": {
+    "RowsReturned": 11,
+    "FirstEntryStatusUsedByVerifier": "Failed",
+    "FirstEntryStartedAtOrAfterInstall": true,
+    "CompletedAtOrAfterInstall": 1,
+    "NonTerminalOrUnrecognized": 0,
+    "MissingOrInvalidStartTimes": 0
+  },
+  "ReconciledCounts": {
+    "Completed": 9,
+    "Failed": 2,
+    "StartTimesDescending": true
+  },
+  "ReportedActions": {
+    "ModelWriteRequested": false,
+    "OriginalModelWriteRequested": false,
+    "LakehouseTableWriteRequested": false,
+    "RefreshRequested": false,
+    "CompanyAmountQuerySubmitted": false,
+    "CompanyAmountValuesPrintedOrStored": false,
+    "ReportPublished": false,
+    "RawErrorsPrintedOrStored": false
+  },
+  "Interpretation": {
+    "PostInstallCompletedRefresh": "Confirmed at 22:24:13.803 through 22:24:33.743 UTC on 23 October 2026",
+    "NewestRefresh": "Failed at 22:27:57.310 through 22:27:59.420 UTC, later than that completion",
+    "VerifierStopExplained": "The first history entry is Failed, so unchanged verifier correctly stops at TEST_REFRESH_NOT_COMPLETED",
+    "FailureCauseAndInitiator": "UNKNOWN: ServiceErrorPresent true, KnownErrorSignals empty; raw error and original refresh type were not returned",
+    "RefreshTypeUnrecognized": "Probe allowlist placeholder, not proof of an invalid refresh type or a root cause",
+    "NoActiveStatusInReturnedSnapshot": true,
+    "FreshDateOrNumericalChecks": "NOT RUN by this metadata-only probe; earlier nine date groups and 12 comparisons remain historical scoped passes",
+    "CurrentModelContentsAfterFailedRun": "NOT VERIFIED; do not infer intact or damaged data from history alone",
+    "OverallVerification": "INCOMPLETE; do not skip newer failed run or promote earlier Completed to full acceptance"
+  },
+  "NextAction": {
+    "Operation": "Read failed refresh error details in company Fabric/Power BI UI; no new notebook cell",
+    "FailedRequestID": "7f24629a-4764-4dee-a712-a17854512b2e",
+    "DetailsURL": "https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e",
+    "Fallback": "UK-ANI-Demand > ForecastMaster Native OneLake R17.1 - TEST > Refresh > Refresh history > Failed row at 23:27:57 UK time (22:27:57 UTC), 23 October > Show/error details",
+    "Return": "Exact error code and message, and Data versus Query Cache phase if shown",
+    "NoRetryAuthorized": [
+      "installer",
+      "verifier",
+      "refresh-state probe",
+      "refresh",
+      "reset or clear",
+      "marker deletion",
+      "publication"
+    ]
+  },
+  "TimePresentation": {
+    "Timezone": "Europe/London",
+    "LatestFailureStartUK": "2026-10-23T23:27:57.310000+01:00",
+    "PriorCompletionEndUK": "2026-10-23T23:24:33.743000+01:00"
+  },
+  "OfficialUIAndLinkReference": "https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data#semantic-model-refresh-history",
+  "ReviewScope": "Counts/timestamps/source-flow/documentation only; no company calls or code/report/model change by this review"
+}

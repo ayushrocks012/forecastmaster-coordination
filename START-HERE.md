@@ -23,21 +23,24 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-**Current receiving action: read TEST refresh state only.** The
-operator completed R17.8 installation and one TEST refresh. The old verifier
-passed nine date groups and 12 numerical comparisons, then hit its empty metadata
-counter TypeError. [Reviewed result](feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
+**Current receiving action: read the failed TEST refresh error details.**
+The refresh-state R01 result confirms a post-install Completed refresh ending
+22:24:33 UTC on 23 October, followed by a newer Failed refresh starting
+22:27:57 UTC / 23:27:57 UK. The verifier correctly stops on the newer failure.
+The cause is still unknown because the raw error was withheld.
+[Reviewed result](feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json).
 
-The corrected R02 verifier has since stopped at `TEST_REFRESH_NOT_COMPLETED`,
-before dates/numerical checks. Current refresh status/cause was not returned.
-[Reviewed R02 stop](feedback/logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json).
+On the company laptop, open [the exact failed refresh](https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e).
+Expand error details and return its exact code/message, plus Data or Query Cache
+phase if shown. If the link is unavailable: UK-ANI-Demand → ForecastMaster Native
+OneLake R17.1 - TEST → Refresh → Refresh history → the Failed row at 23:27:57 UK
+on 23 October → Show/error details.
+[Microsoft instructions](https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data#semantic-model-refresh-history).
 
-Pull Coordination and copy [CHECK TEST REFRESH STATE R01.py](handoff/report-native-only-r17.8/refresh-state-r01/CHECK%20TEST%20REFRESH%20STATE%20R01.py)
-into ONE NEW ForecastMaster_GM_Setup Python cell. Run only that cell once and
-return its final JSON. It reads existing install receipts and refresh metadata,
-no amounts or definitions. [Current OPEN FIRST](handoff/report-native-only-r17.8/refresh-state-r01/OPEN%20FIRST.txt).
-**No installer/verifier retry, refresh/reset, marker deletion or publication.**
-Keep backups. Completed installation/recovery work stays complete.
+**No new notebook cell, installer/verifier/probe retry, refresh/reset, marker
+deletion or publication.** Keep backups and completed recovery work unchanged.
+Do not skip the newer failure by choosing an older Completed row. Earlier nine
+date groups and 12 comparisons remain recorded, not rerun by this history probe.
 
 Built-in visuals only; production R16.6 and older packages remain unchanged.
 Local native runtime/context/oracle, schema and receiving safety tests pass.

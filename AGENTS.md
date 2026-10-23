@@ -14,21 +14,23 @@ slice before broad redesign, test semantic edge cases and keep local, company
 numerical, native UI/export, performance and business gates separate. Update
 that same reference and STATUS at meaningful boundaries; no parallel checklist.
 
-Latest company return: corrected VerifierRevision R02 stopped early with
-TEST_REFRESH_NOT_COMPLETED. The returned JSON omits the actual history status;
-current processing state/cause is UNKNOWN, not proof of a failed installation.
-The earlier nine date groups/12 comparisons remain historical scoped passes.
-Current action: refresh-state-r01/CHECK TEST REFRESH STATE R01.py in ONE NEW
-setup cell, metadata only, then return JSON. No installer/verifier/refresh/reset
-retry, marker deletion or publication until reviewed. Update the same understanding
-and STATUS with this result. Preserve the native report/adapter and R16.6.
+Latest company return: refresh-state R01 completed, exact TEST confirmed and
+11 terminal history entries returned. Post-install OnDemand refresh completed
+at 22:24:33.743 UTC on 23 October; a newer run failed at 22:27:57–22:27:59 UTC
+(23:27 UK). Newest Failed explains verifier R02's processing guard. Raw error
+and initiator are UNKNOWN; the allowlisted UNRECOGNIZED refresh type is not a
+root cause. Current action: read that failed run's error details in company UI
+and return code/message plus Data/Query Cache phase if shown. See UNDERSTANDING
+resume and STATUS. No new notebook cell, installer/verifier/probe/refresh retry,
+reset, marker deletion or publication. Keep report/adapter/R16.6/backups unchanged.
+Earlier nine date groups/12 comparisons remain historical scoped evidence.
 
 Earlier company return: R17.8 install and one TEST refresh completed. The old
 verifier passed nine exact date groups and all 12 paired scalar comparisons,
 then stopped with TypeError before metadata label counts/final gates. Overall
 verification remains incomplete. Full candidate/cloud/Completed checks passed
-before those results by retained source flow. That earlier corrected-verifier action is now superseded by the refresh-state
-check above. The verifier R02 bytes remain preserved. No installer, refresh/reset, marker deletion
+before those results by retained source flow. That earlier corrected-verifier action is now superseded by the failed-refresh
+error-details action above. The verifier R02 bytes remain preserved. No installer, refresh/reset, marker deletion
 or publication. R02 fixes empty metadata COUNTROWS via COALESCE, without changing
 business-amount blanks. See UNDERSTANDING resume and latest STATUS receipt.
 
@@ -49,7 +51,7 @@ Current release: handoff/report-native-only-r17.8/test-release-r01/OPEN FIRST.tx
 Local qualification: 207 native synthetic queries / 1,868 assertions, 14 unit
 checks and 67 Microsoft schema documents. Company installation/one refresh
 are now confirmed; the corrected verifier is blocked at the refresh-history
-guard. Resolve it through the metadata-only probe above before a verifier retry.
+guard. Obtain the failed run error details above before a supported correction/retry.
 The original install-once/refresh-once instructions remain historical. This does not
 reopen the closed date recovery. No reset/clear/recovery rerun. STOPPED or unknown
 write outcomes require receipt review, never blind retry or marker deletion.

@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 79371,
-      "SHA256": "413e61fc1a734ba463deedb549b0e236fe529fd6224b8e76aeb3fde3c371a7bc"
+      "Bytes": 79558,
+      "SHA256": "ad835ae98363b1141e770722141c6e82f270342bfa126ed3a44a46390f9c5256"
     },
     "README.md": {
-      "Bytes": 8341,
-      "SHA256": "a2625e8827653ca2df4918839c927f8b95b64f320855aae297fa51b0ead84473"
+      "Bytes": 8386,
+      "SHA256": "5c00371683d4db2eba5e1752ebd2096d6f98f8b36886bcbce9294652ee8d9d7c"
     },
     "feedback/STATUS.md": {
-      "Bytes": 146166,
-      "SHA256": "c38363401fb6d694f56a9866b0902d36fb00dbd4e32d47463798e7e6ab03e830"
+      "Bytes": 148747,
+      "SHA256": "85b4d469dd82981ba000e5a2f6b30c2554c0b5fea9b11060d8abe998c9216860"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 7881,
-      "SHA256": "d43a659d60a910835b493bfcbce72fbadd90bb8781e720d4eae974a51de6ca9a"
+      "Bytes": 8145,
+      "SHA256": "8d8ecfc01231cbb3c557e56d5eb9c6a41c208bb8c9d67f71293c566102cbe31a"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 191133,
-      "SHA256": "31c5d72be7e79e1362b41dae667b2955cab18dcb42214847705b00a1592a6d4b"
+      "Bytes": 191808,
+      "SHA256": "9b1de0cc5078bd282428d2e82918d9204a85b320834841e51ed166ee43ded9d7"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4680,6 +4680,10 @@
     "feedback/logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json": {
       "Bytes": 2376,
       "SHA256": "e966f580a81ec9118b1957c863b93911e82af126b750e3b47ffab2d1228f8eb1"
+    },
+    "feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json": {
+      "Bytes": 4360,
+      "SHA256": "7fbc1a6d23c24e30dd9f9b8ae906001c4b55788ce37938408b86e31db2217005"
     }
   }
 }

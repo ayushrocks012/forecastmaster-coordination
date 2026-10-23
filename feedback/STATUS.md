@@ -1,5 +1,41 @@
 # Company setup status
 
+## 23 October 2026 — refresh-state R01 confirms newer failed TEST refresh
+
+The returned R178_REFRESH_STATE_READ_COMPLETED JSON confirms exact TEST, HTTP
+200 and 11 newest-first history rows: nine Completed, two Failed; all start
+times valid. The install receipt is timestamped 22:22:35.947732 UTC. Its OnDemand
+refresh ran 22:24:13.803–22:24:33.743 UTC and completed without a service error
+in this metadata response. A later, newest run failed 22:27:57.310–22:27:59.420
+UTC (23:27 UK time), request 7f24629a-4764-4dee-a712-a17854512b2e.
+[Reviewed safe receipt](logs/2026-10-23-r178-refresh-state-r01-reviewed.json).
+
+This explains verifier R02's TEST_REFRESH_NOT_COMPLETED: its first history row
+is Failed. The earlier post-install completion really exists; it is superseded
+by a newer processing failure for the verifier gate. ServiceErrorPresent is true
+but KnownErrorSignals is empty; the raw error and actual trigger/type were not
+returned. UNRECOGNIZED is the probe's display placeholder, not an explanation.
+All rows were terminal in the returned snapshot; this is not live-state or
+post-failure data/definition verification. Prior nine date groups/12 comparisons
+remain scoped historical passes; the history probe queries no amounts.
+
+Current action: open [that failed refresh](https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e)
+on the company laptop and send its exact error code/message and Data/Query Cache
+phase if shown. Fallback: TEST semantic model → Refresh → Refresh history →
+Failed at 23:27:57 UK / 22:27:57 UTC, 23 October → Show/error details.
+[Official UI and request-ID link contract](https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data#semantic-model-refresh-history).
+No new notebook cell or repeat probe is needed. No installer/verifier/refresh
+retry, reset/clear, marker deletion or publication until the error is reviewed.
+Do not bypass the newer failure using the older Completed row.
+
+The same UNDERSTANDING, AGENTS and entry points record this evidence and next
+action. This review changes documentation only; all existing code, tests, report
+ZIPs, adapter, installer and verifier bytes are preserved. No company operation
+ran here. Existing source/catalog/hash checks suffice for this documentation
+change; no new engine/receiving test or acceptance pass is claimed. Keep private
+backups and production R16.6 unchanged. Final verification/UI/export/business
+parity/company performance remain pending.
+
 ## 23 October 2026 — corrected verifier R02 blocked at refresh-history prerequisite
 
 The operator returned TEST_R178_VERIFICATION_STOPPED, Revision R01,
