@@ -307,3 +307,27 @@ and Hide reflow are explicitly deferred for native review, not silently treated
 as retained parity. Native Desktop rendering/export/interaction and company
 execution/reconciliation remain receiving gates. The UI bridge still failed
 before selecting a window; structural/schema checks are not a visual pass.
+
+Later 23 October R17.3 screenshots confirm a loading native headline/chart, but
+show redundant buttons/sliders, malformed scaled amounts and visual date tokens,
+and collapsed executive columns displaying a rounded variance ratio as zero.
+The user requested native drill instead of Drivers/Sectors/Both buttons. Current
+handoff is handoff/report-native-only-r17.4/. It removes all nine action buttons
+and view bookmarks, uses one driver > SectorLabel hierarchy with native drill,
+disables both chart sliders, uses a continuous date axis, fixes visual-level
+MMM date tokens, and explicitly stores the range slicer's UI start/end dates.
+Retain native page zoom, Focus mode and export; no custom visual may be added.
+
+R17.4 has one guarded existing-TEST format/display update, unlike report-only
+R17.3. Scaling separators move before the decimal. N Summary Cell returns Plan
+for a collapsed period parent and blank for a mixed absolute/percent comparison
+parent; its full leaf expression and every other numeric/source expression are
+preserved. Only native format expressions and that display guard may change.
+Require known native definitions, complete private UTF-8 backup verification,
+concurrency/cloud mapping checks, no purge, one update/no retry and full readback.
+Do not recreate the model, change a source/connection/security object, query
+company amounts, refresh sources or publish. SAMPLE uses fabricated data and
+already includes this repair. Older packages/production stay untouched.
+Windows formatter and local schema/mock checks are separate from pending native
+Desktop drill/rendering and company reconciliation/performance. The WSL UI
+bridge still failed before selecting a window. Keep those receiving gates open.

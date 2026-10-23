@@ -1,5 +1,33 @@
 # Company setup status
 
+## 23 October 2026 — R17.3 opens; native drill simplification requested
+
+Receiving screenshots show a loading native headline and monthly chart without
+the earlier query-error overlay. They also show unused external selection and
+view buttons, a value-axis slider, malformed scaling suffixes, visual dates
+rendered as minute digits, and a collapsed executive matrix displaying zeros.
+The operator requested native drill up/down instead of the three view buttons,
+and removal of the six selection buttons and chart axis sliders. No raw company
+screenshots or amounts are committed here.
+
+Current handoff: [R17.4 native drill steps](../handoff/report-native-only-r17.4/OPEN%20FIRST%20-%20NATIVE%20DRILL.txt).
+The report has one native driver/sector hierarchy, no action buttons/bookmarks,
+no chart zoom sliders, a continuous monthly date axis and compact native layout.
+Visual date tokens and the date slicer's separate displayed bounds are corrected.
+
+The paired TEST-only cell corrects native dynamic-format comma placement and
+the undefined collapsed summary context. Period parents show Plan; a parent
+mixing amount and percent is blank. The leaf calculation and all other amount,
+trend, ratio, cutoff, source, cohort and missing-member expressions remain
+unchanged. No company operation has been executed from this host. Unknown
+metadata fails closed; full private backups, no-purge, mapping and concurrency
+guards are retained. No source refresh, model recreation or publication is part
+of this step. The local SAMPLE includes the repair using fabricated data only.
+
+Receiving R17.4 model/update, native drill/rendering, export and company numeric
+and performance checks remain pending. Local report/updater/schema/Windows
+formatter checks do not pass those gates. Production R16.6 stays unchanged.
+
 ## 23 October 2026 — R17.2 rejected; native-only Demand preview requested
 
 The receiving screenshots show R17.2 with clipped native slicers, overlapping

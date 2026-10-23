@@ -1,17 +1,19 @@
-# Current report step - native-only R17.3 preview, 23 October 2026
+# Current report step - native-only R17.4 drill preview, 23 October 2026
 
-The operator rejected R17.2's Desktop layout and explicitly requested **no custom
-visuals**. Use [R17.3 native-only steps](handoff/report-native-only-r17.3/OPEN%20FIRST%20-%20NATIVE%20ONLY.txt):
-pull Coordination, then extract/open the new SAMPLE or TEST ZIP. **Do not run a
-Fabric setup cell or update/refresh the model for this report-only revision.**
-The SAMPLE has fabricated local data and needs no Fabric access. TEST retains
-the existing isolated connection on the company laptop.
+R17.3 opened on the company laptop. The operator requested removal of the extra
+selection/view buttons and axis sliders in favor of native matrix drill. Use
+[R17.4 native drill steps](handoff/report-native-only-r17.4/OPEN%20FIRST%20-%20NATIVE%20DRILL.txt):
+pull Coordination, run ONE NEW R17.4 TEST-only code cell in ForecastMaster_GM_Setup,
+then extract/open the NEW R17.4 TEST ZIP. Unlike report-only R17.3, this revision
+includes a narrow model format/display repair for faults visible in the latest
+screenshots. No source-data refresh, new model or publication is requested.
 
-This is Demand Review first, with only built-in visuals. Custom controls and
-the embedded R16.6 fallback are absent. [Scope and deferred functions](handoff/report-native-only-r17.3/README.md)
-are explicit; full R16.6 parity is not claimed. Local definition/schema checks
-are separate from outstanding Desktop and company query/performance acceptance.
-Keep published R16.6 in production. Original repository/setup instructions follow.
+The SAMPLE has fabricated local data and needs neither company access nor that
+setup cell. Both copies remain entirely native, Demand Review first. [Scope
+and deferred functions](handoff/report-native-only-r17.4/README.md) are explicit;
+full R16.6 parity is not claimed. Local checks are separate from receiving
+Desktop drill/rendering and company numerical/performance acceptance. Keep
+published R16.6 in production. Original repository/setup instructions follow.
 
 # Connect the Abbott laptop using VS Code and SSH
 

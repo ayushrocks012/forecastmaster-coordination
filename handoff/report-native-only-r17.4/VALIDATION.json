@@ -1,0 +1,111 @@
+{
+  "Revision": "R17.4 NATIVE ONLY DRILL",
+  "UTC": "2026-10-23T14:08:11.115867+00:00",
+  "Packages": {
+    "TEST": {
+      "File": "ForecastMaster Native Only R17.4 TEST.zip",
+      "Bytes": 47403,
+      "SHA256": "8456cd5df59fe5ee8624985e09c148707b28e66b38aab22ecfc21d0c88b3e3d9",
+      "ExactValidatedFolderBytes": true,
+      "NativeVisualTypes": {
+        "slicer": 12,
+        "textbox": 8,
+        "pivotTable": 2,
+        "tableEx": 1,
+        "lineChart": 1,
+        "cardVisual": 1
+      },
+      "CustomVisualCount": 0,
+      "ActionButtonCount": 0,
+      "PageCount": 1
+    },
+    "SAMPLE": {
+      "File": "ForecastMaster Native Only R17.4 SAMPLE.zip",
+      "Bytes": 452316,
+      "SHA256": "b72b583face9516707691e13b4fc1b6b88e97779dbb0d0c5bc5e44f4b8d561c0",
+      "ExactValidatedFolderBytes": true,
+      "NativeVisualTypes": {
+        "slicer": 12,
+        "textbox": 8,
+        "pivotTable": 2,
+        "tableEx": 1,
+        "lineChart": 1,
+        "cardVisual": 1
+      },
+      "CustomVisualCount": 0,
+      "ActionButtonCount": 0,
+      "PageCount": 1
+    }
+  },
+  "RegressionTests": {
+    "Report": 10,
+    "Updater": 9,
+    "Failures": 0
+  },
+  "WindowsFormatChecks": {
+    "DesktopRendering": "NOT TESTED",
+    "Formatter": "Windows .NET; comma placement also matches documented Power BI model syntax",
+    "Checks": [
+      {
+        "Observed": "123.46m",
+        "Name": "million",
+        "Expected": "123.46m"
+      },
+      {
+        "Observed": "456.8k",
+        "Name": "thousand",
+        "Expected": "456.8k"
+      },
+      {
+        "Observed": "-123.46m",
+        "Name": "negative",
+        "Expected": "-123.46m"
+      },
+      {
+        "Observed": "0.00",
+        "Name": "true-zero",
+        "Expected": "0.00"
+      },
+      {
+        "Observed": "27.8%",
+        "Name": "share",
+        "Expected": "27.8%"
+      },
+      {
+        "Observed": "Aug 2026",
+        "Old": "00 2026",
+        "Name": "visual-month",
+        "Expected": "Aug 2026"
+      }
+    ]
+  },
+  "MicrosoftSchemas": {
+    "TEST": {
+      "Checked": 31,
+      "Failures": [],
+      "UnavailableOriginalSchemas": [],
+      "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+    },
+    "SAMPLE": {
+      "Checked": 31,
+      "Failures": [],
+      "UnavailableOriginalSchemas": [],
+      "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+    }
+  },
+  "NativeMeasureInventory": 49,
+  "DynamicFormatsRepaired": 20,
+  "NumericExpressionsBytePreserved": 48,
+  "SummaryDisplayGuard": "Original leaf expression preserved verbatim; collapsed period returns Plan, mixed-comparison parent is blank",
+  "ModelScope": "Existing TEST only; format metadata and one summary display guard",
+  "SourcesOriginalTablesRolesRelationshipsPreserved": true,
+  "MockBackupMappingConcurrencyAndNoRetryGuards": "PASS",
+  "CompanyModelUpdatedFromThisHost": false,
+  "CompanyAmountsQueried": false,
+  "CompanyReportPublished": false,
+  "DesktopOpeningDrillRendering": "PENDING: UI bridge rejected sandboxCwd before window selection",
+  "NativeEngineExecutionOfNewSummaryGuard": "NOT RUN",
+  "CompanyReceivingUpdateReconciliationPerformance": "PENDING",
+  "GitNexusImpact": "UNKNOWN: repository is not indexed; authority drift blocks mutation conclusion. Bounded source tracing and focused regressions used.",
+  "ProductionReplacement": "NOT QUALIFIED"
+}

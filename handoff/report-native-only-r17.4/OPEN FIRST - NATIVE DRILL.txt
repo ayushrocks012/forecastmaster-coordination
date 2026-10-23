@@ -1,0 +1,75 @@
+FORECASTMASTER R17.4 - NATIVE DRILL, NO CUSTOM VISUALS
+
+The external Select all/Clear all and Drivers/Sectors/Both buttons are gone.
+The executive matrix uses native Growth driver > Sector drill controls.
+Both chart axis sliders are off. Date/number formatting is corrected.
+
+The source-currency / Automatic ADS / Demand Review preview scope remains.
+Keep your R17.3 folder and published R16.6 unchanged. Do not Publish/Replace.
+
+1. PULL COORDINATION
+
+   On the connected laptop, open forecastmaster-coordination in VS Code.
+   Terminal > New Terminal > PowerShell. From the repository folder run:
+
+   git pull --ff-only
+   Get-Content -Raw -Encoding UTF8 ".\handoff\report-native-only-r17.4\UPDATE EXISTING TEST TO R17.4.py" | Set-Clipboard
+
+   The complete readable code cell is now copied. Do not paste notebook JSON.
+
+2. APPLY THE NARROW REPAIR TO EXISTING TEST
+
+   In Fabric > UK-ANI-Demand open the unscheduled notebook:
+     ForecastMaster_GM_Setup
+
+   Add a NEW Python/PySpark code cell, paste, and run ONLY that new cell.
+   Do not use Run all or rerun old creation/setup/repair cells.
+
+   Expected Stage: TEST_R174_UPDATED or TEST_R174_ALREADY_INSTALLED.
+   The existing model name stays:
+     ForecastMaster Native OneLake R17.1 - TEST
+     31d00232-ac03-48fe-af39-f2e4bae82443
+
+   It changes native formatting plus the collapsed-summary display guard.
+   Plan/trend/ratio/source/missing arithmetic, other tables, roles and the cloud
+   connection are preserved. Full private backup and readback checks remain.
+   No new model, source-data refresh or publication is requested.
+   If it errors, stop and send the full output. Keep the private backup.
+
+3. EXTRACT AND OPEN THE NEW REPORT
+
+   In the same repository terminal run:
+
+   explorer.exe .\handoff\report-native-only-r17.4\candidate
+
+   Right-click ForecastMaster Native Only R17.4 TEST.zip > Extract All.
+   Extract the COMPLETE ZIP into a NEW Desktop folder. Open:
+     ForecastMaster Native Only R17.4 TEST.pbip
+   Keep its .Report folder beside the .pbip. It uses the same TEST model.
+
+   On a laptop WITHOUT company access, use the SAMPLE ZIP instead. Its local
+   model contains only fabricated data and already includes the repair; skip
+   step 2. Keep its .SemanticModel folder alongside its .Report and .pbip.
+   The first SAMPLE opening may need a local calculated-table refresh.
+
+4. CHECK NATIVE DRILL AND THE CORRECTIONS
+
+   - Use the slicers' own Select all / eraser controls. There are no extra
+     buttons beneath them. Review months should display the selected cycle
+     year's bounds; changing the bounds should change the chart range.
+   - Executive summary opens at Growth driver. Hover the matrix header and use
+     its native drill controls with Rows selected. Drill down into Core Oral,
+     use Go to next level for all sectors, Expand all down one level to retain
+     parent context, and Drill up to return. +/- expands individual drivers.
+     Sector labels retain the driver when parent context is absent.
+   - Confirm the chart has no vertical or horizontal zoom slider. Test page
+     zoom and Focus mode normally. Hover a monthly point for its exact value.
+   - Confirm amounts have one k/m suffix, percentages stay percentages, saved
+     cutoffs show month names, and the executive period parent shows Plan
+     rather than a rounded variance ratio displayed as zero.
+   - Verify one driver and one sector against the headline/native Export data.
+     This is TEST qualification, not approval to replace production.
+
+   Send the top and matrix screenshots, or the first full error message.
+   Local checks do not certify receiving Desktop drill/rendering or company
+   calculations/performance. No Power BI custom visual is included.
