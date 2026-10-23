@@ -1,0 +1,36 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "TEST_CACHE_RESET_R01_PREPARED_COMPANY_EXECUTION_PENDING",
+  "OperatorR03Evidence": "All physical date checks valid; TEST axis 83/84 invalid; exact cause unproven",
+  "LocalMockTestsPassed": 16,
+  "Python310Grammar": "PASS",
+  "CompanyAPIOrSparkExecutedHere": false,
+  "PrivateBackupFullFileUtf8HashAndLength": true,
+  "ExactDateParityRequired": true,
+  "MetadataAndCloudReadbackRequired": true,
+  "OnlyRefreshPOSTs": "Pinned TEST clearValues then full; no updateDefinition/table write/publish",
+  "SDKSubmissionRetriesDisabled": true,
+  "RequestedServiceRetryCount": 0,
+  "ServiceInternalRetriesPossible": true,
+  "PrivateAttemptMarkerPreventsRerun": true,
+  "TemporarilyClearsTESTLoadedValues": true,
+  "ActualModelProcessingMayReadCompanyDataInternally": true,
+  "CompanyAmountQuerySubmittedHere": false,
+  "NativeR178AdapterInstalled": false,
+  "PriorManifestEntries": 1122,
+  "PriorProtectedFilesToVerify": 1118,
+  "CellSHA256": "a5135045e61623126cd3cc0ddb4e07da9beb25e82e1386f97bf1e44cc9fb12ff",
+  "FrozenReaderSourceSHA256": "4fa369ad53b864358d49643232d6f0538ac7da387f1cc29e27f2c801ad04bb49",
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination not registered",
+    "ChangeScope": "UNAVAILABLE; staged diff-impact failed closed; analysis_incomplete=1 and interface_classification_incomplete=1; full impact UNKNOWN",
+    "Fallback": "Direct route/state/parity/privacy and preservation checks; full impact UNKNOWN"
+  },
+  "Unverified": [
+    "Company reset support and runtime result",
+    "Cause of date-read discrepancy",
+    "Post-processing exact date parity",
+    "Native UI/numerical/export/performance acceptance"
+  ],
+  "PriorProtectedFilesVerified": 1118
+}

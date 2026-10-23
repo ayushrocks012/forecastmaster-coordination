@@ -1,0 +1,37 @@
+{
+  "Date": "2026-10-23",
+  "Evidence": "Operator-pasted R03 date-boundary JSON; no financial values or source records",
+  "Stage": "R178_DATE_BOUNDARY_R03_COMPLETED",
+  "AllRequestedReadsCompleted": true,
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "Identity": {"ExactTESTConfirmed": true, "ElapsedMs": 148},
+  "Definition": {
+    "ElapsedMs": 20998,
+    "AllFourExpectedTablesSingleDirectLakeEntityPartitions": true,
+    "AllExpectedDateColumnsDateTimeWithMatchingSourceColumns": true,
+    "EntityNamesMatch": true,
+    "FullOneLakeSourceURICompared": false
+  },
+  "SemanticMonthCounts": {
+    "FactMonthKeys": 84, "InvalidFactMonthKeys": 0,
+    "AxisMonthKeys": 84, "InvalidAxisMonthKeys": 83,
+    "ReviewMonthKeys": 84, "InvalidReviewMonthKeys": 0,
+    "StartMonthKeys": 84, "InvalidStartMonthKeys": 0,
+    "EndMonthKeys": 84, "InvalidEndMonthKeys": 0,
+    "ElapsedMs": 3002
+  },
+  "PhysicalDateChecks": {
+    "fm_review_files": {"Rows": 3, "IMSPhysicalType": "date", "EFPhysicalType": "date", "InvalidIMS": 0, "InvalidEF": 0, "ElapsedMs": 12134},
+    "fm_review_months": {"Rows": 84, "PhysicalType": "date", "InvalidDates": 0, "ElapsedMs": 2093},
+    "fm_review_axis": {"Rows": 84, "PhysicalType": "date", "InvalidDates": 0, "ElapsedMs": 1762},
+    "fm_review_facts": {"DistinctMonthKeys": 84, "PhysicalType": "date", "InvalidDates": 0, "ElapsedMs": 4193},
+    "ElapsedMs": 20184
+  },
+  "CompanyAmountsQueriedOrPrinted": false,
+  "ModelWriteRequested": false,
+  "LakehouseWriteRequested": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "Interpretation": "Physical date validity checks passed, while TEST axis reads 83/84 invalid dates. Engine/cache cause remains unproven; no physical rewrite indicated.",
+  "NextStep": "One guarded isolated-TEST clearValues then full refresh with exact private date parity and metadata readback. Not another ordinary refresh or a report/adapter installation."
+}

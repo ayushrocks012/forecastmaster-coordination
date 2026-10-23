@@ -632,3 +632,30 @@ R02's cause. No raw error/header/connection/record/amount output. No updater,
 refresh retry, source conversion, credentials/admin change or report rebuild.
 Preserve all R01/R02/report/adapter/SAMPLE and earlier package bytes. R03 local
 API/Spark-shaped mocks are not company execution or date/UI/speed acceptance.
+
+R03 then returned R178_DATE_BOUNDARY_R03_COMPLETED with all reads complete.
+Physical DATE cutoffs/month columns are valid (three October files, 84 month
+keys in each checked table), but TEST axis has 83/84 invalid dates. Other
+original/native month dictionaries are valid. Model entity/source-column names
+and dateTime types match. R03 did not compare full source URI/exact date values;
+precise engine/cache cause remains unproven. Do not rewrite physical dates.
+
+Current company step is report-native-only-r17.8/cache-reset-r01/README.md:
+ONE NEW reset cell ONCE. It changes ONLY TEST processing state via clearValues
+then full, waiting for known completion. This evidence-backed cold-load attempt
+supersedes the prior no-further-refresh hold for this exact guarded procedure
+only; no manual repeat refresh. Exact known routing, valid physical date sets,
+private full-file UTF-8/hash backups, no active/unknown refresh, metadata/cloud
+concurrency and one persistent attempt marker guard submissions. SDK submission
+retries and requested service retries are disabled; internal service retries
+may occur. Do not resubmit ambiguous requests or delete the marker to bypass.
+
+TEST may remain unavailable after clear until full succeeds. Return safe JSON
+with each requested/completed phase and request ID even for STOPPED; review
+known operation state before recovery. Compare exact post-processing cutoffs
+and month keys privately, physical-date stability and complete definition/cloud
+readback before any success claim. No financial query/observations are output;
+model processing may read business data internally. No source-table/formula/
+definition/original-model/connection/schedule/credential/publication change.
+This does not install the R17.8 selection adapter. Preserve all older packages;
+native-only, other-laptop access and pending UI/numerical/performance gates stay.

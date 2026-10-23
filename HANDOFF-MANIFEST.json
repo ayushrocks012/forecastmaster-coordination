@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 70491,
-      "SHA256": "ca7e9ece0563ef945a7a4eeccd616e566a87edd529ec09a8460b93ef1a26ac7d"
+      "Bytes": 72370,
+      "SHA256": "8c6c2547a458841ba80ca28afc95f08ea20da390f86af170dfa0eda1d8df65a6"
     },
     "README.md": {
-      "Bytes": 5931,
-      "SHA256": "7dd96f202c17ff8aee2a25837279fecce367a82959f877c00613dc6fd163040c"
+      "Bytes": 5949,
+      "SHA256": "efb61bc2494fa7440ac468fcbd7c3b6679d6f284f663cd4318e99f54ea871ac1"
     },
     "feedback/STATUS.md": {
-      "Bytes": 120693,
-      "SHA256": "8d86c9c9e3a0805a3840b32f2d764aca4a9a2a3aa3b1369bb00225072424dbc9"
+      "Bytes": 122885,
+      "SHA256": "f9fda7862c6051e9368f35be49337333c2ecaecb8d38a2a80e16514f7009a96e"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 6723,
-      "SHA256": "12b793fa88b730c1b32d8823e4157301a1fc1057f2abd6b42070222b73841071"
+      "Bytes": 7049,
+      "SHA256": "72b34d7fe43a38831cd8ac06d3011cce82b9633ec28e736dadd693b9bf80eff5"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4488,6 +4488,34 @@
     "handoff/report-native-only-r17.8/date-boundary-r03/test_probe.py": {
       "Bytes": 10416,
       "SHA256": "ca11b164df1b505b5e4064895aa553e72f9ae95b94952432c9a055405622a9f2"
+    },
+    "feedback/logs/2026-10-23-native-r178-boundary-r03-completed.json": {
+      "Bytes": 1936,
+      "SHA256": "5e894afa683d474c2c8f82d5de4a14d71b3eeb92fccb8a7bb71d91530333d54f"
+    },
+    "handoff/report-native-only-r17.8/cache-reset-r01/README.md": {
+      "Bytes": 5946,
+      "SHA256": "462d6a2f31206ac74fc3ff002d31221beb78b602495f786bd9401410ef756ae4"
+    },
+    "handoff/report-native-only-r17.8/cache-reset-r01/RESET TEST DATE CACHE R01.py": {
+      "Bytes": 21788,
+      "SHA256": "a5135045e61623126cd3cc0ddb4e07da9beb25e82e1386f97bf1e44cc9fb12ff"
+    },
+    "handoff/report-native-only-r17.8/cache-reset-r01/VALIDATION.json": {
+      "Bytes": 1712,
+      "SHA256": "6ca1f5542f7e6ac363272c757ebb3b72d8239f7deb407cd499beceec192d68ff"
+    },
+    "handoff/report-native-only-r17.8/cache-reset-r01/build.py": {
+      "Bytes": 1866,
+      "SHA256": "7b4db021eba98e7f3c3f5501b6969856643c2d6851c34f9efd0959354635a99d"
+    },
+    "handoff/report-native-only-r17.8/cache-reset-r01/reset.py": {
+      "Bytes": 15909,
+      "SHA256": "2c0cdaba9ccf6e48a1fa60a07362b689280b4c42348e0c40bb75c6db8b98bba7"
+    },
+    "handoff/report-native-only-r17.8/cache-reset-r01/test_reset.py": {
+      "Bytes": 12089,
+      "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     }
   }
 }

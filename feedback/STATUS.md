@@ -1,5 +1,38 @@
 # Company setup status
 
+## 23 October 2026 — R03 completed; valid physical dates versus invalid TEST axis dates
+
+The operator returned R178_DATE_BOUNDARY_R03_COMPLETED, all requested reads
+complete. Exact TEST identity passed. All four original tables are one-partition
+Direct Lake entities with expected dateTime source bindings and entity names.
+Physical DATE validity: three UK/October file rows, both cutoffs valid; each
+axis/review/fact-month set has 84 valid keys. TEST has 84 valid fact, review,
+start and end keys, but 83/84 invalid axis keys. No amounts/write/refresh/publish.
+Receipt: logs/2026-10-23-native-r178-boundary-r03-completed.json.
+
+This narrows the issue to physical/semantic date-read discrepancies. R03 did
+not compare full source URIs or exact date equality and does not establish an
+engine/cache cause. Earlier R01's invalid TEST file cutoffs remain the prior
+observation; R03 physically validates those columns without rereading their
+semantic values. Do not rewrite source dates, derive dates from filenames or
+claim the report fixed from Completed alone.
+
+Current controlled attempt: [TEST date-cache reset R01](../handoff/report-native-only-r17.8/cache-reset-r01/README.md).
+ONE NEW setup cell ONCE, then return JSON. It checks known OneLake routing,
+compares exact dates privately, refuses an active/unknown refresh or bad source
+dates, verifies full private backups and metadata concurrency, then performs
+TEST clearValues followed by full. SDK POST retries and requested REST retries
+are disabled; service-internal retries remain possible. An attempt marker
+blocks blind reruns. Exact post-date parity, physical stability and whole
+metadata/cloud readback are required. It can temporarily leave TEST unavailable
+until full succeeds; an ambiguous/failed phase must be reviewed before recovery.
+
+Sixteen local mocked state/route/backup/parity/privacy guards pass with Python
+3.10 syntax validation. No company processing ran here. No definition, Delta
+table, formula, source-retention, schedule, connection, credential or production
+change is introduced. No report/adapter/SAMPLE bytes changed. R17.8 adapter
+installation, native UI/numerical/speed/export acceptance remain pending.
+
 ## 23 October 2026 — R02 date-boundary check stopped; R03 retains safe checkpoints and partial reads
 
 The operator returned R178_DATE_BOUNDARY_CHECK_STOPPED / RuntimeError after the

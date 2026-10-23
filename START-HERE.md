@@ -1,9 +1,12 @@
-# Current report step - R17.8 read-only date-boundary R03
+# Current report step - R17.8 isolated TEST date-cache reset R01
 
-Follow [R03 receiving steps](handoff/report-native-only-r17.8/date-boundary-r03/README.md).
-R02 returned CHECK_STOPPED / RuntimeError without identifying the failed step.
-It requested no model/source write, refresh or publication. Do not rerun R02.
-R03 retains safe checkpoints and any successful reads if another read fails.
+Follow [TEST reset receiving steps](handoff/report-native-only-r17.8/cache-reset-r01/README.md).
+R03 completed all reads. All physical Lakehouse date validity checks passed,
+but TEST reports 83/84 axis dates invalid. Fact/review/start/end months are valid.
+The next controlled attempt is a TEST-only cache clear followed by full refresh,
+with private exact date comparisons and definition/cloud preservation checks.
+This is a processing action: TEST can be unavailable until full succeeds.
+Close the R17.7 TEST report first. No source-table/formula/production rewrite.
 
 The operator reported R17.7 TEST refresh Completed, but summaries/chart stay
 blank even after applying once, and saved-file metadata shows Dec 1899.
@@ -13,13 +16,14 @@ have invalid IMS/EF cutoff metadata; the native helper matches them exactly.
 Both selected ADS sources are affected. SourceOK=1, but cutoff/fit/period gates
 fail. This is not proof that physical Lakehouse or Excel dates are wrong.
 
-Current action: copy the WHOLE read-only CHECK DATE BOUNDARY R03.py from
-handoff/report-native-only-r17.8/date-boundary-r03/ into ONE NEW Python/PySpark
+Current action: copy the WHOLE RESET TEST DATE CACHE R01.py from
+handoff/report-native-only-r17.8/cache-reset-r01/ into ONE NEW Python/PySpark
 cell in ForecastMaster_GM_Setup and run ONLY that cell ONCE. Return the JSON.
-It compares physical Lakehouse date types/counts, TEST date bindings and month
-keys. No financial amounts, model/source writes, refresh or publication.
-Return the final JSON even for PARTIAL/STOPPED. Do not rerun R01/R02, any updater
-or the TEST refresh. Keep the existing notebook Spark/Lakehouse context.
+It verifies a private backup, waits for clearValues then full, and checks exact
+cutoff/month equality without printing source dates/IDs or amount observations.
+Return the final JSON even if STOPPED. Do not rerun diagnostics/reset, delete
+its attempt marker, install an updater or manually refresh again. Keep the
+existing notebook Spark/Lakehouse context. Engine/cache cause remains unproved.
 
 The compact R17.8 native SAMPLE is available for optional Desktop layout
 review with FABRICATED DATA. It has one readable selectable file list with
