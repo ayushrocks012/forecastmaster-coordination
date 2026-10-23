@@ -13,6 +13,11 @@ validation" section. Reuse its agreed requirements, prove a small end-to-end
 slice before broad redesign, test semantic edge cases and keep local, company
 numerical, native UI/export, performance and business gates separate. Update
 that same reference and STATUS at meaningful boundaries; no parallel checklist.
+Before substantive edits, establish its outcome/authority/allowed-change/evidence/
+unknowns check. Before a company-laptop handoff, use its "Company-laptop handoff
+and diagnostics" admission checks: exact artifact, actionable safe errors,
+checker regression coverage and evidence-backed retries. Do not treat a written
+lesson as an implemented test or a local pass as receiving acceptance.
 
 Latest company return: refresh-state R01 completed, exact TEST confirmed and
 11 terminal history entries returned. Post-install OnDemand refresh completed

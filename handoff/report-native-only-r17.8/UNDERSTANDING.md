@@ -508,6 +508,11 @@ installed candidate stable while its remaining receiving gates are completed.
    dated inventory, business/design sections and latest receipt. Pin the relevant
    report, adapter, source contracts and comparison scope. A known metadata
    inventory does not establish current row values, permissions or performance.
+   Establish five things before substantive changes: the exact user-visible
+   outcome, current authority/writer/active run, smallest allowed difference,
+   applicable evidence and unresolved facts. Do not reopen recorded decisions
+   or invent missing facts. Record material choices in the existing checkpoint;
+   routine reversible work does not need another form or status ledger.
 2. **Prove a small end-to-end slice before expanding a new design.** Start with
    one available affiliate/cycle/driver/metric: file selection → source/cutoff →
    Review summary → monthly actual/forecast/trend → Executive absolute/% variance.
@@ -521,16 +526,60 @@ installed candidate stable while its remaining receiving gates are completed.
    incomplete history/weighted ratios, ambiguous/multiple versions, scope changes,
    independent trend windows and driver/sector drill. Check the actual query
    context and semantic-engine behavior, not only convenient mocked values.
+   Test the checker as well as the product against the healthy, failed, partial,
+   empty, malformed, unknown and concurrent states its inputs can produce.
+   Validate the exact generated/copied receiving cell or ZIP; different artifact
+   bytes do not inherit a source-only pass. Freeze relevant inputs during a run
+   and reuse evidence only while its scope and dependencies remain applicable.
 4. **Keep evidence gates independent.** Source/schema checks, numerical parity,
    completed processing, native UI/export, company speed and business acceptance
    each need scoped evidence. Classify a failure as product, source, checker,
    environment or missing fact before retrying. Consolidate justified corrections;
    do not ask the operator to repeat completed work without a supported reason.
+   Retain the first failure and obtain the exact missing evidence before choosing
+   a correction. Reproduce an avoidable defect in a relevant regression check
+   before the corrected handoff; prove the healthy case and continued rejection
+   of genuine errors. Metadata-count defaults must not change business-amount
+   blanks. A newer failed operation cannot be hidden by an older successful one.
 5. **Measure before broader optimization or release.** Compare graph, Review and
    Executive DAX/total times with identical selections and stated data/cache
    conditions. Inspect query/resource evidence before proposing Fabric/storage
    changes. Retain failures and applicable thresholds; claim improvement only
    within comparable measured scope. Production release needs its own authorization.
+
+#### Company-laptop handoff and diagnostics
+
+Use these admission checks before another operator round trip. They strengthen
+the existing validation process; they do not authorize a new cell, company run,
+mutation or production release merely because a check is still pending.
+
+- Give the exact artifact/version, where to run it, its read/write scope,
+  expected output marker, stop condition and next bounded action. Keep already
+  completed steps completed; do not ask the operator to repeat an available
+  decision, inventory or successful action without a supported reason.
+- Return enough safe diagnostic evidence to distinguish the supported failure
+  paths: check/stage, target/version, relevant request ID, status/timestamps,
+  safe error code and completed/skipped/failed checks. An exception family,
+  broad STOPPED reason or allowlist placeholder alone is not a root cause.
+- Preserve useful messages through targeted redaction or an approved private
+  path when needed. Never expose credentials, company amounts, source records
+  or unredacted company definitions in public output. Do not suppress all useful
+  error detail when a safe code/message or existing UI details can resolve it.
+- Consolidate independent safe reads where useful; explicitly skip dependent
+  work whose prerequisites failed. Obtain operational metadata through a cheap
+  history/details read rather than repeating amount queries for that purpose.
+- Keep identity, backup, concurrency, attempt-marker and no-blind-retry controls
+  intact. Bind the relevant operation/request. Accepted submission, operation
+  success, processing completion and semantic validity are separate observations.
+  A read-only stop does not authorize reinstall, refresh, reset or rollback.
+- Each expensive/company retry needs an evidence-backed correction or changed
+  external condition. Explain what changed and which unresolved result the retry
+  addresses. Do not weaken guards or thresholds to manufacture a pass.
+
+The retained [empty-counter regression](test-release-r01/VALIDATION-VERIFIER-R02.json)
+and [newer-failed-refresh receipt](../../feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json)
+are concrete lessons to consult when changing those paths. They are scoped
+historical evidence, not a new company pass or authority to repeat processing.
 
 Keep the requirement checks here and dated results in STATUS/linked receipts.
 On a changed decision or meaningful result, update the resume, affected contract,
@@ -1446,6 +1495,10 @@ not a permanent guarantee against later drift or chat compaction mistakes.
    Before new report/model work, use [acceptance and staged validation](#acceptance-and-staged-validation)
    to bind the intended behavior and completion evidence. Do not reopen completed
    installation/recovery steps merely because an acceptance gate remains pending.
+   Use its five-question outcome/authority/change/evidence/unknowns check before
+   substantive edits, and its [handoff checks](#company-laptop-handoff-and-diagnostics)
+   before another receiving round trip. More documentation alone is not proof
+   that these checks were followed or that first-attempt correctness is assured.
 2. Keep approved business semantics, production R16.6, native-only policy,
    company-laptop access, no-IT requirement and one-writer scope. Resolve routine
    reversible choices; ask only for genuinely missing business meaning/access.
@@ -1459,10 +1512,15 @@ not a permanent guarantee against later drift or chat compaction mistakes.
 5. Consolidate independent safe reads, retain per-check failures and skip unsafe
    dependent work explicitly. Preserve blank/zero semantics, current tolerances,
    source coverage and concurrency. An internal identity is not external parity.
+   Give actionable safe failure evidence under the handoff checks above; avoid
+   another operator run merely to recover a status/error already available.
 6. On new evidence, add a safe immutable receipt in feedback/logs, update STATUS
    and this document's current facts/decisions/gaps together, then update mutable
    entry pointers and the manifest. Keep dated failed evidence; mark superseded
    advice rather than rewriting historical receipts or preparation-time validation.
+   When a lesson changes behavior, carry it into the applicable implementation
+   and regression check as well as this narrative. A new candidate does not
+   inherit prior acceptance merely because its failure is now documented.
 7. Public schema/DAX/visual catalogs below are generated from preserved public
    SAMPLE metadata. Refresh their marked block with the provided tool and review
    the diff. Actual company metadata must be separately sourced and labelled;

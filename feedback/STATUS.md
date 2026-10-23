@@ -1,5 +1,27 @@
 # Company setup status
 
+## 23 October 2026 — execution-guide proposal integrated into the maintained reference
+
+The user explicitly authorized direct integration from the side conversation.
+The main report chat was idle and Coordination main clean/current at integration.
+The proposal's missing practical obligations were merged into the existing
+[acceptance and staged validation](../handoff/report-native-only-r17.8/UNDERSTANDING.md#acceptance-and-staged-validation)
+and resumption sections: five-question pre-change scope, exact receiving-artifact
+checks, checker/semantic-engine edge coverage, defect-to-regression follow-through,
+actionable safe errors and evidence-backed retries. AGENTS points to the same
+reference and its handoff/diagnostic subsection. The temporary proposal is not
+a second maintained guide, inventory or status record.
+
+This is documentation-only. Existing code, tests, report ZIPs, adapter, installer,
+verifier, prior receipts and company/production state are unchanged. Link/anchor,
+public-catalog, manifest and unchanged-file preservation checks apply; no new
+engine/company run or receiving/business acceptance is claimed. The current
+blocker and next action remain the failed TEST refresh error details in the
+receiving entry below. No new cell, refresh/reset, reinstall or publication is
+authorized by this integration. The already-issued main-chat UI request is not
+repeated. A separate brief notification to the main chat is authorized by the
+user so it can reread the integrated guidance before future work.
+
 ## 23 October 2026 — refresh-state R01 confirms newer failed TEST refresh
 
 The returned R178_REFRESH_STATE_READ_COMPLETED JSON confirms exact TEST, HTTP
