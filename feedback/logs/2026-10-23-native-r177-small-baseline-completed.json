@@ -1,0 +1,21 @@
+{
+  "Evidence": "Operator-pasted R01 diagnostic JSON; 23 October 2026",
+  "Stage": "R177_SMALL_BASELINE_READS_COMPLETED",
+  "ProbeVersion": "R01",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "Checks": [
+    {"Check": "AvailableScopeMetadata", "Status": "READ_COMPLETED", "ElapsedMs": 10856},
+    {"Check": "Plan", "Status": "READ_COMPLETED", "ElapsedMs": 921, "ValueState": "NUMERIC"},
+    {"Check": "Benchmark", "Status": "READ_COMPLETED", "ElapsedMs": 1989, "ValueState": "NUMERIC"},
+    {"Check": "VariancePercent", "Status": "READ_COMPLETED", "ElapsedMs": 3716, "ValueState": "NUMERIC"},
+    {"Check": "FutureTrend", "Status": "READ_COMPLETED", "ElapsedMs": 928, "ValueState": "NUMERIC"}
+  ],
+  "PreviousPreflightErrorAvailable": false,
+  "CandidateOverridesEvaluated": false,
+  "NumericalParityVerified": false,
+  "ModelWriteRequested": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "CompanyAmountValuesIncluded": false,
+  "Interpretation": "Only four small baseline reads completed. Original combined-query cause, candidate correctness and R17.7 speed remain unverified."
+}

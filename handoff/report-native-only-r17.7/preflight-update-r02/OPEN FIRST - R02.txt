@@ -1,0 +1,65 @@
+R17.7 R02 — SAME TEST UPDATE, SMALL SEQUENTIAL NUMERICAL CHECKS
+
+Your read-only R01 check returned R177_SMALL_BASELINE_READS_COMPLETED with four
+NUMERIC values. It made no model write. The earlier combined-query cause is
+still unknown, and R17.7 candidate formulas have not yet been validated.
+
+Use the COMPANY laptop. Keep R17.6 and production R16.6 unchanged.
+
+1. In your existing forecastmaster-coordination VS Code folder, open a
+   PowerShell terminal at the repository root. Run these in order:
+
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.7\preflight-update-r02\UPDATE EXISTING TEST TO R17.7 R02.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   If the pull is refused, stop and send that message; preserve local files.
+   This is the NEW R02 updater, not the old R17.7 updater or R01 diagnostic.
+
+2. In Fabric open Workspaces -> UK-ANI-Demand -> ForecastMaster_GM_Setup.
+   Add ONE NEW Python/PySpark cell at the bottom. Paste the WHOLE copied file.
+   Run ONLY that new cell ONCE. Do not click Run all or rerun older cells.
+
+   It compares all 72 original/candidate values as 144 sequential one-value
+   queries, with progress every four comparisons. Allow several minutes.
+   Only counts/timings are printed; amounts and raw errors stay private.
+   Source-selection metadata is compared before/after. A query error, blank/
+   zero mismatch, missing result or uninformative comparison stops before any
+   backup/model write. No automatic retries or change of memory limits.
+
+   Only after passing does it verify private backups and concurrency/cloud
+   mapping, update the existing TEST once, then check complete readback.
+   The target is still ForecastMaster Native OneLake R17.1 - TEST,
+   ID 31d00232-ac03-48fe-af39-f2e4bae82443. Its displayed R17.1 name is expected.
+
+3. Read the final JSON. Continue ONLY if Stage is exactly TEST_R177_UPDATED.
+   NumericalPreflight must show Revision R02, Checks 72 and Mismatches 0.
+   For TEST_R177_PREFLIGHT_STOPPED, TEST_R177_READBACK_NEEDS_REVIEW,
+   TEST_R177_ALREADY_INSTALLED or ANY exception/other result: stop and send
+   the complete final output. Do not retry, refresh or publish to infer success.
+
+4. After TEST_R177_UPDATED, return to the UK-ANI-Demand workspace list.
+   Find the SEMANTIC MODEL ForecastMaster Native OneLake R17.1 - TEST.
+   Use its ... menu -> Refresh now ONCE to process the new metadata columns.
+   Open Refresh history and require Completed without warnings.
+   If failed/warning, stop and send the details. The updater does not request
+   this refresh. Do not click production Refresh Demand or refresh production.
+
+5. After Completed without warnings, close the old R17.6 Desktop window.
+   Open this repository folder:
+
+   handoff\report-native-only-r17.7\candidate
+
+   Extract ALL of ForecastMaster Native Only R17.7 TEST.zip into a NEW folder.
+   Open ForecastMaster Native Only R17.7 TEST.pbip; keep its .Report folder
+   alongside it. Use TEST, not the fabricated SAMPLE. The ZIP is unchanged.
+
+6. Send the R02 updater JSON and TEST refresh status back to this chat. Once
+   opened, use the same affiliate/cycle/measure/months/view to compare the three
+   visual timings. New native Apply filters buttons defer changes until Apply.
+   In Desktop edit mode Ctrl+click the Apply action button; native file checkbox
+   selection itself does not require Ctrl. Check import UTC labels, graph labels,
+   independent trend choices, matrix drill and multi-file behavior. Do not publish.
+
+Passing the 72 checks qualifies that representative preflight scope, not every
+company value or report interaction. R17.7 speed and native UI remain measured
+receiving gates; no improvement is claimed from local mocks or serial timings.

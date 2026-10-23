@@ -1,0 +1,50 @@
+{
+  "Date": "2026-10-23",
+  "Package": "R17.7 updater R02 - sequential numerical preflight",
+  "EvidenceLevel": "LOCAL_SYNTHETIC_AND_TEXT_CHECKS_ONLY",
+  "ReceivingEvidence": {
+    "DiagnosticStageReported": "R177_SMALL_BASELINE_READS_COMPLETED",
+    "BaselineNumericReads": 4,
+    "PreviousExceptionContextAvailable": false,
+    "CandidateParityVerified": false,
+    "ModelWriteFromThoseRuns": false
+  },
+  "LocalChecks": {
+    "NewUpdaterGuardTestsPassed": 9,
+    "FrozenR177TestsPassed": 13,
+    "FrozenR177AlgebraScenariosIncluded": 3600,
+    "R01DiagnosticTestsPassed": 12,
+    "Python310SyntaxParsed": true,
+    "ScalarExpressionsMatchOriginalBatchMembers": 72,
+    "OldCandidatePairsRequired": 72,
+    "ScalarReadQueriesOnSuccess": 144,
+    "MetadataReadQueriesOnSuccess": 3,
+    "NoWriteOrBackupOnFailedPreflightTested": true,
+    "SameR177PatchConstantsAndHelperFunctionsVerified": true,
+    "OtherExistingFunctionBodiesPreserved": 16,
+    "BlankZeroFiniteAndToleranceGuardsTested": true,
+    "SourceSelectionMetadataChangeStopsWriteTested": true,
+    "CloudConcurrencyPrivateBackupNoPurgeReadbackGuardsTested": true,
+    "NoCompanyValueOrRawErrorOutputTested": true,
+    "NativeOnlyVisualAllowlistPassedInFrozenR177Tests": true
+  },
+  "Preservation": {
+    "PriorManifestEntries": 1074,
+    "PriorNonmutableFilesHashAndLengthMatched": 1070,
+    "MutableRootDocs": ["AGENTS.md", "README.md", "START-HERE.md", "feedback/STATUS.md"],
+    "OriginalR177UpdaterR01DiagnosticAndBothZipBytesPreserved": true
+  },
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination repository not registered",
+    "EditImpact": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+    "ChangeScope": "INCOMPLETE; staged diff-impact failed closed, analysis_incomplete=1",
+    "Fallback": "Direct preflight call tracing, 72 expression comparisons, synthetic guards and byte preservation; no complete graph-impact conclusion"
+  },
+  "MicrosoftPowerBIPlugin": {
+    "InstalledAndEnabledConfirmed": true,
+    "Workflow": "Power BI browser service",
+    "CompanyAccess": "Other laptop only; no session verified or accessed here",
+    "CustomVisualsAdded": false
+  },
+  "Unverified": ["Original combined-query error cause", "Company candidate DAX execution and parity", "R02 update and metadata processing", "Full R16.6 parity", "Native Desktop UI and export", "Company report speed"]
+}

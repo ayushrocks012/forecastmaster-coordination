@@ -461,3 +461,29 @@ raw exceptions in this public handoff. Preserve the original R17.7 bytes.
 Completed small reads do not replace the mandatory old/candidate parity check.
 Keep R17.6; no updater retry, TEST refresh or R17.7 installation claim until the
 diagnostic is reviewed. No production change or tenant/admin workaround.
+
+The subsequent R01 result is R177_SMALL_BASELINE_READS_COMPLETED with four
+NUMERIC baseline reads and no retained previous exception. Original combined
+query cause and candidate parity remain unknown. Current authorized receiving
+step is handoff/report-native-only-r17.7/preflight-update-r02/. It preserves
+the same 72 old/candidate comparison expressions but reads one scalar per query
+sequentially (144 reads), with safe error/checkpoint JSON and private before/
+after source-selection metadata comparison. No amounts/raw errors are output.
+Blank/zero, completeness, informative benchmark/future trend and tolerance
+guards remain mandatory; never bypass them to install an optimization.
+
+R02 keeps the exact R17.7 model patch, private full backups, final definition/
+mapping concurrency check, no-purge single update and full readback. Preserve
+the original updater, diagnostic and ZIP bytes. Run only ONE NEW R02 setup cell
+once; only TEST_R177_UPDATED permits one existing-TEST metadata refresh, then
+the unchanged R17.7 PBIP after warning-free Completed. Any other stage/exception
+stops for review without retry/refresh/publish. Native UI and company speed/
+broad parity remain receiving gates; serial preflight timings are not report
+speed evidence. No production/tenant/source retention or schedule changes.
+
+The user subsequently confirmed Microsoft Power BI plugin installation while
+keeping company Power BI/Fabric access on the other laptop. Availability was
+verified installed/enabled through Plugin Management on 23 October. Apply its
+browser-service guidance where useful; do not infer a company session, local
+Desktop control or DAX execution from installation. Native-only visuals remain
+an explicit requirement. Do not request company sign-in on this laptop.

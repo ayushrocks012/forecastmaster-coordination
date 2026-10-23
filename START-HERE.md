@@ -1,45 +1,32 @@
-# Current report step - R17.7 read-only preflight diagnostic, 23 October 2026
+# Current report step - R17.7 updater R02, 23 October 2026
 
-The receiving R17.7 update stopped with FabricAdomdException while reading the
-existing model's baseline comparison values. Metadata discovery succeeded;
-candidate formulas, R17.7 backups and the model update were never reached.
-This run did not install R17.7. Its underlying error is not known yet.
+Follow [R02 company-laptop steps](handoff/report-native-only-r17.7/preflight-update-r02/OPEN%20FIRST%20-%20R02.txt).
+The R01 diagnostic returned four NUMERIC existing-formula values. This proves
+those small reads completed, not why the earlier combined query failed, candidate
+parity or R17.7 installation. No model write or refresh occurred in those runs.
 
-Follow [the read-only diagnostic steps](handoff/report-native-only-r17.7/preflight-check-r01/OPEN%20FIRST%20-%20PREFLIGHT%20CHECK.txt):
-pull Coordination, copy the whole CHECK R17.7 PREFLIGHT.py file into ONE NEW
-Python/PySpark cell in ForecastMaster_GM_Setup, run ONLY that cell once and send
-the final JSON back. No amounts or raw exceptions are printed. It first tries
-to recover the earlier exception from notebook memory without another query.
-If unavailable/unclassified, it reads up to four small existing-formula scalars
-and stops at the first failure. No candidate
-override, model write, refresh or publish. Even completed small reads do not
-establish candidate numerical parity or authorize installation.
+Pull Coordination, copy the WHOLE new UPDATE EXISTING TEST TO R17.7 R02.py file
+from preflight-update-r02 into ONE NEW Python/PySpark cell in
+ForecastMaster_GM_Setup, and run ONLY that cell once. Do not rerun the old
+R17.7 updater, R01 diagnostic or Run all. R02 compares the same 72 pairs as
+144 sequential one-value read-only queries; allow several minutes and watch
+progress. Values/raw errors stay private. Missing/mismatching/uninformative
+results or changed source-selection metadata refuse the write.
 
-Keep R17.6 for now. Do not rerun the R17.7 updater, refresh TEST or open R17.7 as
-installed until this result is reviewed. Production R16.6 stays unchanged.
-The preserved preparation notes below describe the earlier planned sequence;
-the current diagnostic instruction takes precedence.
+Only after passing does it run the unchanged private backup/cloud/concurrency/
+no-purge update/full-readback path. Continue only for TEST_R177_UPDATED with
+UpdaterRevision R02 and NumericalPreflight Checks 72 / Mismatches 0. Then
+refresh ONLY ForecastMaster Native OneLake R17.1 - TEST ONCE. Require Completed
+without warnings before extracting/opening the unchanged R17.7 TEST ZIP. Send
+the updater JSON and TEST refresh result. ANY other stage/exception stops for
+review, with no retry/refresh/publish. All detailed actions are in the R02 link.
 
-## Prior R17.7 preparation sequence — paused at numerical preflight
-
-Prior receiving step: [R17.7 labels, checkboxes and DAX optimization](handoff/report-native-only-r17.7/OPEN%20FIRST%20-%20R17.7.txt).
-R17.6 screenshots show loading summaries/variance columns. Reported DAX times
-are 26.2s graph, 17.4s Review Summary and 4.7s Executive Summary. R17.7 adds
-compact labelled controls, native series end labels, imported UTC timestamps,
-searchable file checkboxes without Ctrl, and Apply filters batching. It reuses
-regression coefficients and narrows monthly fact projection; the graph's value
-filter moves into its value measure with the same admission check.
-
-Pull Coordination and run ONE NEW R17.7 cell in ForecastMaster_GM_Setup. Before
-any model write it compares 72 old/candidate aggregate results privately through
-read-only virtual DAX measures. Failed/unavailable/incomplete/uninformative
-checks refuse a write; send the result instead of changing tenant settings.
-Require TEST_R177_UPDATED, then refresh ONLY existing R17.1 TEST ONCE for new
-metadata columns. After Completed without warnings, extract/open the NEW R17.7
-TEST ZIP. Company post-change timings/rendering/selection/export and broader
-numerical acceptance remain pending. Local/schema/mock/algebra checks are not
-company DAX execution. All visuals remain native. Keep older folders/backups
-and production R16.6. SAMPLE is fabricated. Original setup instructions follow.
+The R17.7 model patch and report ZIPs are byte-preserved. The report stays native
+only, with compact labels, end labels, import UTC metadata, searchable non-Ctrl
+file checkboxes and native Apply filters batching. Production R16.6 and previous
+packages remain unchanged. Full company parity, speed, rendering/interaction/
+export remain unqualified; local tests and serial-check timings are separate.
+Original laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH
 

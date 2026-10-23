@@ -1,5 +1,46 @@
 # Company setup status
 
+## 23 October 2026 — four small R17.7 baseline reads completed; R02 updater prepared
+
+The operator returned R177_SMALL_BASELINE_READS_COMPLETED. Metadata took 10856ms;
+Plan 921ms, Benchmark 1989ms, VariancePercent 3716ms and FutureTrend 928ms, all
+NUMERIC. Earlier exception context was unavailable. These are single baseline
+reads, not candidate results, report measurements or proof of the original
+combined-query failure's cause. No parity/model write/refresh/publish occurred.
+Safe receipt: logs/2026-10-23-native-r177-small-baseline-completed.json.
+
+Current step: [R17.7 updater R02](../handoff/report-native-only-r17.7/preflight-update-r02/OPEN%20FIRST%20-%20R02.txt).
+The unchanged 72 comparison expressions/filters execute as 144 sequential
+one-value reads, each original followed by its virtual candidate. Blank remains
+distinct from zero; original tolerances and numeric benchmark/future-trend
+requirements remain. Source revision/priority/rank/tie metadata is compared
+privately before/after; it is not a transaction across source facts. Query
+errors, mismatches, missing or uninformative results return safe checkpoint JSON
+before any model/backup write. No retry or memory-limit change.
+
+R02 preserves the exact R17.7 patch constants, helper/format/role/source behavior,
+private full-file backups, cloud mapping, final concurrency check, single
+no-purge update and full readback. It uses an R02 backup subfolder and reports
+UpdaterRevision R02. Run ONE NEW setup cell once. Only TEST_R177_UPDATED allows
+one existing-TEST refresh; after warning-free Completed, open the unchanged
+R17.7 TEST PBIP. Any other stage/exception stops for review without retry or
+refresh. This supersedes the preceding diagnostic-only holding instruction.
+
+Nine new local guard tests, thirteen frozen R17.7 tests (including 3600 algebra
+scenarios) and twelve R01 diagnostic tests pass. Generated R02 syntax parses for
+Python 3.10; all 72 scalar expressions match the frozen batch members. These
+are synthetic/text checks, not DAX runtime or numerical/performance proof.
+GitNexus query/impact remains unavailable for Coordination; direct tracing,
+guard tests and frozen-file preservation are bounded fallback. Company R02
+execution, broad parity, processing and UI/speed/export gates remain pending.
+Production R16.6 and original models remain unchanged.
+
+During this handoff the user installed Microsoft Power BI. Plugin Management
+confirmed installed=true and status=ENABLED. Its skill covers the browser
+service workflow; it does not establish a company session or local DAX runtime.
+Company access remains on the other laptop by explicit instruction. Continue
+native-only visuals; no sign-in, publishing or company access was attempted here.
+
 ## 23 October 2026 — R17.7 baseline read failed before any model write
 
 The operator supplied the R17.7 traceback: metadata scope discovery completed,
