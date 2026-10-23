@@ -668,6 +668,11 @@ sources or dropping tests. See the [compatibility receipt](../../feedback/logs/2
 Check generator, tool and receiving-runtime versions separately when moving a
 qualification workflow to a clean host; a receiving-cell syntax check does not
 establish that its generator/import chain runs on the same version.
+The [corrected hosted run](https://github.com/ayushrocks012/forecastmaster-coordination/actions/runs/40039417159)
+passed all 50 tests, hash/admission/catalog checks and deterministic generation
+on Python 3.12 at 6d23e43. Its [reviewed receipt](../../feedback/logs/2026-10-24-receiving-ci-acceptance-reviewed.json)
+binds the tested commit and exact R03 artifact. This is hosted tooling evidence;
+the current company Desktop step and remaining receiving gates stay unchanged.
 
 ### S&OP review and other pages
 
