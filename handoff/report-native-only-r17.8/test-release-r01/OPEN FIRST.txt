@@ -1,0 +1,57 @@
+R17.8 COMPACT NATIVE TEST — R01
+
+Production R16.6 remains unchanged. Use only the existing TEST semantic model:
+ForecastMaster Native OneLake R17.1 - TEST
+31d00232-ac03-48fe-af39-f2e4bae82443 in UK-ANI-Demand.
+Do this during a quiet period with no other TEST editor, refresh or ingestion run.
+The installer also checks processing history, source/date metadata and concurrency.
+
+1. Pull the Coordination repository (main). Keep all previous private backups.
+   In PowerShell at the Coordination repository folder, run:
+
+   Get-Content -Raw -Encoding UTF8 -LiteralPath ".\handoff\report-native-only-r17.8\test-release-r01\INSTALL COMPACT TEST R01.py" | Set-Clipboard
+
+   On the COMPANY laptop, paste into ONE NEW Python cell in ForecastMaster_GM_Setup.
+   Run ONLY that cell ONCE. Never Run all. Do not edit or rerun the older cells.
+   The cell runs 12 paired scalar comparisons sequentially, printing no amounts,
+   verifies a complete private backup, installs the scoped TEST adapter and checks
+   the full definition plus cloud mapping. It never refreshes or publishes.
+
+2. Continue only when the final JSON Stage is exactly TEST_R178_UPDATED and there
+   is no Failure. Any STOPPED/unknown outcome: send the whole JSON and stop here.
+   Do NOT retry, refresh, delete an attempt marker or open R17.8 as installed.
+
+3. In Fabric, Refresh now ONCE on that TEST semantic model. Wait until Completed
+   without warnings. This processes the changed saved-file helper expression.
+   Do not clear values, refresh production or repeat the previous date recovery.
+   If processing fails or is uncertain, send its history/details; do not resubmit.
+
+4. Copy VERIFY INSTALLED TEST R01.py with the same Get-Content/Set-Clipboard method
+   into ONE MORE NEW Python cell. Run only it. This is read-only: confirms a new
+   completed refresh, whole candidate metadata, mapping, nine date groups, unique
+   readable file labels and 12 paired numerical checks against the private old
+   formulas. Actual amounts remain in notebook memory; return only its final JSON.
+   Continue only for TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED.
+
+5. Extract ALL contents of candidate\ForecastMaster Compact Native R17.8 TEST.zip
+   to a NEW folder. Close the old TEST report, then open the extracted .pbip file.
+   SAMPLE.zip is fabricated local data and cannot validate your company figures.
+
+6. Check Total and Sectors; change Section then Measure; Start/End month bounds;
+   independent single Review trend and multiple Table trends; driver -> sector
+   expand/drill; and saved-file checkboxes (no Ctrl) then clear back to automatic.
+   Two alternate versions are separate Executive rows; their total/headline is
+   deliberately unavailable if they would be ambiguous. Never sum versions.
+   Save screenshots and Performance Analyzer DAX query/total times for the graph,
+   Review Summary and Executive Summary, identifying Total/Sectors and selections.
+   Send those plus both final JSON outputs. Do not publish or replace production.
+
+The report has one file-selection list, visible UTC import timestamps, no raw hash
+suffixes, no Source mode/Apply controls, compact labelled right-side controls and
+one dynamic heading outside the plot. Native matrix containers have fixed height;
+expand/scroll/Focus mode work inside them. Automatic page reflow is not promised.
+
+Local qualification and remaining company/UI/performance gates: VALIDATION.json.
+Rollback: keep the old report, success receipt and private definition-before.json.
+Do not run an automatic rollback over later work; return the receipt for a scoped
+restore if needed. No source, pipeline, permission, connection or R16.6 edit.

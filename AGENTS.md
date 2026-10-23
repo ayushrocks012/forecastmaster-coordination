@@ -27,14 +27,20 @@ nine original-versus-TEST feed differences are exactly the retained R17.1 repair
 The published report binds the original model. Effective relationship defaults,
 permissions, deployed code/schedules, numerical parity and speed remain separate.
 
-No further inventory/reset/updater/refresh is needed from the operator for this
-result. Next engineering scope: prepare/qualify the compact native TEST report
-plus matching selection adapter against the verified metadata dictionary. R17.8
-adapter remains uninstalled; built-in visuals only, other-laptop access and
-production preservation continue. Keep all five inventory R01 package files and
-six recovery R02 files unchanged. Raw company exports/DAX/descriptions stay
-private; only reviewed schema metadata/fingerprints enter the reference and
-feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json. STATUS owns dated results.
+The user now authorizes the compact R17.8 TEST report plus matching adapter.
+Current release: handoff/report-native-only-r17.8/test-release-r01/OPEN FIRST.txt.
+Local qualification: 207 native synthetic queries / 1,868 assertions, 14 unit
+checks and 67 Microsoft schema documents. Prepared, not company installed.
+Run the new installer once; only TEST_R178_UPDATED permits ONE TEST full refresh,
+then its read-only installed check. This new installation processing does not
+reopen the closed date recovery. No reset/clear/recovery rerun. STOPPED or unknown
+write outcomes require receipt review, never blind retry or marker deletion.
+Keep production R16.6, all old draft/inventory/recovery package bytes and private
+backups unchanged. UI/export, company speed and independent business parity are
+still pending. Windows UI tool initialization fails before connection; F1 scope
+gate fails closed for this unregistered repo, so graph authority remains UNKNOWN.
+Raw company exports/DAX/descriptions stay private. Update UNDERSTANDING/STATUS
+from each reviewed company receipt; do not replace them with a parallel ledger.
 
 This is the separate office-laptop script and feedback handoff. Keep changes here; the Smart Demand Manager application checkout is outside this task's requested scope.
 

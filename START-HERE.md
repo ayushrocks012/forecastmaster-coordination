@@ -23,16 +23,20 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-Built-in Power BI visuals only. The compact R17.8 SAMPLE uses fabricated data;
-the selection adapter remains an uninstalled draft. No company-connected R17.8
-TEST ZIP/updater or production replacement is released. Native UI/export/speed
-and independent business parity still need their separate evidence.
+**Current receiving action: compact native R17.8 TEST R01 is prepared.** Follow
+[OPEN FIRST](handoff/report-native-only-r17.8/test-release-r01/OPEN%20FIRST.txt).
+Run its installer ONCE in one NEW ForecastMaster_GM_Setup cell. Only final
+TEST_R178_UPDATED with no Failure permits one new refresh on the existing TEST
+semantic model. After Completed without warnings, run its read-only verifier,
+then open the matching extracted TEST PBIP. STOPPED/uncertain outcomes: return
+JSON; no retry or marker deletion. This refresh belongs to the new adapter;
+the completed date recovery above must not be repeated.
 
-**Current next action:** no new cell, reset, updater or extra refresh is needed
-from the operator for this inventory. Keep the private backups and current
-production report. Next engineering work is the compact native TEST report and
-matching selection adapter, qualified against the verified dictionary before a
-receiving handoff. Keep raw company metadata/DAX out of this public repository.
+Built-in visuals only; production R16.6 and older packages remain unchanged.
+Local native runtime/context/oracle, schema and receiving safety tests pass.
+Company install, Desktop rendering/export/business parity and speed remain
+receiving gates. SAMPLE is fabricated and cannot validate company figures.
+Raw metadata/values/backups remain private; send only counts-only final JSON.
 
 Original company-laptop connection setup follows for reference.
 

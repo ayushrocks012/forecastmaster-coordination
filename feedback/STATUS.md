@@ -1,5 +1,44 @@
 # Company setup status
 
+## 23 October 2026 — compact native R17.8 TEST R01 locally qualified; company pending
+
+The user explicitly authorized the compact TEST report and matching adapter
+against the reviewed inventory. New isolated [R01 release](../handoff/report-native-only-r17.8/test-release-r01/README.md)
+and [OPEN FIRST](../handoff/report-native-only-r17.8/test-release-r01/OPEN%20FIRST.txt)
+replace the preparation-only hold. All earlier package bytes, including every
+inventory R01 and recovery R02 file, remain preserved. Production R16.6, sources,
+Lakehouse tables, notebooks, pipelines, permissions and published report did not
+change. No company API/data/processing ran on this laptop.
+
+Local qualification: task-owned generic Tabular loopback engine, calculated
+fabricated sources only, 207 executed queries / 1,868 assertions with independent
+Python numerical expectations and exact baseline/candidate parity; 14 receiving/
+metadata/layout tests; 67 Microsoft schema documents (TEST34/SAMPLE33). All four
+frozen native inputs reproduce byte-for-byte from final source. Native context
+checks cover automatic/manual/alternative scenarios, one trend vs two table
+windows, driver/sector cells, matching actual/forecast endpoint and UTC/collision
+file labels. Synthetic visual timings are in the receipt; they are not company
+speed evidence. The Power BI plugin's public offline formula graph was used.
+
+Windows Computer Use fails before connection (sandboxCwd is not a local file
+URI), so native Desktop rendering is unexecuted. F1 change_scope fails closed;
+Coordination is not registered and stock detect_changes also fails. Graph
+mutation authority is UNKNOWN; direct preservation/context/runtime/schema checks
+are the bounded fallback, not a zero-impact claim. Static Python3.10/Ruff-F/
+Bandit checks pass under the declared scope. See [VALIDATION](../handoff/report-native-only-r17.8/test-release-r01/VALIDATION.json)
+and [native receipt](../handoff/report-native-only-r17.8/test-release-r01/VALIDATION-NATIVE.json).
+
+Receiving: install once with exact TEST/inventory hash and 12 paired scalar
+preflight checks, complete private backup, no automatic POST retries and durable
+write-once intent. Only TEST_R178_UPDATED permits one TEST full refresh for the
+new file-label helper. Then the read-only verifier compares the whole candidate,
+cloud mapping, exact physical/semantic date sets and private old/current scalar
+results. Return final JSON and UI screenshots/timings. Adapter installation,
+processing, UI/export, independent Excel/R16.6 parity and company speed are all
+PENDING. Native S&OP/full FX/feature parity and production release remain separate.
+Never repeat the completed date-cache recovery or blindly retry an unknown write.
+
+
 ## 23 October 2026 — workspace inventory R01 received and independently reconciled
 
 The operator supplied both test02.txt (entire printed output) and the downloaded

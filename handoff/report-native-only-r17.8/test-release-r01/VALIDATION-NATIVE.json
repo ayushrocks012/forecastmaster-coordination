@@ -1,0 +1,21 @@
+{
+  "Stage": "R178_NATIVE_SYNTHETIC_VERIFIED",
+  "QueriesExecuted": 207,
+  "Assertions": 1868,
+  "Failures": [],
+  "SyntheticVisualQueryMs": {
+    "headline/no-source-row": 1127,
+    "executive/auto-drill": 1382,
+    "chart/Total": 398,
+    "chart/Drivers": 401,
+    "chart/Sectors": 472
+  },
+  "InputSHA256": {
+    "baseline.json": "4b2fb605c98d47e6b6a5de3467abf2e4b7aa4fc87d65fcf90605c06f9cd04e90",
+    "candidate.json": "a4449a12c1ba6bbae4f6a97011557efcf856b85535e90377694eb6dbec5ea012",
+    "expected.json": "5353b9a2ffc300ad81ace2abd5d48937187cf706c859508f3a92ccc1527c5dd5",
+    "queries.json": "8404571449b79145d2030b21a9337fe8416371326941f9812d0830da3a0ac472"
+  },
+  "CompanyDataUsed": false,
+  "CompanySpeedOrDesktopRenderingVerified": false
+}

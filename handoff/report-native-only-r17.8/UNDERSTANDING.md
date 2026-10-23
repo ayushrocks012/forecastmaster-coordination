@@ -15,6 +15,25 @@ company observations are not copied here. New results update this reference;
 
 ## Resume in one minute
 
+**Current release — compact R17.8 TEST R01:** user authorized this report and
+matching adapter after inventory review. [Receiving instructions](test-release-r01/OPEN%20FIRST.txt),
+[release notes](test-release-r01/README.md), [qualification](test-release-r01/VALIDATION.json).
+The adapter is **prepared, locally qualified, not company installed**. First run
+INSTALL COMPACT TEST R01.py once; only TEST_R178_UPDATED permits one new TEST full
+refresh. Then run the read-only verifier and open the matching extracted TEST PBIP.
+Any STOPPED/uncertain outcome requires receipt review, not resubmission. The old
+recovery remains closed: this one processing step belongs to the new installation.
+
+Local qualification: task-owned loopback Tabular engine, **207 queries / 1,868
+assertions**, independent fabricated numerical oracle and actual source/visual
+contexts; 14 receiving/metadata/layout tests; 67 Microsoft schema documents.
+All native inputs reproduce exactly from final source. No company values or
+company operations ran on this laptop. Company native UI/export, independent
+Excel/R16.6 parity and performance remain separate. Computer Use initialization
+fails before connection; no Desktop rendering acceptance is claimed. F1 change
+scope fails closed for the unregistered Coordination repo; graph authority UNKNOWN.
+Direct preservation/source/context/runtime checks are recorded instead.
+
 - **Recovery result:** `TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED`.
   The accepted R01 ClearValues request was identified as Completed. R02 submitted
   the single missing Full; it completed with zero messages. No second clear.
@@ -35,22 +54,71 @@ company observations are not copied here. New results update this reference;
 - **No more reset, manual refresh or R02 rerun for this recovery.** Keep private
   backups and attempt markers. It is safe to reopen the unchanged R17.7 TEST
   PBIP to inspect captions/numbers; this is a UI check, not a new installation.
-- The R17.7 layout was rejected. Compact R17.8 SAMPLE is fabricated/local only.
-  R17.8 selection adapter remains an uninstalled draft; no company-connected
-  R17.8 TEST ZIP or updater is released. Do not open SAMPLE as company data.
+- The R17.7 layout was rejected. The R17.8 R01 TEST ZIP and matching updater
+  are now prepared. SAMPLE remains fabricated/local only; company install and
+  processing are pending. Do not open TEST before its adapter/refresh checks.
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
-- **Current next action:** no further inventory/reset/updater/refresh is needed
-  from the operator for this result. Prepare/qualify the compact native TEST report
-  and matching selection adapter against this verified dictionary. R17.8 remains
-  uninstalled; Desktop/business/export/performance checks are still separate.
+- **Current next action:** follow the R01 release receiving instructions above.
+  Do not repeat inventory or recovery. R17.8 remains company-uninstalled;
+  Desktop/business/export/performance checks are separate.
   The published ForecastMaster Review remains bound to the original model.
 
 Evidence: [R02 reviewed receipt](../../feedback/logs/2026-10-23-native-r178-r02-recovery-verified.json).
 Frozen receiving cell SHA256: `eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143`.
 Prepared in commit `3fb7753042216d65afe5ce66891ce5676537b774`; later documentation
 commits do not alter its code or qualification evidence.
+
+## Compact native R17.8 R01 implementation and limits
+
+CODE: new `test-release-r01/` preserves every older candidate, inventory and
+recovery file. It uses the verified 39-table / 333-field / 98-measure / 12-relationship
+TEST baseline. The adapter adds only hidden N File Available (expected total 99
+semantic measures), updates native file-mode admission to infer actual checkbox
+selection, changes the file-label expression, removes the obsolete headline
+source-row guard, retains source scenario separation in Executive, and refuses
+invalid cutoff display. All original tables, roles, relationships, sources,
+numeric calculation bodies and numeric formats are preserved. Dynamic-format
+line-array serialization is compared as identical text, without dropping unknown
+metadata. Whole TEST BIM hash is pinned to inventory R01 before update.
+
+DESIGN/CODE: one 1440 × 1330 Demand page, 26 built-in visuals. Separate Section /
+Measure; monthly Start/End; labelled compact right Review trend / View / Table
+trends; one external dynamic measure heading; native solid/dashed/dotted lines,
+legends/end labels; no axis sliders. Native driver-to-sector Executive drill with
+absolute/% variances. One searchable checkbox file list with UTC imports,
+collision-only v1/v2 labels and no raw hash. Existing ImportedAtUTC sort key is
+retained. No duplicate file table, Source mode dropdown or Apply controls. The
+file filter affects values without pinning scope slicers. Heavy visuals retain
+categorical admission but have no external measure-value filter. Matrix height
+is fixed; native expand/scroll/Focus does not imply automatic page reflow.
+
+RECEIVING: 12 sequential paired scalar preflight comparisons (transient values),
+quiet-processing and source/date/concurrency checks, private whole-file SHA256 /
+length backup, write-once attempt marker and one updateDefinition POST with retry
+configuration total=0 / allowPurgeData=False. Full readback and cloud preservation
+precede success. After one manual TEST full refresh, read-only verifier checks
+new processing time, complete candidate metadata/cloud mapping, exact nine
+physical/semantic date groups, unique readable file labels and 12 paired scalar
+checks against the private old formulas. It requests no refresh/update/rollback.
+Return counts-only receipts; raw definitions/company values remain private.
+
+LOCAL: [native receipt](test-release-r01/VALIDATION-NATIVE.json) includes exact
+input fingerprints. Standard six Demand measures, Units/Value, named annual,
+YTD/YTG/H1/H2 masks, complete 6/12/24 windows, weighted ratios/missing/zero,
+automatic/selected/ambiguous versions, matching actual/forecast boundary,
+Total/Drivers/Sectors, two independent Executive windows and collision/import
+labels were executed. The final input generator reproduces all four engine
+inputs. The offline Power BI plugin reports 62 public formula nodes/97 heuristic
+edges; this is not a live company graph. Production, notebooks, schedules,
+permissions, Lakehouse tables and source data were not changed.
+
+UNKNOWN/PENDING: company install, processing and native rendering/export/speed;
+independent Excel/business acceptance, full native S&OP and full R16.6 feature/FX
+parity. The release is TEST qualification, not a production replacement. The
+historical generated catalog below still documents the preserved draft/public
+baseline, with this release's scoped differences recorded here.
 
 ## How to read this reference
 

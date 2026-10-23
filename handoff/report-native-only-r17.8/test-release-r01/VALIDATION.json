@@ -1,0 +1,125 @@
+{
+  "Stage": "R178_R01_LOCAL_QUALIFICATION_COMPLETE_COMPANY_PENDING",
+  "UserAuthorized": "Compact native TEST report and matching adapter; production preserved",
+  "SourceInventoryReceipt": "feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json",
+  "ExpectedTESTBIMSHA256": "36870b56fffd9b1d0338472befe9dd530ade0cd959a4f67925f2a35a229f2b66",
+  "NativeEngine": {
+    "Stage": "R178_NATIVE_SYNTHETIC_VERIFIED",
+    "QueriesExecuted": 207,
+    "Assertions": 1868,
+    "Failures": [],
+    "SyntheticVisualQueryMs": {
+      "headline/no-source-row": 1127,
+      "executive/auto-drill": 1382,
+      "chart/Total": 398,
+      "chart/Drivers": 401,
+      "chart/Sectors": 472
+    },
+    "InputSHA256": {
+      "baseline.json": "4b2fb605c98d47e6b6a5de3467abf2e4b7aa4fc87d65fcf90605c06f9cd04e90",
+      "candidate.json": "a4449a12c1ba6bbae4f6a97011557efcf856b85535e90377694eb6dbec5ea012",
+      "expected.json": "5353b9a2ffc300ad81ace2abd5d48937187cf706c859508f3a92ccc1527c5dd5",
+      "queries.json": "8404571449b79145d2030b21a9337fe8416371326941f9812d0830da3a0ac472"
+    },
+    "CompanyDataUsed": false,
+    "CompanySpeedOrDesktopRenderingVerified": false
+  },
+  "ReceivingAndReportUnitTests": {
+    "Tests": 14,
+    "Failures": 0
+  },
+  "MicrosoftSchemaDocuments": {
+    "TEST": 34,
+    "SAMPLE": 33,
+    "Failures": 0
+  },
+  "Geometry": {
+    "Width": 1440,
+    "Height": 1330,
+    "BuiltInVisuals": 26,
+    "BoundingRectangleOverlaps": 0,
+    "CustomVisuals": 0
+  },
+  "Preservation": {
+    "OriginalTESTBindingBytes": true,
+    "BaseSourceTablesRolesRelationships": true,
+    "NumericBodiesAndFormats": true,
+    "AllPriorPackageBytesExceptFiveMaintainedDocs": "CHECKED_BY_HANDOFF_MANIFEST"
+  },
+  "StaticChecks": {
+    "Python310Syntax": "PASS",
+    "RuffFGeneratedCellsAndModules": "PASS; template fragments excluded",
+    "Bandit": "PASS excluding asserts B101 and test fixture code",
+    "DiffWhitespace": "PASS"
+  },
+  "PowerBIPlugin": {
+    "OfflineHeuristicFormulaGraphNodes": 62,
+    "OfflineHeuristicFormulaGraphEdges": 97,
+    "LiveCompanyConnection": false,
+    "Authority": "Public formula triage only; not a complete semantic dependency graph"
+  },
+  "GraphGate": {
+    "Status": "UNKNOWN_UNAVAILABLE",
+    "F1ChangeScope": "Failed closed; analysis incomplete",
+    "StockDetectChanges": "Repository not registered",
+    "Fallback": "Direct source/preservation/context/runtime/schema checks; no zero-impact claim"
+  },
+  "DesktopRendering": {
+    "Status": "UNEXECUTED",
+    "Reason": "Computer Use initialization failed before connection: sandboxCwd is not a local file URI"
+  },
+  "CompanyGates": {
+    "AdapterInstalled": "PENDING",
+    "FullRefresh": "PENDING after successful install only",
+    "PostRefreshReadOnlyCheck": "PENDING",
+    "NativeUIAndExport": "PENDING",
+    "IndependentExcelR166Parity": "PENDING",
+    "Performance": "PENDING; synthetic times do not establish tenant speed"
+  },
+  "ScopeLimits": [
+    "Demand page only",
+    "Native matrix container fixed height",
+    "No production release",
+    "Native S&OP and complete R16.6 feature/FX parity remain separate"
+  ],
+  "Artifacts": {
+    "ForecastMaster Compact Native R17.8 SAMPLE.zip": {
+      "Bytes": 452033,
+      "SHA256": "d7cdc4f49fa619d99d22bf303790a8035fa5d5409f32396f01b37787ed025df6"
+    },
+    "ForecastMaster Compact Native R17.8 TEST.zip": {
+      "Bytes": 45833,
+      "SHA256": "94e6167b95ffc6691c5d3f552a7bfbab01d8e0416d68a209d5d24a14cdf21c6b"
+    },
+    "INSTALL COMPACT TEST R01.py": {
+      "Bytes": 230144,
+      "SHA256": "146b623420c9472b847179e984897a3f6dc21ce67bdec0279d0483574889d2b3"
+    },
+    "VERIFY INSTALLED TEST R01.py": {
+      "Bytes": 234962,
+      "SHA256": "40959311166a8144a5cffe28bdd82086f7cc9180ef675fcda0ab72094a643068"
+    }
+  },
+  "AttemptsPreserved": [
+    {
+      "Stage": "Runner environment",
+      "Outcome": "UTF16 port-file decoder corrected before model execution"
+    },
+    {
+      "Stage": "Engine host",
+      "Outcome": "Desktop mode lacked Mashup helper; isolated generic Tabular host processes DAX-only fixtures after omitting host-only defaultPowerBIDataSourceVersion"
+    },
+    {
+      "Stage": "Unit checker",
+      "Outcome": "Incorrect assertion excluded all chart filters; corrected to exclude external measure-value filters while retaining categorical Demand admission"
+    },
+    {
+      "Stage": "Native verification timing",
+      "Outcome": "Early reads found no results file while the frozen run was active; no run interruption or restart"
+    },
+    {
+      "Stage": "Final native run",
+      "Outcome": "207 queries, 1868 assertions passed; final source reproduces all four input files byte-for-byte"
+    }
+  ]
+}
