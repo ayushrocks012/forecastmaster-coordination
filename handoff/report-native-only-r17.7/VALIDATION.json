@@ -1,0 +1,44 @@
+{
+  "Stage": "R177_NATIVE_ONLY_PREPARED",
+  "MetadataMockTests": 13,
+  "IndependentRegressionAlgebraCases": 3600,
+  "Python310Grammar": "PASS",
+  "MicrosoftSchemaFiles": 70,
+  "ChangedExistingExpressions": 15,
+  "AddedFitMeasures": 2,
+  "NativeMeasureCountAfterUpdate": 51,
+  "NativeHelperTableCountAfterUpdate": 24,
+  "NewMetadataColumns": [
+    "fm_native_files.ImportedAtUTC",
+    "fm_native_files.FileChoiceLabel",
+    "fm_native_lines.SeriesLabel"
+  ],
+  "OriginalTablesRolesRelationshipsConnectionsAndFormatsPreserved": true,
+  "CustomVisuals": 0,
+  "BuiltInVisuals": 29,
+  "NativeApplyAllSlicersButtons": 2,
+  "ExternalGraphMeasureFilterRemoved": true,
+  "ExactLineAdmissionPreservedInsideValue": true,
+  "RequiredCompanyBeforeWriteChecks": 72,
+  "CompanyNumericalPreflightThisHost": "NOT RUN",
+  "CompanyAmountValuesReadPrintedOrStoredThisHost": false,
+  "LocalDaxRuntime": "NOT RUN: no task-owned synthetic engine at three saved endpoints",
+  "NativeDesktopRendering": "PENDING",
+  "CompanyUpdateRefreshCheckboxBatchingExportNumericalParityAndSpeed": "PENDING",
+  "PhysicalDeltaRewriteOrAggregationCacheInstalled": false,
+  "GitNexus": "Impact authority unavailable; direct tracing and preservation checks used; not a zero-impact claim",
+  "Packages": {
+    "TEST": {
+      "File": "handoff/report-native-only-r17.7/candidate/ForecastMaster Native Only R17.7 TEST.zip",
+      "Bytes": 49011,
+      "SHA256": "5ab837ba37bebf6f00dfb343cd7031959bc0f66bb989631ca65daa169daabfbf",
+      "MatchesSchemaCheckedPayloads": true
+    },
+    "SAMPLE": {
+      "File": "handoff/report-native-only-r17.7/candidate/ForecastMaster Native Only R17.7 SAMPLE.zip",
+      "Bytes": 454979,
+      "SHA256": "c7218e6265a5413417418accc31130696575c9479dc433572507afcbfa1b16ed",
+      "MatchesSchemaCheckedPayloads": true
+    }
+  }
+}

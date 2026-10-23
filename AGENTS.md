@@ -409,3 +409,43 @@ metadata is ignored. Unknown post-write state must not cause a retry/refresh.
 No source ingestion or production replacement. The July unavailable Automatic
 ADS example must not silently fall back to historical V18 files. Local schema/
 metadata/mock checks do not qualify company memory, calculation or Desktop UI.
+
+Later 23 October R17.6 screenshots show loading summaries/variance columns,
+with measured slow DAX: graph 26190ms, Review 17367ms, Executive 4742ms. The
+timing reply did not specify view/cache; screenshots show Sectors. Current
+package is handoff/report-native-only-r17.7/. The user explicitly authorizes
+native usability and speed optimization, including examining Fabric/database
+design. Production R16.6 and retention/security/connection contracts remain.
+
+R17.7 uses compact labelled controls, native end-of-line/scope-first labels,
+actual import UTC metadata and searchable classic file checkboxes without Ctrl.
+Native ApplyAllSlicers buttons defer all page choices until Apply. Desktop edit
+mode needs Ctrl+click for the ACTION BUTTON, not file selection. Do not remove
+pending-state headers or reintroduce custom visuals/selection-button workarounds.
+Manual file IDs intersect the original file/country/cycle context. Automatic ADS
+stays default and ignores manual choices. Compare saved scenarios in separate
+groups; do not sum alternative versions or bypass tie/coverage guards. Import
+time is ingestion time, not modified/approved/published status. Unknown import
+timestamps stay unavailable. Reuse the existing scenario-mode relationship.
+
+The performance patch reuses fit coefficients, moves fitting out of benchmark
+month loops, skips unused denominators and projects Sector/Amount/MissingCells
+without removing duplicates. The exact N Line Visible predicate moves into N
+Chart Monthly, eliminating its external visual measure-filter path. Native
+measure count becomes 51; helper-table count stays 24, with three new metadata
+columns. Source tables/roles/relationships/formats/refresh worker stay preserved.
+No unmeasured physical Delta rewrite, aggregation cache, purge or memory-limit
+increase is authorized by a local test pass.
+
+R17.7's ONE NEW setup cell performs a mandatory read-only numerical preflight
+before any model write: 72 old/candidate values using SemPy virtual DEFINE
+MEASURE overrides on one available ADS driver. Compare blanks separately from
+zero and require informative benchmark/future-trend observations. No amount
+values may be printed or stored. Unavailable access/compile failure/mismatch/
+incomplete or uninformative results refuse the write; do not bypass or request
+tenant/IT changes. Only after passing, verify private backups/concurrency/cloud
+mapping, update once with no purge, then full readback. On success process ONLY
+existing TEST once and open R17.7. Keep old packages and private backups.
+Local metadata/mock/algebra/schema checks and a synthetic endpoint probe are
+not DAX execution, company speed or native UI proof. Receiving numerical checks,
+metadata processing, same-selection warm/cold timings and UI/export remain gates.

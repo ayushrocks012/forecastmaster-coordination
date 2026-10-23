@@ -1,5 +1,55 @@
 # Company setup status
 
+## 23 October 2026 — R17.6 summaries load; measured slow DAX; R17.7 prepared
+
+The operator's three R17.6 screenshots show both summaries and expanded variance
+columns loading. A complete update/refresh receipt was not pasted; do not infer
+all metadata/readback/processing flags from screenshots. Headers removed by the
+operator save room but leave selected values ambiguous. Graph legends repeat
+cycle prefixes, saved files omit import times and table selection requires Ctrl.
+The operator explicitly requested drastic performance improvement, including
+Fabric/database design if needed, while retaining native-only visuals.
+
+Pasted Performance Analyzer timings in milliseconds are Graph DAX 26190 / total
+28287; Review Summary DAX 17367 / total 18979; Executive DAX 4742 / total 6322.
+The timing reply omitted the view and cache state; screenshots show Sectors.
+Do not sum these as whole-page duration or call them storage-engine timings.
+Safe receipt: logs/2026-10-23-native-r176-feedback-and-timings.json. No company
+amount, raw screenshot or model is committed.
+
+Current candidate: [R17.7 receiving steps](../handoff/report-native-only-r17.7/OPEN%20FIRST%20-%20R17.7.txt).
+Compact labelled dropdowns retain pending icons; native series end labels and
+scope-first labels replace repeated-prefix presentation. Import UTC metadata,
+searchable classic checkbox file selection without Ctrl and a manual source
+mode are added. Native ApplyAllSlicers buttons batch choices into one refresh.
+Alternative scenarios get separate matrix row groups; ambiguous duplicate
+versions and missing scenario/driver coverage stay unavailable, never summed.
+The existing scenario/mode relationship is reused without adding relationships.
+
+Performance edits reuse scalar regression mean/slope, move fitting outside the
+benchmark month loop, avoid non-ratio denominators and project only needed fact
+columns while retaining duplicate rows and per-sector missing checks. The exact
+graph admission predicate moves from an external visual filter into its value
+body. No physical Delta rewrite, import aggregation cache, retention/security/
+connection/production change or higher memory limit is installed.
+
+The new cell first verifies TEST identity/known R17.6 metadata, then performs 72
+read-only old/candidate comparisons using virtual DAX measures. Numeric values
+stay in notebook memory. Missing access/compile failure, incomplete results,
+uninformative benchmark/future-trend data or a mismatch refuses any model write.
+Only after passing are full private backups verified, one no-purge update made
+and complete readback/cloud mapping checked. Require TEST_R177_UPDATED, refresh
+only the existing TEST once for new metadata columns, then open the new PBIP.
+Do not bypass a failed preflight, retry unclear writes or request tenant changes.
+
+Thirteen local metadata/mock tests, 3600 independent algebra scenarios and 70
+Microsoft project schemas pass. No local DAX/runtime UI pass is claimed: a
+bounded backend probe found no available task-owned synthetic endpoint among
+three saved workspace endpoints and changed no user model. GitNexus impact
+authority remains unavailable; direct tracing/preservation checks are bounded
+fallback. Company numerical preflight, update/processing, warm/cold speed,
+rendering/checkbox/batching/drill/export and full R16.6 parity remain open.
+
 ## 23 October 2026 — R17.5 update reported; summary memory failure traced; R17.6 prepared
 
 The operator reports TEST_R175_UPDATED, without pasting the complete update

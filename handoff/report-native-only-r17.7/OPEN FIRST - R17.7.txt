@@ -1,0 +1,122 @@
+R17.7 — NATIVE LABELS, FILE CHECKBOXES AND QUERY OPTIMIZATION
+
+Use the COMPANY laptop. Keep production R16.6 and the R17.6 folder.
+Your R17.6 screenshots show both summaries and expanded variance columns loading.
+This revision addresses labels, file freshness/selection and measured slow DAX.
+
+1. Open your existing forecastmaster-coordination folder in VS Code.
+   Choose Terminal > New Terminal > PowerShell. From its repository root run:
+
+   git status --short
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.7\UPDATE EXISTING TEST TO R17.7.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   If the pull is refused, preserve local edits and send the message.
+
+2. In Fabric open Workspaces > UK-ANI-Demand > ForecastMaster_GM_Setup.
+   Add ONE NEW Python/PySpark cell, paste the clipboard and run ONLY this cell.
+   Do not Run all or rerun any older setup/update cell.
+
+   It targets only the existing semantic model:
+   ForecastMaster Native OneLake R17.1 - TEST
+   31d00232-ac03-48fe-af39-f2e4bae82443
+
+   FIRST it runs read-only before/after DAX comparisons, using virtual measures
+   that do not update the model. It compares Plan, Benchmark, Variance % and a
+   monthly trend point for 3 measures x 3 windows x 2 years = 72 checks on one
+   available ADS driver. This may take a few minutes on the current slow model.
+   Company values stay in notebook memory; output contains counts/timings only.
+
+   Any unavailable query, syntax error, incomplete/all-blank result or numerical
+   mismatch stops BEFORE a model write. If this happens, send the short error;
+   do not rerun the cell, change permissions or refresh to infer a pass. No IT
+   or tenant-setting changes are part of these instructions.
+
+   After a passing check it verifies private full backups, applies the scoped
+   TEST update once, and compares full readback plus cloud mapping.
+   Continue only for TEST_R177_UPDATED or TEST_R177_ALREADY_INSTALLED.
+   If readback is unclear, keep the backup and send the result; no retry/refresh.
+
+3. After successful update, go to the UK-ANI-Demand workspace list.
+   Find the SEMANTIC MODEL ForecastMaster Native OneLake R17.1 - TEST.
+   Use its ... menu > Refresh now ONCE to process new metadata columns.
+   Wait for Refresh history > Completed without warnings.
+   If it fails or warns, send the details before opening R17.7.
+   Do not use the production model or production Refresh Demand button.
+   If R17.7 was already processed, do not repeat this refresh.
+
+4. Close R17.6 Desktop. Back in the repository terminal run:
+
+   explorer.exe .\handoff\report-native-only-r17.7\candidate
+
+   Extract ALL of ForecastMaster Native Only R17.7 TEST.zip to a NEW folder.
+   Open ForecastMaster Native Only R17.7 TEST.pbip and keep its .Report folder
+   alongside it. The connected semantic model still says R17.1 TEST; correct.
+
+5. Use the native controls:
+
+   - Compact labelled dropdowns retain their headers so "12M", "Sectors" and
+     "Multiple selections" have clear meanings and show pending-change icons.
+     Start/End remain monthly, Section/Measure separate, graph trend single
+     and table trends multiple.
+   - Choose filters, then click Apply filters. In Desktop EDIT mode use
+     Ctrl+click for this ACTION BUTTON; in Service reading mode click normally.
+     Selecting FILE CHECKBOXES needs NO Ctrl. Both Apply buttons apply ALL
+     slicers on the page. Until Apply, visuals retain the previous selection.
+   - Graph labels now start with the driver/sector and actual/forecast/trend.
+     Native end-of-line labels are enabled and the legend is on the right.
+     Solid/dashed/dotted styles remain. Very dense selections can still collide
+     within a native chart; filter the scope or use Focus mode to inspect it.
+     No series is silently removed by a Top N limit.
+
+6. Choose files without holding Ctrl:
+
+   - Leave Source selection = Automatic ADS for the existing preferred-source
+     rule. File-checkbox choices are ignored by this automatic calculation.
+   - To choose specific saved files, switch Source selection to Selected files.
+   - Scroll to Saved files. Search by filename, then tick each required file.
+     Search again to find other files; existing checks remain selected.
+     Imports are newest first, with readable UTC timestamps. The final revision
+     ID disambiguates otherwise identical names/times. The audit table below
+     also shows Imported (UTC), IMS and Ex-factory actual cutoffs separately.
+   - Click Apply filters ONCE after choosing the required files. You can choose
+     five files without five full report redraws.
+   - Alternative saved scenarios appear as separate summary row groups and
+     graph series. Expand Source version, then growth driver/sector as needed.
+     Do not select two alternative files for the SAME driver/cycle/scenario and
+     expect them to be added: the existing ambiguity/cohort guard returns blank.
+     Each compared scenario still needs its required selected driver coverage.
+   - Import time means model ingestion time, not workbook modification time or
+     approval/publication status. Missing timestamps say Import time unavailable;
+     the report never invents one or treats a recent import as an approved plan.
+
+7. Measure the result on the SAME scope as before:
+
+   Optimize > Performance Analyzer > Start recording > Refresh visuals.
+   Record DAX query and total milliseconds for the graph and both summaries.
+   Run a second and third time to distinguish initial column loading from warm
+   queries. Also test Total and Sectors separately, and one vs several table
+   trend windows. Keep months, metric, files and driver/sector selections equal
+   when comparing to R17.6. Do not sum visual durations as whole-page duration.
+
+   Reported R17.6 baseline (view unspecified in timing reply; screenshots Sectors):
+                 Graph       Review summary     Executive summary
+   DAX ms        26190       17367              4742
+   Total ms      28287       18979              6322
+
+   Send the cell result, refresh result, screenshots and new timing numbers.
+   The numerical preflight is a representative correctness gate, not complete
+   R16.6 parity or proof of production speed. Its timing order warms caches and
+   is not the full-report timing measurement above.
+
+All visuals remain built in. No custom visual, source ingestion, physical Delta
+rewrite, historical deletion, security/connection change or production publish.
+The main performance changes are reused regression coefficients, moving fit
+work out of the benchmark's month iterator, avoiding unused denominators, and
+projecting just Sector/Amount/MissingCells before sector aggregation. Duplicate
+facts, missing values, numeric zero, weighted ratios and exact period masks are
+preserved; the cell refuses a numerical mismatch before writing.
+
+Without company access use the SAMPLE ZIP with fabricated local data. Keep its
+.Report, .SemanticModel and PBIP together. It may need local model refresh on
+first open. Do not run the company update cell for SAMPLE.

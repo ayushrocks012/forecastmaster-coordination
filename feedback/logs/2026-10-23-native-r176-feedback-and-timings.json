@@ -1,0 +1,18 @@
+{
+  "Evidence": "Operator screenshots of R17.6 and pasted Performance Analyzer durations; not queried by this host",
+  "SummariesAndExpandedVarianceColumnsVisible": true,
+  "CompleteUpdateReceiptSupplied": false,
+  "CompletedRefreshReceiptSupplied": false,
+  "TimingsMs": {
+    "MonthlyGraph": {"DAX": 26190, "Total": 28287},
+    "ReviewSummary": {"DAX": 17367, "Total": 18979},
+    "ExecutiveSummary": {"DAX": 4742, "Total": 6322}
+  },
+  "TimingReplyView": "Not specified; screenshots show Sectors",
+  "WarmOrColdBaseline": "UNKNOWN",
+  "Feedback": ["Headers removed to save space cause ambiguity", "Unreadable long series labels", "Import time missing from saved-files table", "Need search and checkbox multi-selection without Ctrl", "Overall performance very slow"],
+  "CurrentCandidate": "handoff/report-native-only-r17.7",
+  "R177CompanyNumericalGuardUpdateRefreshRenderingSpeed": "PENDING",
+  "RawCompanyScreenshotsModelOrAmountResultsCommitted": false,
+  "ProductionChanged": false
+}

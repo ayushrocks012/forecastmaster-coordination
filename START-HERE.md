@@ -1,24 +1,23 @@
-# Current report step - native-only R17.6 summary repair, 23 October 2026
+# Current report step - native-only R17.7 speed and file selection, 23 October 2026
 
-Current receiving step: [R17.6 native controls and summary queries](handoff/report-native-only-r17.6/OPEN%20FIRST%20-%20R17.6.txt).
-The operator reports TEST_R175_UPDATED and native solid/dashed/dotted chart
-styles. R17.5 did not need a refresh. Both summary queries hit 10,240 MB; the
-copied Review Summary DAX shows redundant value-filter stages. R17.6 removes
-that filter, adds early display/source guards, and simplifies comparison columns.
-It restores separate Section/Measure and Start/End month controls, with single
-graph/review and multiple table trends beside their corresponding headings.
+Current receiving step: [R17.7 labels, checkboxes and DAX optimization](handoff/report-native-only-r17.7/OPEN%20FIRST%20-%20R17.7.txt).
+R17.6 screenshots show loading summaries/variance columns. Reported DAX times
+are 26.2s graph, 17.4s Review Summary and 4.7s Executive Summary. R17.7 adds
+compact labelled controls, native series end labels, imported UTC timestamps,
+searchable file checkboxes without Ctrl, and Apply filters batching. It reuses
+regression coefficients and narrows monthly fact projection; the graph's value
+filter moves into its value measure with the same admission check.
 
-Pull Coordination; copy the NEW R17.6 cell into ForecastMaster_GM_Setup and run
-only that cell. Require TEST_R176_UPDATED, then refresh ONLY the existing R17.1
-TEST semantic model ONCE to process the new monthly metadata helpers. After
-Completed without warnings, extract/open the NEW R17.6 TEST ZIP. Keep all old
-folders, private backups and production R16.6. No production publication.
-
-All visuals remain native. Matrix height is fixed; scroll/Focus mode is retained.
-Local preservation/API/schema checks do not establish company query memory,
-numerical parity, native rendering/drill/export or full R16.6 acceptance. SAMPLE
-contains fabricated local data and needs no company access. Original repository/
-setup instructions follow.
+Pull Coordination and run ONE NEW R17.7 cell in ForecastMaster_GM_Setup. Before
+any model write it compares 72 old/candidate aggregate results privately through
+read-only virtual DAX measures. Failed/unavailable/incomplete/uninformative
+checks refuse a write; send the result instead of changing tenant settings.
+Require TEST_R177_UPDATED, then refresh ONLY existing R17.1 TEST ONCE for new
+metadata columns. After Completed without warnings, extract/open the NEW R17.7
+TEST ZIP. Company post-change timings/rendering/selection/export and broader
+numerical acceptance remain pending. Local/schema/mock/algebra checks are not
+company DAX execution. All visuals remain native. Keep older folders/backups
+and production R16.6. SAMPLE is fabricated. Original setup instructions follow.
 
 # Connect the Abbott laptop using VS Code and SSH
 
