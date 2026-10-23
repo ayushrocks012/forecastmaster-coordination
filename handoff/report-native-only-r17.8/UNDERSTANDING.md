@@ -7,15 +7,15 @@ not only the date repair. Detailed public schema/DAX/visual catalogs are below;
 read the resume section first and load only the relevant catalog sections.
 
 Last reviewed: **23 October 2026**, including the retained chat from 20 October,
-its 205 user messages, current code/receipts, and the returned `test01.txt` R02
-result. Textual history was reviewed; this is not a claim that every old image,
+its 205 user messages, current code/receipts, the returned `test01.txt` R02
+result, and the matching `test02.txt` / downloaded inventory R01 JSON. Textual history was reviewed; this is not a claim that every old image,
 attachment, prior chat or live workspace item was re-inspected. Raw chat and
 company observations are not copied here. New results update this reference;
 [feedback/STATUS.md](../../feedback/STATUS.md) owns dated runtime receipts.
 
 ## Resume in one minute
 
-- **Latest company result:** `TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED`.
+- **Recovery result:** `TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED`.
   The accepted R01 ClearValues request was identified as Completed. R02 submitted
   the single missing Full; it completed with zero messages. No second clear.
 - Exact physical/semantic/engine/client dates now agree for all nine tested
@@ -26,9 +26,12 @@ company observations are not copied here. New results update this reference;
   windows and two years. This is not independent Excel/R16.6 parity or speed proof.
 - Whole model definition and cloud mapping match the pinned private backup;
   physical date metadata, source cohort and processing history stayed stable.
-- TEST inventory observed: **39 tables, 98 measures, 12 relationships; 15 Direct
-  Lake + 24 Import partitions**, one cloud connection. The returned JSON gives
-  counts, not all names/definitions. The complete live workspace is not inventoried.
+- **Latest structural result:** inventory R01 completed within declared scope.
+  Both returned copies/hash/length agree. **13 visible workspace items; 24 physical
+  tables / 269 fields; original 15 tables / 209 fields / 47 measures / 5 relationships;
+  TEST 39 tables / 333 fields / 98 measures / 12 relationships.** All scoped reads pass.
+  See the [verified company inventory](#company-inventory-r01) for complete names,
+  field dictionaries, relationship endpoints and public formula mappings.
 - **No more reset, manual refresh or R02 rerun for this recovery.** Keep private
   backups and attempt markers. It is safe to reopen the unchanged R17.7 TEST
   PBIP to inspect captions/numbers; this is a UI check, not a new installation.
@@ -38,12 +41,11 @@ company observations are not copied here. New results update this reference;
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
-- **Current receiving task:** [workspace inventory R01](../workspace-inventory-r01/README.md),
-  ONE NEW read-only ForecastMaster_GM_Setup cell. It is prepared/local-tested,
-  not company-executed. It reads visible items, supported physical schemas and
-  all accessible logical tables/columns/DAX/relationships; returns gaps explicitly.
-  No amount query, remote file write, refresh, recovery rerun or R17.8 install.
-  Its private metadata/DAX return is needed before the live inventory gaps close.
+- **Current next action:** no further inventory/reset/updater/refresh is needed
+  from the operator for this result. Prepare/qualify the compact native TEST report
+  and matching selection adapter against this verified dictionary. R17.8 remains
+  uninstalled; Desktop/business/export/performance checks are still separate.
+  The published ForecastMaster Review remains bound to the original model.
 
 Evidence: [R02 reviewed receipt](../../feedback/logs/2026-10-23-native-r178-r02-recovery-verified.json).
 Frozen receiving cell SHA256: `eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143`.
@@ -70,6 +72,7 @@ Navigation: [system map](#system-map-and-known-fabric-objects),
 [design](#report-design-and-selection-contracts),
 [decisions/history](#decisions-and-delivery-history),
 [recovery evidence](#latest-r02-result-and-what-it-proves),
+[verified company inventory](#company-inventory-r01),
 [gaps](#what-is-still-unknown-and-how-to-complete-the-reference),
 [public catalog](#public-source-catalog-names-fields-relationships-dax-and-visuals).
 
@@ -101,8 +104,9 @@ company sign-in, tenant settings, service-principal setup or IT support here.
 
 Report version R17.7 and model display name R17.1 TEST are different version
 labels; do not create a second model just to make those labels match.
-No workspace-wide list of all reports, models, notebooks, pipelines, connections,
-shortcuts, warehouses or permissions has yet been returned.
+R01 now supplies the complete returned account-visible item list and the one
+published report/model binding, below. Connections, shortcut targets, child
+rule/function definitions and effective permissions were not fully inventoried.
 
 ```mermaid
 flowchart LR
@@ -187,10 +191,11 @@ for this source; do not revive it as the current architecture.
 
 ## Physical table and field contracts
 
-This is the **CODE writer contract**, not a fresh SHOW TABLES/schema export.
-Expected writer targets are listed even when their existence/current Delta
-version is not independently inventoried. Primary/grain keys below are logical
-upsert keys, not claims that SQL constraints/indexes exist.
+This section is the **CODE writer contract**. The later [company inventory](#company-inventory-r01)
+provides all 24 observed physical table/field schemas, including two additional
+operational state/maintenance tables. Delta versions and table row contents
+remain unqueried. Primary/grain keys below are logical upsert keys, not claims
+that SQL constraints/indexes exist.
 
 ### Raw/source layer: forecast_v18_*
 
@@ -484,45 +489,791 @@ unchanged. This supports that recovery path; it does not prove a specific cache
 or engine defect, recurrence prevention, every sector's business correctness,
 native layout/export acceptance or a speed improvement. R17.8 was not installed.
 
+<a id="company-inventory-r01"></a>
+
+## Verified company inventory — 23 October 2026
+
+**COMPANY SNAPSHOT, independently reconciled from both operator attachments.**
+Window: `2026-10-23T21:38:27.883620+00:00` to `2026-10-23T21:39:15.140331+00:00`.
+The downloaded JSON and the JSON within test02.txt are structurally identical;
+the content fingerprint and final UTF-8 length/file hash validate the complete return.
+Download size: **504,448 bytes**; SHA256 `2e3660c94dd978f664baaa9a5f931789bd6e0f6e9a4a27db1c8ffb5b06716ca0`.
+This review executes no company API, DAX, Spark, refresh or model update.
+Immutable reviewed metadata/fingerprints: [inventory receipt](../../feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
+The raw company attachment stays outside this public repository. Full DAX was
+reviewed privately; references below point to byte-verified existing public source.
+
+### Observed workspace objects
+
+All **13 visible items** were read; the end item listing matches the start.
+This is account-visible scope and a time window, not all-user visibility or an atomic snapshot.
+
+| Type | Name | Item ID |
+| --- | --- | --- |
+| DataPipeline | ForecastMaster_Adhoc | `62dcc460-bbd0-49b7-bcce-8f95885643c3` |
+| DataPipeline | ForecastMaster_Hourly | `ef3ba5c2-3eef-4c20-bac1-a8399fa5cb20` |
+| Lakehouse | ForecastMaster | `d6e33ebd-67b1-420a-8d84-c3a0d04d8b21` |
+| Notebook | ForecastMaster_GM_Setup | `184c6ba5-24ed-4a7e-b922-7f264458f33f` |
+| Notebook | ForecastMaster_Native_Adhoc | `e9ce6cb0-1622-44cd-b83a-4f8680199478` |
+| Notebook | ForecastMaster_Refresh | `e2e0952d-4317-4936-bf0f-2c34698371dc` |
+| Notebook | Hourly_Notebook_Update | `1b50e6b2-efec-4cac-b6d3-68b652107c45` |
+| Reflex | ForecastMaster_Adhoc_Events | `e34ffce4-0096-4f0d-82cc-7685120cd899` |
+| Report | ForecastMaster Review | `526ec585-5a76-49e6-981c-9908ce0edee3` |
+| SQLEndpoint | ForecastMaster | `282c37d5-2e35-4dca-a9a0-a36826f0e293` |
+| SemanticModel | ForecastMaster Demand Model | `e7af2967-7725-4108-a170-9e490d4e35bb` |
+| SemanticModel | ForecastMaster Native OneLake R17.1 - TEST | `31d00232-ac03-48fe-af39-f2e4bae82443` |
+| UserDataFunction | ForecastMaster_Actions | `87dcd6a4-9631-418e-a605-99ebcb527bd3` |
+
+ForecastMaster Review is the one returned published report and binds to the
+original **ForecastMaster Demand Model** (`e7af2967-7725-4108-a170-9e490d4e35bb`), in this workspace.
+No published report bound to TEST was returned. Local PBIP files and report
+visual/layout version are not inspected by this inventory. Historical controller
+and rule/function names above are not a claim that each appears as a separate
+current item; rules/functions can be children, and omitted items are not proven deleted.
+
+### Model boundaries and source dictionary
+
+| Model | Tables | Fields | Measures | Relationships | Partitions | Defined roles |
+| --- | --- | --- | --- | --- | --- | --- |
+| Original / ForecastMaster Demand Model | 15 | 209 | 47 | 5 | 15 Direct Lake | 0 |
+| Native TEST / display name R17.1 | 39 | 333 | 98 | 12 | 15 Direct Lake + 24 Import | 0 |
+
+TEST contains the same 15 base table names and 24 native helpers, rather than
+39 physical Lakehouse tables. Its 98 measures consist of 47 inherited measures
+in fm_review_measures plus 51 native measures in fm_native_measures. Counts
+across both models overlap; do not sum them as unique tables or unique formulas.
+
+Both models have compatibility level 1606 and en-US culture/source-query culture.
+Their named M expression is DirectLake - ForecastMaster, with the same exported
+fingerprint; its connection/M body was deliberately not exported. All 15 base
+entity partition names match their table names. Existing connection route/cloud
+mapping comes from the separately verified R02 evidence, not this inventory.
+
+**Field reconciliation:** every base table has exactly the same field names
+and compatible physical/semantic types in both models. Mapping used: string →
+string, long/integer → int64, double → double, date → dateTime, boolean → boolean.
+Fourteen inherited table metadata projections are identical; fm_review_measures
+has the expected nine feed-expression/folder repairs described below. This is
+metadata/schema comparison, not data-value equality or current date-cache validation.
+
+Base table membership: `forecast_v18_calendar`, `forecast_v18_controls`, `forecast_v18_history`, `forecast_v18_measure_assignments`, `forecast_v18_quality`, `forecast_v18_source_revisions`, `fm_review_axis`, `fm_review_facts`, `fm_review_files`, `fm_review_measures`, `fm_review_modes`, `fm_review_months`, `fm_review_periods`, `fm_review_reference`, `fm_review_series`.
+
+### Exact physical table/field inventory
+
+**ForecastMaster / dbo: 24 Delta tables, 269 fields.** All column detail reads
+completed using the OneLake Delta metadata API; the classic/Spark fallback was
+not needed. No business row/count/amount query was submitted. Nullability is
+the reported schema property, not evidence that observed rows are complete.
+
+The returned API namespace is dbo. The cell did not export physical storage
+paths or a schema-enabled setting; do not infer a Tables/dbo folder, move tables
+or change the known OneLake source route from this namespace alone.
+
+The earlier writer-contract section has 22 documented targets. This snapshot
+also observes forecast_v18_current_storage_state and forecast_v18_storage_maintenance.
+Their schemas are recorded without inferring row contents, current scheduling
+or whether an older maintenance workflow still uses them.
+
+<details>
+<summary>fm_review_axis — 5 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Month | date | true |
+| MonthLabel | string | true |
+| Year | long | true |
+| MonthNumber | long | true |
+| MonthIndex | long | true |
+
+</details>
+
+<details>
+<summary>fm_review_facts — 9 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| Channel | string | true |
+| SubChannel | string | true |
+| Sector | string | true |
+| Month | date | true |
+| ComponentKey | string | true |
+| Amount | double | true |
+| NumericCells | long | true |
+| MissingCells | long | true |
+
+</details>
+
+<details>
+<summary>fm_review_files — 11 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceFileName | string | true |
+| SourceRelativePath | string | true |
+| Country | string | true |
+| DemandCycle | string | true |
+| GrowthDriver | string | true |
+| SourceProfile | string | true |
+| IMSActualsThrough | date | true |
+| ExFactoryActualsThrough | date | true |
+| PublicationStatus | string | true |
+| FileLabel | string | true |
+
+</details>
+
+<details>
+<summary>fm_review_measures — 9 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| MetricKey | string | true |
+| Section | string | true |
+| Measure | string | true |
+| Unit | string | true |
+| Aggregation | string | true |
+| CutoffFamily | string | true |
+| NumeratorKey | string | true |
+| DenominatorKey | string | true |
+| SortIndex | long | true |
+
+</details>
+
+<details>
+<summary>fm_review_modes — 2 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Mode | string | true |
+| SortIndex | long | true |
+
+</details>
+
+<details>
+<summary>fm_review_months — 5 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Month | date | true |
+| MonthLabel | string | true |
+| Year | long | true |
+| MonthNumber | long | true |
+| MonthIndex | long | true |
+
+</details>
+
+<details>
+<summary>fm_review_periods — 5 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Year | long | true |
+| PeriodType | string | true |
+| PeriodKey | string | true |
+| Label | string | true |
+| SortIndex | long | true |
+
+</details>
+
+<details>
+<summary>fm_review_projection_receipts — 4 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| RuleHash | string | true |
+| ProjectedAtUtc | string | true |
+| ContentRevisionID | string | true |
+
+</details>
+
+<details>
+<summary>fm_review_reference — 11 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceFileName | string | true |
+| SourceRelativePath | string | true |
+| Country | string | true |
+| DemandCycle | string | true |
+| GrowthDriver | string | true |
+| SourceProfile | string | true |
+| IMSActualsThrough | date | true |
+| ExFactoryActualsThrough | date | true |
+| PublicationStatus | string | true |
+| FileLabel | string | true |
+
+</details>
+
+<details>
+<summary>fm_review_refresh_state — 2 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Signature | string | true |
+| CompletedAtUtc | string | true |
+
+</details>
+
+<details>
+<summary>fm_review_series — 5 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SeriesID | string | true |
+| SeriesKind | string | true |
+| SourceRevisionID | string | true |
+| SeriesLabel | string | true |
+| SortIndex | long | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_calendar — 9 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceProfile | string | true |
+| Country | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| DemandMonth | date | true |
+| CalendarDays | integer | true |
+| WorkingDays | double | true |
+| CalendarID | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_catalog_refresh_state — 2 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Signature | string | true |
+| CompletedAtUtc | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_controls — 17 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceProfile | string | true |
+| Country | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| SourceSheet | string | true |
+| SourceTable | string | true |
+| SourceRow | long | true |
+| Channel | string | true |
+| SubChannel | string | true |
+| Sector | string | true |
+| Manufacturer | string | true |
+| Product | string | true |
+| Section | string | true |
+| Measure | string | true |
+| ControlID | string | true |
+| InputSlot | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_current_storage_state — 2 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| Signature | string | true |
+| CompletedAtUtc | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_file_state — 7 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourcePath | string | true |
+| SourceRelativePath | string | true |
+| SourceModifiedAt | string | true |
+| SourceBytes | string | true |
+| SourceRevisionID | string | true |
+| ReaderContract | string | true |
+| LastSuccessAtUtc | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_history — 38 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceFileName | string | true |
+| SourceRelativePath | string | true |
+| SourceSheet | string | true |
+| SourceTable | string | true |
+| MeasureKey | string | true |
+| Country | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| Version | string | true |
+| Revision | string | true |
+| ExFactoryActualsThrough | string | true |
+| IMSActualsThrough | string | true |
+| PublicationStatus | string | true |
+| PublicationOrigin | string | true |
+| SourceProfile | string | true |
+| PreviousPublication | string | true |
+| CanonicalSection | string | true |
+| ContextRole | string | true |
+| Channel | string | true |
+| SubChannel | string | true |
+| Sector | string | true |
+| Manufacturer | string | true |
+| Product | string | true |
+| Section | string | true |
+| Measure | string | true |
+| SourceRow | long | true |
+| DemandMonth | date | true |
+| SourceMonthHeader | string | true |
+| ValueKind | string | true |
+| ValueRaw | string | true |
+| ValueNumber | double | true |
+| ValueText | string | true |
+| ValueBoolean | boolean | true |
+| SourceFormula | string | true |
+| FormulaCacheState | string | true |
+| ObservationID | string | true |
+| SourceMeasureID | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_ingestion_events — 11 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| RunID | string | true |
+| ObservedAtUtc | string | true |
+| SourcePath | string | true |
+| SourceRelativePath | string | true |
+| SourceModifiedAt | string | true |
+| SourceBytes | string | true |
+| ReaderContract | string | true |
+| Status | string | true |
+| SourceRevisionID | string | true |
+| Observations | string | true |
+| Message | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_measure_assignments — 26 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceMeasureID | string | true |
+| MeasureKey | string | true |
+| Country | string | true |
+| SourceProfile | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| Section | string | true |
+| Measure | string | true |
+| CanonicalSection | string | true |
+| ContextRole | string | true |
+| DisplayName | string | true |
+| ReportingEnabled | string | true |
+| Family | string | true |
+| Dependency | string | true |
+| ValueRole | string | true |
+| AggregationRule | string | true |
+| ComparisonRule | string | true |
+| Unit | string | true |
+| EffectiveFromCycle | string | true |
+| EffectiveToCycle | string | true |
+| DefinitionStatus | string | true |
+| Owner | string | true |
+| ChangeReason | string | true |
+| ConfigurationID | string | true |
+| CatalogState | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_measure_configuration_snapshots — 20 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| ConfigurationID | string | true |
+| CapturedAtUtc | string | true |
+| MeasureKey | string | true |
+| SourceSection | string | true |
+| SourceMeasure | string | true |
+| DisplayName | string | true |
+| ReportingEnabled | string | true |
+| EffectiveFromCycle | string | true |
+| EffectiveToCycle | string | true |
+| ValueRole | string | true |
+| Unit | string | true |
+| AggregationRule | string | true |
+| ComparisonRule | string | true |
+| DefinitionStatus | string | true |
+| Owner | string | true |
+| ChangeReason | string | true |
+| RawConfigurationJson | string | true |
+| CanonicalSection | string | true |
+| Family | string | true |
+| Dependency | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_quality — 38 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceFileName | string | true |
+| SourceRelativePath | string | true |
+| SourceSheet | string | true |
+| SourceTable | string | true |
+| MeasureKey | string | true |
+| Country | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| Version | string | true |
+| Revision | string | true |
+| ExFactoryActualsThrough | string | true |
+| IMSActualsThrough | string | true |
+| PublicationStatus | string | true |
+| PublicationOrigin | string | true |
+| SourceProfile | string | true |
+| PreviousPublication | string | true |
+| CanonicalSection | string | true |
+| ContextRole | string | true |
+| Channel | string | true |
+| SubChannel | string | true |
+| Sector | string | true |
+| Manufacturer | string | true |
+| Product | string | true |
+| Section | string | true |
+| Measure | string | true |
+| SourceRow | long | true |
+| DemandMonth | date | true |
+| SourceMonthHeader | string | true |
+| ValueKind | string | true |
+| ValueRaw | string | true |
+| ValueNumber | double | true |
+| ValueText | string | true |
+| ValueBoolean | boolean | true |
+| SourceFormula | string | true |
+| FormulaCacheState | string | true |
+| ObservationID | string | true |
+| SourceMeasureID | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_source_measures — 11 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceMeasureID | string | true |
+| MeasureKey | string | true |
+| Country | string | true |
+| SourceProfile | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| Section | string | true |
+| Measure | string | true |
+| CanonicalSection | string | true |
+| ContextRole | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_source_revisions — 19 fields</summary>
+
+Base table in both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| SourceRevisionID | string | true |
+| SourceBytes | string | true |
+| SourceFileName | string | true |
+| SourceRelativePath | string | true |
+| Contract | string | true |
+| FirstImportedAtUtc | string | true |
+| WideRows | string | true |
+| Observations | string | true |
+| DefinedNamesJson | string | true |
+| PublicationStatus | string | true |
+| PublicationOrigin | string | true |
+| SourceProfile | string | true |
+| Country | string | true |
+| GrowthDriver | string | true |
+| DemandCycle | string | true |
+| Revision | string | true |
+| ExFactoryActualsThrough | string | true |
+| IMSActualsThrough | string | true |
+| PreviousPublication | string | true |
+
+</details>
+
+<details>
+<summary>forecast_v18_storage_maintenance — 1 fields</summary>
+
+Physical operational/catalog/receipt table outside both semantic models.
+
+| Field | Physical type | Nullable |
+| --- | --- | --- |
+| CompletedAtUtc | string | true |
+
+</details>
+
+### Native helper fields, as observed in TEST
+
+All **24 helper schemas / 124 fields** match the names/types in the retained
+R17.7 public SAMPLE. These are Import calculated/helper tables in TEST, not
+additional physical source tables. Full flags/source-column names/formats and
+any calculated-column fingerprints are retained in the reviewed receipt.
+
+| Helper table | Observed semantic fields |
+| --- | --- |
+| fm_native_catalog | `Basis:string`, `Channel:string`, `ChannelRank:int64`, `Component:string`, `Denominator:string`, `Display:string`, `Growth:int64`, `Measure:string`, `MeasureRank:int64`, `RowID:string`, `RunRate:int64`, `SourceOrder:int64`, `SubChannel:string`, `SubRank:int64` |
+| fm_native_state | `Token:string`, `Kind:string`, `RowID:string`, `Display:string`, `Currency:string`, `Position:int64`, `Digit:int64`, `Channel:string`, `SubChannel:string`, `Measure:string`, `ChannelRank:int64`, `SubRank:int64`, `MeasureRank:int64`, `RowRank:int64` |
+| fm_native_rows | `Token:string`, `Kind:string`, `RowID:string`, `Display:string`, `Currency:string`, `Position:int64`, `Digit:int64`, `Channel:string`, `SubChannel:string`, `Measure:string`, `ChannelRank:int64`, `SubRank:int64`, `MeasureRank:int64`, `RowRank:int64` |
+| fm_native_display | `Display:string` |
+| fm_native_currency | `Currency:string` |
+| fm_native_currency_map | `Country:string`, `Currency:string` |
+| fm_native_trend | `Window:int64`, `Label:string` |
+| fm_native_chart_trend | `Window:int64`, `Label:string` |
+| fm_native_view | `View:string` |
+| fm_native_file_mode | `Mode:string` |
+| fm_native_columns | `ColumnKey:string`, `Comparison:string`, `ValueLabel:string`, `Window:int64`, `Sort:int64`, `ColumnLabel:string` |
+| fm_native_run_rate | `Show:string` |
+| fm_native_growth | `Show:string` |
+| fm_native_measures | `ID:int64` |
+| fm_native_metric | `RowID:string`, `MetricLabel:string`, `Section:string` |
+| fm_native_files | `SourceRevisionID:string`, `SourceFileName:string`, `SourceRelativePath:string`, `Country:string`, `DemandCycle:string`, `GrowthDriver:string`, `PublicationStatus:string`, `FileLabel:string`, `Scenario:string`, `IMSActualsThrough:dateTime`, `ExFactoryActualsThrough:dateTime`, `ADSPriority:int64`, `ADSRevision:int64`, `PreferenceRank:int64`, `PreferenceTies:int64`, `ImportedAtUTC:dateTime`, `FileChoiceLabel:string` |
+| fm_native_scope | `SourceRevisionID:string`, `Country:string`, `DemandCycle:string`, `GrowthDriver:string`, `Sector:string`, `SectorLabel:string` |
+| fm_native_groups | `DemandCycle:string`, `ViewType:string`, `ScopeDriver:string`, `ScopeSector:string`, `ScopeLabel:string`, `IsSector:int64` |
+| fm_native_scenario | `Mode:string`, `Scenario:string` |
+| fm_native_lines | `DemandCycle:string`, `ViewType:string`, `ScopeDriver:string`, `ScopeSector:string`, `ScopeLabel:string`, `Mode:string`, `Scenario:string`, `Chart:string`, `Token:string`, `RowID:string`, `Display:string`, `LineLabel:string`, `IsSector:int64`, `LineKind:int64`, `LineSort:int64`, `SeriesLabel:string` |
+| fm_native_periods | `Y:int64`, `Year:int64`, `PeriodType:string`, `PeriodKey:string`, `Label:string`, `SortIndex:int64` |
+| fm_native_headline | `Key:string`, `Label:string`, `Sort:int64` |
+| fm_native_start_month | `Month:dateTime`, `MonthLabel:string` |
+| fm_native_end_month | `Month:dateTime`, `MonthLabel:string` |
+
+### Complete inherited measure dictionary and public definition locations
+
+All **47 inherited names** are present in both models. Their exact expression
+fingerprints and static/dynamic format fingerprints are in the reviewed receipt.
+All **38 core formulas** exactly match the public [baseline measures source](../report-cycle-cache-r04.2/baseline/measures.py)
+in both models. All **nine TEST feed formulas** exactly match the public
+[baseline visual feed source](../report-cycle-cache-r04.2/baseline/visual_feed.py).
+Together those two existing files reproduce all 47 inherited TEST expressions.
+
+Original-versus-TEST feed differences are exactly reproduced, on a private
+in-memory metadata copy only, by the retained [R17.1 feed repair R02](../report-native-onelake-r17.1/measure-repair-r02/REPAIR%20TEST%20FEED.py).
+That function moves the terminal displayFolder metadata out of the nine
+serialized DAX bodies and into displayFolder. This review makes no production
+repair, and the difference is not evidence of a new unexplained formula change.
+
+| Measure | Formula family / source | Dynamic numeric format in snapshot |
+| --- | --- | --- |
+| FM Reference ID | Shared core / measures.py | no |
+| FM Metric Ready | Shared core / measures.py | no |
+| FM Cohort Ready | Shared core / measures.py | no |
+| FM Cutoff | Shared core / measures.py | no |
+| FM Evaluation Month | Shared core / measures.py | no |
+| FM Reference Option Visible | Shared core / measures.py | no |
+| FM Dimension Option Visible | Shared core / measures.py | no |
+| FM Period In Range | Shared core / measures.py | no |
+| FM Chart Month Visible | Shared core / measures.py | no |
+| FM Plan Selected | Shared core / measures.py | no |
+| FM Raw Metric | Shared core / measures.py | yes |
+| FM Reference Month | Shared core / measures.py | yes |
+| FM Reference Weight | Shared core / measures.py | no |
+| FM Slope 12 | Shared core / measures.py | no |
+| FM Intercept 12 | Shared core / measures.py | no |
+| FM Trend 12 Month | Shared core / measures.py | yes |
+| FM Slope 24 | Shared core / measures.py | no |
+| FM Intercept 24 | Shared core / measures.py | no |
+| FM Trend 24 Month | Shared core / measures.py | yes |
+| FM Series Month | Shared core / measures.py | yes |
+| FM Series Weight | Shared core / measures.py | no |
+| FM Chart Value | Shared core / measures.py | yes |
+| FM Monthly Total | Shared core / measures.py | yes |
+| FM Monthly Value | Shared core / measures.py | yes |
+| FM Period Plan | Shared core / measures.py | yes |
+| FM Period Trend 12M | Shared core / measures.py | yes |
+| FM Period Trend 24M | Shared core / measures.py | yes |
+| FM Delta 12 | Shared core / measures.py | yes |
+| FM Delta 12 Percent | Shared core / measures.py | no |
+| FM Delta 12 Display | Shared core / measures.py | no |
+| FM Delta 24 | Shared core / measures.py | yes |
+| FM Delta 24 Percent | Shared core / measures.py | no |
+| FM Delta 24 Display | Shared core / measures.py | no |
+| FM Report Context | Shared core / measures.py | no |
+| FM Chart Title | Shared core / measures.py | no |
+| FM Training Context | Shared core / measures.py | no |
+| FM File Count | Shared core / measures.py | no |
+| FM Method Note | Shared core / measures.py | no |
+| FM UI Numerator | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Denominator | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Numerator Missing | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Denominator Missing | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI File | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Catalog | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Context | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Dimensions | Nine repaired legacy feed definitions / visual_feed.py | no |
+| FM UI Bounds | Nine repaired legacy feed definitions / visual_feed.py | no |
+
+### Native measure and format reconciliation
+
+All **51 native DAX expression texts** exactly match the existing R17.7 public
+[named-native-measure catalog](#named-native-measures-complete-r177-public-definitions)
+below. All **20 native dynamic format expression texts** match as well.
+The only representation normalization joins JSON line arrays with LF; no
+trimming, ignored DAX tokens or business-equivalence assumption was used.
+
+Five text-oriented measures have an omitted static format where the public
+SAMPLE stores an empty string: `N Display`, `N Export Month Stage`, `N Source Caption`, `N Status`, `N Variance Color`.
+This omission is recorded explicitly; it is not a changed arithmetic expression.
+TEST has 42 explicitly hidden measures and one explicitly hidden column;
+the original has no explicitly hidden tables/columns/measures in this export.
+These metadata checks do not execute the DAX or establish independent business parity.
+
+### Complete observed relationship endpoint graph
+
+All endpoints resolve to exported tables/fields. TEST retains the original
+five endpoint definitions unchanged and adds the seven native relationships.
+The export omits explicit active/cardinality/cross-filter/security-filter
+attributes on all twelve. Those effective/default settings are **not resolved**
+by this output and must not be invented from the direction of the arrows below.
+
+| Scope | Relationship name | From | To |
+| --- | --- | --- | --- |
+| Original + TEST | 00d87463-da6f-25ca-f276-386fb18449df | forecast_v18_measure_assignments[SourceRevisionID] | forecast_v18_source_revisions[SourceRevisionID] |
+| Original + TEST | 34fa37e6-da7c-e9c3-dc65-ee678e7e36a5 | forecast_v18_history[SourceMeasureID] | forecast_v18_measure_assignments[SourceMeasureID] |
+| Original + TEST | 7f760e25-65ae-c8d7-eaaf-76edb8bf6361 | forecast_v18_calendar[SourceRevisionID] | forecast_v18_source_revisions[SourceRevisionID] |
+| Original + TEST | c5bae271-ef81-daf2-134d-48bc39b1e70c | forecast_v18_controls[SourceRevisionID] | forecast_v18_source_revisions[SourceRevisionID] |
+| Original + TEST | 74e20308-86e2-09fb-bab6-ce591e13f0e2 | forecast_v18_quality[SourceRevisionID] | forecast_v18_source_revisions[SourceRevisionID] |
+| TEST native only | NativeR17-Rows-State | fm_native_rows[Token] | fm_native_state[Token] |
+| TEST native only | NativeR17-Lines-Display | fm_native_lines[Display] | fm_native_display[Display] |
+| TEST native only | NativeR17-Catalog-Display | fm_native_catalog[Display] | fm_native_display[Display] |
+| TEST native only | NativeR17-Lines-View | fm_native_lines[ViewType] | fm_native_view[View] |
+| TEST native only | NativeR17-Lines-Mode | fm_native_lines[Mode] | fm_native_file_mode[Mode] |
+| TEST native only | NativeR17-Scenario-Mode | fm_native_scenario[Mode] | fm_native_file_mode[Mode] |
+| TEST native only | NativeR172-Groups-View | fm_native_groups[ViewType] | fm_native_view[View] |
+
+### What this closes and the next bounded action
+
+The requested account-visible item/table/field/measure/relationship endpoint
+inventory is complete for the declared scope: no failed reads, unsupported
+table engine or fallback was reported. Both models report zero defined roles;
+that does not establish effective permissions, lack of workspace restrictions
+or access for every person. SQL endpoint views/procedures, internal generated
+helpers, schedules/configuration, notebook/pipeline/function bodies and omitted
+partition/role/connection metadata remain outside this inventory.
+
+**No new inventory cell, updater, reset or extra refresh is needed from the
+operator for this result.** Preserve backups and use the verified dictionary
+as the model boundary for the next compact native TEST report plus matching
+selection adapter. Current R17.8 SAMPLE remains fabricated and the adapter
+remains uninstalled. Build/source/preservation checks must precede its separate
+receiving handoff; then actual Desktop interactions, selections, date labels,
+export, business values and same-selection warm/cold performance need their
+own acceptance. Keep production R16.6 unchanged. Do not turn this metadata
+success into a claim that the rejected R17.7 layout or query speed is fixed.
+
 ## What is still unknown and how to complete the reference
 
-R02 is **not a full UK-ANI-Demand discovery export**. Missing information is an
-explicit backlog, not an empty successful inventory.
+R01 closes the requested account-visible structural inventory within its
+stated scope. The project is not fully qualified merely because its schema and
+formula names are known. The detailed COMPANY snapshot above and its safe
+immutable receipt supersede the earlier "inventory pending" notes.
 
-| Gap | Current evidence | Needed to mark complete |
+| Remaining gap | Confirmed evidence | Needed to mark complete |
 | --- | --- | --- |
-| All workspace items/IDs and report/model dependency graph | Known named items above | Read-only complete paginated item inventory and model/report bindings |
-| Every Lakehouse table/view/shortcut and exact physical schema | Documented writer contracts; four date tables checked | Read-only catalog/column export, schemas, types, Delta versions/location/size and shortcut target kinds; keep sensitive paths private |
-| All 39 semantic tables and 98 measure names/definitions | Counts confirmed; 24 native helper names and 51 native formulas known from code | Full **metadata-only** schema/relationship/measure/format/calculated-expression export, compared to the preserved definition |
-| Original relationships, security roles, RLS and effective permissions | Whole original metadata preserved; early probe observed zero roles | Named schema/security metadata at a reviewed time; never infer all-user access from the tested account |
-| Actual ingestion config/catalog/rule contents | Public defaults/setup contracts, scoped successful runs | Sanitized version/hash/schema summary of actual deployed parameters/rules and notebook/pipeline/function definitions |
-| Full data/business parity | Narrow preflight and R02 internal identities | Independent reviewed R16.6/bridge comparisons across drivers, tiers, periods, source modes, ratios, missing/zero/mixed cutoffs and currencies |
+| Full workspace dependency graph beyond report/model binding | 13 returned item IDs/types and one production report binding | Reviewed deployed notebook/pipeline/function/rule and source dependency metadata; not inferred from display names |
+| Physical runtime/storage metadata beyond schema | 24 dbo tables / 269 fields; 15 base tables align with both models | Delta versions/size, SQL endpoint view/procedure catalog, shortcut provenance and actual physical data correctness where needed |
+| Effective relationship settings and user access | All 5 original + 7 native endpoint definitions; zero defined roles in both exported models | Effective/default cardinality/active/filter settings and account-specific access as needed; omitted attributes are not explicit settings |
+| Private/full definition fields omitted by design | All 47 original and 98 TEST logical measures read privately; all TEST DAX texts map to 47+51 existing public definitions | Partition source/calculated-table bodies, credentials/connection mapping and RLS/effective-access review only for a justified change; do not publish them |
+| Actual ingestion configuration/rule contents and deployed versions | Public defaults/setup contracts and scoped successful runs; current item identities confirmed | Sanitized version/hash/schema summary of deployed parameters/rules and notebook/pipeline/function definitions when required |
+| Full data/business parity | Narrow preflight and R02 internal identities; this inventory requests no amounts | Independent reviewed R16.6/bridge comparisons across drivers, tiers, periods, source modes, ratios, missing/zero/mixed cutoffs and currencies |
 | Native S&OP/FX/export/full feature parity | Retained design, legacy implementation and capability audit | Qualified native implementation plus receiving UI/export/business checks |
-| Actual report/database performance and capacity | R17.6 visual timings; R02 scalar timings | Same-selection warm/cold Performance Analyzer, model/query metrics and actual capacity evidence |
+| Actual report/database performance and capacity | R17.6 visual timings and R02 scalar timings; R01 timings are metadata retrieval only | Same-selection warm/cold Performance Analyzer and query/resource evidence; schema inventory alone cannot diagnose all slowness |
 | First schedule and post-targeted unchanged/removal/retry/history behavior | Historical schedule plus one targeted changed run | Separate receiving receipts for those cases |
 
-The user now explicitly authorized that read-only **metadata** task. The new
-[workspace inventory R01](../workspace-inventory-r01/README.md) is prepared for
-ONE NEW ForecastMaster_GM_Setup cell; company execution is **pending**. It does
-not rerun R02, refresh, repair, scan business rows, write OneLake files or install
-an adapter. All accessible semantic models are enumerated rather than assuming
-that TEST is the whole workspace; schema-aware OneLake metadata and a classic
-Lakehouse schema-only fallback cover physical fields. Completed/partial/denied
-results and scope limits are retained. Report/model bindings are also requested.
-The second item listing detects item-list changes, not concurrent formula or
-schema edits; this is not an atomic full-workspace snapshot.
+**No additional receiving diagnostic is currently requested.** Preserve the exact
+R01 inventory cell/package and older recovery evidence. Do not rerun an updater,
+reset or extra refresh based only on these remaining knowledge gaps. The next
+bounded engineering task is the compact native TEST report and matching selection
+adapter, with guarded preservation/numerical/source checks before a company
+handoff. The rejected R17.7 layout and fabricated R17.8 SAMPLE do not become
+accepted/live because this inventory passed.
 
-Return the complete export **privately in this chat**, with its content/file
-hash and complete/partial statuses. Full DAX and descriptions are company
-metadata and may contain literals; review before sharing and never commit raw
-exports, connection values or custom/private DAX to this public repository.
-Only reviewed safe facts and fingerprints may enter this reference. The cell
-omits M/SQL/calculated-table partition expressions, credentials, raw errors,
-role members/filter formulas and annotations. SQL view/procedure catalogs,
-KQL schemas, effective permissions, deployed notebook/pipeline/function source,
-engine-generated helpers and runtime/business/performance acceptance remain
-explicit gaps. Do not call the reference complete solely from a successful
-metadata-export stage; reconcile all requested objects and limits after return.
+Keep the raw company JSON and copied output private. The reviewed receipt
+retains only schema/object metadata, expression fingerprints and bounded checks;
+full DAX descriptions, sources, connections and source-row values are not copied
+here. The public source catalog remains labelled CODE/SAMPLE, with the exact
+51-native/47-inherited comparison to the dated COMPANY snapshot above. Refresh
+that distinction when definitions or source schemas change; this inventory is
+not a permanent guarantee against later drift or chat compaction mistakes.
 
 ## Resumption, change and update procedure
 

@@ -1,5 +1,59 @@
 # Company setup status
 
+## 23 October 2026 — workspace inventory R01 received and independently reconciled
+
+The operator supplied both test02.txt (entire printed output) and the downloaded
+UK-ANI-Demand-inventory-R01.json. The embedded/downloaded JSON are structurally
+identical. The internal content digest and final UTF-8 504448-byte file length /
+SHA256 match the actual downloaded file. Stage is
+UK_ANI_INVENTORY_R01_COMPLETED_WITHIN_DECLARED_SCOPE. All four top-level reads,
+all physical table fields and both semantic models completed; item list matches
+at start/end. No unsupported table engine or fallback was reported. This is
+operator-returned evidence from 21:38:27–21:39:15 UTC, not a new company API run here.
+
+[Safe reviewed metadata receipt](logs/2026-10-23-uk-ani-inventory-r01-reviewed.json)
+records the validated attachments, counts, complete names/types, expression
+fingerprints, endpoint graph and source reconciliation. Raw company JSON, DAX,
+descriptions, source values and connections are not copied into this public repo.
+The maintained [UNDERSTANDING](../handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
+now contains the reviewed workspace map, 24 physical/269-field catalog, native
+helper dictionary, inherited measure source map and all relationship endpoints.
+
+- 13 visible items: 2 pipelines, 1 Lakehouse, 4 notebooks, 1 Reflex, 1 report,
+  1 SQL endpoint, 2 semantic models, 1 UserDataFunction.
+- Original model: 15 tables / 209 fields / 47 measures / 5 relationships,
+  15 Direct Lake partitions and zero defined roles.
+- TEST: 39 tables / 333 fields / 98 measures / 12 relationships,
+  15 Direct Lake + 24 Import partitions and zero defined roles.
+- All 15 base field/type dictionaries in both models match physical schemas.
+  Fourteen projected inherited tables and all five original relationship
+  endpoints agree; the other inherited table has the known nine feed repairs.
+- The 38 shared core DAX texts match public baseline code. All 47 inherited TEST
+  texts match the baseline measures/visual-feed code. All 51 native DAX and 20
+  native dynamic-format texts match the public R17.7 SAMPLE (only join line
+  arrays with LF). Five empty static formats are omitted by the server and are
+  explicitly recorded. Pure metadata execution of the retained R17.1 repair
+  reproduces exactly the nine original-versus-TEST feed differences.
+- The single returned published ForecastMaster Review report binds the original
+  model, not TEST. This does not inspect its visual/layout version.
+
+Relationship defaults/cardinality/direction/active attributes were omitted in
+this export; effective settings are not resolved. Zero defined roles does not
+prove universal access. SQL views/procedures, child/deployed code/rules/schedules,
+physical values/versions and business/UI/performance qualification remain open.
+The cell requested no business-row/amount query, file write, model/source change,
+refresh or publication. The prior R02 date/value recovery remains a separate
+accepted result, not a value test repeated by this metadata inventory.
+
+No further receiving diagnostic/reset/updater/refresh is requested for this
+result. Keep private backups and original production. Next bounded engineering
+work: qualify compact native TEST report + matching selection adapter against
+this dictionary; R17.8 remains uninstalled. Preserve all five R01 inventory and
+six R02 recovery package files. GitNexus query remains unavailable for this
+unregistered repository; direct metadata/source/schema and preservation checks
+support this documentation update, with graph authority UNKNOWN.
+
+
 ## 23 October 2026 — one read-only workspace inventory R01 prepared; company run pending
 
 After rereading the current Smart Demand Manager AGENTS/protocol and Coordination

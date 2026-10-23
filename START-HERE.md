@@ -17,20 +17,22 @@ See [STATUS](feedback/STATUS.md) and the linked receiving receipt.
 **Do not rerun R02/reset, delete markers or manually refresh again for this
 recovery.** Keep the private backup. You may reopen the unchanged R17.7 TEST
 PBIP to inspect restored captions/numbers; it is a UI check, not installation.
-The model has 39 tables/98 measures/12 relationships by this receipt, but R02
-is not a complete workspace/table/measure inventory. Unknown details stay marked.
+The later R01 inventory is reviewed: 13 visible workspace items, 24 physical
+tables/269 fields, original model 15 tables/209 fields/47 measures/5 relationships,
+and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
+See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
+and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
 Built-in Power BI visuals only. The compact R17.8 SAMPLE uses fabricated data;
 the selection adapter remains an uninstalled draft. No company-connected R17.8
 TEST ZIP/updater or production replacement is released. Native UI/export/speed
 and independent business parity still need their separate evidence.
 
-**Current next action:** use the [read-only workspace inventory R01](handoff/workspace-inventory-r01/README.md).
-Pull Coordination, copy its entire Python file into ONE NEW ForecastMaster_GM_Setup
-cell, run only that cell once and return the full JSON privately in this chat.
-It collects workspace item/physical schema/model DAX and relationship metadata;
-no amount query, model/source write or refresh. Do not upload the company output
-to this public repository. Company inventory completion is still pending.
+**Current next action:** no new cell, reset, updater or extra refresh is needed
+from the operator for this inventory. Keep the private backups and current
+production report. Next engineering work is the compact native TEST report and
+matching selection adapter, qualified against the verified dictionary before a
+receiving handoff. Keep raw company metadata/DAX out of this public repository.
 
 Original company-laptop connection setup follows for reference.
 

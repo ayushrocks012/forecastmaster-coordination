@@ -18,20 +18,23 @@ no publication or production change. This supersedes older receiving steps below
 The user explicitly requests ongoing maintenance of this one understanding
 reference from chat/history/current source and reviewed receiving outputs.
 Distinguish requested/designed/built/installed/company-tested/unknown facts.
-R02 observed 39 tables, 98 measures and 12 relationships, but did not export
-all names/definitions or the whole workspace. The public SAMPLE catalog has
-29 simplified schemas and 51 R17.7 native definitions; never call it a complete
-live inventory. Update the reference/STATUS on material evidence changes,
-preserve frozen package/test/cell bytes and keep raw company exports private.
+R01 inventory is now reviewed: both returned copies, content hash and byte/hash
+footer match; all scoped reads completed. Thirteen visible workspace items,
+24 physical tables / 269 fields; original 15 tables / 209 fields / 47 measures /
+5 relationships; TEST 39 / 333 / 98 / 12. All base fields/types align. The 47
+inherited TEST + 51 native DAX texts map to existing public definitions; the
+nine original-versus-TEST feed differences are exactly the retained R17.1 repair.
+The published report binds the original model. Effective relationship defaults,
+permissions, deployed code/schedules, numerical parity and speed remain separate.
 
-Current authorized receiving task: `handoff/workspace-inventory-r01/README.md`.
-The user requests ONE read-only metadata inventory cell in ForecastMaster_GM_Setup
-for all visible workspace items, physical tables/fields and semantic-model
-fields/measures/relationships, after rereading AGENTS and the app protocol.
-This is not another recovery or refresh. Full returned metadata/DAX belongs in
-this private chat/company area, never committed raw to this public repository.
-Review its completion/access gaps before updating the maintained understanding.
-The cell and local mocks are prepared; company execution remains pending.
+No further inventory/reset/updater/refresh is needed from the operator for this
+result. Next engineering scope: prepare/qualify the compact native TEST report
+plus matching selection adapter against the verified metadata dictionary. R17.8
+adapter remains uninstalled; built-in visuals only, other-laptop access and
+production preservation continue. Keep all five inventory R01 package files and
+six recovery R02 files unchanged. Raw company exports/DAX/descriptions stay
+private; only reviewed schema metadata/fingerprints enter the reference and
+feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json. STATUS owns dated results.
 
 This is the separate office-laptop script and feedback handoff. Keep changes here; the Smart Demand Manager application checkout is outside this task's requested scope.
 
