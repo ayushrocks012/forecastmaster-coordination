@@ -1,5 +1,42 @@
 # Company setup status
 
+## 23 October 2026 — corrected verifier R02 blocked at refresh-history prerequisite
+
+The operator returned TEST_R178_VERIFICATION_STOPPED, Revision R01,
+VerifierRevision R02, Failure TEST_REFRESH_NOT_COMPLETED / CheckStopped. All
+returned mutation/refresh/publication/value-output flags are false. No date,
+numeric, label or final checks were returned this time. Exact TEST identity,
+pinned installation marker and install-success receipt guards precede this
+stop in the unchanged verifier source. The actual history response/status was
+not included, so the current processing state and cause remain UNKNOWN.
+[Reviewed safe receipt](logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json).
+
+The verifier requires a nonempty refresh list whose first row is Completed.
+Its reason combines absent/empty history and a non-Completed first entry; it
+does not establish which condition occurred. The prior verifier had passed
+this prerequisite before nine exact date groups and 12 paired comparisons.
+Those remain historical scoped evidence, not fresh passes from this R02 run.
+Do not infer a new model defect, undo the install or submit another refresh.
+Microsoft's [history contract](https://learn.microsoft.com/en-us/rest/api/power-bi/datasets/get-refresh-history-in-group)
+allows Unknown for running or unknown completion, and Failed/Disabled statuses.
+
+Current bounded action is the new [refresh-state R01 check](../handoff/report-native-only-r17.8/refresh-state-r01/OPEN%20FIRST.txt).
+One NEW setup cell, one run, then return all JSON. It reads exact TEST identity,
+two pinned existing private receipts and at most 60 history rows. It retains
+API order, exposes first-row status, UTC start/end/install times, valid request
+UUIDs and allowlisted error signals. It requests no DAX/Spark/definition read,
+remote write, refresh, retry or publication. A snapshot is not final verification.
+Eight focused synthetic tests cover status/time/history/privacy/read boundaries;
+the existing 14 release tests also pass. New receiving code is unexecuted on
+the company laptop; report/adapter/verifier/installer bytes are preserved.
+
+The same understanding, AGENTS and current entry points now record this stop
+and metadata-only next action. No installer/verifier retry, refresh/reset,
+marker deletion or publication until the returned state is reviewed. Keep
+backups and production R16.6 unchanged. Native UI/export, business parity and
+company performance gates remain pending. GitNexus is unavailable for this
+unregistered repository; direct source/tests/preservation are bounded fallback.
+
 ## 23 October 2026 — acceptance checks and staged validation consolidated
 
 The user authorized making the agreed process improvements durable. The existing

@@ -1,0 +1,28 @@
+R17.8 TEST — READ-ONLY REFRESH STATE CHECK R01
+
+Use this after the corrected VerifierRevision R02 returned
+TEST_REFRESH_NOT_COMPLETED. It does not mean installation failed and does not
+authorize another refresh. The old verifier's nine date groups and 12 numerical
+comparisons remain scoped historical passes; current final verification is open.
+
+1. Pull Coordination main. In PowerShell at the repository folder:
+
+   Get-Content -Raw -Encoding UTF8 -LiteralPath ".\handoff\report-native-only-r17.8\refresh-state-r01\CHECK TEST REFRESH STATE R01.py" | Set-Clipboard
+
+2. Paste into ONE NEW Python cell in ForecastMaster_GM_Setup on the company
+   laptop. Run ONLY that cell once. Never Run all or an older setup cell.
+
+3. Send its complete final JSON, including STOPPED. Stop there for review.
+   No installer, verifier, manual refresh, reset/clear, marker deletion or publish.
+
+This cell reads exact TEST identity, existing installation receipts and up to 60
+TEST refresh-history records. It prints UTC timestamps/statuses, valid request
+UUIDs and allowlisted error signals. No DAX or Spark reads, company amounts,
+model definitions, raw errors, credentials or source records. No remote writes.
+The private receipts are copied into a temporary local directory and removed.
+It takes one history snapshot, does not poll/wait and cannot start or cancel a job.
+An Unknown status can mean running or unknown completion; it is not a pass.
+Keep all backups; production R16.6 and the native report/adapter stay unchanged.
+
+Official status reference:
+https://learn.microsoft.com/en-us/rest/api/power-bi/datasets/get-refresh-history-in-group

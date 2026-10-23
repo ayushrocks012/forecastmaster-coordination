@@ -1,0 +1,40 @@
+{
+  "Evidence": "Operator-returned corrected verifier JSON, reviewed against preserved source",
+  "Reported": {
+    "Stage": "TEST_R178_VERIFICATION_STOPPED",
+    "Revision": "R01",
+    "VerifierRevision": "R02",
+    "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+    "ModelWriteRequested": false,
+    "OriginalModelWriteRequested": false,
+    "LakehouseTableWriteRequested": false,
+    "RefreshRequested": false,
+    "CompanyAmountValuesPrintedOrStored": false,
+    "ReportPublished": false,
+    "NextStep": "Send this JSON. Keep the backup. Do not rerun the installer or refresh again.",
+    "Failure": {
+      "Reason": "TEST_REFRESH_NOT_COMPLETED",
+      "ExceptionFamily": "CheckStopped",
+      "KnownSignals": [],
+      "RawErrorPrintedOrStored": false
+    }
+  },
+  "Interpretation": {
+    "Guard": "History must be a nonempty list and its first entry status exactly Completed",
+    "EarlierPrerequisites": "Identity, pinned marker and installation-success guards passed by source execution order",
+    "CurrentRefreshStatus": "UNKNOWN: history rows/status were not returned",
+    "Cause": "UNKNOWN: no attribution to running, failed, empty, missing or another state is possible from this reason alone",
+    "ChecksThisRun": "Stopped before definition/cloud/date/numerical/label/concurrency checks; no company DAX query reached by source flow",
+    "EarlierEvidence": "Old verifier nine exact date groups and 12 paired comparisons remain historical scoped passes, not revalidated here",
+    "Installation": "Previously confirmed and not undone by this read-only stop",
+    "OverallVerification": "INCOMPLETE; no installed/UI/business/speed acceptance promotion"
+  },
+  "NextAction": {
+    "File": "handoff/report-native-only-r17.8/refresh-state-r01/CHECK TEST REFRESH STATE R01.py",
+    "Instructions": "Pull current main. Copy into ONE NEW ForecastMaster_GM_Setup Python cell. Run only it once; send complete JSON.",
+    "Scope": "Existing TEST installation receipts and refresh history only; no amounts, DAX, Spark, definition reads or remote writes",
+    "NoRetryAuthorized": ["installer", "verifier", "refresh", "reset or clear", "marker deletion", "publication"]
+  },
+  "Preserved": ["Production R16.6", "Native report and adapter", "Installer and R02 verifier", "Private backups and markers", "Earlier evidence"],
+  "LiveCompanyCallsByThisReview": false
+}

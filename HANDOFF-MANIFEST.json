@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 78682,
-      "SHA256": "a6d28445d25bdcf9dba6565fa346da233f69439c6300baa75dffaba61782f7b2"
+      "Bytes": 79371,
+      "SHA256": "413e61fc1a734ba463deedb549b0e236fe529fd6224b8e76aeb3fde3c371a7bc"
     },
     "README.md": {
-      "Bytes": 8220,
-      "SHA256": "4a6407586da6b008cc926fc03f0f8a2a3f7b58712dfe52e37a35f63c51e0e455"
+      "Bytes": 8341,
+      "SHA256": "a2625e8827653ca2df4918839c927f8b95b64f320855aae297fa51b0ead84473"
     },
     "feedback/STATUS.md": {
-      "Bytes": 143581,
-      "SHA256": "a0123ed9c0fd18943bf2d5df04901f9c2fd3126a8bcc9a0c1d32ce3c6d1afc6a"
+      "Bytes": 146166,
+      "SHA256": "c38363401fb6d694f56a9866b0902d36fb00dbd4e32d47463798e7e6ab03e830"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 7553,
-      "SHA256": "7ae5088bdf10644efa42d84484dc151bc9e750215d18f36b811d582eadeda347"
+      "Bytes": 7881,
+      "SHA256": "d43a659d60a910835b493bfcbce72fbadd90bb8781e720d4eae974a51de6ca9a"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 189778,
-      "SHA256": "53123ca33bcc5ce278e5233af2a46bd853235de84befe11caf075b953664dd8e"
+      "Bytes": 191133,
+      "SHA256": "31c5d72be7e79e1362b41dae667b2955cab18dcb42214847705b00a1592a6d4b"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4660,6 +4660,26 @@
     "feedback/logs/2026-10-23-r178-verifier-r01-partial.json": {
       "Bytes": 3989,
       "SHA256": "aec24d5175906606b76204233a4b73e4275882a16e8cfb64d25d3a9f5b301e8f"
+    },
+    "handoff/report-native-only-r17.8/refresh-state-r01/test_check.py": {
+      "Bytes": 7418,
+      "SHA256": "abd740eed0fd405e1f5458ce4cd84ac2f74927da5380b3ef989c3d9b17d290f5"
+    },
+    "handoff/report-native-only-r17.8/refresh-state-r01/OPEN FIRST.txt": {
+      "Bytes": 1634,
+      "SHA256": "04c2df33890547a8ed6cf3dabdec987865b7da238c281add02c20255b1311771"
+    },
+    "handoff/report-native-only-r17.8/refresh-state-r01/VALIDATION.json": {
+      "Bytes": 2312,
+      "SHA256": "912c5de278e90709a1187a2151293aabbe8a45b9dec68d08d3828fa691a38902"
+    },
+    "handoff/report-native-only-r17.8/refresh-state-r01/CHECK TEST REFRESH STATE R01.py": {
+      "Bytes": 7567,
+      "SHA256": "4b45f8f6dc76ab654c456ac6f362f0337ed12961c6b41e2a8aeec68a9465cb9c"
+    },
+    "feedback/logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json": {
+      "Bytes": 2376,
+      "SHA256": "e966f580a81ec9118b1957c863b93911e82af126b750e3b47ffab2d1228f8eb1"
     }
   }
 }

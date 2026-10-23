@@ -1,0 +1,54 @@
+{
+  "Stage": "R178_REFRESH_STATE_R01_LOCALLY_QUALIFIED",
+  "BaselineCommit": "61c329198a452c5963afc939042efe56bf5a8978",
+  "Purpose": "Diagnose corrected verifier TEST_REFRESH_NOT_COMPLETED using existing receipts and history; no change to verification gate",
+  "Scope": {
+    "CompanyCallsExecutedHere": false,
+    "CompanyAmountQueries": false,
+    "RemoteMutations": false,
+    "CompanyReceivingExecution": "PENDING",
+    "NativeEngineRun": "NOT REQUIRED for operational metadata probe; prior numerical evidence unchanged"
+  },
+  "Tests": {
+    "RefreshStateUnitTests": 8,
+    "ExistingReleaseTests": 14,
+    "Failures": 0,
+    "Coverage": [
+      "Completed new versus old refresh",
+      "Unknown/Failed/Disabled/unrecognized status",
+      "Empty/malformed history",
+      "Timestamp validity and API order",
+      "Raw errors and arbitrary labels withheld",
+      "Pinned identity/receipt path/HTTP admission",
+      "GET-only routes and local temporary receipt copies",
+      "Python 3.10 AST and forbidden remote mutation calls"
+    ]
+  },
+  "Preservation": {
+    "ExistingManifestFilesChecked": 1160,
+    "AllByteIdentical": true,
+    "MutableDocuments": [
+      "AGENTS.md",
+      "README.md",
+      "START-HERE.md",
+      "feedback/STATUS.md",
+      "handoff/report-native-only-r17.8/UNDERSTANDING.md"
+    ],
+    "ReportZIPsAdapterInstallerAndVerifier": "UNCHANGED",
+    "ProductionR166AndCompanyState": "NO OPERATIONS FROM THIS HOST"
+  },
+  "GraphGate": {
+    "Query": "Coordination repository not registered",
+    "DetectChanges": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+    "Authority": "UNKNOWN, not a zero-impact result",
+    "Fallback": "Direct source flow, eight focused tests, prior 14 tests and full manifest preservation"
+  },
+  "StaticChecks": {
+    "Python310AST": "PASS",
+    "NoDynamicEvalExecOrRemoteMutationCalls": "PASS",
+    "Ruff": "Unavailable in host interpreter; bounded AST/source/privacy/read-route tests used"
+  },
+  "OfficialStatusContract": "https://learn.microsoft.com/en-us/rest/api/power-bi/datasets/get-refresh-history-in-group",
+  "ProbeSHA256": "4b45f8f6dc76ab654c456ac6f362f0337ed12961c6b41e2a8aeec68a9465cb9c",
+  "NextStep": "Pull main, run only CHECK TEST REFRESH STATE R01.py in ONE NEW setup cell, return JSON. No verifier/installer/refresh retry."
+}

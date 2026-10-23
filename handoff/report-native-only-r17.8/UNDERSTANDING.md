@@ -18,7 +18,15 @@ company observations are not copied here. New results update this reference;
 **Current release — compact R17.8 TEST R01:** user authorized this report and
 matching adapter after inventory review. [Receiving instructions](test-release-r01/OPEN%20FIRST.txt),
 [release notes](test-release-r01/README.md), [qualification](test-release-r01/VALIDATION.json).
-**Latest company return:** the operator completed installation and its one TEST
+**Latest company return:** corrected VerifierRevision R02 returned
+TEST_R178_VERIFICATION_STOPPED / TEST_REFRESH_NOT_COMPLETED, before dates,
+numerical, label or final checks. Identity, pinned marker and install-success
+receipt guards preceded the stop in preserved code. The actual status/history
+was not returned, so current processing state and cause remain UNKNOWN. No write,
+amount query or refresh was requested. This does not establish that installation
+failed or that a new refresh is needed. [Reviewed R02 stop](../../feedback/logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json).
+
+**Earlier company evidence:** the operator completed installation and its one TEST
 refresh. The original verifier returned all nine exact physical/semantic date
 groups (zero invalid dates) and 12 paired scalar comparisons (zero mismatches),
 then stopped with TypeError before file-label counts/final checks. Its earlier
@@ -26,10 +34,17 @@ identity, completed-refresh, whole candidate and cloud-mapping guards had passed
 inferred from the retained R01 execution order. This is **partial verification**,
 not full acceptance. [Reviewed counts-only return](../../feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
 
-**Current action:** pull and copy the current VERIFY INSTALLED TEST R01.py afresh
-into ONE NEW setup cell; its output must identify VerifierRevision R02. Run only
-that read-only cell and return final JSON. **No installer, new refresh, reset,
-marker deletion or publication.** Keep backups. The old date recovery stays closed.
+**Current action:** pull and run only [CHECK TEST REFRESH STATE R01.py](refresh-state-r01/CHECK%20TEST%20REFRESH%20STATE%20R01.py)
+in ONE NEW ForecastMaster_GM_Setup Python cell; return its complete final JSON.
+[Instructions](refresh-state-r01/OPEN%20FIRST.txt). Reads existing installation
+receipts and up to 60 refresh-history rows, exact TEST only; no DAX/Spark, company
+amounts, model definitions, refresh submission or remote writes. Current verifier
+checks its first history row for Completed; the new probe retains API order,
+compares start times to installation and exposes only allowlisted metadata.
+Unknown can mean running or unknown completion; a failed/empty/unknown row is not
+a pass. No history result itself authorizes retry.
+**No installer/verifier retry, new refresh, reset, marker deletion or publication.**
+Keep backups. The old date recovery stays closed.
 
 **Verifier correction R02:** the existing `VERIFY INSTALLED TEST R01.py` now
 reports `VerifierRevision: R02`. Empty MissingImportedAt/HashSuffixes metadata
@@ -37,8 +52,8 @@ counts use DAX COALESCE to return zero before Python integer conversion. Four
 new native synthetic queries reproduce the old BLANK failure and verify zero
 counts and retained positive errors; all 14 release tests pass. Business-amount
 blank semantics, the installer and both PBIP ZIPs are unchanged. Already completed
-installation/processing needs only the corrected read-only verifier, not another
-update or refresh. [Evidence](test-release-r01/VALIDATION-VERIFIER-R02.json).
+installation/processing must not be repeated for a checker correction. Current
+refresh-state gate needs the metadata-only probe above before any verifier retry. [Evidence](test-release-r01/VALIDATION-VERIFIER-R02.json).
 
 Local qualification: task-owned loopback Tabular engine, **207 queries / 1,868
 assertions**, independent fabricated numerical oracle and actual source/visual
@@ -76,7 +91,7 @@ Direct preservation/source/context/runtime checks are recorded instead.
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
-- **Current next action:** run only the corrected read-only verifier above.
+- **Current next action:** run only the refresh-state metadata probe above.
   Installation/one refresh are complete; do not repeat either or the recovery.
   Desktop/business/export/performance checks remain separate.
   The published ForecastMaster Review remains bound to the original model.
@@ -464,8 +479,8 @@ Power BI; fixed compact height plus drill/scroll/Focus is the current approach.
 
 These checks consolidate the user's recorded feedback; they do not request a
 new design approval or authorize another installation/refresh. The design and
-business sections own the detailed meaning. The current company step remains
-only the corrected read-only verifier in the resume section. Built, locally
+business sections own the detailed meaning. The current company step is the refresh-state metadata probe in the resume
+section; the corrected verifier stopped at its processing guard. Built, locally
 tested, installed and accepted are separate states.
 
 | Requirement | Evidence needed for acceptance | Current limit |
@@ -1377,8 +1392,8 @@ partition/role/connection metadata remain outside this inventory.
 **No new inventory cell, updater, reset or extra refresh is needed from the
 operator for this result.** Preserve backups and use the verified dictionary
 as the model boundary. The compact R17.8 release has since been built, installed
-and refreshed; SAMPLE remains fabricated. Current action is the corrected
-read-only verifier above, followed only after its success by the existing native
+and refreshed; SAMPLE remains fabricated. Current action is the refresh-state metadata probe above, then resolution of
+the blocked verifier, followed only after full verification by the existing native
 UI/export/business/performance acceptance. Keep production R16.6 unchanged.
 The inventory itself does not prove that the rejected layout or speed is fixed.
 
@@ -1404,8 +1419,8 @@ immutable receipt supersede the earlier "inventory pending" notes.
 **No additional inventory/recovery diagnostic is requested for these gaps.**
 Preserve the exact R01 inventory cell/package and older recovery evidence. Do
 not rerun an updater, reset or extra refresh. The release is now installed and
-processed; the current bounded action is only the corrected read-only verifier
-in the resume section. Native UI/business/export/speed remain separate. The
+processed once; the latest processing guard is unresolved. The current bounded
+action is only the refresh-state metadata probe in the resume section. Native UI/business/export/speed remain separate. The
 rejected R17.7 layout and fabricated SAMPLE are not receiving acceptance.
 
 Keep the raw company JSON and copied output private. The reviewed receipt

@@ -23,17 +23,21 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-**Current receiving action: run only the corrected read-only verifier.** The
+**Current receiving action: read TEST refresh state only.** The
 operator completed R17.8 installation and one TEST refresh. The old verifier
 passed nine date groups and 12 numerical comparisons, then hit its empty metadata
 counter TypeError. [Reviewed result](feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
 
-Pull Coordination, copy the current `VERIFY INSTALLED TEST R01.py` afresh into
-ONE NEW ForecastMaster_GM_Setup Python cell and run only it. The filename stays
-R01; final JSON must contain `VerifierRevision: R02`. Return that JSON. **Do not
-rerun the installer, refresh again, reset or delete markers.** Keep backups.
-[OPEN FIRST](handoff/report-native-only-r17.8/test-release-r01/OPEN%20FIRST.txt)
-has the original sequence plus the correction notice; completed steps stay complete.
+The corrected R02 verifier has since stopped at `TEST_REFRESH_NOT_COMPLETED`,
+before dates/numerical checks. Current refresh status/cause was not returned.
+[Reviewed R02 stop](feedback/logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json).
+
+Pull Coordination and copy [CHECK TEST REFRESH STATE R01.py](handoff/report-native-only-r17.8/refresh-state-r01/CHECK%20TEST%20REFRESH%20STATE%20R01.py)
+into ONE NEW ForecastMaster_GM_Setup Python cell. Run only that cell once and
+return its final JSON. It reads existing install receipts and refresh metadata,
+no amounts or definitions. [Current OPEN FIRST](handoff/report-native-only-r17.8/refresh-state-r01/OPEN%20FIRST.txt).
+**No installer/verifier retry, refresh/reset, marker deletion or publication.**
+Keep backups. Completed installation/recovery work stays complete.
 
 Built-in visuals only; production R16.6 and older packages remain unchanged.
 Local native runtime/context/oracle, schema and receiving safety tests pass.
