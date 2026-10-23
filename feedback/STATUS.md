@@ -1,5 +1,77 @@
 # Company setup status
 
+## 23 October 2026 — R01 confirms invalid original TEST dates; physical/semantic boundary remains open
+
+The operator returned R178_METADATA_READS_COMPLETED. In UK/2026-10, original
+fm_review_files and native helper each contain three rows, all with invalid
+IMS/EF cutoffs; both selected automatic ADS sources are affected. Missing IDs
+and metadata mismatches are zero. SourceOK=1, MetricChoices=1, ScenarioChoices=1,
+AvailableScopeRows=100; CutoffValid=0, FitCutoffValid=0, PeriodAvailable=0.
+Files took 9129ms, guards 859ms. No amounts or writes/refresh/publication.
+Safe receipt: logs/2026-10-23-native-r178-invalid-test-dates.json.
+
+This locates invalid cutoff reads in original fm_review_files WITHIN TEST,
+upstream of the native file helper. It does not prove physical Lakehouse dates,
+Excel metadata or the production model are wrong. Period failure also warrants
+checking month dictionaries/bounds; its exact cause is not yet established.
+
+Current company step is [read-only R02 date-boundary check](../handoff/report-native-only-r17.8/read-only-check/OPEN%20DATE%20BOUNDARY%20R02.txt).
+It reads TEST bindings and original/native month-key validity, then only known
+physical Delta date metadata/keys/types/counts in the existing Lakehouse. No
+amount columns or model/source writes. Missing paths return PARTIAL rather
+than a complete finding; raw records/IDs/connection definitions are not printed.
+Four new local route/identity/privacy/partial-status guards pass (seven total
+diagnostic tests). Spark/DAX execution here remains unverified. Return JSON
+before deciding the repair; no updater, source rewrite or repeat refresh.
+
+Compact native R17.8 SAMPLE remains the parallel layout review artifact. No
+company-connected TEST ZIP/updater is published or installed; no live date fix,
+native rendering, numerical parity or speed acceptance is claimed.
+
+## 23 October 2026 — R17.7 refresh Completed, native UI rejected and blank/1899 state unresolved
+
+The operator reports TEST refresh Completed and supplies R17.7 screenshots.
+Warnings status was not separately stated. Both matrices and the plot are
+blank; selecting a different measure and applying once still leaves them blank.
+The caption says Dec 99 and the file audit shows Dec 1899 on current October
+versions while other rows have normal cutoffs. This receiving result supersedes
+the preceding instruction to refresh/open R17.7. No further refresh or updater
+retry is indicated by these screenshots. Safe receipt:
+logs/2026-10-23-native-r177-ui-rejected.json. No company figures/images copied.
+
+The user explicitly requires one clean selectable file list, no Apply filters,
+no Source selection dropdown, compact right-hand trend controls, a dynamic
+title above the plot instead of an in-plot header and no overlapping text.
+R17.8 source and a fabricated native SAMPLE now implement that layout. Page
+height is 1330 versus 1884 (29.4% smaller); seven report/metadata guard tests and
+three diagnostic guard tests pass. Microsoft schema checks pass on 34 TEST
+and 33 SAMPLE documents. No Desktop/DAX execution is claimed.
+
+The draft source adapter infers manual mode from file selection and restores
+Automatic ADS when cleared. The single readable label retains filename/import
+time and uses short version ordinals only for collisions. Availability is
+filtered by current Affiliate/cycle/drivers using a metadata-only measure.
+No full revision hashes or duplicate audit table are displayed. Existing
+Plan/Benchmark/Variance/regression arithmetic and numeric formats remain
+unchanged. Date guards show unavailable instead of epoch cutoffs; they do not
+fix or infer the original source dates.
+
+Current step: [R17.8 read-only metadata check](../handoff/report-native-only-r17.8/read-only-check/OPEN%20FIRST.txt).
+The two small sequential queries compare original/native cutoff validity,
+identity coverage and the reported automatic Market/Units selection guards.
+No amount queries/model/source/refresh writes. Return the JSON to identify the
+source/helper issue before preparing a company updater. The diagnostic was
+pushed separately so it can run while the native layout repair is prepared.
+
+No R17.8 TEST ZIP/updater is published; the adapter is not installed. A local
+preserved-binding TEST draft passed schema checks but is held outside the
+receiving package. SAMPLE may be reviewed in Desktop with
+fabricated data, preserving old projects. No company metadata correction,
+post-refresh numerical parity, native rendering/export or speed has passed.
+Production R16.6, prior packages, company connection, schedules and physical
+source/retention remain unchanged. GitNexus query/impact authority unavailable;
+direct source, geometry and frozen-byte checks are bounded fallback.
+
 ## 23 October 2026 — returned R01 naming metadata accepted after review; refresh TEST once
 
 The returned R01 JSON keeps Stage TEST_R177_READBACK_NEEDS_REVIEW. It verifies

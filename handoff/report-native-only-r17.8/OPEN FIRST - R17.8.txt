@@ -1,0 +1,32 @@
+R17.8 COMPACT NATIVE REPAIR — CURRENT STEP IS THE READ-ONLY CHECK
+
+R17.7 refreshed to Completed but the report remains blank after Apply, with
+Dec 1899 dates. This is an unresolved data/metadata correctness issue in
+addition to the rejected layout. No more updater or refresh attempts yet.
+
+R01 has now returned: all three original TEST file rows have invalid IMS/EF
+cutoffs, including both ADS sources; native metadata and IDs match. SourceOK
+passes while cutoff/fit/period gates fail. Physical Lakehouse/Excel dates have
+NOT been established wrong.
+
+1. On the company laptop, pull Coordination with git pull --ff-only.
+2. Follow read-only-check\OPEN DATE BOUNDARY R02.txt. Copy the whole
+   CHECK DATE BOUNDARY R02.py into ONE NEW ForecastMaster_GM_Setup PySpark cell.
+   Run ONLY that cell ONCE. Do not Run all or rerun R01.
+3. Send its final JSON. It reads metadata/date-key counts and the existing
+   Lakehouse date types/validity; no amounts or model/source/refresh writes.
+
+The compact native report is prepared separately. For OPTIONAL layout review,
+extract candidate\ForecastMaster Compact Native R17.8 SAMPLE.zip into a NEW
+folder and open ForecastMaster Compact Native R17.8 SAMPLE.pbip, keeping both
+the .Report and .SemanticModel folders alongside it. All data is FABRICATED.
+No company sign-in/connection or Fabric update is needed for this SAMPLE.
+
+SAMPLE shows one searchable selectable file list with import time, compact
+right-aligned trend controls, a dynamic title above the plot, no in-plot title,
+no Source selection/Apply controls and a 29% shorter page. Filename identity
+and import time are retained; full revision hashes are not display labels.
+
+No R17.8 TEST ZIP or company updater is published in this package. The metadata
+adapter is not installed. The returned diagnostic will
+determine the appropriate source/helper repair. Production R16.6 stays unchanged.

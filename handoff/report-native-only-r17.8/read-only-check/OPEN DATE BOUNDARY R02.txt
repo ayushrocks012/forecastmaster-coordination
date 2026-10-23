@@ -1,0 +1,31 @@
+R01 COMPLETED: ORIGINAL TEST DATE READS ARE INVALID; NATIVE HELPER MATCHES THEM
+
+Your result shows all three UK/2026-10 source rows have invalid IMS/EF dates,
+both selected ADS files are affected, and SourceOK=1 but both cutoff guards and
+PeriodAvailable fail. "Source" here means fm_review_files INSIDE TEST. It does
+not yet prove the actual Lakehouse/Excel metadata is wrong.
+
+The next read-only check locates the physical Lakehouse -> TEST date boundary
+and checks original fact/month/axis keys and native month bounds. It does not
+read amounts or alter any source/model/connection. It never guesses dates.
+
+1. On the company laptop's Coordination PowerShell terminal:
+
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.8\read-only-check\CHECK DATE BOUNDARY R02.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+2. In UK-ANI-Demand -> ForecastMaster_GM_Setup, add ONE NEW Python/PySpark cell,
+   paste the WHOLE file and run ONLY that cell ONCE. Do not Run all or rerun R01.
+   Keep this notebook's existing Spark/Lakehouse context. No credential changes.
+
+3. Send the final JSON. READS_COMPLETED means evidence collected, not repaired.
+   PARTIAL or CHECK_STOPPED also needs the JSON; do not retry or change settings.
+   Do not run an updater, refresh again, change source types or publish.
+
+This reads only the four expected Delta paths in the already-used Lakehouse,
+checks their declared date types and aggregate date validity, and compares
+TEST bindings/month-key counts. Full records, source IDs, filenames and raw
+connection definitions stay private. Missing paths remain partial evidence.
+
+The compact native R17.8 SAMPLE may be used separately for layout review.
+It contains fabricated data and is not a company deployment or repair.

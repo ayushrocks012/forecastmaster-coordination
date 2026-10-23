@@ -564,3 +564,53 @@ retry or connection changes. No production/publication/custom-visual change.
 Readback review is accepted; metadata processing, full parity, native UI/export
 and report speed remain separate receiving gates. Do not claim preflight
 totals or naming-metadata acceptance establish report performance.
+
+Later 23 October the operator reported the TEST refresh Completed, but R17.7
+visuals are blank even after selecting another measure and applying once.
+Screenshots show Dec 1899 native cutoff dates and Dec 99 in the source caption.
+Do not treat refresh completion/readback/preflight as proof of this processed
+state. Its cause remains unknown. No further updater/refresh retries, source
+rewrites, filename-derived dates or fabricated financial zeroes.
+
+The user explicitly rejects duplicate file tables, full technical suffixes,
+Apply filters, Source selection, tall trend headers and repeated graph titles.
+Current package is handoff/report-native-only-r17.8/: one clean searchable
+selectable file list with filename/import time; no Apply/source-mode control;
+compact right-hand trend dropdowns labelled beside the values; dynamic title
+outside the plot; 1330px page versus 1884px. Fix textbox vertical padding as
+well as reserved rectangles. Keep Section/Measure separate, monthly Start/End,
+single graph/review trend, multi table trends and native drill controls.
+
+R17.8's metadata adapter is a DRAFT, not installed. It infers manual source
+mode from file filters and restores Automatic ADS when clear, keeping cohort
+coverage/unique-version checks and Executive scenario separation. Readable
+file labels retain imported UTC time; short v1/v2 resolves same-label collisions
+while full IDs remain internal. A metadata-only availability measure scopes
+the list by Affiliate/cycle/drivers. No original source/date columns, numeric
+formats or R17.7 Plan/Benchmark/Variance/regression arithmetic change. Invalid
+cutoffs become unavailable, not guessed. This does not repair the source cause.
+
+Current company step is the new R17.8 read-only-check/OPEN FIRST.txt: ONE NEW
+cell ONCE, two sequential metadata/count queries, no amounts or writes. Return
+JSON before preparing a guarded updater. Do not publish the held TEST ZIP:
+the adapter is not installed. Only the explicitly fabricated native SAMPLE is
+available for optional layout review. Do not present schema/geometry/mock
+checks as Desktop/DAX/company acceptance. Native-only, production R16.6 and
+other-laptop access constraints continue. Preserve all older package bytes.
+
+R01 subsequently returned R178_METADATA_READS_COMPLETED: all three October
+fm_review_files rows INSIDE TEST have invalid IMS/EF cutoffs, matching native
+metadata exactly; both selected ADS sources affected, missing IDs/mismatches=0.
+SourceOK=1 but cutoff/fit-cutoff/period guards=0; one metric/scenario. This is
+not proof physical Lakehouse/Excel/production dates are wrong. The native
+helper is propagating original TEST metadata; do not relabel that as its own
+independent date corruption. Month bounds also need direct date-key evidence.
+
+Current company step is read-only-check/OPEN DATE BOUNDARY R02.txt, one NEW
+PySpark cell once. It compares TEST date bindings/month keys with existing
+physical Lakehouse date types/counts, never financial amounts or writes.
+Missing paths stay partial evidence; wrong identity/raw errors refuse safely.
+Do not rerun R01 or prepare a source/model correction from filename guesses.
+Keep the layout SAMPLE separate; R17.8 adapter/TEST installation and all native
+UI/numerical/performance gates remain unexecuted. No company-connected R17.8
+ZIP or updater is published until the boundary is understood and qualified.

@@ -1,0 +1,48 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "R178_METADATA_READS_COMPLETED",
+  "EvidenceSource": "Operator returned the read-only R01 diagnostic JSON",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "Scope": "UK / 2026-10 / Market / Units / Automatic ADS / 2026 FY",
+  "FileMetadataCounts": {
+    "SourceRows": 3,
+    "NativeRows": 3,
+    "AutomaticADSSources": 2,
+    "SourceInvalidIMS": 3,
+    "SourceInvalidEF": 3,
+    "NativeInvalidIMS": 3,
+    "NativeInvalidEF": 3,
+    "AutoInvalidIMS": 2,
+    "AutoInvalidEF": 2,
+    "SourceIdsMissingNative": 0,
+    "NativeIdsMissingSource": 0,
+    "IMSMetadataMismatch": 0,
+    "EFMetadataMismatch": 0
+  },
+  "SelectionGuardCounts": {
+    "SourceOK": 1,
+    "CutoffValid": 0,
+    "FitCutoffValid": 0,
+    "PeriodAvailable": 0,
+    "MetricChoices": 1,
+    "ScenarioChoices": 1,
+    "AvailableScopeRows": 100
+  },
+  "ElapsedMs": {
+    "Files": 9129,
+    "Guards": 859
+  },
+  "CompanyAmountsQueriedOrPrinted": false,
+  "ModelWriteRequested": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "Confirmed": "Original fm_review_files inside TEST has invalid cutoff metadata on all three rows; native helper matches, IDs match, both ADS sources affected; source selection succeeds while cutoff and period gates fail",
+  "NotEstablished": [
+    "Whether physical Lakehouse dates are wrong",
+    "Whether original Excel metadata is wrong",
+    "Exact encoding/loading cause",
+    "Production model date state",
+    "R178 deployment correctness or speed"
+  ],
+  "NextStep": "Read-only R02 date-boundary check: physical date types/counts, TEST date bindings and month-key validity. No updater/refresh/source rewrite."
+}

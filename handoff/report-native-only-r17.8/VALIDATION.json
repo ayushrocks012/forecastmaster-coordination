@@ -1,0 +1,82 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "R178_NATIVE_DRAFT_PREPARED_TEST_INSTALLATION_HELD",
+  "Evidence": "Local source/geometry/schema/guard checks; operator R17.7 failure screenshots and Completed statement",
+  "ReportGuardTestsPassed": 7,
+  "ReadOnlyDiagnosticGuardTestsPassed": 7,
+  "Python310Grammar": "PASS",
+  "MicrosoftSchemas": {
+    "TEST": 34,
+    "SAMPLE": 33,
+    "Failures": 0
+  },
+  "PageHeight": 1330,
+  "PriorPageHeight": 1884,
+  "ReductionPercent": 29.4,
+  "BuiltInVisuals": 26,
+  "CustomVisuals": 0,
+  "ApplyButtons": 0,
+  "SourceSelectionSlicers": 0,
+  "FileSelectionControls": 1,
+  "DuplicateFileAuditTables": 0,
+  "DynamicTitleOutsidePlot": true,
+  "NonoverlapRectsAndZeroTextboxVerticalPadding": true,
+  "MetadataAdapter": {
+    "ExistingExpressionsChanged": 13,
+    "AddedMetadataMeasures": 1,
+    "FileHelperExpressionsChanged": 1,
+    "TablesOrColumnsAdded": 0,
+    "SourceModeInferredFromActualSelection": true,
+    "FileAvailabilityFollowsCountryCycleDrivers": true,
+    "NamesAndImportTimesRetainedWithoutFullHashes": true,
+    "InvalidDatesUnavailableNotGuessed": true,
+    "PlanBenchmarkVarianceAndRegressionArithmeticPreserved": true,
+    "ExistingNumericFormatsPreserved": true
+  },
+  "CompanyUpdaterPrepared": false,
+  "CompanyAdapterInstalled": false,
+  "TESTZipMayBeOpenedAsInstalled": false,
+  "SampleFabricatedOnly": true,
+  "ModelOrSourceWriteRequested": false,
+  "CompanyAmountsQueriedHere": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "PriorManifestEntries": 1104,
+  "PriorProtectedFilesToVerify": 1100,
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination not registered",
+    "EditImpact": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+    "ChangeScope": "UNAVAILABLE; staged diff-impact failed closed; analysis_incomplete=1 and interface_classification_incomplete=1; impact UNKNOWN",
+    "Fallback": "Direct source/geometry/schema and protected-byte checks; graph impact unknown"
+  },
+  "Unverified": [
+    "Physical Lakehouse versus TEST date binding/loading boundary",
+    "Reason visuals stay blank",
+    "R178 DAX execution and numerical parity",
+    "Native Desktop rendering at company zoom/DPI",
+    "File multi-selection/clearing interactions",
+    "Company speed/export"
+  ],
+  "NextStep": "Run R02 date-boundary check once and return JSON; optional fabricated native SAMPLE layout review; no TEST installation/updater/refresh retry",
+  "Packages": {
+    "ForecastMaster Compact Native R17.8 SAMPLE.zip": {
+      "Bytes": 452033,
+      "SHA256": "a5c921fadf100f44e495887323c337b76540059c1807dce1f091884a6bc680f6"
+    }
+  },
+  "HeldTestDraftSchemaValidated": true,
+  "TESTZipPublished": false,
+  "ReceivedR01Diagnostic": {
+    "SourceRows": 3,
+    "SourceIMSAndEFInvalidRows": 3,
+    "NativeMetadataMismatches": 0,
+    "SelectedADSSources": 2,
+    "SelectedADSInvalidRows": 2,
+    "SourceOK": 1,
+    "CutoffValid": 0,
+    "FitCutoffValid": 0,
+    "PeriodAvailable": 0,
+    "CompanyAmountsQueried": false
+  },
+  "PriorProtectedFilesVerified": 1100
+}

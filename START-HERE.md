@@ -1,32 +1,30 @@
-# Current report step - R17.7 readback reviewed; refresh TEST once, 23 October 2026
+# Current report step - R17.8 compact native SAMPLE and date-boundary check
 
-Follow [the post-review company-laptop steps](handoff/report-native-only-r17.7/readback-check-r01/OPEN%20AFTER%20REVIEW.txt).
-The returned R01 JSON verified the private R03 backup pair, all 72 numerical
-comparisons, two stable metadata snapshots and unchanged cloud mapping. Its
-only three unexplained additions are isNameInferred=false on the explicitly
-named ImportedAtUTC, FileChoiceLabel and SeriesLabel columns. All other model
-metadata matches, apart from identical DAX line representations.
+Follow [R17.8 receiving steps](handoff/report-native-only-r17.8/OPEN%20FIRST%20-%20R17.8.txt).
+The operator reported R17.7 TEST refresh Completed, but summaries/chart stay
+blank even after applying once, and saved-file metadata shows Dec 1899.
 
-The original true-only check was too restrictive. Microsoft defines false as
-an explicitly specified column name, consistent with these known candidate
-columns and unchanged source bindings. The exact supplied result is accepted
-after review; its original NEEDS_REVIEW stage remains preserved. No further
-notebook code is needed. Do not rerun R03 or the readback check.
+The returned R01 diagnostic confirms all THREE October source rows inside TEST
+have invalid IMS/EF cutoff metadata; the native helper matches them exactly.
+Both selected ADS sources are affected. SourceOK=1, but cutoff/fit/period gates
+fail. This is not proof that physical Lakehouse or Excel dates are wrong.
 
-On the COMPANY laptop, open UK-ANI-Demand. Find SEMANTIC MODEL ForecastMaster
-Native OneLake R17.1 - TEST (31d00232-ac03-48fe-af39-f2e4bae82443). Choose ... ->
-Refresh now ONCE. Require Refresh history -> Completed WITHOUT warnings.
-If it fails/warns, stop and send details; do not retry or change connections.
+Current action: copy the WHOLE read-only CHECK DATE BOUNDARY R02.py from
+handoff/report-native-only-r17.8/read-only-check/ into ONE NEW Python/PySpark
+cell in ForecastMaster_GM_Setup and run ONLY that cell ONCE. Return the JSON.
+It compares physical Lakehouse date types/counts, TEST date bindings and month
+keys. No financial amounts, model/source writes, refresh or publication.
+Do not rerun R01, any updater or the TEST refresh.
 
-After warning-free Completed, extract ALL of the unchanged R17.7 TEST ZIP into
-a NEW folder and open its PBIP with the .Report folder alongside it. Use TEST,
-not fabricated SAMPLE. Send the refresh result, then screenshots and the three
-visual DAX timings using the same prior view/selections. Report speed, broader
-numerical parity and native UI/export remain receiving checks.
+The compact R17.8 native SAMPLE is available for optional Desktop layout
+review with FABRICATED DATA. It has one readable selectable file list with
+import time, no Apply/Source selection controls, compact right-aligned trends
+and dynamic title above the plot. All native visual rectangles are separated;
+page height is 29% shorter. Native rendering still needs the receiving laptop.
 
-This exact-result review supersedes the prior true-only hold; it is not a
-blanket acceptance of other NEEDS_REVIEW results. All old code/ZIP bytes remain
-preserved. Built-in visuals only; do not publish over production R16.6.
+No R17.8 TEST ZIP or updater is published. The source adapter is a local draft,
+not installed or numerically qualified. Keep the existing private backup and
+production R16.6. The blank/date cause must be resolved before a new TEST update.
 Original laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH
