@@ -1,0 +1,80 @@
+R17.5: NATIVE DEMAND REVIEW, COMPACT LAYOUT AND CHART CORRECTIONS
+
+Use the COMPANY laptop. Your existing R17.4 TEST readback is verified.
+Keep production ForecastMaster Review / R16.6 and all older report folders.
+
+1. In VS Code, open forecastmaster-coordination. In its PowerShell terminal,
+   from the repository root, run:
+
+   git status --short
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.5\UPDATE EXISTING TEST TO R17.5.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   If Git refuses the pull, preserve local edits and send its message.
+
+2. In Fabric open UK-ANI-Demand > ForecastMaster_GM_Setup.
+   Add ONE NEW Python/PySpark cell below the earlier cells, paste the clipboard,
+   then run ONLY that new cell. Do not Run all or rerun old creation/update cells.
+
+   This is a narrow two-chart-measure update on the EXISTING TEST:
+   ForecastMaster Native OneLake R17.1 - TEST
+   31d00232-ac03-48fe-af39-f2e4bae82443
+
+   It fixes the graph's independent trend window, the last-actual connecting
+   point, and view membership shared by Drivers/Sectors/Both. It does not change
+   monthly/period/ratio/trend-fit arithmetic, source tables, roles or formats.
+   The backup uses full UTF-8 hash/length verification. Full readback accepts
+   identical DAX strings versus line arrays, as confirmed by your R17.4 check.
+
+   Continue only for TEST_R175_UPDATED or TEST_R175_ALREADY_INSTALLED.
+   If it errors or says TEST_R175_READBACK_NEEDS_REVIEW, keep the backup and
+   send the output. Do not retry, refresh or publish after an unclear result.
+   No Fabric semantic-model or source-data refresh is requested after success.
+
+3. Back in the repository's PowerShell terminal, run:
+
+   explorer.exe .\handoff\report-native-only-r17.5\candidate
+
+   Right-click ForecastMaster Native Only R17.5 TEST.zip > Extract All.
+   Extract the WHOLE ZIP to a NEW folder, then open:
+
+   ForecastMaster Native Only R17.5 TEST.pbip
+
+   Keep its .Report folder alongside it. The connected model still says R17.1
+   TEST; that is correct. Do not Publish or Replace the production report.
+
+4. Review these changes:
+
+   - Review months is a MONTH dropdown, with Jan 2025 and Dec 2027 selected as
+     default bounds. Select the FIRST and LAST month you want. Every intervening
+     month is included; it is a review window, not a sparse month selection.
+     There is no daily calendar. Clear means the full available month domain;
+     one month selected means a one-month window.
+   - Section -> Measure is one native hierarchy. Expand IMS / Market to choose
+     Market, Abbott IMS, Share %, PI or IMS minus PI. Expand Ex-factory to choose
+     Ex-factory ADS. This prevents the old two-slicer incompatible selection.
+   - Headline trend controls the headline AND chart. Table comparisons remains
+     independent and supports 6M / 12M / 24M multi-selection.
+   - Actuals/forecast use the same scope color. Solid/dashed/dotted styles are
+     configured through native report formatting; no custom visual is included.
+     The chart uses straight monthly segments, no point markers or axis sliders.
+     Test the requested styles in Desktop; schema checks do not prove rendering.
+   - Executive summary columns are configured active/expanded at period,
+     comparison and absolute/% detail, with native driver/sector row drill.
+     Plan, 6M/12M/24M absolute variance and variance % calculations are retained.
+     Actual-only period variances remain blank. Try different periods and table
+     comparison windows. If Desktop still collapses columns, send a screenshot
+     before changing/saving the layout; the receiving default is still a gate.
+   - Page height is reduced from 1860 to 1286. The native matrix uses a fixed
+     300px viewport with scrolling and Focus mode. It does not auto-grow and
+     move lower visuals as rows expand. Saved source details are retained.
+
+5. Send the code-cell result and screenshots of the top, graph and Executive
+   summary with a driver expanded. Test page zoom, monthly tooltips and native
+   Export data. Report any error via See details. Company numerical/performance
+   acceptance and full R16.6 parity remain unverified; this is still TEST.
+
+WITHOUT company access, open the SAMPLE ZIP instead. It contains fabricated
+local calculated tables and the same two chart fixes. Do not run the company
+setup cell for SAMPLE. Its first local opening may need calculated-table refresh.
+Keep .Report, .SemanticModel and .pbip together. No custom visual is included.

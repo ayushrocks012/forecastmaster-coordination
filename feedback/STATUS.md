@@ -1,5 +1,30 @@
 # Company setup status
 
+## 23 October 2026 — R17.4 opens; R17.5 compact native revision prepared
+
+The operator supplied five R17.4 screenshots. Headline/chart/matrix and month-name
+cutoffs load, but the daily calendar, broad whitespace, selected-child Section
+filter, uniform chart strokes/markers and collapsed variance columns remain
+unsatisfactory. No actual company screenshots or values are committed here.
+The safe observation receipt is logs/2026-10-23-native-r174-desktop-review.json.
+
+Current candidate: [R17.5 receiving steps](../handoff/report-native-only-r17.5/OPEN%20FIRST%20-%20R17.5.txt).
+The report is 31% shorter, uses a month-window dropdown and one Section->Measure
+hierarchy, and configures expanded plan/absolute/% columns plus native style text
+bindings. A fixed matrix viewport/scroll/Focus mode is retained; dynamic height
+and page reflow are not implemented. A guarded existing-TEST update changes two
+chart expressions for independent graph-window admission, shared view membership
+and the last-actual connecting point. All amount/period/ratio/fit/source formulas
+and format definitions stay unchanged. Full readback uses the representation
+comparison already qualified by the operator's R17.4 result, with all unexplained
+differences still refusing success. No company operation ran from this host.
+
+SAMPLE is fabricated and includes those two changes. Local tests and Microsoft
+schemas are separate from pending Desktop formatting/interaction/expansion,
+Direct Lake execution, export, numerical reconciliation and performance. The
+Windows bridge again failed before connecting. Full R16.6 parity and production
+replacement remain unqualified; production and older packages are unchanged.
+
 ## 23 October 2026 — R17.4 readback verified; proceed to Desktop review
 
 The operator supplied TEST_R174_READBACK_VERIFIED from the read-only R01 check.

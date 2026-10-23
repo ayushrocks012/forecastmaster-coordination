@@ -1,17 +1,18 @@
-# Current report step - native-only R17.4 drill preview, 23 October 2026
+# Current report step - native-only R17.5 compact preview, 23 October 2026
 
-Current receiving step: [Open R17.4 TEST after verified readback](handoff/report-native-only-r17.4/readback-check-r01/OPEN%20AFTER%20VERIFIED%20READBACK.txt).
-The operator's read-only result is TEST_R174_READBACK_VERIFIED: all 21
-differences are identical DAX text represented as strings versus line arrays,
-with zero unexplained differences. The known repaired fields, complete remaining
-definition and cloud mapping match; both metadata snapshots were stable.
-The R17.4 model changes are present. No further setup/updater/check cell or
-semantic-model/source refresh is needed for this step. Pull Coordination,
-extract the existing R17.4 TEST ZIP to a new folder, and open its PBIP.
+Current receiving step: [R17.5 compact native review](handoff/report-native-only-r17.5/OPEN%20FIRST%20-%20R17.5.txt).
+R17.4 readback is verified and the report opened, but new screenshots identify
+layout, Section selection, daily calendar, chart and collapsed-variance issues.
+Pull Coordination; run ONE NEW R17.5 cell in ForecastMaster_GM_Setup on the
+company laptop, require TEST_R175_UPDATED, then extract/open the NEW R17.5 TEST
+ZIP. This updates exactly two chart expressions on the same existing TEST;
+full backup/cloud/readback guards include the receiving-qualified identical-DAX
+string/line-array comparison. No semantic-model/source refresh is requested.
 
-The existing R17.4 updater/report ZIPs and earlier packages are unchanged.
+The existing R17.4 updater/report ZIPs/probe and earlier packages are unchanged.
 The SAMPLE still needs no company access. All new preview visuals remain
-Power BI native. Desktop drill/rendering, export, numerical reconciliation,
+Power BI native. Native matrix height remains a fixed viewport, with scroll and
+Focus mode. Desktop styles/filter/drill/rendering, export, numerical reconciliation,
 performance and full R16.6 parity remain separate unconfirmed gates. Keep
 published R16.6 in production. Original repository/setup instructions follow.
 

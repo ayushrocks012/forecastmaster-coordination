@@ -1,0 +1,79 @@
+{
+  "Revision": "R17.5 native-only compact TEST candidate",
+  "UTC": "2026-10-23T15:28:20.254743+00:00",
+  "Packages": {
+    "TEST": {
+      "File": "ForecastMaster Native Only R17.5 TEST.zip",
+      "Bytes": 42425,
+      "SHA256": "10e16888e578d6f5420b20b12c7842da1e7a0fe06da5ff0a3524a6885fe45fa3",
+      "ExactValidatedFolderBytes": true
+    },
+    "SAMPLE": {
+      "File": "ForecastMaster Native Only R17.5 SAMPLE.zip",
+      "Bytes": 447203,
+      "SHA256": "dc546ff4865a049a4c6128725e42bdcf54d6f719744505e5a90ee8172d9cc668",
+      "ExactValidatedFolderBytes": true
+    }
+  },
+  "LocalRegression": {
+    "TestMethods": 15,
+    "Failures": 0,
+    "PrewriteFailureSubcases": 10,
+    "Evidence": "Synthetic/mocked APIs and report-definition contracts, not native DAX execution"
+  },
+  "Schemas": {
+    "TEST": {
+      "Checked": 28,
+      "Failures": [],
+      "UnavailableOriginalSchemas": [],
+      "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+    },
+    "SAMPLE": {
+      "Checked": 28,
+      "Failures": [],
+      "UnavailableOriginalSchemas": [],
+      "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+    }
+  },
+  "ModelScope": {
+    "ExistingTestOnly": true,
+    "ChartExpressionsChanged": [
+      "N Chart Monthly",
+      "N Line Visible"
+    ],
+    "AllOther47NativeExpressionsPreserved": true,
+    "AllDynamicFormatsPreserved": true,
+    "MonthlyPeriodRatioFitSourceArithmeticPreserved": true,
+    "OtherDefinitionObjectsPreservedByRestoreComparison": true,
+    "NewModelOrHelperOrRelationship": false,
+    "NoPurgeUpdate": true,
+    "PrivateBackup": "Full UTF-8 SHA256 and byte-length check",
+    "Readback": "Full definition; only identical DAX string/line arrays equivalent",
+    "ExplicitRefreshOrPublishRequested": false
+  },
+  "Report": {
+    "CustomVisualCount": 0,
+    "NativeVisualCount": 22,
+    "PageHeight": 1286,
+    "PreviousHeight": 1860,
+    "CompanyTESTBindingPreserved": true,
+    "ReportFormattingTextMeasures": 3,
+    "MetadataSelectionGuardAndCaption": 2,
+    "MatrixDynamicHeight": "NOT IMPLEMENTED; native fixed viewport, scroll and Focus mode",
+    "MonthSelector": "Inclusive first/last MONTH window; typed dates, MMM yyyy, no daily picker",
+    "SectionMeasure": "One native hierarchy; no numeric fallback for unselected/multiple leaf measures"
+  },
+  "ReceivingGates": {
+    "CompanyR175CellRun": "PENDING",
+    "DesktopLayoutAndLineStyleExpressionEvaluation": "PENDING",
+    "NativeHierarchySelectionAndColumnExpansion": "PENDING",
+    "NativeZoomHoverExport": "PENDING",
+    "NativeDaxExecutionOfNewChartExpressions": "NOT EXECUTED HERE",
+    "CompanyReconciliationAndPerformance": "UNVERIFIED",
+    "FullR166Parity": "NOT COMPLETE"
+  },
+  "WindowsUI": "MCP -32602 before evaluation: sandboxCwd is not a local file URI. No UI action occurred.",
+  "GitNexus": "Query: Coordination not indexed; edit-impact UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION. Direct tracing/preservation/focused tests used; graph impact UNKNOWN. Staged detect_changes also UNAVAILABLE with the same authority-drift blocker; no zero-impact conclusion.",
+  "CompanyOperationExecutedFromThisHost": false,
+  "ProductionChanged": false
+}

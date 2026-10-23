@@ -357,3 +357,24 @@ rendering/filter/drill/export plus numerical/performance behavior. These gates
 remain unverified; metadata preservation does not establish full R16.6 parity.
 Keep every frozen installer/probe/ZIP and production unchanged. Record only the
 safe operator diagnostic result, never raw company model or connection values.
+
+Later 23 October R17.4 screenshots show loading numbers/dates, but wasted space,
+daily date controls, Section reduced by its selected child and collapsed
+comparison columns. Current candidate is handoff/report-native-only-r17.5/.
+It remains strictly native, with no custom visual or native-capability bypass.
+Preserve all earlier bytes. The report compacts height to 1286, uses a labelled
+monthly first/last window selector and a single Section -> Measure hierarchy,
+retains 6M/12M/24M table multi-selection, and configures full variance expansion.
+Native matrix height/reflow is not dynamic; retain scroll and Focus mode.
+
+R17.5 requires exactly two existing TEST chart expression changes: chart-window
+admission follows the graph/headline window independently of table comparisons,
+Demand forecast joins at its last actual value, and shared view labels admit
+the selected Drivers/Sectors/Both context. No monthly/period/ratio/fit/source
+arithmetic or format is rewritten. Full private backup, known-body checks,
+concurrency/mapping and complete readback remain; only identical DAX string/line
+representations are equivalent. No new model/helper, source refresh or publish.
+Three report-level Text measures supply native formatting only. Their line-style
+rendering, native slicer hierarchy/column expansion, company runtime/export and
+numerical/performance acceptance are unverified until receiving evidence arrives.
+The Windows UI tool failed before connecting; schema/mocks are not a UI pass.

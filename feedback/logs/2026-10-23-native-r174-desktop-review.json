@@ -1,0 +1,21 @@
+{
+  "Date": "2026-10-23",
+  "Evidence": "Operator supplied five R17.4 Desktop screenshots; no live company query from this host",
+  "Observed": [
+    "Native headline/chart/matrix load with scaled numbers and month-name cutoffs",
+    "Daily review calendar and excessive vertical spacing",
+    "Section list constrained by separate selected child measure",
+    "Uniform chart strokes/point markers and repeated long legend labels",
+    "Executive columns collapsed to period totals; variance detail absent"
+  ],
+  "SourceInspection": [
+    "Chart windows follow table comparison control instead of independent graph/headline choice",
+    "Shared Drivers/Sectors/Both view labels fail unique-view assumptions",
+    "Forecast starts after cutoff with no last-actual joining point"
+  ],
+  "NextCandidate": "R17.5 native-only compact review",
+  "CurrentTestMetadataReadback": "R17.4 VERIFIED from prior operator result",
+  "NativeNumericalPerformanceExportAcceptance": "UNVERIFIED",
+  "RawCompanyScreenshotsOrAmountsIncluded": false,
+  "ProductionReplacementApproved": false
+}
