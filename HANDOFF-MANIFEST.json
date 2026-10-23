@@ -1042,8 +1042,8 @@
       "SHA256": "f7939c5d7c73f70518394ef315fb54736853f7af722b1a41b1bb424c77ef46d6"
     },
     "feedback/STATUS.md": {
-      "Bytes": 138369,
-      "SHA256": "9011c7f41b523c6452361a22af6d244ef98f0e4bf61a68a9fdf72ce53db72660"
+      "Bytes": 140181,
+      "SHA256": "bc5ac1f12f05ddd43eed0ef23b7f41ca14cefbc29c350d3c6ce4dd10565b9131"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 182975,
-      "SHA256": "e791aa8aaf59c797a318f2d7110f57850913cf6e1805bec4a8ac7d1ad92e79d4"
+      "Bytes": 183609,
+      "SHA256": "2ed3d57eb1b0dd723a1f9f849f8c1354aec8149664b1747dd3954e887c21cf0c"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4582,8 +4582,8 @@
       "SHA256": "ab2ec982d70479ab74c8690f2c84232e978eb44d39face71de6352af98331d7e"
     },
     "handoff/report-native-only-r17.8/test-release-r01/README.md": {
-      "Bytes": 5171,
-      "SHA256": "35bdf052955ccd6119bdc7df059a58bafd1ee24d0164132d24efc312289a6cf9"
+      "Bytes": 6087,
+      "SHA256": "2f1f03bc1d92220d4b9fe668ab9433d58329071f6799f0fcb017f86334fe390a"
     },
     "handoff/report-native-only-r17.8/test-release-r01/model.py": {
       "Bytes": 7461,
@@ -4594,12 +4594,12 @@
       "SHA256": "94e6167b95ffc6691c5d3f552a7bfbab01d8e0416d68a209d5d24a14cdf21c6b"
     },
     "handoff/report-native-only-r17.8/test-release-r01/verify_receiving.py": {
-      "Bytes": 4872,
-      "SHA256": "eb1d710dcdf06f21cf5f4e8d1c45abbf14527de5ee0a50b803b65340c11a6b72"
+      "Bytes": 5003,
+      "SHA256": "60a00eece5caa3bc7d1ae2e4f9c8558cc824c58e9298dfa83d2745d7aa62106e"
     },
     "handoff/report-native-only-r17.8/test-release-r01/VALIDATION.json": {
-      "Bytes": 4999,
-      "SHA256": "4d03dae974d6365b05cca32d6b2523f5a67c10a2c7a7aef57b25425d7b299fac"
+      "Bytes": 5219,
+      "SHA256": "abc6e8b6f5cdcd31508e42d543a42dfbb3ba0529ff9a73cc36981c282230c072"
     },
     "handoff/report-native-only-r17.8/test-release-r01/receiving.py": {
       "Bytes": 9611,
@@ -4610,8 +4610,8 @@
       "SHA256": "146b623420c9472b847179e984897a3f6dc21ce67bdec0279d0483574889d2b3"
     },
     "handoff/report-native-only-r17.8/test-release-r01/VERIFY INSTALLED TEST R01.py": {
-      "Bytes": 234962,
-      "SHA256": "40959311166a8144a5cffe28bdd82086f7cc9180ef675fcda0ab72094a643068"
+      "Bytes": 235093,
+      "SHA256": "a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635"
     },
     "handoff/report-native-only-r17.8/test-release-r01/prepare_project.py": {
       "Bytes": 10333,
@@ -4630,8 +4630,8 @@
       "SHA256": "5d4aedbf673873d83d6543e9bdf37c505d784b54ac332602e34c3cb997b5b7ac"
     },
     "handoff/report-native-only-r17.8/test-release-r01/test_release.py": {
-      "Bytes": 18124,
-      "SHA256": "0e504ab1f57573ae92d79401e055eebe50c5d8a9bc6705e2cac25a95303cc519"
+      "Bytes": 18831,
+      "SHA256": "8e46866f64bbccb564655042cefc07fcddb2f7905cf7ead273821cfc6c37b65c"
     },
     "handoff/report-native-only-r17.8/test-release-r01/native_cases.py": {
       "Bytes": 13915,
@@ -4646,8 +4646,16 @@
       "SHA256": "de25a727bbffe768c27c8f15f8a0e8d69afd239e2c02799db646cdee1f660dec"
     },
     "handoff/report-native-only-r17.8/test-release-r01/OPEN FIRST.txt": {
-      "Bytes": 3670,
-      "SHA256": "9f5c617fe36b2af9e75ec67b0d6c5dcfac53dc814b59b140e3fbc152c4116a79"
+      "Bytes": 4039,
+      "SHA256": "be31ccb71cfd7c2066301057be1e4553c68fa0e8a02a062f4b809ee567ab1982"
+    },
+    "handoff/report-native-only-r17.8/test-release-r01/VALIDATION-VERIFIER-R02.json": {
+      "Bytes": 2030,
+      "SHA256": "ec424786fcd812c534ff9f806814abb921cac6ca4b18d4e38104e509d3217c1c"
+    },
+    "handoff/report-native-only-r17.8/test-release-r01/metadata_count_cases.py": {
+      "Bytes": 4310,
+      "SHA256": "a04e281e9a908a7dbab64630a7be174d62962b08f427a0cc22197014315ecb29"
     }
   }
 }

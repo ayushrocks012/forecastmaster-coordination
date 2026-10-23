@@ -1,0 +1,44 @@
+{
+  "Stage": "R178_READ_ONLY_VERIFIER_R02_QUALIFIED",
+  "BaselineCommit": "2cf14e0",
+  "Change": "COALESCE empty MissingImportedAt and HashSuffixes metadata counts to zero; never coerce business-amount blanks",
+  "VerifierRevision": "R02",
+  "FileNameUnchanged": "VERIFY INSTALLED TEST R01.py",
+  "NativeMetadataCounterRegression": {
+    "Stage": "R178_VERIFIER_R02_METADATA_COUNTS_VERIFIED",
+    "NativeQueries": 4,
+    "Failures": [],
+    "BeforeHealthyBlankCountersReproduced": true,
+    "AfterHealthyCountersAreNumericZero": true,
+    "PositiveErrorCountsPreserved": true,
+    "SyntheticOnly": true,
+    "CompanyRun": false,
+    "InputSHA256": {
+      "baseline.json": "1aec69b651c2d6d7355fd8317a12f76533b8dff71861e0f6d062f7938f9b157d",
+      "candidate.json": "578ab529ab0b302e71b99d34b6c0b6dfe4b699f8b0f0bff2bcced2eeb99c14f9",
+      "queries.json": "d4e05cd21bd0260aabc40d5f205bb459a8debcdd2317f41b57495ea3669603fb",
+      "results.json": "c9233cd18e1e2c3756e6e1d1967513d29993d3bd3158e8b3ffda0c5a55c33c25"
+    }
+  },
+  "ReleaseTests": {
+    "Tests": 14,
+    "Failures": 0,
+    "AddedCoverage": [
+      "Zero missing-import metadata count",
+      "Zero hash-suffix metadata count",
+      "Positive hash-suffix count still refused"
+    ]
+  },
+  "Preservation": {
+    "InstallerAndBothZIPsByteIdentical": true,
+    "Original207QueryInputsAndNumericDefinitions": "UNCHANGED; prior evidence retained, not rerun",
+    "ProductionAndCompanyState": "UNCHANGED; no company calls"
+  },
+  "GraphGate": "UNKNOWN: repository not registered; direct source references and focused runtime/regression/preservation checks used",
+  "Receiving": "Pull current files. If installer and TEST refresh already succeeded, run corrected read-only verifier only. No additional update or refresh.",
+  "ChangedArtifacts": {
+    "BeforeVerifierSHA256": "40959311166a8144a5cffe28bdd82086f7cc9180ef675fcda0ab72094a643068",
+    "AfterVerifierSHA256": "a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635",
+    "AfterVerifierBytes": 235093
+  }
+}

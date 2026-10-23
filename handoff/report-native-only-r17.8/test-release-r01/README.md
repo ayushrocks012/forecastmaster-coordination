@@ -5,6 +5,15 @@ selection adapter against the reviewed UK-ANI-Demand R01 dictionary. Start with
 [OPEN FIRST](OPEN%20FIRST.txt). Company installation, rendering, business acceptance
 and speed remain receiving gates; production R16.6 is preserved.
 
+The read-only verifier now reports **VerifierRevision R02**, retaining the filename
+`VERIFY INSTALLED TEST R01.py`. Its two empty metadata counters explicitly return
+numeric zero instead of DAX BLANK; business-amount blanks are unaffected. Four
+native synthetic queries reproduce the original failure and verify the correction,
+while positive invalid-label counts still stop verification. The installer and
+both PBIP ZIPs are byte-identical. An already successful installation/refresh
+needs only the corrected read-only verifier, with no new update or refresh.
+See [correction evidence](VALIDATION-VERIFIER-R02.json).
+
 The report is 1440 × 1330, with 26 built-in visuals. Section and Measure remain
 separate. Start/End dropdowns use the existing monthly dictionary. Review trend
 (single), View and Table trends (multiple) have short visible labels beside
@@ -61,6 +70,10 @@ Run local checks from this folder with PYTHONDONTWRITEBYTECODE=1:
   defaultPowerBIDataSourceVersion property from these synthetic runtime fixtures.
 - `python3 native_cases.py <FIXTURE-FOLDER> --verify`: inspect exact query
   population, independent arithmetic and context expectations.
+- `python3 metadata_count_cases.py build <NEW-WINDOWS-LOCAL-FOLDER>` builds two
+  tiny fabricated metadata models and four before/after queries. Run the same
+  isolated engine runner against that folder, then use
+  `python3 metadata_count_cases.py verify <FOLDER>` to check empty/positive counts.
 - `../check_schema.py` checks Microsoft schemas for each ZIP.
 
 The Power BI plugin's offline dependency review was used on public formulas;

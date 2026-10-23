@@ -1,5 +1,32 @@
 # Company setup status
 
+## 23 October 2026 — R17.8 read-only verifier R02 counter correction
+
+A separate read-only review reproduced a verifier failure: DAX COUNTROWS over
+an empty metadata subset returns BLANK, whereas the Python result parser used
+int(value). Healthy zero hash-suffix or missing-import counts could therefore
+raise TypeError/ValueError. The original mock supplied integer zero and missed
+that engine behavior. The user authorized this focused correction after the main
+release task finished; no other repository writer or bound run was modified.
+
+The two metadata counters now explicitly COALESCE their empty count to zero.
+The receiving filename stays VERIFY INSTALLED TEST R01.py; its output identifies
+VerifierRevision R02. Business-amount blanks and all other verifier guards remain
+unchanged. Four task-owned native synthetic queries reproduce the old blank
+results, verify healthy numeric zero, and preserve positive invalid counts. All
+14 release tests pass, including healthy zero/missing-import scenarios and
+continued rejection of a positive hash-suffix count. The installer, both report
+ZIPs and the prior 207-query/1,868-assertion native inputs remain byte-identical;
+that prior numerical evidence was retained, not claimed as a new run.
+
+[Correction receipt](../handoff/report-native-only-r17.8/test-release-r01/VALIDATION-VERIFIER-R02.json)
+records input fingerprints and preservation. No company API, model/source write,
+refresh or publication ran here. If install and its one TEST full refresh have
+already succeeded, use only the corrected read-only verifier; do not repeat
+installation or refresh for this fix. Company UI/export, independent business
+parity and performance remain separate pending gates. GitNexus is still
+unavailable for this unregistered repo; graph authority remains UNKNOWN.
+
 ## 23 October 2026 — compact native R17.8 TEST R01 locally qualified; company pending
 
 The user explicitly authorized the compact TEST report and matching adapter

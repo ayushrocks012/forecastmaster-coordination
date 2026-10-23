@@ -24,6 +24,15 @@ refresh. Then run the read-only verifier and open the matching extracted TEST PB
 Any STOPPED/uncertain outcome requires receipt review, not resubmission. The old
 recovery remains closed: this one processing step belongs to the new installation.
 
+**Verifier correction R02:** the existing `VERIFY INSTALLED TEST R01.py` now
+reports `VerifierRevision: R02`. Empty MissingImportedAt/HashSuffixes metadata
+counts use DAX COALESCE to return zero before Python integer conversion. Four
+new native synthetic queries reproduce the old BLANK failure and verify zero
+counts and retained positive errors; all 14 release tests pass. Business-amount
+blank semantics, the installer and both PBIP ZIPs are unchanged. Already completed
+installation/processing needs only the corrected read-only verifier, not another
+update or refresh. [Evidence](test-release-r01/VALIDATION-VERIFIER-R02.json).
+
 Local qualification: task-owned loopback Tabular engine, **207 queries / 1,868
 assertions**, independent fabricated numerical oracle and actual source/visual
 contexts; 14 receiving/metadata/layout tests; 67 Microsoft schema documents.

@@ -10,7 +10,7 @@ def read_private(fs,path):
 
 
 def verify_installed(client,pbi,fs,evaluate,spark=None):
-    result={'Stage':'TEST_R178_VERIFICATION_STOPPED','Revision':'R01','TestModelID':TEST,
+    result={'Stage':'TEST_R178_VERIFICATION_STOPPED','Revision':'R01','VerifierRevision':'R02','TestModelID':TEST,
       'ModelWriteRequested':False,'OriginalModelWriteRequested':False,'LakehouseTableWriteRequested':False,
       'RefreshRequested':False,'CompanyAmountValuesPrintedOrStored':False,'ReportPublished':False,
       'NextStep':'Send this JSON. Keep the backup. Do not rerun the installer or refresh again.'}
@@ -41,10 +41,11 @@ def verify_installed(client,pbi,fs,evaluate,spark=None):
         before_db=json.loads(base64.b64decode(next(p for p in original['parts'] if p['path']=='model.bim')['payload']))
         old={t['name']:t for t in before_db['model']['tables']}['fm_native_measures']['measures']
         result['NumericalComparisonToPrivateBaseline']=preflight(evaluate,{m['name']:expression_text(m['expression']) for m in old})
+        # Empty metadata counts mean zero; business-amount blanks stay untouched.
         query='''EVALUATE ROW("Files",COUNTROWS('fm_native_files'),
  "Choices",DISTINCTCOUNT('fm_native_files'[FileChoiceLabel]),
- "MissingImportedAt",COUNTROWS(FILTER('fm_native_files',ISBLANK('fm_native_files'[ImportedAtUTC]))),
- "HashSuffixes",COUNTROWS(FILTER('fm_native_files',RIGHT('fm_native_files'[FileChoiceLabel],LEN('fm_native_files'[SourceRevisionID]))='fm_native_files'[SourceRevisionID])))'''
+ "MissingImportedAt",COALESCE(COUNTROWS(FILTER('fm_native_files',ISBLANK('fm_native_files'[ImportedAtUTC]))),0),
+ "HashSuffixes",COALESCE(COUNTROWS(FILTER('fm_native_files',RIGHT('fm_native_files'[FileChoiceLabel],LEN('fm_native_files'[SourceRevisionID]))='fm_native_files'[SourceRevisionID])),0))'''
         rows=evaluate(dataset=TEST,dax_string=query,workspace=WORKSPACE,verbose=0,use_readwrite_connection=False).to_dict(orient='records')
         require(len(rows)==1,'FILE_LABEL_CHECK_UNAVAILABLE')
         counts={k.rsplit('[',1)[-1].rstrip(']'):int(v) for k,v in rows[0].items()}

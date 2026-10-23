@@ -96,8 +96,8 @@
       "SHA256": "146b623420c9472b847179e984897a3f6dc21ce67bdec0279d0483574889d2b3"
     },
     "VERIFY INSTALLED TEST R01.py": {
-      "Bytes": 234962,
-      "SHA256": "40959311166a8144a5cffe28bdd82086f7cc9180ef675fcda0ab72094a643068"
+      "Bytes": 235093,
+      "SHA256": "a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635"
     }
   },
   "AttemptsPreserved": [
@@ -128,6 +128,12 @@
     "PublicCatalog": "PASS",
     "ReleaseTests": 14,
     "Failures": 0,
-    "CodeAndCandidateArtifactBytes": "Identical to this release; later edits only record validation metadata"
+    "CodeAndCandidateArtifactBytes": "Historical original R01 archive qualification; read-only verifier superseded by R02. Installer and both ZIPs remain identical."
+  },
+  "VerifierCorrectionR02": {
+    "Receipt": "VALIDATION-VERIFIER-R02.json",
+    "NativeCounterQueries": 4,
+    "Failures": 0,
+    "ModelOrReportChange": false
   }
 }

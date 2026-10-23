@@ -196,9 +196,11 @@ class Tests(unittest.TestCase):
         for name in ('headline','executive_summary','native_chart'):
             for value in self.vs[name].get('filterConfig',{}).get('filters',[]):self.assertNotIn('Measure',value.get('field',{}))
     def test_whole_cell_rebuild_python310_and_post_retries_disabled(self):
-        before=(HERE/'INSTALL COMPACT TEST R01.py').read_bytes();builder.build()
-        self.assertEqual(before,(HERE/'INSTALL COMPACT TEST R01.py').read_bytes())
-        ast.parse(before.decode(),feature_version=(3,10));self.assertIn('retry_config={"total":0}',before.decode())
+        before={name:(HERE/name).read_bytes() for name in ('INSTALL COMPACT TEST R01.py','VERIFY INSTALLED TEST R01.py')}
+        builder.build()
+        for name,raw in before.items():
+            self.assertEqual(raw,(HERE/name).read_bytes())
+            ast.parse(raw.decode(),feature_version=(3,10));self.assertIn('retry_config={"total":0}',raw.decode())
     def test_post_refresh_check_is_read_only_and_refuses_old_refresh(self):
         with patch.object(c,'semantic_dates',side_effect=[{'Axis':[('','2026-01-01'),('','2026-02-01')]},{'Axis':[('','2026-02-01'),('','2026-01-01')]}]):
             self.assertEqual(c.date_signature(None),c.date_signature(None))
@@ -214,15 +216,25 @@ class Tests(unittest.TestCase):
             started='2026-10-23T22:01:00Z'
             def get(self,path):return Response({'value':[{'status':'Completed','startTime':self.started}]})
         pbi=PBI()
-        def evaluate(**kwargs):return Frame([{'Files':17,'Choices':17,'MissingImportedAt':6,'HashSuffixes':0}])
+        metadata={'Files':17,'Choices':17,'MissingImportedAt':6,'HashSuffixes':0}
+        def evaluate(**kwargs):return Frame([metadata])
         with patch.object(verify,'read_private',side_effect=lambda fs,path:deepcopy(files[path])),patch.object(verify,'identity'),\
           patch.object(verify,'read_definition',return_value=({},fixed,{})),patch.object(verify,'connections',return_value=[{'id':'keep'}]),\
           patch.object(verify,'physical_dates',return_value={kind:[('','2026-01-01')] for kind in c.KINDS}),\
           patch.object(verify,'semantic_dates',return_value={kind:[('','2026-01-01')] for kind in c.KINDS}),\
           patch.object(verify,'validate_dates',return_value={'Groups':9,'InvalidDates':0}),patch.object(verify,'preflight',return_value={'PairedScalarComparisons':12}),redirect_stdout(io.StringIO()):
+            for missing_imported in (6,0):
+                metadata['MissingImportedAt']=missing_imported
+                result=verify.verify_installed(None,pbi,None,evaluate,object())
+                self.assertEqual('TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED',result['Stage'],result)
+                self.assertEqual('R02',result['VerifierRevision'])
+                self.assertEqual(missing_imported,result['FileLabelCounts']['MissingImportedAt'])
+                self.assertEqual(0,result['FileLabelCounts']['HashSuffixes'])
+                self.assertFalse(result['ModelWriteRequested']);self.assertFalse(result['RefreshRequested'])
+            metadata['HashSuffixes']=1
             result=verify.verify_installed(None,pbi,None,evaluate,object())
-            self.assertEqual('TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED',result['Stage'],result)
-            self.assertFalse(result['ModelWriteRequested']);self.assertFalse(result['RefreshRequested'])
+            self.assertEqual('FILE_CHOICE_LABELS_INVALID',result['Failure']['Reason'])
+            metadata['HashSuffixes']=0
             pbi.started='2026-10-23T21:00:00Z'
             result=verify.verify_installed(None,pbi,None,evaluate,object())
             self.assertEqual('NEW_ADAPTER_REFRESH_NOT_CONFIRMED',result['Failure']['Reason'])

@@ -1,5 +1,11 @@
 R17.8 COMPACT NATIVE TEST — R01
 
+Verifier correction R02 (23 October): use the current VERIFY INSTALLED TEST R01.py.
+Its filename stays the same; final JSON includes VerifierRevision: R02. Only the
+read-only metadata counters changed. If installation and its one TEST refresh
+already completed successfully, run only the corrected verifier; do not repeat
+the installer or refresh for this correction.
+
 Production R16.6 remains unchanged. Use only the existing TEST semantic model:
 ForecastMaster Native OneLake R17.1 - TEST
 31d00232-ac03-48fe-af39-f2e4bae82443 in UK-ANI-Demand.
