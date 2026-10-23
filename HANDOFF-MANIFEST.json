@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 72370,
-      "SHA256": "8c6c2547a458841ba80ca28afc95f08ea20da390f86af170dfa0eda1d8df65a6"
+      "Bytes": 75101,
+      "SHA256": "b11d4994b0b2b10a0af8d1cfc7d98bcdaf687cd6b2c7f840f82328cd24ac9a23"
     },
     "README.md": {
-      "Bytes": 5949,
-      "SHA256": "efb61bc2494fa7440ac468fcbd7c3b6679d6f284f663cd4318e99f54ea871ac1"
+      "Bytes": 5992,
+      "SHA256": "7b2117f2e21b0be2e530ad3ef707dcf81515a8dc23ddd1ee23684020e9f1ed1a"
     },
     "feedback/STATUS.md": {
-      "Bytes": 122885,
-      "SHA256": "f9fda7862c6051e9368f35be49337333c2ecaecb8d38a2a80e16514f7009a96e"
+      "Bytes": 126218,
+      "SHA256": "0e4519262fd599122377e88f660f9ebd69723547ae2e96919213024817677d5b"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 7049,
-      "SHA256": "72b34d7fe43a38831cd8ac06d3011cce82b9633ec28e736dadd693b9bf80eff5"
+      "Bytes": 6669,
+      "SHA256": "e75bf605ed6956da4a30af1969a0dc343573aecd10e97bfde73f4663835c7eff"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4516,6 +4516,38 @@
     "handoff/report-native-only-r17.8/cache-reset-r01/test_reset.py": {
       "Bytes": 12089,
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
+    },
+    "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
+      "Bytes": 8648,
+      "SHA256": "82956fdaf0dbbc6654674b041f18d4cb607cb2c9748cea910acbd2015ebc7fad"
+    },
+    "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
+      "Bytes": 1440,
+      "SHA256": "b97c7588af7744d3dad73e1ee19c2a99865051d07e8d03328d806695153d4bdf"
+    },
+    "handoff/report-native-only-r17.8/cache-recovery-r02/README.md": {
+      "Bytes": 7824,
+      "SHA256": "ea6136ab7175e53c255a3c5eacab1533cd95328efc4f9b19ed822a1ccccbd12d"
+    },
+    "handoff/report-native-only-r17.8/cache-recovery-r02/RECOVER AND DIAGNOSE TEST R02.py": {
+      "Bytes": 53182,
+      "SHA256": "eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143"
+    },
+    "handoff/report-native-only-r17.8/cache-recovery-r02/VALIDATION.json": {
+      "Bytes": 2671,
+      "SHA256": "79a6dcf8cad7183da0bd5d91a87efcecea83d832717a329370ade81d71812c8b"
+    },
+    "handoff/report-native-only-r17.8/cache-recovery-r02/build.py": {
+      "Bytes": 2819,
+      "SHA256": "e7265f3ba7f2dd7c8aad8b701e80a410f8fc55e06bb35a73835db53617bc4e4e"
+    },
+    "handoff/report-native-only-r17.8/cache-recovery-r02/recover.py": {
+      "Bytes": 34977,
+      "SHA256": "bfb4c1c0fd71e057c7f576b87232ba49ca5b14b450db643e87ee91986ca5bc97"
+    },
+    "handoff/report-native-only-r17.8/cache-recovery-r02/test_recovery.py": {
+      "Bytes": 28079,
+      "SHA256": "19dcef934fa07ad867ebcf9995dc22790145ec15d91ae4378694471bc6f4c784"
     }
   }
 }

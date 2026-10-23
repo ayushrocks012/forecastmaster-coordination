@@ -1,0 +1,31 @@
+{
+  "Date": "2026-10-23",
+  "Evidence": "Operator-pasted final JSON; no company execution on this host",
+  "ReportedStage": "TEST_R178_DATE_CACHE_RESET_STOPPED",
+  "Revision": "R01",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "BackupVerificationReported": "FULL_FILE_UTF8_SHA256_AND_LENGTH",
+  "PinnedPrivateBackupSuffix": "20261023T204254-cf53fe3f-50cf-4285-b947-49022c814164",
+  "ExactDateComparisonBefore": {
+    "AxisInvalidOf84": 83,
+    "OriginalAndNativeIMSAndEFCutoffsInvalidOf3Each": 3,
+    "FactReviewStartEndExactDateSetsMatched": true
+  },
+  "Processing": {
+    "ClearValuesRequested": true,
+    "SubmitHTTPStatus": 202,
+    "ClearValuesCompletionConfirmed": false,
+    "FullRequested": false,
+    "FullCompleted": false,
+    "FailureReason": "REFRESH_LOCATION_UNEXPECTED",
+    "GetDefinitionStateWasMisleadinglyRetainedInProcessing": true
+  },
+  "Interpretation": "Clear was accepted but its result is unconfirmed. Succeeded/PollCount belonged to earlier getDefinition; full was never submitted. Do not repeat clear or remove markers. Reconcile canonical TEST history and recover only the missing full after safe preconditions.",
+  "ModelDefinitionWriteRequested": false,
+  "LakehouseTableWriteRequested": false,
+  "OriginalModelWriteRequested": false,
+  "CompanyAmountQuerySubmitted": false,
+  "CompanyAmountsPrintedOrStoredByScript": false,
+  "ReportPublished": false,
+  "NativeR178AdapterInstalled": false
+}

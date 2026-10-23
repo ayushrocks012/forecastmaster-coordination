@@ -1,0 +1,53 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "COMBINED_TEST_RECOVERY_AND_DIAGNOSTICS_PREPARED_COMPANY_RUN_PENDING",
+  "ReceivingCell": "RECOVER AND DIAGNOSE TEST R02.py",
+  "CellSHA256": "eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143",
+  "CellBytes": 53182,
+  "NewSyntheticTestsPassed": 39,
+  "FrozenResetHelperRegressionTestsPassed": 16,
+  "FrozenBoundaryReaderRegressionTestsPassed": 10,
+  "LocalCoverage": "State/API-shaped mocks, privacy, numerical identity edge cases and Python 3.10 syntax; no company execution",
+  "Python310Grammar": "PASS",
+  "PriorManifestEntries": 1129,
+  "ProtectedPriorFilesVerified": 1125,
+  "FrozenOldPackagesPreserved": true,
+  "NoClearValuesSubmissionInNewCell": true,
+  "OnlyPossibleMutation": "One missing full refresh on pinned existing TEST plus one private no-overwrite resume marker",
+  "ModelDefinitionOrLakehouseTableOrOriginalModelWrite": false,
+  "WholePinnedBackupReadAndWholeDefinitionCloudComparison": true,
+  "RequestHeaderURLsNeverFollowed": true,
+  "SDKSubmissionRetriesDisabled": true,
+  "RequestedServiceRetryCount": 0,
+  "ServiceInternalRetriesPossible": true,
+  "AmbiguousRequestsNeverResubmitted": true,
+  "IndependentSafeFailuresRetained": true,
+  "DateCoverage": "Nine exact metadata kinds, all UK/October source rows and all model month keys",
+  "RepresentativeScalarPopulation": 90,
+  "RepresentativeScalarScope": "one available UK/October ADS driver x 3 metrics x 3 windows x 2 years x 5 measures",
+  "NumericTolerance": {
+    "Relative": 1e-09,
+    "Absolute": 1e-06
+  },
+  "FinancialObservationsPrintedOrStored": false,
+  "CompanyAPIOrDAXOrSparkExecutedHere": false,
+  "NativeR178AdapterInstalled": false,
+  "UnderstandingFile": "handoff/report-native-only-r17.8/UNDERSTANDING.md",
+  "CurrentRuntimeAuthority": "feedback/STATUS.md",
+  "GitNexus": {
+    "Query": "UNAVAILABLE in preceding narrow query; Coordination not registered",
+    "ChangeScope": "UNAVAILABLE; staged diff-impact failed closed, analysis_incomplete=1 and interface_classification_incomplete=1",
+    "FullGraphImpact": "UNKNOWN",
+    "Fallback": "Direct source/route/state/privacy/numerical-edge and frozen-byte tests; full graph impact UNKNOWN"
+  },
+  "Pending": [
+    "Company R02 execution and request identification",
+    "Actual date recovery and internal scalar checks",
+    "Precise root cause and recurrence prevention",
+    "Independent Excel/R16.6 and full company numerical parity",
+    "Company-connected R17.8 adapter/report qualification",
+    "Native Desktop render/interaction/export and report speed"
+  ],
+  "EngineTextVsClientTypedDateBoundaryCheck": true,
+  "NumericProcessingHistoryStabilityRequired": true
+}

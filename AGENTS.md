@@ -659,3 +659,43 @@ model processing may read business data internally. No source-table/formula/
 definition/original-model/connection/schedule/credential/publication change.
 This does not install the R17.8 selection adapter. Preserve all older packages;
 native-only, other-laptop access and pending UI/numerical/performance gates stay.
+
+
+R01 cache reset then returned TEST_R178_DATE_CACHE_RESET_STOPPED. clearValues
+was ACCEPTED (HTTP 202), but response Location validation stopped before polling
+or saving its request ID; full was NEVER submitted. Succeeded/PollCount in its
+Processing object are stale getDefinition context. Do not rerun R01, clear again,
+remove attempt markers or assume no write occurred. Exact routing/backups had
+passed; current TEST processing state must come from canonical refresh history.
+
+The user now explicitly requests one deep receiving batch and a maintained
+understanding file. Current step is report-native-only-r17.8/cache-recovery-r02/:
+ONE NEW cell ONCE, then return complete JSON. R02 never submits clearValues.
+It verifies exact pinned R01 backup/marker/current metadata/cloud/physical
+validity, finds one accepted ClearValues plus at most one later Full, and waits
+for known completion. Reuse existing Full; submit only a missing Full after
+concurrency and durable no-overwrite marker verification. Disable SDK POST and
+requested service retries. Never follow response URLs; canonical pinned TEST
+history identifies jobs despite missing/relative/regional headers or a lost
+response. Ambiguity/failure/changed dependencies refuses a new submission.
+
+R02 consolidates independent safe diagnostics with retained per-check state:
+exact nine-kind date parity, metadata coverage, selection guards and bounded
+90-scalar execution/internal-variance checks only after valid prerequisites.
+Amounts stay transient/private; output is counts/states/timings/booleans only.
+Known cancellation/resource/auth/time failures skip further amount reads;
+independent safe metadata reads continue. Keep blanks, finite/zero semantics,
+ABS(Benchmark), current tolerances, cohort and full-metadata stability checks.
+Do not call internal identity checks independent Excel/R16.6 business parity or
+report speed. Per-check contexts prevent definition Succeeded being reused as
+processing completion. No source, formula, definition, connection, production,
+credential/schedule/publication change or R17.8 adapter install.
+
+Read report-native-only-r17.8/UNDERSTANDING.md before continuing this repair.
+It owns the current interpretation/evidence map and update rules; feedback/STATUS.md
+owns returned runtime state. Update both at meaningful evidence boundaries,
+link safe immutable receipts, retain uncertainties and preserve older package
+bytes. Do not put these project facts into global memory or create competing
+ledgers. Native UI/export/speed, broad numerical parity and R17.8 TEST release
+remain separate open gates. No manual extra refresh or updater after R02 until
+its whole result is reviewed. Built-in visuals and other-laptop access continue.

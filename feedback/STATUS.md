@@ -1,5 +1,53 @@
 # Company setup status
 
+## 23 October 2026 — R01 clear accepted; full missing; combined R02 recovery and deep diagnostics prepared
+
+The operator returned TEST_R178_DATE_CACHE_RESET_STOPPED / R01. Exact routing,
+private full-file backup verification and pre-reset date comparisons completed.
+Axis remains 83/84 invalid, all three source/native IMS/EF cutoffs invalid;
+fact/review/start/end sets match physical metadata. R01 submitted clearValues
+and received HTTP 202, then raised REFRESH_LOCATION_UNEXPECTED before recording
+the request ID or polling. It did NOT submit full. OperationState=Succeeded,
+PollCount=1 and Table=fm_review_facts are stale earlier read context, not proof
+of clear completion. TEST may be cleared; never rerun R01 or delete its marker.
+Safe receipt: logs/2026-10-23-native-r178-reset-r01-stopped.json.
+
+The user requests one deep diagnostic batch and a maintained understanding file.
+Current receiving step: [combined R02](../handoff/report-native-only-r17.8/cache-recovery-r02/README.md),
+ONE NEW ForecastMaster_GM_Setup Python/PySpark cell ONCE, then return the whole
+JSON. No manual refresh first/afterwards. It identifies the accepted clear from
+canonical TEST history, waits for completion, follows any existing later Full,
+or conditionally submits only the missing Full after exact pinned backup,
+routing, physical validity, metadata/cloud concurrency and no-overwrite marker
+checks. There is no clearValues POST. Header URLs never select endpoints; lost
+responses reconcile only through history. Ambiguous/failed requests are not
+resubmitted. SDK submission retries and requested REST retries remain disabled.
+
+Independent safe checks retain statuses/timings/allowlisted failures. Exact
+physical/semantic dates (nine kinds, IDs and values), original/native coverage,
+selection guards, complete definition/cloud preservation and physical stability
+are separate gates. Valid prerequisites allow 90 private scalar reads over one
+ADS driver, three metrics, three trend windows, two years and five measures.
+They test execution, blank/finite behavior and internal variance/% identities;
+source cohort and metadata stability are rechecked. They do not establish full
+Excel/R16.6 parity or report Performance Analyzer speed. Known resource/cancel/
+auth/time failures stop further amount reads while safe independent metadata
+reads continue. Actual Desktop rendering/export remain receiving work.
+
+[UNDERSTANDING.md](../handoff/report-native-only-r17.8/UNDERSTANDING.md) is the
+maintained interpretation/evidence map; this STATUS remains the runtime owner.
+Update both from reviewed evidence, preserve failed attempts and avoid global
+memory copies. Thirty-nine new local simulated tests pass; prior frozen helper
+regressions are checked separately in the validation receipt. No company DAX,
+Spark or processing ran here. GitNexus graph authority remains unavailable;
+direct route/state/privacy/preservation checks are bounded fallback.
+
+No source/formula/definition/original-model/connection/schedule/credential or
+publication change. R17.8 adapter remains a draft; no company-connected R17.8
+TEST ZIP/updater is released. Compact native SAMPLE/old packages keep their
+bytes. Built-in Power BI visuals only. Return even NEEDS_REVIEW/INTERRUPTED;
+review before another action, rather than assuming a successful refresh fixes UI.
+
 ## 23 October 2026 — R03 completed; valid physical dates versus invalid TEST axis dates
 
 The operator returned R178_DATE_BOUNDARY_R03_COMPLETED, all requested reads

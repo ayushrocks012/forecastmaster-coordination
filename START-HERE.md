@@ -1,39 +1,34 @@
-# Current report step - R17.8 isolated TEST date-cache reset R01
+# Current report step — R17.8 combined TEST recovery and diagnostics R02
 
-Follow [TEST reset receiving steps](handoff/report-native-only-r17.8/cache-reset-r01/README.md).
-R03 completed all reads. All physical Lakehouse date validity checks passed,
-but TEST reports 83/84 axis dates invalid. Fact/review/start/end months are valid.
-The next controlled attempt is a TEST-only cache clear followed by full refresh,
-with private exact date comparisons and definition/cloud preservation checks.
-This is a processing action: TEST can be unavailable until full succeeds.
-Close the R17.7 TEST report first. No source-table/formula/production rewrite.
+Follow [the one-cell receiving steps](handoff/report-native-only-r17.8/cache-recovery-r02/README.md).
+The prior R01 reset accepted clearValues (HTTP 202), then stopped on response
+URL handling before polling clear or submitting full. TEST may currently be
+cleared. Succeeded in that output belonged to getDefinition, not processing.
+**Do not rerun R01, delete attempt markers or manually refresh.**
 
-The operator reported R17.7 TEST refresh Completed, but summaries/chart stay
-blank even after applying once, and saved-file metadata shows Dec 1899.
+The new cell identifies the accepted clear in canonical TEST history, follows
+an existing full or safely submits only the single missing full, then runs
+consolidated exact-date/metadata/selection/internal-calculation checks. It
+never submits clearValues. Existing backups, the complete model definition,
+cloud mapping, physical tables and production R16.6 are preserved.
 
-The returned R01 diagnostic confirms all THREE October source rows inside TEST
-have invalid IMS/EF cutoff metadata; the native helper matches them exactly.
-Both selected ADS sources are affected. SourceOK=1, but cutoff/fit/period gates
-fail. This is not proof that physical Lakehouse or Excel dates are wrong.
+On the company laptop: close the TEST report, pull Coordination, copy the whole
+RECOVER AND DIAGNOSE TEST R02.py from handoff/report-native-only-r17.8/cache-recovery-r02/
+into ONE NEW ForecastMaster_GM_Setup Python/PySpark cell. Run ONLY that cell
+ONCE; do not use Run all. Keep the existing Spark/Lakehouse context. Let it
+finish and return the entire final JSON, including failed/skipped checks.
+Do not run an updater, extra refresh or publish after it. It prints no amounts.
 
-Current action: copy the WHOLE RESET TEST DATE CACHE R01.py from
-handoff/report-native-only-r17.8/cache-reset-r01/ into ONE NEW Python/PySpark
-cell in ForecastMaster_GM_Setup and run ONLY that cell ONCE. Return the JSON.
-It verifies a private backup, waits for clearValues then full, and checks exact
-cutoff/month equality without printing source dates/IDs or amount observations.
-Return the final JSON even if STOPPED. Do not rerun diagnostics/reset, delete
-its attempt marker, install an updater or manually refresh again. Keep the
-existing notebook Spark/Lakehouse context. Engine/cache cause remains unproved.
+Read [the maintained understanding file](handoff/report-native-only-r17.8/UNDERSTANDING.md)
+for the system boundaries, confirmed findings, open causes and decision gates.
+[feedback/STATUS.md](feedback/STATUS.md) owns company receiving evidence. This
+batch is prepared and locally tested; company execution remains pending.
 
-The compact R17.8 native SAMPLE is available for optional Desktop layout
-review with FABRICATED DATA. It has one readable selectable file list with
-import time, no Apply/Source selection controls, compact right-aligned trends
-and dynamic title above the plot. All native visual rectangles are separated;
-page height is 29% shorter. Native rendering still needs the receiving laptop.
+Built-in Power BI visuals only. The compact fabricated R17.8 SAMPLE remains
+optional for layout review; the selection adapter is an uninstalled draft.
+No company-connected R17.8 TEST ZIP/updater is published. Native UI, actual
+report speed, export and independent business parity remain separate gates.
 
-No R17.8 TEST ZIP or updater is published. The source adapter is a local draft,
-not installed or numerically qualified. Keep the existing private backup and
-production R16.6. The blank/date cause must be resolved before a new TEST update.
 Original laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH
