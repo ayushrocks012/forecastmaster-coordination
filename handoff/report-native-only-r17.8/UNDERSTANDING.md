@@ -659,6 +659,16 @@ enforce remote branch protection. Reuse prior native numerical proof only while
 its exact helper/query/artifact dependencies remain unchanged; changed candidates
 need applicable fresh checks. Failed receipts remain preserved.
 
+The full retained generator/test population needs Python 3.12 (legacy native
+generator f-string grammar), although the admission tool and exact receiving
+cell grammar are checked separately for Python 3.10 compatibility. The first
+hosted CI attempt exposed a 3.10 runner mismatch before release tests executed;
+the runner was corrected to 3.12 without altering legacy
+sources or dropping tests. See the [compatibility receipt](../../feedback/logs/2026-10-24-receiving-ci-python-compatibility-r01.json).
+Check generator, tool and receiving-runtime versions separately when moving a
+qualification workflow to a clean host; a receiving-cell syntax check does not
+establish that its generator/import chain runs on the same version.
+
 ### S&OP review and other pages
 
 Two-page design was approved before the native conversion: a Demand review and

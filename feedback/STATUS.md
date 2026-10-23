@@ -39,6 +39,13 @@ interaction/export, independent broad business parity, comparable speed and
 production release remain open. No company update, refresh or publication was
 requested or executed by this implementation.
 
+Hosted run 40039305454 passed hash/contract and catalog checks, then failed before
+the release tests started: the 3.10 runner could not parse a retained generator's
+Python 3.12 f-string grammar. Initial local tests used Python 3.14.4. CI was corrected to
+3.12, keeping the full test population, legacy source bytes and separate 3.10
+receiving-cell grammar check. The failed attempt remains recorded; a local pass
+is not relabelled as hosted success. [Compatibility correction and evidence](logs/2026-10-24-receiving-ci-python-compatibility-r01.json).
+
 ## 24 October 2026 — R17.8 installed and bounded checks VERIFIED; move to Desktop validation
 
 The operator returned TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED,

@@ -1042,8 +1042,8 @@
       "SHA256": "f0b2ec0f63f95d4343804d00eb5087b38e03c2c5788ad204ad6959a531815cfb"
     },
     "feedback/STATUS.md": {
-      "Bytes": 159856,
-      "SHA256": "d05c734803cad3ffad9cf44a2519c186ffa022cb8e494cd7218735b29570d00e"
+      "Bytes": 160408,
+      "SHA256": "108465a14131b41ed6eedda0a0165979d0c6ba3e44fd6fb52180ff1096e87c31"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 199843,
-      "SHA256": "7aeae6c5bc7cc2ac148d8e0787e1a0acff7e5bbb0f6918d54ecc3e88e68899a0"
+      "Bytes": 200572,
+      "SHA256": "b3dd965bd3e0014a08545b5692fe413ddbb000197b1ddb165d999c0b20f18746"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4710,8 +4710,8 @@
       "SHA256": "bd34a3691fd1c45c557f6599f99283f5ced3371084e8d3d899c8cdd97d37017b"
     },
     ".github/workflows/receiving-qualification.yml": {
-      "Bytes": 1592,
-      "SHA256": "26ba7d7bda6f88655e6eea14515c27445d28aa72c3ca8cfd74ed7fc177c4c497"
+      "Bytes": 1746,
+      "SHA256": "94943590d13b215e9fa011b4a2ceca5de347013fbcbebf404579de12c1ef6cde"
     },
     "handoff/report-native-only-r17.8/verifier-r03/diagnostics.py": {
       "Bytes": 5782,
@@ -4744,6 +4744,10 @@
     "feedback/logs/2026-10-24-execution-improvements-r01-qualified.json": {
       "Bytes": 6515,
       "SHA256": "ab9ea92e4caeb2c7c09c0120eebb72aeeef88231bc43bdf33a68b1bb2ce3f45c"
+    },
+    "feedback/logs/2026-10-24-receiving-ci-python-compatibility-r01.json": {
+      "Bytes": 1845,
+      "SHA256": "3a0b90ac439f7a4f55dbb72eba7abfae957c7eff57beed82515f16f19bc66020"
     }
   },
   "ReceivingQualification": {

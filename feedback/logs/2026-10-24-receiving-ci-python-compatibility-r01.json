@@ -1,0 +1,42 @@
+{
+  "Stage": "RECEIVING_CI_RUNTIME_MISMATCH_CORRECTED",
+  "Revision": "R01",
+  "CreatedUTC": "2026-10-23T23:23:36.122265+00:00",
+  "InitialCommit": "df3d0eb81f900f0b84b767edcd2afdd259786b72",
+  "FailedRun": {
+    "ID": 40039305454,
+    "URL": "https://github.com/ayushrocks012/forecastmaster-coordination/actions/runs/40039305454",
+    "Conclusion": "failure",
+    "CompletedChecks": [
+      "HashAndReceivingContract",
+      "CatalogFreshness"
+    ],
+    "FailedStep": "Existing release and metadata probe regressions",
+    "BeforeTestExecution": true,
+    "Python": "3.10.22",
+    "Exception": "SyntaxError: f-string expression part cannot include a backslash",
+    "Source": "handoff/report-native-r17/native_model.py:316"
+  },
+  "Classification": "CHECKER_ENVIRONMENT; legacy generator import syntax, not model or company data",
+  "LocalInitialSuite": {
+    "Python": "3.14.4",
+    "Tests": 50,
+    "Passed": true,
+    "Evidence": "feedback/logs/2026-10-24-execution-improvements-r01-qualified.json"
+  },
+  "Correction": {
+    "WorkflowPython": "3.12",
+    "Reason": "Legacy report generators use Python 3.12 f-string grammar; exact receiving-cell grammar is separately checked for 3.10",
+    "WorkflowSHA256": "94943590d13b215e9fa011b4a2ceca5de347013fbcbebf404579de12c1ef6cde",
+    "TestsRemoved": 0,
+    "LegacySourcesChanged": false,
+    "ReceivingArtifactsChanged": false
+  },
+  "HostedCorrectedRun": "Pending at receipt creation; use the workflow run bound to this correction commit, not the failed initial commit",
+  "Lesson": "Verify generator/import-chain runtime and receiving runtime independently; do not equate local or syntax-only coverage with clean-host execution",
+  "CompanyStateUnchanged": true,
+  "NewCompanyActionRequired": false,
+  "ModelWriteRequested": false,
+  "RefreshRequested": false,
+  "ReportPublished": false
+}

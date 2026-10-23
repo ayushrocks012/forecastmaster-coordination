@@ -21,7 +21,9 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
-          python-version: '3.10'
+          # Retained report generators use Python 3.12 f-string grammar.
+          # Receiving-cell grammar remains independently checked as Python 3.10.
+          python-version: '3.12'
       - name: Bound artifacts, classified facts and separate receiving gates
         run: python tools/verify_handoff.py
       - name: Canonical public catalog freshness
