@@ -1,0 +1,61 @@
+R17.4: CHECK THE ALREADY-ATTEMPTED TEST UPDATE
+
+The reported failure is AFTER updateDefinition ran. It does not prove that the
+update failed to install. Do NOT rerun the failed updater, restore the backup,
+recreate the model, change its connection, refresh or publish at this point.
+
+Use the COMPANY laptop, where your Fabric access already works.
+
+1. Open forecastmaster-coordination in VS Code. Open Terminal > New Terminal,
+   using PowerShell. From this repository's root, run:
+
+   git status --short
+   git pull --ff-only
+
+   If Git refuses the pull, keep local changes and send that message.
+
+2. In the same PowerShell terminal, copy the ENTIRE new check to the clipboard:
+
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.4\readback-check-r01\CHECK R17.4 READBACK.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   This is the new CHECK file, not UPDATE EXISTING TEST TO R17.4.py.
+   The file is ordinary readable Python. Do not copy its GitHub HTML view.
+
+3. In Fabric, open workspace UK-ANI-Demand > ForecastMaster_GM_Setup.
+   Add ONE NEW Python/PySpark code cell below the failed cell.
+   Leave the old failed cell unchanged. Paste the clipboard into the NEW cell.
+
+4. Run ONLY the NEW cell using its own Run button. Do NOT choose Run all.
+
+5. Copy the JSON result back into the chat. It should say one of:
+
+   TEST_R174_READBACK_VERIFIED
+   TEST_R174_READBACK_NEEDS_REVIEW
+   TEST_R174_READBACK_CHECK_STOPPED
+
+   Even if VERIFIED, send the result first. No further update/refresh/publish
+   is requested by this diagnostic step.
+
+WHAT THE CHECK DOES
+
+It is bound to the exact private backup printed by your failed run:
+Native-R174-Format-Display/20261023T141622-17478716-8578-4b93-846c-4a506bab98eb
+
+It reads each complete private backup twice into temporary driver files, checks
+its byte length against the file inventory, and deletes those temporary copies.
+It confirms that the saved candidate differs only by the declared R17.4 repair.
+It retrieves existing TEST model metadata and cloud mappings twice to check for
+concurrent changes. Every definition property is compared. No source amounts
+are queried and no private values/connection details are printed.
+
+JSON payload whitespace and identical DAX text returned as a string versus
+an array of lines can be distinguished from a real metadata change. It does
+not ignore default properties, source/security objects, object order, DAX
+whitespace or line-ending changes. Unknown differences remain NEEDS_REVIEW.
+
+The API route guard permits only TEST metadata/connection retrieval and those
+retrieval operations' status/results. It contains no model-write, refresh,
+publish or rollback call. The private backup and published R16.6 stay in place.
+
+The existing R17.4 updater, TEST/SAMPLE ZIPs and earlier packages are unchanged.
+Local synthetic checks do not establish company installation or Desktop parity.

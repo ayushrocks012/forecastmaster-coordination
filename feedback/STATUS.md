@@ -1,5 +1,26 @@
 # Company setup status
 
+## 23 October 2026 — R17.4 update attempted; returned definition unconfirmed
+
+The operator supplied a verified private backup followed by update operations
+and `RuntimeError: TEST definition readback differs; keep backup and send the
+result.` The failure is after `updateDefinition`, at strict `received != fixed`.
+The TEST may already contain the repair; the output does not identify the cause
+or prove complete preservation. The following cloud check was not reached.
+The exact backup suffix is Native-R174-Format-Display/20261023T141622-17478716-
+8578-4b93-846c-4a506bab98eb. No raw model, connection values or amounts are saved
+here. The receiving receipt is logs/2026-10-23-native-r174-readback-failed.json.
+
+Current step: [R17.4 read-only check](../handoff/report-native-only-r17.4/readback-check-r01/OPEN%20FIRST%20-%20READBACK.txt).
+Run only the new CHECK cell in ForecastMaster_GM_Setup on the company laptop.
+It validates the complete saved candidate scope, compares the whole current
+definition and connection mapping, and emits safe differences. Do not rerun the
+updater, refresh/publish, edit mappings, recreate the model or restore a backup
+before reviewing that result. The old updater and all report ZIPs remain
+byte-preserved. No company action was taken from this host. Diagnostic company
+execution and its result remain pending; Desktop/performance/R16.6 parity are
+also unverified. The historical prepared-package sections follow.
+
 ## 23 October 2026 — R17.3 opens; native drill simplification requested
 
 Receiving screenshots show a loading native headline and monthly chart without

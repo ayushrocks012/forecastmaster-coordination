@@ -1,0 +1,35 @@
+{
+  "Revision": "Native R17.4 readback check R01",
+  "UTC": "2026-10-23T14:31:35.339355+00:00",
+  "Purpose": "Read-only verification after an already-attempted TEST update; no retry or rollback",
+  "LocalTests": {
+    "Methods": 19,
+    "Failures": 0,
+    "Execution": "Synthetic Fabric client and local filesystem only"
+  },
+  "Checks": [
+    "Exact candidate/mapping with two stable reads",
+    "Complete backup file lengths and repeated reads; no preview reads",
+    "49 public native expression and 20 format fingerprints; 21 permitted repair fields",
+    "Complete definition/other-part preservation",
+    "Identical DAX string/line-array diagnostic and JSON serialization whitespace",
+    "Changed sources, roles, relationships, arithmetic, formats and metadata refuse pass",
+    "Reordering, CRLF, missing helpers/measures, model/connection races refuse pass",
+    "Unknown backup, truncated/changing copy, malformed JSON/base64 and wrong identity stop",
+    "Read-only API route allowlist; no backup writes; async metadata retrieval",
+    "Bounded redacted differences, no raw API errors or private values",
+    "All preexisting nonmutable manifest bytes preserved",
+    "Unexpected differences prioritized over equivalent DAX-line details; safe type names only"
+  ],
+  "FrozenUpdaterUnchanged": true,
+  "FrozenReportZipsUnchanged": true,
+  "GitNexus": "Query: Coordination not indexed. Staged detect_changes: UNAVAILABLE, AUTHORITY_DRIFT_BLOCKS_CONCLUSION. change_scope failed closed with analysis incomplete. Direct source tracing, route guards, preservation proofs and focused synthetic checks used; graph impact remains UNKNOWN.",
+  "CompanyDiagnosticRun": "PENDING receiving execution",
+  "LiveMismatchCause": "UNCONFIRMED",
+  "CurrentTestCompletePreservationAndConnectionReadback": "UNCONFIRMED until diagnostic result",
+  "DesktopRenderingDrillExport": "UNVERIFIED",
+  "CompanyNumericalReconciliationAndPerformance": "UNVERIFIED",
+  "CompanyOperationExecutedFromThisHost": false,
+  "ModelWriteOrRefreshOrPublicationRequested": false,
+  "ProductionR166UntouchedByThisChange": true
+}

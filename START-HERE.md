@@ -1,18 +1,18 @@
 # Current report step - native-only R17.4 drill preview, 23 October 2026
 
-R17.3 opened on the company laptop. The operator requested removal of the extra
-selection/view buttons and axis sliders in favor of native matrix drill. Use
-[R17.4 native drill steps](handoff/report-native-only-r17.4/OPEN%20FIRST%20-%20NATIVE%20DRILL.txt):
-pull Coordination, run ONE NEW R17.4 TEST-only code cell in ForecastMaster_GM_Setup,
-then extract/open the NEW R17.4 TEST ZIP. Unlike report-only R17.3, this revision
-includes a narrow model format/display repair for faults visible in the latest
-screenshots. No source-data refresh, new model or publication is requested.
+Current receiving step: [R17.4 read-only readback check](handoff/report-native-only-r17.4/readback-check-r01/OPEN%20FIRST%20-%20READBACK.txt).
+The operator's TEST update request ran, then exact returned-definition readback
+failed. The connection check after that comparison was not reached. Do not
+rerun the failed updater, refresh/publish, recreate TEST or restore the backup.
+Pull Coordination, copy the entire new CHECK R17.4 READBACK.py, and run only
+ONE NEW Python/PySpark cell in UK-ANI-Demand > ForecastMaster_GM_Setup. Send
+its safe JSON result. This checks the exact private backup and TEST metadata
+without another model write. [Scope](handoff/report-native-only-r17.4/readback-check-r01/README.md).
 
-The SAMPLE has fabricated local data and needs neither company access nor that
-setup cell. Both copies remain entirely native, Demand Review first. [Scope
-and deferred functions](handoff/report-native-only-r17.4/README.md) are explicit;
-full R16.6 parity is not claimed. Local checks are separate from receiving
-Desktop drill/rendering and company numerical/performance acceptance. Keep
+The existing R17.4 updater/report ZIPs and earlier packages are unchanged.
+The SAMPLE still needs no company access. All new preview visuals remain
+Power BI native. Company preservation, Desktop drill/rendering, reconciliation,
+performance and full R16.6 parity remain separate unconfirmed gates. Keep
 published R16.6 in production. Original repository/setup instructions follow.
 
 # Connect the Abbott laptop using VS Code and SSH

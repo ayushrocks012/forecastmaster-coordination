@@ -1,0 +1,18 @@
+{
+  "Date": "2026-10-23",
+  "Evidence": "User-supplied Fabric output; not independently queried from this host",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "AttemptedRevision": "R17.4",
+  "BackupDirectorySuffix": "Native-R174-Format-Display/20261023T141622-17478716-8578-4b93-846c-4a506bab98eb",
+  "BackupVerificationReported": true,
+  "UpdateDefinitionRequestRanBeforeFailure": true,
+  "Failure": "TEST definition readback differs; keep backup and send the result.",
+  "FailureLocation": "After updateDefinition; strict comparison of parsed model.bim to candidate",
+  "PostWriteCloudMappingCheckReached": false,
+  "InstalledStateAndCompletePreservation": "UNCONFIRMED",
+  "MismatchCause": "UNCONFIRMED",
+  "NextAction": "Run new read-only CHECK R17.4 READBACK.py cell in ForecastMaster_GM_Setup and send safe JSON",
+  "DoNotRun": "Do not retry updater, roll back, recreate TEST, edit mappings, refresh or publish pending review",
+  "ProductionWriteRequested": false,
+  "RawModelOrConnectionValuesIncluded": false
+}

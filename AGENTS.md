@@ -331,3 +331,16 @@ already includes this repair. Older packages/production stay untouched.
 Windows formatter and local schema/mock checks are separate from pending native
 Desktop drill/rendering and company reconciliation/performance. The WSL UI
 bridge still failed before selecting a window. Keep those receiving gates open.
+
+Later 23 October the operator supplied an R17.4 post-write readback failure:
+the verified backup and updateDefinition operation ran, then received != fixed
+raised. The subsequent cloud mapping check was not reached. Do not rerun the
+updater (including its already-installed shortcut), refresh, roll back, recreate
+TEST, change its mapping or publish to infer success. Current receiving step is
+handoff/report-native-only-r17.4/readback-check-r01/. Run only its new read-only
+CHECK cell in ForecastMaster_GM_Setup against the exact reported private backup.
+Preserve the frozen R17.4 updater/ZIPs and all older packages. No company model,
+connection values or raw differing values may be committed or printed. The
+probe covers the entire definition and mapping, permits only identical-text
+DAX line representations, and reports all other differences for review.
+Local mock evidence does not establish the live mismatch cause or acceptance.
