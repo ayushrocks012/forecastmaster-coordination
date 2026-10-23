@@ -1,0 +1,186 @@
+{
+  "Stage": "LOCAL_EXECUTION_IMPROVEMENTS_QUALIFIED",
+  "Revision": "R01",
+  "CreatedUTC": "2026-10-23T23:22:01.302326+00:00",
+  "BaselineCommit": "c98f0227d4277c07898209feb34349b4da30cc3f",
+  "Scope": "Local evidence admission, exact checker regressions, safe consolidated diagnostic candidate, representative native-flow and comparable timing evidence; no report/model design change",
+  "Tests": [
+    {
+      "Name": "ExistingRelease",
+      "Command": "PYTHONDONTWRITEBYTECODE=1 python3 handoff/report-native-only-r17.8/test-release-r01/test_release.py",
+      "Tests": 14,
+      "ExitCode": 0,
+      "Passed": true,
+      "ElapsedMs": 2669
+    },
+    {
+      "Name": "ExistingRefreshProbe",
+      "Command": "PYTHONDONTWRITEBYTECODE=1 python3 handoff/report-native-only-r17.8/refresh-state-r01/test_check.py",
+      "Tests": 8,
+      "ExitCode": 0,
+      "Passed": true,
+      "ElapsedMs": 61
+    },
+    {
+      "Name": "ExactR03Candidate",
+      "Command": "PYTHONDONTWRITEBYTECODE=1 python3 handoff/report-native-only-r17.8/verifier-r03/test_verifier.py",
+      "Tests": 13,
+      "ExitCode": 0,
+      "Passed": true,
+      "ElapsedMs": 4788
+    },
+    {
+      "Name": "AdmissionAndPerformance",
+      "Command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/test_receiving_contract.py",
+      "Tests": 15,
+      "ExitCode": 0,
+      "Passed": true,
+      "ElapsedMs": 53
+    }
+  ],
+  "TotalLocalTests": 50,
+  "LocalFailures": 0,
+  "AdmissionSmoke": [
+    {
+      "Arguments": [
+        "--purpose",
+        "maintenance"
+      ],
+      "ExitCode": 0,
+      "ExpectedResultObserved": true,
+      "Meaning": "RECEIVING_CONTRACT_VALID"
+    },
+    {
+      "Arguments": [
+        "--purpose",
+        "expand-report"
+      ],
+      "ExitCode": 1,
+      "ExpectedResultObserved": true,
+      "Meaning": "Representative company flow still pending"
+    },
+    {
+      "Arguments": [
+        "--purpose",
+        "claim-performance"
+      ],
+      "ExitCode": 1,
+      "ExpectedResultObserved": true,
+      "Meaning": "Comparable company performance evidence pending"
+    },
+    {
+      "Arguments": [
+        "--purpose",
+        "operator-handoff",
+        "--handoff",
+        "verifier-r03"
+      ],
+      "ExitCode": 1,
+      "ExpectedResultObserved": true,
+      "Meaning": "Candidate not selected for the operator"
+    },
+    {
+      "Template": "slice",
+      "IncompleteByDesign": true
+    },
+    {
+      "Template": "performance",
+      "IncompleteByDesign": true
+    }
+  ],
+  "OtherChecks": {
+    "RuffF": "PASSED",
+    "Bandit": "PASSED",
+    "CatalogFreshness": "PASSED",
+    "WorkflowYAML": "PARSED; pinned actions and read-only permissions checked",
+    "HostedCI": "Not claimed by this local receipt; actual run belongs to the commit"
+  },
+  "Sources": {
+    ".github/workflows/receiving-qualification.yml": {
+      "Bytes": 1592,
+      "SHA256": "26ba7d7bda6f88655e6eea14515c27445d28aa72c3ca8cfd74ed7fc177c4c497"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/README.md": {
+      "Bytes": 2482,
+      "SHA256": "f535e4f0fc7497f5edeac7efdbabcf0b67405e9800da2bcbb5422f52a6a9a84a"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/VALIDATION.json": {
+      "Bytes": 1980,
+      "SHA256": "a7b0c1405abf52a2b1181e72841a7cc6f623c6ce472b3ea48d85fa3b7a0fa98f"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/VERIFY INSTALLED TEST R03.py": {
+      "Bytes": 244200,
+      "SHA256": "5f4c9003787bf6eb71953e31fee2e2ac7bd09dd70e23022c8a85df84c642c534"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/build_verifier.py": {
+      "Bytes": 2042,
+      "SHA256": "727b1aca011d40acf6b7492590903a84a08f6a0c95fcaee7da6821ec5d838f8b"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/diagnostics.py": {
+      "Bytes": 5782,
+      "SHA256": "bb0ba77e91379e2d16b59e7c2afae3e75f0b696fbeeb2c79c788f4d2b5ed2712"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/test_verifier.py": {
+      "Bytes": 13277,
+      "SHA256": "4f97de19ac6d28d806e302fd56025b85591ffb9c3f4d08a68d3c2687a62e5e56"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/verify_r03.py": {
+      "Bytes": 7374,
+      "SHA256": "079c01d87fbe7e9ee8044024e118e40a3f582750d2787da74b1c5d8db522e686"
+    },
+    "tools/receiving_contract.py": {
+      "Bytes": 16241,
+      "SHA256": "97a06a41be3a7d6b5073f4a0cfe499ea07d537c5806d41c943e3c40c5ac35c5d"
+    },
+    "tools/test_receiving_contract.py": {
+      "Bytes": 14271,
+      "SHA256": "bd34a3691fd1c45c557f6599f99283f5ced3371084e8d3d899c8cdd97d37017b"
+    },
+    "tools/verify_handoff.py": {
+      "Bytes": 1166,
+      "SHA256": "b3db51e0e36f191a498816a656751668d21cd05ba01946353768e7cfbe495112"
+    }
+  },
+  "Preservation": {
+    "PriorManifestFiles": 1174,
+    "UnchangedPriorManifestFiles": 1170,
+    "ChangedCanonicalDocumentation": [
+      "AGENTS.md",
+      "README.md",
+      "feedback/STATUS.md",
+      "handoff/report-native-only-r17.8/UNDERSTANDING.md"
+    ],
+    "ExistingHashToolExtended": true,
+    "AllPriorReportModelInstallerR02EvidenceAndBusinessHelperBytesUnchanged": true
+  },
+  "GraphImpact": {
+    "Status": "UNKNOWN",
+    "ChangeScope": "FAILED_CLOSED; analysis incomplete",
+    "DetectChanges": "UNAVAILABLE; AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+    "ZeroImpactClaimed": false,
+    "Fallback": "Direct source/AST/query identity, exact generated-cell runtime regressions and frozen-file hashes"
+  },
+  "ReceivingState": {
+    "InstalledBoundedR02": "PASSED_WITHIN_BOUNDED_VERIFIER_SCOPE; reviewed company receipt retained",
+    "RepresentativeNativeFlow": "PENDING",
+    "ComparableCompanyPerformance": "PENDING",
+    "R03OperatorEnabled": false,
+    "CompanyNextAction": "UNCHANGED: main chat current R17.8 Desktop validation; no new cell or refresh"
+  },
+  "IndependentCompanyBusinessParity": "OPEN; not implied by bounded 12-scalar comparison or process tooling",
+  "NewNativeEngineRun": false,
+  "CompanyCallsMade": false,
+  "ModelDefinitionWriteRequested": false,
+  "LakehouseWriteRequested": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "CompanyAmountsQueriedPrintedOrStored": false,
+  "ProductionR166Changed": false,
+  "Limitations": [
+    "Synthetic receiving responses only",
+    "No first-attempt correctness guarantee",
+    "Native UI/export, independent broad business parity, speed and production release remain separate",
+    "Executable admissions validate bound reviewed evidence, not private evidence authenticity independently",
+    "CI configuration is not branch-protection enforcement"
+  ]
+}

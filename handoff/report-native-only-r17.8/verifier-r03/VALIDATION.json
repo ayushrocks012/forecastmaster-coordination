@@ -1,0 +1,43 @@
+{
+  "Stage": "LOCAL_CHECKER_QUALIFIED",
+  "Failures": 0,
+  "ArtifactSHA256": "5f4c9003787bf6eb71953e31fee2e2ac7bd09dd70e23022c8a85df84c642c534",
+  "ArtifactBytes": 244200,
+  "VerifierRevision": "R03",
+  "OperatorSelected": false,
+  "CurrentR02ReceivingWorkflow": "UNCHANGED; company R02 passed, Desktop validation remains current",
+  "Tests": 13,
+  "Cases": [
+    "healthy",
+    "blank_zero",
+    "missing_date",
+    "malformed",
+    "cancelled",
+    "concurrent",
+    "failed_then_recovered",
+    "safe_errors",
+    "unknown_category"
+  ],
+  "ExactGeneratedCellExecuted": true,
+  "FreshNativeEngineRun": false,
+  "CompanyCallsMade": false,
+  "InheritedNumericalAndReadHelpersASTIdentical": true,
+  "MetadataDAXMatchesQualifiedR02NativeCounterQuery": true,
+  "NewFinalGuard": "Whole candidate definition and cloud mapping rechecked after numerical/label reads",
+  "NoReachableUpdateRefreshOrRemoteFileWrite": true,
+  "SourceSHA256": {
+    "diagnostics.py": "bb0ba77e91379e2d16b59e7c2afae3e75f0b696fbeeb2c79c788f4d2b5ed2712",
+    "verify_r03.py": "079c01d87fbe7e9ee8044024e118e40a3f582750d2787da74b1c5d8db522e686",
+    "build_verifier.py": "727b1aca011d40acf6b7492590903a84a08f6a0c95fcaee7da6821ec5d838f8b",
+    "test_verifier.py": "4f97de19ac6d28d806e302fd56025b85591ffb9c3f4d08a68d3c2687a62e5e56"
+  },
+  "BaselineR02SHA256": "a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635",
+  "PriorEvidence": "Four R02 native metadata counter queries and existing numerical qualification retained by exact query/helper identity; not rerun or widened",
+  "Limitations": [
+    "Synthetic receiving responses only",
+    "Category hints are descriptive, not permission to ignore failures",
+    "Unknown raw free-form errors require exact operation UI link",
+    "No company or business/performance acceptance from local checks"
+  ],
+  "AdditionalMetadataGuard": "Positive MissingImportedAt is refused, with unreadable hash suffixes/duplicate choices; business blanks untouched"
+}

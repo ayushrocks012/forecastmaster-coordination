@@ -37,3 +37,9 @@ The operator cannot access tenant settings and requires no IT involvement. The [
 Normal ad hoc use: save the source bridge workbook, open the report's **Refresh Demand** page, click **Refresh Demand (native)** once, wait for the automatic pipeline to complete, then reload the report. The button acknowledges submission; it does not wait for the asynchronous model refresh. The operator removed the original Power Automate Run flow button and saved the Service report; the native button is the current report action. Handoff package READMEs and local validation receipts preserve their preparation-time state; `feedback/STATUS.md` owns the latest receiving results.
 
 If Python is already available, `python tools/verify_handoff.py` verifies the copied handoff files against their recorded hashes. Python is not required to clone the repository, copy the installer into Fabric, or exchange screenshots.
+
+The same command now checks classified evidence and separate receiving gates in
+the existing manifest. [Executable admission rules](handoff/report-native-only-r17.8/UNDERSTANDING.md#executable-admission-and-evidence-reuse)
+and local CI prevent unsupported handoff/performance claims from passing those
+checks. The new R03 diagnostic candidate is unselected; continue the current
+Desktop step above. No new setup cell or refresh is needed for these additions.

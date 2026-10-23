@@ -19,6 +19,18 @@ and diagnostics" admission checks: exact artifact, actionable safe errors,
 checker regression coverage and evidence-backed retries. Do not treat a written
 lesson as an implemented test or a local pass as receiving acceptance.
 
+These admission rules are now executable in the existing handoff manifest's
+ReceivingQualification section. Run `python tools/verify_handoff.py` for hashes,
+classified evidence and separate gates. Use `tools/receiving_contract.py` with
+the applicable `--purpose` before a broad report expansion, performance claim or
+selection of its registered operator candidate; see UNDERSTANDING's "Executable
+admission and evidence reuse" section. Routine diagnosis and fixes needed to
+complete the representative slice remain allowed under their existing scope.
+Local/synthetic proof cannot close company UI, business or speed acceptance.
+The additive verifier-r03 candidate is NOT selected: R02 has passed, so keep
+the current Desktop step below. Do not ask for another cell or refresh merely
+to exercise these process improvements. CI runs public local checks only.
+
 Latest company return (24 October): TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED,
 Revision R01 / VerifierRevision R02. All nine date groups exactly match; zero
 invalid dates. Twelve paired scalar comparisons, zero mismatches (one available

@@ -560,6 +560,105 @@ evidence limits and next action together. Do not promote a pending gate from a
 local pass or create another competing checklist/status file. This procedure
 reduces avoidable errors; it is not a guarantee of first-attempt correctness.
 
+#### Executable admission and evidence reuse
+
+Implemented 24 October 2026 after the successful company R02 return. This adds
+checks to the existing manifest and validation workflow; the current Desktop
+action in the resume section is unchanged. No report, adapter, active R02 cell,
+installer, company model or production artifact changed for this work.
+
+`HANDOFF-MANIFEST.json` now has `ReceivingQualification`. It binds the current
+report, classified claims and scoped gates to hash-checked existing receipts.
+VERIFIED needs an exact observation and provenance (local synthetic versus
+reviewed company). INFERRED also needs a caveat; UNKNOWN cannot carry a passed
+assertion. Bounded installed verification checks the complete returned date,
+numerical, label, metadata and action declarations, not a success word alone.
+The installed bounded gate passes; representative native flow and comparable
+company performance remain pending. This section extends the existing reference
+and STATUS; it does not create another human status ledger.
+
+Run from the Coordination repository root, using Python 3.10 or later:
+
+```bash
+python tools/verify_handoff.py
+python tools/receiving_contract.py --purpose maintenance
+python tools/receiving_contract.py --purpose expand-report
+python tools/receiving_contract.py --purpose claim-performance
+python tools/receiving_contract.py --purpose operator-handoff --handoff verifier-r03
+```
+
+The first command now validates hashes AND the receiving contract. Maintenance
+reports pending gates without claiming completion. Broad expansion requires the
+bounded installed check plus the representative company flow. A speed claim
+requires reproducible comparable company timing evidence for the current report.
+Operator admission requires exact cell qualification, complete instructions and
+explicit selection. The last three commands currently refuse, as expected.
+These checks apply to those purposes; they do not block routine diagnosis or
+corrections needed to complete the slice, or create production authorization.
+
+The additive [R03 diagnostic verifier](verifier-r03/README.md) is locally tested
+against its exact generated cell and pinned R02 baseline. It consolidates safe
+stage results/timings, refresh categories, UTC/UK timestamps, request links and
+structured errors, skips dependent reads after a failed prerequisite, and
+rechecks full candidate/cloud state at the end. Categories never excuse a newer
+failed operation. Unknown errors retain an exact operation link. Its regression
+population covers healthy/empty/blank/zero, malformed/cancelled, date/metadata,
+concurrent and failed-then-recovered cases. R03 is NOT selected for the operator;
+R02 already passed. No new notebook run is requested. Existing numerical helpers
+and metadata DAX are preserved; this is no new native-engine/company parity run.
+
+For future reviewed receiving evidence, maintainers can print deliberately
+incomplete templates (nulls cannot pass) without writing files:
+
+```bash
+python tools/receiving_contract.py --emit-template slice
+python tools/receiving_contract.py --emit-template performance
+python tools/receiving_contract.py --fingerprint-json PRIVATE_CONTEXT.json
+python tools/receiving_contract.py --compare-performance BASELINE.json CANDIDATE.json
+```
+
+Keep raw evidence and actual context JSON private. For each environment,
+selection and source-snapshot context, use consistent JSON keys and observed
+values, then the fingerprint command hashes canonical sorted JSON and prints
+only SHA256. Include model/adapter version, laptop/engine/capacity context in
+environment; all filters, bounds, trends, display and exact file revisions in
+selection; observed source versions/refresh state in the source snapshot.
+Record unknowns as unknown; do not invent fingerprints or completeness. Different
+adapter/report versions are identified separately from unchanged environment
+conditions so a measured candidate can be compared with its baseline. Hashes
+identify reviewed private evidence; they do not independently prove its contents.
+
+The representative slice binds the exact report hash, observed context, an
+independent private reference and all eight native workflow observations:
+file selection, cutoff, Review, chart, Executive variance, native drill,
+clear-to-automatic and layout. Review evidence before adding a safe receipt to
+feedback/logs and binding it in the manifest. A local screenshot or fabricated
+SAMPLE cannot pass it. It proves only that reviewed slice; export, broader
+population, business acceptance and release retain their own requirements.
+
+Timing receipts need observed DAX and total milliseconds for graph, Review and
+Executive in each reported run, exact artifacts, resource-error status and equal
+environment/selection/source/view/load conditions. Allowed load labels include
+first_observed_load and repeated_same_selection; they describe observations and
+do not prove underlying cache residency. Use cold/warm only with evidence.
+The tool reports medians, signed millisecond change and percentage where the
+baseline is nonzero, preserves measured zero and refuses missing/invalid values,
+context mismatches or unresolved resource errors. It introduces no new numeric
+SLA. The performance gate recomputes the comparison from both bound raw timing
+receipts and requires the candidate to match the current report. R17.6 timings
+without view/cache/data context remain historical, not a comparable baseline.
+The existing company Desktop step can supply evidence; do not add a new operator
+request merely to fill a template.
+
+The [receiving CI workflow](../../.github/workflows/receiving-qualification.yml)
+runs the existing hash/catalog checks, 14 release and eight refresh-probe tests,
+13 exact R03 candidate tests and 15 admission/performance tests. It checks that
+generators reproduce committed bytes. It uses synthetic public fixtures, no
+company credentials/calls, and does not replace native receiving acceptance or
+enforce remote branch protection. Reuse prior native numerical proof only while
+its exact helper/query/artifact dependencies remain unchanged; changed candidates
+need applicable fresh checks. Failed receipts remain preserved.
+
 ### S&OP review and other pages
 
 Two-page design was approved before the native conversion: a Demand review and

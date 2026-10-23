@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 80372,
-      "SHA256": "ea414dc0550cab60529142073a920edf8d0a142193df2297490601784c3503a8"
+      "Bytes": 81230,
+      "SHA256": "81752a52830003840a1d7b36daff8a7270492b593bed696a06888ed91f6b3856"
     },
     "README.md": {
-      "Bytes": 8485,
-      "SHA256": "271f6d1a86e6788bedfb9c59e8bce4e87082936f05cff3eb78f88097645b7b4f"
+      "Bytes": 8945,
+      "SHA256": "f0b2ec0f63f95d4343804d00eb5087b38e03c2c5788ad204ad6959a531815cfb"
     },
     "feedback/STATUS.md": {
-      "Bytes": 157155,
-      "SHA256": "a66d5c2d6b30bfb6a710029cae29e32b875a03f75bd00a9bb83dc793010eb630"
+      "Bytes": 159856,
+      "SHA256": "d05c734803cad3ffad9cf44a2519c186ffa022cb8e494cd7218735b29570d00e"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 193650,
-      "SHA256": "caee944a9642a469a78c8c2a6900b8784e055b33ce9bc0825a2b35391799d5b5"
+      "Bytes": 199843,
+      "SHA256": "7aeae6c5bc7cc2ac148d8e0787e1a0acff7e5bbb0f6918d54ecc3e88e68899a0"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4696,6 +4696,136 @@
     "feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json": {
       "Bytes": 6281,
       "SHA256": "81cf9578613f44519f3354178ca28de726b32a4e3a78f72439da75d73c2e6eea"
+    },
+    "tools/verify_handoff.py": {
+      "Bytes": 1166,
+      "SHA256": "b3db51e0e36f191a498816a656751668d21cd05ba01946353768e7cfbe495112"
+    },
+    "tools/receiving_contract.py": {
+      "Bytes": 16241,
+      "SHA256": "97a06a41be3a7d6b5073f4a0cfe499ea07d537c5806d41c943e3c40c5ac35c5d"
+    },
+    "tools/test_receiving_contract.py": {
+      "Bytes": 14271,
+      "SHA256": "bd34a3691fd1c45c557f6599f99283f5ced3371084e8d3d899c8cdd97d37017b"
+    },
+    ".github/workflows/receiving-qualification.yml": {
+      "Bytes": 1592,
+      "SHA256": "26ba7d7bda6f88655e6eea14515c27445d28aa72c3ca8cfd74ed7fc177c4c497"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/diagnostics.py": {
+      "Bytes": 5782,
+      "SHA256": "bb0ba77e91379e2d16b59e7c2afae3e75f0b696fbeeb2c79c788f4d2b5ed2712"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/VERIFY INSTALLED TEST R03.py": {
+      "Bytes": 244200,
+      "SHA256": "5f4c9003787bf6eb71953e31fee2e2ac7bd09dd70e23022c8a85df84c642c534"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/verify_r03.py": {
+      "Bytes": 7374,
+      "SHA256": "079c01d87fbe7e9ee8044024e118e40a3f582750d2787da74b1c5d8db522e686"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/VALIDATION.json": {
+      "Bytes": 1980,
+      "SHA256": "a7b0c1405abf52a2b1181e72841a7cc6f623c6ce472b3ea48d85fa3b7a0fa98f"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/README.md": {
+      "Bytes": 2482,
+      "SHA256": "f535e4f0fc7497f5edeac7efdbabcf0b67405e9800da2bcbb5422f52a6a9a84a"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/test_verifier.py": {
+      "Bytes": 13277,
+      "SHA256": "4f97de19ac6d28d806e302fd56025b85591ffb9c3f4d08a68d3c2687a62e5e56"
+    },
+    "handoff/report-native-only-r17.8/verifier-r03/build_verifier.py": {
+      "Bytes": 2042,
+      "SHA256": "727b1aca011d40acf6b7492590903a84a08f6a0c95fcaee7da6821ec5d838f8b"
+    },
+    "feedback/logs/2026-10-24-execution-improvements-r01-qualified.json": {
+      "Bytes": 6515,
+      "SHA256": "ab9ea92e4caeb2c7c09c0120eebb72aeeef88231bc43bdf33a68b1bb2ce3f45c"
+    }
+  },
+  "ReceivingQualification": {
+    "SchemaVersion": 1,
+    "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+    "Authority": "Same reviewed receipts and acceptance requirements as UNDERSTANDING; this is executable admission metadata, not another human status ledger",
+    "CurrentReport": "handoff/report-native-only-r17.8/test-release-r01/candidate/ForecastMaster Compact Native R17.8 TEST.zip",
+    "Facts": {
+      "bounded_company_verification": {
+        "Classification": "VERIFIED",
+        "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+        "Scope": "Returned R02 run; one available ADS driver, market/ef/share, 12M FY/future month; not broad independent Excel parity",
+        "Evidence": {
+          "Path": "feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json",
+          "Pointer": "/Reported/Stage",
+          "Equals": "TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED"
+        }
+      },
+      "native_synthetic_qualification": {
+        "Classification": "VERIFIED",
+        "EvidenceKind": "LOCAL_SYNTHETIC",
+        "Scope": "Fabricated local engine, not company Desktop or speed",
+        "Evidence": {
+          "Path": "handoff/report-native-only-r17.8/test-release-r01/VALIDATION.json",
+          "Pointer": "/NativeEngine/Assertions",
+          "Equals": 1868
+        }
+      },
+      "possibly_transient_backend_failure": {
+        "Classification": "INFERRED",
+        "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+        "Scope": "Later UI completion after a failed backend request",
+        "Caveat": "Underlying transport/service cause and initiator remain unknown; later success does not prove a permanent fix",
+        "Evidence": {
+          "Path": "feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json",
+          "Pointer": "/Observed/LaterOperation/Status",
+          "Equals": "Completed"
+        }
+      },
+      "backend_root_cause": {
+        "Classification": "UNKNOWN",
+        "Scope": "Backend request failure is known; underlying cause is not established",
+        "Evidence": null
+      },
+      "company_native_layout_and_business_parity": {
+        "Classification": "UNKNOWN",
+        "Scope": "Current main-chat Desktop and reference acceptance remain pending",
+        "Evidence": null
+      },
+      "company_speed_improvement": {
+        "Classification": "UNKNOWN",
+        "Scope": "Historical R17.6 timings lack comparable cache/view/data context; no speed claim",
+        "Evidence": null
+      }
+    },
+    "Gates": {
+      "installed_verification": {
+        "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+        "Evidence": "feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json",
+        "ResultPointer": "/Reported"
+      },
+      "representative_flow": {
+        "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+        "Evidence": null
+      },
+      "performance": {
+        "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+        "Evidence": null
+      }
+    },
+    "Handoffs": {
+      "verifier-r03": {
+        "Artifact": "handoff/report-native-only-r17.8/verifier-r03/VERIFY INSTALLED TEST R03.py",
+        "LocalQualification": "handoff/report-native-only-r17.8/verifier-r03/VALIDATION.json",
+        "OperatorEnabled": false,
+        "Where": "If later selected: ONE NEW Python cell in company ForecastMaster_GM_Setup; run only that cell once, never Run all",
+        "ReadWriteScope": "Read-only TEST metadata/date/private scalar checks; no model/source update, refresh, publication or printed/stored amounts",
+        "ExpectedMarker": "VerifierRevision R03; success TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED",
+        "StopCondition": "Any STOPPED: return full safe JSON, retain backups, no automatic retry",
+        "NextAction": "Not selected. Continue the main chat current R17.8 Desktop validation; do not run another notebook cell for these process improvements",
+        "RetryBasis": "A new receiving failure or changed external condition must justify future selection. Already passed R02 is not rerun for this candidate"
+      }
     }
   }
 }

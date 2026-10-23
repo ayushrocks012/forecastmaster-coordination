@@ -1,5 +1,44 @@
 # Company setup status
 
+## 24 October 2026 — local execution improvements qualified; current Desktop step unchanged
+
+Implemented the side-conversation request for executable process improvements
+after the successful company R02 return. The existing handoff manifest now binds
+classified VERIFIED/INFERRED/UNKNOWN observations to exact receipts and keeps
+bounded installation, representative native flow and comparable performance as
+separate gates. The existing hash command validates these declarations too.
+Maintenance passes while broad expansion and unsupported speed claims are
+refused until their specific company evidence exists. These are purpose-specific
+checks, not a prerequisite to routine diagnosis or fixes needed for the slice.
+
+An additive R03 verifier candidate provides consolidated safe stage outcomes,
+timings, history categories/UTC/UK times, request links and structured errors;
+it skips dependent reads after failure and rechecks definition/cloud consistency.
+Its exact generated cell passes 13 synthetic receiving tests. It is NOT selected
+for the operator: company R02 already passed, so no new notebook cell is needed.
+Positive missing-import counts, unreadable labels, failed processing, invalid
+dates and concurrent changes remain refusal cases; business blanks are preserved.
+
+All 50 local regression tests pass: existing release 14, existing refresh probe
+eight, exact R03 candidate 13, admission/performance 15. Ruff F and Bandit pass;
+catalog freshness and frozen-artifact preservation are checked. Automatic CI
+repeats the public local suite and deterministic generation checks without cloud
+credentials. Graph impact remains UNKNOWN: F1 change_scope fails closed and
+detect_changes reports UNAVAILABLE/AUTHORITY_DRIFT_BLOCKS_CONCLUSION. Direct
+source, exact helper/query identity, regression and hash checks provide bounded
+fallback evidence, not a graph-authority pass. No fresh native engine or company
+numerical/UI run occurred. [Local qualification receipt](logs/2026-10-24-execution-improvements-r01-qualified.json).
+
+The active R02 verifier, installer, report/model packages, business helpers,
+prior failures/receipts and production artifacts retain their bytes. The same
+UNDERSTANDING acceptance section documents commands, deliberately incomplete
+evidence templates, private-context fingerprints and comparable timing rules;
+no parallel understanding document or status ledger was created. The current
+action remains the already-requested company Desktop validation below. Native
+interaction/export, independent broad business parity, comparable speed and
+production release remain open. No company update, refresh or publication was
+requested or executed by this implementation.
+
 ## 24 October 2026 — R17.8 installed and bounded checks VERIFIED; move to Desktop validation
 
 The operator returned TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED,
