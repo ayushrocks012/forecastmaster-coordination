@@ -1,5 +1,58 @@
 # Company setup status
 
+## 23 October 2026 — R02 recovery verified; project reference expanded from retained history
+
+The operator supplied test01.txt. Its complete JSON was parsed and checked:
+TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED; all 23 check records completed,
+18 expected metric/window/year groups and all 90 scalar reads numeric, informative
+and internal variance/% identities matching. ClearValues request
+494d0ab6-3106-4a8f-b2fb-8bba91789340 was identified as Completed. R02 submitted
+only missing Full a7538a56-f547-488f-a88e-4b92aad414b2; it completed with zero
+messages. No clear was submitted again. Source/native IMS/EF (three rows each)
+and axis/review/start/end/fact months (84 each) now match physical storage exactly,
+with zero invalid dates and zero engine/client disagreements. File coverage and
+source/cutoff/fit/period guards pass. Model definition/cloud mapping match the
+private R01 backup; physical metadata/cohort/processing remained stable.
+Receipt: logs/2026-10-23-native-r178-r02-recovery-verified.json. No company amount
+values or raw definition were copied here. Company aggregate queries DID run
+privately; do not describe this receiving run as no amounts queried.
+
+This closes the interrupted-processing/date recovery for the checked scope.
+The processing-state recovery succeeded with no definition/source rewrite;
+it does not establish a specific engine defect or recurrence prevention.
+No more reset/manual refresh/R02 rerun. Keep backups/markers. Reopening unchanged
+R17.7 TEST to inspect restored captions/numbers is allowed, without another
+model refresh. The earlier R02 hold is now reviewed for this exact output.
+R17.8 adapter remains uninstalled; its TEST release, native UI/export/speed and
+independent Excel/R16.6/broad numerical parity remain separate open gates.
+
+R02 inventory counts: 39 tables, 98 measures, 12 relationships; 15 Direct Lake
+and 24 Import partitions, one cloud connection. It did NOT export all names,
+fields, formulas, all Lakehouse objects or workspace items. The private scalar
+batch took 202956ms; its serial scope/cache order cannot establish report speed.
+
+The user asks for one durable project reference covering the whole course of
+work. [UNDERSTANDING.md](../handoff/report-native-only-r17.8/UNDERSTANDING.md)
+now covers system/objects/IDs, ingestion/retention/identity, physical grains and
+fields, known native schema/relationships/DAX, visual bindings, both-page design,
+business rules, superseded decisions, operations, chronology, current gates and
+explicit live inventory gaps. The retained current-chat text from 20 October,
+including 205 user messages, was reviewed with current source/receipts; this is
+not a claim of re-inspecting every image or the earlier development chat.
+
+Its generated public catalog is explicitly bounded to fabricated packages:
+29 SAMPLE schemas (24 native helpers + 5 simplified base tables), 51 native
+R17.7 DAX definitions, 7 native relationships, 26 R17.8 draft visuals and the
+18-row S&OP source identity order. It is not the full 39-table/98-measure live
+inventory. tools/refresh_understanding_catalog.py verifies the marked catalog
+against preserved public ZIPs, without Fabric access or company row export.
+Catalog freshness, local links, Python 3.10 syntax and exact R17.7 updater-edit
+formula agreement were checked. All 1132 protected prior files, including all
+six R02 package files, keep their hashes. No model/DAX test was rerun here.
+The file remains the single interpretation/reference entry point; this STATUS
+owns chronological company evidence. No active/frozen R02 code, prior candidate,
+workbook, notebook, pipeline, security, connection or production artifact changed.
+
 ## 23 October 2026 — R01 clear accepted; full missing; combined R02 recovery and deep diagnostics prepared
 
 The operator returned TEST_R178_DATE_CACHE_RESET_STOPPED / R01. Exact routing,

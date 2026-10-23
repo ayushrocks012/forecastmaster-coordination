@@ -1,5 +1,29 @@
 # ForecastMaster coordination repository
 
+**Project resumption entry point:** read
+`handoff/report-native-only-r17.8/UNDERSTANDING.md` first. It is the single
+maintained project-wide reference (architecture, known objects, fields/grains,
+public DAX/relationships/visual mappings, business/design decisions, evidence,
+open gaps and update procedure), despite its historical R17.8 folder name.
+`feedback/STATUS.md` owns the dated company receipts. Load the resume section
+first; consult only the relevant detailed appendix after compaction.
+
+Latest reviewed company state: R02 returned
+TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED. Dates/guards and 90 internal
+scalar checks passed; original metadata/cloud/source state was preserved.
+No more reset/manual refresh/R02 rerun for that recovery. Native R17.8 adapter
+is still uninstalled. Reopening existing R17.7 TEST for UI inspection is allowed;
+no publication or production change. This supersedes older receiving steps below.
+
+The user explicitly requests ongoing maintenance of this one understanding
+reference from chat/history/current source and reviewed receiving outputs.
+Distinguish requested/designed/built/installed/company-tested/unknown facts.
+R02 observed 39 tables, 98 measures and 12 relationships, but did not export
+all names/definitions or the whole workspace. The public SAMPLE catalog has
+29 simplified schemas and 51 R17.7 native definitions; never call it a complete
+live inventory. Update the reference/STATUS on material evidence changes,
+preserve frozen package/test/cell bytes and keep raw company exports private.
+
 This is the separate office-laptop script and feedback handoff. Keep changes here; the Smart Demand Manager application checkout is outside this task's requested scope.
 
 Use `main`. Pull with `--ff-only` before starting a handoff and commit/push the completed handoff before the other laptop receives it. Preserve local edits if a conflict occurs; do not reset or force-push to clear it.

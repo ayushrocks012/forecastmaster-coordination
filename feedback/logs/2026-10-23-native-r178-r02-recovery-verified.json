@@ -1,0 +1,276 @@
+{
+  "EvidenceDate": "2026-10-23",
+  "Source": "Operator attachment test01.txt; no company API execution on this host",
+  "SourceFileSHA256": "49b20bf24ed6c2535498fd4df3b8c8b3d0719a6815ad91414c3485c58817e906",
+  "ReportedStage": "TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "ChecksReadCompleted": 23,
+  "Inventory": {
+    "TableCount": 39,
+    "MeasureCount": 98,
+    "PartitionModes": {
+      "directLake": 15,
+      "import": 24,
+      "directQuery": 0,
+      "default": 0
+    },
+    "RelationshipCount": 12,
+    "RequiredProbeMeasuresPresent": true,
+    "DateBindings": "CHECKED_SEPARATELY",
+    "RawDefinitionPrinted": false
+  },
+  "Processing": {
+    "ClearValuesSubmissionRequestedHere": false,
+    "FullSubmissionAttemptedHere": true,
+    "ExistingFullReused": false,
+    "ClearValues": {
+      "ID": "494d0ab6-3106-4a8f-b2fb-8bba91789340",
+      "Kind": "ClearValues",
+      "Status": "Completed",
+      "Extended": "Completed",
+      "MessageCount": 0,
+      "HTTPStatus": 200
+    },
+    "FullResponseReceived": true,
+    "FullAcceptedHTTPStatus": 202,
+    "FullHeaderIDCount": 1,
+    "FullHeaderMatchedHistory": true,
+    "Full": {
+      "ID": "a7538a56-f547-488f-a88e-4b92aad414b2",
+      "Kind": "Full",
+      "Status": "Completed",
+      "Extended": "Completed",
+      "MessageCount": 0,
+      "HTTPStatus": 200
+    }
+  },
+  "ExactDateParity": {
+    "Axis": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "End": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "Facts": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "NativeEF": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "NativeIMS": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "Review": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "SourceEF": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "SourceIMS": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "Start": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    }
+  },
+  "EngineClientDateBoundary": {
+    "SourceEF": {
+      "Rows": 3,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "Start": {
+      "Rows": 84,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "NativeEF": {
+      "Rows": 3,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "SourceIMS": {
+      "Rows": 3,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "NativeIMS": {
+      "Rows": 3,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "Review": {
+      "Rows": 84,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "Facts": {
+      "Rows": 84,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "Axis": {
+      "Rows": 84,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    },
+    "End": {
+      "Rows": 84,
+      "EngineBlankDates": 0,
+      "EngineOutOfRangeOrBlankDates": 0,
+      "ClientTypedDayDisagreesWithEngineText": 0,
+      "EngineDaysMatchPhysical": true
+    }
+  },
+  "FilesMetadata": {
+    "SourceRows": 3,
+    "NativeRows": 3,
+    "AutomaticADSSources": 2,
+    "SourceInvalidIMS": 0,
+    "SourceInvalidEF": 0,
+    "NativeInvalidIMS": 0,
+    "NativeInvalidEF": 0,
+    "AutoInvalidIMS": 0,
+    "AutoInvalidEF": 0,
+    "SourceIdsMissingNative": 0,
+    "NativeIdsMissingSource": 0,
+    "IMSMetadataMismatch": 0,
+    "EFMetadataMismatch": 0
+  },
+  "SelectionGuards": {
+    "SourceOK": 1,
+    "CutoffValid": 1,
+    "FitCutoffValid": 1,
+    "PeriodAvailable": 1,
+    "MetricChoices": 1,
+    "ScenarioChoices": 1,
+    "AvailableScopeRows": 100
+  },
+  "NumericalChecks": {
+    "Scope": "ONE_AVAILABLE_UK_OCTOBER_ADS_DRIVER",
+    "Metrics": [
+      "market",
+      "ef",
+      "share"
+    ],
+    "Windows": [
+      6,
+      12,
+      24
+    ],
+    "Years": [
+      2026,
+      2027
+    ],
+    "Fields": [
+      "Plan",
+      "Benchmark",
+      "Variance",
+      "VariancePercent",
+      "FutureTrend"
+    ],
+    "ScalarQueriesSubmitted": 90,
+    "GroupsPassed": 18,
+    "AllScalarsNumeric": true,
+    "AllVarianceIdentitiesMatched": true,
+    "AllPercentIdentitiesMatched": true,
+    "ElapsedMs": 202956,
+    "ScalarTimingsMs": {
+      "P": {
+        "Min": 910,
+        "Median": 1064.5,
+        "Max": 1558
+      },
+      "B": {
+        "Min": 1861,
+        "Median": 2215.0,
+        "Max": 3201
+      },
+      "A": {
+        "Min": 2184,
+        "Median": 2736.5,
+        "Max": 3365
+      },
+      "V": {
+        "Min": 2231,
+        "Median": 2847.0,
+        "Max": 6355
+      },
+      "T": {
+        "Min": 1624,
+        "Median": 1939.0,
+        "Max": 3336
+      }
+    },
+    "ScopeLimit": "Internal identities for one available ADS driver; not independent business parity or report speed"
+  },
+  "VerifiedFlags": {
+    "BeforeDefinitionAndCloudMatchBackup": true,
+    "KnownFullCompleted": true,
+    "OtherModelDefinitionPreserved": true,
+    "CloudConnectionPreserved": true,
+    "PhysicalDateMetadataStable": true,
+    "ExactDateParityVerified": true,
+    "EngineDateBoundaryValid": true,
+    "FilesMetadataValid": true,
+    "SelectionGuardsValid": true,
+    "BoundedInternalCalculationChecksPassed": true,
+    "NumericSourceCohortStable": true,
+    "NumericMetadataStable": true,
+    "NumericPhysicalDateMetadataStable": true,
+    "NumericProcessingStable": true
+  },
+  "ModelDefinitionWriteRequested": false,
+  "LakehouseTableWriteRequested": false,
+  "OriginalModelWriteRequested": false,
+  "CompanyAmountQuerySubmitted": true,
+  "CompanyAmountsPrintedOrStoredByScript": false,
+  "ReportPublished": false,
+  "NativeR178AdapterInstalled": false,
+  "DesktopRenderingVerified": false,
+  "IndependentBusinessParityVerified": false,
+  "Interpretation": "Previously invalid dates recovered after the existing clear and one missing full; exact physical/engine/client parity, selection guards and bounded internal numerical checks now pass. Specific engine defect and recurrence prevention remain unproven. No further reset/manual refresh for this recovery."
+}

@@ -1,35 +1,31 @@
-# Current report step — R17.8 combined TEST recovery and diagnostics R02
+# Project reference and current report state
 
-Follow [the one-cell receiving steps](handoff/report-native-only-r17.8/cache-recovery-r02/README.md).
-The prior R01 reset accepted clearValues (HTTP 202), then stopped on response
-URL handling before polling clear or submitting full. TEST may currently be
-cleared. Succeeded in that output belonged to getDefinition, not processing.
-**Do not rerun R01, delete attempt markers or manually refresh.**
+Read [UNDERSTANDING.md](handoff/report-native-only-r17.8/UNDERSTANDING.md)
+when resuming this work, including after chat compaction. It is the single
+maintained project-wide reference for architecture, known objects, data flow,
+fields/grains, public native DAX/relationships/visual mappings, business/design
+rules, decisions/history, evidence and open questions. Start with its resume
+section; load only the detailed appendix needed for the current work.
 
-The new cell identifies the accepted clear in canonical TEST history, follows
-an existing full or safely submits only the single missing full, then runs
-consolidated exact-date/metadata/selection/internal-calculation checks. It
-never submits clearValues. Existing backups, the complete model definition,
-cloud mapping, physical tables and production R16.6 are preserved.
+The latest company R02 result was reviewed:
+**TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED**. The existing clear and one
+missing full are completed; all nine date groups agree exactly with physical
+storage, guards pass and all 90 bounded private scalar checks pass. Complete
+model definition/cloud mapping and metadata dependencies were preserved.
+See [STATUS](feedback/STATUS.md) and the linked receiving receipt.
 
-On the company laptop: close the TEST report, pull Coordination, copy the whole
-RECOVER AND DIAGNOSE TEST R02.py from handoff/report-native-only-r17.8/cache-recovery-r02/
-into ONE NEW ForecastMaster_GM_Setup Python/PySpark cell. Run ONLY that cell
-ONCE; do not use Run all. Keep the existing Spark/Lakehouse context. Let it
-finish and return the entire final JSON, including failed/skipped checks.
-Do not run an updater, extra refresh or publish after it. It prints no amounts.
+**Do not rerun R02/reset, delete markers or manually refresh again for this
+recovery.** Keep the private backup. You may reopen the unchanged R17.7 TEST
+PBIP to inspect restored captions/numbers; it is a UI check, not installation.
+The model has 39 tables/98 measures/12 relationships by this receipt, but R02
+is not a complete workspace/table/measure inventory. Unknown details stay marked.
 
-Read [the maintained understanding file](handoff/report-native-only-r17.8/UNDERSTANDING.md)
-for the system boundaries, confirmed findings, open causes and decision gates.
-[feedback/STATUS.md](feedback/STATUS.md) owns company receiving evidence. This
-batch is prepared and locally tested; company execution remains pending.
+Built-in Power BI visuals only. The compact R17.8 SAMPLE uses fabricated data;
+the selection adapter remains an uninstalled draft. No company-connected R17.8
+TEST ZIP/updater or production replacement is released. Native UI/export/speed
+and independent business parity still need their separate evidence.
 
-Built-in Power BI visuals only. The compact fabricated R17.8 SAMPLE remains
-optional for layout review; the selection adapter is an uninstalled draft.
-No company-connected R17.8 TEST ZIP/updater is published. Native UI, actual
-report speed, export and independent business parity remain separate gates.
-
-Original laptop connection setup follows for reference.
+Original company-laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH
 

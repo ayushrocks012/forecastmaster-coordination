@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 75101,
-      "SHA256": "b11d4994b0b2b10a0af8d1cfc7d98bcdaf687cd6b2c7f840f82328cd24ac9a23"
+      "Bytes": 76651,
+      "SHA256": "f862f9c59b7a14d303642e2d1cfdc430f223ab6858fc608e5be0862ef16b14ca"
     },
     "README.md": {
-      "Bytes": 5992,
-      "SHA256": "7b2117f2e21b0be2e530ad3ef707dcf81515a8dc23ddd1ee23684020e9f1ed1a"
+      "Bytes": 6183,
+      "SHA256": "14f8f318f2602762258c675a30b9068a52e0dbe0965b5960d150191ef5389a91"
     },
     "feedback/STATUS.md": {
-      "Bytes": 126218,
-      "SHA256": "0e4519262fd599122377e88f660f9ebd69723547ae2e96919213024817677d5b"
+      "Bytes": 129903,
+      "SHA256": "c7cdf01ba11a51bd6f7d84fc97049b058d936244fd564b34840b8591f75cd5cb"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 6669,
-      "SHA256": "e75bf605ed6956da4a30af1969a0dc343573aecd10e97bfde73f4663835c7eff"
+      "Bytes": 6341,
+      "SHA256": "c951e64839d2c5461c4c82dc19e277a40906899221d07eb2c61850a00908eadc"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 8648,
-      "SHA256": "82956fdaf0dbbc6654674b041f18d4cb607cb2c9748cea910acbd2015ebc7fad"
+      "Bytes": 145905,
+      "SHA256": "f70b3aaed371684994e37b93990da31e107633fafd89178763d71bb123242f8d"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4548,6 +4548,14 @@
     "handoff/report-native-only-r17.8/cache-recovery-r02/test_recovery.py": {
       "Bytes": 28079,
       "SHA256": "19dcef934fa07ad867ebcf9995dc22790145ec15d91ae4378694471bc6f4c784"
+    },
+    "feedback/logs/2026-10-23-native-r178-r02-recovery-verified.json": {
+      "Bytes": 7545,
+      "SHA256": "1819d030d6acf6c40a9c161eba092fb91fdbffc3131727afa2cfbeb2e81b14d8"
+    },
+    "tools/refresh_understanding_catalog.py": {
+      "Bytes": 9431,
+      "SHA256": "a985d431382f3bf4bd433416504f2187aa7ac2be2285e0dea5026722e2cb1bf7"
     }
   }
 }
