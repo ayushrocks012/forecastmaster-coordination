@@ -614,3 +614,21 @@ Do not rerun R01 or prepare a source/model correction from filename guesses.
 Keep the layout SAMPLE separate; R17.8 adapter/TEST installation and all native
 UI/numerical/performance gates remain unexecuted. No company-connected R17.8
 ZIP or updater is published until the boundary is understood and qualified.
+
+R02 then returned R178_DATE_BOUNDARY_CHECK_STOPPED / RuntimeError after its
+initial read-only message. Exact identity had passed, but no per-step result or
+failure location is retained. No model/Lakehouse write, refresh or publication
+was requested. Do not infer which read failed, physical date validity or an
+underlying permissions/cancellation/memory problem from this family alone.
+
+Current step is report-native-only-r17.8/date-boundary-r03/README.md. ONE NEW
+read-only PySpark cell ONCE; return final JSON including PARTIAL/STOPPED. R03
+retains safe checkpoints/reason codes/HTTP status and independent successful
+definition, semantic-month and per-table physical reads. Exact TEST identity
+remains a prerequisite. Prefer the previously successful x-ms-operation-id
+reader with bounded 360-second polling/Retry-After; no arbitrary response URL
+or automatic definition resubmission. That reader correction is not proof of
+R02's cause. No raw error/header/connection/record/amount output. No updater,
+refresh retry, source conversion, credentials/admin change or report rebuild.
+Preserve all R01/R02/report/adapter/SAMPLE and earlier package bytes. R03 local
+API/Spark-shaped mocks are not company execution or date/UI/speed acceptance.

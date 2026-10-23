@@ -1,5 +1,31 @@
 # Company setup status
 
+## 23 October 2026 — R02 date-boundary check stopped; R03 retains safe checkpoints and partial reads
+
+The operator returned R178_DATE_BOUNDARY_CHECK_STOPPED / RuntimeError after the
+initial read-only message. No company amounts/model/Lakehouse writes, refresh
+or publication were requested. Exact TEST identity passed before that message,
+but R02 discards its failure location and intermediate results. The failing
+read/cause and physical date validity remain UNKNOWN; do not label this a
+permission, memory, cancellation, source-date or model-update failure. Receipt:
+logs/2026-10-23-native-r178-boundary-r02-stopped.json.
+
+Current company action: [date-boundary R03](../handoff/report-native-only-r17.8/date-boundary-r03/README.md),
+ONE NEW ForecastMaster_GM_Setup PySpark cell ONCE, then return final JSON.
+After exact identity, definition/month-key/physical checks retain independent
+results and safe step/reason/HTTP metadata. Definition polling uses the known
+operation-ID route with a bounded 360-second wait; no automatic resubmission.
+This corrects a reader fragility, not a proven diagnosis of R02's stop. Missing
+or failed reads stay partial; no raw errors/headers/records/amounts are printed.
+
+Ten local mocked route/async/privacy/partial-result guards pass, including a
+small Spark-shaped metadata projection fake. Actual company DAX/Spark/API
+execution is pending. Old R01/R02, report/adapter/SAMPLE and earlier packages
+retain their bytes. No updater, repeat refresh, physical rewrite, production
+change or company-connected R17.8 TEST ZIP is introduced. R01's invalid original
+TEST cutoff observations remain; storage versus semantic binding/loading and
+the blank-state repair remain open. Native-only/other-laptop access continues.
+
 ## 23 October 2026 — R01 confirms invalid original TEST dates; physical/semantic boundary remains open
 
 The operator returned R178_METADATA_READS_COMPLETED. In UK/2026-10, original

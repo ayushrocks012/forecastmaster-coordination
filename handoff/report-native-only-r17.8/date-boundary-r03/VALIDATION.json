@@ -1,0 +1,39 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "R178_DATE_BOUNDARY_R03_PREPARED_COMPANY_RUN_PENDING",
+  "PriorR02Result": "CHECK_STOPPED / RuntimeError; failed step unknown",
+  "LocalTestsPassed": 10,
+  "Python310Grammar": "PASS",
+  "Evidence": "Mocked Fabric responses and Spark-shaped metadata projection fake only",
+  "SafePerCheckFailures": true,
+  "SuccessfulReadsRetainedOnOtherFailures": true,
+  "DefinitionReadOperation": {
+    "SingleGetDefinitionPOST": true,
+    "OperationIdHeaderPreferred": true,
+    "KnownHostUUIDLocationFallback": true,
+    "MaximumWaitSeconds": 360,
+    "MaximumSleepSeconds": 30,
+    "AutomaticResubmission": false
+  },
+  "ReportAdapterAndPackagesChanged": false,
+  "ModelOrLakehouseWriteRequested": false,
+  "CompanyAmountsQueriedHere": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "PriorManifestEntries": 1117,
+  "PriorProtectedFilesToVerify": 1113,
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination not registered",
+    "EditImpact": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+    "ChangeScope": "UNAVAILABLE; staged diff-impact failed closed with analysis_incomplete=1 and interface_classification_incomplete=1; full impact UNKNOWN",
+    "Fallback": "Direct route/privacy/partial-result tests and frozen-byte checks; full graph impact UNKNOWN"
+  },
+  "Unverified": [
+    "R02 failing read and underlying cause",
+    "Company R03 API/DAX/Spark execution",
+    "Physical Lakehouse versus semantic date boundary",
+    "Blank visual cause and repair",
+    "Company native layout/numerical/performance acceptance"
+  ],
+  "PriorProtectedFilesVerified": 1113
+}
