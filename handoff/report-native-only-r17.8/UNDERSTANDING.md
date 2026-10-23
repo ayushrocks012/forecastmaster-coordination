@@ -130,11 +130,12 @@ inputs. The offline Power BI plugin reports 62 public formula nodes/97 heuristic
 edges; this is not a live company graph. Production, notebooks, schedules,
 permissions, Lakehouse tables and source data were not changed.
 
-UNKNOWN/PENDING: company install, processing and native rendering/export/speed;
-independent Excel/business acceptance, full native S&OP and full R16.6 feature/FX
-parity. The release is TEST qualification, not a production replacement. The
-historical generated catalog below still documents the preserved draft/public
-baseline, with this release's scoped differences recorded here.
+COMPANY: installation and one refresh are operator-confirmed, with the partial
+verifier results recorded above. UNKNOWN/PENDING: final read-only verification,
+native rendering/export/speed, independent Excel/business acceptance, full native
+S&OP and full R16.6 feature/FX parity. This is TEST qualification, not a production
+replacement. The historical generated catalog below still documents the preserved
+draft/public baseline, with this release's scoped differences recorded here.
 
 ## How to read this reference
 
@@ -154,6 +155,7 @@ Navigation: [system map](#system-map-and-known-fabric-objects),
 [physical schema](#physical-table-and-field-contracts),
 [business rules](#business-meaning-and-calculation-contracts),
 [design](#report-design-and-selection-contracts),
+[acceptance and validation](#acceptance-and-staged-validation),
 [decisions/history](#decisions-and-delivery-history),
 [recovery evidence](#latest-r02-result-and-what-it-proves),
 [verified company inventory](#company-inventory-r01),
@@ -452,10 +454,68 @@ Power BI; fixed compact height plus drill/scroll/Focus is the current approach.
   Full hashes stay internal, short version suffix only for real display collisions.
   No duplicate audit table, no Source selection dropdown and no Apply filters
   button. Draft R17.8 infers manual mode from actual file selection; clearing it
-  restores Automatic ADS. That draft behavior is not installed in TEST yet.
+  restores Automatic ADS. The release adapter is now installed/refreshed;
+  receiving interaction acceptance remains pending. The preserved draft is historical.
 - Keep nonoverlapping visual rectangles/text padding at normal zoom and reduce
   wasted whitespace. R17.8 fabricated layout is 1440×1330 vs prior 1884px height;
   a geometry/schema pass does not establish actual Desktop rendering.
+
+### Acceptance and staged validation
+
+These checks consolidate the user's recorded feedback; they do not request a
+new design approval or authorize another installation/refresh. The design and
+business sections own the detailed meaning. The current company step remains
+only the corrected read-only verifier in the resume section. Built, locally
+tested, installed and accepted are separate states.
+
+| Requirement | Evidence needed for acceptance | Current limit |
+| --- | --- | --- |
+| Built-in visuals; production R16.6 unchanged | Native visual inventory, preserved bindings/formulas/artifacts and reviewed company metadata | Local preservation passes; final installed verifier pending |
+| Monthly Start/End; separate Section/Measure; valid driver/tier/period choices | Receiving interactions, including changing Section, month boundaries and unavailable choices | Built and locally checked; company interactions pending |
+| One graph/review trend; independent multiple Executive trends | Change each control and verify its intended graph/summary context and variance columns | Synthetic contexts checked; company interactions pending |
+| Plan, signed Overcall/Undercall and variance % with native drill | Independent reviewed R16.6/bridge values at total, driver and sector across the relevant periods | Synthetic oracle and 12 narrow company comparisons pass; broader business parity pending |
+| Readable graph with differentiated forecast/trend and dynamic heading | Actual Desktop screenshots/interaction at the receiving laptop's normal zoom; labels understandable without relying on hover | Local styles/schema checked; native rendering pending |
+| One searchable file list, import UTC, multi-select without Ctrl, no hashes/Apply/Source dropdown | Select several files, change scope, clear to Automatic ADS; verify source versions stay distinct | Local selection/label cases checked; final metadata and receiving UI pending |
+| Compact labelled controls, no overlaps/duplicate titles/tables | Actual layout and native drill/scroll/Focus check; fixed matrix height remains explicit | 1440×1330 geometry checked; receiving layout pending |
+| Correct dates, missing values, observed zero and weighted ratios | Exact date-set checks plus independent business edge cases; unavailable inputs remain unavailable | Nine company date groups pass; numerical coverage remains scoped |
+| Materially faster meeting interactions without resource failures | Same-selection/company-data Performance Analyzer DAX and total timings, stated warm/cold conditions and observed query/resource failures | R17.6 timings retained; comparable R17.8 speed unmeasured; no numeric SLA agreed |
+
+Apply the following sequence to future report/model changes. Keep the current
+installed candidate stable while its remaining receiving gates are completed.
+
+1. **Start from the verified model and agreed requirements.** Read the resume,
+   dated inventory, business/design sections and latest receipt. Pin the relevant
+   report, adapter, source contracts and comparison scope. A known metadata
+   inventory does not establish current row values, permissions or performance.
+2. **Prove a small end-to-end slice before expanding a new design.** Start with
+   one available affiliate/cycle/driver/metric: file selection → source/cutoff →
+   Review summary → monthly actual/forecast/trend → Executive absolute/% variance.
+   Pair a known-good private R16.6/bridge reference with actual native rendering.
+   Local SAMPLE output alone cannot qualify the company slice. This representative
+   proof does not replace the required broader population or authorize production
+   changes.
+3. **Test realistic edges in cost order.** Use focused existing tests first,
+   then the required synthetic/native population and receiving checks: empty
+   selections, empty metadata counters, missing/invalid dates, blank versus zero,
+   incomplete history/weighted ratios, ambiguous/multiple versions, scope changes,
+   independent trend windows and driver/sector drill. Check the actual query
+   context and semantic-engine behavior, not only convenient mocked values.
+4. **Keep evidence gates independent.** Source/schema checks, numerical parity,
+   completed processing, native UI/export, company speed and business acceptance
+   each need scoped evidence. Classify a failure as product, source, checker,
+   environment or missing fact before retrying. Consolidate justified corrections;
+   do not ask the operator to repeat completed work without a supported reason.
+5. **Measure before broader optimization or release.** Compare graph, Review and
+   Executive DAX/total times with identical selections and stated data/cache
+   conditions. Inspect query/resource evidence before proposing Fabric/storage
+   changes. Retain failures and applicable thresholds; claim improvement only
+   within comparable measured scope. Production release needs its own authorization.
+
+Keep the requirement checks here and dated results in STATUS/linked receipts.
+On a changed decision or meaningful result, update the resume, affected contract,
+evidence limits and next action together. Do not promote a pending gate from a
+local pass or create another competing checklist/status file. This procedure
+reduces avoidable errors; it is not a guarantee of first-attempt correctness.
 
 ### S&OP review and other pages
 
@@ -1316,13 +1376,11 @@ partition/role/connection metadata remain outside this inventory.
 
 **No new inventory cell, updater, reset or extra refresh is needed from the
 operator for this result.** Preserve backups and use the verified dictionary
-as the model boundary for the next compact native TEST report plus matching
-selection adapter. Current R17.8 SAMPLE remains fabricated and the adapter
-remains uninstalled. Build/source/preservation checks must precede its separate
-receiving handoff; then actual Desktop interactions, selections, date labels,
-export, business values and same-selection warm/cold performance need their
-own acceptance. Keep production R16.6 unchanged. Do not turn this metadata
-success into a claim that the rejected R17.7 layout or query speed is fixed.
+as the model boundary. The compact R17.8 release has since been built, installed
+and refreshed; SAMPLE remains fabricated. Current action is the corrected
+read-only verifier above, followed only after its success by the existing native
+UI/export/business/performance acceptance. Keep production R16.6 unchanged.
+The inventory itself does not prove that the rejected layout or speed is fixed.
 
 ## What is still unknown and how to complete the reference
 
@@ -1343,13 +1401,12 @@ immutable receipt supersede the earlier "inventory pending" notes.
 | Actual report/database performance and capacity | R17.6 visual timings and R02 scalar timings; R01 timings are metadata retrieval only | Same-selection warm/cold Performance Analyzer and query/resource evidence; schema inventory alone cannot diagnose all slowness |
 | First schedule and post-targeted unchanged/removal/retry/history behavior | Historical schedule plus one targeted changed run | Separate receiving receipts for those cases |
 
-**No additional receiving diagnostic is currently requested.** Preserve the exact
-R01 inventory cell/package and older recovery evidence. Do not rerun an updater,
-reset or extra refresh based only on these remaining knowledge gaps. The next
-bounded engineering task is the compact native TEST report and matching selection
-adapter, with guarded preservation/numerical/source checks before a company
-handoff. The rejected R17.7 layout and fabricated R17.8 SAMPLE do not become
-accepted/live because this inventory passed.
+**No additional inventory/recovery diagnostic is requested for these gaps.**
+Preserve the exact R01 inventory cell/package and older recovery evidence. Do
+not rerun an updater, reset or extra refresh. The release is now installed and
+processed; the current bounded action is only the corrected read-only verifier
+in the resume section. Native UI/business/export/speed remain separate. The
+rejected R17.7 layout and fabricated SAMPLE are not receiving acceptance.
 
 Keep the raw company JSON and copied output private. The reviewed receipt
 retains only schema/object metadata, expression fingerprints and bounded checks;
@@ -1365,6 +1422,9 @@ not a permanent guarantee against later drift or chat compaction mistakes.
    and the narrow source/receipt before acting. State current installed/candidate
    versions and any active run. Do not rely on a compacted chat for object IDs or
    claim this reference prevents all future mistakes.
+   Before new report/model work, use [acceptance and staged validation](#acceptance-and-staged-validation)
+   to bind the intended behavior and completion evidence. Do not reopen completed
+   installation/recovery steps merely because an acceptance gate remains pending.
 2. Keep approved business semantics, production R16.6, native-only policy,
    company-laptop access, no-IT requirement and one-writer scope. Resolve routine
    reversible choices; ask only for genuinely missing business meaning/access.

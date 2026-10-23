@@ -1,5 +1,26 @@
 # Company setup status
 
+## 23 October 2026 — acceptance checks and staged validation consolidated
+
+The user authorized making the agreed process improvements durable. The existing
+[understanding reference](../handoff/report-native-only-r17.8/UNDERSTANDING.md#acceptance-and-staged-validation)
+now maps the compact native requirements to acceptance evidence and current
+limits. Future changes start from the verified inventory and requirements,
+prove a small end-to-end slice, test real semantic edge cases, then complete the
+applicable broader numerical/UI/export/company-performance gates. Comparable
+timings are required before claiming speed gains or proposing broader physical
+optimization. AGENTS routes future sessions to the same section.
+
+Stale current-state prose describing R17.8 as uninstalled was corrected; dated
+receipts and the preserved generated draft catalog remain unchanged. This is a
+documentation-only improvement, not new numerical, UI or performance evidence.
+The installed candidate, report/adapter/cells, production R16.6 and company state
+are untouched. Current operator action stays **only the corrected read-only
+verifier R02**; no reinstall, refresh/reset, marker deletion or publication.
+Added local links/anchors, public-catalog freshness, the full handoff manifest
+and preservation of all other manifest members were checked. No native engine
+or company test was rerun for this documentation change.
+
 ## 23 October 2026 — R17.8 installed/refreshed; old verifier partial return reviewed
 
 The operator confirmed Open First steps 1–3 succeeded and returned the old R01

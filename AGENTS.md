@@ -8,6 +8,12 @@ open gaps and update procedure), despite its historical R17.8 folder name.
 `feedback/STATUS.md` owns the dated company receipts. Load the resume section
 first; consult only the relevant detailed appendix after compaction.
 
+Before new report/model work, read UNDERSTANDING.md's "Acceptance and staged
+validation" section. Reuse its agreed requirements, prove a small end-to-end
+slice before broad redesign, test semantic edge cases and keep local, company
+numerical, native UI/export, performance and business gates separate. Update
+that same reference and STATUS at meaningful boundaries; no parallel checklist.
+
 Latest company return: R17.8 install and one TEST refresh completed. The old
 verifier passed nine exact date groups and all 12 paired scalar comparisons,
 then stopped with TypeError before metadata label counts/final gates. Overall
