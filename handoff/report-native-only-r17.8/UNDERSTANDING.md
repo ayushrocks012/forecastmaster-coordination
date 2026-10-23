@@ -15,6 +15,35 @@ company observations are not copied here. New results update this reference;
 
 ## Resume in one minute
 
+**Latest company UI result — REJECTED, repair pending:** seven Desktop
+screenshots returned on 24 October show clipped Review rows, an unwanted
+Automatic ADS Executive parent and failed sector expansion, stale Section/Measure
+selection, unscoped file choices and unreadable chart units/labels. The bounded
+model verifier below remains valid within its scope; it did not qualify this UI.
+[Reviewed UI failure and local connection attempt](../../feedback/logs/2026-10-24-r178-native-ui-defects-reviewed.json).
+
+**Superseding file rule:** ADS files must be visibly selected by default;
+no selected file means no business values. Clearing must NOT restore Automatic
+ADS. This is an approved requirement, not an implemented R01 behavior. The old
+clear-to-automatic tests/candidate remain historical; current receiving admission
+now requires an `empty_file_selection` observation instead.
+
+**Current action:** correct the representative native slice before another
+company handoff. Compare the preserved R16.6 graph, repair matrix height/drill,
+dependent choices and selected-source admission, and inspect actual native
+rendering with fabricated data. Do not send another installer/verifier or request
+a Fabric refresh for the known UI defects. Production R16.6 stays unchanged.
+No repaired report or matching adapter has been built/installed in this review.
+
+**Local Desktop blocker:** the user confirms Power BI Desktop is open on this
+personal laptop. Computer Use initialization fails before app discovery with
+`sandboxCwd is not a local file URI` for the WSL checkout, including after a
+kernel reset. No connected document sessions were returned. No Desktop screenshot
+was captured here. Try the app's **agent** mode Windows native (separate from its
+integrated terminal setting), restart and resume this chat. Official Windows
+documentation supports that mode; it does not prove this error will be repaired.
+Do not bypass the installed Computer Use API with a custom UI helper.
+
 **Current company state — compact R17.8 TEST R01, verifier R02:** the operator
 returned **TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED** on 24 October 2026.
 Installation and the declared bounded receiving check are complete. No further
@@ -36,7 +65,7 @@ Confirmed within that run:
   before/after processing-history/date-signature stability checks passed by the
   exact source path. No model/source write, refresh or publication was requested.
 
-**Current action — company Power BI Desktop:** extract ALL contents of
+**Earlier receiving instruction, now superseded by the UI repair above:** extract ALL contents of
 [test-release-r01/candidate/ForecastMaster Compact Native R17.8 TEST.zip](test-release-r01/candidate/ForecastMaster%20Compact%20Native%20R17.8%20TEST.zip)
 to a NEW folder; open **ForecastMaster Compact Native R17.8 TEST.pbip**.
 ZIP SHA256 `94e6167b95ffc6691c5d3f552a7bfbab01d8e0416d68a209d5d24a14cdf21c6b`,
@@ -125,8 +154,9 @@ edges; this is not a live company graph. Production, notebooks, schedules,
 permissions, Lakehouse tables and source data were not changed.
 
 COMPANY: installation, processing and declared bounded read-only verification
-are complete (verifier R02 success, 24 October). UNKNOWN/PENDING: native
-rendering/interactions/export/speed, broad independent Excel/business acceptance,
+are complete (verifier R02 success, 24 October). Native rendering/interactions
+subsequently failed the user's receiving review; repair is pending. UNKNOWN:
+native export/speed and broad independent Excel/business acceptance,
 full native S&OP and full R16.6 feature/FX parity. This is TEST qualification, not a production
 replacement. The historical generated catalog below still documents the preserved
 draft/public baseline, with this release's scoped differences recorded here.
@@ -447,9 +477,14 @@ Power BI; fixed compact height plus drill/scroll/Focus is the current approach.
   filename + imported UTC timestamp; several selections without holding Ctrl.
   Full hashes stay internal, short version suffix only for real display collisions.
   No duplicate audit table, no Source selection dropdown and no Apply filters
-  button. Draft R17.8 infers manual mode from actual file selection; clearing it
-  restores Automatic ADS. The release adapter is now installed/refreshed;
-  receiving interaction acceptance remains pending. The preserved draft is historical.
+  button. **24 October overriding requirement:** ADS files visibly selected by
+  default, empty/cleared selection yields no business values. The installed R01
+  instead restores Automatic ADS when clear; that behavior is rejected and must
+  be corrected. Keep version uniqueness/coverage guards; never add alternative
+  forecasts together to make a selection appear valid. Native Select all can
+  represent the same unfiltered state as Clear, so prove actual query/filter
+  behavior before promising distinct outcomes. Default file identities and
+  imported metadata must remain private in a company-bound report artifact.
 - Keep nonoverlapping visual rectangles/text padding at normal zoom and reduce
   wasted whitespace. R17.8 fabricated layout is 1440×1330 vs prior 1884px height;
   a geometry/schema pass does not establish actual Desktop rendering.
@@ -469,7 +504,7 @@ tested, installed and accepted are separate states.
 | One graph/review trend; independent multiple Executive trends | Change each control and verify its intended graph/summary context and variance columns | Synthetic contexts checked; company interactions pending |
 | Plan, signed Overcall/Undercall and variance % with native drill | Independent reviewed R16.6/bridge values at total, driver and sector across the relevant periods | Synthetic oracle and 12 narrow company comparisons pass; broader business parity pending |
 | Readable graph with differentiated forecast/trend and dynamic heading | Actual Desktop screenshots/interaction at the receiving laptop's normal zoom; labels understandable without relying on hover | Local styles/schema checked; native rendering pending |
-| One searchable file list, import UTC, multi-select without Ctrl, no hashes/Apply/Source dropdown | Select several files, change scope, clear to Automatic ADS; verify source versions stay distinct | Label metadata verified (8 unique, no missing import/hash suffix); receiving selection UI pending |
+| One searchable file list, import UTC, multi-select without Ctrl, no hashes/Apply/Source dropdown | ADS files visibly selected by default; select several, change driver/cycle, then clear and verify business values disappear; versions must not be added together | Label metadata verified; native selection/scoping failed review; new empty-selection behavior not implemented |
 | Compact labelled controls, no overlaps/duplicate titles/tables | Actual layout and native drill/scroll/Focus check; fixed matrix height remains explicit | 1440×1330 geometry checked; receiving layout pending |
 | Correct dates, missing values, observed zero and weighted ratios | Exact date-set checks plus independent business edge cases; unavailable inputs remain unavailable | Nine company date groups pass; numerical coverage remains scoped |
 | Materially faster meeting interactions without resource failures | Same-selection/company-data Performance Analyzer DAX and total timings, stated warm/cold conditions and observed query/resource failures | R17.6 timings retained; comparable R17.8 speed unmeasured; no numeric SLA agreed |
@@ -631,7 +666,9 @@ identify reviewed private evidence; they do not independently prove its contents
 The representative slice binds the exact report hash, observed context, an
 independent private reference and all eight native workflow observations:
 file selection, cutoff, Review, chart, Executive variance, native drill,
-clear-to-automatic and layout. Review evidence before adding a safe receipt to
+empty-file-selection and layout. The former clear-to-automatic requirement was
+superseded by the user on 24 October; a legacy fallback pass cannot qualify the
+new selection rule. Review evidence before adding a safe receipt to
 feedback/logs and binding it in the manifest. A local screenshot or fabricated
 SAMPLE cannot pass it. It proves only that reviewed slice; export, broader
 population, business acceptance and release retain their own requirements.
@@ -652,7 +689,7 @@ request merely to fill a template.
 
 The [receiving CI workflow](../../.github/workflows/receiving-qualification.yml)
 runs the existing hash/catalog checks, 14 release and eight refresh-probe tests,
-13 exact R03 candidate tests and 15 admission/performance tests. It checks that
+13 exact R03 candidate tests and 16 admission/performance tests. It checks that
 generators reproduce committed bytes. It uses synthetic public fixtures, no
 company credentials/calls, and does not replace native receiving acceptance or
 enforce remote branch protection. Reuse prior native numerical proof only while

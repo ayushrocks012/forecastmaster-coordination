@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 81230,
-      "SHA256": "81752a52830003840a1d7b36daff8a7270492b593bed696a06888ed91f6b3856"
+      "Bytes": 82241,
+      "SHA256": "2c197d8df113475797560dae3c0423154cf4cd5f4006ac272c256b3485056790"
     },
     "README.md": {
-      "Bytes": 8945,
-      "SHA256": "f0b2ec0f63f95d4343804d00eb5087b38e03c2c5788ad204ad6959a531815cfb"
+      "Bytes": 8931,
+      "SHA256": "5696502dece60aa2c7bfb54f0a6a6150b58d88f6f330ea55e3ca44452bba4887"
     },
     "feedback/STATUS.md": {
-      "Bytes": 160902,
-      "SHA256": "1c4179f55d6f47e99d7e59148ade72b18dfd4e748970c1446b5c9c0fec2b317d"
+      "Bytes": 162767,
+      "SHA256": "08edb0b76c60d9de0ef2673a0866d61159ca047ac6dc3a7c7d64499c0733105d"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 8666,
-      "SHA256": "52ac533e92b99c53d7b3a7f8eec413525a34985efe8d61a0951cc952d1c304e2"
+      "Bytes": 9519,
+      "SHA256": "cb0398d84fa68327575c9d3f88d570c35d6036a08a88af0f9f56f86cecacb068"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 201046,
-      "SHA256": "009354b3954727cce30deac4fbc644d97c5a77763a494ea6056726030c69b1e4"
+      "Bytes": 203727,
+      "SHA256": "1388779cf1ad919a2df6f9d5be78dc79835063a2612d92653c95dc1bb8d2dc74"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4702,12 +4702,12 @@
       "SHA256": "b3db51e0e36f191a498816a656751668d21cd05ba01946353768e7cfbe495112"
     },
     "tools/receiving_contract.py": {
-      "Bytes": 16241,
-      "SHA256": "97a06a41be3a7d6b5073f4a0cfe499ea07d537c5806d41c943e3c40c5ac35c5d"
+      "Bytes": 16243,
+      "SHA256": "9313442704b03cbbafb5f887ce86ddb90b29e7b437c9175fb283b3be3e561e6f"
     },
     "tools/test_receiving_contract.py": {
-      "Bytes": 14271,
-      "SHA256": "bd34a3691fd1c45c557f6599f99283f5ced3371084e8d3d899c8cdd97d37017b"
+      "Bytes": 14998,
+      "SHA256": "4d140385ab3f0e7b955ee99276b2b604a681d0f7cd188c3c23adbebc4b5d5cf6"
     },
     ".github/workflows/receiving-qualification.yml": {
       "Bytes": 1746,
@@ -4752,6 +4752,10 @@
     "feedback/logs/2026-10-24-receiving-ci-acceptance-reviewed.json": {
       "Bytes": 954,
       "SHA256": "0a0762183269f0ff515fcc8825a9c552ecb64862b053cb53782933a26b447019"
+    },
+    "feedback/logs/2026-10-24-r178-native-ui-defects-reviewed.json": {
+      "Bytes": 2606,
+      "SHA256": "3e2f35acf7232770a091f7feb48517cb928ad19f961ae2af909c51a9a4fecdb7"
     }
   },
   "ReceivingQualification": {
@@ -4798,13 +4802,23 @@
       },
       "company_native_layout_and_business_parity": {
         "Classification": "UNKNOWN",
-        "Scope": "Current main-chat Desktop and reference acceptance remain pending",
+        "Scope": "Native UI rejected in separate reviewed fact; corrected native layout and broad independent business parity remain unqualified",
         "Evidence": null
       },
       "company_speed_improvement": {
         "Classification": "UNKNOWN",
         "Scope": "Historical R17.6 timings lack comparable cache/view/data context; no speed claim",
         "Evidence": null
+      },
+      "company_native_ui_rejected": {
+        "Classification": "VERIFIED",
+        "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+        "Scope": "Operator screenshots and explicit rejection of R17.8 TEST UI; reported version, no new binary fingerprint supplied; separate from bounded model pass",
+        "Evidence": {
+          "Path": "feedback/logs/2026-10-24-r178-native-ui-defects-reviewed.json",
+          "Pointer": "/NativeAcceptancePassed",
+          "Equals": false
+        }
       }
     },
     "Gates": {

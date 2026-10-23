@@ -157,6 +157,18 @@ class Tests(unittest.TestCase):
             with self.assertRaises(c.Refused):
                 c.representative_slice({**slice_receipt(self.report_sha), **change}, self.report_sha)
 
+    def test_old_automatic_fallback_cannot_satisfy_new_empty_file_rule(self):
+        evidence = slice_receipt(self.report_sha)
+        evidence['Checks']['empty_file_selection']['Passed'] = False
+        with self.assertRaises(c.Refused):
+            c.representative_slice(evidence, self.report_sha)
+        evidence['Checks']['clear_to_automatic'] = evidence['Checks'].pop('empty_file_selection')
+        evidence['Checks']['clear_to_automatic']['Passed'] = True
+        with self.assertRaises(c.Refused):
+            c.representative_slice(evidence, self.report_sha)
+        self.assertEqual('PASSED_WITHIN_REVIEWED_SLICE',
+                         c.representative_slice(slice_receipt(self.report_sha), self.report_sha))
+
     def test_success_word_alone_cannot_promote_missing_or_failed_receiving_evidence(self):
         for change in (lambda row: row.pop('Dates'),
                        lambda row: row.update(FullCandidateMetadataMatches=False),

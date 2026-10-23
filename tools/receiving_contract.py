@@ -54,7 +54,7 @@ def observation(root, manifest, binding):
 
 
 SLICE_CHECKS = {'file_selection', 'source_cutoff', 'review_summary', 'monthly_chart',
-                'executive_variance', 'drill_expand', 'clear_to_automatic', 'native_layout'}
+                'executive_variance', 'drill_expand', 'empty_file_selection', 'native_layout'}
 VISUALS = {'MonthlyGraph', 'ReviewSummary', 'ExecutiveSummary'}
 CONTEXT_KEYS = {'EnvironmentFingerprint', 'SelectionFingerprint', 'SourceSnapshotFingerprint', 'CacheState', 'View'}
 

@@ -1,5 +1,34 @@
 # Company setup status
 
+## 24 October 2026 — R17.8 native UI rejected; Desktop connection blocked locally
+
+The seven receiving screenshots show clipped Review rows, unreadable chart units
+and crowded right-side labels, an unwanted Automatic ADS Executive parent,
+failed driver-to-sector expansion, a stale Market measure under Ex-factory and
+another driver's file retained in the file picker. These are report/interaction
+failures; the bounded verifier's nine date groups and 12 paired comparisons do
+not qualify the native UI. No new timing or independent business-parity result
+was supplied. Receipt: logs/2026-10-24-r178-native-ui-defects-reviewed.json.
+
+The user now explicitly requires ADS files visibly selected by default and no
+business display when files are empty/cleared. This supersedes clear-to-Automatic
+ADS. The maintained design and executable slice admission now use the new rule;
+the installed report/adapter still implement the old rule. A regression check
+refuses a legacy clear-to-automatic receipt as acceptance. No repaired report or
+adapter was built/installed by this maintenance review.
+
+The user confirms Power BI Desktop is open on this same personal laptop. The
+installed Computer Use API fails before app discovery with a WSL sandboxCwd URI
+error, repeated after resetting the JS session. Document Control returns no
+connected sessions. No local Desktop rendering was observed. Next environment
+attempt: Windows-native **agent** mode and app restart; integrated terminal
+selection is independent. This is a supported configuration and an unverified
+remedy for this specific bridge failure. Keep the current TEST stable; no new
+Fabric cells, refreshes, publication or production changes are requested.
+
+Continue from UNDERSTANDING's updated resume: repair/inspect a small fabricated
+native slice, then qualify an isolated correction before company handoff.
+
 ## 24 October 2026 — local execution improvements qualified; current Desktop step unchanged
 
 Implemented the side-conversation request for executable process improvements

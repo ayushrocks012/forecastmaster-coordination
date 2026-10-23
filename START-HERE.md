@@ -30,7 +30,18 @@ file choices with import timestamps/no hash suffixes, candidate metadata and clo
 mapping preserved. [Reviewed result](feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json).
 No new notebook cell, verifier/installer rerun, reset or Fabric refresh is needed.
 
-**Next: check the report on the company laptop.**
+**Current action: repair the rejected native UI first.** The subsequent seven
+Desktop screenshots show failures described in the
+[maintained resume](handoff/report-native-only-r17.8/UNDERSTANDING.md#resume-in-one-minute).
+No new company cell, refresh or repeat of the steps below is requested. The
+personal-laptop Desktop is open, but Computer Use fails before connecting from
+this WSL chat. Try the app's Windows-native **agent** mode and restart; choosing
+PowerShell only as the integrated terminal does not switch the agent. Native
+rendering is not yet inspected here and this environment remedy is unverified.
+ADS files visibly selected by default and empty selection = no business values
+now supersedes the old clear-to-Automatic behavior; no corrected build is ready.
+
+**Historical receiving instructions — already exercised and rejected:**
 
 1. Close the old TEST report. Download/use
    [ForecastMaster Compact Native R17.8 TEST.zip](handoff/report-native-only-r17.8/test-release-r01/candidate/ForecastMaster%20Compact%20Native%20R17.8%20TEST.zip).
@@ -43,7 +54,8 @@ No new notebook cell, verifier/installer rerun, reset or Fabric refresh is neede
 4. If that slice works, check Sectors; change Section then Measure; Start/End month;
    single Review/graph trend independently of multiple Executive Table trends;
    driver→sector drill/expand; and several file checkboxes without Ctrl, then clear
-   back to Automatic ADS. Two alternate versions must not sum into a false total.
+   back to Automatic ADS (historical R01 behavior, now explicitly rejected).
+   Two alternate versions must not sum into a false total.
 5. In Desktop: Optimize → Performance Analyzer → Start recording → Refresh visuals.
    Record DAX query and total duration for monthly graph, Review Summary and
    Executive Summary. State Total/Sectors, filters and first/repeated-load conditions.

@@ -1,0 +1,51 @@
+{
+  "Stage": "R178_NATIVE_UI_REJECTED_REPAIR_PENDING",
+  "EvidenceKind": "COMPANY_OPERATOR_REVIEWED",
+  "ReportVersion": "Compact Native R17.8 TEST R01",
+  "NativeAcceptancePassed": false,
+  "ReportedDefects": [
+    "File picker retains another driver's file after selecting Core Oral",
+    "Unwanted Automatic ADS parent in Executive Summary",
+    "Executive driver-to-sector expansion does not work as expected",
+    "Ex-factory Section retains and offers stale Market Measure selection",
+    "Invalid Section/Measure combination leaves visuals blank",
+    "Review Summary rows are clipped or overlap",
+    "Chart axis shows duplicated display-unit suffix and unreadable values",
+    "Chart legend and endpoint labels consume plotting width and duplicate context"
+  ],
+  "SupersedingUserDecision": {
+    "Default": "ADS files visibly selected",
+    "EmptyFileSelection": "All business-value visuals blank",
+    "ClearToAutomaticADS": false,
+    "BuiltInVisualsOnly": true,
+    "ProductionR166Unchanged": true
+  },
+  "SourceInspection": {
+    "ChartAxisDisplayUnits": "Auto, despite source dynamic formats already using m/k",
+    "ReviewMatrixHeight": 108,
+    "ExecutiveRows": "Scenario, GrowthDriver, SectorLabel",
+    "ExecutiveSourceGuard": "Requires a single Scenario context",
+    "FilePickerDefaultSelection": "Absent",
+    "DriverPickerField": "fm_native_scope.GrowthDriver",
+    "FilePickerAvailabilityUsesDriverScope": true,
+    "FilePickerRootCause": "Not established; selected-item persistence and actual visual query require inspection",
+    "SectionAndMeasureFields": "Both in fm_native_metric; native stale selection must be tested"
+  },
+  "LocalDesktopInspection": {
+    "UserConfirmsDesktopOpenOnPersonalLaptop": true,
+    "ComputerUseInitialization": "FAILED_BEFORE_APP_CONNECTION",
+    "AfterJavaScriptKernelReset": "Same failure",
+    "Error": "sandboxCwd is not a local file URI: file:///home/ayush/repos/smart-demand-manager",
+    "ConnectedDocumentSessions": 0,
+    "NativeRenderingExecuted": false,
+    "NextBoundedAction": "Try Windows-native agent mode, then inspect fabricated native SAMPLE before another company handoff",
+    "RecoveryIsProven": false
+  },
+  "ExistingBoundedModelVerification": "Retained; not native UI, broad business or speed acceptance",
+  "ChangesThisReview": "Understanding, status and receiving admission semantics only; no report/model candidate rebuilt or installed",
+  "CompanyAmountValuesCopied": false,
+  "CompanyScreenshotsCopiedToPublicRepository": false,
+  "ModelWriteRequested": false,
+  "RefreshRequested": false,
+  "ReportPublished": false
+}

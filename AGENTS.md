@@ -1,5 +1,19 @@
 # ForecastMaster coordination repository
 
+Latest steering, 24 October: R17.8 native receiving UI is REJECTED despite the
+bounded model verification pass. Read the updated UNDERSTANDING resume and
+2026-10-24-r178-native-ui-defects-reviewed.json before using older "current
+Desktop step" paragraphs below. Repair the representative slice; no new company
+cell or refresh for known UI defects. Superseding selection rule: ADS files
+visibly selected by default; empty selection means blank business visuals,
+never Automatic ADS fallback. No repaired candidate is built or installed yet.
+Power BI Desktop is open on the personal laptop, but Computer Use rejects this
+WSL chat's working-directory URI before connecting, even after kernel reset.
+Windows-native agent mode is the next bounded environment attempt; changing
+only the integrated terminal is insufficient. Native inspection remains unrun.
+Preserve production R16.6 and all older release bytes. Full context is in the
+same maintained reference; do not invent a second ledger or claim UI acceptance.
+
 **Project resumption entry point:** read
 `handoff/report-native-only-r17.8/UNDERSTANDING.md` first. It is the single
 maintained project-wide reference (architecture, known objects, fields/grains,
