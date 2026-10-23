@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 80113,
-      "SHA256": "1242b211cc25f9398a7f2f2cddffbc214793c944087a09cddbf950242bf5d9d6"
+      "Bytes": 80372,
+      "SHA256": "ea414dc0550cab60529142073a920edf8d0a142193df2297490601784c3503a8"
     },
     "README.md": {
-      "Bytes": 8375,
-      "SHA256": "5f7463edfe826d8f2da7431eb4a599c41e600de057df39a3977388f82f42d563"
+      "Bytes": 8485,
+      "SHA256": "271f6d1a86e6788bedfb9c59e8bce4e87082936f05cff3eb78f88097645b7b4f"
     },
     "feedback/STATUS.md": {
-      "Bytes": 154065,
-      "SHA256": "79889b0d980a8a8ee5da4d7baf673c58f5946ac9c986fa52ef83ebd628bf4419"
+      "Bytes": 157155,
+      "SHA256": "a66d5c2d6b30bfb6a710029cae29e32b875a03f75bd00a9bb83dc793010eb630"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 8087,
-      "SHA256": "7a62c8bbb5d2a0edb15cd12906025c50251d664798bfe3db46091b1145b4e319"
+      "Bytes": 8666,
+      "SHA256": "52ac533e92b99c53d7b3a7f8eec413525a34985efe8d61a0951cc952d1c304e2"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 196781,
-      "SHA256": "db148ca9b98690631b050563b44e13cecf76c8efced79bd0874e1bf378829746"
+      "Bytes": 193650,
+      "SHA256": "caee944a9642a469a78c8c2a6900b8784e055b33ce9bc0825a2b35391799d5b5"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4692,6 +4692,10 @@
     "feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json": {
       "Bytes": 4122,
       "SHA256": "ae5ecb15ef906af7b76ff42bcde50c373e614519dbba833b6dc8f86ce727fd8c"
+    },
+    "feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json": {
+      "Bytes": 6281,
+      "SHA256": "81cf9578613f44519f3354178ca28de726b32a4e3a78f72439da75d73c2e6eea"
     }
   }
 }

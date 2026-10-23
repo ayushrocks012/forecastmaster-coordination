@@ -23,32 +23,37 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-**Current receiving action: run the unchanged R02 read-only verifier ONCE.**
-The Direct Lake screenshots now identify the 23:27 UK backend request failure
-on forecast_v18_calendar AND a later Completed operation at 23:57:26 UK on
-23 October. That later success is changed external state supporting one read-only
-retry, not a reason to submit another refresh.
-[Reviewed evidence](feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json).
+**Model installation and bounded verification PASSED.** The operator returned
+TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED / VerifierRevision R02:
+nine exact date groups, 12 paired comparisons with zero mismatches, eight unique
+file choices with import timestamps/no hash suffixes, candidate metadata and cloud
+mapping preserved. [Reviewed result](feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json).
+No new notebook cell, verifier/installer rerun, reset or Fabric refresh is needed.
 
-1. On the company laptop close Refresh history and open ForecastMaster_GM_Setup.
-2. Open [VERIFY INSTALLED TEST R01.py](handoff/report-native-only-r17.8/test-release-r01/VERIFY%20INSTALLED%20TEST%20R01.py),
-   select Raw and copy the whole file into ONE NEW Python cell.
-3. Run ONLY that cell ONCE. Never Run all. Filename stays R01; final output
-   must identify VerifierRevision R02. This is the same qualified verifier,
-   with no metadata write, refresh or publication.
-4. Send the complete final JSON. Expected success is
-   TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED. Any STOPPED: send it and
-   stop; do not repeat anything automatically.
+**Next: check the report on the company laptop.**
 
-No installer rerun, manual refresh, reset/clear, marker deletion, source/connection
-change or publication. Keep backups. Screenshot recovery is not yet a final
-model/numerical/UI/performance pass. No new diagnostic script is needed.
+1. Close the old TEST report. Download/use
+   [ForecastMaster Compact Native R17.8 TEST.zip](handoff/report-native-only-r17.8/test-release-r01/candidate/ForecastMaster%20Compact%20Native%20R17.8%20TEST.zip).
+   Extract ALL its contents to a NEW folder. SAMPLE is fabricated, not company data.
+2. Open ForecastMaster Compact Native R17.8 TEST.pbip from that extracted folder
+   in Power BI Desktop. Keep its Report folder beside it.
+3. First check an available UK/2026-10 Market/Units Total selection. Send screenshots
+   of top filters/Review Summary, graph, Executive Summary and saved-file selector.
+   If a visual fails, copy its exact error details and current selections.
+4. If that slice works, check Sectors; change Section then Measure; Start/End month;
+   single Review/graph trend independently of multiple Executive Table trends;
+   driver→sector drill/expand; and several file checkboxes without Ctrl, then clear
+   back to Automatic ADS. Two alternate versions must not sum into a false total.
+5. In Desktop: Optimize → Performance Analyzer → Start recording → Refresh visuals.
+   Record DAX query and total duration for monthly graph, Review Summary and
+   Executive Summary. State Total/Sectors, filters and first/repeated-load conditions.
+   This refreshes report visuals, not the Fabric semantic model. Do not use model
+   Refresh or clear caches. [Microsoft guide](https://learn.microsoft.com/en-us/power-bi/create-reports/performance-analyzer).
+   Send screenshots and timings; amounts/definitions remain outside the public repo.
 
-Built-in visuals only; production R16.6 and older packages remain unchanged.
-Local native runtime/context/oracle, schema and receiving safety tests pass.
-Final verifier, Desktop rendering/export/business parity and speed remain
-receiving gates. Installation and one TEST refresh are complete. SAMPLE is fabricated and cannot validate company figures.
-Raw metadata/values/backups remain private; send only counts-only final JSON.
+This passes only the declared bounded model checks; native UI/export, independent
+business parity and comparable speed remain separate. No publication/replacement
+of production R16.6. Keep built-in visuals and private backups unchanged.
 
 Original company-laptop connection setup follows for reference.
 

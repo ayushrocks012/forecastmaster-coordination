@@ -15,114 +15,70 @@ company observations are not copied here. New results update this reference;
 
 ## Resume in one minute
 
-**Current release — compact R17.8 TEST R01:** user authorized this report and
-matching adapter after inventory review. [Receiving instructions](test-release-r01/OPEN%20FIRST.txt),
-[release notes](test-release-r01/README.md), [qualification](test-release-r01/VALIDATION.json).
-**Latest company return (24 October screenshot review):** the Direct Lake tab
-identifies the 23 October **23:27:57–23:27:59 UK** failure as a Power BI Premium
-backend request error while checking the latest version of
-`forecast_v18_calendar`. Request/activity ID matches the earlier API failure.
-The combined horizontally scrolled message says a request failed; no separate
-numeric/symbolic error code is visible. The underlying transport/service cause
-and operation initiator remain UNKNOWN; do not infer corruption, an outage or
-a formula defect.
+**Current company state — compact R17.8 TEST R01, verifier R02:** the operator
+returned **TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED** on 24 October 2026.
+Installation and the declared bounded receiving check are complete. No further
+setup cell, verifier/probe retry, reset or manual refresh is requested.
+[Reviewed success receipt](../../feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json).
 
-The same tab now shows a **later Direct Lake Completed operation at
-23:57:24–23:57:26 UK (22:57:24–22:57:26 UTC), 23 October**, and Last refresh
-succeeded 23:57:26. This is new recovery evidence, not bypassing the failure
-using the older success. It supports one unchanged read-only verifier R02 retry;
-the verifier must re-read fresh API state and all other guards. A screenshot
-alone is not metadata/date/numerical/final or performance acceptance.
-[Reviewed failure/recovery evidence](../../feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json).
+Confirmed within that run:
 
-**Earlier API snapshot:** install success 22:22:35.947732 UTC; OnDemand refresh
-completed 22:24:13.803–22:24:33.743 UTC, then the newer Direct Lake failure at
-22:27:57.310–22:27:59.420 UTC. That older snapshot explains R02's prior stop.
-Its 11 rows/9 Completed/2 Failed are historical, superseded by the newer UI
-success; current API rowset is not yet returned.
-[Prior history receipt](../../feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json).
+- All **nine physical/semantic date groups** agree exactly, zero invalid dates:
+  five 84-month sets and four three-row UK/October source/native cutoff groups.
+- **12 paired scalar comparisons, zero mismatches**: one available ADS driver,
+  market/ef/share, 12M, FY and future month. Values remain private; independent
+  Excel/R16.6 and all-driver/all-window parity are not thereby established.
+- **Eight files / eight distinct choice labels**, zero missing import timestamps,
+  zero hash suffixes. This is the global native helper; the date cutoff cohort
+  is UK/2026-10 with three rows. These are different scopes, not a discrepancy.
+- Candidate semantic metadata matches the private candidate; cloud mapping is
+  preserved. Identity, install-success/new-Completed processing prerequisites and
+  before/after processing-history/date-signature stability checks passed by the
+  exact source path. No model/source write, refresh or publication was requested.
 
-**Earlier company evidence:** the operator completed installation and its one TEST
-refresh. The original verifier returned all nine exact physical/semantic date
-groups (zero invalid dates) and 12 paired scalar comparisons (zero mismatches),
-then stopped with TypeError before file-label counts/final checks. Its earlier
-identity, completed-refresh, whole candidate and cloud-mapping guards had passed,
-inferred from the retained R01 execution order. This is **partial verification**,
-not full acceptance. [Reviewed counts-only return](../../feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
+**Current action — company Power BI Desktop:** extract ALL contents of
+[test-release-r01/candidate/ForecastMaster Compact Native R17.8 TEST.zip](test-release-r01/candidate/ForecastMaster%20Compact%20Native%20R17.8%20TEST.zip)
+to a NEW folder; open **ForecastMaster Compact Native R17.8 TEST.pbip**.
+ZIP SHA256 `94e6167b95ffc6691c5d3f552a7bfbab01d8e0416d68a209d5d24a14cdf21c6b`,
+45833 bytes. Use TEST, not fabricated SAMPLE; close the older TEST project first.
+[Receiving steps 5–6](test-release-r01/OPEN%20FIRST.txt) now apply; steps 1–4 are complete.
 
-**Current action:** on the company laptop close Refresh history, open
-ForecastMaster_GM_Setup, and copy the entire current
-[VERIFY INSTALLED TEST R01.py](test-release-r01/VERIFY%20INSTALLED%20TEST%20R01.py)
-into ONE NEW Python cell. Its unchanged filename is R01; final JSON must identify
-**VerifierRevision R02**. Run only that cell **ONCE**, not Run all, and return the
-complete final JSON. Exact cell SHA256:
-`a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635` (235093 bytes).
-It requests no write, refresh or publication; numerical comparisons remain
-transient/private. Success stage is TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED.
-Any STOPPED output: return it without further retry. The supported change since
-the stopped attempt is the later Completed operation; all verifier admission,
-whole-definition/cloud/date/numerical/label/concurrency gates remain unchanged.
-**No installer rerun, manual refresh, reset/clear, marker deletion or publication.**
-Keep backups, the native candidate and production R16.6 unchanged. No extra
-refresh-state probe, further error screenshot or configuration change is needed
-before this one check. The old date recovery stays closed.
+Prove a small native slice first (available UK/2026-10, Market/Units, Total), then
+check Sectors, Section/Measure, month bounds, independent Review trend versus
+multiple Table trends, driver→sector expansion and file checkbox selection/clear.
+Return top/chart/Executive/files screenshots and Performance Analyzer DAX/total
+times for graph and both summaries, identifying Total/Sectors, exact selections
+and first/repeated-load conditions. Refresh visuals in Performance Analyzer is
+a report query, not another Fabric model refresh. Do not clear caches or alter
+configuration to manufacture a speed result. Any visual error: capture its exact
+details/context before more tests or any setup/refresh retry.
 
-**Verifier correction R02:** the existing `VERIFY INSTALLED TEST R01.py` now
-reports `VerifierRevision: R02`. Empty MissingImportedAt/HashSuffixes metadata
-counts use DAX COALESCE to return zero before Python integer conversion. Four
-new native synthetic queries reproduce the old BLANK failure and verify zero
-counts and retained positive errors; all 14 release tests pass. Business-amount
-blank semantics, the installer and both PBIP ZIPs are unchanged. Already completed
-installation/processing must not be repeated for a checker correction. Current
-processing condition has since changed: the later Direct Lake Completed entry
-justifies the single read-only verifier retry above. [Evidence](test-release-r01/VALIDATION-VERIFIER-R02.json).
+**Remaining gates:** actual native layout/interaction/export, broad independent
+Excel/R16.6 business parity and comparable company visual performance. No speed
+improvement or production readiness is claimed from scalar/model verification.
+Full native S&OP, FX and R16.6 feature parity remain separate. Production
+**R16.6 / ForecastMaster Review stays unchanged**; built-in visuals only and
+other/company-laptop access continue. Do not publish or replace production.
 
-Local qualification: task-owned loopback Tabular engine, **207 queries / 1,868
-assertions**, independent fabricated numerical oracle and actual source/visual
-contexts; 14 receiving/metadata/layout tests; 67 Microsoft schema documents.
-All native inputs reproduce exactly from final source. No company values or
-company operations ran on this laptop. Company native UI/export, independent
-Excel/R16.6 parity and performance remain separate. Computer Use initialization
-fails before connection; no Desktop rendering acceptance is claimed. F1 change
-scope fails closed for the unregistered Coordination repo; graph authority UNKNOWN.
-Direct preservation/source/context/runtime checks are recorded instead.
+**Earlier failures are retained:** the old verifier counter TypeError was fixed
+by R02; a later Direct Lake table-version/backend request failure blocked its
+first run, then the UI showed a newer Completed operation before this success.
+No guard was weakened. The original backend root cause remains unknown; this is
+not a permanent service-health guarantee.
+[Partial old verifier](../../feedback/logs/2026-10-23-r178-verifier-r01-partial.json),
+[refresh gate stop](../../feedback/logs/2026-10-23-r178-verifier-r02-refresh-gate-stopped.json),
+[Direct Lake failure/later success](../../feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json).
+Keep private backups and markers; old date-cache recovery stays closed.
 
-- **Recovery result:** `TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED`.
-  The accepted R01 ClearValues request was identified as Completed. R02 submitted
-  the single missing Full; it completed with zero messages. No second clear.
-- Exact physical/semantic/engine/client dates now agree for all nine tested
-  metadata kinds. Previously bad 83/84 axis dates and all three source/native
-  IMS/EF cutoffs now have zero invalid dates. Source/period guards pass.
-- All **90 scalar reads / 18 groups** passed execution and internal variance/%
-  identities for one available UK/October ADS driver, three metrics, three trend
-  windows and two years. This is not independent Excel/R16.6 parity or speed proof.
-- Whole model definition and cloud mapping match the pinned private backup;
-  physical date metadata, source cohort and processing history stayed stable.
-- **Latest structural result:** inventory R01 completed within declared scope.
-  Both returned copies/hash/length agree. **13 visible workspace items; 24 physical
-  tables / 269 fields; original 15 tables / 209 fields / 47 measures / 5 relationships;
-  TEST 39 tables / 333 fields / 98 measures / 12 relationships.** All scoped reads pass.
-  See the [verified company inventory](#company-inventory-r01) for complete names,
-  field dictionaries, relationship endpoints and public formula mappings.
-- **No more reset, manual refresh or R02 rerun for this recovery.** Keep private
-  backups and attempt markers. It is safe to reopen the unchanged R17.7 TEST
-  PBIP to inspect captions/numbers; this is a UI check, not a new installation.
-- The R17.7 layout was rejected. The R17.8 R01 TEST ZIP and matching updater
-  are prepared; company installation/one refresh are now operator-confirmed.
-  SAMPLE stays fabricated. Final verifier, native UI/export and speed are pending.
-- Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
-  work uses **built-in visuals only**, on the other/company laptop.
-
-- **Current next action:** run the unchanged read-only verifier R02 once as
-  above and return its full final JSON.
-  Installation/one refresh are complete; do not repeat either or the recovery.
-  Desktop/business/export/performance checks remain separate.
-  The published ForecastMaster Review remains bound to the original model.
-
-Evidence: [R02 reviewed receipt](../../feedback/logs/2026-10-23-native-r178-r02-recovery-verified.json).
-Frozen receiving cell SHA256: `eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143`.
-Prepared in commit `3fb7753042216d65afe5ce66891ce5676537b774`; later documentation
-commits do not alter its code or qualification evidence.
+**Other retained evidence:** inventory R01 confirmed 13 visible items, 24 physical
+/269 fields; original model 15 tables/209 fields/47 measures/5 relationships,
+TEST baseline 39/333/98/12. These are dated inventory counts; the adapter adds
+one hidden measure, without a new full count export in this return. Local
+qualification remains 207 synthetic native queries/1868 assertions, 14 release
+tests and 67 schema documents; verifier R02 also has four native counter
+regressions. Prior evidence is retained, not rerun for this documentation update.
+Local UI automation remains unavailable and graph authority UNKNOWN for this
+unregistered repository; neither is silently promoted by the company result.
 
 ## Compact native R17.8 R01 implementation and limits
 
@@ -168,10 +124,10 @@ inputs. The offline Power BI plugin reports 62 public formula nodes/97 heuristic
 edges; this is not a live company graph. Production, notebooks, schedules,
 permissions, Lakehouse tables and source data were not changed.
 
-COMPANY: installation and one refresh are operator-confirmed, with the partial
-verifier results recorded above. UNKNOWN/PENDING: final read-only verification,
-native rendering/export/speed, independent Excel/business acceptance, full native
-S&OP and full R16.6 feature/FX parity. This is TEST qualification, not a production
+COMPANY: installation, processing and declared bounded read-only verification
+are complete (verifier R02 success, 24 October). UNKNOWN/PENDING: native
+rendering/interactions/export/speed, broad independent Excel/business acceptance,
+full native S&OP and full R16.6 feature/FX parity. This is TEST qualification, not a production
 replacement. The historical generated catalog below still documents the preserved
 draft/public baseline, with this release's scoped differences recorded here.
 
@@ -214,7 +170,7 @@ company sign-in, tenant settings, service-principal setup or IT support here.
 | Workspace | UK-ANI-Demand; `f5cb5742-9a7c-4337-a4c0-952706dddf0b` | COMPANY, retained setup and R02 exact TEST route |
 | Lakehouse | ForecastMaster; `d6e33ebd-67b1-420a-8d84-c3a0d04d8b21` | COMPANY, known OneLake route verified by R01/R02 |
 | Original semantic model | `e7af2967-7725-4108-a170-9e490d4e35bb` | CODE-bound original; never an update target in this native TEST repair |
-| Native TEST semantic model | ForecastMaster Native OneLake R17.1 - TEST; `31d00232-ac03-48fe-af39-f2e4bae82443` | COMPANY created 22 October; R17.7 definitions now present; R02 verified |
+| Native TEST semantic model | ForecastMaster Native OneLake R17.1 - TEST; `31d00232-ac03-48fe-af39-f2e4bae82443` | COMPANY created 22 October; R17.8 scoped adapter installed; bounded verifier R02 passed 24 October |
 | Published report | ForecastMaster Review / R16.6 fallback | User confirmed replacement publication on 22 October; no native replacement accepted |
 | Maintained ingestion notebook | ForecastMaster_Refresh; `e2e0952d-4317-4936-bf0f-2c34698371dc` | COMPANY R05.4 and targeted FILES patch installation evidence |
 | Hourly pipeline | ForecastMaster_Hourly; `ef3ba5c2-3eef-4c20-bac1-a8399fa5cb20` | COMPANY manual success and original schedule setup; post-targeted schedule status still pending |
@@ -226,7 +182,7 @@ company sign-in, tenant settings, service-principal setup or IT support here.
 | Activator/rule | ForecastMaster_Adhoc_Events / ForecastMaster_Adhoc_NativeRequests | COMPANY 21 October running rule evidence; not an ongoing live-state guarantee |
 | Setup notebook | ForecastMaster_GM_Setup | Explicit receiving location; one NEW cell only, never Run all |
 
-Report version R17.7 and model display name R17.1 TEST are different version
+Report version R17.8 and model display name R17.1 TEST are different version
 labels; do not create a second model just to make those labels match.
 R01 now supplies the complete returned account-visible item list and the one
 published report/model binding, below. Connections, shortcut targets, child
@@ -502,18 +458,18 @@ Power BI; fixed compact height plus drill/scroll/Focus is the current approach.
 
 These checks consolidate the user's recorded feedback; they do not request a
 new design approval or authorize another installation/refresh. The design and
-business sections own the detailed meaning. The current company step is one read-only verifier R02 retry as described in
-the resume section, justified by the later Direct Lake Completed operation. Built, locally
+business sections own the detailed meaning. The current company step is native Desktop UI/interaction/performance validation
+in the resume section; declared bounded verification has passed. Built, locally
 tested, installed and accepted are separate states.
 
 | Requirement | Evidence needed for acceptance | Current limit |
 | --- | --- | --- |
-| Built-in visuals; production R16.6 unchanged | Native visual inventory, preserved bindings/formulas/artifacts and reviewed company metadata | Local preservation passes; final installed verifier pending |
+| Built-in visuals; production R16.6 unchanged | Native visual inventory, preserved bindings/formulas/artifacts and reviewed company metadata | Local preservation and bounded installed verifier pass; receiving native UI remains pending |
 | Monthly Start/End; separate Section/Measure; valid driver/tier/period choices | Receiving interactions, including changing Section, month boundaries and unavailable choices | Built and locally checked; company interactions pending |
 | One graph/review trend; independent multiple Executive trends | Change each control and verify its intended graph/summary context and variance columns | Synthetic contexts checked; company interactions pending |
 | Plan, signed Overcall/Undercall and variance % with native drill | Independent reviewed R16.6/bridge values at total, driver and sector across the relevant periods | Synthetic oracle and 12 narrow company comparisons pass; broader business parity pending |
 | Readable graph with differentiated forecast/trend and dynamic heading | Actual Desktop screenshots/interaction at the receiving laptop's normal zoom; labels understandable without relying on hover | Local styles/schema checked; native rendering pending |
-| One searchable file list, import UTC, multi-select without Ctrl, no hashes/Apply/Source dropdown | Select several files, change scope, clear to Automatic ADS; verify source versions stay distinct | Local selection/label cases checked; final metadata and receiving UI pending |
+| One searchable file list, import UTC, multi-select without Ctrl, no hashes/Apply/Source dropdown | Select several files, change scope, clear to Automatic ADS; verify source versions stay distinct | Label metadata verified (8 unique, no missing import/hash suffix); receiving selection UI pending |
 | Compact labelled controls, no overlaps/duplicate titles/tables | Actual layout and native drill/scroll/Focus check; fixed matrix height remains explicit | 1440×1330 geometry checked; receiving layout pending |
 | Correct dates, missing values, observed zero and weighted ratios | Exact date-set checks plus independent business edge cases; unavailable inputs remain unavailable | Nine company date groups pass; numerical coverage remains scoped |
 | Materially faster meeting interactions without resource failures | Same-selection/company-data Performance Analyzer DAX and total timings, stated warm/cold conditions and observed query/resource failures | R17.6 timings retained; comparable R17.8 speed unmeasured; no numeric SLA agreed |
@@ -1464,9 +1420,9 @@ partition/role/connection metadata remain outside this inventory.
 **No new inventory cell, updater, reset or extra refresh is needed from the
 operator for this result.** Preserve backups and use the verified dictionary
 as the model boundary. The compact R17.8 release has since been built, installed
-and refreshed; SAMPLE remains fabricated. Current action is the single read-only verifier retry above after reported
-Direct Lake recovery, followed only after full verification by the existing native
-UI/export/business/performance acceptance. Keep production R16.6 unchanged.
+and refreshed; SAMPLE remains fabricated. Bounded read-only verification has since passed. Current action is the native
+UI/interaction/performance slice above; export and independent business parity
+remain receiving gates. Keep production R16.6 unchanged.
 The inventory itself does not prove that the rejected layout or speed is fixed.
 
 ## What is still unknown and how to complete the reference
@@ -1491,8 +1447,8 @@ immutable receipt supersede the earlier "inventory pending" notes.
 **No additional inventory/recovery diagnostic is requested for these gaps.**
 Preserve the exact R01 inventory cell/package and older recovery evidence. Do
 not rerun an updater, reset or extra refresh. The release is now installed and
-processed once, with a later Direct Lake recovery now shown in the UI. The
-current bounded action is one unchanged read-only verifier R02 retry in the resume section. Native UI/business/export/speed remain separate. The
+processed, with bounded verifier R02 success now returned. The current action
+is native Desktop UI/interaction/performance validation in the resume section. Native UI/business/export/speed remain separate. The
 rejected R17.7 layout and fabricated SAMPLE are not receiving acceptance.
 
 Keep the raw company JSON and copied output private. The reviewed receipt

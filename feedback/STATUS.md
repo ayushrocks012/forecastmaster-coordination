@@ -1,5 +1,49 @@
 # Company setup status
 
+## 24 October 2026 — R17.8 installed and bounded checks VERIFIED; move to Desktop validation
+
+The operator returned TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED,
+Revision R01 / VerifierRevision R02, exact TEST model. All nine physical/semantic
+date groups match (five 84-month sets plus four three-row source/native cutoff
+groups), zero invalid dates. All 12 paired scalar comparisons completed with
+zero mismatches. Global file helper has eight files/eight distinct labels,
+MissingImportedAt 0 and HashSuffixes 0. FullCandidateMetadataMatches and
+CloudMappingPreserved are true. All returned write/refresh/publication/value-output
+flags are false. [Reviewed safe success](logs/2026-10-24-r178-installed-bounded-verification-reviewed.json).
+
+The exact qualified R02 source confirms a successful path through identity,
+pinned install-success/new-Completed processing prerequisites, whole candidate
+semantic BIM/cloud mapping, date/paired scalar/label checks and final unchanged
+processing-history/semantic-date-signature checks. Exact current refresh request
+and timestamp are not returned, so none is invented. UK/2026-10 cutoff scope
+contains three sources, while the label count is global across fm_native_files;
+eight labels is not a claim of eight UK/October sources. Numerical parity is
+one available ADS driver, market/ef/share, 12M, FY/future month only. It is not
+independent Excel/R16.6 parity or an all-driver/all-window acceptance.
+
+This closes installation and the declared bounded receiving model gate. Earlier
+TypeError, failed processing and recovery receipts remain unchanged as history;
+the successful result supersedes their pending status, without weakening any
+guard. The old backend root cause is not proven permanently resolved. No more
+notebook cell/probe/verifier/installer retry, reset, clear or manual Fabric refresh.
+Keep production R16.6, the native candidate and private backups unchanged.
+
+Current action is OPEN FIRST steps 5–6: extract the complete compact R17.8 TEST
+ZIP to a new folder, open its PBIP in company Desktop, prove a small Total slice,
+then check Sectors, separate Section/Measure and monthly bounds, independent
+single graph/Review versus multiple Table trends, native driver→sector drill and
+file checkbox selection/clear. Return top/chart/Executive/files screenshots and
+Performance Analyzer graph/Review/Executive DAX/total timings with exact view,
+filters and first/repeated-load conditions. Any visual error: capture exact details
+and selections before more tests or setup. Refresh visuals is not a new model
+refresh. [Performance Analyzer guide](https://learn.microsoft.com/en-us/power-bi/create-reports/performance-analyzer).
+
+Native UI/interaction/export, broad independent business parity, comparable speed,
+full native S&OP/FX/feature parity and production release remain separate/open.
+This review updates documentation only; exact verifier and report ZIP hashes match
+retained qualification. No new engine run, local/company amount query, company
+mutation or UI/business/performance acceptance is claimed from this host.
+
 ## 24 October 2026 — Direct Lake error identified; later success supports one read-only retry
 
 Three screenshots show exact TEST, Direct Lake selected. The matching request

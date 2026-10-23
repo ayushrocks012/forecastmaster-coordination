@@ -1,0 +1,144 @@
+{
+  "Evidence": "Operator-pasted verifier JSON, reviewed on 24 October 2026 against exact qualified R02 source; no live company call from reviewer",
+  "Reported": {
+    "Stage": "TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED",
+    "Revision": "R01",
+    "VerifierRevision": "R02",
+    "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+    "ModelWriteRequested": false,
+    "OriginalModelWriteRequested": false,
+    "LakehouseTableWriteRequested": false,
+    "RefreshRequested": false,
+    "CompanyAmountValuesPrintedOrStored": false,
+    "ReportPublished": false,
+    "NextStep": "Open R17.8 TEST. Check Total and Sectors, two table trends, driver drill/expand and file selection/clear. Send screenshots plus Performance Analyzer DAX/total timings for graph and both summaries. Do not publish or change production.",
+    "PhysicalSemanticDateGroups": {
+      "Axis": {
+        "PhysicalExpectedRows": 84,
+        "SemanticRows": 84,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "End": {
+        "PhysicalExpectedRows": 84,
+        "SemanticRows": 84,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "Facts": {
+        "PhysicalExpectedRows": 84,
+        "SemanticRows": 84,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "NativeEF": {
+        "PhysicalExpectedRows": 3,
+        "SemanticRows": 3,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "NativeIMS": {
+        "PhysicalExpectedRows": 3,
+        "SemanticRows": 3,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "Review": {
+        "PhysicalExpectedRows": 84,
+        "SemanticRows": 84,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "SourceEF": {
+        "PhysicalExpectedRows": 3,
+        "SemanticRows": 3,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "SourceIMS": {
+        "PhysicalExpectedRows": 3,
+        "SemanticRows": 3,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      },
+      "Start": {
+        "PhysicalExpectedRows": 84,
+        "SemanticRows": 84,
+        "InvalidSemanticDates": 0,
+        "ExactRowsMatch": true
+      }
+    },
+    "Dates": {
+      "Groups": 9,
+      "InvalidDates": 0,
+      "MatchingSourceNativeAndMonthSets": true
+    },
+    "NumericalComparisonToPrivateBaseline": {
+      "PairedScalarComparisons": 12,
+      "Mismatches": 0,
+      "ValuesPrintedOrStored": false,
+      "Scope": "One available ADS driver; market/ef/share; 12M; FY and future month",
+      "IndependentExcelParity": false
+    },
+    "FileLabelCounts": {
+      "Files": 8,
+      "Choices": 8,
+      "MissingImportedAt": 0,
+      "HashSuffixes": 0
+    },
+    "FullCandidateMetadataMatches": true,
+    "CloudMappingPreserved": true
+  },
+  "SourceArtifact": {
+    "File": "handoff/report-native-only-r17.8/test-release-r01/VERIFY INSTALLED TEST R01.py",
+    "SHA256": "a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635",
+    "Bytes": 235093,
+    "ExactQualifiedR02Matches": true
+  },
+  "Interpretation": {
+    "ClosedGate": "Existing R17.8 TEST installation and declared bounded post-refresh verification",
+    "PrerequisitesPassedBySourceFlow": [
+      "Exact TEST identity and pinned install success receipt",
+      "Latest history entry Completed and starts after installation",
+      "Candidate semantic BIM matches private candidate under declared expression normalization",
+      "Cloud mapping equals private saved mapping",
+      "All returned processing history terminal",
+      "Physical/semantic date sets match exactly",
+      "Paired scalar and readable unique label checks",
+      "Processing history and semantic date signature unchanged between their before/after reads"
+    ],
+    "DateScope": "Five 84-month groups; source/native cutoff comparisons limited to UK / 2026-10 with three rows each",
+    "FileLabelScope": "Global fm_native_files helper query, eight files/eight distinct labels; not eight UK/October sources",
+    "NumericalScope": "One available ADS driver, market/ef/share, 12M, FY and future month; no independent Excel or all-driver/all-window parity",
+    "NoRemainingNotebookOrManualRefreshAction": true,
+    "OldStops": "Retained historically; superseded for this bounded gate by returned success, not hidden or erased",
+    "OldDirectLakeFailureRootCause": "Still unproven beyond recorded backend request failure; no permanent service-health guarantee",
+    "NotEstablished": [
+      "Native Desktop rendering/interactions",
+      "Export formatting",
+      "Broad independent R16.6/bridge business parity",
+      "Company visual performance improvement",
+      "Full native S&OP/FX/feature parity",
+      "Production acceptance or replacement"
+    ]
+  },
+  "NextStep": {
+    "Artifact": "handoff/report-native-only-r17.8/test-release-r01/candidate/ForecastMaster Compact Native R17.8 TEST.zip",
+    "SHA256": "94e6167b95ffc6691c5d3f552a7bfbab01d8e0416d68a209d5d24a14cdf21c6b",
+    "Bytes": 45833,
+    "PBIP": "ForecastMaster Compact Native R17.8 TEST.pbip",
+    "Action": "Extract all TEST ZIP contents to a new folder and open the PBIP in company Power BI Desktop. SAMPLE is fabricated.",
+    "InitialSlice": "Available UK / 2026-10 / IMS-Market / Market / Units / Total context; keep visible month/period/trend selections recorded",
+    "Interactions": [
+      "Separate Section and Measure",
+      "Monthly Start/End",
+      "Single Review/graph trend independent of multiple Executive table trends",
+      "Native driver-to-sector expansion",
+      "File checkboxes without Ctrl and clear to Automatic ADS"
+    ],
+    "Evidence": "Screenshots at top/chart/Executive/files plus Performance Analyzer DAX and total times for graph, Review and Executive, identifying Total/Sectors and exact selections/load conditions",
+    "OnError": "Capture exact visual error details and selection context; return before further setup/refresh attempts",
+    "RemainingLaterGates": "Independent business comparisons and exports; no production publication"
+  },
+  "Preserved": "No code, report ZIP, adapter, installer, verifier, company model/source/connection/processing or production mutation by this review"
+}
