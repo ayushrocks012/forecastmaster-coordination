@@ -1,5 +1,56 @@
 # Company setup status
 
+## 23 October 2026 — R03 numerical checks passed; submitted TEST update needs three metadata flags verified
+
+The operator returned TEST_R177_READBACK_NEEDS_REVIEW. All 72 comparisons were
+numeric with zero blanks/mismatches: 54 direct baseline reads, 18 definition-
+checked variance expectations and 72 actual candidate reads. The exact original
+variance definitions were verified, but the original percentage measure was
+not executed or marked passed. Source-selection metadata was stable. Each of
+Market, Ex-factory and Share contributed 24 numeric comparisons. Numeric
+benchmarks numbered 18 and future trends 9. This is representative numerical
+evidence, not full R16.6 parity. The 74710ms baseline and 99848ms candidate totals
+have different direct query counts/cache order and do not measure report speed.
+
+The private backup was verified and ModelWriteRequested was true. No original
+model write, refresh or publish was requested; CloudConnectionPreserved was
+true. Do not rerun any updater or assume the model is unchanged. Safe receiving
+receipt: logs/2026-10-23-native-r177-r03-readback-review.json.
+
+Readback reports three PROPERTY_ADDED differences, seventeen identical measure
+DAX line representations and two identical calculated-helper representations.
+The hashed paths identify isNameInferred on fm_native_files.ImportedAtUTC,
+fm_native_files.FileChoiceLabel and fm_native_lines.SeriesLabel. Their actual
+values were not printed and remain unverified. Microsoft documents this as
+calculated-column inferred-name metadata; do not assume true or ignore it
+globally.
+
+Current step: [R17.7 read-only readback check](../handoff/report-native-only-r17.7/readback-check-r01/OPEN%20FIRST%20-%20READBACK.txt).
+It reads the exact private R03 backup twice per file, verifies the saved
+before/candidate patch against frozen public code and the successful preflight
+receipt, then compares two complete TEST snapshots and cloud mappings. Only
+boolean true on those three exact new calculated columns with matching source
+bindings can be normalized in memory; all other metadata remains checked.
+There is no amount query, model/backup write, refresh or publish.
+
+Run the whole CHECK file in ONE NEW setup cell once. Only
+TEST_R177_READBACK_VERIFIED permits a single manual refresh of existing R17.1
+TEST; require warning-free Completed before opening the unchanged R17.7 TEST
+PBIP. Any other stage/error or refresh warning/failure stops for review. This
+conditional instruction supersedes the earlier R03 hold after review of its
+numerical evidence. Company readback verification and metadata processing are
+still pending. Production R16.6 and all earlier artifacts remain unchanged;
+built-in visuals only.
+
+Eight new synthetic read-only guard tests and eleven frozen R03 tests pass.
+The new guards reproduce the three additions plus nineteen representation
+differences and refuse altered flags/bindings, unrelated model/source/security
+changes, tampered backups/preflight receipts, unstable metadata/mappings and
+forbidden routes. Python 3.10 syntax parses; these are not company executions.
+GitNexus cannot resolve Coordination; direct tracing/hash checks and frozen
+file preservation are bounded fallback. Full numerical, native UI/export and
+same-selection report speed gates remain open.
+
 ## 23 October 2026 — R02 cancelled at original EF Variance %; R03 uses verified-formula expectations
 
 The operator returned TEST_R177_PREFLIGHT_STOPPED / R02. CompletedComparisons

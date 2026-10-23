@@ -511,3 +511,32 @@ cell once; return final JSON even for TEST_R177_UPDATED before refreshing or
 opening R17.7, to review explicit direct/derived evidence. This supersedes the
 R02 success -> refresh instruction. Never retry an ambiguous write. All native
 UI, full numerical parity and speed acceptance gates remain separate and open.
+
+Later R03 returned TEST_R177_READBACK_NEEDS_REVIEW after all 72 numeric
+comparisons matched (54 direct baseline, 18 definition-checked expectations,
+72 actual candidates; zero blanks/mismatches). Original variance % was not
+executed and is not marked passed. The TEST update WAS submitted; no original
+model write/refresh/publish was requested. Cloud mapping was preserved. The
+three added-property path hashes resolve to isNameInferred on the three new
+ImportedAtUTC/FileChoiceLabel/SeriesLabel calculated columns; values are still
+unknown. Seventeen measure and two helper DAX line representations are already
+identical. Never rerun R03 or infer absent writes from its review stage.
+
+Current company step: handoff/report-native-only-r17.7/readback-check-r01/.
+It is pinned to the exact reported R03 backup, verifies the saved before/candidate
+pair against frozen public code and the successful numerical receipt, then
+checks two complete TEST definitions and connection snapshots. Accept an added
+isNameInferred=true only on those three exact new calculatedTableColumns with
+their expected [ColumnName] source bindings; compare the whole remaining model.
+Do not introduce a global metadata ignore, amount query, backup/model write,
+rollback or retry. Unknown values, false/nonboolean flags, other metadata
+changes, unstable snapshots or changed mapping keep the hold.
+
+Run only ONE NEW CHECK cell once. Only TEST_R177_READBACK_VERIFIED permits one
+manual existing R17.1 TEST refresh, then the unchanged R17.7 TEST PBIP after
+warning-free Completed. Any other result/refresh failure or warning stops for
+review. This conditional instruction supersedes the prior R03 hold following
+the reported numerical-evidence review. Preserve old packages and backups;
+native-only visuals, other-laptop company access, production R16.6 and open
+full-parity/UI/export/speed gates remain. Serial preflight timings (54 versus
+72 direct reads and different cache order) are not report performance evidence.

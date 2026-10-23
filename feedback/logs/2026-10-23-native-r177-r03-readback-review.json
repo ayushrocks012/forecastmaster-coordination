@@ -1,0 +1,32 @@
+{
+  "Evidence": "Operator-pasted R03 output; 23 October 2026",
+  "Stage": "TEST_R177_READBACK_NEEDS_REVIEW",
+  "UpdaterRevision": "R03",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "NumericalPreflight": {
+    "Checks": 72, "NumericComparisons": 72, "BlankComparisons": 0, "Mismatches": 0,
+    "DirectOriginalScalarReads": 54, "DerivedOriginalVarianceComparisons": 18,
+    "ActualCandidateScalarReads": 72, "OriginalVarianceFormulaVerified": true,
+    "OriginalVariancePercentMeasureExecuted": false, "NumericBenchmarks": 18,
+    "NumericFutureTrends": 9, "SourceSelectionMetadataStable": true,
+    "OriginalQueryMs": 74710, "CandidateQueryMs": 99848,
+    "ReportSpeedEstablished": false
+  },
+  "PrivateBackupVerifiedReported": true,
+  "ModelWriteRequested": true,
+  "OriginalModelWriteRequested": false,
+  "CloudConnectionPreserved": true,
+  "DifferenceCounts": {
+    "PROPERTY_ADDED": 3,
+    "IDENTICAL_DAX_LINE_REPRESENTATION": 17,
+    "IDENTICAL_CALCULATED_HELPER_LINE_REPRESENTATION": 2
+  },
+  "Unexplained": 3,
+  "AddedPropertyResolvedFromPublicPathHash": "isNameInferred",
+  "AffectedNewColumns": ["fm_native_files.ImportedAtUTC", "fm_native_files.FileChoiceLabel", "fm_native_lines.SeriesLabel"],
+  "ObservedAddedPropertyValues": "NOT PROVIDED; read-only verification required",
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "CompanyAmountValuesIncluded": false,
+  "NextStep": "Read-only exact R03 backup/current-metadata check. Do not rerun the updater. Refresh only if TEST_R177_READBACK_VERIFIED."
+}

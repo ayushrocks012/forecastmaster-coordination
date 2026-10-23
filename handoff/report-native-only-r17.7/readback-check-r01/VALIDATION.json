@@ -1,0 +1,65 @@
+{
+  "Date": "2026-10-23",
+  "Package": "R17.7 R03 read-only readback check R01",
+  "EvidenceLevel": "LOCAL_SYNTHETIC_CHECKS_AND_OPERATOR_R03_RECEIPT",
+  "ReceivingEvidence": {
+    "Stage": "TEST_R177_READBACK_NEEDS_REVIEW",
+    "NumericComparisons": 72,
+    "BlankComparisons": 0,
+    "Mismatches": 0,
+    "DirectBaselineReads": 54,
+    "DerivedVarianceExpectations": 18,
+    "ActualCandidateReads": 72,
+    "ModelWriteRequested": true,
+    "OriginalModelWriteRequested": false,
+    "CloudConnectionPreserved": true,
+    "AddedProperties": 3,
+    "IdenticalMeasureRepresentations": 17,
+    "IdenticalHelperRepresentations": 2,
+    "ResolvedProperty": "isNameInferred",
+    "ActualPropertyValues": "NOT_PROVIDED; COMPANY_CHECK_REQUIRED",
+    "RefreshRequested": false,
+    "ReportPublished": false,
+    "ReportSpeedVerified": false
+  },
+  "LocalChecks": {
+    "ReadOnlyGuardTestsPassed": 8,
+    "FrozenR03TestsPassed": 11,
+    "Python310SyntaxParsed": true,
+    "StandaloneScriptReproduced": true,
+    "ReportedThreeAdditionsAndNineteenRepresentationsReproducedSynthetically": true,
+    "OnlyTrueOnThreeExactNewCalculatedColumnsWithMatchingSourceBindingsAccepted": true,
+    "FalseNonbooleanWrongBindingsOrFlagsElsewhereRefused": true,
+    "WholeDefinitionAndPrivatePatchReversalChecked": true,
+    "SuccessfulSavedPreflightReceiptRequired": true,
+    "TwoStableSnapshotsAndUnchangedCloudMappingRequired": true,
+    "TruncatedChangedMissingBackupsAndForbiddenRoutesRefused": true,
+    "NoAmountQueryModelBackupWriteRefreshOrPublish": true,
+    "RawCompanyDefinitionsValuesAndErrorsExcludedFromOutput": true
+  },
+  "Preservation": {
+    "PriorManifestEntries": 1090,
+    "PriorNonmutableFilesHashAndLengthMatched": 1086,
+    "MutableRootDocs": [
+      "AGENTS.md",
+      "README.md",
+      "START-HERE.md",
+      "feedback/STATUS.md"
+    ],
+    "OlderUpdatersDiagnosticsAndBothR177ZipBytesPreserved": true
+  },
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination repository not registered",
+    "ChangeScope": "INCOMPLETE; staged diff-impact failed closed, analysis_incomplete=1",
+    "Fallback": "Direct frozen source and hash tracing, synthetic read-only guards and byte preservation; no complete graph-impact conclusion"
+  },
+  "ReceivingInstruction": "Run ONE NEW CHECK cell once; only TEST_R177_READBACK_VERIFIED permits one existing-TEST refresh, then unchanged R17.7 TEST PBIP after warning-free Completed",
+  "Unverified": [
+    "Actual three flag values",
+    "Company whole-definition readback verification",
+    "Metadata processing",
+    "Full R16.6 parity",
+    "Native UI/export",
+    "Company report speed"
+  ]
+}

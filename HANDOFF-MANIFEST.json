@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 62254,
-      "SHA256": "26d631c3f687ed1ee949ad0875e955b4e1cbf562ce951c83b6d473047f3ef7c6"
+      "Bytes": 64246,
+      "SHA256": "62f8fa1af249539377ca83b261787119b8a8013311dda47ed4fa17ccb04137c6"
     },
     "README.md": {
-      "Bytes": 5909,
-      "SHA256": "0a293634ff599eab9a02bc3d3285e8e42add2d1bee321848c9859949bcc67b2a"
+      "Bytes": 5819,
+      "SHA256": "322e6df1e6650926c5a9ef9e49d024fc1c0fb3d1fc0c9ea26eca757797dbbaa2"
     },
     "feedback/STATUS.md": {
-      "Bytes": 108299,
-      "SHA256": "6062758a4299c0682bbc1c87edb9ba5420e26c2f0d7269570b7814140e69e64f"
+      "Bytes": 111596,
+      "SHA256": "c3cafb026c4b750e963c5af071ff2247e359047fe509dd1ff53976d96decfe2e"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 6818,
-      "SHA256": "e2a288081a48c8536eb8b6ee44c80203ac58ee7f13abce47c36910c4f775b47c"
+      "Bytes": 6926,
+      "SHA256": "6310d7e07302448d45cd316c72aa202df1214f664507c6c3157fa831d3c9462c"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4360,6 +4360,38 @@
     "feedback/logs/2026-10-23-native-r177-r02-cancelled.json": {
       "Bytes": 967,
       "SHA256": "9ae819c0224bc0156d913396b8839615052e35e926466008d5dd5a350f9c0f87"
+    },
+    "feedback/logs/2026-10-23-native-r177-r03-readback-review.json": {
+      "Bytes": 1538,
+      "SHA256": "fe9f509a5b805ccf21eb590985d733ff483b23e268c8f9a16df5baff1a18c040"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/CHECK R17.7 READBACK.py": {
+      "Bytes": 36613,
+      "SHA256": "40118c32d0a1f8125f42301708fdd3f848cb37381071e3185aed6726635b9cd0"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/OPEN FIRST - READBACK.txt": {
+      "Bytes": 3689,
+      "SHA256": "c6938693c1cbe4b9570105e7bc58b6f0b3c6a54823eb6f82b6c915413bb3b8c4"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/README.md": {
+      "Bytes": 3711,
+      "SHA256": "cfae765ea5f813619951d3e29927bd641a44ba28bb13240428af471ef4b6fddc"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/VALIDATION.json": {
+      "Bytes": 2630,
+      "SHA256": "f7136fa364e2da42e442dcd67b3418c8efc029d2f86a79663d8e9fb61f199691"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/build_probe.py": {
+      "Bytes": 4046,
+      "SHA256": "fac92c20c33f3bf4593015de819edc6d72ca03e1acb229482b881777a7cb25be"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/probe.py": {
+      "Bytes": 11260,
+      "SHA256": "3745220a8b15e5e76e0f709925f22ede99b45ac00d2161e16a8c57d0d044554f"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/test_probe.py": {
+      "Bytes": 11242,
+      "SHA256": "9dae032cccd9fb64598aa872a380921f7fbb2457005d06b8cbbadfabbf570458"
     }
   }
 }

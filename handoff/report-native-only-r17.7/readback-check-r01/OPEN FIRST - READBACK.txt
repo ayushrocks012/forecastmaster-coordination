@@ -1,0 +1,62 @@
+R17.7 R03 — READ-ONLY CHECK AFTER THE ALREADY-SUBMITTED TEST UPDATE
+
+Your numerical preflight passed: 72 numeric comparisons, zero blanks and zero
+mismatches. This includes 54 direct baseline reads, 18 definition-checked
+variance expectations and 72 actual candidate reads. The TEST update was then
+submitted. The connection was preserved, but readback flagged three properties.
+
+Those paths identify isNameInferred on the three new calculated columns:
+fm_native_files.ImportedAtUTC, fm_native_files.FileChoiceLabel and
+fm_native_lines.SeriesLabel. Their values were not printed by the updater.
+Do not assume them or rerun the updater. This new check reads the exact private
+R03 backup and confirms the values plus the WHOLE model before any refresh.
+
+1. On the COMPANY laptop, in your forecastmaster-coordination VS Code terminal
+   run, from the repository root:
+
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.7\readback-check-r01\CHECK R17.7 READBACK.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   If the pull is refused, preserve local files and send the message.
+   Copy this whole CHECK file, not any updater or older diagnostic.
+
+2. In Fabric -> UK-ANI-Demand -> ForecastMaster_GM_Setup, add ONE NEW
+   Python/PySpark cell at the bottom and paste the copied code.
+   Run ONLY that new cell ONCE. Do not Run all or rerun R03.
+
+   It reads the four existing private backup files and two current TEST
+   metadata snapshots. It verifies the saved numerical receipt, declared model
+   changes and cloud mapping. Only isNameInferred=true on the three exact new
+   calculated columns, with the expected source-column bindings, can be
+   accepted in addition to identical DAX line representations. All other model
+   differences remain blocking. No amount query, model/backup write or refresh.
+
+3. Read the final JSON. Continue ONLY for Stage TEST_R177_READBACK_VERIFIED.
+   For TEST_R177_READBACK_NEEDS_REVIEW, TEST_R177_READBACK_CHECK_STOPPED or any
+   error: stop and send the complete JSON/output. Do not retry the updater,
+   refresh, open R17.7 or publish. Preserve the private backup.
+
+4. Only after TEST_R177_READBACK_VERIFIED, open the UK-ANI-Demand workspace
+   list and find the SEMANTIC MODEL ForecastMaster Native OneLake R17.1 - TEST
+   (31d00232-ac03-48fe-af39-f2e4bae82443). Use ... -> Refresh now ONCE.
+   Wait for Refresh history -> Completed without warnings.
+   If it fails or warns, stop and send its details. Do not use production
+   Refresh Demand, refresh production or alter connections.
+
+5. After warning-free Completed, extract ALL of the unchanged
+   handoff\report-native-only-r17.7\candidate\ForecastMaster Native Only R17.7 TEST.zip
+   into a NEW folder. Open ForecastMaster Native Only R17.7 TEST.pbip, keeping
+   its .Report folder alongside it. Keep the old project/backups. Use TEST,
+   not the fabricated SAMPLE. Built-in Power BI visuals only.
+
+6. Send the readback-check JSON and TEST refresh result back. Check the report
+   with the same selections as before. Apply filters batches native slicer
+   changes; Ctrl+click the Apply action button in Desktop edit mode. Native
+   file checkbox selection itself needs no Ctrl. Company UI/interaction/export,
+   wider numerical parity and same-selection graph/summary timings remain
+   receiving checks. Serial preflight timings do not establish report speed.
+
+This check is pinned to the exact R03 backup printed in your output:
+Native-R177-Performance-Files-R03/20261023T185452-34a80b74-e9c7-4749-af9f-d5a835b23e5e.
+It does not replace, rewrite or roll back any model. Production R16.6 remains
+unchanged. Do not rerun R03 even though its final stage requested review.

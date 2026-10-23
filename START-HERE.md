@@ -1,35 +1,38 @@
-# Current report step - R17.7 updater R03, 23 October 2026
+# Current report step - R17.7 R03 readback check, 23 October 2026
 
-Follow [R03 company-laptop steps](handoff/report-native-only-r17.7/preflight-update-r03/OPEN%20FIRST%20-%20R03.txt).
-R02 completed 26 comparisons, then the ORIGINAL Ex-factory/6M/current-year
-Variance % query was CANCELLED. No model/backup write was reached. The operator
-is unsure whether Stop was clicked. Memory, timeout and cause remain unknown.
-Do not rerun R02, refresh TEST or open R17.7 as installed.
+Follow [the read-only company-laptop steps](handoff/report-native-only-r17.7/readback-check-r01/OPEN%20FIRST%20-%20READBACK.txt).
+R03 passed 72 numeric comparisons with zero blanks/mismatches: 54 direct
+baseline reads and 18 definition-checked variance expectations against 72 actual
+candidate reads. It then submitted the TEST update and preserved the cloud
+connection. Do not rerun R03 or assume no model write occurred.
 
-R03 uses a different, explicit variance evidence method. It first verifies the
-exact live N Variance/N Variance % definitions. It then calculates 18 baseline
-percentage expectations privately from the directly read baseline Plan and
-Benchmark; those inputs are compared with actual candidate inputs too. It still
-queries all 72 actual candidate values and 54 direct baseline values. This is
-not 72 direct original reads or a pass for the cancelled old percentage query.
-Blank/zero/finite/completeness/informative-data/tolerance/source-stability guards
-remain. All comparisons start afresh; no partial-run receipt is resumed.
+Readback flagged three added isNameInferred properties on ImportedAtUTC,
+FileChoiceLabel and SeriesLabel. Values were not included in the output. The
+new check verifies those values, the exact private backup pair, successful
+preflight receipt, entire candidate definition and two TEST snapshots/mappings.
+Only true on those exact new calculated columns with the expected source
+bindings is accepted; other differences still stop verification. It makes no
+amount query, model/backup write, refresh or publishing request.
 
-Save report work and close Desktop/open TEST report tabs to reduce competing
-requests. Pull Coordination, copy the WHOLE new UPDATE EXISTING TEST TO R17.7
-R03.py from preflight-update-r03 into ONE NEW Python/PySpark cell in
-ForecastMaster_GM_Setup. Run ONLY that cell once, not Run all. Allow several
-minutes. After a passing preflight, the unchanged private backup/cloud/
-concurrency/no-purge single-update/full-readback safeguards apply.
+On the COMPANY laptop, pull Coordination. Copy the WHOLE
+handoff/report-native-only-r17.7/readback-check-r01/CHECK R17.7 READBACK.py into
+ONE NEW Python/PySpark cell in ForecastMaster_GM_Setup. Run ONLY that new cell
+once, never Run all. Do not paste an updater or older diagnostic.
 
-Send the complete final JSON even for TEST_R177_UPDATED. STOP before refreshing
-TEST, opening R17.7 or publishing until the direct/derived evidence and readback
-are reviewed. This supersedes R02's success -> refresh instruction. On any error,
-do not retry or assume the model is unchanged unless the output establishes it.
+Continue ONLY for TEST_R177_READBACK_VERIFIED: manually Refresh now ONCE on the
+existing semantic model ForecastMaster Native OneLake R17.1 - TEST in
+UK-ANI-Demand. Require Refresh history -> Completed without warnings. Then
+extract the unchanged R17.7 TEST ZIP into a new folder and open its PBIP with
+the .Report folder alongside it. Send the check JSON and refresh status.
+For any other stage/error or refresh warning/failure, stop and send details;
+do not retry the updater, refresh again, open R17.7 or publish.
 
-All R17.7 model patch constants and report ZIPs are preserved. Built-in visuals
-only; production R16.6, source retention and schedules remain unchanged. Company
-R03 parity, processing, full R16.6 parity, UI/export and speed remain open gates.
+This conditional readback instruction supersedes the earlier R03 hold after
+review of its numerical evidence. Built-in visuals only; production R16.6,
+source retention and schedules remain unchanged. Company readback verification,
+processing, full R16.6 parity, native UI/export and speed remain receiving gates.
+Serial preflight totals have different query counts and do not measure report
+speed.
 Original laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH
