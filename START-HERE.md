@@ -23,7 +23,12 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-**Current receiving action: read the failed TEST refresh error details.**
+**Immediate step from the latest screenshot:** the correct history dialog is
+open with Scheduled selected. Click **Direct Lake**, the third tab beside
+OneDrive, and send that tab's screenshot. If Failed at 23:27 is visible, open
+its Show/error details. Its category is still unknown; no refresh is requested.
+
+**Current diagnostic target: read the failed TEST refresh error details.**
 The refresh-state R01 result confirms a post-install Completed refresh ending
 22:24:33 UTC on 23 October, followed by a newer Failed refresh starting
 22:27:57 UTC / 23:27:57 UK. The verifier correctly stops on the newer failure.

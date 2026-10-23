@@ -1,5 +1,23 @@
 # Company setup status
 
+## 23 October 2026 — UI screenshot shows Scheduled history; category still unknown
+
+The operator's 23:57 screenshot is the correct TEST model/history dialog, with
+Scheduled selected. Its top row is On demand / Completed at 23:24:13–23:24:33 UK,
+matching the earlier API completion. The newer 23:27 API Failed row is absent
+from the visible Scheduled list. OneDrive, Direct Lake and OneLake Integration
+tabs are visible. This is a category-limited screenshot, not a contradiction of
+the API evidence or proof of the failed operation's category/current data state.
+[Safe reviewed screenshot receipt](logs/2026-10-23-r178-refresh-history-scheduled-ui-reviewed.json).
+
+The earlier generic UI instructions omitted the tabs. Immediate next step is
+click Direct Lake (third tab beside OneDrive) in the same dialog and return its
+screenshot. If the matching Failed row is visible, Show/error details remains
+the target. Its presence there is unconfirmed; do not infer the cause/category
+before seeing it. OneLake Integration is another visible category, not yet read.
+No new cell/probe/install/verifier, refresh/reset, marker deletion or publication.
+Documentation only; all report/adapter/source/receiving code remains unchanged.
+
 ## 23 October 2026 — execution-guide proposal integrated into the maintained reference
 
 The user explicitly authorized direct integration from the side conversation.

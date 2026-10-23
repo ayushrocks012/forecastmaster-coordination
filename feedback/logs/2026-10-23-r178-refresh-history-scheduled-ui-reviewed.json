@@ -1,0 +1,45 @@
+{
+  "Evidence": "Operator screenshot reviewed visually; no live company access",
+  "Attachment": {
+    "Name": "Screenshot 2026-10-23 235749.png",
+    "Bytes": 240473,
+    "SHA256": "6696fa16c18234aaa8322c6ba8b6d9bc8001049493e722430841c85fb1f5c5fa",
+    "RawImageCopiedToPublicRepository": false
+  },
+  "Observed": {
+    "ExactTESTModelIDVisibleInURL": true,
+    "ModelViewingMode": true,
+    "Dialog": "Refresh history",
+    "SelectedTab": "Scheduled",
+    "OtherVisibleTabs": [
+      "OneDrive",
+      "Direct Lake",
+      "OneLake Integration"
+    ],
+    "TopVisibleEntry": {
+      "Date": "2026-10-23",
+      "StartUK": "23:24:13",
+      "EndUK": "23:24:33",
+      "Type": "On demand",
+      "Status": "Completed"
+    },
+    "Failed2327EntryVisibleOnSelectedTab": false
+  },
+  "Interpretation": {
+    "ConsistentWithEarlierAPICompletedEntry": true,
+    "NewerAPIFailureDisprovedByScheduledTab": false,
+    "FailedOperationCategory": "UNKNOWN; other category tabs not inspected in this screenshot",
+    "CurrentModelValidity": "NOT REVALIDATED",
+    "EarlierGuidanceCorrection": "Refresh history is tabbed; generic history instructions omitted the category selection"
+  },
+  "NextAction": "Click Direct Lake, the third tab beside OneDrive, in the same dialog. Send a screenshot of that tab; if Failed at 23:27 is visible, Show/error details can provide its error. Do not assert the failed entry belongs there before inspection.",
+  "IfNoMatchingEntry": "Review the next screenshot before further category guidance; OneLake Integration is another visible category, not a proven failure type",
+  "NoNewCompanyOperationAuthorized": [
+    "notebook/probe/verifier/installer rerun",
+    "refresh",
+    "reset",
+    "marker deletion",
+    "publication"
+  ],
+  "ReviewScope": "Documentation-only; screenshot metadata and existing evidence; no code/model/report changes"
+}

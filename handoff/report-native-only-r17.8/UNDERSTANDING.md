@@ -38,7 +38,22 @@ identity, completed-refresh, whole candidate and cloud-mapping guards had passed
 inferred from the retained R01 execution order. This is **partial verification**,
 not full acceptance. [Reviewed counts-only return](../../feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
 
-**Current action:** on the company laptop, open the [failed TEST refresh details](https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e)
+**Latest UI evidence:** the 23:57 screenshot shows exact TEST in the Refresh
+history dialog with **Scheduled** selected. Top entry is the known 23:24:13–33
+On demand / Completed; the API's newer 23:27 Failed entry is not visible there.
+Other visible tabs are OneDrive, Direct Lake and OneLake Integration. The
+Scheduled view alone does not disprove the API failure or identify its category.
+My previous generic UI steps omitted tab selection. No current data-validity
+or failed-operation category is established by this screenshot.
+[Reviewed screenshot receipt](../../feedback/logs/2026-10-23-r178-refresh-history-scheduled-ui-reviewed.json).
+
+**Immediate UI step:** in that same dialog click **Direct Lake**, the third tab
+beside OneDrive, and return its screenshot. If the matching 23:27 Failed entry
+is visible, open its Show/error details. Do not promise that it is on this tab;
+OneLake Integration is another visible category if further inspection is needed.
+No new notebook cell, refresh or verifier is requested.
+
+**Error-details target:** on the company laptop, open the [failed TEST refresh details](https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e)
 and return its exact error code/message, plus Data versus Query Cache phase if
 shown. Fallback: UK-ANI-Demand → ForecastMaster Native OneLake R17.1 - TEST →
 Refresh → Refresh history → Failed at **23:27:57 UK / 22:27:57 UTC, 23 October** →
@@ -97,7 +112,8 @@ Direct preservation/source/context/runtime checks are recorded instead.
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
-- **Current next action:** read only the failed refresh error details above.
+- **Current next action:** inspect the Direct Lake history tab as above; failed
+  request error details remain the target.
   Installation/one refresh are complete; do not repeat either or the recovery.
   Desktop/business/export/performance checks remain separate.
   The published ForecastMaster Review remains bound to the original model.

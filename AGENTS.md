@@ -24,8 +24,11 @@ Latest company return: refresh-state R01 completed, exact TEST confirmed and
 at 22:24:33.743 UTC on 23 October; a newer run failed at 22:27:57–22:27:59 UTC
 (23:27 UK). Newest Failed explains verifier R02's processing guard. Raw error
 and initiator are UNKNOWN; the allowlisted UNRECOGNIZED refresh type is not a
-root cause. Current action: read that failed run's error details in company UI
-and return code/message plus Data/Query Cache phase if shown. See UNDERSTANDING
+root cause. Current UI evidence: correct history dialog, Scheduled selected, top entry
+23:24 Completed; no 23:27 failure visible in that category. Immediate action:
+click Direct Lake (third tab beside OneDrive), return screenshot; obtain exact
+failed-run code/message if visible. Category/cause remain UNKNOWN. Prior generic
+UI steps missed tabs; do not assert that the failed run must appear in Direct Lake. See UNDERSTANDING
 resume and STATUS. No new notebook cell, installer/verifier/probe/refresh retry,
 reset, marker deletion or publication. Keep report/adapter/R16.6/backups unchanged.
 Earlier nine date groups/12 comparisons remain historical scoped evidence.
