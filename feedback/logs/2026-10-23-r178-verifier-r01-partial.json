@@ -1,0 +1,109 @@
+{
+  "Evidence": "Operator-returned JSON and statement: Open First steps 1\u20133 successful; old verifier then stopped",
+  "ReportedStage": "TEST_R178_VERIFICATION_STOPPED",
+  "Revision": "R01",
+  "VerifierRevisionMarkerPresent": false,
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "PhysicalSemanticDateGroups": {
+    "Axis": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "End": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "Facts": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "NativeEF": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "NativeIMS": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "Review": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "SourceEF": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "SourceIMS": {
+      "PhysicalExpectedRows": 3,
+      "SemanticRows": 3,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    },
+    "Start": {
+      "PhysicalExpectedRows": 84,
+      "SemanticRows": 84,
+      "InvalidSemanticDates": 0,
+      "ExactRowsMatch": true
+    }
+  },
+  "Dates": {
+    "Groups": 9,
+    "InvalidDates": 0,
+    "MatchingSourceNativeAndMonthSets": true
+  },
+  "NumericalComparisonToPrivateBaseline": {
+    "PairedScalarComparisons": 12,
+    "Mismatches": 0,
+    "ValuesPrintedOrStored": false,
+    "Scope": "One available ADS driver; market/ef/share; 12M; FY and future month",
+    "IndependentExcelParity": false
+  },
+  "ReportedFailure": {
+    "Reason": "EXCEPTION_WITHHELD",
+    "ExceptionFamily": "TypeError",
+    "KnownSignals": [],
+    "RawErrorPrintedOrStored": false
+  },
+  "ReportedVerifierActions": {
+    "ModelWriteRequested": false,
+    "OriginalModelWriteRequested": false,
+    "LakehouseTableWriteRequested": false,
+    "RefreshRequested": false,
+    "CompanyAmountValuesPrintedOrStored": false,
+    "ReportPublished": false
+  },
+  "Interpretation": {
+    "InstallationAndOneRefresh": "Operator confirmed; verifier passed prerequisite success/Completed-after-install checks",
+    "FullCandidateMetadataAndCloudMapping": "Passed earlier guards inferred from preserved R01 source path before the returned date/numerical results",
+    "FileLabelCounts": "NOT RETURNED; final label/concurrency gates incomplete",
+    "LocalDiagnosis": "Known old metadata COUNTROWS(empty) returns DAX BLANK; Python int conversion rejects missing values. Reproduced locally by retained four-query regression. Exact offending company counter not returned.",
+    "OverallVerification": "INCOMPLETE; do not promote to full success, UI acceptance or speed proof"
+  },
+  "Correction": {
+    "Commit": "dfdf8304a840ecaf87a9ca7dede6fc1570275198",
+    "File": "handoff/report-native-only-r17.8/test-release-r01/VERIFY INSTALLED TEST R01.py",
+    "ExpectedOutputMarker": {
+      "VerifierRevision": "R02"
+    },
+    "Change": "COALESCE only two empty metadata counts; business-value blanks and guards unchanged",
+    "LocalEvidenceRechecked": "Four retained native queries match current verifier query and exact receipt input/output hashes; no new engine run"
+  },
+  "NextStep": "Pull Coordination. Copy the current verifier afresh into ONE NEW ForecastMaster_GM_Setup Python cell, run only it, return full JSON. No reinstall, refresh, reset, marker deletion or publication.",
+  "ReceivingCorrectionResult": "PENDING",
+  "NativeRenderingExportAndPerformance": "PENDING",
+  "ProductionR166": "No change authorized or requested"
+}

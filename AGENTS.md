@@ -8,12 +8,15 @@ open gaps and update procedure), despite its historical R17.8 folder name.
 `feedback/STATUS.md` owns the dated company receipts. Load the resume section
 first; consult only the relevant detailed appendix after compaction.
 
-Latest reviewed company state: R02 returned
-TEST_R178_RECOVERY_AND_BOUNDED_CHECKS_VERIFIED. Dates/guards and 90 internal
-scalar checks passed; original metadata/cloud/source state was preserved.
-No more reset/manual refresh/R02 rerun for that recovery. Native R17.8 adapter
-is still uninstalled. Reopening existing R17.7 TEST for UI inspection is allowed;
-no publication or production change. This supersedes older receiving steps below.
+Latest company return: R17.8 install and one TEST refresh completed. The old
+verifier passed nine exact date groups and all 12 paired scalar comparisons,
+then stopped with TypeError before metadata label counts/final gates. Overall
+verification remains incomplete. Full candidate/cloud/Completed checks passed
+before those results by retained source flow. Current action: pull/copy the
+corrected read-only VERIFY INSTALLED TEST R01.py afresh; output VerifierRevision
+R02. Run only it once, return JSON. No installer, refresh/reset, marker deletion
+or publication. R02 fixes empty metadata COUNTROWS via COALESCE, without changing
+business-amount blanks. See UNDERSTANDING resume and latest STATUS receipt.
 
 The user explicitly requests ongoing maintenance of this one understanding
 reference from chat/history/current source and reviewed receiving outputs.
@@ -30,9 +33,9 @@ permissions, deployed code/schedules, numerical parity and speed remain separate
 The user now authorizes the compact R17.8 TEST report plus matching adapter.
 Current release: handoff/report-native-only-r17.8/test-release-r01/OPEN FIRST.txt.
 Local qualification: 207 native synthetic queries / 1,868 assertions, 14 unit
-checks and 67 Microsoft schema documents. Prepared, not company installed.
-Run the new installer once; only TEST_R178_UPDATED permits ONE TEST full refresh,
-then its read-only installed check. This new installation processing does not
+checks and 67 Microsoft schema documents. Company installation/one refresh
+are now confirmed; only the corrected read-only verifier remains for that gate.
+The original install-once/refresh-once instructions remain historical. This does not
 reopen the closed date recovery. No reset/clear/recovery rerun. STOPPED or unknown
 write outcomes require receipt review, never blind retry or marker deletion.
 Keep production R16.6, all old draft/inventory/recovery package bytes and private

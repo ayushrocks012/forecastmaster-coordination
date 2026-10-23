@@ -23,19 +23,22 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-**Current receiving action: compact native R17.8 TEST R01 is prepared.** Follow
-[OPEN FIRST](handoff/report-native-only-r17.8/test-release-r01/OPEN%20FIRST.txt).
-Run its installer ONCE in one NEW ForecastMaster_GM_Setup cell. Only final
-TEST_R178_UPDATED with no Failure permits one new refresh on the existing TEST
-semantic model. After Completed without warnings, run its read-only verifier,
-then open the matching extracted TEST PBIP. STOPPED/uncertain outcomes: return
-JSON; no retry or marker deletion. This refresh belongs to the new adapter;
-the completed date recovery above must not be repeated.
+**Current receiving action: run only the corrected read-only verifier.** The
+operator completed R17.8 installation and one TEST refresh. The old verifier
+passed nine date groups and 12 numerical comparisons, then hit its empty metadata
+counter TypeError. [Reviewed result](feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
+
+Pull Coordination, copy the current `VERIFY INSTALLED TEST R01.py` afresh into
+ONE NEW ForecastMaster_GM_Setup Python cell and run only it. The filename stays
+R01; final JSON must contain `VerifierRevision: R02`. Return that JSON. **Do not
+rerun the installer, refresh again, reset or delete markers.** Keep backups.
+[OPEN FIRST](handoff/report-native-only-r17.8/test-release-r01/OPEN%20FIRST.txt)
+has the original sequence plus the correction notice; completed steps stay complete.
 
 Built-in visuals only; production R16.6 and older packages remain unchanged.
 Local native runtime/context/oracle, schema and receiving safety tests pass.
-Company install, Desktop rendering/export/business parity and speed remain
-receiving gates. SAMPLE is fabricated and cannot validate company figures.
+Final verifier, Desktop rendering/export/business parity and speed remain
+receiving gates. Installation and one TEST refresh are complete. SAMPLE is fabricated and cannot validate company figures.
 Raw metadata/values/backups remain private; send only counts-only final JSON.
 
 Original company-laptop connection setup follows for reference.

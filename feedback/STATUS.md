@@ -1,5 +1,36 @@
 # Company setup status
 
+## 23 October 2026 — R17.8 installed/refreshed; old verifier partial return reviewed
+
+The operator confirmed Open First steps 1–3 succeeded and returned the old R01
+verifier's TEST_R178_VERIFICATION_STOPPED / TypeError. Its JSON has no
+VerifierRevision marker. All nine physical/semantic date groups match exactly:
+five 84-month groups and four three-row source/native cutoff groups, zero invalid
+dates. All 12 paired scalar comparisons completed with zero mismatches. Values
+remained private. Earlier identity, install-success/new-Completed-refresh, whole
+candidate metadata and cloud mapping checks had passed before these results,
+inferred from the preserved R01 execution path. File-label counts and final
+concurrency/completion gates were not returned. Overall verification is incomplete.
+[Reviewed receipt](logs/2026-10-23-r178-verifier-r01-partial.json).
+
+The failure location matches the retained old counter-conversion bug: COUNTROWS
+of an empty metadata subset is BLANK, then Python int(value) can raise TypeError.
+The exact company counter was withheld. The correction already exists in
+commit dfdf830: same receiving filename, output VerifierRevision R02, COALESCE
+only the two metadata counters. Its four-query native before/after evidence and
+hashes were rechecked against current source; no new native/company run was
+claimed. No business-value blank conversion or guard weakening.
+
+Current action supersedes the older preparation/installation instructions:
+pull Coordination, copy the current verifier afresh into ONE NEW setup cell,
+run only that read-only cell and return final JSON. No installer rerun, another
+refresh/reset, marker deletion or publication. Model/report/installer bytes stay
+unchanged. Native UI/export, broad Excel/R16.6 business parity and company speed
+remain pending. Production stays unchanged. The maintained understanding and
+current entry points now record this partial company result, rather than leaving
+R17.8 described as uninstalled.
+
+
 ## 23 October 2026 — R17.8 read-only verifier R02 counter correction
 
 A separate read-only review reproduced a verifier failure: DAX COUNTROWS over

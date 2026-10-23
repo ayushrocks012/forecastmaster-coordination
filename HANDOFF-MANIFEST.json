@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 78019,
-      "SHA256": "f20fa1a2c7e7e87f6b79e0bcf6f2c5ad223f505bbe9a09897f917a245ee5cb71"
+      "Bytes": 78292,
+      "SHA256": "89f2496c315af322b83c3074bf00c096d18bb338c3e5bd9161506b826eb220bf"
     },
     "README.md": {
-      "Bytes": 7561,
-      "SHA256": "f7939c5d7c73f70518394ef315fb54736853f7af722b1a41b1bb424c77ef46d6"
+      "Bytes": 8220,
+      "SHA256": "4a6407586da6b008cc926fc03f0f8a2a3f7b58712dfe52e37a35f63c51e0e455"
     },
     "feedback/STATUS.md": {
-      "Bytes": 140181,
-      "SHA256": "bc5ac1f12f05ddd43eed0ef23b7f41ca14cefbc29c350d3c6ce4dd10565b9131"
+      "Bytes": 142169,
+      "SHA256": "edc660570912d04f050e9acec9a9218e6bec5ae537cc6366079372106085c7c3"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 7296,
-      "SHA256": "293cf23ed49b1a5e506f26cc6a81e41d145543933de5ddb1fff19b0f950066fa"
+      "Bytes": 7553,
+      "SHA256": "7ae5088bdf10644efa42d84484dc151bc9e750215d18f36b811d582eadeda347"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 183609,
-      "SHA256": "2ed3d57eb1b0dd723a1f9f849f8c1354aec8149664b1747dd3954e887c21cf0c"
+      "Bytes": 184128,
+      "SHA256": "0926f06f35dc00e26c98e02d85bf899553e325222cd7810decee787f7bfc8d32"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4656,6 +4656,10 @@
     "handoff/report-native-only-r17.8/test-release-r01/metadata_count_cases.py": {
       "Bytes": 4310,
       "SHA256": "a04e281e9a908a7dbab64630a7be174d62962b08f427a0cc22197014315ecb29"
+    },
+    "feedback/logs/2026-10-23-r178-verifier-r01-partial.json": {
+      "Bytes": 3989,
+      "SHA256": "aec24d5175906606b76204233a4b73e4275882a16e8cfb64d25d3a9f5b301e8f"
     }
   }
 }

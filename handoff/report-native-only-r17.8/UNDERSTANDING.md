@@ -18,11 +18,18 @@ company observations are not copied here. New results update this reference;
 **Current release — compact R17.8 TEST R01:** user authorized this report and
 matching adapter after inventory review. [Receiving instructions](test-release-r01/OPEN%20FIRST.txt),
 [release notes](test-release-r01/README.md), [qualification](test-release-r01/VALIDATION.json).
-The adapter is **prepared, locally qualified, not company installed**. First run
-INSTALL COMPACT TEST R01.py once; only TEST_R178_UPDATED permits one new TEST full
-refresh. Then run the read-only verifier and open the matching extracted TEST PBIP.
-Any STOPPED/uncertain outcome requires receipt review, not resubmission. The old
-recovery remains closed: this one processing step belongs to the new installation.
+**Latest company return:** the operator completed installation and its one TEST
+refresh. The original verifier returned all nine exact physical/semantic date
+groups (zero invalid dates) and 12 paired scalar comparisons (zero mismatches),
+then stopped with TypeError before file-label counts/final checks. Its earlier
+identity, completed-refresh, whole candidate and cloud-mapping guards had passed,
+inferred from the retained R01 execution order. This is **partial verification**,
+not full acceptance. [Reviewed counts-only return](../../feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
+
+**Current action:** pull and copy the current VERIFY INSTALLED TEST R01.py afresh
+into ONE NEW setup cell; its output must identify VerifierRevision R02. Run only
+that read-only cell and return final JSON. **No installer, new refresh, reset,
+marker deletion or publication.** Keep backups. The old date recovery stays closed.
 
 **Verifier correction R02:** the existing `VERIFY INSTALLED TEST R01.py` now
 reports `VerifierRevision: R02`. Empty MissingImportedAt/HashSuffixes metadata
@@ -64,14 +71,14 @@ Direct preservation/source/context/runtime checks are recorded instead.
   backups and attempt markers. It is safe to reopen the unchanged R17.7 TEST
   PBIP to inspect captions/numbers; this is a UI check, not a new installation.
 - The R17.7 layout was rejected. The R17.8 R01 TEST ZIP and matching updater
-  are now prepared. SAMPLE remains fabricated/local only; company install and
-  processing are pending. Do not open TEST before its adapter/refresh checks.
+  are prepared; company installation/one refresh are now operator-confirmed.
+  SAMPLE stays fabricated. Final verifier, native UI/export and speed are pending.
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
-- **Current next action:** follow the R01 release receiving instructions above.
-  Do not repeat inventory or recovery. R17.8 remains company-uninstalled;
-  Desktop/business/export/performance checks are separate.
+- **Current next action:** run only the corrected read-only verifier above.
+  Installation/one refresh are complete; do not repeat either or the recovery.
+  Desktop/business/export/performance checks remain separate.
   The published ForecastMaster Review remains bound to the original model.
 
 Evidence: [R02 reviewed receipt](../../feedback/logs/2026-10-23-native-r178-r02-recovery-verified.json).
