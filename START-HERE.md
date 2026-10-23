@@ -1,18 +1,17 @@
-# Current native report step - R17.2 TEST, 22 October 2026
+# Current report step - native-only R17.3 preview, 23 October 2026
 
-R02 repair and a warning-free TEST refresh were confirmed. The first native
-Desktop screenshot then showed a resource error and blank/inactive buttons.
-Use [R17.2 work-laptop steps](handoff/report-native-r17.2/OPEN%20FIRST%20-%20WORK%20LAPTOP.txt):
-pull Coordination, run ONE new TEST-only update cell in **ForecastMaster_GM_Setup**,
-refresh that TEST once after success, then extract/open the NEW R17.2 TEST ZIP.
-The existing TEST model and connection stay in place. Do not recreate it or run
-old SQL setup/repair cells. Keep published R16.6 in production.
+The operator rejected R17.2's Desktop layout and explicitly requested **no custom
+visuals**. Use [R17.3 native-only steps](handoff/report-native-only-r17.3/OPEN%20FIRST%20-%20NATIVE%20ONLY.txt):
+pull Coordination, then extract/open the new SAMPLE or TEST ZIP. **Do not run a
+Fabric setup cell or update/refresh the model for this report-only revision.**
+The SAMPLE has fabricated local data and needs no Fabric access. TEST retains
+the existing isolated connection on the company laptop.
 
-R17.2 corrects button definitions, batches monthly fact reads, and brings the
-native pages closer to R16.6. Local engine/schema checks pass; company
-performance, rendering, export and numerical reconciliation remain receiving
-gates. [Capability gaps](handoff/report-native-r17.2/CAPABILITIES-VS-R16.6.md)
-are explicit. Original repository/setup instructions follow.
+This is Demand Review first, with only built-in visuals. Custom controls and
+the embedded R16.6 fallback are absent. [Scope and deferred functions](handoff/report-native-only-r17.3/README.md)
+are explicit; full R16.6 parity is not claimed. Local definition/schema checks
+are separate from outstanding Desktop and company query/performance acceptance.
+Keep published R16.6 in production. Original repository/setup instructions follow.
 
 # Connect the Abbott laptop using VS Code and SSH
 

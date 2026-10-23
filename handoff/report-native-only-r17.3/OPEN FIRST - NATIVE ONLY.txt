@@ -1,0 +1,82 @@
+FORECASTMASTER R17.3 - BUILT-IN POWER BI VISUALS ONLY
+
+This is a Demand Review preview, not a production replacement. There is no
+custom visual, custom FX control or embedded R16.6 fallback in either copy.
+S&OP comes after the Demand Review native design has been checked.
+
+NO FABRIC SETUP, MODEL UPDATE OR REFRESH IS REQUIRED FOR THIS REVISION.
+Do not rerun old notebook cells or replace the published report.
+
+1. GET THE FILES
+
+   On the other laptop, open forecastmaster-coordination in VS Code.
+   Terminal > New Terminal > PowerShell. From that repository folder run:
+
+   git pull --ff-only
+   explorer.exe .\handoff\report-native-only-r17.3\candidate
+
+   If using the original clone setup, that folder is:
+   C:\Users\YOUR-WINDOWS-USER\source\forecastmaster-coordination\handoff\report-native-only-r17.3\candidate
+
+2. CHOOSE THE COPY
+
+   WITHOUT company/Fabric access:
+     ForecastMaster Native Only R17.3 SAMPLE.zip
+   All its data is fabricated. It includes a local SemanticModel folder and
+   does not require the company Fabric connection. It is for design/testing.
+
+   ON THE COMPANY-CONNECTED LAPTOP:
+     ForecastMaster Native Only R17.3 TEST.zip
+   It uses the EXISTING model ForecastMaster Native OneLake R17.1 - TEST
+   (31d00232-ac03-48fe-af39-f2e4bae82443), already used by your R17.2 report.
+   Its model name has not changed. There is no new installer or model.
+
+3. EXTRACT THE COMPLETE ZIP INTO A NEW FOLDER
+
+   Right-click the chosen ZIP > Extract All. Choose a NEW Desktop folder.
+   Open the .pbip in that folder, not inside the ZIP:
+
+     ForecastMaster Native Only R17.3 SAMPLE.pbip
+   or
+     ForecastMaster Native Only R17.3 TEST.pbip
+
+   Keep its .Report folder beside the .pbip. For SAMPLE also keep its
+   .SemanticModel folder beside them. Do not overwrite your R16.6/R17.2 files.
+   The first SAMPLE opening may need a local calculated-table refresh; it has
+   no external data source. This is separate from the company TEST refresh.
+
+4. CHECK DEMAND REVIEW FIRST
+
+   It opens with UK, October 2026, Market, Units, Automatic ADS, source currency,
+   2026 FY/YTD/YTG, and January-December 2026 review months.
+
+   a. Confirm both Review months date inputs and all dropdowns are fully visible.
+      Extend the range backwards/forwards using month-start dates. Confirm the
+      visible chart and available summary years change.
+   b. Choose Core Oral on TEST (Example Oral on SAMPLE). Open Forecast tiers:
+      choices should follow that driver. Try Select all and Clear all.
+   c. Confirm the headline loads without the duplicate-Label error. Add 2027 FY
+      after extending Review months into 2027. Actual-only periods should not
+      show a fabricated trend variance.
+   d. Confirm Executive summary loads. Try Drivers, Sectors and Both. In Desktop
+      EDIT mode hold CTRL while clicking those bookmark buttons; ordinary
+      clicks operate slicers. Do not treat edit-mode Ctrl+click as a defect.
+   e. Check the native monthly line chart, axis units and Share % formatting.
+      Hover stays on monthly observations. Click a point to inspect the monthly
+      readout; it should not silently change the executive totals.
+   f. Try View > Page view > Fit to width, Fit to page, native page zoom,
+      chart zoom/Focus mode and ... > Export data on the matrix.
+
+   Send the top and executive-summary screenshots, or the first full error.
+   Local structural/schema checks do not prove these receiving checks passed.
+
+5. ASSESS THE LIMITS AFTER VIEWING THE NATIVE DESIGN
+
+   This preview is source-currency / Automatic ADS / Demand Review only.
+   USD rate editing, explicit saved-version override, S&OP, drag ordering,
+   custom pin/linked hover, and automatic Hide reflow are deferred. There are
+   no inactive substitutes for those controls. The file section is source
+   INFORMATION for the selected Affiliate/cycle, not a source-selection control.
+
+   The existing published R16.6 still provides the complete current workflow.
+   Do not Publish/Replace it with this preview.

@@ -1,0 +1,70 @@
+{
+  "Version": "R17.3 NATIVE ONLY DEMAND PREVIEW",
+  "UTC": "2026-10-23T13:12:07.959105+00:00",
+  "Packages": {
+    "TEST": {
+      "File": "ForecastMaster Native Only R17.3 TEST.zip",
+      "Bytes": 66963,
+      "SHA256": "c112e4df58902ceb1abce5cfba7cdebe4147e0fbd12a192d25106b4149f0b24e",
+      "ExactValidatedFolderBytes": true,
+      "NativeVisualTypes": {
+        "slicer": 12,
+        "textbox": 8,
+        "actionButton": 9,
+        "pivotTable": 4,
+        "tableEx": 3,
+        "lineChart": 1
+      },
+      "CustomVisualCount": 0,
+      "PageCount": 1
+    },
+    "SAMPLE": {
+      "File": "ForecastMaster Native Only R17.3 SAMPLE.zip",
+      "Bytes": 471830,
+      "SHA256": "4b25b15557da213bc8808e0a65e70a8ad51a48bef8bef1d7744a24db54b553d3",
+      "ExactValidatedFolderBytes": true,
+      "NativeVisualTypes": {
+        "slicer": 12,
+        "textbox": 8,
+        "actionButton": 9,
+        "pivotTable": 4,
+        "tableEx": 3,
+        "lineChart": 1
+      },
+      "CustomVisualCount": 0,
+      "PageCount": 1
+    }
+  },
+  "RegressionTests": {
+    "Run": 12,
+    "Failures": 0,
+    "OldDuplicateLabelFaultReproduced": true
+  },
+  "MicrosoftSchemas": {
+    "TEST": {
+      "Checked": 52,
+      "Failures": [],
+      "UnavailableOriginalSchemas": [],
+      "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+    },
+    "SAMPLE": {
+      "Checked": 52,
+      "Failures": [],
+      "UnavailableOriginalSchemas": [],
+      "Evidence": "PBIR JSON schema validation only. Original R16.6 visual schemas may be unavailable. Desktop roles/rendering remain unverified."
+    }
+  },
+  "FrozenR172SourceSHA256": "aea0d12b56e985246a0730a6095f4088e43ab451bc87d0f28f28ca30fa15dc16",
+  "SampleModelExactlyEqualsFrozenSyntheticFixture": true,
+  "UnchangedSampleNativeMeasures": 49,
+  "CompanyModelUpdated": false,
+  "CompanyAmountsRead": false,
+  "CompanyReportPublished": false,
+  "DesktopOpeningRendering": "PENDING: UI tool rejected WSL sandboxCwd before selecting a window",
+  "NewNativeEngineQueryExecution": "NOT RUN: standalone engine exited before providing an endpoint",
+  "CompanyQueryExecutionPerformance": "PENDING",
+  "CompanyNumericalParity": "PENDING",
+  "NativeInteractionZoomExport": "PENDING",
+  "GitNexusImpact": "UNKNOWN: authority drift; direct tracing and focused regressions used",
+  "ProductionReplacement": "NOT QUALIFIED"
+}

@@ -1,5 +1,36 @@
 # Company setup status
 
+## 23 October 2026 — R17.2 rejected; native-only Demand preview requested
+
+The receiving screenshots show R17.2 with clipped native slicers, overlapping
+content bands, a headline query-definition error naming duplicate `Label`
+references, an executive resource-error message, a smoothed monthly chart with
+incorrect axis-unit presentation, and an oversized file-identity dropdown.
+The subsequent underlying code supplied was `CouldNotResolveSemanticQueryDefinition`;
+it does not establish a memory or timeout cause for every visual.
+
+The operator explicitly prohibited all custom visuals for the next preview,
+accepting assessment of native alternatives and tradeoffs after viewing it.
+Company/Fabric access stays on the other laptop. Current receiving package:
+[native-only R17.3](../handoff/report-native-only-r17.3/OPEN%20FIRST%20-%20NATIVE%20ONLY.txt).
+There is one Demand Review page, no custom visual or hidden fallback, and no
+model installer/update in this revision. TEST retains the existing connection;
+SAMPLE contains fabricated local data and no external connection.
+
+The source reproduces/fixes the duplicate native query aliases, reserves native
+slicer chrome and padding, types formatting literals, uses native paragraphs,
+straight monthly lines/markers and native chart zoom, and replaces the long file
+identity dropdown with a readable metadata table. The matrices drop the
+redundant source-scanning visual filter under fixed Automatic ADS page filters;
+the original DAX amount/source/missing/zero guards remain unchanged.
+
+Automatic ADS/source currency/one Affiliate-cycle-measure are the deliberate
+initial scope. S&OP, saved-version overrides, FX editing/conversion and custom
+ordering/pins/linked hover/reflow are deferred, not claimed as parity. Local
+definition/schema checks remain separate from pending Desktop rendering,
+interaction/export and company query/performance/numeric acceptance. Keep the
+published R16.6 report unchanged. No company action was executed from this host.
+
 ## 22 October 2026 — R16.6 corrects aggregate Share and shortens Demand table
 
 The operator's R16.5 screenshots show numeric S&OP results and an aggregate Share

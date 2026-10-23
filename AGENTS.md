@@ -283,3 +283,27 @@ fabricated calculated/import sources. Company Direct Lake/UI/export/performance
 are unverified. GitNexus Coordination authority remained unavailable; direct
 tracing and preservation checks provide bounded fallback, not a zero-impact
 graph conclusion.
+
+On 23 October 2026 the operator rejected R17.2's native Desktop layout and
+subsequently explicitly prohibited ALL custom visuals while first assessing
+native design and any tradeoffs. This supersedes the prior fallback/custom-
+control exception for the new preview only. Preserve all frozen older packages
+and production R16.6. Current handoff is handoff/report-native-only-r17.3/.
+It qualifies Demand Review first: one built-in-only page, no hidden R16.6 or
+custom refresh/control pages, no CustomVisual resource registration or pbiviz/JS.
+The TEST ZIP preserves the exact existing R17.2 connection and amount measures;
+there is no Fabric installer, model update, refresh or publication in this step.
+The SAMPLE ZIP uses only the existing fabricated calculated-table fixture and
+works without a company connection. Do not commit actual company models/data.
+
+The native-only preview reserves native control chrome/padding, types semantic
+numeric literals, uses slicer textSize and real textbox paragraphs, removes the
+reproduced duplicate native Label query names and uses native monthly line/zoom
+formatting. Automatic ADS/source currency are physical page filters; removing
+the redundant source-scanning matrix visual filter does not remove DAX source,
+cohort, missing-data or zero guards. Company performance is still unverified.
+S&OP, manual saved-version override, FX editing/conversion, custom drag/pin/hover
+and Hide reflow are explicitly deferred for native review, not silently treated
+as retained parity. Native Desktop rendering/export/interaction and company
+execution/reconciliation remain receiving gates. The UI bridge still failed
+before selecting a window; structural/schema checks are not a visual pass.
