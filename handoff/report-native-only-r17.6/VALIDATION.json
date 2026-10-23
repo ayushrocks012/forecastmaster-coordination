@@ -1,0 +1,41 @@
+{
+  "Stage": "R176_NATIVE_ONLY_PREPARED",
+  "FocusedMetadataAndMockTests": 15,
+  "Python310Grammar": "PASS",
+  "MicrosoftSchemaFilesChecked": 60,
+  "SchemaFailures": [],
+  "NativeVisuals": 24,
+  "CustomVisuals": 0,
+  "NewMonthDictionaries": 2,
+  "NativeTableCountAfterUpdate": 24,
+  "ExistingNativeMeasures": 49,
+  "ChangedDisplayExpressions": 5,
+  "OtherNativeExpressionsAndAllFormatsPreserved": true,
+  "MonthlyPeriodFitRatioVarianceSourceArithmeticPreserved": true,
+  "CompanyAmountsQueried": false,
+  "R175RedundantValueFilterQueryConfirmedByOperator": true,
+  "SummaryVisualMeasureFilters": 0,
+  "ExecutiveColumnLevels": 2,
+  "ExecutiveRowDrill": "Growth driver > sector",
+  "MatrixHeight": "Fixed 300px viewport; scroll and Focus mode",
+  "ProductionUpdatedOrReportPublished": false,
+  "GitNexusImpact": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION; direct tracing and preservation tests used",
+  "DaxRuntimeExecutionThisRevision": "NOT RUN",
+  "DesktopRendering": "PENDING",
+  "CompanyUpdateAndNewHelperProcessing": "PENDING",
+  "CompanyMemoryLatencyNumericalExportAcceptance": "PENDING",
+  "Packages": {
+    "TEST": {
+      "File": "handoff/report-native-only-r17.6/candidate/ForecastMaster Native Only R17.6 TEST.zip",
+      "Bytes": 43319,
+      "SHA256": "613313682a6c3cd2a14d49736e54920772c4894aa5775fc922113f4e8be26410",
+      "PayloadMatchesSchemaCheckedFolder": true
+    },
+    "SAMPLE": {
+      "File": "handoff/report-native-only-r17.6/candidate/ForecastMaster Native Only R17.6 SAMPLE.zip",
+      "Bytes": 448575,
+      "SHA256": "be73fa1859edc69f579c625bc97007f378004fbcf768f74eab39e932bd48877c",
+      "PayloadMatchesSchemaCheckedFolder": true
+    }
+  }
+}

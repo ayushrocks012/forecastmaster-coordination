@@ -1,5 +1,46 @@
 # Company setup status
 
+## 23 October 2026 — R17.5 update reported; summary memory failure traced; R17.6 prepared
+
+The operator reports TEST_R175_UPDATED, without pasting the complete update
+receipt. Seven screenshots confirm native solid/dashed/dotted chart strokes
+but show both summaries failing with rsQueryMemoryLimitExceeded: consumed
+10,240 MB, limit 10,240 MB. No R17.5 refresh was required or missed. The copied
+Review Summary Performance Analyzer query computes N Headline Cell and its
+dynamic format for __ValueFilterConstraintDM0, then __ValueFilterDM0 applies
+N R175 Measure Selected = 1, then __DS0Core references the summary again. This
+establishes redundant query work, not the sole cause or an allocation profile.
+The July/Ex-factory example also has no eligible Automatic ADS source, as its
+caption states. Historical V18 files must not be silently substituted. The safe
+observation record is logs/2026-10-23-native-r175-memory-review.json. No raw
+company screenshot, data result or model definition is committed.
+
+Current package: [R17.6 receiving steps](../handoff/report-native-only-r17.6/OPEN%20FIRST%20-%20R17.6.txt).
+It removes the disconnected visual measure filter and extra summary color
+calculation, moves metric/source guards into display bodies, and simplifies
+columns to period > flat comparison label. All numeric leaf arithmetic and
+formats stay unchanged. Separate Section/Measure and monthly Start/End return;
+single graph/review and independent multiple table trends sit by their headings.
+Source-caption spacing is increased. Native driver/sector drill remains, with
+a fixed 300px viewport, scroll and Focus mode; no dynamic height/reflow claim.
+No custom visuals, script resources or fallback pages are added.
+
+The new cell updates only existing TEST and preserves cloud mapping/source/
+security. It adds two monthly dictionaries and one comparison label. Require
+TEST_R176_UPDATED, refresh that TEST ONCE to process the new calculated metadata,
+then open R17.6 TEST. This differs from R17.5's no-refresh measure-only step.
+Private full-file backups, known-body/format, concurrency/no-purge and complete
+readback guards remain. Identical calculated-helper DAX string/line arrays gain
+tolerance only for the three allowlisted helpers, with no other differences
+ignored. Unknown readback still stops further receiving action.
+
+Fifteen focused synthetic metadata/mock tests and 60 Microsoft schema checks
+pass locally. No DAX engine, company update/refresh or native Desktop rendering
+ran here. Company memory/latency, numerical reconciliation, native interactions/
+drill/export and full R16.6 parity remain open. GitNexus Coordination impact
+authority is unavailable; direct tracing and preservation tests are bounded
+fallback evidence. Earlier packages and production remain unchanged.
+
 ## 23 October 2026 — R17.4 opens; R17.5 compact native revision prepared
 
 The operator supplied five R17.4 screenshots. Headline/chart/matrix and month-name

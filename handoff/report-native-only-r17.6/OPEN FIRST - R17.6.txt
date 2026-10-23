@@ -1,0 +1,110 @@
+R17.6 — NATIVE CONTROLS AND SUMMARY QUERY REPAIR
+
+You did NOT miss a required refresh after TEST_R175_UPDATED.
+R17.5 changed two measures only. Its 10,240 MB errors are query-memory errors.
+This NEW R17.6 update adds monthly metadata tables, so it DOES need one TEST
+refresh after a successful update, before opening the R17.6 PBIP.
+
+Use the company laptop and your existing forecastmaster-coordination clone.
+The default clone location from setup is:
+C:\Users\YOUR-WINDOWS-USER\source\forecastmaster-coordination
+If you cloned elsewhere, use that existing folder instead.
+
+1. Open that repository in VS Code. Choose Terminal > New Terminal > PowerShell.
+   Run these commands from the repository root:
+
+   git status --short
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.6\UPDATE EXISTING TEST TO R17.6.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   If the pull is refused, preserve local edits and send its message.
+
+2. In the Fabric browser open:
+
+   Workspaces > UK-ANI-Demand > ForecastMaster_GM_Setup
+
+   Add ONE NEW Python/PySpark code cell at the bottom. Paste the clipboard.
+   Run ONLY that new cell. Do not Run all or rerun earlier setup/update cells.
+
+   The target is the EXISTING isolated semantic model:
+   ForecastMaster Native OneLake R17.1 - TEST
+   31d00232-ac03-48fe-af39-f2e4bae82443
+
+   Continue only after TEST_R176_UPDATED or TEST_R176_ALREADY_INSTALLED.
+   On an error or READBACK_NEEDS_REVIEW, keep the backup and send the output.
+   Do not repeat the update, refresh or publish after an unclear result.
+
+3. After success, return to the UK-ANI-Demand workspace list.
+   Find the SEMANTIC MODEL named ForecastMaster Native OneLake R17.1 - TEST.
+   Click its ... menu > Refresh now ONCE.
+   Open Refresh history and wait for Completed with no warnings.
+
+   This processes the two new monthly dictionaries and comparison label.
+   The model name remains R17.1 TEST; that is correct.
+   If it fails or warns, send its full details before opening the new report.
+   If this R17.6 processing already completed, do not repeat it.
+   Do not use the original production model or the production Refresh Demand
+   button for this TEST processing step.
+
+4. Close the old R17.5 Desktop report. In the repository terminal run:
+
+   explorer.exe .\handoff\report-native-only-r17.6\candidate
+
+   Right-click ForecastMaster Native Only R17.6 TEST.zip > Extract All.
+   Extract the WHOLE ZIP to a NEW folder. Open:
+
+   ForecastMaster Native Only R17.6 TEST.pbip
+
+   Keep its .Report folder beside the PBIP. The report must say R17.6 TEST.
+   Keep the earlier folders and published ForecastMaster Review / R16.6.
+
+5. Check the native controls and summaries:
+
+   - Start month and End month are separate monthly dropdowns, initially
+     Jan 2025 and Dec 2027. Every intervening month is included. There is no
+     daily picker. Keep Start <= End; an inverted range displays no results.
+   - Section and Measure are separate. Selecting a Measure must leave both
+     sections available in Section. After changing Section, select a valid
+     Measure from its dropdown. Native slicers do not automatically rewrite
+     another slicer's saved selection; incompatible/empty choices stay blank
+     and the chart title asks you to choose a measure.
+   - Graph / review trend beside the Review Summary heading is SINGLE choice.
+     It controls the graph and Review Summary together.
+   - Table trends beside Executive Summary is MULTIPLE choice. Select 6M,
+     12M and/or 24M independently. It does not change the graph's choice.
+   - Executive columns show Plan and each selected trend's variance amount
+     and variance %. Expand a driver to sectors with native +/drill controls.
+     Actual-only period variance remains blank, matching the existing rule.
+   - The matrix has a fixed 300px viewport. Native scroll and Focus mode allow
+     more rows; it does not grow and push the Saved files section downward.
+   - Actuals remain solid, forecast dashed and trend dotted. Axis sliders and
+     the old Select all / Clear all / Drivers / Sectors / Both buttons stay out.
+   - Source caption has a small gap below it. Saved-file month formats remain
+     month names. Native Export data, Focus mode and page zoom remain available.
+
+   Begin with a cycle whose source caption confirms available ADS sources.
+   Your July screenshot instead says to choose an available source. Historical
+   V18 files in Saved files do not establish an eligible Automatic ADS source.
+   R17.6 preserves that distinction and returns blank instead of substituting
+   those files or manufacturing zero.
+
+6. Send the new cell result, TEST refresh outcome, and screenshots of both
+   summaries including one expanded driver. Confirm that Table trends can
+   select several windows while Graph / review trend stays on one.
+
+   If a summary still fails, copy its query through Desktop:
+   Optimize > Performance Analyzer > Start recording > Refresh visuals.
+   Expand that visual > Copy query. Send query text and error details, not
+   its company data results. R17.6 removes R17.5's extra value-filter stages
+   and repeated summary formatting calculation; live memory acceptance still
+   requires this company-laptop check. Do not raise the memory limit to test it.
+
+All visuals are built in. This is a TEST candidate, not qualified to replace
+production R16.6. No source ingestion, connection/security change or publication
+is requested. The cell privately verifies full backups and preserves all
+original source tables, roles, mappings, amount arithmetic and formats.
+
+On a laptop WITHOUT company access, use the separate SAMPLE ZIP. It contains
+fabricated local data only. Keep .pbip, .Report and .SemanticModel together;
+its first opening may need local calculated-table refresh. Do not run the
+company updater for SAMPLE.

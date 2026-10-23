@@ -1,20 +1,24 @@
-# Current report step - native-only R17.5 compact preview, 23 October 2026
+# Current report step - native-only R17.6 summary repair, 23 October 2026
 
-Current receiving step: [R17.5 compact native review](handoff/report-native-only-r17.5/OPEN%20FIRST%20-%20R17.5.txt).
-R17.4 readback is verified and the report opened, but new screenshots identify
-layout, Section selection, daily calendar, chart and collapsed-variance issues.
-Pull Coordination; run ONE NEW R17.5 cell in ForecastMaster_GM_Setup on the
-company laptop, require TEST_R175_UPDATED, then extract/open the NEW R17.5 TEST
-ZIP. This updates exactly two chart expressions on the same existing TEST;
-full backup/cloud/readback guards include the receiving-qualified identical-DAX
-string/line-array comparison. No semantic-model/source refresh is requested.
+Current receiving step: [R17.6 native controls and summary queries](handoff/report-native-only-r17.6/OPEN%20FIRST%20-%20R17.6.txt).
+The operator reports TEST_R175_UPDATED and native solid/dashed/dotted chart
+styles. R17.5 did not need a refresh. Both summary queries hit 10,240 MB; the
+copied Review Summary DAX shows redundant value-filter stages. R17.6 removes
+that filter, adds early display/source guards, and simplifies comparison columns.
+It restores separate Section/Measure and Start/End month controls, with single
+graph/review and multiple table trends beside their corresponding headings.
 
-The existing R17.4 updater/report ZIPs/probe and earlier packages are unchanged.
-The SAMPLE still needs no company access. All new preview visuals remain
-Power BI native. Native matrix height remains a fixed viewport, with scroll and
-Focus mode. Desktop styles/filter/drill/rendering, export, numerical reconciliation,
-performance and full R16.6 parity remain separate unconfirmed gates. Keep
-published R16.6 in production. Original repository/setup instructions follow.
+Pull Coordination; copy the NEW R17.6 cell into ForecastMaster_GM_Setup and run
+only that cell. Require TEST_R176_UPDATED, then refresh ONLY the existing R17.1
+TEST semantic model ONCE to process the new monthly metadata helpers. After
+Completed without warnings, extract/open the NEW R17.6 TEST ZIP. Keep all old
+folders, private backups and production R16.6. No production publication.
+
+All visuals remain native. Matrix height is fixed; scroll/Focus mode is retained.
+Local preservation/API/schema checks do not establish company query memory,
+numerical parity, native rendering/drill/export or full R16.6 acceptance. SAMPLE
+contains fabricated local data and needs no company access. Original repository/
+setup instructions follow.
 
 # Connect the Abbott laptop using VS Code and SSH
 

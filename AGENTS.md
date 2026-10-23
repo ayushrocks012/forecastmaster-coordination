@@ -378,3 +378,34 @@ Three report-level Text measures supply native formatting only. Their line-style
 rendering, native slicer hierarchy/column expansion, company runtime/export and
 numerical/performance acceptance are unverified until receiving evidence arrives.
 The Windows UI tool failed before connecting; schema/mocks are not a UI pass.
+
+Later 23 October the operator reports TEST_R175_UPDATED, native solid/dashed/
+dotted line styles, and two 10,240 MB rsQueryMemoryLimitExceeded summaries.
+The copied Review Summary DAX shows __ValueFilterConstraintDM0 evaluating the
+summary/format, followed by __ValueFilterDM0 on N R175 Measure Selected and
+the main __DS0Core calculation. Do not call refresh the missing fix: R17.5 was
+measure-only. Current candidate is handoff/report-native-only-r17.6/. It removes
+that visual value filter and repeated benchmark-based color formatting, moves
+selection/source admission into display bodies and flattens comparison labels.
+Preserve all source/monthly/period/ratio/fit/variance expressions and formats.
+
+R17.6 restores separate Section/Measure with Metric -> Section NoFilter. A
+changed Section can leave a stale native child selection; require choosing a
+valid Measure and show blanks/prompt instead of defaulting to Market. Two new
+disconnected monthly dictionaries provide Start/End. Invalid order stays blank.
+Single graph/review and multiple table trend selectors sit beside their headings
+and have NoFilter interactions with the other summary. Matrix height remains
+fixed with native drill/scroll/Focus mode; no automatic height/reflow is claimed.
+All visuals remain built in and old buttons/custom fallbacks remain absent.
+
+Run only ONE NEW R17.6 cell in ForecastMaster_GM_Setup; require successful full
+readback, then refresh EXISTING R17.1 TEST ONCE to process its new helpers before
+opening R17.6 PBIP. This new refresh instruction applies to R17.6, not R17.5.
+New helper count is 24, with 49 native measures retained. The update preserves
+private full-file backups, cloud/concurrency/no-purge guards and complete model
+comparison; identical DAX line representations are tolerated only for measures/
+formats and the three allowlisted calculated helpers. No source or security
+metadata is ignored. Unknown post-write state must not cause a retry/refresh.
+No source ingestion or production replacement. The July unavailable Automatic
+ADS example must not silently fall back to historical V18 files. Local schema/
+metadata/mock checks do not qualify company memory, calculation or Desktop UI.

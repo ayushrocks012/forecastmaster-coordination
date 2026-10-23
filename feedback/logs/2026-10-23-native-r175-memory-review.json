@@ -1,0 +1,22 @@
+{
+  "Evidence": "Operator supplied stage, seven Desktop screenshots, and copied Review Summary Performance Analyzer DAX; no company queries executed by this host",
+  "ReportedUpdateStage": "TEST_R175_UPDATED",
+  "StageReportedWithoutFullReceipt": true,
+  "RequiredRefreshMissedAfterR175": false,
+  "NativeChartStylesVisible": ["solid actuals", "dashed forecast", "dotted trend"],
+  "FailedVisuals": ["Review Summary", "Executive Summary"],
+  "UnderlyingError": "rsQueryMemoryLimitExceeded",
+  "ConsumedMemoryMB": 10240,
+  "PerQueryLimitMB": 10240,
+  "ReviewQueryObservedStages": ["__ValueFilterConstraintDM0", "__ValueFilterDM0", "__DS0Core"],
+  "ReviewQueryFilterMeasure": "N R175 Measure Selected",
+  "ReviewQueryConstraintIncludesHeadlineAndDynamicFormat": true,
+  "OnlyMemoryCauseEstablished": false,
+  "UnavailableAutomaticADSStateAlsoObserved": true,
+  "RequestedControls": ["separate Section and Measure", "separate Start month and End month", "single graph/review trend beside heading", "multiple table trends beside Executive heading"],
+  "NativeDynamicMatrixHeight": "Not supported by the delivered fixed viewport; scroll and Focus mode retained",
+  "CurrentCandidate": "handoff/report-native-only-r17.6",
+  "R176CompanyUpdateRefreshRenderingMemoryNumericalAcceptance": "PENDING",
+  "ProductionReplaced": false,
+  "RawCompanyScreenshotsOrAmountResultsCommitted": false
+}
