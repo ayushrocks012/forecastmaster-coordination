@@ -1,0 +1,72 @@
+R17.4 TEST: OPEN THE REPORT AFTER VERIFIED READBACK
+
+Your receiving result on 23 October 2026 says TEST_R174_READBACK_VERIFIED.
+All 21 differences are IDENTICAL_DAX_LINE_REPRESENTATION; Unexplained = 0.
+The complete definition matches apart from those identical-text representations.
+The known native expressions/formats match, the cloud mapping matches the backup,
+and both metadata snapshots were stable. The strict updater comparison rejected
+string-versus-line-array serialization; no unexplained model change was found.
+
+The R17.4 model repair is present in the existing TEST. Do NOT rerun an updater,
+creation cell or readback cell. No Fabric semantic-model/source refresh is
+requested for opening this report. Keep the private backup and production R16.6.
+
+ON THE COMPANY LAPTOP
+
+1. Open forecastmaster-coordination in VS Code. Open its PowerShell terminal.
+   From the repository root run:
+
+   git status --short
+   git pull --ff-only
+   explorer.exe .\handoff\report-native-only-r17.4\candidate
+
+   If Git refuses the pull, preserve local edits and send that message.
+
+2. In the Explorer window, find:
+
+   ForecastMaster Native Only R17.4 TEST.zip
+
+   Right-click it > Extract All. Choose a NEW folder, for example a Desktop
+   folder named ForecastMaster Native Only R17.4 TEST. Extract the WHOLE ZIP.
+   Keep older report folders and any unsaved work in them.
+
+3. Inside the extracted folder, double-click:
+
+   ForecastMaster Native Only R17.4 TEST.pbip
+
+   Keep ForecastMaster Native Only R17.4 TEST.Report beside the PBIP file.
+   Use TEST, not SAMPLE, on the company-connected laptop. Wait for the visuals
+   to load. The existing connected model name still contains R17.1:
+
+   ForecastMaster Native OneLake R17.1 - TEST
+   31d00232-ac03-48fe-af39-f2e4bae82443
+
+   That is the correct existing TEST; it does not require another model.
+
+4. Check these native behaviors, one change at a time:
+
+   - Top slicers: change Review months and confirm the chart range changes;
+     choose Core Oral and confirm the forecast-tier list follows that driver.
+   - Formatting: amounts have one sensible k/m suffix, percentages remain
+     percentages, and saved cutoff dates display month names.
+   - Chart: there are no axis zoom sliders. Test View > Page view > Fit to width,
+     the native page zoom, Focus mode and monthly-point tooltips.
+   - Executive summary: use + beside Core Oral, or hover its native header and
+     drill down/up with Rows selected, to move between driver and sector detail.
+     The separate Drivers/Sectors/Both and Select all/Clear all buttons are gone.
+   - Check one driver and one sector against a trusted source total. Test the
+     matrix's ... menu > Export data. Loading and formatting alone do not prove
+     the calculations or export/performance are qualified.
+
+5. Send screenshots of the top/graph and Executive summary after expanding a
+   driver. If a visual errors, send its See details text instead of rerunning
+   setup cells. No publication or replacement is requested; published R16.6
+   remains the live report while TEST is reviewed.
+
+The TEST ZIP is unchanged: 47,403 bytes; SHA256
+8456cd5df59fe5ee8624985e09c148707b28e66b38aab22ecfc21d0c88b3e3d9
+
+This is the native-only Demand Review preview. Desktop rendering, filter/drill,
+export, company numerical/performance acceptance and full R16.6 parity remain
+unverified. S&OP and other previously deferred capabilities are not restored by
+the metadata readback result. No custom visual is introduced.

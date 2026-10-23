@@ -1,5 +1,28 @@
 # Company setup status
 
+## 23 October 2026 — R17.4 readback verified; proceed to Desktop review
+
+The operator supplied TEST_R174_READBACK_VERIFIED from the read-only R01 check.
+The exact private backup was read and its candidate contains only the declared
+repair. The full definition differs only in 21 IDENTICAL_DAX_LINE_REPRESENTATION
+entries (20 dynamic format expressions and N Summary Cell). Unexplained = 0,
+with no truncated details. The known native fingerprints/inventory match, the
+cloud mapping matches the backup, and the two snapshots are stable. The earlier
+strict comparison failed because these expressions were represented as strings
+versus arrays of lines; their joined text is identical. RawDefinitionMatch,
+ModelJsonExactMatch and NativeMeasureObjectsExactMatch being false do not
+identify an unexplained change in this result. The receiving record is
+logs/2026-10-23-native-r174-readback-verified.json. It is operator-provided
+evidence, not a live query by this host.
+
+The R17.4 repair is present in the existing isolated TEST. Current step:
+[open the unchanged R17.4 TEST PBIP](../handoff/report-native-only-r17.4/readback-check-r01/OPEN%20AFTER%20VERIFIED%20READBACK.txt).
+No further Fabric cell, semantic-model/source refresh, recreation, mapping edit
+or rollback is requested. Keep the private backup and production R16.6. Desktop
+native rendering/filter/drill/export, company numerical/performance acceptance
+and full R16.6 parity remain unverified. No script or report package changes in
+this receiving-status handoff. The previous failed-readback record is retained.
+
 ## 23 October 2026 — R17.4 update attempted; returned definition unconfirmed
 
 The operator supplied a verified private backup followed by update operations

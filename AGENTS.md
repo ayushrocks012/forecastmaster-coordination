@@ -344,3 +344,16 @@ connection values or raw differing values may be committed or printed. The
 probe covers the entire definition and mapping, permits only identical-text
 DAX line representations, and reports all other differences for review.
 Local mock evidence does not establish the live mismatch cause or acceptance.
+
+The next operator output on 23 October confirms TEST_R174_READBACK_VERIFIED:
+21 identical DAX string/line-array representation differences, zero unexplained
+differences, known repaired expression/format fingerprints matching, complete
+remaining definition matching, stable snapshots and cloud mapping matching the
+private backup. This supersedes the preceding unconfirmed readback state.
+Do not rerun any updater/check or refresh to infer installation. Current step:
+handoff/report-native-only-r17.4/readback-check-r01/OPEN AFTER VERIFIED READBACK.txt.
+Open the unchanged R17.4 TEST ZIP's PBIP on the company laptop and check native
+rendering/filter/drill/export plus numerical/performance behavior. These gates
+remain unverified; metadata preservation does not establish full R16.6 parity.
+Keep every frozen installer/probe/ZIP and production unchanged. Record only the
+safe operator diagnostic result, never raw company model or connection values.

@@ -1,0 +1,121 @@
+{
+  "Evidence": "Operator-provided read-only Fabric output; no live company query from this host",
+  "Date": "2026-10-23",
+  "DiagnosticResult": {
+    "Stage": "TEST_R174_READBACK_VERIFIED",
+    "CheckVersion": "R01",
+    "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+    "ExactPrivateBackupRead": true,
+    "BackupCandidateContainsOnlyDeclaredRepair": true,
+    "RawDefinitionMatch": false,
+    "ModelJsonExactMatch": false,
+    "WholeDefinitionMatchesApartFromIdenticalDaxLineRepresentation": true,
+    "NativeInventoryMatchesExpected": true,
+    "KnownNativeExpressionAndFormatFingerprintsMatch": true,
+    "NativeMeasureObjectsExactMatch": false,
+    "CloudConnectionMatchesBackup": true,
+    "TwoMetadataSnapshotsStable": true,
+    "DifferenceSummary": {
+      "Counts": {
+        "IDENTICAL_DAX_LINE_REPRESENTATION": 21
+      },
+      "Total": 21,
+      "Details": [
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Benchmark.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Chart Amount.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Chart Monthly.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Export Monthly.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Export Plan.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Export Run Rate.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Headline Cell.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Headline Variance.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Monthly.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Monthly Denominator.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Monthly Numerator.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Plan.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Run Rate.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N SOP Monthly.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N SOP Plan.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N SOP Run Rate.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Selected Monthly.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Summary Cell.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Summary Cell.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Trend Monthly.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        },
+        {
+          "Path": "parts.model.bim.payload.model.tables.fm_native_measures.measures.N Variance.formatStringDefinition.expression",
+          "Kind": "IDENTICAL_DAX_LINE_REPRESENTATION"
+        }
+      ],
+      "DetailsTruncated": false,
+      "Unexplained": 0
+    },
+    "CompanyAmountsQueried": false,
+    "ModelWriteRequested": false,
+    "RefreshRequested": false,
+    "ReportPublished": false,
+    "NextStep": "Send this JSON output in the chat. Keep the backup. Do not rerun the updater or refresh/publish."
+  },
+  "CurrentNextStep": "Open unchanged R17.4 TEST PBIP; no further setup cell or semantic-model refresh",
+  "DesktopAndCompanyCalculationPerformanceAcceptance": "UNVERIFIED",
+  "ProductionPublicationRequested": false
+}

@@ -1,17 +1,17 @@
 # Current report step - native-only R17.4 drill preview, 23 October 2026
 
-Current receiving step: [R17.4 read-only readback check](handoff/report-native-only-r17.4/readback-check-r01/OPEN%20FIRST%20-%20READBACK.txt).
-The operator's TEST update request ran, then exact returned-definition readback
-failed. The connection check after that comparison was not reached. Do not
-rerun the failed updater, refresh/publish, recreate TEST or restore the backup.
-Pull Coordination, copy the entire new CHECK R17.4 READBACK.py, and run only
-ONE NEW Python/PySpark cell in UK-ANI-Demand > ForecastMaster_GM_Setup. Send
-its safe JSON result. This checks the exact private backup and TEST metadata
-without another model write. [Scope](handoff/report-native-only-r17.4/readback-check-r01/README.md).
+Current receiving step: [Open R17.4 TEST after verified readback](handoff/report-native-only-r17.4/readback-check-r01/OPEN%20AFTER%20VERIFIED%20READBACK.txt).
+The operator's read-only result is TEST_R174_READBACK_VERIFIED: all 21
+differences are identical DAX text represented as strings versus line arrays,
+with zero unexplained differences. The known repaired fields, complete remaining
+definition and cloud mapping match; both metadata snapshots were stable.
+The R17.4 model changes are present. No further setup/updater/check cell or
+semantic-model/source refresh is needed for this step. Pull Coordination,
+extract the existing R17.4 TEST ZIP to a new folder, and open its PBIP.
 
 The existing R17.4 updater/report ZIPs and earlier packages are unchanged.
 The SAMPLE still needs no company access. All new preview visuals remain
-Power BI native. Company preservation, Desktop drill/rendering, reconciliation,
+Power BI native. Desktop drill/rendering, export, numerical reconciliation,
 performance and full R16.6 parity remain separate unconfirmed gates. Keep
 published R16.6 in production. Original repository/setup instructions follow.
 
