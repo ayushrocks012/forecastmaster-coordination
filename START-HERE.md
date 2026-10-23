@@ -25,6 +25,13 @@ the selection adapter remains an uninstalled draft. No company-connected R17.8
 TEST ZIP/updater or production replacement is released. Native UI/export/speed
 and independent business parity still need their separate evidence.
 
+**Current next action:** use the [read-only workspace inventory R01](handoff/workspace-inventory-r01/README.md).
+Pull Coordination, copy its entire Python file into ONE NEW ForecastMaster_GM_Setup
+cell, run only that cell once and return the full JSON privately in this chat.
+It collects workspace item/physical schema/model DAX and relationship metadata;
+no amount query, model/source write or refresh. Do not upload the company output
+to this public repository. Company inventory completion is still pending.
+
 Original company-laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH

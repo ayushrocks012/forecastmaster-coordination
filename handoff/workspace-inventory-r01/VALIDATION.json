@@ -1,0 +1,63 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "READ_ONLY_WORKSPACE_INVENTORY_PREPARED_COMPANY_RUN_PENDING",
+  "ReceivingCell": "INVENTORY UK-ANI-DEMAND R01.py",
+  "Cell": {
+    "Bytes": 24690,
+    "SHA256": "51b6d79e2b141ef73cea3d1a2ed0aa4ec1eb24604ac0d9ca595e7904165d8e3f"
+  },
+  "TestHarness": {
+    "Bytes": 22411,
+    "SHA256": "f7995c71d15055d9620a99d9aeb82eee3db03562d09c028ec8866310458a7970"
+  },
+  "LocalSyntheticTestsPassed": 28,
+  "Python310Grammar": "PASS",
+  "Ruff": "PASS",
+  "MypyCheckUntypedDefs": "PASS",
+  "BanditReceivingCell": "PASS; zero findings and no rule exclusions",
+  "Coverage": [
+    "all models and classic/schema-enabled metadata",
+    "both pagination protocols and URI-only/token continuations",
+    "scope/identity/foreign-route guards",
+    "TMSL inline/asynchronous/cancel/timeout reads",
+    "hidden fields, calculated columns, DAX, formats, hierarchies and calculation groups",
+    "relationship cardinality, direction and inactive state",
+    "permission failures, partial pages, other engine gaps and caller interruption retention",
+    "Delta schema-only fallback without data actions",
+    "credential/connection/source-expression/annotation/role-member omission",
+    "matching complete UTF-8 stdout/download bytes and content/file hashes"
+  ],
+  "InitialFailedChecksPreserved": "LOCAL-CHECKS.json",
+  "ReadOnlyScope": {
+    "CompanyBusinessRowOrAmountQuery": false,
+    "FabricOrPowerBIMutation": false,
+    "OneLakeFileWrite": false,
+    "OnlyPOST": "getDefinition?format=TMSL metadata retrieval",
+    "CompanyExecutionHere": false
+  },
+  "PriorManifestEntries": 1139,
+  "ProtectedPriorFilesVerified": 1134,
+  "MutableCurrentDocuments": [
+    "AGENTS.md",
+    "README.md",
+    "START-HERE.md",
+    "feedback/STATUS.md",
+    "handoff/report-native-only-r17.8/UNDERSTANDING.md"
+  ],
+  "R02PackageFilesPreserved": 6,
+  "FrozenR02CellSHA256": "eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143",
+  "GitNexus": {
+    "Query": "MCP request gave no result before termination; bounded CLI query says Coordination repository not registered",
+    "DetectChanges": "CLI staged read failed: repository not registered",
+    "GraphImpact": "UNKNOWN",
+    "Fallback": "New separate package, direct route/privacy/extractor/partial-state tests, source/diff review and protected prior-file hashes; no original function or package edited"
+  },
+  "PublicCatalog": "Generated SAMPLE catalog unchanged; 29 schemas / 51 native measures / 26 draft visuals verified separately, not live inventory",
+  "Pending": [
+    "Company cell execution and full output integrity/completeness review",
+    "Actual schemas, models and metadata permissions",
+    "Review safe returned facts into the existing maintained understanding",
+    "Unsupported/private metadata gaps remain explicit",
+    "Separate UI, numerical business parity and performance gates"
+  ]
+}

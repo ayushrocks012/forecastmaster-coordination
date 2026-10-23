@@ -1,5 +1,37 @@
 # Company setup status
 
+## 23 October 2026 — one read-only workspace inventory R01 prepared; company run pending
+
+After rereading the current Smart Demand Manager AGENTS/protocol and Coordination
+instructions/reference, the user explicitly requests one inventory cell for
+UK-ANI-Demand: all tables, fields, measures and relationships. The new package
+[workspace-inventory-r01](../handoff/workspace-inventory-r01/README.md) reads
+recursive paginated workspace items, OneLake physical schemas/fields (classic
+Lakehouse + Delta schema-only fallback), each visible semantic model's full
+logical fields/DAX/dynamic formats/relationships/hidden objects, and report-model
+bindings. It uses the existing notebook user; inaccessible/unsupported metadata
+is retained as an explicit gap. A final item-list recheck is not an atomic
+model-definition/schema snapshot.
+
+Receiving: pull, paste its whole Python file into ONE NEW ForecastMaster_GM_Setup
+cell and run only that cell once. Return the complete JSON privately in this
+chat, using the in-memory download or full printed output with hash/byte footer.
+Never commit the company return to this public repo. No amount/row query,
+refresh, definition/source/connection/permission/schedule/publication change or
+OneLake file write. Metadata retrieval POST is getDefinition only. Credentials,
+connection payloads, raw errors, partition M/SQL/calculated-table source,
+role members/filter expressions and annotations are omitted. Full DAX and
+names/descriptions still require private handling.
+
+Local synthetic/API-shaped tests and receiving Python 3.10 syntax checks are
+recorded in its validation receipt. No company API, Spark or DAX ran here.
+The earlier R02 success remains accepted; its six frozen files and all prior
+protected package bytes stay unchanged. Do not rerun recovery or refresh for
+this inventory. R17.8 adapter remains uninstalled; native-only design, company
+laptop access, production preservation and separate UI/business/speed gates
+continue. The maintained UNDERSTANDING reference records prepared versus live
+inventory separately; only reviewed returned metadata can close its live gaps.
+
 ## 23 October 2026 — R02 recovery verified; project reference expanded from retained history
 
 The operator supplied test01.txt. Its complete JSON was parsed and checked:

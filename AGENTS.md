@@ -24,6 +24,15 @@ all names/definitions or the whole workspace. The public SAMPLE catalog has
 live inventory. Update the reference/STATUS on material evidence changes,
 preserve frozen package/test/cell bytes and keep raw company exports private.
 
+Current authorized receiving task: `handoff/workspace-inventory-r01/README.md`.
+The user requests ONE read-only metadata inventory cell in ForecastMaster_GM_Setup
+for all visible workspace items, physical tables/fields and semantic-model
+fields/measures/relationships, after rereading AGENTS and the app protocol.
+This is not another recovery or refresh. Full returned metadata/DAX belongs in
+this private chat/company area, never committed raw to this public repository.
+Review its completion/access gaps before updating the maintained understanding.
+The cell and local mocks are prepared; company execution remains pending.
+
 This is the separate office-laptop script and feedback handoff. Keep changes here; the Smart Demand Manager application checkout is outside this task's requested scope.
 
 Use `main`. Pull with `--ff-only` before starting a handoff and commit/push the completed handoff before the other laptop receives it. Preserve local edits if a conflict occurs; do not reset or force-push to clear it.

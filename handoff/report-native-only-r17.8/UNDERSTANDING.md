@@ -38,6 +38,13 @@ company observations are not copied here. New results update this reference;
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
+- **Current receiving task:** [workspace inventory R01](../workspace-inventory-r01/README.md),
+  ONE NEW read-only ForecastMaster_GM_Setup cell. It is prepared/local-tested,
+  not company-executed. It reads visible items, supported physical schemas and
+  all accessible logical tables/columns/DAX/relationships; returns gaps explicitly.
+  No amount query, remote file write, refresh, recovery rerun or R17.8 install.
+  Its private metadata/DAX return is needed before the live inventory gaps close.
+
 Evidence: [R02 reviewed receipt](../../feedback/logs/2026-10-23-native-r178-r02-recovery-verified.json).
 Frozen receiving cell SHA256: `eed8c39ade9af3222a2dea16ec3b3f9403e9c57139ee32005ae44c6d55bae143`.
 Prepared in commit `3fb7753042216d65afe5ce66891ce5676537b774`; later documentation
@@ -494,12 +501,28 @@ explicit backlog, not an empty successful inventory.
 | Actual report/database performance and capacity | R17.6 visual timings; R02 scalar timings | Same-selection warm/cold Performance Analyzer, model/query metrics and actual capacity evidence |
 | First schedule and post-targeted unchanged/removal/retry/history behavior | Historical schedule plus one targeted changed run | Separate receiving receipts for those cases |
 
-A later workspace inventory must be a read-only **metadata** task, not another
-repair/reset or a scan exporting business rows. Keep raw definitions, connection
-values, source identifiers and custom/private DAX in the private company area;
-bring back only reviewed safe metadata required for this reference. Do not run
-another cell merely because this inventory section has gaps. Prepare a bounded
-inventory plan from the current state when that work is undertaken.
+The user now explicitly authorized that read-only **metadata** task. The new
+[workspace inventory R01](../workspace-inventory-r01/README.md) is prepared for
+ONE NEW ForecastMaster_GM_Setup cell; company execution is **pending**. It does
+not rerun R02, refresh, repair, scan business rows, write OneLake files or install
+an adapter. All accessible semantic models are enumerated rather than assuming
+that TEST is the whole workspace; schema-aware OneLake metadata and a classic
+Lakehouse schema-only fallback cover physical fields. Completed/partial/denied
+results and scope limits are retained. Report/model bindings are also requested.
+The second item listing detects item-list changes, not concurrent formula or
+schema edits; this is not an atomic full-workspace snapshot.
+
+Return the complete export **privately in this chat**, with its content/file
+hash and complete/partial statuses. Full DAX and descriptions are company
+metadata and may contain literals; review before sharing and never commit raw
+exports, connection values or custom/private DAX to this public repository.
+Only reviewed safe facts and fingerprints may enter this reference. The cell
+omits M/SQL/calculated-table partition expressions, credentials, raw errors,
+role members/filter formulas and annotations. SQL view/procedure catalogs,
+KQL schemas, effective permissions, deployed notebook/pipeline/function source,
+engine-generated helpers and runtime/business/performance acceptance remain
+explicit gaps. Do not call the reference complete solely from a successful
+metadata-export stage; reconcile all requested objects and limits after return.
 
 ## Resumption, change and update procedure
 

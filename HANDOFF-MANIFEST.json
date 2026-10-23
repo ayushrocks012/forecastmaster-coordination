@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 76651,
-      "SHA256": "f862f9c59b7a14d303642e2d1cfdc430f223ab6858fc608e5be0862ef16b14ca"
+      "Bytes": 77278,
+      "SHA256": "b69f4829a994293076df36c2c8bf8dfadd2c59039fe817a65ce3276252b67b34"
     },
     "README.md": {
-      "Bytes": 6183,
-      "SHA256": "14f8f318f2602762258c675a30b9068a52e0dbe0965b5960d150191ef5389a91"
+      "Bytes": 6701,
+      "SHA256": "de69220ebc0dbdbe7a6f83a3a1a5481cbe08ce65fba52f854ee994b7fe338d60"
     },
     "feedback/STATUS.md": {
-      "Bytes": 129903,
-      "SHA256": "c7cdf01ba11a51bd6f7d84fc97049b058d936244fd564b34840b8591f75cd5cb"
+      "Bytes": 132029,
+      "SHA256": "498037296393341c7475abab8ab9c3f51000eecb744ee86d259859b1dccfee1d"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 6341,
-      "SHA256": "c951e64839d2c5461c4c82dc19e277a40906899221d07eb2c61850a00908eadc"
+      "Bytes": 6853,
+      "SHA256": "14311eab4e8fa3fd07f54518f8ba1bcfa437958faa7bc5cda4332fca248192dd"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 145905,
-      "SHA256": "f70b3aaed371684994e37b93990da31e107633fafd89178763d71bb123242f8d"
+      "Bytes": 147561,
+      "SHA256": "8f5c87ecda03b550a205b18f7e8025a7067d4010b0823ff70ff7b70d54a9a64e"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4556,6 +4556,26 @@
     "tools/refresh_understanding_catalog.py": {
       "Bytes": 9431,
       "SHA256": "a985d431382f3bf4bd433416504f2187aa7ac2be2285e0dea5026722e2cb1bf7"
+    },
+    "handoff/workspace-inventory-r01/INVENTORY UK-ANI-DEMAND R01.py": {
+      "Bytes": 24690,
+      "SHA256": "51b6d79e2b141ef73cea3d1a2ed0aa4ec1eb24604ac0d9ca595e7904165d8e3f"
+    },
+    "handoff/workspace-inventory-r01/LOCAL-CHECKS.json": {
+      "Bytes": 16467,
+      "SHA256": "04ed75a827ca20f9a6d8fec69d97205e19cab85cce1d0be873d7bac5599741c6"
+    },
+    "handoff/workspace-inventory-r01/README.md": {
+      "Bytes": 7019,
+      "SHA256": "50a5957858fe14aa23f3e5c59ae1a7ae1153ad53b74c17208c4ac27a743dc1c6"
+    },
+    "handoff/workspace-inventory-r01/VALIDATION.json": {
+      "Bytes": 2877,
+      "SHA256": "a5f082b171aafb90acf9919bf7641af0fcba427fb583d925fc71e97ba3af09e4"
+    },
+    "handoff/workspace-inventory-r01/test_inventory.py": {
+      "Bytes": 22411,
+      "SHA256": "f7995c71d15055d9620a99d9aeb82eee3db03562d09c028ec8866310458a7970"
     }
   }
 }
