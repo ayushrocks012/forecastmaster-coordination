@@ -4598,8 +4598,8 @@
       "SHA256": "eb1d710dcdf06f21cf5f4e8d1c45abbf14527de5ee0a50b803b65340c11a6b72"
     },
     "handoff/report-native-only-r17.8/test-release-r01/VALIDATION.json": {
-      "Bytes": 4680,
-      "SHA256": "c46b6cdd3aa58af79c31fc4c33779b7288d9de6bd7763d9e5c68ebf65d51c974"
+      "Bytes": 4999,
+      "SHA256": "4d03dae974d6365b05cca32d6b2523f5a67c10a2c7a7aef57b25425d7b299fac"
     },
     "handoff/report-native-only-r17.8/test-release-r01/receiving.py": {
       "Bytes": 9611,

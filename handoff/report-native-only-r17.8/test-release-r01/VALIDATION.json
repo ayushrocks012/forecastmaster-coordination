@@ -121,5 +121,13 @@
       "Stage": "Final native run",
       "Outcome": "207 queries, 1868 assertions passed; final source reproduces all four input files byte-for-byte"
     }
-  ]
+  ],
+  "CommittedReceivingArchive": {
+    "SourceCommit": "47bba253fb35609c595e9f9623c84d361264fe27",
+    "ManifestFilesVerified": 1162,
+    "PublicCatalog": "PASS",
+    "ReleaseTests": 14,
+    "Failures": 0,
+    "CodeAndCandidateArtifactBytes": "Identical to this release; later edits only record validation metadata"
+  }
 }
