@@ -1,5 +1,42 @@
 # Company setup status
 
+## 23 October 2026 — returned R01 naming metadata accepted after review; refresh TEST once
+
+The returned R01 JSON keeps Stage TEST_R177_READBACK_NEEDS_REVIEW. It verifies
+the exact R03 backup/public patch pair and successful 72-comparison numerical
+receipt, two stable complete TEST metadata snapshots and the saved cloud
+mapping. It reports isNameInferred=false on precisely ImportedAtUTC,
+FileChoiceLabel and SeriesLabel. The untruncated summary contains only those
+three additions plus seventeen identical measure DAX line representations and
+two identical calculated-helper representations. No other model differences
+are reported. This check performed no amount query/write/refresh/publish.
+
+Review now accepts this exact result. Microsoft's [column protocol](https://learn.microsoft.com/en-us/openspecs/sql_server_protocols/ms-ssas-t/ae53bf0d-ebc9-4760-8267-08c2fa8c481f)
+defines false as an explicitly specified column name. These three new public
+candidate columns have explicit names and matching same-named output bindings;
+the complete comparison confirms the remaining metadata matches. The R01
+check's true-only condition was too restrictive. This is not a new successful
+checker execution or proof of a global omitted-property default; its original
+stage is retained. Do not generalize to unrelated flags or other NEEDS_REVIEW
+results. Safe receipt: logs/2026-10-23-native-r177-r01-readback-reviewed.json.
+
+Current step: [open after reviewed readback](../handoff/report-native-only-r17.7/readback-check-r01/OPEN%20AFTER%20REVIEW.txt).
+Run no more notebook cells. Manually refresh existing ForecastMaster Native
+OneLake R17.1 - TEST ONCE; require Completed without warnings before opening the
+unchanged R17.7 TEST PBIP. If refresh warns/fails, stop/send details without
+retrying. This exact-result review supersedes the previous true-only hold.
+
+Local assertions checked all reported identities, boolean states, counts,
+three exact property paths and complete detail inventory against frozen public
+column specs; all prior 1094 protected files matched their recorded hashes and
+lengths. Only receiving documentation and a safe receipt are added/updated;
+checker, updater, model patch and ZIP bytes remain unchanged. GitNexus cannot
+resolve Coordination; direct source/evidence checks are bounded fallback.
+This is operator-provided company evidence plus documented metadata review,
+not a fresh company connection. Refresh processing, native UI/export, broader
+R16.6 parity and same-selection report performance remain pending. Production
+R16.6 remains untouched; built-in visuals only.
+
 ## 23 October 2026 — R03 numerical checks passed; submitted TEST update needs three metadata flags verified
 
 The operator returned TEST_R177_READBACK_NEEDS_REVIEW. All 72 comparisons were

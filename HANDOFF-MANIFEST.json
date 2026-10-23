@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 64246,
-      "SHA256": "62f8fa1af249539377ca83b261787119b8a8013311dda47ed4fa17ccb04137c6"
+      "Bytes": 65867,
+      "SHA256": "3e083fbc3c46d9a45bbf9ccf72dfbf935298ad14d768323f21d4789c86fe112a"
     },
     "README.md": {
-      "Bytes": 5819,
-      "SHA256": "322e6df1e6650926c5a9ef9e49d024fc1c0fb3d1fc0c9ea26eca757797dbbaa2"
+      "Bytes": 5885,
+      "SHA256": "7c8ab1afac020a79db29136b64db779e83a2ae687eb80f63f995f59125641973"
     },
     "feedback/STATUS.md": {
-      "Bytes": 111596,
-      "SHA256": "c3cafb026c4b750e963c5af071ff2247e359047fe509dd1ff53976d96decfe2e"
+      "Bytes": 114198,
+      "SHA256": "f7bcee28b5d486f5980d31e62384dd22a2ba691c99dd923784852854d4cbff0a"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 6926,
-      "SHA256": "6310d7e07302448d45cd316c72aa202df1214f664507c6c3157fa831d3c9462c"
+      "Bytes": 6587,
+      "SHA256": "cd080db97aea1fcd541d73cf797ebd928872e16e1e8f37596e0776e34bfac8a7"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4392,6 +4392,14 @@
     "handoff/report-native-only-r17.7/readback-check-r01/test_probe.py": {
       "Bytes": 11242,
       "SHA256": "9dae032cccd9fb64598aa872a380921f7fbb2457005d06b8cbbadfabbf570458"
+    },
+    "feedback/logs/2026-10-23-native-r177-r01-readback-reviewed.json": {
+      "Bytes": 2703,
+      "SHA256": "5c52897186bf4839addf6e362637aea64e3397c71bdd559d578226cf8da84b05"
+    },
+    "handoff/report-native-only-r17.7/readback-check-r01/OPEN AFTER REVIEW.txt": {
+      "Bytes": 3349,
+      "SHA256": "958db3a178a94b0b6f01cd81a5f5633745910ec4d9c1dbed7b79fd0fdcdbdeef"
     }
   }
 }

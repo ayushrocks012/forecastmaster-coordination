@@ -1,0 +1,56 @@
+R17.7 — NEXT STEP AFTER REVIEW OF THE RETURNED R01 JSON
+
+The returned R01 JSON still says TEST_R177_READBACK_NEEDS_REVIEW. Its recorded
+stage is preserved. That exact result has now been reviewed and accepted:
+
+- The exact private R03 backup pair and successful numerical receipt verified.
+- All 72 numeric comparisons matched, with zero blanks/mismatches (54 direct
+  baseline, 18 definition-checked variance expectations, 72 actual candidates).
+- Both complete TEST metadata snapshots were stable; cloud mapping matched.
+- The ONLY three unexplained differences were isNameInferred=false on
+  fm_native_files.ImportedAtUTC, fm_native_files.FileChoiceLabel and
+  fm_native_lines.SeriesLabel. The remaining seventeen measure/two helper DAX
+  representations were identical, and details were not truncated.
+
+The check's true-only condition was too restrictive. Microsoft defines false
+as an explicitly specified column name. These three public candidate columns
+are explicitly named and bound to their same-named DAX output columns. The
+whole-definition comparison reports no other changes to names, bindings,
+types, expressions, formats, sources, roles or parts. This is an acceptance
+of this exact reported metadata result, not a general exception for every
+NEEDS_REVIEW result or every metadata flag. No model correction is needed.
+
+1. Do not run any more notebook cells. Do not rerun R03 or the readback check.
+   The R03 TEST update was already submitted. Keep its private backup.
+
+2. On the COMPANY laptop, open Fabric -> UK-ANI-Demand. Find the SEMANTIC MODEL
+   ForecastMaster Native OneLake R17.1 - TEST
+   (31d00232-ac03-48fe-af39-f2e4bae82443).
+   Choose ... -> Refresh now ONCE. Do not refresh production/Refresh Demand.
+
+3. Open Refresh history and wait for Completed WITHOUT warnings.
+   If it fails or warns, stop and send its details. Do not refresh again or
+   change connections to clear the warning.
+
+4. After warning-free Completed, use the unchanged company-connected package:
+   handoff\report-native-only-r17.7\candidate\ForecastMaster Native Only R17.7 TEST.zip
+   Extract ALL into a NEW folder, keeping the .Report folder alongside
+   ForecastMaster Native Only R17.7 TEST.pbip. Open that PBIP. Keep old projects.
+   Do not choose SAMPLE, which contains fabricated data.
+
+5. Apply the same Affiliate, demand cycle, Section, Measure, month bounds,
+   periods, trends and Total/Sectors view used for the prior timing. Review
+   labels, Imported-at file labels, checkbox multi-selection, both summaries
+   and the monthly chart. Native Apply filters batches slicer changes; in
+   Desktop EDIT mode use Ctrl+click on that action button. File checkboxes
+   themselves do not require Ctrl. Built-in visuals only.
+
+6. Send the TEST refresh result first. Then send screenshots and Performance
+   Analyzer DAX timings for Monthly demand, Review Summary and Executive
+   Summary, with the selected view and filters. Keep the first load distinct
+   from a subsequent filter interaction. No report-speed improvement has yet
+   been established. Do not publish over production R16.6.
+
+This reviewed instruction supersedes the original true-only R01 hold for the
+exact returned JSON only. The frozen check/updater/report files are unchanged.
+The saved operator receipt is feedback/logs/2026-10-23-native-r177-r01-readback-reviewed.json.

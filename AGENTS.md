@@ -540,3 +540,27 @@ the reported numerical-evidence review. Preserve old packages and backups;
 native-only visuals, other-laptop company access, production R16.6 and open
 full-parity/UI/export/speed gates remain. Serial preflight timings (54 versus
 72 direct reads and different cache order) are not report performance evidence.
+
+The returned R01 JSON subsequently established that all three isNameInferred
+values are false. Exact backup pair/public patch, successful numerical receipt,
+two stable complete metadata snapshots and unchanged cloud mapping verified.
+The full untruncated diff has only those three additions plus seventeen measure
+and two helper identical DAX representations. All other names, source bindings,
+types, formulas, formats, roles and parts match the verified private candidate.
+
+Manual review on 23 October accepts this exact result. Microsoft defines false
+as explicitly specified column names; the three new public columns are
+explicitly named and bound to [ImportedAtUTC], [FileChoiceLabel], [SeriesLabel].
+The original R01 true-only requirement was overrestrictive. Do not rewrite its
+historical stage to TEST_R177_READBACK_VERIFIED or generalize acceptance to any
+NEEDS_REVIEW result. Preserve the checker/updater/ZIP bytes. Receipt:
+feedback/logs/2026-10-23-native-r177-r01-readback-reviewed.json.
+
+Current step is readback-check-r01/OPEN AFTER REVIEW.txt: no more notebook cells;
+manually refresh ONLY existing R17.1 TEST once. Require warning-free Completed,
+then open the unchanged R17.7 TEST PBIP. This exact-result review supersedes the
+preceding true-only hold. Any refresh warning/failure stops for review without
+retry or connection changes. No production/publication/custom-visual change.
+Readback review is accepted; metadata processing, full parity, native UI/export
+and report speed remain separate receiving gates. Do not claim preflight
+totals or naming-metadata acceptance establish report performance.

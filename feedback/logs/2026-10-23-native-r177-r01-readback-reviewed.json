@@ -1,0 +1,66 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "R177_READBACK_ACCEPTED_AFTER_REVIEW",
+  "EvidenceSource": "Operator-provided R01 JSON plus frozen public R03 column specifications and Microsoft column protocol",
+  "OriginalProbeStage": "TEST_R177_READBACK_NEEDS_REVIEW",
+  "CheckVersion": "R01",
+  "UpdaterRevision": "R03",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "ExactPrivateBackupRead": true,
+  "BackupPairVerifiedAgainstFrozenR177": true,
+  "NumericalPreflightReceiptVerified": true,
+  "NumericComparisons": 72,
+  "BlankComparisons": 0,
+  "Mismatches": 0,
+  "DirectBaselineReads": 54,
+  "DerivedVarianceExpectations": 18,
+  "ActualCandidateReads": 72,
+  "TwoMetadataSnapshotsStable": true,
+  "CloudConnectionMatchesBackup": true,
+  "ObservedNameFlags": [
+    {
+      "Table": "fm_native_files",
+      "Column": "ImportedAtUTC",
+      "isNameInferred": false
+    },
+    {
+      "Table": "fm_native_files",
+      "Column": "FileChoiceLabel",
+      "isNameInferred": false
+    },
+    {
+      "Table": "fm_native_lines",
+      "Column": "SeriesLabel",
+      "isNameInferred": false
+    }
+  ],
+  "OtherUnexplainedDifferences": 0,
+  "IdenticalMeasureRepresentations": 17,
+  "IdenticalHelperRepresentations": 2,
+  "DetailsTruncated": false,
+  "ReviewReason": "The three candidate columns have explicit names and unchanged same-named source bindings. Microsoft defines false as explicitly specified names. Only these exact false properties differ; R01 true-only condition was overrestrictive.",
+  "Documentation": "https://learn.microsoft.com/en-us/openspecs/sql_server_protocols/ms-ssas-t/ae53bf0d-ebc9-4760-8267-08c2fa8c481f",
+  "OriginalProbeStageRewritten": false,
+  "NewCompanyQueryExecutedHere": false,
+  "GlobalMetadataIgnoreIntroduced": false,
+  "ModelOrCheckerCodeChanged": false,
+  "ModelWriteRequestedThisReview": false,
+  "CompanyAmountsQueriedThisReview": false,
+  "RefreshRequestedThisReview": false,
+  "ReportPublished": false,
+  "LocalReceiptAssertionsPassed": true,
+  "PriorManifestEntriesVerified": 1098,
+  "PriorProtectedFileHashesAndLengthsVerified": 1094,
+  "NextStep": "No more notebook cells. Refresh only existing R17.1 TEST once; require warning-free Completed, then open unchanged R17.7 TEST PBIP.",
+  "Unverified": [
+    "Refresh processing",
+    "Full R16.6 numerical parity",
+    "Native UI/export",
+    "Same-selection report speed"
+  ],
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination repository not registered",
+    "ChangeScope": "INCOMPLETE; staged diff-impact failed closed, analysis_incomplete=1",
+    "Fallback": "Direct complete operator-result assertions, public column specification review and protected-file hashes; no graph-impact conclusion"
+  }
+}

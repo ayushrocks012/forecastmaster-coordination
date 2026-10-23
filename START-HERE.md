@@ -1,38 +1,32 @@
-# Current report step - R17.7 R03 readback check, 23 October 2026
+# Current report step - R17.7 readback reviewed; refresh TEST once, 23 October 2026
 
-Follow [the read-only company-laptop steps](handoff/report-native-only-r17.7/readback-check-r01/OPEN%20FIRST%20-%20READBACK.txt).
-R03 passed 72 numeric comparisons with zero blanks/mismatches: 54 direct
-baseline reads and 18 definition-checked variance expectations against 72 actual
-candidate reads. It then submitted the TEST update and preserved the cloud
-connection. Do not rerun R03 or assume no model write occurred.
+Follow [the post-review company-laptop steps](handoff/report-native-only-r17.7/readback-check-r01/OPEN%20AFTER%20REVIEW.txt).
+The returned R01 JSON verified the private R03 backup pair, all 72 numerical
+comparisons, two stable metadata snapshots and unchanged cloud mapping. Its
+only three unexplained additions are isNameInferred=false on the explicitly
+named ImportedAtUTC, FileChoiceLabel and SeriesLabel columns. All other model
+metadata matches, apart from identical DAX line representations.
 
-Readback flagged three added isNameInferred properties on ImportedAtUTC,
-FileChoiceLabel and SeriesLabel. Values were not included in the output. The
-new check verifies those values, the exact private backup pair, successful
-preflight receipt, entire candidate definition and two TEST snapshots/mappings.
-Only true on those exact new calculated columns with the expected source
-bindings is accepted; other differences still stop verification. It makes no
-amount query, model/backup write, refresh or publishing request.
+The original true-only check was too restrictive. Microsoft defines false as
+an explicitly specified column name, consistent with these known candidate
+columns and unchanged source bindings. The exact supplied result is accepted
+after review; its original NEEDS_REVIEW stage remains preserved. No further
+notebook code is needed. Do not rerun R03 or the readback check.
 
-On the COMPANY laptop, pull Coordination. Copy the WHOLE
-handoff/report-native-only-r17.7/readback-check-r01/CHECK R17.7 READBACK.py into
-ONE NEW Python/PySpark cell in ForecastMaster_GM_Setup. Run ONLY that new cell
-once, never Run all. Do not paste an updater or older diagnostic.
+On the COMPANY laptop, open UK-ANI-Demand. Find SEMANTIC MODEL ForecastMaster
+Native OneLake R17.1 - TEST (31d00232-ac03-48fe-af39-f2e4bae82443). Choose ... ->
+Refresh now ONCE. Require Refresh history -> Completed WITHOUT warnings.
+If it fails/warns, stop and send details; do not retry or change connections.
 
-Continue ONLY for TEST_R177_READBACK_VERIFIED: manually Refresh now ONCE on the
-existing semantic model ForecastMaster Native OneLake R17.1 - TEST in
-UK-ANI-Demand. Require Refresh history -> Completed without warnings. Then
-extract the unchanged R17.7 TEST ZIP into a new folder and open its PBIP with
-the .Report folder alongside it. Send the check JSON and refresh status.
-For any other stage/error or refresh warning/failure, stop and send details;
-do not retry the updater, refresh again, open R17.7 or publish.
+After warning-free Completed, extract ALL of the unchanged R17.7 TEST ZIP into
+a NEW folder and open its PBIP with the .Report folder alongside it. Use TEST,
+not fabricated SAMPLE. Send the refresh result, then screenshots and the three
+visual DAX timings using the same prior view/selections. Report speed, broader
+numerical parity and native UI/export remain receiving checks.
 
-This conditional readback instruction supersedes the earlier R03 hold after
-review of its numerical evidence. Built-in visuals only; production R16.6,
-source retention and schedules remain unchanged. Company readback verification,
-processing, full R16.6 parity, native UI/export and speed remain receiving gates.
-Serial preflight totals have different query counts and do not measure report
-speed.
+This exact-result review supersedes the prior true-only hold; it is not a
+blanket acceptance of other NEEDS_REVIEW results. All old code/ZIP bytes remain
+preserved. Built-in visuals only; do not publish over production R16.6.
 Original laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH
