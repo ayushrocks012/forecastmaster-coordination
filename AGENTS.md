@@ -487,3 +487,27 @@ verified installed/enabled through Plugin Management on 23 October. Apply its
 browser-service guidance where useful; do not infer a company session, local
 Desktop control or DAX execution from installation. Native-only visuals remain
 an explicit requirement. Do not request company sign-in on this laptop.
+
+Later R02 returned TEST_R177_PREFLIGHT_STOPPED after 26 comparisons at original
+EF/6M/current-year Variance % (check 27). Known signal is CANCELLED only; the
+user is unsure whether Stop was clicked. No model/backup write or refresh was
+reached. Do not infer memory/timeout/capacity as its cause or blindly retry R02.
+
+Current receiving step is preflight-update-r03 under report-native-only-r17.7.
+R03 explicitly changes numerical evidence: 54 direct baseline reads and 18
+derived baseline percentage expectations against 72 actual candidate reads.
+The live N Variance/N Variance % definitions must match the exact original
+guarded (Plan - Benchmark) / ABS(Benchmark) contract before using that method.
+Derive only from that context's actual baseline Plan/Benchmark values, with
+blank/zero/finite/sign behavior preserved. Candidate percentages must still be
+executed and compared. Never label this 72 direct original reads or record the
+cancelled original measure as passed. All comparisons start afresh; no reuse of
+the partial 26-count receipt. Any required read failure/mismatch/unknown formula
+or incomplete/uninformative evidence refuses the write; no relaxed tolerances.
+
+R03 keeps the exact R17.7 patch and private backup/cloud/concurrency/no-purge/
+full-readback safeguards. Preserve all older code/ZIP bytes. Run one NEW setup
+cell once; return final JSON even for TEST_R177_UPDATED before refreshing or
+opening R17.7, to review explicit direct/derived evidence. This supersedes the
+R02 success -> refresh instruction. Never retry an ambiguous write. All native
+UI, full numerical parity and speed acceptance gates remain separate and open.

@@ -1,31 +1,35 @@
-# Current report step - R17.7 updater R02, 23 October 2026
+# Current report step - R17.7 updater R03, 23 October 2026
 
-Follow [R02 company-laptop steps](handoff/report-native-only-r17.7/preflight-update-r02/OPEN%20FIRST%20-%20R02.txt).
-The R01 diagnostic returned four NUMERIC existing-formula values. This proves
-those small reads completed, not why the earlier combined query failed, candidate
-parity or R17.7 installation. No model write or refresh occurred in those runs.
+Follow [R03 company-laptop steps](handoff/report-native-only-r17.7/preflight-update-r03/OPEN%20FIRST%20-%20R03.txt).
+R02 completed 26 comparisons, then the ORIGINAL Ex-factory/6M/current-year
+Variance % query was CANCELLED. No model/backup write was reached. The operator
+is unsure whether Stop was clicked. Memory, timeout and cause remain unknown.
+Do not rerun R02, refresh TEST or open R17.7 as installed.
 
-Pull Coordination, copy the WHOLE new UPDATE EXISTING TEST TO R17.7 R02.py file
-from preflight-update-r02 into ONE NEW Python/PySpark cell in
-ForecastMaster_GM_Setup, and run ONLY that cell once. Do not rerun the old
-R17.7 updater, R01 diagnostic or Run all. R02 compares the same 72 pairs as
-144 sequential one-value read-only queries; allow several minutes and watch
-progress. Values/raw errors stay private. Missing/mismatching/uninformative
-results or changed source-selection metadata refuse the write.
+R03 uses a different, explicit variance evidence method. It first verifies the
+exact live N Variance/N Variance % definitions. It then calculates 18 baseline
+percentage expectations privately from the directly read baseline Plan and
+Benchmark; those inputs are compared with actual candidate inputs too. It still
+queries all 72 actual candidate values and 54 direct baseline values. This is
+not 72 direct original reads or a pass for the cancelled old percentage query.
+Blank/zero/finite/completeness/informative-data/tolerance/source-stability guards
+remain. All comparisons start afresh; no partial-run receipt is resumed.
 
-Only after passing does it run the unchanged private backup/cloud/concurrency/
-no-purge update/full-readback path. Continue only for TEST_R177_UPDATED with
-UpdaterRevision R02 and NumericalPreflight Checks 72 / Mismatches 0. Then
-refresh ONLY ForecastMaster Native OneLake R17.1 - TEST ONCE. Require Completed
-without warnings before extracting/opening the unchanged R17.7 TEST ZIP. Send
-the updater JSON and TEST refresh result. ANY other stage/exception stops for
-review, with no retry/refresh/publish. All detailed actions are in the R02 link.
+Save report work and close Desktop/open TEST report tabs to reduce competing
+requests. Pull Coordination, copy the WHOLE new UPDATE EXISTING TEST TO R17.7
+R03.py from preflight-update-r03 into ONE NEW Python/PySpark cell in
+ForecastMaster_GM_Setup. Run ONLY that cell once, not Run all. Allow several
+minutes. After a passing preflight, the unchanged private backup/cloud/
+concurrency/no-purge single-update/full-readback safeguards apply.
 
-The R17.7 model patch and report ZIPs are byte-preserved. The report stays native
-only, with compact labels, end labels, import UTC metadata, searchable non-Ctrl
-file checkboxes and native Apply filters batching. Production R16.6 and previous
-packages remain unchanged. Full company parity, speed, rendering/interaction/
-export remain unqualified; local tests and serial-check timings are separate.
+Send the complete final JSON even for TEST_R177_UPDATED. STOP before refreshing
+TEST, opening R17.7 or publishing until the direct/derived evidence and readback
+are reviewed. This supersedes R02's success -> refresh instruction. On any error,
+do not retry or assume the model is unchanged unless the output establishes it.
+
+All R17.7 model patch constants and report ZIPs are preserved. Built-in visuals
+only; production R16.6, source retention and schedules remain unchanged. Company
+R03 parity, processing, full R16.6 parity, UI/export and speed remain open gates.
 Original laptop connection setup follows for reference.
 
 # Connect the Abbott laptop using VS Code and SSH

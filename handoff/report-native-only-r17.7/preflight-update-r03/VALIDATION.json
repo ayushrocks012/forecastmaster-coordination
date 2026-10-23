@@ -1,0 +1,52 @@
+{
+  "Date": "2026-10-23",
+  "Package": "R17.7 updater R03 - direct inputs and definition-checked variance expectations",
+  "EvidenceLevel": "LOCAL_SYNTHETIC_AND_TEXT_CHECKS_ONLY",
+  "ReceivingEvidence": {
+    "R02Stage": "TEST_R177_PREFLIGHT_STOPPED",
+    "CompletedComparisons": 26,
+    "FailedCheck": {"Index": 27, "Metric": "ef", "Window": 6, "YearOffset": 0, "Field": "V", "QueryKind": "Original"},
+    "KnownErrorSignal": "CANCELLED",
+    "OperatorClickedStop": "UNSURE",
+    "CancellationCause": "UNKNOWN",
+    "ModelOrBackupWriteReached": false
+  },
+  "EvidenceMethodChange": {
+    "ExactOriginalVarianceDefinitionsRequired": true,
+    "DirectBaselineScalarReads": 54,
+    "DerivedBaselineVarianceExpectations": 18,
+    "ActualCandidateScalarReads": 72,
+    "TotalComparisonsRequired": 72,
+    "LegacyVariancePercentMeasureExecuted": false,
+    "CancelledQueryRecordedAsPassed": false,
+    "PartialR02ResultReused": false
+  },
+  "LocalChecks": {
+    "NewR03GuardTestsPassed": 11,
+    "FrozenR02TestsPassed": 9,
+    "FrozenR177TestsPassed": 13,
+    "FrozenR177AlgebraScenariosIncluded": 3600,
+    "Python310SyntaxParsed": true,
+    "UnknownVarianceDefinitionsRefuseBeforeQueries": true,
+    "VarianceBlankZeroSignAndFiniteBehaviorTested": true,
+    "ActualCandidateVarianceMismatchBlocksWrite": true,
+    "AnyRequiredReadCancellationBlocksWrite": true,
+    "NoRawErrorsOrCompanyValuesPrintedTested": true,
+    "R177ModelPatchConstantsAndUnchangedGuardsPreserved": true,
+    "SourceMetadataCloudConcurrencyBackupNoPurgeReadbackGuardsTested": true
+  },
+  "Preservation": {
+    "PriorManifestEntries": 1082,
+    "PriorNonmutableFilesHashAndLengthMatched": 1078,
+    "MutableRootDocs": ["AGENTS.md", "README.md", "START-HERE.md", "feedback/STATUS.md"],
+    "OlderUpdatersDiagnosticsAndBothR177ZipBytesPreserved": true
+  },
+  "GitNexus": {
+    "Query": "UNAVAILABLE; Coordination repository not registered",
+    "EditImpact": "UNAVAILABLE / AUTHORITY_DRIFT_BLOCKS_CONCLUSION",
+    "ChangeScope": "INCOMPLETE; staged diff-impact failed closed, analysis_incomplete=1",
+    "Fallback": "Exact original DAX definition trace, AST/source and synthetic guard checks, frozen byte preservation; no complete graph-impact conclusion"
+  },
+  "ReceivingInstruction": "Run one NEW R03 setup cell once; send final JSON even for TEST_R177_UPDATED before refresh or report opening",
+  "Unverified": ["R02 cancellation cause", "Company R03 DAX execution and numerical evidence", "R03 model update/readback", "Metadata processing", "Full R16.6 parity", "Native UI/export", "Company report speed"]
+}

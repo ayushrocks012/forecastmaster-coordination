@@ -1,0 +1,24 @@
+{
+  "Evidence": "Operator-pasted R02 JSON; 23 October 2026",
+  "Stage": "TEST_R177_PREFLIGHT_STOPPED",
+  "UpdaterRevision": "R02",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "Preflight": {
+    "Reason": "READ_ONLY_QUERY_FAILED",
+    "Checkpoint": {"CheckIndex": 27, "Metric": "ef", "Window": 6, "YearOffset": 0, "Field": "V"},
+    "CompletedComparisons": 26,
+    "QueryKind": "Original",
+    "ErrorCategory": "CANCELLED",
+    "KnownSignals": ["CANCELLED"],
+    "KnownCodes": []
+  },
+  "OperatorClickedStop": "UNSURE; explicit reply",
+  "CancellationCause": "UNKNOWN; no memory or timeout cause established",
+  "ModelWriteRequested": false,
+  "OriginalModelWriteRequested": false,
+  "BackupStageReached": false,
+  "RefreshRequested": false,
+  "ReportPublished": false,
+  "CompanyAmountValuesIncluded": false,
+  "NextStep": "Use the new R03 definition-checked preflight once; return final JSON before any refresh or report opening. Do not rerun R02."
+}

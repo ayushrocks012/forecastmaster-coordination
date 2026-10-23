@@ -1,5 +1,50 @@
 # Company setup status
 
+## 23 October 2026 — R02 cancelled at original EF Variance %; R03 uses verified-formula expectations
+
+The operator returned TEST_R177_PREFLIGHT_STOPPED / R02. CompletedComparisons
+26 precedes CheckIndex 27: Metric ef, Window 6, YearOffset 0, Field V, QueryKind
+Original. Thus 24 Market comparisons and this EF context's Plan/Benchmark pairs
+completed; the candidate EF percentage had not yet been queried. The only known
+signal is CANCELLED, with no known code. No mismatch was reported before the
+query failed. ModelWriteRequested, OriginalModelWriteRequested, RefreshRequested
+and ReportPublished are false; the code had not reached its backup stage.
+The user answered 'I'm not sure' about clicking Stop. Cancellation cause,
+memory exhaustion and timeout remain unestablished. Safe receipt:
+logs/2026-10-23-native-r177-r02-cancelled.json.
+
+Direct source tracing finds N Variance % = DIVIDE([N Variance],ABS([N Benchmark]))
+and guarded N Variance = Plan - Benchmark. Benchmark occurs in the numerator
+chain and denominator, which may cause redundant work; this is not a measured
+cause of cancellation. Company access remains on the other laptop.
+
+Current step: [R17.7 updater R03](../handoff/report-native-only-r17.7/preflight-update-r03/OPEN%20FIRST%20-%20R03.txt).
+Before any DAX comparison, R03 verifies both live variance definitions against
+the exact original contract. It derives 18 baseline percentage expectations from
+the directly queried Plan/Benchmark values and compares them with actual
+candidate percentage queries. The remaining 54 baseline scalars and all 72
+candidate scalars are queried directly. All 72 comparisons start afresh. This
+is a changed evidence method, not 72 direct original reads or a pass for the
+cancelled percentage query. Output explicitly counts direct/derived evidence.
+Unknown definitions, mismatches, missing/nonfinite/uninformative results,
+blank-vs-zero differences, source metadata changes or any new cancellation
+still refuse a write. Tolerances and the final model patch are unchanged.
+
+R03 preserves private full backups/cloud/concurrency/no-purge/full-readback
+guards, and uses a separate R03 backup prefix. Run only ONE NEW R03 setup cell
+once, after saving/closing Desktop/TEST report tabs to reduce competing requests.
+Return the full JSON even for TEST_R177_UPDATED before any refresh/report
+opening. This evidence review supersedes R02's refresh-on-success instruction.
+No production, schedule, source-retention, connection or custom visual change.
+
+Eleven new local guard tests, nine frozen R02 tests and thirteen R17.7 tests pass
+(including the existing 3600 algebra scenarios). R03 source parses for Python
+3.10; model patch constants and unchanged helper function bodies match R02.
+These do not prove DAX execution, company numerical parity or speed. GitNexus
+cannot resolve Coordination; direct tracing, guard tests and byte preservation
+are bounded fallback. Company R03 execution, metadata processing and broader
+native UI/numerical/performance/export gates remain unverified.
+
 ## 23 October 2026 — four small R17.7 baseline reads completed; R02 updater prepared
 
 The operator returned R177_SMALL_BASELINE_READS_COMPLETED. Metadata took 10856ms;

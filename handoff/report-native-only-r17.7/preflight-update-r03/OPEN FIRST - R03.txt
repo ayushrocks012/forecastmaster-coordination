@@ -1,0 +1,56 @@
+R17.7 R03 — VERIFIED VARIANCE EXPECTATION; SAME TEST MODEL PATCH
+
+Your R02 run completed 26 comparisons and stopped on check 27:
+existing/original Ex-factory, 6M, current-year Variance %. No model or backup
+write was reached. CANCELLED does not establish a memory error or its cause.
+Do not rerun R02, refresh TEST or open R17.7 as installed.
+
+The new R03 method verifies the exact live N Variance and N Variance % source
+definitions, then derives the old expected percentage from that context's
+already-read baseline Plan and Benchmark. It still queries the actual candidate
+percentage. This is explicitly recorded as 18 DERIVED baseline expectations,
+54 DIRECT baseline reads and 72 actual candidate reads. It does not mark the
+cancelled old percentage query passed. All 72 comparisons are run afresh.
+
+1. On the COMPANY laptop, save your current report work and close Power BI
+   Desktop and any open TEST report tabs. Keep Fabric's setup notebook open.
+   This reduces competing visual requests; it does not identify the earlier
+   cancellation's cause or require changes to schedules, connections or capacity.
+
+2. Open your existing forecastmaster-coordination folder in VS Code.
+   In its PowerShell terminal, from the repository root run these in order:
+
+   git pull --ff-only
+   Get-Content -LiteralPath '.\handoff\report-native-only-r17.7\preflight-update-r03\UPDATE EXISTING TEST TO R17.7 R03.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+   If the pull is refused, preserve local files and send the message.
+   Copy this WHOLE NEW R03 updater, not R02 or a diagnostic file.
+
+3. In Fabric -> UK-ANI-Demand -> ForecastMaster_GM_Setup, add ONE NEW
+   Python/PySpark cell at the bottom and paste the copied code.
+   Run ONLY that cell ONCE. Do not click Run all or run older setup cells.
+
+   Allow several minutes; comparison progress is printed every four checks.
+   Values stay private. Changed variance definitions, missing/blank-vs-zero/
+   mismatching/uninformative results, another cancellation or changed source
+   metadata stop before any model write. No automatic retry is performed.
+
+   Only after all checks pass does it make verified private backups, check
+   concurrency/cloud mapping, apply the unchanged R17.7 TEST patch once with
+   no purge, and compare full readback. Production R16.6 remains unchanged.
+
+4. Send the COMPLETE final JSON back, including Stage, UpdaterRevision,
+   NumericalPreflight (or Preflight), and readback/cloud flags.
+   Even for TEST_R177_UPDATED, STOP HERE until this evidence is reviewed.
+   Do not refresh TEST, open R17.7 or publish yet. This review step supersedes
+   the earlier R02 success -> refresh instruction because R03 reports a
+   different, explicit direct/derived numerical evidence method.
+
+   TEST_R177_PREFLIGHT_STOPPED means no model write. Any other error/readback
+   uncertainty must not cause a retry or an assumption that nothing changed.
+   Keep any private backup path and return the output.
+
+R03 updates only the existing ForecastMaster Native OneLake R17.1 - TEST,
+ID 31d00232-ac03-48fe-af39-f2e4bae82443. The R17.1 display name is expected.
+The R17.7 PBIP ZIP is unchanged and uses only built-in Power BI visuals.
+Company speed, full numerical parity and native interaction remain unverified.
