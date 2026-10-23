@@ -1,0 +1,18 @@
+{
+  "Evidence": "Operator-pasted traceback; 23 October 2026",
+  "Release": "R17.7",
+  "Workspace": "UK-ANI-Demand",
+  "TestModelID": "31d00232-ac03-48fe-af39-f2e4bae82443",
+  "ScopeMetadataReadCompleted": true,
+  "FailedAt": "verify_numeric: original = query(build_query(scopes[0], {}))",
+  "ReportedExceptionFamily": "FabricAdomdException",
+  "UnderlyingCause": "UNKNOWN; updater suppresses actual exception details",
+  "OriginalBaselineBatch": {"Rows": 18, "ValuesPerRow": 4},
+  "CandidateOverridesReached": false,
+  "R177BackupReached": false,
+  "R177ModelWriteReached": false,
+  "RefreshRequestedByCell": false,
+  "ReportPublishedByCell": false,
+  "CompanyAmountsOrRawModelIncluded": false,
+  "NextStep": "Run preflight-check-r01/CHECK R17.7 PREFLIGHT.py in ONE NEW setup cell; return safe JSON. No updater retry or TEST refresh yet."
+}

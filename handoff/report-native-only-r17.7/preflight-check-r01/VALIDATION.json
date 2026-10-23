@@ -1,0 +1,31 @@
+{
+  "Date": "2026-10-23",
+  "Package": "R17.7 preflight read-only diagnostic R01",
+  "EvidenceLevel": "LOCAL_SYNTHETIC_ONLY",
+  "Tests": {
+    "DiagnosticGuardTestsPassed": 12,
+    "FrozenR177RegressionTestsPassed": 13,
+    "Python310SyntaxParsed": true,
+    "PriorSuppressedExceptionRecoveryTested": true,
+    "NoQueriesWhenPriorErrorRecognizedTested": true,
+    "FixedTestUUIDAndReadOnlyRoutingTested": true,
+    "FirstFailureStopsFurtherQueriesTested": true,
+    "NoRawErrorOrCompanyAmountOutputTested": true,
+    "BlankAndZeroRemainDistinctTested": true,
+    "ScalarDaxMatchesOriginalBaselineMemberText": true,
+    "NoMutatingClientOrFileCallsInProbe": true
+  },
+  "Preservation": {
+    "PriorManifestEntries": 1068,
+    "PriorNonmutableFilesHashAndLengthMatched": 1064,
+    "MutableRootDocs": ["AGENTS.md", "README.md", "START-HERE.md", "feedback/STATUS.md"],
+    "FrozenR177UpdaterAndBothZipBytesPreserved": true
+  },
+  "GitNexus": {
+    "RepositoryQuery": "UNAVAILABLE; Coordination repository not registered",
+    "ChangeScope": "INCOMPLETE; diff-impact failed closed, analysis_incomplete=1",
+    "Fallback": "Direct baseline call-site tracing, synthetic guard tests and byte preservation; no complete graph-impact claim"
+  },
+  "NotExecutedHere": ["Company diagnostic", "DAX engine execution", "R17.7 numerical parity", "Model update", "TEST refresh", "Desktop rendering", "Performance acceptance"],
+  "NextStep": "Run only the new diagnostic cell in ForecastMaster_GM_Setup and return safe JSON. Keep R17.6; no updater retry or TEST refresh yet."
+}

@@ -1,6 +1,28 @@
-# Current report step - native-only R17.7 speed and file selection, 23 October 2026
+# Current report step - R17.7 read-only preflight diagnostic, 23 October 2026
 
-Current receiving step: [R17.7 labels, checkboxes and DAX optimization](handoff/report-native-only-r17.7/OPEN%20FIRST%20-%20R17.7.txt).
+The receiving R17.7 update stopped with FabricAdomdException while reading the
+existing model's baseline comparison values. Metadata discovery succeeded;
+candidate formulas, R17.7 backups and the model update were never reached.
+This run did not install R17.7. Its underlying error is not known yet.
+
+Follow [the read-only diagnostic steps](handoff/report-native-only-r17.7/preflight-check-r01/OPEN%20FIRST%20-%20PREFLIGHT%20CHECK.txt):
+pull Coordination, copy the whole CHECK R17.7 PREFLIGHT.py file into ONE NEW
+Python/PySpark cell in ForecastMaster_GM_Setup, run ONLY that cell once and send
+the final JSON back. No amounts or raw exceptions are printed. It first tries
+to recover the earlier exception from notebook memory without another query.
+If unavailable/unclassified, it reads up to four small existing-formula scalars
+and stops at the first failure. No candidate
+override, model write, refresh or publish. Even completed small reads do not
+establish candidate numerical parity or authorize installation.
+
+Keep R17.6 for now. Do not rerun the R17.7 updater, refresh TEST or open R17.7 as
+installed until this result is reviewed. Production R16.6 stays unchanged.
+The preserved preparation notes below describe the earlier planned sequence;
+the current diagnostic instruction takes precedence.
+
+## Prior R17.7 preparation sequence — paused at numerical preflight
+
+Prior receiving step: [R17.7 labels, checkboxes and DAX optimization](handoff/report-native-only-r17.7/OPEN%20FIRST%20-%20R17.7.txt).
 R17.6 screenshots show loading summaries/variance columns. Reported DAX times
 are 26.2s graph, 17.4s Review Summary and 4.7s Executive Summary. R17.7 adds
 compact labelled controls, native series end labels, imported UTC timestamps,

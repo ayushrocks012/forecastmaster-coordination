@@ -1,0 +1,48 @@
+R17.7 stopped BEFORE any model write. Run this read-only diagnostic next.
+
+The metadata scope query succeeded. The first comparison query against the
+existing formulas failed with FabricAdomdException; candidate overrides, the
+R17.7 backup and updateDefinition were never reached. The exception wrapper
+suppressed the underlying message, so memory, timeout, syntax and access must
+not be inferred from that exception type alone.
+
+1. On the company laptop, open the existing forecastmaster-coordination folder
+   in VS Code. In its terminal run:
+
+       git pull --ff-only
+
+   If Git reports a conflict or local changes blocking the pull, stop and send
+   that message. Do not reset or overwrite your files.
+
+2. Open:
+
+   handoff/report-native-only-r17.7/preflight-check-r01/CHECK R17.7 PREFLIGHT.py
+
+   Copy the WHOLE file, not UPDATE EXISTING TEST TO R17.7.py.
+
+3. In Fabric -> UK-ANI-Demand -> ForecastMaster_GM_Setup, add ONE NEW
+   Python/PySpark code cell at the bottom. Paste the copied code.
+
+4. Run ONLY that new cell once. Do not click Run all.
+
+   It first checks whether the notebook still retains the original exception
+   context hidden by the updater. If its cause is recognized, it prints the
+   safe diagnosis immediately and makes NO new DAX queries.
+
+   Otherwise it reads metadata, then at most four small existing-formula results: Plan,
+   Benchmark, VariancePercent and FutureTrend. It runs them sequentially and
+   stops at the first error. Progress labels are printed before each read.
+   Depending on the existing model's speed, allow a few minutes. No automatic
+   retry, candidate formula override, model change, refresh or report publish
+   is performed. Company amount values stay in notebook memory.
+
+5. Copy the final JSON output back into this chat, including Stage,
+   PreviousPreflightError and Checks.
+   The diagnostic prints allowlisted error categories/codes and query positions
+   or memory limits where available; it never prints a raw exception or DAX.
+
+Even R177_SMALL_BASELINE_READS_COMPLETED is a diagnostic result, NOT an update
+success or numerical parity result. Keep using R17.6 for now. Do not refresh
+TEST, open R17.7 as installed, rerun the updater, change connections or publish
+until the diagnostic is reviewed. Preserve the existing notebook cells and all
+older packages/backups. Production R16.6 remains unchanged.

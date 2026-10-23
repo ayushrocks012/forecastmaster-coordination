@@ -1,5 +1,36 @@
 # Company setup status
 
+## 23 October 2026 — R17.7 baseline read failed before any model write
+
+The operator supplied the R17.7 traceback: metadata scope discovery completed,
+then `original = query(build_query(scopes[0], {}))` raised FabricAdomdException.
+The wrapper suppresses the underlying message. This is the existing-formula
+baseline, before candidate virtual measures, private R17.7 backups and
+updateDefinition. No R17.7 model write or refresh occurred in this run. Do not
+infer a permission/XMLA block: the preceding metadata evaluation succeeded.
+Memory, timeout, parser and other causes remain unclassified. Safe receipt:
+logs/2026-10-23-native-r177-preflight-stop.json.
+
+Current step: [R17.7 read-only diagnostic R01](../handoff/report-native-only-r17.7/preflight-check-r01/OPEN%20FIRST%20-%20PREFLIGHT%20CHECK.txt).
+One NEW Python cell in ForecastMaster_GM_Setup first tries to classify the
+original exception's suppressed context retained by the notebook. A recognized
+cause returns safe JSON immediately without new DAX queries. Otherwise it reads the same metadata scope,
+then at most four baseline scalar queries in sequence: Market/12M FY Plan,
+Benchmark, Variance % and next-year December Trend Monthly. Stop at first
+failure; no combined 72-value query, automatic retries or candidate overrides.
+Only allowlisted error categories/codes/query positions/memory limits, timing
+and BLANK/NUMERIC state are printed. Raw errors and company amounts stay out
+of output and repository. Unknown errors remain UNCLASSIFIED.
+
+Keep R17.6, do not rerun the updater or refresh TEST yet, and return the final
+JSON for review. Even R177_SMALL_BASELINE_READS_COMPLETED is not an old/candidate
+parity pass, cause determination, update receipt or authorization to proceed.
+The frozen R17.7 updater and both PBIP ZIPs are unchanged. Twelve local synthetic
+guard tests pass, including Python 3.10 syntax and privacy/fail-fast behavior;
+they do not execute DAX. Company diagnostic and all R17.7 gates remain pending.
+GitNexus still cannot resolve the Coordination repository; direct tracing and
+preservation checks are bounded fallback. Production R16.6 stays unchanged.
+
 ## 23 October 2026 — R17.6 summaries load; measured slow DAX; R17.7 prepared
 
 The operator's three R17.6 screenshots show both summaries and expanded variance

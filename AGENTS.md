@@ -449,3 +449,15 @@ existing TEST once and open R17.7. Keep old packages and private backups.
 Local metadata/mock/algebra/schema checks and a synthetic endpoint probe are
 not DAX execution, company speed or native UI proof. Receiving numerical checks,
 metadata processing, same-selection warm/cold timings and UI/export remain gates.
+
+Later 23 October the R17.7 run failed at the baseline evaluate_dax call with
+FabricAdomdException after scope metadata succeeded. It did not reach candidate
+overrides, private backups or updateDefinition. Underlying cause is unknown;
+do not label the exception type alone a permissions, syntax or memory problem.
+Current step is handoff/report-native-only-r17.7/preflight-check-r01/. Run only
+its ONE NEW read-only diagnostic cell, returning safe JSON with individual
+baseline read status/error categories. Never print/store company amounts or
+raw exceptions in this public handoff. Preserve the original R17.7 bytes.
+Completed small reads do not replace the mandatory old/candidate parity check.
+Keep R17.6; no updater retry, TEST refresh or R17.7 installation claim until the
+diagnostic is reviewed. No production change or tenant/admin workaround.

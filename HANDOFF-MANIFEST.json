@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 57975,
-      "SHA256": "1443ccdb79ad2016900a49af9fda8538bb35a9c35db8ce4ba90e0152f2783a39"
+      "Bytes": 58827,
+      "SHA256": "2b97a88881c530f8e75060ce69e04aabaa2914bd155607dd6c434ca5d6924fd2"
     },
     "README.md": {
-      "Bytes": 5843,
-      "SHA256": "5df2ab81faf115bf9216ad662521234da2a8c79a469f36de1f0d69a75724977d"
+      "Bytes": 5844,
+      "SHA256": "baf725c8c6681803cefb6560a53636f1740145723cea437b0bf10e0f982e17f5"
     },
     "feedback/STATUS.md": {
-      "Bytes": 100373,
-      "SHA256": "dc922bcdd7da45107d69b5181f59c775e329b435a11b60bc3f1de1d2a26fda11"
+      "Bytes": 102521,
+      "SHA256": "64cc98d97286c792553f56e9e9f1f3ce16c8c52c2a4eeb9ca3b63c6b833fc52f"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 6120,
-      "SHA256": "85a049184dbc0c91e394a385ed7579279a2e2a4fde943d99fcd1b5582fc407ad"
+      "Bytes": 7488,
+      "SHA256": "1b5fa56ca114ad53d15998a443bbdfbb24740269bdd51f6ada1151ac75670025"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4272,6 +4272,30 @@
     "feedback/logs/2026-10-23-native-r176-feedback-and-timings.json": {
       "Bytes": 991,
       "SHA256": "bf477e5230e6c7a20929fa80ddccb928ef56eb8674e3635f9396c9ddd901d056"
+    },
+    "handoff/report-native-only-r17.7/preflight-check-r01/CHECK R17.7 PREFLIGHT.py": {
+      "Bytes": 11699,
+      "SHA256": "e87c9eda3269fcd1d11b35f5c6d3076848d5cd169163959b44f19a5c33ab1031"
+    },
+    "handoff/report-native-only-r17.7/preflight-check-r01/OPEN FIRST - PREFLIGHT CHECK.txt": {
+      "Bytes": 2369,
+      "SHA256": "5e1d3c4aa46181b54cb56c879f9ecb8a59b5bdb9a501f6bec4dcc658570f65bf"
+    },
+    "handoff/report-native-only-r17.7/preflight-check-r01/README.md": {
+      "Bytes": 3275,
+      "SHA256": "5ca8f23bc9f100aabb6b9a3ceecbe4b83ba03d167ac9e16ec11eb62e6a8c3674"
+    },
+    "handoff/report-native-only-r17.7/preflight-check-r01/VALIDATION.json": {
+      "Bytes": 1559,
+      "SHA256": "bd923de8b12d7c6aa51abfa203605cca6fe53ca3356999d1087e56c6e64c79ec"
+    },
+    "handoff/report-native-only-r17.7/preflight-check-r01/test_probe.py": {
+      "Bytes": 10763,
+      "SHA256": "42a2949cf3bef416e85eb87b18c57b76fb61f28ef49144812284df06651477db"
+    },
+    "feedback/logs/2026-10-23-native-r177-preflight-stop.json": {
+      "Bytes": 841,
+      "SHA256": "61bec6565bea22577c15a70c704061d1380f5ccd38586c0f0debf82a58ae2b35"
     }
   }
 }
