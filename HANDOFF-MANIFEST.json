@@ -4400,6 +4400,22 @@
     "handoff/report-native-only-r17.7/readback-check-r01/OPEN AFTER REVIEW.txt": {
       "Bytes": 3349,
       "SHA256": "958db3a178a94b0b6f01cd81a5f5633745910ec4d9c1dbed7b79fd0fdcdbdeef"
+    },
+    "feedback/logs/2026-10-23-native-r177-ui-rejected.json": {
+      "Bytes": 1080,
+      "SHA256": "b6bc3a3ecdf68d333965f7b1255aca3dc25c128968e9e4da1d0daa9cf0bca443"
+    },
+    "handoff/report-native-only-r17.8/read-only-check/CHECK BLANK VISUALS AND CUTOFFS.py": {
+      "Bytes": 7490,
+      "SHA256": "b224c1cd0d80ffc8d77b03e35575cbd5e7cc83a65fe6cf1925bcf70a8440c6be"
+    },
+    "handoff/report-native-only-r17.8/read-only-check/OPEN FIRST.txt": {
+      "Bytes": 1269,
+      "SHA256": "b6bae92e309890838b1fb41215f9bd0f04728537a98c842e323cb70467f2f445"
+    },
+    "handoff/report-native-only-r17.8/read-only-check/test_check.py": {
+      "Bytes": 2378,
+      "SHA256": "e992d9e861a7c20cb36702ad3c6605fa472e855540bb361ec9af5abc2fed9cbd"
     }
   }
 }

@@ -1,0 +1,23 @@
+R17.7 REFRESH COMPLETED, BUT VISUALS BLANK AND CUTOFFS SHOW DEC 1899
+
+No further model update or refresh is authorized by this diagnostic.
+The compact R17.8 native report is being prepared separately.
+
+On the COMPANY laptop in the Coordination VS Code terminal:
+
+git pull --ff-only
+Get-Content -LiteralPath '.\handoff\report-native-only-r17.8\read-only-check\CHECK BLANK VISUALS AND CUTOFFS.py' -Raw -Encoding UTF8 | Set-Clipboard
+
+In Fabric -> UK-ANI-Demand -> ForecastMaster_GM_Setup, add ONE NEW Python/PySpark
+cell, paste the whole CHECK file and run ONLY this new cell once. Never Run all.
+Send its final JSON. Do not rerun an updater or refresh TEST again.
+
+The two sequential read-only queries compare metadata cardinalities and date
+validity between the original fm_review_files and native calculated helper for
+the reported UK / 2026-10 scope, then check the Market/Units selection guards.
+No company amount, filename, revision ID or connection content is printed.
+No model, source, schedule, connection, production or publication change.
+
+Counts of blank/out-of-range date metadata are diagnostics. They are not
+replaced with guessed dates or inferred from filenames. If a query fails,
+only its exception family is output; send that JSON instead of retrying.

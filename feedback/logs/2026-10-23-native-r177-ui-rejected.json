@@ -1,0 +1,26 @@
+{
+  "Date": "2026-10-23",
+  "Stage": "R177_REFRESH_COMPLETED_REPORT_REJECTED",
+  "Evidence": "Operator reported TEST refresh Completed and supplied three screenshots; warnings status not separately stated",
+  "UserConfirmedStillBlankAfterApply": true,
+  "Observed": [
+    "Blank chart and summaries",
+    "Native saved-file cutoff labels include Dec 1899",
+    "Source caption includes Dec 99",
+    "Saved-file chooser leaks full revision hashes and duplicates audit table",
+    "Extra source mode and Apply controls rejected",
+    "Restored trend headers and chart title consume space"
+  ],
+  "Required": [
+    "One clean selectable files list following Affiliate/cycle",
+    "No Apply filters",
+    "No Source selection slicer",
+    "Compact right-aligned trend selectors",
+    "Dynamic title above plot; no in-plot title",
+    "No overlaps",
+    "Built-in native visuals only"
+  ],
+  "CompanyAmountValuesCopied": false,
+  "ModelWriteOrRefreshRequested": false,
+  "NextStep": "Run R17.8 read-only metadata/count diagnostic once; compact report repair proceeds independently."
+}
