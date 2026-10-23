@@ -1,0 +1,79 @@
+{
+  "Evidence": "Three operator screenshots, reviewed across horizontally scrolled error panel; no live company call",
+  "ReviewDateUK": "2026-10-24",
+  "Attachments": [
+    {
+      "Name": "Screenshot 2026-10-24 000050.png",
+      "Bytes": 224865,
+      "SHA256": "f3046fc77d8bac3144f58cb80ddc3293ee30313453640ecbd071aa58dde684e9"
+    },
+    {
+      "Name": "Screenshot 2026-10-24 000058.png",
+      "Bytes": 235162,
+      "SHA256": "1b2a881352cc1c2aa687ac2fb8b8b4d59662e670d3a278140b4c8b959530f495"
+    },
+    {
+      "Name": "Screenshot 2026-10-24 000101.png",
+      "Bytes": 223446,
+      "SHA256": "a0bf97613b06e5d4698874026b45ad7cda7cbad237710611f72ecb9381d49178"
+    }
+  ],
+  "RawScreenshotsCopiedToPublicRepository": false,
+  "Observed": {
+    "ExactTESTModelIDVisibleInURL": true,
+    "SelectedTab": "Direct Lake",
+    "FailedOperation": {
+      "Type": "Direct Lake",
+      "StartUK": "2026-10-23T23:27:57+01:00",
+      "EndUK": "2026-10-23T23:27:59+01:00",
+      "ErrorTimeUTC": "2026-10-23T22:27:59Z",
+      "Status": "Failed",
+      "RequestID": "7f24629a-4764-4dee-a712-a17854512b2e",
+      "ActivityIDMatchesRequestID": true,
+      "ErrorEnvelope": "Power BI Premium Backend Error",
+      "VisibleMessage": "An error has occurred while checking the latest version of the direct lake table 'forecast_v18_calendar', error: An error occurred while sending the request.",
+      "NumericOrSymbolicErrorCodeVisible": false
+    },
+    "LaterOperation": {
+      "Type": "Direct Lake",
+      "StartUK": "2026-10-23T23:57:24+01:00",
+      "EndUK": "2026-10-23T23:57:26+01:00",
+      "StartUTC": "2026-10-23T22:57:24+00:00",
+      "EndUTC": "2026-10-23T22:57:26+00:00",
+      "Status": "Completed",
+      "RequestID": "NOT VISIBLE"
+    },
+    "LastRefreshSucceededBannerUK": "2026-10-23T23:57:26+01:00"
+  },
+  "Interpretation": {
+    "CategoryResolved": "Direct Lake table-version check/framing operation, not Scheduled tab entry",
+    "FailureDescription": "Backend request failed while checking forecast_v18_calendar version",
+    "UnderlyingTransportOrServiceRootCause": "UNKNOWN; not enough evidence to attribute to an outage, permissions, source corruption, code defect or another condition",
+    "RecoveryEvidence": "A later Direct Lake operation Completed after the failure; this is changed external state supporting one read-only verifier retry",
+    "RecoveryInitiator": "UNKNOWN; do not assume an automatic retry or an operator action",
+    "CurrentAPIStatusOrModelValidity": "NOT RECHECKED by screenshots; verifier must confirm fresh state and its other gates",
+    "EarlierDateAndNumericalChecks": "Historical scoped passes retained, not newly executed",
+    "OverallVerification": "INCOMPLETE; no UI/business/performance/production acceptance promotion"
+  },
+  "AuthorizedNextBoundedAction": {
+    "File": "handoff/report-native-only-r17.8/test-release-r01/VERIFY INSTALLED TEST R01.py",
+    "SHA256": "a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635",
+    "Bytes": 235093,
+    "ExpectedVerifierRevision": "R02",
+    "Where": "ONE NEW Python cell in ForecastMaster_GM_Setup on the company laptop; run only that cell ONCE",
+    "WhyRetryIsJustified": "Later 23:57:26 Completed operation, not selection of the older pre-failure success; unchanged gate re-reads current history",
+    "Scope": "Read-only validation; no update/refresh/publication; transient private comparisons, values not printed or persisted",
+    "SuccessStage": "TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED",
+    "StopCondition": "Return full final JSON for success or STOPPED; no further retry without review"
+  },
+  "StillForbidden": [
+    "installer rerun",
+    "new manual refresh",
+    "reset or clear",
+    "attempt-marker deletion",
+    "source/connection changes",
+    "publication or production replacement"
+  ],
+  "LocalReview": "Exact unchanged R02 receiving artifact/source-flow and prior qualification hashes checked; no code or test change, new engine run or company operation from this host",
+  "PrimaryDocumentation": "https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-how-it-works"
+}

@@ -23,29 +23,26 @@ and TEST 39/333/98/12. Both attachments and complete hashes/byte length agree.
 See the [verified inventory](handoff/report-native-only-r17.8/UNDERSTANDING.md#company-inventory-r01)
 and [safe reviewed receipt](feedback/logs/2026-10-23-uk-ani-inventory-r01-reviewed.json).
 
-**Immediate step from the latest screenshot:** the correct history dialog is
-open with Scheduled selected. Click **Direct Lake**, the third tab beside
-OneDrive, and send that tab's screenshot. If Failed at 23:27 is visible, open
-its Show/error details. Its category is still unknown; no refresh is requested.
+**Current receiving action: run the unchanged R02 read-only verifier ONCE.**
+The Direct Lake screenshots now identify the 23:27 UK backend request failure
+on forecast_v18_calendar AND a later Completed operation at 23:57:26 UK on
+23 October. That later success is changed external state supporting one read-only
+retry, not a reason to submit another refresh.
+[Reviewed evidence](feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json).
 
-**Current diagnostic target: read the failed TEST refresh error details.**
-The refresh-state R01 result confirms a post-install Completed refresh ending
-22:24:33 UTC on 23 October, followed by a newer Failed refresh starting
-22:27:57 UTC / 23:27:57 UK. The verifier correctly stops on the newer failure.
-The cause is still unknown because the raw error was withheld.
-[Reviewed result](feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json).
+1. On the company laptop close Refresh history and open ForecastMaster_GM_Setup.
+2. Open [VERIFY INSTALLED TEST R01.py](handoff/report-native-only-r17.8/test-release-r01/VERIFY%20INSTALLED%20TEST%20R01.py),
+   select Raw and copy the whole file into ONE NEW Python cell.
+3. Run ONLY that cell ONCE. Never Run all. Filename stays R01; final output
+   must identify VerifierRevision R02. This is the same qualified verifier,
+   with no metadata write, refresh or publication.
+4. Send the complete final JSON. Expected success is
+   TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED. Any STOPPED: send it and
+   stop; do not repeat anything automatically.
 
-On the company laptop, open [the exact failed refresh](https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e).
-Expand error details and return its exact code/message, plus Data or Query Cache
-phase if shown. If the link is unavailable: UK-ANI-Demand → ForecastMaster Native
-OneLake R17.1 - TEST → Refresh → Refresh history → the Failed row at 23:27:57 UK
-on 23 October → Show/error details.
-[Microsoft instructions](https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data#semantic-model-refresh-history).
-
-**No new notebook cell, installer/verifier/probe retry, refresh/reset, marker
-deletion or publication.** Keep backups and completed recovery work unchanged.
-Do not skip the newer failure by choosing an older Completed row. Earlier nine
-date groups and 12 comparisons remain recorded, not rerun by this history probe.
+No installer rerun, manual refresh, reset/clear, marker deletion, source/connection
+change or publication. Keep backups. Screenshot recovery is not yet a final
+model/numerical/UI/performance pass. No new diagnostic script is needed.
 
 Built-in visuals only; production R16.6 and older packages remain unchanged.
 Local native runtime/context/oracle, schema and receiving safety tests pass.

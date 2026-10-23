@@ -6,7 +6,7 @@ stays stable despite the R17.8 folder name. It covers the whole known workflow,
 not only the date repair. Detailed public schema/DAX/visual catalogs are below;
 read the resume section first and load only the relevant catalog sections.
 
-Last reviewed: **23 October 2026**, including the retained chat from 20 October,
+Last reviewed: **24 October 2026**, including the retained chat from 20 October,
 its 205 user messages, current code/receipts, the returned `test01.txt` R02
 result, and the matching `test02.txt` / downloaded inventory R01 JSON. Textual history was reviewed; this is not a claim that every old image,
 attachment, prior chat or live workspace item was re-inspected. Raw chat and
@@ -18,17 +18,29 @@ company observations are not copied here. New results update this reference;
 **Current release — compact R17.8 TEST R01:** user authorized this report and
 matching adapter after inventory review. [Receiving instructions](test-release-r01/OPEN%20FIRST.txt),
 [release notes](test-release-r01/README.md), [qualification](test-release-r01/VALIDATION.json).
-**Latest company return:** refresh-state R01 completed, exact TEST confirmed,
-HTTP 200, 11 history rows (9 Completed / 2 Failed), valid UTC timestamps in
-newest-first order. Install success is timestamped **22:22:35.947732 UTC** on
-23 October. Its on-demand refresh completed **22:24:13.803–22:24:33.743 UTC**.
-A later, newest refresh **failed 22:27:57.310–22:27:59.420 UTC** (23:27 UK).
-This explains the corrected verifier's TEST_REFRESH_NOT_COMPLETED stop: its
-first history row is Failed. The error exists but raw text was withheld; cause
-and initiator remain UNKNOWN. UNRECOGNIZED refresh type is the probe's allowlist
-placeholder, not a cause. All returned statuses are terminal in that snapshot;
-no current live-state or post-failure model-content guarantee follows.
-[Reviewed refresh-state receipt](../../feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json).
+**Latest company return (24 October screenshot review):** the Direct Lake tab
+identifies the 23 October **23:27:57–23:27:59 UK** failure as a Power BI Premium
+backend request error while checking the latest version of
+`forecast_v18_calendar`. Request/activity ID matches the earlier API failure.
+The combined horizontally scrolled message says a request failed; no separate
+numeric/symbolic error code is visible. The underlying transport/service cause
+and operation initiator remain UNKNOWN; do not infer corruption, an outage or
+a formula defect.
+
+The same tab now shows a **later Direct Lake Completed operation at
+23:57:24–23:57:26 UK (22:57:24–22:57:26 UTC), 23 October**, and Last refresh
+succeeded 23:57:26. This is new recovery evidence, not bypassing the failure
+using the older success. It supports one unchanged read-only verifier R02 retry;
+the verifier must re-read fresh API state and all other guards. A screenshot
+alone is not metadata/date/numerical/final or performance acceptance.
+[Reviewed failure/recovery evidence](../../feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json).
+
+**Earlier API snapshot:** install success 22:22:35.947732 UTC; OnDemand refresh
+completed 22:24:13.803–22:24:33.743 UTC, then the newer Direct Lake failure at
+22:27:57.310–22:27:59.420 UTC. That older snapshot explains R02's prior stop.
+Its 11 rows/9 Completed/2 Failed are historical, superseded by the newer UI
+success; current API rowset is not yet returned.
+[Prior history receipt](../../feedback/logs/2026-10-23-r178-refresh-state-r01-reviewed.json).
 
 **Earlier company evidence:** the operator completed installation and its one TEST
 refresh. The original verifier returned all nine exact physical/semantic date
@@ -38,33 +50,22 @@ identity, completed-refresh, whole candidate and cloud-mapping guards had passed
 inferred from the retained R01 execution order. This is **partial verification**,
 not full acceptance. [Reviewed counts-only return](../../feedback/logs/2026-10-23-r178-verifier-r01-partial.json).
 
-**Latest UI evidence:** the 23:57 screenshot shows exact TEST in the Refresh
-history dialog with **Scheduled** selected. Top entry is the known 23:24:13–33
-On demand / Completed; the API's newer 23:27 Failed entry is not visible there.
-Other visible tabs are OneDrive, Direct Lake and OneLake Integration. The
-Scheduled view alone does not disprove the API failure or identify its category.
-My previous generic UI steps omitted tab selection. No current data-validity
-or failed-operation category is established by this screenshot.
-[Reviewed screenshot receipt](../../feedback/logs/2026-10-23-r178-refresh-history-scheduled-ui-reviewed.json).
-
-**Immediate UI step:** in that same dialog click **Direct Lake**, the third tab
-beside OneDrive, and return its screenshot. If the matching 23:27 Failed entry
-is visible, open its Show/error details. Do not promise that it is on this tab;
-OneLake Integration is another visible category if further inspection is needed.
-No new notebook cell, refresh or verifier is requested.
-
-**Error-details target:** on the company laptop, open the [failed TEST refresh details](https://app.powerbi.com/groups/f5cb5742-9a7c-4337-a4c0-952706dddf0b/datasets/31d00232-ac03-48fe-af39-f2e4bae82443/refreshdetails/7f24629a-4764-4dee-a712-a17854512b2e)
-and return its exact error code/message, plus Data versus Query Cache phase if
-shown. Fallback: UK-ANI-Demand → ForecastMaster Native OneLake R17.1 - TEST →
-Refresh → Refresh history → Failed at **23:27:57 UK / 22:27:57 UTC, 23 October** →
-Show/error details. [Microsoft UI/link contract](https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data#semantic-model-refresh-history).
-No new cell or additional probe is requested. The history question is answered;
-understand the failed job before any supported correction or retry. Keep the
-verifier gate intact; do not merely pick the older Completed row.
-**No installer/verifier/probe retry, new refresh, reset, marker deletion or publication.**
-Keep backups, the installed native candidate and production R16.6 unchanged.
-The old date recovery stays closed. Fresh date/numerical/final/UI/speed acceptance
-remains pending; history alone does not establish current model contents.
+**Current action:** on the company laptop close Refresh history, open
+ForecastMaster_GM_Setup, and copy the entire current
+[VERIFY INSTALLED TEST R01.py](test-release-r01/VERIFY%20INSTALLED%20TEST%20R01.py)
+into ONE NEW Python cell. Its unchanged filename is R01; final JSON must identify
+**VerifierRevision R02**. Run only that cell **ONCE**, not Run all, and return the
+complete final JSON. Exact cell SHA256:
+`a9384ff27e8ac6d7f3efb11f126be435218696b1e956418eea0547932019d635` (235093 bytes).
+It requests no write, refresh or publication; numerical comparisons remain
+transient/private. Success stage is TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED.
+Any STOPPED output: return it without further retry. The supported change since
+the stopped attempt is the later Completed operation; all verifier admission,
+whole-definition/cloud/date/numerical/label/concurrency gates remain unchanged.
+**No installer rerun, manual refresh, reset/clear, marker deletion or publication.**
+Keep backups, the native candidate and production R16.6 unchanged. No extra
+refresh-state probe, further error screenshot or configuration change is needed
+before this one check. The old date recovery stays closed.
 
 **Verifier correction R02:** the existing `VERIFY INSTALLED TEST R01.py` now
 reports `VerifierRevision: R02`. Empty MissingImportedAt/HashSuffixes metadata
@@ -73,8 +74,8 @@ new native synthetic queries reproduce the old BLANK failure and verify zero
 counts and retained positive errors; all 14 release tests pass. Business-amount
 blank semantics, the installer and both PBIP ZIPs are unchanged. Already completed
 installation/processing must not be repeated for a checker correction. Current
-refresh-state gate is explained by the newer failure; obtain its error details
-before any verifier retry. [Evidence](test-release-r01/VALIDATION-VERIFIER-R02.json).
+processing condition has since changed: the later Direct Lake Completed entry
+justifies the single read-only verifier retry above. [Evidence](test-release-r01/VALIDATION-VERIFIER-R02.json).
 
 Local qualification: task-owned loopback Tabular engine, **207 queries / 1,868
 assertions**, independent fabricated numerical oracle and actual source/visual
@@ -112,8 +113,8 @@ Direct preservation/source/context/runtime checks are recorded instead.
 - Production **R16.6 / ForecastMaster Review** stays unchanged. New Power BI
   work uses **built-in visuals only**, on the other/company laptop.
 
-- **Current next action:** inspect the Direct Lake history tab as above; failed
-  request error details remain the target.
+- **Current next action:** run the unchanged read-only verifier R02 once as
+  above and return its full final JSON.
   Installation/one refresh are complete; do not repeat either or the recovery.
   Desktop/business/export/performance checks remain separate.
   The published ForecastMaster Review remains bound to the original model.
@@ -501,8 +502,8 @@ Power BI; fixed compact height plus drill/scroll/Focus is the current approach.
 
 These checks consolidate the user's recorded feedback; they do not request a
 new design approval or authorize another installation/refresh. The design and
-business sections own the detailed meaning. The current company step is to return the newest failed refresh error details
-in the resume section; its Failed status explains the verifier guard. Built, locally
+business sections own the detailed meaning. The current company step is one read-only verifier R02 retry as described in
+the resume section, justified by the later Direct Lake Completed operation. Built, locally
 tested, installed and accepted are separate states.
 
 | Requirement | Evidence needed for acceptance | Current limit |
@@ -1463,8 +1464,8 @@ partition/role/connection metadata remain outside this inventory.
 **No new inventory cell, updater, reset or extra refresh is needed from the
 operator for this result.** Preserve backups and use the verified dictionary
 as the model boundary. The compact R17.8 release has since been built, installed
-and refreshed; SAMPLE remains fabricated. Current action is to obtain the failed refresh error details above, then resolve
-that failed operation and the blocked verifier, followed only after full verification by the existing native
+and refreshed; SAMPLE remains fabricated. Current action is the single read-only verifier retry above after reported
+Direct Lake recovery, followed only after full verification by the existing native
 UI/export/business/performance acceptance. Keep production R16.6 unchanged.
 The inventory itself does not prove that the rejected layout or speed is fixed.
 
@@ -1490,8 +1491,8 @@ immutable receipt supersede the earlier "inventory pending" notes.
 **No additional inventory/recovery diagnostic is requested for these gaps.**
 Preserve the exact R01 inventory cell/package and older recovery evidence. Do
 not rerun an updater, reset or extra refresh. The release is now installed and
-processed once; the latest processing guard is unresolved. The current bounded
-action is only to read the failed refresh error details in the resume section. Native UI/business/export/speed remain separate. The
+processed once, with a later Direct Lake recovery now shown in the UI. The
+current bounded action is one unchanged read-only verifier R02 retry in the resume section. Native UI/business/export/speed remain separate. The
 rejected R17.7 layout and fabricated SAMPLE are not receiving acceptance.
 
 Keep the raw company JSON and copied output private. The reviewed receipt

@@ -19,26 +19,25 @@ and diagnostics" admission checks: exact artifact, actionable safe errors,
 checker regression coverage and evidence-backed retries. Do not treat a written
 lesson as an implemented test or a local pass as receiving acceptance.
 
-Latest company return: refresh-state R01 completed, exact TEST confirmed and
-11 terminal history entries returned. Post-install OnDemand refresh completed
-at 22:24:33.743 UTC on 23 October; a newer run failed at 22:27:57–22:27:59 UTC
-(23:27 UK). Newest Failed explains verifier R02's processing guard. Raw error
-and initiator are UNKNOWN; the allowlisted UNRECOGNIZED refresh type is not a
-root cause. Current UI evidence: correct history dialog, Scheduled selected, top entry
-23:24 Completed; no 23:27 failure visible in that category. Immediate action:
-click Direct Lake (third tab beside OneDrive), return screenshot; obtain exact
-failed-run code/message if visible. Category/cause remain UNKNOWN. Prior generic
-UI steps missed tabs; do not assert that the failed run must appear in Direct Lake. See UNDERSTANDING
-resume and STATUS. No new notebook cell, installer/verifier/probe/refresh retry,
-reset, marker deletion or publication. Keep report/adapter/R16.6/backups unchanged.
-Earlier nine date groups/12 comparisons remain historical scoped evidence.
+Latest company return: 24 October screenshots identify the 23 October 23:27 UK
+Direct Lake failure: backend request failed while checking forecast_v18_calendar
+version. Request ID matches the earlier API row. Underlying cause/initiator are
+UNKNOWN. A LATER Direct Lake operation is Completed at 23:57:24–23:57:26 UK;
+this changed external condition justifies ONE read-only verifier R02 retry.
+Current action: current VERIFY INSTALLED TEST R01.py (output VerifierRevision R02)
+in ONE NEW ForecastMaster_GM_Setup Python cell, run only it ONCE, return all JSON.
+Expected success TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED; STOPPED means
+return it without another retry. No guard/code change or extra probe. No installer,
+manual refresh/reset, marker deletion, connection/source change or publication.
+Keep report/adapter/R16.6/backups unchanged. Earlier date/numerical passes remain
+historical; UI recovery is not final acceptance. See UNDERSTANDING and STATUS.
 
 Earlier company return: R17.8 install and one TEST refresh completed. The old
 verifier passed nine exact date groups and all 12 paired scalar comparisons,
 then stopped with TypeError before metadata label counts/final gates. Overall
 verification remains incomplete. Full candidate/cloud/Completed checks passed
-before those results by retained source flow. That earlier corrected-verifier action is now superseded by the failed-refresh
-error-details action above. The verifier R02 bytes remain preserved. No installer, refresh/reset, marker deletion
+before those results by retained source flow. That earlier corrected-verifier action is now superseded by the justified one-time
+read-only verification action above. The verifier R02 bytes remain preserved. No installer, refresh/reset, marker deletion
 or publication. R02 fixes empty metadata COUNTROWS via COALESCE, without changing
 business-amount blanks. See UNDERSTANDING resume and latest STATUS receipt.
 
@@ -58,8 +57,8 @@ The user now authorizes the compact R17.8 TEST report plus matching adapter.
 Current release: handoff/report-native-only-r17.8/test-release-r01/OPEN FIRST.txt.
 Local qualification: 207 native synthetic queries / 1,868 assertions, 14 unit
 checks and 67 Microsoft schema documents. Company installation/one refresh
-are now confirmed; the corrected verifier is blocked at the refresh-history
-guard. Obtain the failed run error details above before a supported correction/retry.
+are now confirmed. The prior refresh guard stop is followed by a newer UI
+Completed operation; perform only the one read-only retry above.
 The original install-once/refresh-once instructions remain historical. This does not
 reopen the closed date recovery. No reset/clear/recovery rerun. STOPPED or unknown
 write outcomes require receipt review, never blind retry or marker deletion.

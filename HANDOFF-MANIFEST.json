@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 80216,
-      "SHA256": "ec725b1249dac630fb02c86c0ab48b6c2418fc76371d0788932f0075b6a3e815"
+      "Bytes": 80113,
+      "SHA256": "1242b211cc25f9398a7f2f2cddffbc214793c944087a09cddbf950242bf5d9d6"
     },
     "README.md": {
-      "Bytes": 8386,
-      "SHA256": "5c00371683d4db2eba5e1752ebd2096d6f98f8b36886bcbce9294652ee8d9d7c"
+      "Bytes": 8375,
+      "SHA256": "5f7463edfe826d8f2da7431eb4a599c41e600de057df39a3977388f82f42d563"
     },
     "feedback/STATUS.md": {
-      "Bytes": 151499,
-      "SHA256": "d71f4b29c20d77bb1f721586833d70200d08cb967e3f0b3f6d01e4d958210aad"
+      "Bytes": 154065,
+      "SHA256": "79889b0d980a8a8ee5da4d7baf673c58f5946ac9c986fa52ef83ebd628bf4419"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 8456,
-      "SHA256": "5a3ad00c6fd274bbf9db21fb716f713bd63d04736503d85e5c3a7f9608483e35"
+      "Bytes": 8087,
+      "SHA256": "7a62c8bbb5d2a0edb15cd12906025c50251d664798bfe3db46091b1145b4e319"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 197102,
-      "SHA256": "14e33b84a4aa8f5d289793981ae07eba959fecb4e642decd3b68eee0642b07b9"
+      "Bytes": 196781,
+      "SHA256": "db148ca9b98690631b050563b44e13cecf76c8efced79bd0874e1bf378829746"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -4688,6 +4688,10 @@
     "feedback/logs/2026-10-23-r178-refresh-history-scheduled-ui-reviewed.json": {
       "Bytes": 1868,
       "SHA256": "57ed0f42105eafaca802281c82e1065b42a50cf46d60248cd675d8b5de5d5c93"
+    },
+    "feedback/logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json": {
+      "Bytes": 4122,
+      "SHA256": "ae5ecb15ef906af7b76ff42bcde50c373e614519dbba833b6dc8f86ce727fd8c"
     }
   }
 }

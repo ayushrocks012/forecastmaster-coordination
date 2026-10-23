@@ -1,5 +1,42 @@
 # Company setup status
 
+## 24 October 2026 — Direct Lake error identified; later success supports one read-only retry
+
+Three screenshots show exact TEST, Direct Lake selected. The matching request
+7f24629a-4764-4dee-a712-a17854512b2e failed at 23 October 23:27:57–23:27:59 UK
+(22:27 UTC). The horizontally scrolled panel identifies a Power BI Premium
+Backend Error while checking the latest version of forecast_v18_calendar:
+"An error occurred while sending the request." No separate error code is visible.
+This resolves category and failure description; the underlying transport/service
+cause and initiator remain UNKNOWN. Do not infer a formula defect, source
+corruption, permission change or service outage from this message.
+[Reviewed safe screenshot receipt](logs/2026-10-24-r178-direct-lake-failure-and-later-success-reviewed.json).
+
+Crucially the same UI shows a NEWER Direct Lake operation Completed at
+23:57:24–23:57:26 UK (22:57:24–22:57:26 UTC), with Last refresh succeeded
+23:57:26. This is changed external state after the failed operation. It supports
+one retry of the unchanged R02 read-only verifier; no older success is selected
+to hide the failure. Current API status/model/date/numerical validity still
+requires that verifier's existing checks. The success initiator is not known.
+[Direct Lake framing reference](https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-how-it-works).
+
+Current bounded action: current VERIFY INSTALLED TEST R01.py, output
+VerifierRevision R02, whole file in ONE NEW ForecastMaster_GM_Setup Python cell,
+run ONLY that cell ONCE, return complete final JSON. Expected success is
+TEST_R178_INSTALLED_AND_BOUNDED_CHECKS_VERIFIED; any STOPPED is returned without
+further retry. No manual refresh, installer rerun, reset/clear, marker deletion,
+source/connection change or publication. No new probe or further screenshot is
+needed before this read-only check. Keep private backups and R16.6 unchanged.
+
+Exact receiving verifier (235093 bytes) still matches its qualified R02 SHA256
+and manifest. No code, guard, installer, adapter or report artifact changed here.
+Prior local runtime/regression evidence remains applicable and was not rerun;
+this update checks source-flow, artifact hashes, screenshot timestamps, reference
+links/catalog and whole frozen-file preservation. No company API/amount query,
+processing or new acceptance pass ran on this host. Earlier nine date groups/12
+comparisons remain historical. Final verification/UI/export/business parity and
+company performance gates stay open until separately evidenced.
+
 ## 23 October 2026 — UI screenshot shows Scheduled history; category still unknown
 
 The operator's 23:57 screenshot is the correct TEST model/history dialog, with
