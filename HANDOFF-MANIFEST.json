@@ -1042,8 +1042,8 @@
       "SHA256": "80fa5e88b42fd40274a1cc0c8ed7b530e82351ccb11ee09cd455d0f1aed13c48"
     },
     "feedback/STATUS.md": {
-      "Bytes": 179033,
-      "SHA256": "b7a15ec431ca16a3b3222052268d101299c6aba8fc4f716fc23a272a040d5c0d"
+      "Bytes": 180132,
+      "SHA256": "9ff68dae7746c35adfed6a27faa58f0f5ecad8345fb4546f148c6469586b469e"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 226894,
-      "SHA256": "e7d2f1683964a126b823b20b8ddf4ea9b344246794ac8de3bffd0ba183db15dd"
+      "Bytes": 232634,
+      "SHA256": "66dbd79f3ed381f9f7a6f876a31b96af0a84af8274e07b8fc12e8fc0d93172a0"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,

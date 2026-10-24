@@ -1,5 +1,22 @@
 # Company setup status
 
+## 24 October 2026 — senior-management latency objective reviewed; architecture proposal only
+
+The user wants near-immediate responses after filter changes. Source tracing
+and existing local receipts identify repeated source/month/trend/cell work as
+an optimization candidate; slow full matrices also occur without Fabric.
+Recommended separate prototype: profile exact queries, simplify filter/model
+work, prepare reusable components/trend metadata, then A/B a small Import
+serving model against Direct Lake on OneLake. Import alone is not a cure.
+Weighted Share, arbitrary sector subsets, missing history, version/FX/cutoff
+semantics must remain exact. Preparation adds refresh/freshness obligations.
+Targets are proposed, not agreed or measured. Capacity and Delta maintenance
+remain evidence-driven options; no new company probe, purchase, update or refresh
+was requested. The maintained understanding's performance section records the
+specific proposal, current unknowns and official sources. Released R02 bytes
+and production R16.6 remain unchanged; company R02/UI/speed gates remain open.
+
+
 ## 24 October 2026 — R17.8 R02 receiving handoff locally qualified; company run pending
 
 The guarded cell and private-default report template are now selected in the

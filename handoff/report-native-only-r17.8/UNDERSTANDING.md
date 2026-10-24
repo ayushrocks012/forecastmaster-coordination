@@ -86,6 +86,13 @@ specific Share queries, but are not comparable company speed acceptance.
 `VALIDATION-INTEGRATED-EXPORT.json` binds actual export/timing/reopen observations;
 `VALIDATION-MIXED-MATRICES-OPTIMIZED.json` binds the closed mixed population.
 
+**Latest speed steering:** user wants near-immediate management filter changes.
+The optimization recommendation below is a proposal, not an implemented or
+company-qualified architecture. Keep the released R02 cell/report bytes frozen;
+any further performance prototype must be separate and preserve the same values,
+blank/file/Share/FX/cutoff semantics. No new company cell or capacity purchase is
+requested by this assessment.
+
 **Remaining gates:** company adapter execution/readback, custom-visual tenant
 admission, representative company UI/export/selection workflow, comparable
 performance and independent business parity. Full R16.6/S&OP/FX feature parity
@@ -1088,6 +1095,77 @@ medians were Plan 1,064.5ms, Benchmark 2,215ms, Variance 2,736.5ms, % 2,847ms,
 future trend 1,939ms. Different queries/cache order/population prevent a valid
 before/after report-speed claim. Full visual-query timings and capacity/storage
 profiling remain needed before another physical/database optimization.
+
+### 24 October — recommendation for near-immediate management interactions
+
+Status: source/receipt review and official-documentation assessment only. No
+company call, model/source change, refresh, capacity resize or Desktop launch.
+The R02 receiving handoff remains byte-identical. User has expressed a speed
+objective; the following numeric targets and design are proposed, not agreed
+or achieved. Aim to test common repeated filter interactions below one second,
+and expanded-summary interactions below two seconds at the 95th percentile;
+first-observed load and representative concurrent usage need separate bounds.
+
+Current evidence supports a substantial calculation cost even without Fabric:
+SAMPLE05's fully expanded 150-sector matrix took 12.2–16.3 seconds of DAX time
+in local calculated/Import fixtures. This does not quantify company Formula vs
+Storage Engine shares, capacity pressure, disk loading or network latency.
+Source tracing confirms N Summary Cell -> N Plan/N Benchmark/variance ->
+N Monthly Numerator/Denominator and fit mean/slope. These repeat file/cohort
+admission, table construction and per-month aggregation through GENERATE,
+GROUPBY, TREATAS and iterators. The existing reporting fact is ALREADY monthly
+component-grained; do not claim it queries raw workbook/product data per click.
+
+Recommended sequence for a separate prototype:
+
+1. Profile the exact same Executive DAX query with server timings/query-plan
+   evidence. Separate calculation, storage requests/loading, rendering and any
+   service queue delay. Use the already-bound 20-file/two-cycle/five-driver/
+   30-sector fixture, full 150-sector expansion and native matrix exports.
+2. Simplify the serving model's relationships/filter propagation; resolve stable
+   source membership/metric component metadata and reusable monthly work during
+   preparation where possible. Keep interactive scope/blank/version guards.
+   Compare the simpler base aggregation with Plan-only, added trend/variance,
+   colours and dynamic formats to isolate remaining costs. Removing features
+   or reducing the sector population is not a valid performance pass.
+3. Materialize reusable source-revision/sector/month/component/Units-Value data,
+   validity metadata and eligible trend statistics at the required selection
+   grain. Calculate cheap period sums and variance at interaction time. Retain
+   numerator/denominator components and recompute Share after aggregation; do
+   not average sector percentages, sum sector Share slopes, use precomputed
+   driver totals for arbitrary sector subsets, or cache every subset. Fit-cutoff
+   agreement, missing history, source versions and interactive FX remain exact.
+4. A/B the small prepared serving model in Import versus the existing Direct
+   Lake on OneLake route, using identical formulas/data/queries. Both use
+   VertiPaq; Import alone does not cure expensive DAX. Account for Import refresh
+   duration, memory, security/access parity and freshness: after successful
+   ingestion, publish one coherent serving snapshot and expose its as-of time.
+   The existing hourly/ad-hoc path must not mark completion before the chosen
+   serving refresh/readiness has succeeded. Do not replace production to test it.
+5. Tune Delta file layout/V-Order only against observed storage/transcoding
+   cost; preserve retained revisions and do not run history-deleting vacuum.
+   Check available company capacity/queue/throttling evidence before proposing
+   extra capacity. No IT/admin dependency is an implicit prerequisite, and no
+   current SKU, concurrency population or capacity telemetry is known here.
+
+Direct Lake on OneLake does not use SQL-endpoint DirectQuery fallback; advice
+for Direct Lake on SQL is not evidence about this model. A Warehouse migration,
+SQL index or larger SKU is not automatically the relevant fix. Direct Lake
+memory loading and Delta layout still matter and need separate measurements.
+
+Acceptance of a prototype needs exact value/blank/weighted-Share/FX/version/
+cutoff parity, full row/column population, native export/reopen, fixed-input
+repeated first-observed and repeated-selection timings, and company multi-user
+checks. Record p50/p95 plus DAX/total and failures; do not infer residency from
+run order. The current ordered local 32s->13s colour experiment is supportive
+bounded evidence, not a controlled company improvement claim.
+
+Official Microsoft sources checked 24 October:
+- [Direct Lake overview](https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-overview): both Import/Direct Lake use VertiPaq; refresh/freshness tradeoff and OneLake route distinction.
+- [Star schema](https://learn.microsoft.com/en-us/power-bi/guidance/star-schema): filtering/grouping dimensions and consistent fact grain.
+- [Import reduction](https://learn.microsoft.com/en-us/power-bi/guidance/import-modeling-data-reduction): prepared summaries and explicit loss-of-detail tradeoffs.
+- [Direct Lake query performance](https://learn.microsoft.com/en-us/fabric/fundamentals/direct-lake-understand-storage): storage layout/loading versus Formula Engine work.
+- [Capacity throttling diagnosis](https://learn.microsoft.com/en-us/fabric/enterprise/capacity-planning-troubleshoot-throttling): correlate actual delays with capacity evidence before assigning cause.
 
 ## Decisions and delivery history
 
