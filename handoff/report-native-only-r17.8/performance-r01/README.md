@@ -1,5 +1,11 @@
 # R17.8 performance work and qualified R03 TEST handoff
 
+**Current HOLD, 24 October:** do not run R03 on the company laptop yet. The user
+requires further local improvement beyond the 9.7s expanded Share measurement.
+Read UNDERSTANDING.md's current resume. The R03 qualification and receiving
+instructions below are historical and currently disabled in the manifest.
+New experimental source/receipts do not constitute a receiving release.
+
 Local fabricated work only. Released R02 report/cell, company TEST and production
 R16.6 remain unchanged. The user authorized this prototype after reviewing the
 local 12–16 second expanded Executive Summary timings.

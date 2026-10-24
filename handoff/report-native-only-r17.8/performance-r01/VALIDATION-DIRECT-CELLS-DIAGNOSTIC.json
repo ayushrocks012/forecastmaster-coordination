@@ -1,0 +1,28 @@
+{
+  "Stage": "LOCAL_DIRECT_PREPARED_CELL_DIAGNOSTIC",
+  "Pairs": [
+    {
+      "Metric": "market",
+      "NormalMs": 8887,
+      "DirectMs": 232
+    },
+    {
+      "Metric": "share",
+      "NormalMs": 9246,
+      "DirectMs": 163
+    }
+  ],
+  "KnownLeafMismatches": 0,
+  "Files": {
+    "baseline.json": "4876c23405eff82e0c90d257564e424604133eaa5bee86595bf9744b7eecefea",
+    "candidate.json": "bca95d944cb2965597da4d6b07267a920e4bc8935015da453e91429c39f5f45a",
+    "cell_diagnostic.py": "34a0d2d4ece34a6999ec963bdbc606a693cbdb446037723210b6bb3d7c0014a1",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "78cc69e0e6c2480b86f7d43395323bdc45142d2b440f3757e41d8d8744525343",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "66cf0894bd31e4ca5086fd696ab3b056ffab64987d02d4bb6b47296013a0f288",
+  "Deployable": false,
+  "TaskOwnedEngineClosed": true,
+  "CompanyOrDesktopAcceptance": false
+}

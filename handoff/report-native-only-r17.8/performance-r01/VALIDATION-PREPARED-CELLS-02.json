@@ -1,0 +1,71 @@
+{
+  "Stage": "LOCAL_PREPARED_CELL_PROBE",
+  "Queries": 25,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 1146,
+      "CandidateMs": 684
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 1108,
+      "CandidateMs": 697
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 1218,
+      "CandidateMs": 620
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 1165,
+      "CandidateMs": 695
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 979,
+      "CandidateMs": 514
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 992,
+      "CandidateMs": 639
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 7235,
+      "CandidateMs": 9354
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 6722,
+      "CandidateMs": 9004
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 8399,
+      "CandidateMs": 8931
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 8475,
+      "CandidateMs": 8845
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "candidate.json": "717fda3f5a3a58313756044ab12e397d1a6803c3684133767db4b2993a9128ec",
+    "cell_fact.py": "f4c9753efdff903a0aefbd1a92c6050af4ca49a717d5107a364b76428ce5ce73",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "leaf_prepare.py": "3748cf26cf1e4965ba914cb1621486a4ad41a09df7f8263be64886518f896c21",
+    "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+    "queries.json": "d2cc482af763931cb21267ae1647725373364bd9332c7769f2d6dd1368c09c8e",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "3ec7a0372a5a96728def2216554de59f1997b3b6bb47388e1c4be4ccdc23040d",
+  "TaskOwnedEngineClosed": true,
+  "CompanyOrDesktopQualified": false
+}

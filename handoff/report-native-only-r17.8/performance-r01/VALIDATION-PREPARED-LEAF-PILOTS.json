@@ -1,0 +1,432 @@
+{
+  "Stage": "LOCAL_PREPARED_LEAF_PILOTS_REVIEWED",
+  "Experiments": [
+    {
+      "Stage": "LOCAL_PREPARED_LEAF_KPI_PROBE",
+      "Queries": 22,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1042,
+          "BulkMs": 561
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 910,
+          "BulkMs": 582
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1053,
+          "BulkMs": 517
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1011,
+          "BulkMs": 601
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 862,
+          "BulkMs": 495
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 911,
+          "BulkMs": 544
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6273,
+          "BulkMs": 4670
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6075,
+          "BulkMs": 4702
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 7863,
+          "BulkMs": 5026
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 7908,
+          "BulkMs": 5109
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "bulk_exact.py": "d0d98c3c6f736aef86b43992cac969119bf4839bc92f1ddcf6dcb122acae6239",
+        "bulk_fit.py": "b3c71f4e9ab198b2ef6a8676b33250d781829b2e05352e3a58d08a1b87fad4cd",
+        "candidate.json": "0371daee1e2fa2e6b87921d12753ff4c1d10df57ae6ccef80baaacddc4d8ae0a",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "leafprobe.py": "53a8085f328bda7a632d1c568675b3dc16e5cafd50e0eaede0e941225410e235",
+        "leaf_model.py": "8f60e5062ceeab3f2bc30050677beff207e8cdb2365748c5cb3de05ed50bf27e",
+        "leaf_prepare.py": "3748cf26cf1e4965ba914cb1621486a4ad41a09df7f8263be64886518f896c21",
+        "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+        "queries.json": "96b6ef2077ba6f955b927b7bf258c96ad6d1cce2ad8636964f099f1bd17941f4",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "7d19d4444547d0f053bdbbe373d5ab89e77acfb0635eb15f310f3b5c874aa87b",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "LeafPopulation": {
+        "[Series]": 600,
+        "[KPIRows]": 21000
+      },
+      "Preparation": {
+        "SourceExportProof": {
+          "Stage": "LOCAL_CALCULATED_SAMPLE_FACTS_EXPORTED",
+          "Exports": {
+            "facts": {
+              "Rows": 504000,
+              "ElapsedMs": 6957
+            },
+            "files": {
+              "Rows": 20,
+              "ElapsedMs": 7
+            },
+            "catalog": {
+              "Rows": 10,
+              "ElapsedMs": 3
+            }
+          },
+          "SourceHashes": {
+            "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+            "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+            "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+            "queries.json": "91625299ac81108bb6831aee9a4527cac29a9262c6307eb78cf6a8b824d89938",
+            "run_profile.ps1": "d67e2cfab590e247accf51560ed68b4eca097b32227cac1f78ccbf458f0dcc30"
+          },
+          "ExportHashes": {
+            "facts": "27f781e55fd5ba97ab59c4948e969f333dda71344de8c24fb6239d9b93783353",
+            "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+            "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+          },
+          "TaskOwnedEngineClosed": true,
+          "CompanyData": false
+        },
+        "Facts": 504000,
+        "Pairs": 600,
+        "MonthlyRows": 50400,
+        "StatisticsRows": 21600,
+        "PrepareMonthlyMs": 681,
+        "PrepareStatisticsMs": 2657,
+        "CompanyData": false,
+        "Method": "Source-export facts; component/channel/subchannel grouping; invalidate any missing member per sector/month; complete-history statistics only.",
+        "LeafRows": 21000,
+        "LeafSeries": 600,
+        "YearMin": 2023,
+        "YearMax": 2029,
+        "LeafFields": 48,
+        "PreparationTotalMs": 10812,
+        "AggregateSharePrecomputedBySummingSectors": false,
+        "Freshness": "Immutable fabricated source export only.",
+        "PreparationAndEncodingMs": 15598
+      },
+      "CompanyDeployment": false,
+      "Freshness": "Immutable calculated SAMPLE export; no company integration.",
+      "Experiment": "ForecastMaster-R178-Leaf-KPI-Probe-01"
+    },
+    {
+      "Stage": "LOCAL_PREPARED_LEAF_KPI_PROBE",
+      "Queries": 22,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 970,
+          "BulkMs": 523
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 886,
+          "BulkMs": 529
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 985,
+          "BulkMs": 469
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 969,
+          "BulkMs": 553
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 825,
+          "BulkMs": 445
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 830,
+          "BulkMs": 506
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 5938,
+          "BulkMs": 4451
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 5841,
+          "BulkMs": 4178
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 7443,
+          "BulkMs": 4640
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 7525,
+          "BulkMs": 4491
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "candidate.json": "ec00f18868c1a3637936d3783052d4c603cede189b8514cc1f75eb2c45cff1b7",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "leaf_model.py": "8f60e5062ceeab3f2bc30050677beff207e8cdb2365748c5cb3de05ed50bf27e",
+        "leaf_prepare.py": "3748cf26cf1e4965ba914cb1621486a4ad41a09df7f8263be64886518f896c21",
+        "leaf_thin.py": "ce6c40055a1167374c18de11dc2d4beaf797015100bec0c88b233501c0f02153",
+        "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+        "queries.json": "96b6ef2077ba6f955b927b7bf258c96ad6d1cce2ad8636964f099f1bd17941f4",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "ab13db20c3b3e12d922bd3ff1a149798c967eedfbaf6b6027236337cb50e0fc8",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "LeafPopulation": {
+        "[Series]": 600,
+        "[KPIRows]": 21000
+      },
+      "Preparation": {
+        "SourceExportProof": {
+          "Stage": "LOCAL_CALCULATED_SAMPLE_FACTS_EXPORTED",
+          "Exports": {
+            "facts": {
+              "Rows": 504000,
+              "ElapsedMs": 6957
+            },
+            "files": {
+              "Rows": 20,
+              "ElapsedMs": 7
+            },
+            "catalog": {
+              "Rows": 10,
+              "ElapsedMs": 3
+            }
+          },
+          "SourceHashes": {
+            "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+            "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+            "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+            "queries.json": "91625299ac81108bb6831aee9a4527cac29a9262c6307eb78cf6a8b824d89938",
+            "run_profile.ps1": "d67e2cfab590e247accf51560ed68b4eca097b32227cac1f78ccbf458f0dcc30"
+          },
+          "ExportHashes": {
+            "facts": "27f781e55fd5ba97ab59c4948e969f333dda71344de8c24fb6239d9b93783353",
+            "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+            "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+          },
+          "TaskOwnedEngineClosed": true,
+          "CompanyData": false
+        },
+        "Facts": 504000,
+        "Pairs": 600,
+        "MonthlyRows": 50400,
+        "StatisticsRows": 21600,
+        "PrepareMonthlyMs": 681,
+        "PrepareStatisticsMs": 2657,
+        "CompanyData": false,
+        "Method": "Source-export facts; component/channel/subchannel grouping; invalidate any missing member per sector/month; complete-history statistics only.",
+        "LeafRows": 21000,
+        "LeafSeries": 600,
+        "YearMin": 2023,
+        "YearMax": 2029,
+        "LeafFields": 48,
+        "PreparationTotalMs": 10812,
+        "AggregateSharePrecomputedBySummingSectors": false,
+        "Freshness": "Immutable fabricated source export only.",
+        "PreparationAndEncodingMs": 15598
+      },
+      "CompanyDeployment": false,
+      "Freshness": "Immutable calculated SAMPLE export; no company integration.",
+      "Experiment": "ForecastMaster-R178-Thin-Leaf-Probe-01"
+    },
+    {
+      "Stage": "LOCAL_PREPARED_LEAF_KPI_PROBE",
+      "Queries": 22,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1029,
+          "BulkMs": 562
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 975,
+          "BulkMs": 582
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1047,
+          "BulkMs": 539
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1079,
+          "BulkMs": 614
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 857,
+          "BulkMs": 460
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 876,
+          "BulkMs": 547
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6552,
+          "BulkMs": 4826
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6434,
+          "BulkMs": 4748
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 8342,
+          "BulkMs": 5186
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 8378,
+          "BulkMs": 4940
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "candidate.json": "a56b613345c075ace317dd5c326b47bafa41139f4dce8ed586b8dc7079621282",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "leaf_related.py": "e38d368ee1ce18172971652dc8545fc3b3dbacb2da6862e860e864923cd9266b",
+        "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+        "queries.json": "96b6ef2077ba6f955b927b7bf258c96ad6d1cce2ad8636964f099f1bd17941f4",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "26317934a2a3a724cd1b42416df86485cba35b152ed9fee103012d665ff21e6e",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "LeafPopulation": {
+        "[Series]": 600,
+        "[KPIRows]": 21000
+      },
+      "Preparation": {
+        "SourceExportProof": {
+          "Stage": "LOCAL_CALCULATED_SAMPLE_FACTS_EXPORTED",
+          "Exports": {
+            "facts": {
+              "Rows": 504000,
+              "ElapsedMs": 6957
+            },
+            "files": {
+              "Rows": 20,
+              "ElapsedMs": 7
+            },
+            "catalog": {
+              "Rows": 10,
+              "ElapsedMs": 3
+            }
+          },
+          "SourceHashes": {
+            "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+            "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+            "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+            "queries.json": "91625299ac81108bb6831aee9a4527cac29a9262c6307eb78cf6a8b824d89938",
+            "run_profile.ps1": "d67e2cfab590e247accf51560ed68b4eca097b32227cac1f78ccbf458f0dcc30"
+          },
+          "ExportHashes": {
+            "facts": "27f781e55fd5ba97ab59c4948e969f333dda71344de8c24fb6239d9b93783353",
+            "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+            "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+          },
+          "TaskOwnedEngineClosed": true,
+          "CompanyData": false
+        },
+        "Facts": 504000,
+        "Pairs": 600,
+        "MonthlyRows": 50400,
+        "StatisticsRows": 21600,
+        "PrepareMonthlyMs": 681,
+        "PrepareStatisticsMs": 2657,
+        "CompanyData": false,
+        "Method": "Source-export facts; component/channel/subchannel grouping; invalidate any missing member per sector/month; complete-history statistics only.",
+        "LeafRows": 21000,
+        "LeafSeries": 600,
+        "YearMin": 2023,
+        "YearMax": 2029,
+        "LeafFields": 48,
+        "PreparationTotalMs": 10812,
+        "AggregateSharePrecomputedBySummingSectors": false,
+        "Freshness": "Immutable fabricated source export only.",
+        "PreparationAndEncodingMs": 15598
+      },
+      "CompanyDeployment": false,
+      "Freshness": "Immutable calculated SAMPLE export; no company integration.",
+      "Experiment": "ForecastMaster-R178-Related-Leaf-Probe-01"
+    },
+    {
+      "Stage": "LOCAL_LEAF_BRANCH_COST_DIAGNOSTIC",
+      "Timings": [
+        {
+          "Metric": "market",
+          "NormalMs": 4945,
+          "ZeroAggregateMs": 4552,
+          "UnchangedLeafCells": 1500
+        },
+        {
+          "Metric": "share",
+          "NormalMs": 5029,
+          "ZeroAggregateMs": 4990,
+          "UnchangedLeafCells": 1500
+        }
+      ],
+      "LeafMismatches": 0,
+      "SourceHashes": {
+        "candidate.json": "0371daee1e2fa2e6b87921d12753ff4c1d10df57ae6ccef80baaacddc4d8ae0a",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "leaf_diagnostic.py": "0e55a1fb326d5571f91bfae2d135f064f7016c708c2f42a0e8965dc8278eb02d",
+        "queries.json": "d02783fe6f18ac871e307bc26f4f8e2c780ddf55dd8271dfbbdbccc39651f458",
+        "run_profile.ps1": "8f9147c8b5ebac29ac7d68a9489e74c80bc548a52e4adedbdaf8472587c8e3bc"
+      },
+      "ResultsSHA256": "730a7bb7919e5d728421edf8e4b72137e183180b3682343b59d24f9b597da1aa",
+      "TaskOwnedEngineClosed": true,
+      "Deployable": false,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Leaf-Cost-Diagnostic-01"
+    }
+  ],
+  "Limits": [
+    "Single exploratory pair per context, not a repeated performance qualification.",
+    "Original leaf/thin variants blank an uncovered cache key. Related variant adds fallback for missing key, but new-file/sector boundary execution is pending.",
+    "Prepared input is an immutable synthetic export, not an automatically refreshed company feed.",
+    "Four new serving relationships in related variant are not Fabric/RLS qualified.",
+    "Broader mixed/FX/boundary regression and actual Desktop performance remain pending."
+  ],
+  "CompanyR03": "HOLD",
+  "CompanyCallsMade": false,
+  "ProductionChanged": false
+}

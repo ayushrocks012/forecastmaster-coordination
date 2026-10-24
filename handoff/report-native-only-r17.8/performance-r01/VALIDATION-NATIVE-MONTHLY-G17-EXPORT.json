@@ -1,0 +1,37 @@
+{
+  "Stage": "LOCAL_NATIVE_MONTHLY_EXPORTED",
+  "Exports": {
+    "facts": {
+      "Rows": 504000,
+      "ElapsedMs": 5316
+    },
+    "monthly": {
+      "Rows": 504000,
+      "ElapsedMs": 4586
+    },
+    "files": {
+      "Rows": 20,
+      "ElapsedMs": 5
+    },
+    "catalog": {
+      "Rows": 10,
+      "ElapsedMs": 2
+    }
+  },
+  "SourceHashes": {
+    "candidate.json": "34c17c2e6a4b4b8d282a228d006c74720e8e902005ad5e3b7b16af1d46aaf62d",
+    "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "native_monthly_export.py": "4d70336b1c57729f3839f34614cf587d09da852725df70a56d67db8387fd05d5",
+    "queries.json": "7289c1f3d235f3a30af3a73c6354a6a356f7f29414fde9d4abc782062c620628",
+    "run_profile.ps1": "fe0b4217dd30bb194ec21989c946b9c776a166664730ef6ee6e1325aa1acf05e"
+  },
+  "ExportHashes": {
+    "facts": "27f250f72effb7cd5a32a81200db0de9c9266400004e206f2833259980214b1a",
+    "monthly": "98df7456f0ccda9d68bd1be6fc6f018814030bb96e3e5b275903c6a25e483510",
+    "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+    "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+  },
+  "TaskOwnedEngineClosed": true,
+  "CompanyData": false
+}

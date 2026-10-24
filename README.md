@@ -4,6 +4,10 @@ A separate repository for exchanging ForecastMaster setup scripts, office-laptop
 
 This repository is public. Files and screenshots committed here are publicly visible.
 
+**24 October: hold the R03 company run.** The user requested further local
+large-dataset performance work before installation. R03 is the preserved
+comparison baseline; follow the maintained understanding's current resume.
+
 - **Project reference:** [UNDERSTANDING.md](handoff/report-native-only-r17.8/UNDERSTANDING.md) is the maintained project-wide reference: architecture, object IDs, data flow, fields/table grains, public native DAX/relationships/visual bindings, business/design decisions, history and open gaps. Read its resume section after chat compaction. [STATUS](feedback/STATUS.md) owns reviewed company results.
 
 - **Current R17.8 R03 TEST handoff:** [OPEN FIRST](handoff/report-native-only-r17.8/performance-r01/receiving-r03/OPEN%20FIRST.txt). It combines the compact R02 fixes with two faster summary-cell expressions. Local 75-query mixed regression, 93 receiving/boundary queries, actual Desktop/Share export and save/reopen pass. Largest fixture: 20 files, two cycles, five drivers, 30 sectors/file. Controlled isolated medians improve 41–45%; expanded Share still takes about 9.7s DAX in Desktop, so near-instant/company speed acceptance remains open. One approved custom overlay, other visuals native. Run the whole R03 cell directly in ONE NEW company setup cell ONCE; do not install R02 first. It checks/backs up/updates/readbacks TEST and creates a PRIVATE report download with actual ADS defaults. No refresh or publication. On STOPPED return JSON, no retry. Production R16.6 and old release bytes unchanged. [Maintained understanding](handoff/report-native-only-r17.8/UNDERSTANDING.md#resume-in-one-minute).

@@ -1,0 +1,64 @@
+{
+  "Stage": "LOCAL_SNAPSHOT_READINESS_REFUSED",
+  "Attempts": [
+    {
+      "Directory": "ForecastMaster-R178-Validated-Snapshot-Probe-02",
+      "ExecutedQueries": 26,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "FrozenInputSHA256": "4f3e6b7463bf4067123f4508eaed2ef9e6e38cf75f2fa6213d0e137f5f6fc801",
+      "ResultsSHA256": "1a526d892fde0a1225f5182774988a3c007ba85de36a5f34d54fcdf380e391a4",
+      "ServingBenchmarkPassed": false,
+      "TaskOwnedEngineClosed": true
+    },
+    {
+      "Directory": "ForecastMaster-R178-Precise-Snapshot-Probe-01",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "FrozenInputSHA256": "e11fdcda7e9324211bebc96abbe0e0354355dce445f6283b03020ca8146cb7b6",
+      "ResultsSHA256": "23415e546c3f5e13913c445245d50024e7189d7b6cc146aaaa3372f6818395a1",
+      "ServingBenchmarkPassed": false,
+      "TaskOwnedEngineClosed": true
+    },
+    {
+      "Directory": "ForecastMaster-R178-Binary-Snapshot-Probe-01",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "FrozenInputSHA256": "959f07dfb1d7806e4e46aa56decf4401c4f881e4ac9861f9030353edffb6d78a",
+      "ResultsSHA256": "222e463f64dc6b7405a4c210b9c91dda8b01f033ac721f639c4787697992dfa3",
+      "ServingBenchmarkPassed": false,
+      "TaskOwnedEngineClosed": true
+    }
+  ],
+  "NumericThresholdsRelaxed": false,
+  "CompanyAction": false
+}

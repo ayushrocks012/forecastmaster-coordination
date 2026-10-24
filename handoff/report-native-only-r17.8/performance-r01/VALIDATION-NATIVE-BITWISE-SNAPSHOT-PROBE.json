@@ -1,0 +1,86 @@
+{
+  "Stage": "LOCAL_PREPARED_CELL_PROBE",
+  "Queries": 26,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 1358,
+      "CandidateMs": 612
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 1172,
+      "CandidateMs": 765
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 1321,
+      "CandidateMs": 693
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 1420,
+      "CandidateMs": 948
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 1062,
+      "CandidateMs": 642
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 1195,
+      "CandidateMs": 777
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 8961,
+      "CandidateMs": 7649
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 7575,
+      "CandidateMs": 7266
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 10779,
+      "CandidateMs": 6755
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 9259,
+      "CandidateMs": 7498
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "bitwise-query.dax": "87c11d1af1b3965122d95e982aaeb09335466e46dde530eff55229b1d530965d",
+    "bitwise_snapshot.py": "4f895f194472bf65354d5006e3ca9ec664eeb2f481e26f20e16844e21fddb3b8",
+    "candidate.json": "898575a07798eb85e566340c8bc4430b29e7e29227574d98cff1deee0df1a78b",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "native-preparation.json": "237fa777e4d1ece541998be83d5186c5898147a6fb29bf5043d58098e1ddec05",
+    "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+    "queries.json": "944a734d3a002ec9418bc05e96a1ec0ed222b5b5bad276d3f515df3836d34d5d",
+    "run_profile.ps1": "4fc72ff26fd6173b9b5dc2d4f4ad270e173f217d91ec400171fb4b0129c63005",
+    "verified-control.dax": "9d2547f606701f22345ef946b10966074ad0c799ed99ba394aa485f7ce3469a0"
+  },
+  "ResultsSHA256": "bf9dca50227fae186f435959518c6b3bbae6dfb3388c4dee71f3844ea79f5760",
+  "TaskOwnedEngineClosed": true,
+  "CompanyOrDesktopQualified": false,
+  "ExactInputGate": {
+    "Passes": 2,
+    "Stage": "NATIVE_DOUBLE_BITS_AND_KEYS_EXACT",
+    "Nonblank": 504000,
+    "AmountsPrinted": false,
+    "Tolerance": 0,
+    "Blank": 0,
+    "Scope": "Frozen calculated SAMPLE; not a company/live refresh controller",
+    "Rows": 504000
+  },
+  "NativeInputGateReceiptSHA256": "7e5991da7ca41ea9c8c02dbc7e73e195f813cd0e93adce0e2a3293bf0f3eb3af",
+  "VerifiedModelSHA256": "4dc508a77cd2384944ec3879c7c0cdb22c9c83f0f7bb444c93e573dd73ab5a6f",
+  "SelectedForRelease": false
+}

@@ -1,0 +1,312 @@
+{
+  "Stage": "LOCAL_DISPLAY_AND_STRUCTURE_REVIEWED",
+  "Date": "2026-10-24",
+  "Experiments": [
+    {
+      "Stage": "LOCAL_BULK_KERNEL_PROBE",
+      "Queries": 21,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 977,
+          "BulkMs": 891
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 882,
+          "BulkMs": 1000
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 980,
+          "BulkMs": 927
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1026,
+          "BulkMs": 1150
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 855,
+          "BulkMs": 803
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 871,
+          "BulkMs": 973
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6494,
+          "BulkMs": 5790
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6287,
+          "BulkMs": 5818
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 7860,
+          "BulkMs": 7412
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 7814,
+          "BulkMs": 7368
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "bulk_exact.py": "d0d98c3c6f736aef86b43992cac969119bf4839bc92f1ddcf6dcb122acae6239",
+        "candidate.json": "c2c240e08b22410ee387b01f2cf5084b58d3624cc54029724f720bd7695d6ef4",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+        "relational.py": "f1a61af57ad45120d10a4b58d9d55686a9800a20c603e9a51c2f858dfb3b3357",
+        "relprobe.py": "f05ce8ef8d2cead7faa36b3323be92010ffa2b887df2fffc155115e20725ef0c",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "3508a561a6edd026808ca0349ea45a9edc722209110282f841c176420d20287f",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Relational-Probe-01",
+      "Decision": "REJECTED_INSUFFICIENT_IMPROVEMENT"
+    },
+    {
+      "Stage": "LOCAL_BULK_KERNEL_PROBE",
+      "Queries": 21,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1051,
+          "BulkMs": 1045
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 1000,
+          "BulkMs": 997
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1097,
+          "BulkMs": 1092
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1059,
+          "BulkMs": 1037
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 880,
+          "BulkMs": 884
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 868,
+          "BulkMs": 883
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6382,
+          "BulkMs": 6378
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6503,
+          "BulkMs": 6329
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 8206,
+          "BulkMs": 7955
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 8257,
+          "BulkMs": 8133
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "candidate.json": "0e3f6be1cd71a31b3d30980856c78046e6eb7a97522ee6d38d30ca71e82f74b2",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "normalized.py": "f76d86d9b0664ee635fe0acb18829e58e1deb2ee3a4abc5a2ac1047e3f0b7c1c",
+        "normprobe.py": "f8954eae8907ec3b43e0dc3d3aa7d13e38951b8408d5b69ce156d7db6f203f91",
+        "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "10e81c906fc68c25d85f1deafbb57e7692bb100d86a0d42803f4846561d9151d",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Normalized-Probe-02",
+      "Decision": "REJECTED_NO_USEFUL_IMPROVEMENT"
+    },
+    {
+      "Stage": "LOCAL_BULK_KERNEL_PROBE",
+      "Queries": 21,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1078,
+          "BulkMs": 1009
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 976,
+          "BulkMs": 914
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1084,
+          "BulkMs": 1042
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1045,
+          "BulkMs": 1058
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 882,
+          "BulkMs": 889
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 905,
+          "BulkMs": 891
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6621,
+          "BulkMs": 6347
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6215,
+          "BulkMs": 6469
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 8047,
+          "BulkMs": 8111
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 8089,
+          "BulkMs": 7939
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "candidate.json": "c831246d922a981effe975c42b921b7bad8a9dbfd428cfb815b62d19f633e474",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "format_reuse.py": "b677f16af1f209c1a319bedb55c9e871a6cb79ef91706095b5c8825e5b1ec10b",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "abf045d86c01e8537f2b1e80ed21f9be7f7e8359ce64510327ea872cd202daba",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Format-Reference-Probe-01",
+      "Decision": "REJECTED_NO_USEFUL_IMPROVEMENT"
+    },
+    {
+      "Stage": "LOCAL_DISPLAY_COST_DIAGNOSTIC",
+      "Timings": [
+        {
+          "Query": "market/original",
+          "ElapsedMs": 7150,
+          "Cells": 1560
+        },
+        {
+          "Query": "market/without-format",
+          "ElapsedMs": 4788,
+          "Cells": 1560
+        },
+        {
+          "Query": "market/without-colour",
+          "ElapsedMs": 4417,
+          "Cells": 1560
+        },
+        {
+          "Query": "market/numeric-only",
+          "ElapsedMs": 2186,
+          "Cells": 1560
+        },
+        {
+          "Query": "share/original",
+          "ElapsedMs": 9702,
+          "Cells": 1560
+        },
+        {
+          "Query": "share/without-format",
+          "ElapsedMs": 6709,
+          "Cells": 1560
+        },
+        {
+          "Query": "share/without-colour",
+          "ElapsedMs": 6220,
+          "Cells": 1560
+        },
+        {
+          "Query": "share/numeric-only",
+          "ElapsedMs": 2806,
+          "Cells": 1560
+        }
+      ],
+      "NumericMismatches": 0,
+      "SourceHashes": {
+        "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "display_cost.py": "bf29bb466cb5ad8dee3b5032baadd8bfbb677cf18a07881016df64d36d15e1ad",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "27e7132266c9ec7962ceed2049c99b2ba3bc7264e1557d5d064c052ec159c34d",
+        "run_profile.ps1": "8f9147c8b5ebac29ac7d68a9489e74c80bc548a52e4adedbdaf8472587c8e3bc"
+      },
+      "ResultsSHA256": "dd906282e892e76c0431bfaeea069d6103856a3ec5474687e8fa601d6c22fe8a",
+      "TaskOwnedEngineClosed": true,
+      "UIChangeQualified": false,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Display-Cost-01",
+      "Decision": "DIAGNOSTIC_ONLY_NO_PRESENTATION_REMOVAL_SELECTED"
+    }
+  ],
+  "FailedAttempt": {
+    "Directory": "ForecastMaster-R178-Normalized-Probe-01",
+    "Failure": "Generated RETURN without VAR in new wrappers; failed DAX compilation. Corrected separately in attempt02.",
+    "FailedQueries": [
+      "market/Units/candidate",
+      "market/Value/candidate",
+      "share/Units/candidate",
+      "share/Value/candidate",
+      "ef/Units/candidate",
+      "ef/Value/candidate",
+      "market-expanded/native-window/candidate",
+      "market-expanded/full-core/candidate",
+      "share-expanded/native-window/candidate",
+      "share-expanded/full-core/candidate"
+    ],
+    "FrozenInputSHA256": "d9042fe5fc17fe374f51ea3cb3351d4ed5c26535ce80cc196f2e463594206405",
+    "ResultsSHA256": "fae9fd58b1c2440b0278f91ddfdda76d3e48799b3ab0d12f3ef01acce2cac254",
+    "TaskOwnedEngineClosed": true
+  },
+  "UnlaunchedBuilds": [
+    "Cache-Lean-Probe-01",
+    "Share-Display-Probe-01 (unused import lint failure)"
+  ],
+  "Limits": [
+    "One paired observation per exploratory variant; not a repeated timing or p95 qualification.",
+    "A short Python unit run overlapped late normalized02 queries; that rejected variant is not a timing reference.",
+    "Removing format/colour is a diagnostic, not an accepted UI."
+  ],
+  "CompanyR03": "HOLD",
+  "CompanyCallsMade": false,
+  "ProductionChanged": false
+}

@@ -1,0 +1,82 @@
+{
+  "Stage": "LOCAL_PREPARED_CELL_GUARD_DIAGNOSTIC",
+  "KnownLeafMismatches": 0,
+  "Timings": [
+    {
+      "Query": "market/direct",
+      "Ms": 269
+    },
+    {
+      "Query": "market/source",
+      "Ms": 199
+    },
+    {
+      "Query": "market/period",
+      "Ms": 153
+    },
+    {
+      "Query": "market/prepared-cut",
+      "Ms": 245
+    },
+    {
+      "Query": "market/cutoffs",
+      "Ms": 300
+    },
+    {
+      "Query": "market/count",
+      "Ms": 149
+    },
+    {
+      "Query": "market/aggregate-fallback",
+      "Ms": 937
+    },
+    {
+      "Query": "market/full-value-gate",
+      "Ms": 2257
+    },
+    {
+      "Query": "share/direct",
+      "Ms": 137
+    },
+    {
+      "Query": "share/source",
+      "Ms": 174
+    },
+    {
+      "Query": "share/period",
+      "Ms": 156
+    },
+    {
+      "Query": "share/prepared-cut",
+      "Ms": 234
+    },
+    {
+      "Query": "share/cutoffs",
+      "Ms": 304
+    },
+    {
+      "Query": "share/count",
+      "Ms": 147
+    },
+    {
+      "Query": "share/aggregate-fallback",
+      "Ms": 1060
+    },
+    {
+      "Query": "share/full-value-gate",
+      "Ms": 2261
+    }
+  ],
+  "SourceHashes": {
+    "baseline.json": "717fda3f5a3a58313756044ab12e397d1a6803c3684133767db4b2993a9128ec",
+    "candidate.json": "bea3dba3faec453620bde8e727a910549b7511659dd28196342769d51bf66bc0",
+    "cell_diagnostic.py": "34a0d2d4ece34a6999ec963bdbc606a693cbdb446037723210b6bb3d7c0014a1",
+    "cell_gates.py": "dbf538570a33be85d296b99bea4175600dcbb7b830480c63a919e3c18875cf37",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "455c5dd212b8fa5fc10f8f9079437f94f8cfd431cfc51767ef10ea159c6de45a",
+    "run_profile.ps1": "b8b64e9836bc3ab7d19d8fe7f59a86a4f24e2a1ccf5f10721386e5961f4aeb05"
+  },
+  "ResultsSHA256": "3d773464545bf0de41f57153277f7c1f83ed26770f9f0843997c85494c45b64a",
+  "Deployable": false,
+  "TaskOwnedEngineClosed": true
+}

@@ -1,0 +1,125 @@
+{
+  "Stage": "LOCAL_SOURCE_PREPARED_CACHE_PROBE",
+  "Queries": 22,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 1395,
+      "BulkMs": 2348
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 1186,
+      "BulkMs": 1977
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 1201,
+      "BulkMs": 1978
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 1198,
+      "BulkMs": 1859
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 996,
+      "BulkMs": 1857
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 1030,
+      "BulkMs": 1880
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 9035,
+      "BulkMs": 11743
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 8318,
+      "BulkMs": 11501
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 11854,
+      "BulkMs": 11664
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 11119,
+      "BulkMs": 11575
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "cached_model.py": "8aac3dc726157b247ec062738ccc8293f8579a429c8a00b4645a2fe062d1f817",
+    "cacheprobe.py": "7d4719021a77b044b9e838241f08cfd648700ba620cdfb29eb37de77ddbc9702",
+    "cache_prepare.py": "1b57f54279451d72f35a42ebbbfb9437be7b70a149eaf7adb5ef3a8447832801",
+    "candidate.json": "e5d320bd9405d377be2712dab11155f0967635d74c07da4b922953ac675f0a91",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "preparation.json": "ca442c3a71f6bcd193126ccb78441b6e8cbf5a014b126bae5ed98526eb8f43d4",
+    "queries.json": "bfacbfd5f38b25217eb2b0fa6e121c5a53451a2a94248ce270ce43c3ad4ae013",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "b23e61ce92318c9261f0aad4442221ed849b75896d2ed861177a4c39e8354c47",
+  "TaskOwnedEngineClosed": true,
+  "CompanyAcceptance": false,
+  "CachePopulation": [
+    {
+      "[Series]": 600,
+      "[Monthly]": 50400,
+      "[Statistics]": 21600
+    }
+  ],
+  "Preparation": {
+    "SourceExportProof": {
+      "Stage": "LOCAL_CALCULATED_SAMPLE_FACTS_EXPORTED",
+      "Exports": {
+        "facts": {
+          "Rows": 504000,
+          "ElapsedMs": 6957
+        },
+        "files": {
+          "Rows": 20,
+          "ElapsedMs": 7
+        },
+        "catalog": {
+          "Rows": 10,
+          "ElapsedMs": 3
+        }
+      },
+      "SourceHashes": {
+        "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "91625299ac81108bb6831aee9a4527cac29a9262c6307eb78cf6a8b824d89938",
+        "run_profile.ps1": "d67e2cfab590e247accf51560ed68b4eca097b32227cac1f78ccbf458f0dcc30"
+      },
+      "ExportHashes": {
+        "facts": "27f781e55fd5ba97ab59c4948e969f333dda71344de8c24fb6239d9b93783353",
+        "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+        "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+      },
+      "TaskOwnedEngineClosed": true,
+      "CompanyData": false
+    },
+    "Facts": 504000,
+    "Pairs": 600,
+    "MonthlyRows": 50400,
+    "StatisticsRows": 21600,
+    "PrepareMonthlyMs": 633,
+    "PrepareStatisticsMs": 3017,
+    "CompanyData": false,
+    "Method": "Source-export facts; component/channel/subchannel grouping; invalidate any missing member per sector/month; complete-history statistics only.",
+    "EncodeTablesAndPrepareTotalMs": 4193
+  },
+  "CompanyDeployment": false,
+  "CacheFreshness": "Immutable fabricated snapshot; no company auto-refresh integration is claimed.",
+  "Selected": false,
+  "Decision": "Numerical/presentation/population parity passes but overall latency does not improve. Subsequent branch diagnostic is separate, not a release."
+}

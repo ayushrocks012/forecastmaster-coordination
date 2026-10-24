@@ -1,0 +1,71 @@
+{
+  "Stage": "LOCAL_PREPARED_CELL_PROBE",
+  "Queries": 25,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 1119,
+      "CandidateMs": 571
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 1098,
+      "CandidateMs": 705
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 1224,
+      "CandidateMs": 645
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 1241,
+      "CandidateMs": 639
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 996,
+      "CandidateMs": 505
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 925,
+      "CandidateMs": 592
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 6855,
+      "CandidateMs": 8953
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 6503,
+      "CandidateMs": 8458
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 8733,
+      "CandidateMs": 8763
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 8623,
+      "CandidateMs": 8996
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "candidate.json": "4876c23405eff82e0c90d257564e424604133eaa5bee86595bf9744b7eecefea",
+    "cell_fact.py": "ccc56df846a0432a2f735d72fc7aeab1f758e424a9a6f078acf101ceb5120309",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "leaf_prepare.py": "3748cf26cf1e4965ba914cb1621486a4ad41a09df7f8263be64886518f896c21",
+    "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+    "queries.json": "d2cc482af763931cb21267ae1647725373364bd9332c7769f2d6dd1368c09c8e",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "ee9a5331ad14cd72967fc142b26b34d3fec2f7a55e93e0e09ee3c4cc191caee9",
+  "TaskOwnedEngineClosed": true,
+  "CompanyOrDesktopQualified": false
+}

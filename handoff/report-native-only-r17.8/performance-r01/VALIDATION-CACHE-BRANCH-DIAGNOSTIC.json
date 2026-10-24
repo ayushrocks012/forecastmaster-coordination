@@ -1,0 +1,40 @@
+{
+  "Stage": "LOCAL_CACHE_BRANCH_DIAGNOSTIC",
+  "AdmissionValues": [
+    {
+      "[P Debug Ready]": 1,
+      "[P Debug Eligible]": 1,
+      "[P Debug Members]": 150,
+      "[P Debug Count]": 1800,
+      "[P Debug Expected]": 1800,
+      "[P Debug Benchmark Ready]": 1
+    }
+  ],
+  "Pairs": [
+    {
+      "Metric": "market",
+      "ConditionalFallbackMs": 12101,
+      "ForcedCacheOnlyMs": 2584,
+      "SameCompleteResults": true
+    },
+    {
+      "Metric": "share",
+      "ConditionalFallbackMs": 12008,
+      "ForcedCacheOnlyMs": 2681,
+      "SameCompleteResults": true
+    }
+  ],
+  "SourceHashes": {
+    "baseline.json": "ec219f286b307a4c4bfdc95cb8ad7ea3aa8a5fdef8c81ece97c60a3c0244a71c",
+    "cache_diagnostic.py": "901e095d9f00750c2b17e2e2d85617b7c1ce50ffdf069304b740276969afb130",
+    "candidate.json": "e57eacd48e8e30288b194fe412105fa9aaf6f06c61ddcb87b8f75b6c74db38dd",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "f809e06399a050c7a6f614e15bc92515a2df887af81a941dea8553b0b4b0e4ba",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "e71b911899e39feee60257073719a2e50e07ccbeb9350ec6cbb113321ac6d60a",
+  "DeploymentPermitted": false,
+  "TaskOwnedEngineClosed": true,
+  "Limit": "Forced cache-only branch lacks fallback protection. Known complete fabricated contexts only; no release/numeric-edge or company claim.",
+  "Inference": "Conditional fallback composition adds substantial observed cost. Compiler-level cause is not established."
+}

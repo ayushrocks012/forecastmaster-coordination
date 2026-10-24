@@ -1,0 +1,33 @@
+{
+  "Stage": "LOCAL_UNSELECTED_ATTEMPTS_REVIEWED",
+  "Attempts": [
+    {
+      "Directory": "ForecastMaster-R178-Routed-Cells-Probe-01",
+      "Reason": "Builder shadowed the binding with a numeric string end offset; stopped before freeze/launch.",
+      "FrozenInputSHA256": null,
+      "ResultsSHA256": null,
+      "NativeRun": false,
+      "TaskOwnedEngineClosed": true,
+      "Selected": false
+    },
+    {
+      "Directory": "ForecastMaster-R178-Routed-Cells-Probe-02",
+      "Reason": "First25 complete; added26 admission query has extra closing parenthesis. Overall not passed.",
+      "FrozenInputSHA256": "228b90160fe9df7a7de022dde3ede5bef494c2276986a631fad40e6831119fb1",
+      "ResultsSHA256": "d12c96d97c22db8f2b9e2fd160d6f2ef3c385afde420642ef3cc9fadd6252036",
+      "NativeRun": true,
+      "TaskOwnedEngineClosed": true,
+      "Selected": false
+    },
+    {
+      "Directory": "ForecastMaster-R178-Validated-Snapshot-Probe-01",
+      "Reason": "Native model update rejects circular calculated foreign key. No queries executed.",
+      "FrozenInputSHA256": "e5b20d01ceaca160abbd015ea747eb97e4431653a990ed79bc05aa1db1541650",
+      "ResultsSHA256": null,
+      "NativeRun": true,
+      "TaskOwnedEngineClosed": true,
+      "Selected": false
+    }
+  ],
+  "CompanyAction": false
+}

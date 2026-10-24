@@ -1,5 +1,49 @@
 # Company setup status
 
+## 24 October 2026 — R03 company run held for further local performance work
+
+User rejects the remaining 9.7s expanded Share latency and requests further
+large-fabricated-data improvements before running R03. Keep R03 artifacts and
+closed evidence unchanged as the baseline; no company update/refresh now.
+Current hypothesis: construct the needed monthly aggregate once per cell and
+derive period/trend outputs from it. Same full population, admission/blank/
+weighted-Share/FX semantics, native summaries and approved single custom chart.
+Correctness, useful repeated timing and actual Desktop proof are required before
+a new handoff. Production unchanged; no other task's work is touched.
+
+Further local result: bulk-month and wide-cache variants preserve complete
+results but do not establish useful speed. Source-export-backed preparation
+takes about 4.2s on 504,000 facts. The subsequent five-query diagnostic shows
+prepared-only matrix results at 2.6–2.7s, versus about 12s with its conditional
+fallback, with matching complete outputs in these fixed healthy contexts.
+Forced fallback removal is not deployable. Subsequent exact fallback, full
+bulk, split-training, fixed-column and thin-iterator tests all preserve the
+complete paired results, but none meets the speed objective; best exploratory
+full Share remains ~6.9s. These are single paired runs, not qualified medians.
+The relational and presentation-filter prototypes also fail the speed objective.
+The display-cost diagnostic finds full Share 9.7s versus 2.8s for numeric-only
+values, with every numeric cell unchanged; removing formatting/colours is not
+selected. Numeric aliases do not improve speed. Static Share/percentage-only/rule-input
+variants remain ~5.2–5.4s and are not selected. A complete grouped cache fallback
+matches results but is still ~6.2s; iterator dispatch fails with a dense-spool
+engine error and is rejected. Original colours and formats are retained.
+Prepared leaf, thin and relational variants pass their healthy full-result
+probes (all 150 sectors, formats and colours). Share improves about 7.5–8.4s to
+4.5–5.1s in single paired runs; no repeated/native Desktop pass yet. Preparation
+and encoding take 15.6s. The relational variant adds missing-key fallback;
+new-file boundaries and Fabric/freshness/RLS remain open. Zeroing aggregate
+fallbacks in a separate unsafe diagnostic saves almost no Share time, so the
+current six-query direct-sum/guard diagnostic isolates remaining per-row work.
+Further local work is still unqualified for speed. Exact native validation
+passes all504k stored Double pairs twice, zero tolerance, with unique keys,
+matching nulls/types and no values printed. Only then is the frozen SAMPLE's
+validation row set; old DAX comparator stays diagnostic0. All26 native queries
+and full pairs/populations match, but full Share remains7.50s. Snapshot-Parent-
+Diagnostic01 is isolating parent/totals cost; its forced zeros cannot be shipped.
+Broad/edge/repeated/Desktop/provider/freshness/RLS gates remain OPEN. The native
+controller is calculated-SAMPLE-only; not company/live Direct Lake integration.
+One current engine, prior engines closed. R03 remains HOLD; no company action.
+
 ## 24 October 2026 — faster R03 TEST handoff locally qualified; company run pending
 
 R03 is selected directly; do not run R02 first. Follow

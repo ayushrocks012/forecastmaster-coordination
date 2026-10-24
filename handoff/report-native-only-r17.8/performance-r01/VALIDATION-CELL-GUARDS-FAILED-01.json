@@ -1,0 +1,18 @@
+{
+  "Stage": "LOCAL_GUARD_DIAGNOSTIC_COMPILATION_FAILED",
+  "Queries": 16,
+  "CompletedComparisons": 0,
+  "Reason": "DEFINE overrides remove the measure dynamic-format implicit auxiliary; generated query referenced the missing auxiliary.",
+  "FrozenInputs": {
+    "baseline.json": "717fda3f5a3a58313756044ab12e397d1a6803c3684133767db4b2993a9128ec",
+    "candidate.json": "0949512ab65ba40a03ec8d51d044ef0e9734f9ce79c212d83c41827a256453e0",
+    "cell_diagnostic.py": "34a0d2d4ece34a6999ec963bdbc606a693cbdb446037723210b6bb3d7c0014a1",
+    "cell_gates.py": "5cd9c5e790c7a7251b54c0ab8ed821d3e1f339c6f4d59baa5f2a648fcffb11bc",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "b71111669e7d154fc26e000a07b3869a4f9608c4b52d8ba556858d6e5ed54f85",
+    "run_profile.ps1": "b8b64e9836bc3ab7d19d8fe7f59a86a4f24e2a1ccf5f10721386e5961f4aeb05"
+  },
+  "ResultsSHA256": "10025f9d2a87a7f05ce2b46041e570dcbd446f310c72b7620868b3c9bb98b917",
+  "Selected": false,
+  "TaskOwnedEngineClosed": true
+}

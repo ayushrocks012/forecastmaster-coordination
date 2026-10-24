@@ -1,0 +1,26 @@
+{
+  "Stage": "LOCAL_MONTHLY_PRECISION_DIAGNOSTIC",
+  "MetadataCounts": [
+    {
+      "[ActualRows]": 504000,
+      "[ExpectedRows]": 504000,
+      "[JoinedRows]": 504000,
+      "[Different]": 15,
+      "[BlankMismatch]": null,
+      "[AboveExistingNumericTolerance]": null,
+      "[MaxAbsoluteDelta]": 7.275957614183426e-12
+    }
+  ],
+  "CSVDefaultParserDifferences": 81598,
+  "MaxCSVParserAbsoluteDelta": 2.9103830456733704e-11,
+  "Example": {
+    "RawMatchesRoundTripCSV": true,
+    "NativeDecimalLiteralMatchesRaw": true,
+    "NativeBinaryPartsMatchRaw": true
+  },
+  "KnownLimit": "Representative constant matches; not yet a proof of the 15 discrepant rows root cause. Exact readiness remains refused.",
+  "ResultsSHA256": "4f7a8275876ad1306e4876655e362b35a374ce4c6d0b66492cf865c21e62698c",
+  "CompanyData": false,
+  "Selected": false,
+  "TaskOwnedEngineClosed": true
+}

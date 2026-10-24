@@ -1,0 +1,509 @@
+{
+  "Stage": "LOCAL_FURTHER_PROTOTYPES_REVIEWED",
+  "Date": "2026-10-24",
+  "Experiments": [
+    {
+      "Stage": "LOCAL_SOURCE_PREPARED_CACHE_PROBE",
+      "Queries": 22,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1263,
+          "BulkMs": 2183
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 1232,
+          "BulkMs": 2175
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1330,
+          "BulkMs": 1997
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1288,
+          "BulkMs": 1955
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 1089,
+          "BulkMs": 1956
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 1043,
+          "BulkMs": 2045
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 8077,
+          "BulkMs": 12496
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 7138,
+          "BulkMs": 11956
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 10421,
+          "BulkMs": 11812
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 10654,
+          "BulkMs": 12102
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "cache_diagnostic.py": "901e095d9f00750c2b17e2e2d85617b7c1ce50ffdf069304b740276969afb130",
+        "cache_gated.py": "606e3508e9642ff821a461136a8d11f96e42d1efb37d5bab80707ac6452c4136",
+        "candidate.json": "b5585298ad282094299d7aad188d43b08d0fc0abc3c2c63b2c69d4fad98b8cac",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "preparation.json": "ca442c3a71f6bcd193126ccb78441b6e8cbf5a014b126bae5ed98526eb8f43d4",
+        "queries.json": "bfacbfd5f38b25217eb2b0fa6e121c5a53451a2a94248ce270ce43c3ad4ae013",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "b908cee5bf379d85792aee44fdb18e1fffb43bfcdc6a69731bae4d14dfcf6f36",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "CachePopulation": [
+        {
+          "[Series]": 600,
+          "[Monthly]": 50400,
+          "[Statistics]": 21600
+        }
+      ],
+      "Preparation": {
+        "SourceExportProof": {
+          "Stage": "LOCAL_CALCULATED_SAMPLE_FACTS_EXPORTED",
+          "Exports": {
+            "facts": {
+              "Rows": 504000,
+              "ElapsedMs": 6957
+            },
+            "files": {
+              "Rows": 20,
+              "ElapsedMs": 7
+            },
+            "catalog": {
+              "Rows": 10,
+              "ElapsedMs": 3
+            }
+          },
+          "SourceHashes": {
+            "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+            "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+            "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+            "queries.json": "91625299ac81108bb6831aee9a4527cac29a9262c6307eb78cf6a8b824d89938",
+            "run_profile.ps1": "d67e2cfab590e247accf51560ed68b4eca097b32227cac1f78ccbf458f0dcc30"
+          },
+          "ExportHashes": {
+            "facts": "27f781e55fd5ba97ab59c4948e969f333dda71344de8c24fb6239d9b93783353",
+            "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+            "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+          },
+          "TaskOwnedEngineClosed": true,
+          "CompanyData": false
+        },
+        "Facts": 504000,
+        "Pairs": 600,
+        "MonthlyRows": 50400,
+        "StatisticsRows": 21600,
+        "PrepareMonthlyMs": 633,
+        "PrepareStatisticsMs": 3017,
+        "CompanyData": false,
+        "Method": "Source-export facts; component/channel/subchannel grouping; invalidate any missing member per sector/month; complete-history statistics only.",
+        "EncodeTablesAndPrepareTotalMs": 4193
+      },
+      "CompanyDeployment": false,
+      "CacheFreshness": "Immutable fabricated snapshot; no company auto-refresh integration is claimed.",
+      "Experiment": "ForecastMaster-R178-Cache-Gated-Probe-01",
+      "Decision": "REJECTED_SLOWER"
+    },
+    {
+      "Stage": "LOCAL_SOURCE_PREPARED_CACHE_PROBE",
+      "Queries": 22,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1151,
+          "BulkMs": 1510
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 1080,
+          "BulkMs": 1465
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1172,
+          "BulkMs": 1497
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1147,
+          "BulkMs": 1437
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 891,
+          "BulkMs": 1298
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 968,
+          "BulkMs": 1284
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6657,
+          "BulkMs": 19605
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6483,
+          "BulkMs": 19361
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 8534,
+          "BulkMs": 23759
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 8114,
+          "BulkMs": 23563
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "cache_empty_fallback.py": "81ae5fe0f39dd534831513eecff8583f3e2a790cb742ff35b7bbca6dd0b1e4f2",
+        "candidate.json": "63c057887741b1dc740b070e5e7d5ced69bd36ce980988c4cd0e50c848a823d1",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "preparation.json": "ca442c3a71f6bcd193126ccb78441b6e8cbf5a014b126bae5ed98526eb8f43d4",
+        "queries.json": "bfacbfd5f38b25217eb2b0fa6e121c5a53451a2a94248ce270ce43c3ad4ae013",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "907aadbafca638d7d75f58acd3a43285b11add76958dbdbf45d6005a2d0ddd80",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "CachePopulation": [
+        {
+          "[Series]": 600,
+          "[Monthly]": 50400,
+          "[Statistics]": 21600
+        }
+      ],
+      "Preparation": {
+        "SourceExportProof": {
+          "Stage": "LOCAL_CALCULATED_SAMPLE_FACTS_EXPORTED",
+          "Exports": {
+            "facts": {
+              "Rows": 504000,
+              "ElapsedMs": 6957
+            },
+            "files": {
+              "Rows": 20,
+              "ElapsedMs": 7
+            },
+            "catalog": {
+              "Rows": 10,
+              "ElapsedMs": 3
+            }
+          },
+          "SourceHashes": {
+            "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+            "export_sample.py": "66bc55d5df10f078313da420e47971c30d2577d80fae147062395dc4b5cab8ea",
+            "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+            "queries.json": "91625299ac81108bb6831aee9a4527cac29a9262c6307eb78cf6a8b824d89938",
+            "run_profile.ps1": "d67e2cfab590e247accf51560ed68b4eca097b32227cac1f78ccbf458f0dcc30"
+          },
+          "ExportHashes": {
+            "facts": "27f781e55fd5ba97ab59c4948e969f333dda71344de8c24fb6239d9b93783353",
+            "files": "134c75e3e0c63751d1c1e69ab19fee2fdef8f4a1ef2a7ff4eb4cfbd50fe2feaa",
+            "catalog": "3e2976f91dd00760db2012dea843f45462eda34166e1e1e88232d858d3a1d93a"
+          },
+          "TaskOwnedEngineClosed": true,
+          "CompanyData": false
+        },
+        "Facts": 504000,
+        "Pairs": 600,
+        "MonthlyRows": 50400,
+        "StatisticsRows": 21600,
+        "PrepareMonthlyMs": 633,
+        "PrepareStatisticsMs": 3017,
+        "CompanyData": false,
+        "Method": "Source-export facts; component/channel/subchannel grouping; invalidate any missing member per sector/month; complete-history statistics only.",
+        "EncodeTablesAndPrepareTotalMs": 4193
+      },
+      "CompanyDeployment": false,
+      "CacheFreshness": "Immutable fabricated snapshot; no company auto-refresh integration is claimed.",
+      "Experiment": "ForecastMaster-R178-Cache-Empty-Fallback-Probe-01",
+      "Decision": "REJECTED_SLOWER"
+    },
+    {
+      "Stage": "LOCAL_BULK_KERNEL_PROBE",
+      "Queries": 21,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1046,
+          "BulkMs": 324
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 933,
+          "BulkMs": 287
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1043,
+          "BulkMs": 275
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1032,
+          "BulkMs": 296
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 854,
+          "BulkMs": 266
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 880,
+          "BulkMs": 272
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6393,
+          "BulkMs": 6510
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6197,
+          "BulkMs": 6381
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 8007,
+          "BulkMs": 10515
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 8019,
+          "BulkMs": 10599
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "bulk_exact.py": "d0d98c3c6f736aef86b43992cac969119bf4839bc92f1ddcf6dcb122acae6239",
+        "candidate.json": "ea5893993c9ad3238b50801ccabf97d1040586d2fb9d534f5221dbade867caf9",
+        "exactprobe.py": "ec92c240469bdbaa2583a24dd3b884b9e40e73e3c12eacb2d6dfb6b6d146c1e3",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "4d05e339715b9d23d01329b7acad77b35d02e88bca4479fcd615a62556003ab7",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Exact-Bulk-Probe-01",
+      "Decision": "REJECTED_FULL_MATRIX_NOT_FASTER"
+    },
+    {
+      "Stage": "LOCAL_BULK_KERNEL_PROBE",
+      "Queries": 21,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1003,
+          "BulkMs": 535
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 927,
+          "BulkMs": 556
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1037,
+          "BulkMs": 503
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1074,
+          "BulkMs": 586
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 870,
+          "BulkMs": 460
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 893,
+          "BulkMs": 566
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6721,
+          "BulkMs": 5189
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6178,
+          "BulkMs": 5050
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 8188,
+          "BulkMs": 6847
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 7974,
+          "BulkMs": 6930
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "bulk_exact.py": "d0d98c3c6f736aef86b43992cac969119bf4839bc92f1ddcf6dcb122acae6239",
+        "bulk_fit.py": "b3c71f4e9ab198b2ef6a8676b33250d781829b2e05352e3a58d08a1b87fad4cd",
+        "candidate.json": "96cebb3bce0bedc775b4af304ef30a4441550f1ea523028064010d69eaec991c",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "fitprobe.py": "4beb47039c640ae5b2eef81ec1e28706fcfb047afd4d088a29cc4c3c09d617fa",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+      },
+      "ResultsSHA256": "f1c072b1c6d7c7c93d46dc08ffd29e9c380762afd5765a19a472dade462f1a41",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Split-Training-Probe-01",
+      "Decision": "PARTIAL_IMPROVEMENT_NOT_SELECTED"
+    },
+    {
+      "Stage": "LOCAL_NATIVE_FIXED_MEASURE_SHAPE_PROBE",
+      "Pairs": [
+        {
+          "Metric": "market",
+          "DynamicMs": 6506,
+          "FixedMs": 9316,
+          "FlattenedCells": 1560,
+          "Sectors": 150
+        },
+        {
+          "Metric": "share",
+          "DynamicMs": 8050,
+          "FixedMs": 11732,
+          "FlattenedCells": 1560,
+          "Sectors": 150
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "candidate.json": "31c0a2e5881e4b0e9ec7eaca0d8bd106591a74846a83f0a66fdc20d7858701d2",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "3e7702aa85b99df79ea503a0fb39bb2031ed61ee758747d8fb5e1f3e05b1b655",
+        "run_profile.ps1": "8f9147c8b5ebac29ac7d68a9489e74c80bc548a52e4adedbdaf8472587c8e3bc",
+        "staticprobe.py": "9be9fb552b6b0c15e0080aaa5c42597327081a9d7caca94cb1e0fa857c5e6864",
+        "static_values.py": "5bded935ce2ed6a3450eb0772df56b9adf5b221b34a9730ebacc5c1a69ce5571"
+      },
+      "TaskOwnedEngineClosed": true,
+      "FieldParameterUIBuilt": false,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Static-Matrix-Probe-01",
+      "Decision": "REJECTED_SLOWER",
+      "ResultsSHA256": "6540316a55c3adabe7d6d12600a7945288bcaca34a43a9b28178e7f8c231ac2b"
+    },
+    {
+      "Stage": "LOCAL_BULK_KERNEL_PROBE",
+      "Queries": 21,
+      "Pairs": [
+        {
+          "Query": "market/Units",
+          "R03Ms": 1013,
+          "BulkMs": 995
+        },
+        {
+          "Query": "market/Value",
+          "R03Ms": 928,
+          "BulkMs": 943
+        },
+        {
+          "Query": "share/Units",
+          "R03Ms": 1027,
+          "BulkMs": 1044
+        },
+        {
+          "Query": "share/Value",
+          "R03Ms": 1022,
+          "BulkMs": 1069
+        },
+        {
+          "Query": "ef/Units",
+          "R03Ms": 864,
+          "BulkMs": 878
+        },
+        {
+          "Query": "ef/Value",
+          "R03Ms": 857,
+          "BulkMs": 899
+        },
+        {
+          "Query": "market-expanded/native-window",
+          "R03Ms": 6350,
+          "BulkMs": 6310
+        },
+        {
+          "Query": "market-expanded/full-core",
+          "R03Ms": 6182,
+          "BulkMs": 6235
+        },
+        {
+          "Query": "share-expanded/native-window",
+          "R03Ms": 7950,
+          "BulkMs": 7994
+        },
+        {
+          "Query": "share-expanded/full-core",
+          "R03Ms": 7931,
+          "BulkMs": 8121
+        }
+      ],
+      "Mismatches": 0,
+      "SourceHashes": {
+        "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+        "candidate.json": "bbbe706e7d93bcc6345309eb634ec770b160cb59b851fefcd4a459535566c3e2",
+        "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+        "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+        "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+        "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b",
+        "thinprobe.py": "724aa23c729c1283858fdb6c0a29395919866084322444f653812db39f88a4dd",
+        "thin_members.py": "f13ef8fd04d266cb4c8f039bee278bacc4aaa7bd868961fe9a4b4c9c14f55dec"
+      },
+      "ResultsSHA256": "8d857bde8f83134131ef592d4be6843733fdf612e6f9c431f4992bf912cf386f",
+      "TaskOwnedEngineClosed": true,
+      "CompanyAcceptance": false,
+      "Experiment": "ForecastMaster-R178-Thin-File-Probe-01",
+      "Decision": "REJECTED_NO_USEFUL_IMPROVEMENT"
+    }
+  ],
+  "BroadRegressionOrDesktopAcceptance": false,
+  "RepeatedTimingQualified": false,
+  "CompanyCallsMade": false,
+  "ProductionChanged": false,
+  "CompanyR03": "HOLD"
+}

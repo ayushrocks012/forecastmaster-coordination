@@ -1,0 +1,70 @@
+{
+  "Stage": "LOCAL_PREPARED_CELL_PROBE",
+  "Queries": 25,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 1030,
+      "CandidateMs": 543
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 954,
+      "CandidateMs": 552
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 1019,
+      "CandidateMs": 500
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 1043,
+      "CandidateMs": 598
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 875,
+      "CandidateMs": 454
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 1001,
+      "CandidateMs": 625
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 6580,
+      "CandidateMs": 8524
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 6077,
+      "CandidateMs": 8345
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 7971,
+      "CandidateMs": 8610
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 7978,
+      "CandidateMs": 8620
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "candidate.json": "88394c1159fa2b19ead1e5fdb0e5d1e31a8aff6947c0ad6ba27f6dd96d2afc6f",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+    "queries.json": "d2cc482af763931cb21267ae1647725373364bd9332c7769f2d6dd1368c09c8e",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b",
+    "shared_gate.py": "b178d3d8badfaa9b57a16f3a18d3e33f6d5ea652c8636c4c3108d88d42df58d8"
+  },
+  "ResultsSHA256": "cafd9ff1920d95e901ca20a8aee207a1309cfd8f6d7ae5ec84f8bfec98b6fd35",
+  "TaskOwnedEngineClosed": true,
+  "CompanyOrDesktopQualified": false
+}

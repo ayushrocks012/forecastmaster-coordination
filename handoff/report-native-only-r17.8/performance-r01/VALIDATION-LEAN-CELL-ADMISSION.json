@@ -1,0 +1,77 @@
+{
+  "Stage": "LOCAL_PREPARED_CELL_PROBE",
+  "Queries": 26,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 980,
+      "CandidateMs": 533
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 874,
+      "CandidateMs": 566
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 976,
+      "CandidateMs": 479
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 986,
+      "CandidateMs": 558
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 830,
+      "CandidateMs": 449
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 843,
+      "CandidateMs": 553
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 6190,
+      "CandidateMs": 5859
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 6234,
+      "CandidateMs": 5749
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 7995,
+      "CandidateMs": 6073
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 7850,
+      "CandidateMs": 5913
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "candidate.json": "332e05d753b6e8b0e58dafb18ec360c408e070759d0b88631edd7eb0dcd2bc5f",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "lean_cell_gate.py": "a4e127a2624a6c5e83c04a9bf7834995049a647dcbea261633dff93fc7838957",
+    "preparation.json": "298bbf9494e0399b06d69700fb554b593b1d023922de0e810ad36c008ef7724b",
+    "queries.json": "11acaa77d7933a0b8443950a699b38c0444fe8ff3c09f13ba89341cddac7257f",
+    "routed_cells.py": "f423f5aafce4159cb3985d5735ca7231d66f1d8d8adb245f66d3d9a4aaf8278b",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "77a8287b774ae8bfc9216cfad6f92d86ed6a9c89a43eee1aabc2bd2430accbb5",
+  "TaskOwnedEngineClosed": true,
+  "CompanyOrDesktopQualified": false,
+  "EligibilityCount": [
+    {
+      "[EligibleLeaves]": 1800,
+      "[EligibleAggregates]": null
+    }
+  ]
+}

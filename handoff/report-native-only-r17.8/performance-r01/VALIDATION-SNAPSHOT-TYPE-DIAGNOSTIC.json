@@ -1,0 +1,38 @@
+{
+  "Stage": "LOCAL_SNAPSHOT_DIAGNOSTIC_REVIEWED",
+  "InputEncodingProof": {
+    "Compared": 504000,
+    "PythonSourceEncodingDifferences": 0
+  },
+  "FrameworkExporterRegression": {
+    "CLR": "4.0.30319.42000",
+    "Is64Bit": true,
+    "RRoundTrips": false,
+    "G17RoundTrips": true,
+    "RawRvsG17Differences": 15,
+    "MaxAbsDelta": 7.275957614183426e-12,
+    "OfficialSource": "https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#round-trip-format-specifier-r"
+  },
+  "RemainingComparison": {
+    "RowsEachSide": 504000,
+    "Different": 10,
+    "BlankMismatch": 0,
+    "MaxAbsDelta": 7.275957614183426e-12,
+    "All10ExportedActualAndExpectedG17StringsEqual": true
+  },
+  "Inference": "Testing stored DOUBLE reference instead of virtual aggregation comparison. Numeric/type cause is not yet established. Exact gate remains closed.",
+  "Quality": {
+    "Python310ASTFiles": 84,
+    "RuffF": "PASS",
+    "Bandit": "PASS",
+    "UnitTests": 30,
+    "UnitSeconds": 46.489,
+    "GraphImpact": "UNKNOWN: AUTHORITY_DRIFT_BLOCKS_CONCLUSION; direct tracing/testing fallback"
+  },
+  "NoPerformanceAcceptanceFromOverlappedDiagnosticDurations": true,
+  "CompanyAction": false,
+  "DiagnosticInputSHA256": "050a037953919e9b94f9e6a09ab15901bbd90d304dbe3a144966c5a495b47e1a",
+  "CountExportSHA256": "8d62a03233593e71b511f898ed74ae6bc0f22c7e11b17b581febf0506a89bc8f",
+  "DifferenceExportSHA256": "56c583a74f6c33465a2ae7779d9bca29c182dc082945c5086feff0c3645d049c",
+  "TaskOwnedEngineClosed": true
+}

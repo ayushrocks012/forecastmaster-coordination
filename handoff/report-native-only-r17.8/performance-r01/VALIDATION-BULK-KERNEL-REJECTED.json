@@ -1,0 +1,72 @@
+{
+  "Stage": "LOCAL_BULK_KERNEL_PROBE",
+  "Queries": 21,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "R03Ms": 1356,
+      "BulkMs": 1393
+    },
+    {
+      "Query": "market/Value",
+      "R03Ms": 1228,
+      "BulkMs": 1330
+    },
+    {
+      "Query": "share/Units",
+      "R03Ms": 1219,
+      "BulkMs": 1224
+    },
+    {
+      "Query": "share/Value",
+      "R03Ms": 1226,
+      "BulkMs": 1210
+    },
+    {
+      "Query": "ef/Units",
+      "R03Ms": 1078,
+      "BulkMs": 1229
+    },
+    {
+      "Query": "ef/Value",
+      "R03Ms": 1115,
+      "BulkMs": 1165
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "R03Ms": 8183,
+      "BulkMs": 9542
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "R03Ms": 8555,
+      "BulkMs": 9455
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "R03Ms": 9160,
+      "BulkMs": 8856
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "R03Ms": 11233,
+      "BulkMs": 9416
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "baseline.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "bulkcells.py": "fc7717ffa64206f4feb94b543dce7ce192e23c53e445bd7a8f968cee6fe754b4",
+    "bulkprobe.py": "fa60ab530574632674f73f140e899f50dae5af3a8d89f3eed1ed9a525f84f908",
+    "candidate.json": "afce0d7a82ed40a23af1c40756951855ba931345474674ae96ddda11877bed3b",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "e164494a656e136d6509614802d1a796d1a00e8d91b1cb8e6d521cd542f0cd34",
+  "TaskOwnedEngineClosed": true,
+  "CompanyAcceptance": false,
+  "Selected": false,
+  "Decision": "Not a near-instant improvement: Market regresses, bounded Share core improves but native-window barely changes; one ordered pair per context only."
+}

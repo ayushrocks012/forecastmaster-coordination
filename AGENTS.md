@@ -1,5 +1,12 @@
 # ForecastMaster coordination repository
 
+Superseding steering, 24 October: HOLD the R03 company-laptop run. The user
+requires further improvement on the large fabricated dataset first because
+expanded Share still takes 9.7s DAX. Preserve R03 bytes/evidence as the baseline;
+continue isolated local calculation experiments and actual Desktop measurement.
+No company update/refresh is currently requested. Keep the same population and
+semantics, the single approved custom overlay, and production R16.6 unchanged.
+
 Current superseding handoff, 24 October — performance R03: select
 performance-r01/receiving-r03/INSTALL AND PREPARE PRIVATE TEST R03.py directly,
 following its OPEN FIRST.txt. Do not run R02 first. R03 includes the qualified

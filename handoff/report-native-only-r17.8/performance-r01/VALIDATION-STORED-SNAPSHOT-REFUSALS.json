@@ -1,0 +1,101 @@
+{
+  "Stage": "LOCAL_STORED_SNAPSHOT_REFUSALS",
+  "Attempts": [
+    {
+      "Directory": "ForecastMaster-R178-Stored-Double-Snapshot-Probe-01",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "InputsSHA256": "ece538972c32ccf8ca8533cfd44909f4e0e5c6301667ae6e101b3f95a405e2ac",
+      "ResultsSHA256": "150ea24b6dc8d9b55e86b10c4589bca7c54e0d20b6b27f7c2a2dc3beb54f71f1",
+      "ServingAccepted": false,
+      "TaskOwnedEngineClosed": true
+    },
+    {
+      "Directory": "ForecastMaster-R178-Explicit-Double-Snapshot-Probe-01",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "InputsSHA256": "c8b01d93d90c2c9aaa6918c441931a0cef5d211af0f63a6fc37a4bff48363bd1",
+      "ResultsSHA256": "53264fb1a90dcf9d18bbf0efd30af5dbe5fc93069ede20ddaaada14d231058f1",
+      "ServingAccepted": false,
+      "TaskOwnedEngineClosed": true
+    },
+    {
+      "Directory": "ForecastMaster-R178-Native-Snapshot-Probe-01",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "InputsSHA256": "7bd6d1c097fdf450de37fb8a38a032516b782e9138619e24c8650a02a4cfd37e",
+      "ResultsSHA256": "1c568b12bc237c911a0efafc550ba6083e7db78130200f0801e76f214df4f5fa",
+      "ServingAccepted": false,
+      "TaskOwnedEngineClosed": true
+    },
+    {
+      "Directory": "ForecastMaster-R178-Native-Snapshot-Probe-02",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "InputsSHA256": "b93fcb208b3350f653cc5a707146d0d2370cb24747d6b72df48049c091ba6379",
+      "ResultsSHA256": "a255e3c95d8e98cc5bd330f1ebb2af8c7262fd87cfa3889f6aa773156b1a9425",
+      "ServingAccepted": false,
+      "TaskOwnedEngineClosed": true
+    },
+    {
+      "Directory": "ForecastMaster-R178-Rational-Snapshot-Probe-01",
+      "ExecutedQueries": 1,
+      "Readiness": [
+        {
+          "fm_serving_health[Ready]": 0,
+          "fm_serving_health[Amounts]": 0,
+          "fm_serving_health[Keys]": 1,
+          "fm_serving_health[Cutoffs]": 1,
+          "fm_serving_health[Calendar]": 1,
+          "fm_serving_health[Coverage]": 1,
+          "fm_serving_health[ShareDefinition]": 1
+        }
+      ],
+      "InputsSHA256": "41175c7c97766643e9ffb16b2a60a9a127384b2298c848b1b9ac810e91c0c04c",
+      "ResultsSHA256": "f46505513d992b78d8f904551f3cc83312c8755e18c8aa1bd2ab56c43864f77a",
+      "ServingAccepted": false,
+      "TaskOwnedEngineClosed": true
+    }
+  ],
+  "CompanyAction": false
+}

@@ -1,0 +1,51 @@
+"""Reference numeric measures directly from their exact existing formats.
+
+Power BI supports a direct self reference in a dynamic format string. Numeric
+expressions, compact literal formats and report-local colour DAX stay intact.
+This tests whether the provider can reuse the numeric result more effectively.
+"""
+from copy import deepcopy
+import hashlib
+import json
+from pathlib import Path
+import shutil
+
+import bulkprobe
+import prepared
+import regression
+
+
+def patch(database):
+    fixed=deepcopy(database)
+    measures=prepared.adapter.planning.measures(fixed)
+    for name in ('N Summary Cell','N Headline Cell'):
+        expression=measures[name]['formatStringDefinition']['expression']
+        if expression.count('SELECTEDMEASURE()')!=1:
+            raise ValueError('Unknown original native dynamic format')
+        measures[name]['formatStringDefinition']['expression']=expression.replace('SELECTEDMEASURE()','['+name+']')
+    return fixed
+
+
+def build(destination,source,runner):
+    if destination.exists():
+        raise ValueError('Preserve previous formatting prototype')
+    binding=regression.checked(source);regression.checked(runner)
+    baseline=json.loads((source/'candidate.json').read_text());candidate=patch(baseline)
+    destination.mkdir(parents=True)
+    for name,data in [('baseline',baseline),('candidate',candidate)]:
+        (destination/(name+'.json')).write_text(json.dumps(data,ensure_ascii=False))
+    for name in ('queries.json','expected.json','launch_synthetic_engine.ps1'):
+        shutil.copy2(source/name,destination/name)
+    shutil.copy2(runner/'run_profile.ps1',destination/'run_profile.ps1')
+    shutil.copy2(Path(__file__),destination/Path(__file__).name)
+    files={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in destination.iterdir()}
+    (destination/'FROZEN-INPUTS.json').write_text(json.dumps({'Files':files,'Prototype':'direct-format-reference',
+        'ExpectedPopulation':binding['ExpectedPopulation'],'Baseline':'qualified R03',
+        'NumericExpressionsTablesRelationshipsSourcesChanged':False,'CompanyDeployment':False,
+        'Documentation':'https://learn.microsoft.com/en-gb/power-bi/create-reports/desktop-dynamic-format-strings'},indent=2))
+    return {'Directory':str(destination),'Queries':len(json.loads((source/'queries.json').read_text()))}
+
+
+if __name__=='__main__':
+    import sys
+    print(json.dumps(bulkprobe.verify(Path(sys.argv[2])) if sys.argv[1]=='verify' else build(*(Path(s) for s in sys.argv[2:5])),indent=2))

@@ -15,14 +15,54 @@ company observations are not copied here. New results update this reference;
 
 ## Resume in one minute
 
-**Current stage:** performance R03 is locally qualified for its declared scope
-and selected as the next TEST receiving handoff. It includes the R02 compact
+**Superseding user decision, 24 October:** HOLD the R03 company run. Its 9.7s
+expanded Share delay is unacceptable for senior management. Further isolated
+local work is authorized against the same 20-file / two-cycle / five-driver /
+150-sector / 504,000-fact fixture. Preserve qualified R03 as the comparison
+baseline, all numeric/blank/Share/FX/admission semantics and old release bytes.
+First test collecting the needed monthly values once per cell, rather than
+rebuilding source/month groups for each monthly kernel call. No source rewrite,
+company updater or refresh is requested at this stage. New correctness, repeated
+timing and actual Desktop checks must precede another receiving recommendation.
+The following R03 handoff is qualified historical work, currently held.
+
+**Current local work (not released):** prepared leaf KPIs from actual fabricated
+exports: 20 files / 600 source-sector series / 21,000 rows / 48 fields covering
+seven years, five periods and three trends; preparation+encoding 15.6s. Healthy
+22-query probes match all values/formats/colours: original leaf Share 7.9→5.1s;
+thin lookup 7.5→4.5s; relational serving 8.4→4.9s (single pairs, not medians).
+The relational variant adds missing-key fallback and four serving relationships;
+new-file boundary, broad regression, actual Desktop, freshness/Fabric/RLS remain
+OPEN. Old leaf/thin variants have an uncovered-key blanking gap and are not
+eligible for release. A diagnostic that zeroes only aggregate fallbacks keeps
+all 1,500 leaf cells unchanged but saves almost no Share time (5.03→4.99s).
+
+**Current experiment (not released):** Snapshot-Parent-Diagnostic-01.
+Native-Bitwise-Snapshot01 now passes all26 native queries/ten whole-result pairs
+and every required population. A corrected exact input checker verifies all
+504,000 unique keys, CLR Double types, blanks and all64bits TWICE (zero tolerance,
+no values logged). Only then may the task-owned immutable SAMPLE set its matching
+validation row. The old DAX numeric comparator remains a visible diagnostic0;
+no unverified flag bypass or tolerance change. Stored/explicit-DOUBLE trials
+both still refused and are preserved. Company/live refresh integration is NOT
+implemented; the controller is for this frozen calculated SAMPLE only.
+
+Despite this correctness pass, full Share is still7.50s (R03 comparison9.26s).
+Near-instant is not achieved. The current four-query parent diagnostic zeroes
+only raw fallback parent/totals and must retain all1,500 sector leaf values/
+formats/colours. Its zeros are NOT deployable. It will locate the remaining cost
+before a hierarchical serving change. Broad/edge/repeated/Desktop gates remain
+OPEN; independent full-sector oracle is written but not built/run. One current
+engine, earlier owned engines closed. R03 stays HOLD. No company action.
+
+**Historical R03 stage (superseded by HOLD above):** performance R03 is locally
+qualified for its declared scope, but is not currently enabled for receiving. It includes the R02 compact
 UI/selection corrections plus two faster summary-cell expressions. R02 and R03
 have NOT been run in company Fabric. Production R16.6 and every older release's
 bytes remain unchanged. Company R17.8 R01 passed bounded model verification,
 but its UI was rejected. Near-instant performance is NOT achieved.
 
-**Next receiving action:** follow
+**Historical receiving instructions — do not execute while held:** follow
 [R03 OPEN FIRST.txt](performance-r01/receiving-r03/OPEN%20FIRST.txt) directly;
 do not run the R02 installer first. In one new ForecastMaster_GM_Setup cell,
 paste the whole `INSTALL AND PREPARE PRIVATE TEST R03.py`, run only that cell
@@ -1129,6 +1169,197 @@ medians were Plan 1,064.5ms, Benchmark 2,215ms, Variance 2,736.5ms, % 2,847ms,
 future trend 1,939ms. Different queries/cache order/population prevent a valid
 before/after report-speed claim. Full visual-query timings and capacity/storage
 profiling remain needed before another physical/database optimization.
+
+### 24 October — further local work after the R03 hold
+
+**Further local work:** bulk-month kernels pass 21 queries / ten whole-result
+pairs but are not selected (Market full 8,555→9,455ms; Share full 11,233→9,416ms,
+Share native window only 9,160→8,856ms). A generic prepared-data prototype uses
+the actual calculated SAMPLE exports, not the expected-result generator:
+504,000 facts → 50,400 wide monthly rows / 600 source-sector keys / 21,600
+complete-history statistics. Source streaming 6,957ms; preparation/encoding
+4,193ms. It also passes all 22 native queries / ten full pairs but is slower.
+Export attempt01 stopped at C# compilation before export (missing System.Data
+reference); a cheap compile check and separately frozen attempt02 pass.
+
+The next five-query diagnostic establishes admission is TRUE (150 keys,
+1,800/1,800 period members). Normal conditional fallback costs Market 12,101ms
+and Share 12,008ms, versus 2,584/2,681ms for forced cache-only results, with
+identical complete matrix outputs. The forced model is diagnostic ONLY; never
+deploy its removed fallback. Compiler-level causation is unknown. Gated and empty-filter fallback variants also pass complete results but
+are slower (Market full 11,956ms and 19,361ms). A full grouped rewrite improves
+scalars to ~0.3s but full matrices remain 6.4s Market / 10.6s Share. Separating
+training reduces them to 5.1s / 6.9s in one paired run; still not selected or
+broadly qualified. Fixed-measure matrix columns are slower (9.3s / 11.7s), and
+thinning file iterator metadata has no useful effect. The lean-cache variant
+was built but never launched. These are isolated measurements, not repeated
+performance guarantees; complete values/formats/colours and all 150 sectors
+match in each completed probe. See VALIDATION-FURTHER-PROTOTYPES.json.
+
+The relational monthly index preserves complete results but only reduces full
+Share 7,814→7,368ms; rejected. Presentation-filter normalization and direct
+format self-reference also provide no useful improvement. Normalization01
+failed DAX compilation due a generated RETURN without VAR; corrected attempt02
+passes all pairs. No failed candidate is selected. A brief Python unit run
+also overlapped late normalization02 queries; its times are not qualified.
+
+**Useful diagnostic:** unchanged full 150-sector matrices, 1,560 values each,
+with all numeric identities retained: Market 7,150ms full / 4,788 no dynamic
+format / 4,417 no colour / 2,186 numeric only; Share 9,702 / 6,709 / 6,220 /
+2,806ms. This establishes material presentation overhead in this run; engine
+compiler cause is not established and stripping presentation is NOT selected.
+See VALIDATION-DISPLAY-AND-STRUCTURE.json. Format-free numeric aliases also produce no useful speed change. Static Share
+formatting gives 8.4→5.4s, a fixed native value/rule-input shape 8.5→5.3s, and
+percent-only current-cell alerts 8.1→5.2s. These UI experiments are NOT selected;
+no field-parameter UI was built, and original full colours/formats remain.
+A zero/one-row fallback iterator fails with internal dense-spool errors; rejected.
+Replacing cache misses with the complete grouped fallback passes 22 queries,
+but Share remains 8.6→6.2s in the single pair. See the immutable
+VALIDATION-POST-DISPLAY-PROTOTYPES.json. None is a repeated timing/desktop pass.
+
+**Current local prototype:** prepared sector-level period KPIs (`leaf_prepare`,
+`leaf_model`, `leafprobe`) from ACTUAL fabricated source exports, all 20 files,
+600 source-sector series, seven years / five period types / three trends,
+21,000 wide rows / 48 numeric columns. Preparation plus encoding 15,598ms;
+four independent small arithmetic tests pass (linear projection, weighted
+Share, missing/zero/negative and empty/zero denominator). Leaf rows in the
+normal one-country/cycle/native-metric domain look up their exact prepared
+Plan/Benchmark. Driver/grand totals, arbitrary grouped Share and out-of-domain
+contexts retain the complete grouped fallback, not summed sector Share KPIs.
+The same original formats/colours and UI remain. The frozen 22-query healthy probe subsequently passes, followed by thin and
+relational variants. See the current resume and VALIDATION-PREPARED-LEAF-PILOTS.json.
+
+At that boundary all engines were closed. Prepared data remains an immutable
+fabricated snapshot;
+company freshness, refresh integration, RLS and migration are unqualified.
+R03 receiving stays held; no company update or refresh is requested.
+
+The direct-sum diagnostic is now closed: full known healthy leaf outputs
+match, but Share improves only 6,345→5,602ms (direct prepared sums), then
+5,459ms with fixed diagnostic guards. These constants/aggregate sums are NOT
+deployable. A calculation-group trial preserves results but slows full matrices
+to ~30s and is rejected. Narrow plan/benchmark facts (252k/756k rows) and a
+150-row unique sector dimension match full pairs; full Share is 5,012ms and
+4,963ms respectively. This is still too slow; no new candidate is qualified.
+The next prepared-cell experiment moves the leaf variance/format/colour work
+to refresh, retains native numeric types and the complete aggregate fallback,
+and restricts normalization to presentation-only dimensions. Its missing-currency
+mapping guard is explicit. Same-source amount rewrite freshness and company
+security/integration remain OPEN. See VALIDATION-DEEP-SERVING-PILOTS.json.
+
+Prepared-Cells-Probe-01 and02 each pass 25 queries/ten exact full-result pairs,
+but full Share remains 8.8–9.0s; removing the new row dimension from metadata
+normalization does not fix speed. Shared-Cell-Gate-01 likewise has no useful
+benefit. These are rejected timing candidates. The direct physical-cell
+comparison preserves all 1,500 healthy leaf values/formats/colours at 232ms
+Market /163ms Share, but is deliberately invalid for aggregate Share/selection
+admission and cannot be deployed. The next 16-query guard diagnostic01 fails
+compilation: query-level overriding the dynamic-format measure removes its
+implicit format auxiliary. Attempt02 uses physical named diagnostic measures,
+passes every known leaf and isolates the costs: direct137–269ms, source174–199,
+period153–156, prepared-cut234–245, cutoff300–304, count147–149,
+aggregate fallback937–1060, full numeric gate2257–2261ms. Its missing checks
+remain diagnostic-only, never a release. See VALIDATION-DIRECT-CELLS-DIAGNOSTIC
+and VALIDATION-CELL-GUARDS-DIAGNOSTIC receipts. Actual-Cell-Presentation-Probe-01
+is now running: unchanged numeric guard, format the actual returned value,
+colour using the exact percentage sibling under the same sources/period/window.
+Independent full-sector oracle source is prepared but not built/run; the older
+75-query regression covers only driver/grand rows and cannot qualify new leaf
+serving by itself. Company snapshot freshness/RLS/provider gates remain OPEN.
+
+Actual-value presentation passes all 25 pairs but full Share remains
+7,175ms. Routed-Cells02's first 25 queries complete and match requested pairs
+by the same core outputs; its added admission-count query fails due an extra
+closing parenthesis, so the overall probe is FAILED, not a new pass. Its first
+build01 also stopped before launch due a shadowed Python binding variable.
+Corrected generator checks balanced parentheses before freezing. Lean-Cell-
+Admission01 passes all 26 queries; full Market6,234→5,749ms /Share7,850→5,913ms.
+All 1,800 expected eligible leaf contexts are true (including300 intentionally
+blank actual-only variance cells), and no aggregate context is eligible. It is
+not selected for speed. These unchanged pair tolerances/populations remain.
+
+The next architecture experiment, Validated-Snapshot02, compares every prepared
+monthly component amount and blank group against current raw facts at refresh,
+plus all source/sector keys, cutoffs, calendar and period coverage. Its control
+is a calculated model table. A ready compatible leaf reads stored numbers,
+formats and colours; interactive cohort/period/window guards remain. Scope's
+unambiguous source-length-prefixed sector key filters physical cells. If the
+snapshot is not ready or context unsupported, a newly explicit full-cell helper
+uses ONLY grouped raw Plan/Benchmark, bypassing old leaf caches even for a
+same-ID amount correction. Weighted aggregate Share remains grouped raw.
+Attempt01 stopped before queries: calculated FK lookup formed a relationship
+cycle. Attempt02 materializes the key in the table source; currently running.
+No company snapshot pipeline/Delta/Import migration or RLS gate is implemented.
+
+Validated-Snapshot02 processes successfully and all25 paired/population
+queries match, but Ready=0 (Amounts=0; all six metadata/coverage flags=1); full
+Share9,784ms is a RAW-FALLBACK result, not a serving benchmark. Source CSV's
+ordinary float parser changes81,598/504,000 inputs (max2.91e-11). A private
+round-trip parser rebuilds monthly/statistics/KPIs, preserving blank Amount
+versus valid zero and blank string sector metadata; three new precision/encoding
+unit checks pass. Precise-Snapshot01 still has Amounts=0 and stops after the
+first readiness read. It does not inherit25-query qualification.
+
+The two-query native precision diagnostic compares504k keys on each side:
+504k joins,15 nonidentical amounts, zero blank or above-tolerance differences,
+max7.28e-12. A representative native decimal literal and binary reconstruction
+both match raw, so it does not prove the15-row cause. Binary-Snapshot01 encodes
+DOUBLEs as integer mantissa/binary exponent (local fixture transport only), but
+readiness still refuses and no broad benchmark runs. Exactness is not relaxed.
+Native-Monthly-Export01 streams facts504k, files20, catalog10 and actual native
+monthly groups504k from the bound synthetic engine. Fresh raw facts match the
+original raw CSV bit-for-bit on all504k row keys (no recompute variation).
+Native-Snapshot01 prepares from those grouped inputs and rebuilds all monthly/
+period data, using lossless transport. Preparation12,572ms; currently running.
+Its refresh control compares the same actual monthly business grouping before
+allowing direct ready leaf reads. No raw amount or company source is public.
+
+Crucial integration boundary: this refresh-time control is safe only for a
+coherent snapshot. Do not install it onto live auto-framing Direct Lake raw
+sources while prepared/control tables could remain older. A separate Import
+snapshot or version-filtered immutable serving batch plus coherent switch and
+RLS/provider verification is required before company delivery. This is not
+implemented or company-qualified. Existing R03 remains held/unchanged.
+
+Further precision diagnosis: all504k prepared source values decoded in
+Python equal the G17 native monthly export exactly. This does not establish
+that the native intermediate comparison sees identical value types. The
+Windows64 CLR4 host reproduces Microsoft's documented R-format defect;
+G17 round-trips correctly, and the revised raw export differs in exactly15
+cells (≤7.28e-12). Native-Snapshot02 nevertheless still refuses its Amounts
+flag; no broad timing. Rational-Snapshot01's small integer/division transport
+also refuses and is unselected. The two-export native diagnostic compares
+504k rows each,10 exact/numeric differences, no blank differences; all10
+actual/expected G17 strings are identical. A stored DOUBLE monthly reference
+is now being tested instead of a virtual aggregation. This is a checker/type
+hypothesis, not an accepted numerical relaxation. See the source-bound
+VALIDATION-SNAPSHOT-TYPE-DIAGNOSTIC.json. Local snapshot export/diagnosis
+elapsed times overlapped source quality checks and are not accepted benchmark
+or provider refresh measurements. Thirty unit tests pass in46.489s; AST84,
+RuffF and Bandit pass. Newer helpers need the final quality sweep. No native
+Desktop or company gate has been closed by any of these experiments.
+
+Stored-Double01 and explicit-CONVERT-DOUBLE01 both refuse the old DAX
+Amounts flag. Their source inputs are unchanged and no broad timing runs.
+Native-Bitwise-Snapshot01 replaces that faulty comparison's admission role with
+an exact native reader: all504k unique keys, same nulls, required CLR Double
+types and exact IEEE64 bits, twice (before and after the task-owned matching
+control row changes). Both passes succeed with504k nonblank pairs and no values
+logged. The original DAX comparator remains diagnostic0; source-wide metadata
+checks remain required. All26 queries/ten complete pairs/independent scalars/
+full populations match. Source-bound receipt: VALIDATION-NATIVE-BITWISE-SNAPSHOT-
+PROBE.json plus the private native-bitwise-proof.json. This is NOT a company
+controller or live Direct Lake validation. A coherent immutable snapshot and
+reset/revalidation on every new input version remain mandatory.
+
+However, complete native input validation does NOT establish speed: Marketfull
+7,575→7,266ms; Share9,259→7,498ms. No new candidate is selected. Snapshot-Parent-
+Diagnostic01 is now running one model/four queries, normal versus diagnostic
+zero raw parent fallbacks. Every known leaf must remain identical; parent zeros
+are deliberately invalid. It is diagnostic, not a performance acceptance gate.
+Source AST/Ruff/Bandit and30tests pass at the earlier boundary; final new-source
+quality and manifest binding are refreshed before checkpoints. Graph authority
+remains UNKNOWN; direct code tracing and explicit native verification are used.
 
 ### 24 October — performance investigation and R03 local qualification
 
