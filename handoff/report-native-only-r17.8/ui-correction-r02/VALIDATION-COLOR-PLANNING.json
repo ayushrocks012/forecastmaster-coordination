@@ -1,0 +1,28 @@
+{
+  "Stage": "LOCAL_EXACT_MATRIX_COLOR_PLAN_COMPARISON",
+  "FabricatedOnly": true,
+  "Runs": 8,
+  "ExactRowValueFormatColorEquality": true,
+  "ExecutiveRowsPerRun": 360,
+  "ReviewRowsPerRun": 10,
+  "TimingsMs": {
+    "executive_summary/baseline": 32151,
+    "executive_summary/candidate": 13331,
+    "headline/baseline": 8881,
+    "headline/candidate": 3468,
+    "executive_summary/baseline/warm": 30078,
+    "executive_summary/candidate/warm": 13082,
+    "headline/baseline/warm": 8272,
+    "headline/candidate/warm": 3523
+  },
+  "EngineStopped": true,
+  "CompanyPerformanceAcceptance": false,
+  "Limit": "Same isolated calculated model, baseline then candidate repeated; no randomised order or company/cache equivalence.",
+  "SHA256": {
+    "candidate.json": "29ac7dbe8afcda1514c3cef5774b79d21779568eff8e49e46d45014ac8944f27",
+    "queries.json": "7a4909f0230eb70ca94dee29361f69018925089016c5939be6cf30615f68a253",
+    "PROPOSED-COLORS.json": "9eaa850abd31256f13a7c7f3d133a09c16d16a773d1e0122a8335d237e56254f",
+    "results.json": "41d5c3b9c2c111cbe6fdb346f8a5426720e5f9ef7cd88b2077b766bab08a44c1",
+    "run_large_engine.ps1": "25b0d16a951d702d3393883b41c27e719cdc2c08d978ae74dad618d785fe4901"
+  }
+}

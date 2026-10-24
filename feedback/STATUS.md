@@ -1,5 +1,246 @@
 # Company setup status
 
+## 24 October 2026 — R17.8 R02 receiving handoff locally qualified; company run pending
+
+The guarded cell and private-default report template are now selected in the
+existing manifest. Follow ui-correction-r02/receiving-r01/OPEN FIRST.txt. One new
+setup cell once; exact R01/private metadata guards, 24 private paired scalars,
+three no-file blanks, full verified backup, one TEST update and complete
+metadata/cloud/date/default/scalar readback. No refresh/source/production write
+or publication. STOPPED/unknown means return JSON, no retry/delete markers.
+The public template is not the receiving report; only the successful cell's
+private download has actual file defaults. Keep the ZIP/labels private.
+
+Five exact-cell fake-client tests pass, including 19 prewrite faults, four
+post-submission faults and four sticky second-run refusals; zero is preserved
+and blanks remain distinct. All 41 template schema documents pass. All 51 exact
+native comparison/blank queries pass against the fabricated independent oracle.
+Standalone attempt01 stopped before queries due to the Desktop-only powerBI_V3
+host routing hint; attempt02 removes only that hint and records its source hash.
+Both attempts are retained; all task-owned engines and Desktop windows closed.
+No company call was made. SAMPLE05 export/save/reopen evidence remains scoped
+as below; expanded Executive DAX is still 9.9–16.3s locally. Company receiving,
+UI/business and speed gates remain open. Production R16.6 unchanged.
+
+
+
+## 24 October 2026 — integrated native exports: 150 sectors / three metric-display contexts
+
+SAMPLE05 exports all 150 sectors / five drivers in Market Units, Share Units
+and Ex-factory GBP Value. Each 1,500-cell export matches the generated-data Python
+oracle, zero mismatches after the preserved checker rounding correction.
+The Review export also passes ten populated cells including actual-only omissions.
+Native Share expanded matrices complete without the earlier dense-spool failure.
+No numeric measure expression changed from SAMPLE04; exactly two dynamic display
+definitions changed after canonical DAX comparison. The Ex-factory action selects
+its compatible measure and renders September cutoff/Units correctly. Native DAX observations are graph 2.1–2.2s, Review 4.3–4.9s and Executive
+9.9–16.3s, context-dependent. Executive is still slow; no company speed claim.
+Native save/reopen also passes: compatible Ex-factory Value, both summaries,
+expanded sector hierarchy, explicit file selection, imported UTC labels, colours
+and overlay restore without a manual refresh. All task-owned Desktop windows
+were saved and closed; no standalone qualification engine is left running. The receiving adapter is
+pure only; company release and company/business/performance acceptance stay open.
+
+## 24 October 2026 — native format/export diagnostic passed; SAMPLE05 bound
+
+Twelve fabricated native cases now export correct positive/negative k/m values,
+percentages and zero without rescaling the numeric measures; two all-blank cases
+remain absent. Failed prior packaging/sign attempts are preserved. The isolated
+correction changes only the two summary dynamic-format definitions, retaining
+currency/percentage context and numeric expressions. Thirteen focused contracts
+pass. SAMPLE05 combines this with the optimized colours and existing matrix/chart
+repairs; 40 Microsoft schema documents pass. Final consolidated Desktop/export/
+reopen remains in progress. No company cell, refresh, release or production change.
+
+## 24 October 2026 — optimized local matrix population closed; native export follow-up
+
+All02 completes 75/75 mixed-period queries and 11,592 independent value/colour
+cells with zero failures. Frozen source/model/query/oracle/harness hashes match;
+the task-owned engine closed. Only report-local colour evaluation changed from
+All01; the numerical model and oracle are byte-identical. Seventy-one threshold,
+blank, metric/source/period/window admission checks pass. Eight exact expanded
+Share body reads (360 Executive / ten Review rows per read) preserve every value,
+format string and colour. Ordered local DAX observations: Executive baseline
+32,151/30,078ms versus 13,331/13,082ms; Review 8,881/8,272ms versus 3,468/3,523ms.
+This is not a controlled company performance acceptance or a claim that all
+queries are now fast. Receipts are VALIDATION-COLOR-PLANNING.json,
+VALIDATION-GM-COLORS-OPTIMIZED.json and VALIDATION-MIXED-MATRICES-OPTIMIZED.json.
+
+SAMPLE04 actual Desktop inspection confirms both Share summaries including an
+expanded driver, 150-sector overlay count, native 30-sector single-driver view,
+compatible Ex-factory-only measure choices, September cutoff, GBP Value axes and
+both summaries, green/amber totals, independent 6M+12M Executive versus 12M graph,
+driver-scoped two-version filenames and explicit file clear/restore. The latest
+colour optimization still requires final host reinspection. A pure matching
+15-expression adapter passes metadata/line-array preservation and unknown-input
+refusal tests; no receiving installer is released. The CSV scaling issue remains
+held while a small 12-case fabricated native export probe is inspected. Production
+R16.6 and company TEST processing remain unchanged; no company action now.
+
+## 24 October 2026 — local mixed-period repair and native hierarchy proof
+
+The four guarded IF.EAGER cell-evaluation edits now complete all 75 bound native
+queries: 72 contexts, two cycles/six metrics/Units-Value/6-12-24M/ten named periods,
+11,592 independent value/colour cells and three blank admission edges, zero
+failures. Frozen code/input/harness hashes match and the task-owned engine closed.
+No Plan/Benchmark/fit/monthly arithmetic or number-format expression was changed.
+This is an execution-plan workaround with bounded generated-data parity, not a
+provider-cause diagnosis, all-sector leaf proof or company speed acceptance.
+
+A separate actual Desktop diagnostic confirms the complete pinned/collapsed
+Rows-level metadata fixes initially inactive sector expansion. All five initial
+drivers are visible; Driver05 and Sector05.30 are reachable. An initially active
+all-descendant layout remains rejected because its first window omitted Driver05.
+Consolidated SAMPLE04 incorporates that hierarchy, the cell edits, totals-inclusive
+colour selectors, theme mapping and latest chart package. Its first Total view
+shows three clear Review rows, five drivers and green variance totals with Plan
+uncoloured. Expanded Share/other metrics, controls, export/reopen and timings are
+still being inspected on this consolidated candidate.
+
+Browser05 qualifies the latest packaged chart at five sizes with all 150 sectors,
+450 series and 18,900 points. Driver search highlights all 90 matching paths while
+retaining all lines; single-scope mode removes redundant search/legend. New styles,
+cutoffs, four review bands and safe refusal/keyboard edges pass. Receipts:
+VALIDATION-MIXED-MATRICES.json, VALIDATION-HIERARCHY.json and
+custom-overlay-r01/VALIDATION-BROWSER-POLISH.json in ui-correction-r02.
+No new company cell, refresh, release, publication or production R16.6 change.
+
+## 24 October 2026 — revised chart/GM presentation inspected; Share/drill gates held
+
+The user now requests solid Actual and Forecast lines in different colours and a
+dashed Trend. This supersedes the earlier solid/dashed/dotted convention. Navy,
+teal and neutral report styling is adopted, with stable chart category colours;
+summary variance alerts use ABS(relative variance), ≤5% green, >5–10% amber,
+>10% red, both signs. Plan/blank cells stay uncoloured. These are presentation
+changes, with no numeric model formula or amount-format edit applied.
+
+The one custom overlay's first native feed contains all 150 sectors / 450 series /
+18,900 points across 84 months, each independently checked. The revised packaged
+browser test covers five sizes, all points, four selected-period bands, actuals
+cutoff annotation, new line styles/colours, stable identity after filtering,
+weighted-ratio percent display, focus/keyboard and partial/conflicting delivery
+refusal. Sixty-three native DAX checks pass alert boundaries, both signs, zero,
+blank, uncoloured Plan and independent Executive windows. Seventy-two native
+chart value/context comparisons cover six metrics, Units/Value, both cycles and
+three windows; three absent/incompatible selection guards remain blank. Two
+checker failures (DAX Unicode escaping and expected November month index) are
+preserved with exact corrected inputs and unchanged tolerances. A browser
+September abbreviation assertion was corrected without changing the package.
+Receipts are in ui-correction-r02 and custom-overlay-r01; these are fabricated
+local evidence, not company or independent Excel acceptance.
+
+Actual Desktop Sample03 confirms Total solid Actual/Forecast, dashed Trend,
+visible cutoff/shading, all three Review rows, variance-only fills in both
+summaries, five driver totals and one native file picker. It also catches two
+unclosed defects: plus/Expand all can mark a driver expanded without showing
+sectors while SectorLabel is inactive; Share's graph works but both summaries
+fail with `Internal error: looking up invalid data on a dense spool`.
+The generic capacity/license caption is not the diagnosed cause. Exact generated
+queries and controls still fail without colours, without dynamic formats and
+with values only. A physical-calendar enumeration proposal also fails and is
+not applied. Query-shape/type controls continue on one task-owned local engine;
+all Desktop windows and earlier engines are closed. No receiving action, model
+refresh, report publication or production R16.6 change is requested.
+
+## 24 October 2026 — single custom overlay authorized; Desktop resource correction
+
+The user rejected both the 20-sector cap and six-panel small-multiples layout,
+then explicitly approved one custom overlay chart with all selected sectors.
+All other visuals remain native; production R16.6 is unchanged. The native
+line chart with sampling off is still incomplete at the larger population.
+The adapted native query returns 75/75 series for 25 sectors over 36/84 months,
+90/90 for 30 over 36 months, but 85/90 over 84 months. These are local fabricated
+checks, not company approval or a native all-sector pass.
+
+Draft chart-only source is isolated under ui-correction-r02/custom-overlay-r01;
+package, browser/host/UI proof and receiving gates remain open. No new company
+installer/refresh/publication is requested. The user reported ChatGPT crashes
+with many test Desktop windows and a laptop restart. Resume with one Desktop
+window only and no parallel heavy engine qualification during native inspection.
+The single maintained UNDERSTANDING resume records the superseding decisions.
+
+
+## 24 October 2026 — larger Desktop test catches native windowing and export defects
+
+The 20-file/two-cycle/five-driver/25-sector-per-file fixture is now inspected in
+actual Desktop through node_repl_wsl. File search and native clear work. Source
+now marks SectorLabel inactive in the initially collapsed Executive hierarchy:
+Desktop's own Drill up showed this removes hidden descendants from the query,
+restores Driver 05 and reduces the observed warm Executive total from 14,911ms
+to 8,949ms. Graph/Review remain approximately 2.1/4.3s. These are single local
+observations, not company speed acceptance. Full calculated-model refresh was
+still running at 13.136s and completed by 39.915s; no exact duration was sampled.
+An optional Reset files bookmark was removed after native tests showed it clears
+file availability and exposes other cycles. No extra operator action is needed.
+
+The exact all-sector Desktop query was replayed on a task-owned native engine:
+375 available actual/forecast/trend series become only 60 after native sampling.
+This is a failed chart population gate. The user rejected a manual 20-sector
+exception after asking about drivers with 25/30 sectors. No cap is implemented;
+next test sampling off, then an all-sector native layout if necessary. Every
+sector remains available; no silent omission or manual batch workaround.
+
+A real native CSV export contains all 125 sectors / five drivers / 1,250 rows,
+but its dynamic k/m formats append suffixes to unscaled amounts. Export formatting
+is REJECTED pending repair; do not call population completeness numeric export
+acceptance. VALIDATION-DESKTOP.json binds export/timing/query hashes and failed
+experiments. No R02 company adapter/connected TEST package is released. Current
+local Sample05 retains the same 12 admission expressions; company TEST and
+production R16.6 remain untouched. All prior qualified raw runs are preserved.
+
+## 24 October 2026 — expanded fabricated native R17.8 R02 qualification in progress
+
+Expanded native-engine checks now verify all 20 files, two cycles, five drivers,
+500 file-sector combinations and 420,000 facts. The 12 basic reads pass. A second
+population has 144 arithmetic contexts / 576 independent comparisons across all
+six metrics, Units/Value, three windows and two years; no mismatches. All 125
+sectors and 625 two-trend FY Executive cells are present per cycle, and selected
+mixed-version totals/chart populations pass. Company/Excel parity remains open.
+Small-fixture qualification has 212 logical contexts / 1,865 assertions. Receipts
+in ui-correction-r02/ explicitly bind two typed-empty-filter checker corrections
+and eight chart-grouping corrections to unchanged models and preserved failed
+first queries; this was not one unchanged passing first batch.
+
+Expanded Desktop observations confirm driver/cycle-scoped files, visible import
+times, current-cycle defaults, 25-sector drill/scroll, alternative checkbox
+selection, no-file business blanks, compatible nonblank Ex-factory and two table
+trends independent of the graph. The sector control was misleadingly labelled
+Forecast tiers: source label corrected to Sectors / forecast tiers. A 25-sector
+graph still has a crowded legend. First contended Performance Analyzer readings
+are graph 1,920/2,213ms DAX/total, Review 4,462/4,674ms and expanded Executive
+15,273/15,518ms. These are local observations, not company or before/after speed
+acceptance. Full refresh, idle timing, search/export/reopen and remaining visual
+improvements are still pending. No new company adapter/package is released.
+
+The user requests two cycles, 20 files total, five drivers and 25 sectors/file.
+The isolated public fixture has 500 file-sector combinations, 84 months and
+420,000 facts, with ADS plus an alternative for every driver/cycle. No company
+access or production action occurs. Local timings are not Fabric speed evidence.
+
+Small SAMPLE was opened and inspected in actual Desktop through node_repl_wsl.
+Three Review rows, full-width/bottom-legend graph, compatible Ex-factory bookmark,
+driver-to-sector expansion and no Automatic ADS parent were observed. Classic
+slicer retains out-of-scope selected items visibly; the native List slicer
+conversion hides them. Large-data rendering, search, selection/clear, mixed
+versions and complete regression/performance checks are still in progress.
+
+An earlier 212-query local batch processed both models, then exited 143 without
+results. Cause and query outcomes are unknown; inputs are retained. Its checker
+also used incorrect driver labels for the fabricated fixture, now corrected.
+The new isolated runner records progress/results after every query. No earlier
+partial run is promoted to passed; changed candidates require fresh evidence.
+
+## 24 October 2026 — WSL Desktop automation connected; native repair resumed
+
+The user supplied the working node_repl_wsl route. This chat independently
+imported the installed Computer Use @oai/sky API, rediscovered one current Power
+BI Desktop window, activated it and captured Home plus its accessibility tree.
+The old node_repl sandboxCwd error does not apply to this successful connection.
+No Windows-native agent switch or restart is needed. Document Control does not
+support Power BI; its missing session is not a blocker. Continue with fabricated
+R17.8 SAMPLE native rendering and repairs; no company model, source, refresh or
+production action was taken. A Home screenshot is not report acceptance.
+
 ## 24 October 2026 — R17.8 native UI rejected; Desktop connection blocked locally
 
 The seven receiving screenshots show clipped Review rows, unreadable chart units

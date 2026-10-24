@@ -30,16 +30,23 @@ file choices with import timestamps/no hash suffixes, candidate metadata and clo
 mapping preserved. [Reviewed result](feedback/logs/2026-10-24-r178-installed-bounded-verification-reviewed.json).
 No new notebook cell, verifier/installer rerun, reset or Fabric refresh is needed.
 
-**Current action: repair the rejected native UI first.** The subsequent seven
-Desktop screenshots show failures described in the
-[maintained resume](handoff/report-native-only-r17.8/UNDERSTANDING.md#resume-in-one-minute).
-No new company cell, refresh or repeat of the steps below is requested. The
-personal-laptop Desktop is open, but Computer Use fails before connecting from
-this WSL chat. Try the app's Windows-native **agent** mode and restart; choosing
-PowerShell only as the integrated terminal does not switch the agent. Native
-rendering is not yet inspected here and this environment remedy is unverified.
-ADS files visibly selected by default and empty selection = no business values
-now supersedes the old clear-to-Automatic behavior; no corrected build is ready.
+**Current action: R17.8 R02 TEST receiving qualification.** Follow
+[OPEN FIRST.txt](handoff/report-native-only-r17.8/ui-correction-r02/receiving-r01/OPEN%20FIRST.txt).
+Pull main; copy the whole selected cell into ONE NEW ForecastMaster_GM_Setup
+Python cell and run only that cell once. It privately checks, backs up and
+updates TEST, verifies readback, then offers a PRIVATE report ZIP with actual
+ADS defaults. No refresh or publication. On STOPPED or unknown outcome, return
+JSON and stop; never retry/delete markers. Do not open the public placeholder
+template. Company R02 UI/business/speed acceptance remains open; production
+R16.6 stays unchanged.
+
+Actual fabricated SAMPLE05 Desktop inspection, save/reopen and all 150-sector
+exports pass in Market Units, Share Units and Ex-factory GBP Value. One custom
+overlay preserves all selected sectors as explicitly approved; controls and
+summaries remain native. The native Executive Summary is still slow locally.
+See the maintained resume for exact proof and limits. All task-owned Desktop
+windows and standalone engines were closed. The old instructions below are
+historical, not the selected report/installer.
 
 **Historical receiving instructions — already exercised and rejected:**
 

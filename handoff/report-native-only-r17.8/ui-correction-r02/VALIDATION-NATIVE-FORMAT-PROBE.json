@@ -1,0 +1,22 @@
+{
+  "Stage": "LOCAL_NATIVE_FORMAT_EXPORT_PROBE_PASSED",
+  "FabricatedOnly": true,
+  "Cases": 12,
+  "CSVRows": 10,
+  "AllBlankCasesOmitted": 2,
+  "NumericMeasuresRemainUnscaled": true,
+  "PositiveNegativeKMPercentAndZero": true,
+  "CSVMatchesExpected": true,
+  "PriorAttemptsPreserved": [
+    "Format-UI-01 missing themeCollection",
+    "Format-UI-02 missing version.json",
+    "Format-UI-03 double negative in proposed literal format"
+  ],
+  "SHA256": {
+    "FormatCheck.SemanticModel/model.bim": "acd56eb35c6bfbd58df412be3e2af24cf64a6c73143e41122b0de5da3945913b",
+    "FROZEN-BUILDER.py": "2dd316adc6adaeb179f54cd5b6f35c1cf1bd85392d64e1419ada08ae5cc77215",
+    "a.csv": "badea103aa1e204b483a579f62972e58b3dbf4b878eb1cb6c53b1e563d414454"
+  },
+  "Limit": "Twelve fabricated GBP/ratio cases; full summary host/export and company acceptance remain separate.",
+  "Reproducer": "format_cases.py build NEW_DIRECTORY; native Export data; format_cases.py verify EXPORTED_CSV"
+}

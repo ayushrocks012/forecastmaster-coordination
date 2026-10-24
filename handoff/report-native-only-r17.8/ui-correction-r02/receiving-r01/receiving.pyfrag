@@ -1,0 +1,244 @@
+"""Receiving body embedded by build_cell.py. Existing R01 TEST only.
+
+No refresh, processing, source/production update or publication. The durable
+R02 intent precedes the single updateDefinition submission. Unknown outcomes
+refuse reruns. Report defaults are read privately from actual model metadata.
+"""
+R01_PRIVATE = 'abfss://' + WORKSPACE + '@onelake.dfs.fabric.microsoft.com/' + LAKEHOUSE + '/Files/ForecastMasterRefreshState/report-upgrades/Native-R178-Compact-R01'
+R02_PRIVATE = R01_PRIVATE.rsplit('/', 1)[0] + '/Native-R178-UI-R02'
+ATTEMPT = R02_PRIVATE + '/ATTEMPT.json'
+
+
+def native_measures(database):
+    tables = [t for t in database['model']['tables'] if t['name'] == 'fm_native_measures']
+    require(len(tables) == 1, 'EXPECTED_ONE_NATIVE_MEASURE_TABLE')
+    rows = tables[0]['measures']
+    result = {m['name']: m for m in rows}
+    require(len(result) == len(rows), 'DUPLICATE_NATIVE_MEASURE')
+    return result
+
+
+def patch_database(database):
+    fixed = deepcopy(database)
+    actual = native_measures(fixed)
+    require(set(actual) == set(EXPECTED_NATIVE), 'INSTALLED_R01_MEASURE_INVENTORY_DIFFERS')
+    for name, expected in EXPECTED_NATIVE.items():
+        require(expression_text(actual[name]['expression']).strip() == expression_text(expected['expression']).strip(), 'INSTALLED_R01_EXPRESSION_DIFFERS')
+        require(normalized(actual[name].get('formatStringDefinition')) == normalized(expected.get('formatStringDefinition'))
+                and actual[name].get('formatString', '') == expected.get('formatString', ''), 'INSTALLED_R01_FORMAT_DIFFERS')
+    for name, expression in EXPRESSION_PATCHES.items():
+        actual[name]['expression'] = expression
+    for name, expression in FORMAT_PATCHES.items():
+        actual[name]['formatStringDefinition']['expression'] = expression
+    restored = deepcopy(fixed)
+    before, restore = native_measures(database), native_measures(restored)
+    for name in EXPRESSION_PATCHES:
+        restore[name]['expression'] = deepcopy(before[name]['expression'])
+    for name in FORMAT_PATCHES:
+        restore[name]['formatStringDefinition'] = deepcopy(before[name]['formatStringDefinition'])
+    require(restored == database, 'UNDECLARED_MODEL_DIFFERENCE')
+    return fixed
+
+
+def read_private(fs, path):
+    allowed = path == R01_PRIVATE + '/ATTEMPT.json' or (
+        path.startswith(R01_PRIVATE + '/') and path.endswith(('/definition-candidate.json', '/connections-before.json', '/success.json')))
+    require(allowed, 'PRIVATE_R01_PATH_NOT_PINNED')
+    require(fs.exists(path), 'PRIVATE_R01_RECEIPT_MISSING')
+    with TemporaryDirectory(prefix='fm-r178-ui-r02-') as temp:
+        local = Path(temp) / 'private.json'
+        require(fs.cp(path, local.as_uri(), False), 'PRIVATE_R01_READ_FAILED')
+        require(0 < local.stat().st_size < 64 * 1024 * 1024, 'PRIVATE_R01_SIZE_UNEXPECTED')
+        return json.loads(local.read_bytes().decode('utf-8'))
+
+
+def records(evaluate, query):
+    frame = evaluate(dataset=TEST, dax_string=query, workspace=WORKSPACE, verbose=0, use_readwrite_connection=False)
+    return [{k.rsplit('[', 1)[-1].rstrip(']'): v for k, v in row.items()} for row in frame.to_dict(orient='records')]
+
+
+def preferred_files(evaluate):
+    rows = records(evaluate, DEFAULTS_QUERY)
+    require(bool(rows), 'NO_UNIQUE_PREFERRED_ADS_DEFAULTS')
+    expected = {'Country', 'Cycle', 'Driver', 'Label', 'Scenario'}
+    require(all(set(row) == expected and all(isinstance(v, str) and v for v in row.values()) for row in rows), 'PREFERRED_FILE_METADATA_INVALID')
+    require(len({(r['Country'], r['Cycle'], r['Driver']) for r in rows}) == len(rows)
+            and len({r['Label'] for r in rows}) == len(rows), 'PREFERRED_FILE_CHOICES_AMBIGUOUS')
+    return sorted(rows, key=lambda row: tuple(row[k] for k in sorted(row)))
+
+
+def scalar(evaluate, query):
+    rows = records(evaluate, query)
+    require(len(rows) == 1 and set(rows[0]) == {'V'}, 'EXPECTED_ONE_PRIVATE_SCALAR')
+    value = rows[0]['V']
+    if value is None or isinstance(value, Number) and not isinstance(value, bool) and math.isnan(float(value)):
+        return None
+    require(isinstance(value, Number) and not isinstance(value, bool) and math.isfinite(float(value)), 'SCALAR_NOT_FINITE_NUMERIC')
+    return float(value)
+
+
+def scalar_queries(scope):
+    def filt(table, column, value):
+        return 'TREATAS({' + '"' + str(value).replace('"', '""') + '"' + '},\'' + table + '\'[' + column + '])'
+    year = int(scope['Cycle'][:4])
+    shared = [filt('fm_review_files', 'Country', scope['Country']), filt('fm_review_files', 'DemandCycle', scope['Cycle']),
+        filt('fm_native_scope', 'GrowthDriver', scope['Driver']), filt('fm_native_files', 'FileChoiceLabel', scope['Label']),
+        filt('fm_native_currency', 'Currency', 'Local'), filt('fm_native_display', 'Display', 'Units'),
+        filt('fm_native_scenario', 'Scenario', scope['Scenario']), filt('fm_native_scenario', 'Mode', 'Selected files'),
+        filt('fm_native_file_mode', 'Mode', 'Selected files'), filt('fm_native_periods', 'PeriodKey', str(year) + ':FY'),
+        "TREATAS({12},'fm_native_trend'[Window])", "TREATAS({12},'fm_native_chart_trend'[Window])"]
+    for metric in ('market', 'ef', 'share'):
+        filters = shared + [filt('fm_native_metric', 'RowID', metric), filt('fm_native_metric', 'Section', 'Ex-factory' if metric == 'ef' else 'IMS / Market')]
+        for measure, extra in [
+            ('N Plan', []), ('N Benchmark', []), ('N Variance %', []),
+            ('N Trend Monthly', ["TREATAS({DATE(" + str(year + 1) + ",12,1)},'fm_review_axis'[Month])"]),
+            ('N Headline Cell', [filt('fm_native_headline', 'Key', 'plan')]),
+            ('N Headline Cell', [filt('fm_native_headline', 'Key', 'variance')]),
+            ('N Summary Cell', [filt('fm_native_columns', 'ColumnKey', 'plan')]),
+            ('N Summary Cell', [filt('fm_native_columns', 'ColumnKey', '12:abs')])]:
+            yield {'Metric': metric, 'Measure': measure, 'Variant': len(extra) and extra[0] or 'FY'}, 'EVALUATE ROW("V",CALCULATE([' + measure + '],' + ','.join(filters + extra) + '))'
+
+
+def compare_number(left, right):
+    return left is None and right is None or left is not None and right is not None and math.isclose(left, right, rel_tol=1e-9, abs_tol=1e-6)
+
+
+def qualified_report(labels):
+    require(hashlib.sha256(TEMPLATE).hexdigest() == TEMPLATE_SHA256, 'REPORT_TEMPLATE_HASH_DIFFERS')
+    with ZipFile(BytesIO(TEMPLATE)) as source:
+        files = {n: source.read(n) for n in source.namelist()}
+    require(not any('.SemanticModel/' in n or n.endswith('model.bim') for n in files), 'REPORT_TEMPLATE_NOT_THIN')
+    path = REPORT_FOLDER + '/definition/pages/native_demand/visuals/file_picker/visual.json'
+    picker = json.loads(files[path])
+    node = picker['visual']['objects']['general'][0]['properties']['filter']['filter']['Where'][0]['Condition']['In']
+    require(node['Values'] == [[{'Literal': {'Value': "'__PRIVATE_ADS_DEFAULTS__'"}}]], 'REPORT_DEFAULT_PLACEHOLDER_DIFFERS')
+    node['Values'] = [[{'Literal': {'Value': "'" + label.replace("'", "''") + "'"}}] for label in sorted(labels)]
+    files[path] = json.dumps(picker, ensure_ascii=False, indent=2).encode()
+    payload = BytesIO()
+    with ZipFile(payload, 'w', compression=ZIP_DEFLATED) as archive:
+        for name, data in sorted(files.items()):
+            archive.writestr(name, data)
+    return payload.getvalue()
+
+
+def install(client, pbi, fs, evaluate, result, context):
+    context['Step'] = 'IDENTITY_AND_PRIOR_R01'
+    identity(client, context)
+    require(not fs.exists(ATTEMPT), 'PRIOR_R02_ATTEMPT_REVIEW_REQUIRED_NO_RETRY')
+    marker = read_private(fs, R01_PRIVATE + '/ATTEMPT.json')
+    folder = marker.get('Backup', '')
+    require(marker.get('Revision') == 'R01' and marker.get('TEST') == TEST and folder.startswith(R01_PRIVATE + '/'), 'PRIVATE_R01_MARKER_UNEXPECTED')
+    require(read_private(fs, folder + '/success.json').get('Stage') == 'TEST_R178_UPDATED', 'PRIVATE_R01_INSTALL_NOT_VERIFIED')
+    wanted = read_private(fs, folder + '/definition-candidate.json')
+    expected = json.loads(base64.b64decode(next(p for p in wanted['parts'] if p['path'] == 'model.bim')['payload'], validate=True))
+    require(digest(expected) == marker.get('CandidateBIM'), 'PRIVATE_R01_CANDIDATE_HASH_DIFFERS')
+    jobs = processing_history(pbi)
+    require(jobs[0].get('status') == 'Completed', 'LATEST_TEST_REFRESH_NOT_COMPLETED')
+    before, database, bindings = read_definition(client, context)
+    routing(database, bindings)
+    require(normalized(database) == normalized(expected), 'CURRENT_TEST_DIFFERS_FROM_PRIVATE_R01_NO_WRITE')
+    require([p for p in before['parts'] if p['path'] != 'model.bim'] == [p for p in wanted['parts'] if p['path'] != 'model.bim'], 'NON_BIM_PARTS_CHANGED_NO_WRITE')
+    mapping = connections(client, context)
+    require(mapping == read_private(fs, folder + '/connections-before.json'), 'CLOUD_MAPPING_DIFFERS_NO_WRITE')
+    dates = date_signature(evaluate)
+    result['Dates'] = validate_dates(evaluate)
+    defaults = preferred_files(evaluate)
+    scope_rows = records(evaluate, METADATA_QUERY)
+    require(len(scope_rows) == 1, 'NO_UNIQUE_COMPARISON_SCOPE')
+    scope = [r for r in defaults if all(r[k] == scope_rows[0][k] for k in ('Country', 'Cycle', 'Driver'))]
+    require(len(scope) == 1, 'COMPARISON_DEFAULT_NOT_UNIQUE')
+    fixed = patch_database(database)
+    report_bytes = qualified_report([row['Label'] for row in defaults])
+    define = 'DEFINE\n' + '\n'.join("MEASURE 'fm_native_measures'[" + n + ']=\n' + v for n, v in EXPRESSION_PATCHES.items()) + '\n'
+    checks, candidate_values = list(scalar_queries(scope[0])), []
+    context.clear()
+    for i, (check, query) in enumerate(checks, 1):
+        context.update(Step='PAIRED_SCALAR_PREFLIGHT', CheckIndex=i, Metric=check['Metric'], Measure=check['Measure'])
+        print('R17.8 R02 private paired check ' + str(i) + '/' + str(len(checks)) + ': ' + check['Metric'] + ' / ' + check['Measure'] + '.', flush=True)
+        left, right = scalar(evaluate, query), scalar(evaluate, define + query)
+        require(left is not None and right is not None and compare_number(left, right), 'PAIRED_SCALAR_MISMATCH_OR_UNAVAILABLE_NO_WRITE')
+        candidate_values.append(right)
+    # Clearing the explicit file choice must never restore Automatic ADS.
+    empty_queries = []
+    for metric in ('market', 'ef', 'share'):
+        source = next(query for (check, query) in checks if check['Metric'] == metric and check['Measure'] == 'N Plan')
+        literal = '"' + scope[0]['Label'].replace('"', '""') + '"'
+        selected = 'TREATAS({' + literal + "},'fm_native_files'[FileChoiceLabel])"
+        require(source.count(selected) == 1, 'PREFLIGHT_FILE_FILTER_SHAPE_CHANGED')
+        empty_queries.append(source.replace(',' + selected, ''))
+    for i, query in enumerate(empty_queries, 1):
+        context.update(Step='NO_FILE_BLANK_PREFLIGHT', CheckIndex=i)
+        require(scalar(evaluate, define + query) is None, 'NO_FILE_DID_NOT_BLANK_NO_WRITE')
+    result['Preflight'] = {'PairedScalarComparisons': len(checks), 'NoFileBlankChecks': len(empty_queries), 'Mismatches': 0, 'ValuesPrintedOrStored': False,
+                          'Scope': 'One preferred ADS driver; market/ef/share; 12M; FY/future; kernels and matrix cells'}
+    context.clear()
+    context['Step'] = 'BACKUP_AND_CONCURRENCY'
+    latest, latest_database, _ = read_definition(client, context)
+    require(latest == before and normalized(latest_database) == normalized(database) and connections(client, context) == mapping
+            and processing_history(pbi) == jobs and date_signature(evaluate) == dates and preferred_files(evaluate) == defaults, 'CONCURRENT_CHANGE_NO_WRITE')
+    after = deepcopy(before)
+    next(p for p in after['parts'] if p['path'] == 'model.bim')['payload'] = base64.b64encode(json.dumps(fixed, ensure_ascii=False).encode()).decode()
+    backup = R02_PRIVATE + '/' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S') + '-' + str(uuid4())
+    fs.mkdirs(backup)
+    for name, value in [('definition-before.json', before), ('definition-candidate.json', after), ('connections-before.json', mapping), ('preflight-counts.json', result)]:
+        verified_backup(fs, backup + '/' + name, value)
+    verified_backup(fs, backup + '/report-package.json', {'SHA256': hashlib.sha256(report_bytes).hexdigest(), 'ZipBase64': base64.b64encode(report_bytes).decode()})
+    # Backup I/O can take time. Recheck immediately before durable write intent.
+    latest, latest_database, _ = read_definition(client, context)
+    require(latest == before and normalized(latest_database) == normalized(database) and connections(client, context) == mapping
+            and processing_history(pbi) == jobs and date_signature(evaluate) == dates and preferred_files(evaluate) == defaults, 'CHANGE_DURING_BACKUP_NO_WRITE')
+    verified_backup(fs, ATTEMPT, {'Revision': 'R02', 'TEST': TEST, 'Backup': backup, 'BeforeBIM': digest(database), 'CandidateBIM': digest(fixed)})
+    context.clear()
+    context['Step'] = 'UPDATE_DEFINITION_ONCE'
+    result.update(ModelWriteRequested=True, PrivateBackup=backup)
+    response = client.post('/v1/workspaces/' + WORKSPACE + '/semanticModels/' + TEST + '/updateDefinition', json={'definition': after, 'options': {'allowPurgeData': False}})
+    complete_update(client, response, context, lambda value: verified_backup(fs, backup + '/operation.json', value))
+    result['UpdateOperationCompleted'] = True
+    context['Step'] = 'FULL_READBACK'
+    got, got_database, _ = read_definition(client, context)
+    require(normalized(got_database) == normalized(fixed) and [p for p in got['parts'] if p['path'] != 'model.bim'] == [p for p in after['parts'] if p['path'] != 'model.bim'], 'UPDATED_DEFINITION_READBACK_DIFFERS_NO_REFRESH')
+    require(connections(client, context) == mapping and date_signature(evaluate) == dates and preferred_files(evaluate) == defaults, 'UPDATED_MAPPING_OR_SOURCE_DIFFERS_NO_REFRESH')
+    installed_jobs = processing_history(pbi)
+    require(installed_jobs[0].get('status') == 'Completed', 'INSTALLED_LATEST_REFRESH_NOT_COMPLETED_NO_RETRY')
+    for i, ((check, query), wanted_value) in enumerate(zip(checks, candidate_values), 1):
+        context.clear()
+        context.update(Step='INSTALLED_SCALAR_READBACK', CheckIndex=i, Metric=check['Metric'], Measure=check['Measure'])
+        require(compare_number(scalar(evaluate, query), wanted_value), 'INSTALLED_SCALAR_READBACK_DIFFERS_NO_REFRESH')
+        if i == 1 or i % 4 == 0:
+            print('Installed private scalar readback ' + str(i) + '/' + str(len(checks)) + ' completed.', flush=True)
+    for i, query in enumerate(empty_queries, 1):
+        context.update(Step='INSTALLED_NO_FILE_BLANK_READBACK', CheckIndex=i)
+        require(scalar(evaluate, query) is None, 'INSTALLED_NO_FILE_DID_NOT_BLANK_NO_REFRESH')
+    context.clear()
+    context['Step'] = 'FINAL_STABILITY_READBACK'
+    stable, stable_database, _ = read_definition(client, context)
+    require(stable == got and normalized(stable_database) == normalized(fixed) and connections(client, context) == mapping
+            and processing_history(pbi) == installed_jobs and date_signature(evaluate) == dates and preferred_files(evaluate) == defaults, 'INSTALLED_STATE_CHANGED_DURING_READBACK_NO_RETRY')
+    result.update(Stage='TEST_R178_R02_UPDATED_AND_BOUNDED_READBACK_VERIFIED', FullMetadataReadbackMatches=True,
+        CloudMappingPreserved=True, DefaultADSChoices=len(defaults), InstalledScalarReadbacks=len(checks),
+        RefreshRequired=False, PrivateReportStored=True, ReportDownloadSHA256=hashlib.sha256(report_bytes).hexdigest(),
+        NextStep='Download the private TEST ZIP shown below. Extract to a NEW folder; open PBIP in company Desktop. No refresh or publish. Send final JSON and screenshots/timings; keep filenames and report ZIP private.')
+    verified_backup(fs, backup + '/success.json', result)
+    return report_bytes
+
+
+def run(client, pbi, fs, evaluate):
+    result = {'Stage': 'TEST_R178_R02_STOPPED', 'Revision': 'R02', 'TestModelID': TEST, 'ModelWriteRequested': False,
+        'UpdateOperationCompleted': False, 'RefreshRequested': False, 'LakehouseTableWriteRequested': False,
+        'OriginalModelWriteRequested': False, 'ReportPublished': False, 'CompanyAmountsPrintedOrStored': False,
+        'NextStep': 'Send this JSON. Do not rerun, refresh, delete markers or use an old installer.'}
+    context, report_bytes = {}, None
+    try:
+        report_bytes = install(client, pbi, fs, evaluate, result, context)
+    except (Exception, KeyboardInterrupt) as exc:
+        result['Failure'] = safe_failure(exc)
+        result['Checkpoint'] = {k: context[k] for k in ('Step', 'CheckIndex', 'Metric', 'Measure', 'HTTPStatus') if k in context}
+    if report_bytes is not None:
+        try:
+            from IPython.display import HTML, display
+            display(HTML('<a download="ForecastMaster-R178-R02-TEST-PRIVATE.zip" href="data:application/zip;base64,' + base64.b64encode(report_bytes).decode() + '">Download private R17.8 R02 TEST report</a>'))
+            result['DownloadLinkOffered'] = True
+        except Exception:
+            result.update(DownloadLinkOffered=False, NextStep='Send this JSON. The private report is backed up; do not rerun or refresh to recover its download.')
+    print(json.dumps(result, indent=2), flush=True)
+    return result

@@ -1,0 +1,17 @@
+{
+  "Stage": "COMPLETE_FABRICATED_NATIVE_CHART_FEED",
+  "Points": 18900,
+  "Series": 450,
+  "Sectors": 150,
+  "Months": 84,
+  "IndependentPointComparisons": 18900,
+  "NativeQueryElapsedMs": 8051,
+  "ProductionChanged": false,
+  "CompanyAmounts": false,
+  "SHA256": {
+    "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+    "queries.json": "ea0a0f4cb8bf5d7634305c8a94d9a5a98bf46b078b830716d25919404a30b29b",
+    "results.json": "1532395b5735cc0ba5c7875a0c278b7ff80b9cf0325fe0c189c27da06b12d3c0"
+  },
+  "PackageSHA256": "5994c5931db5718184225038e5ae7fcb1443cb116f11b98144d6e3bef34ac77c"
+}

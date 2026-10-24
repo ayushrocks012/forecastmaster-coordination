@@ -1,0 +1,47 @@
+{
+  "Stage": "LOCAL_R178_R02_LARGE_WORKFLOWS",
+  "FabricatedOnly": true,
+  "LogicalContexts": 154,
+  "NumericContexts": 144,
+  "NumericComparisons": 576,
+  "TotalComparisons": 602,
+  "Failures": [],
+  "InputSHA256": {
+    "candidate.json": "79781d53e2f9e9754e250d8160a1362922bff99b2ccfc7a80b936567c19d269f",
+    "queries.json": "88586ed191f055a39b8f3100a6f3be89a384f1fbdd26e2c22be14c2af6c49118",
+    "expected.json": "6983aaf38777c86e908979187425c32ef9cfb0e5d29bfd40b83b82f6f855ede6",
+    "results.json": "8d8593432a00d44a7a93677db04c04f2420b410e0783ba4c602d80e84c407ce1"
+  },
+  "ElapsedMs": {
+    "chart/2026-07/Total": 755,
+    "chart/2026-07/Drivers": 791,
+    "chart/2026-07/Sectors": 836,
+    "executive/2026-07": 1927,
+    "mixed/2026-07": 573,
+    "chart/2026-10/Total": 568,
+    "chart/2026-10/Drivers": 566,
+    "chart/2026-10/Sectors": 771,
+    "executive/2026-10": 1945,
+    "mixed/2026-10": 579
+  },
+  "CompanyAcceptance": false,
+  "CheckerCorrection": {
+    "OriginalCheckerContexts": [
+      "chart/2026-07/Drivers",
+      "chart/2026-07/Sectors",
+      "chart/2026-07/Total",
+      "chart/2026-10/Drivers",
+      "chart/2026-10/Sectors",
+      "chart/2026-10/Total",
+      "mixed/2026-07",
+      "mixed/2026-10"
+    ],
+    "AdditionalExecutedQueries": 8,
+    "OnlyChange": "Group the native categorical chart by SeriesLabel before evaluating its value",
+    "SHA256": {
+      "candidate.json": "79781d53e2f9e9754e250d8160a1362922bff99b2ccfc7a80b936567c19d269f",
+      "queries.json": "b908a829b4205326b9dee32101bcc79769d784fdc1d3916a5c1e87a722eb39ed",
+      "results.json": "6fbcb78c7a19c3493eb023f25926640fa9489fca4fa19fac46660bd727a80371"
+    }
+  }
+}

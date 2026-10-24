@@ -1,0 +1,17 @@
+{
+		"version": "17.8.2.0",
+		"author": {"name":"ForecastMaster","email":"forecastmaster@example.com"},
+		"resources": [
+			{
+				"resourceId": "rId0",
+				"sourceType": 5,
+				"file": "resources/ForecastMasterOverlayR178.pbiviz.json"
+			}
+		],
+		"visual": {"name":"forecastMasterOverlayR178","displayName":"ForecastMaster Overlay R17.8 TEST","guid":"ForecastMasterOverlayR178","visualClassName":"Visual","version":"17.8.2.0","description":"Selected monthly actual, forecast and trend overlay; no sector cap","supportUrl":"https://learn.microsoft.com/power-bi/developer/visuals/develop-power-bi-visuals","gitHubUrl":""},
+		"metadata": {
+			"pbivizjson": {
+				"resourceId": "rId0"
+			}
+		}
+	}

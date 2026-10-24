@@ -1,0 +1,113 @@
+{
+  "Stage": "LOCAL_NATIVE_OVERLAY_LIMITS_CONFIRMED",
+  "FabricatedOnly": true,
+  "NativeAllScopeAcceptance": false,
+  "ManualCapImplemented": false,
+  "Grid": "REJECTED_BY_USER",
+  "OneCustomChart": "AUTHORIZED_NOT_YET_VERIFIED",
+  "Evidence": {
+    "Standard-Window-01": {
+      "SHA256": {
+        "candidate.json": "79781d53e2f9e9754e250d8160a1362922bff99b2ccfc7a80b936567c19d269f",
+        "queries.json": "97b3ec64ed30fc6de0e427c6c2ebe2ec2331ac6c390235e466679679eb3d8e08",
+        "results.json": "facfbc967d459fb2af978d4ec8c974b0d310a65b62ca1e0b35b82c7e091d35c6"
+      },
+      "Checks": [
+        {
+          "Name": "native-standard/125-sector-window",
+          "ElapsedMs": null,
+          "Rows": null,
+          "CheckerError": "Syntax error: extra parenthesis in diagnostic ROW only"
+        }
+      ]
+    },
+    "Standard-Window-Correction-01": {
+      "SHA256": {
+        "candidate.json": "79781d53e2f9e9754e250d8160a1362922bff99b2ccfc7a80b936567c19d269f",
+        "queries.json": "142cd134a3addeda6f29d70a4791ba05f12e16f653bc3d6ff065d4283e86ea2d",
+        "results.json": "de52d5bfc25d9c52a0ca6b3f91f0c971e79da51155dd78225a1f2dc3f9e8240c"
+      },
+      "Checks": [
+        {
+          "Name": "native-standard/125-sector-window-corrected-checker",
+          "ElapsedMs": 2913,
+          "Rows": [
+            {
+              "[AvailableSeries]": 375,
+              "[ReturnedSeries]": 196,
+              "[AvailableCells]": 6750,
+              "[ReturnedCells]": 3527,
+              "[Months]": 36
+            }
+          ],
+          "CheckerError": null
+        }
+      ]
+    },
+    "Overlay-Probe-01": {
+      "SHA256": {
+        "candidate.json": "e7f308175689a0eddd04dc6fb5a47ceab2c8f0c92a208dd33e29c86d9a845145",
+        "queries.json": "438b1652ac5f2e10c0d7d8d6ec08015306172845e3468e9c76ab27d1c6d4b447",
+        "results.json": "2cd5c026fe1833c26d7537e6f862b61fe1435a907e15f7aefecbdcaf427b7c15"
+      },
+      "Checks": [
+        {
+          "Name": "overlay/25-sectors/36-months",
+          "ElapsedMs": 2094,
+          "Rows": [
+            {
+              "[AvailableSeries]": 75,
+              "[ReturnedSeries]": 75,
+              "[AvailableCells]": 1350,
+              "[ReturnedCells]": 1350,
+              "[Months]": 36
+            }
+          ],
+          "CheckerError": null
+        },
+        {
+          "Name": "overlay/30-sectors/36-months",
+          "ElapsedMs": 2284,
+          "Rows": [
+            {
+              "[AvailableSeries]": 90,
+              "[ReturnedSeries]": 90,
+              "[AvailableCells]": 1620,
+              "[ReturnedCells]": 1620,
+              "[Months]": 36
+            }
+          ],
+          "CheckerError": null
+        },
+        {
+          "Name": "overlay/25-sectors/84-months",
+          "ElapsedMs": 2059,
+          "Rows": [
+            {
+              "[AvailableSeries]": 75,
+              "[ReturnedSeries]": 75,
+              "[AvailableCells]": 3150,
+              "[ReturnedCells]": 3150,
+              "[Months]": 84
+            }
+          ],
+          "CheckerError": null
+        },
+        {
+          "Name": "overlay/30-sectors/84-months",
+          "ElapsedMs": 2288,
+          "Rows": [
+            {
+              "[AvailableSeries]": 90,
+              "[ReturnedSeries]": 85,
+              "[AvailableCells]": 3780,
+              "[ReturnedCells]": 3569,
+              "[Months]": 84
+            }
+          ],
+          "CheckerError": null
+        }
+      ]
+    }
+  }
+}

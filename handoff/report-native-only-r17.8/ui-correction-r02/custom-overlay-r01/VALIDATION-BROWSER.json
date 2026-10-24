@@ -1,0 +1,140 @@
+{
+  "Stage": "LOCAL_CUSTOM_OVERLAY_BROWSER_VERIFIED",
+  "FabricatedOnly": true,
+  "Scopes": 150,
+  "Series": 450,
+  "Points": 18900,
+  "Readings": [
+    {
+      "width": 1400,
+      "height": 360,
+      "elapsedMs": 23.5,
+      "series": 450,
+      "points": 18900,
+      "scopes": 150,
+      "invalid": false,
+      "texts": [
+        "39.12k",
+        "46.82k",
+        "54.53k",
+        "62.23k",
+        "69.93k",
+        "Jan 2023",
+        "Mar 2024",
+        "May 2025",
+        "Jul 2026",
+        "Aug 2027",
+        "Oct 2028",
+        "Dec 2029"
+      ],
+      "failures": []
+    },
+    {
+      "width": 840,
+      "height": 300,
+      "elapsedMs": 10.899999999906868,
+      "series": 450,
+      "points": 18900,
+      "scopes": 150,
+      "invalid": false,
+      "texts": [
+        "39.12k",
+        "46.82k",
+        "54.53k",
+        "62.23k",
+        "69.93k",
+        "Jan 2023",
+        "Mar 2024",
+        "May 2025",
+        "Jul 2026",
+        "Aug 2027",
+        "Oct 2028",
+        "Dec 2029"
+      ],
+      "failures": []
+    },
+    {
+      "width": 560,
+      "height": 300,
+      "elapsedMs": 8.79999999993015,
+      "series": 450,
+      "points": 18900,
+      "scopes": 150,
+      "invalid": false,
+      "texts": [
+        "39.12k",
+        "46.82k",
+        "54.53k",
+        "62.23k",
+        "69.93k",
+        "Jan 2023",
+        "May 2025",
+        "Aug 2027",
+        "Dec 2029"
+      ],
+      "failures": []
+    },
+    {
+      "width": 400,
+      "height": 260,
+      "elapsedMs": 7.900000000023283,
+      "series": 450,
+      "points": 18900,
+      "scopes": 150,
+      "invalid": false,
+      "texts": [
+        "39.12k",
+        "46.82k",
+        "54.53k",
+        "62.23k",
+        "69.93k",
+        "Jan 2023",
+        "May 2025",
+        "Aug 2027",
+        "Dec 2029"
+      ],
+      "failures": []
+    },
+    {
+      "width": 1000,
+      "height": 420,
+      "elapsedMs": 7.800000000046566,
+      "series": 450,
+      "points": 18900,
+      "scopes": 150,
+      "invalid": false,
+      "texts": [
+        "39.12k",
+        "46.82k",
+        "54.53k",
+        "62.23k",
+        "69.93k",
+        "Jan 2023",
+        "Mar 2024",
+        "May 2025",
+        "Jul 2026",
+        "Aug 2027",
+        "Oct 2028",
+        "Dec 2029"
+      ],
+      "failures": []
+    }
+  ],
+  "FocusedWithoutRemovingData": {
+    "paths": 450,
+    "active": 3
+  },
+  "Edges": {
+    "repeatedPoints": 18900,
+    "conflictWithheld": true,
+    "partialWithheld": true,
+    "refusedWithheld": true,
+    "emptyBlank": true,
+    "zeroPreserved": true,
+    "safeText": true,
+    "ratio": true,
+    "fetches": 2
+  },
+  "BrowserErrors": [],
+  "DesktopHostAcceptance": false
+}

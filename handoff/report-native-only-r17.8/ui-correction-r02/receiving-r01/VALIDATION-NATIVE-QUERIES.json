@@ -1,0 +1,23 @@
+{
+  "Stage": "LOCAL_EXACT_RECEIVING_SCALAR_QUERIES_VERIFIED",
+  "Queries": 51,
+  "PairedComparisons": 24,
+  "NoFileBlankCases": 3,
+  "Mismatches": 0,
+  "FrozenInputsMatch": true,
+  "FabricatedOnly": true,
+  "CompanyNumericalAcceptance": false,
+  "SHA256": {
+    "INSTALL AND PREPARE PRIVATE TEST R02.py": "c5b54d76f7084d4b1c76f5353eee9f4056dd92d100999baa5b0f627eb0a341eb",
+    "native_cases.py": "c2e743174a0fe5f81247ee7792bbe01bd12c601b0deb5011e133365aea6e5f02",
+    "matrix_cases.py": "566de98fb8f09c259ca2cca0e18edd2cfb940e50397aad9e7a097bd181de8e5d",
+    "large_fixture.py": "25dfa46c7fcb75dd72688c91b3de917138fc1ca220c60903143b436ee155a8c6",
+    "run_large_engine.ps1": "25b0d16a951d702d3393883b41c27e719cdc2c08d978ae74dad618d785fe4901",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "candidate.json": "c3335458c5ea4e8c88a48c411d078a74344fb0c78ce46a09e821076153c33d3b",
+    "queries.json": "e12ae226285332d31cba300d74c84ffe481b00d15532a65270a2dbf6ec6d6a7f",
+    "expected.json": "b361b0b861a43e774b2ac4b3249f8a33ac7fa62e5bed5928c3b629758e685c84",
+    "HOST-METADATA-ADAPTATION.json": "ceb450c464a9a9c634666536b95dc94aef358eaa49a185bd0c03cd6a5ac1ec68",
+    "results.json": "b3345b88b129014e5a10270a4ce1a11d7224cb5d35f4d21c6f81c14a0cf9f860"
+  }
+}

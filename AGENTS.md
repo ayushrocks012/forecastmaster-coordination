@@ -1,16 +1,45 @@
 # ForecastMaster coordination repository
 
+Current superseding handoff, 24 October: R17.8 R02 local qualification is CLOSED
+for its declared fabricated scope. The selected next receiving cell is
+ui-correction-r02/receiving-r01/INSTALL AND PREPARE PRIVATE TEST R02.py; follow its
+OPEN FIRST.txt, one new setup cell once, then private downloaded report. No
+refresh or publication. Exact model/private guards, backup, one update/readback;
+STOPPED/unknown refuses retries. All test Desktop windows/engines closed.
+Company R02 execution, representative UI/business parity and speed remain OPEN.
+The R01 installed pass below remains historical; local proof does not close new
+company gates. Read UNDERSTANDING resume first; older no-release/no-cell wording
+below records preparation history and is superseded only by this qualified R02
+handoff. Production R16.6 and old release bytes remain unchanged.
+
+Superseding 24 October steering: user REJECTS the six-panel grid and 20-sector
+exception, and explicitly authorizes **one custom overlay chart** with every
+selected sector; keep the rest of the report native. Preserve production R16.6.
+Read the latest UNDERSTANDING resume before the older native-only paragraphs.
+After reported ChatGPT crashes/laptop restart, use one task-owned Desktop window
+and serialize heavy qualification with native inspection. Rediscover windows;
+never leave multiple test Desktop instances open. The chart-only prototype has complete fabricated-feed/browser and initial Desktop
+population proof. Latest cutoff/shading/GM presentation changes are being inspected;
+no R02 company artifact is released. Read the maintained reference for exact gates.
+
+
 Latest steering, 24 October: R17.8 native receiving UI is REJECTED despite the
 bounded model verification pass. Read the updated UNDERSTANDING resume and
 2026-10-24-r178-native-ui-defects-reviewed.json before using older "current
 Desktop step" paragraphs below. Repair the representative slice; no new company
 cell or refresh for known UI defects. Superseding selection rule: ADS files
 visibly selected by default; empty selection means blank business visuals,
-never Automatic ADS fallback. No repaired candidate is built or installed yet.
-Power BI Desktop is open on the personal laptop, but Computer Use rejects this
-WSL chat's working-directory URI before connecting, even after kernel reset.
-Windows-native agent mode is the next bounded environment attempt; changing
-only the integrated terminal is insufficient. Native inspection remains unrun.
+never Automatic ADS fallback. A local R02 fabricated prototype and expanded
+qualification are built; no R02 company installer/connected TEST release exists.
+Power BI Desktop automation now works through node_repl_wsl and the installed
+Computer Use @oai/sky API: current window rediscovery, activation, Home screenshot
+and accessibility tree are confirmed here. Prefer mcp__node_repl_wsl__js; do not
+repeat the old node_repl error or propose Windows-native mode/restart for this
+working route. Document Control does not support Power BI and is not a blocker.
+Continue actual fabricated SAMPLE report inspection. The current large fixture
+has 20 files total / two cycles / five drivers / 30 sectors per file / 504,000
+facts (earlier 25-sector fixture is preserved). Read UNDERSTANDING and ui-correction-r02/VALIDATION-DESKTOP.json for the
+latest native findings, rejected experiments, timings and open gates.
 Preserve production R16.6 and all older release bytes. Full context is in the
 same maintained reference; do not invent a second ledger or claim UI acceptance.
 
@@ -93,7 +122,8 @@ reopen the closed date recovery. No reset/clear/recovery rerun. STOPPED or unkno
 write outcomes require receipt review, never blind retry or marker deletion.
 Keep production R16.6, all old draft/inventory/recovery package bytes and private
 backups unchanged. UI/export, company speed and independent business parity are
-still pending. Windows UI tool initialization fails before connection; F1 scope
+still pending. The old regular-node UI initialization failure is superseded by the working
+node_repl_wsl route and actual SAMPLE observations above. F1 scope
 gate fails closed for this unregistered repo, so graph authority remains UNKNOWN.
 Raw company exports/DAX/descriptions stay private. Update UNDERSTANDING/STATUS
 from each reviewed company receipt; do not replace them with a parallel ledger.

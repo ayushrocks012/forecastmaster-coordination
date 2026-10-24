@@ -1,0 +1,18 @@
+{
+  "Stage": "LOCAL_GM_NATIVE_FORMAT_RULES",
+  "Cases": 71,
+  "Failures": [],
+  "NumericModelChanged": false,
+  "CompanyAcceptance": false,
+  "SHA256": {
+    "candidate.json": "29ac7dbe8afcda1514c3cef5774b79d21779568eff8e49e46d45014ac8944f27",
+    "queries.json": "c07bedd6338aa599c905f9ba00fb838e79da687bcb7eed719de2b2b3b334c98c",
+    "results.json": "9daf933041c80375588de6d1592a9aa8dba05b1239a2a15cf87ce35a2708ea1e"
+  },
+  "SourcesSHA256": {
+    "gm_presentation.py": "d4b1c306e42b4c7be3e5e2d28bc02a2518c1b794daf070ace379983c307c5258",
+    "gm_cases.py": "ce202e3968b5fdaf6792c015f9a66d49f203837cdd3fcacbc2459b9efa6f61b6"
+  },
+  "FrozenInputsVerified": true,
+  "EngineStopped": true
+}

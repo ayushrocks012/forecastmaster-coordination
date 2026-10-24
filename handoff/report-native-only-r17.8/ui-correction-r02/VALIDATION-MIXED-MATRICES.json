@@ -1,0 +1,25 @@
+{
+  "Stage": "LOCAL_MIXED_PERIOD_MATRICES",
+  "Contexts": 72,
+  "AdmissionEdges": 3,
+  "IndependentValueAndColorCells": 11592,
+  "Failures": [],
+  "CompanyAcceptance": false,
+  "SHA256": {
+    "candidate.json": "29ac7dbe8afcda1514c3cef5774b79d21779568eff8e49e46d45014ac8944f27",
+    "queries.json": "93a33d5fd4565bf0bab9135dcc87c6376b5a88cd22d8334a778604d5018af16e",
+    "expected.json": "ef1a702f6b2039e92cf0f585cade86c8160a211fff99441acff384034fb7f676",
+    "results.json": "c0582d477c87592cb5708792c3c826414e9210a84f6ff43d5c78494fd08ab4a7"
+  },
+  "BoundInputsVerified": true,
+  "SourcesSHA256": {
+    "matrix_planning.py": "5a1f1a750bfa0f8ee1961dc8181894e82b31c15ddfe7cf6d46979eb8d9044cf1",
+    "matrix_cases.py": "566de98fb8f09c259ca2cca0e18edd2cfb940e50397aad9e7a097bd181de8e5d",
+    "large_fixture.py": "25dfa46c7fcb75dd72688c91b3de917138fc1ca220c60903143b436ee155a8c6",
+    "chart_cases.py": "d0813dce2e89201f5bc1de4d93422ade55fc580c0a779bc3e531fcaf57596932",
+    "gm_presentation.py": "152f5f8c9cea5aeec5bab31325d34b1b16052af0c5caf174f673d81598d80acc"
+  },
+  "Population": "20 files / two cycles / five drivers / 30 sectors per file / 84 months / 504000 facts",
+  "EngineStopped": true,
+  "Limits": "Generated data; full matrix contexts and driver totals, not all sector leaf rows, native rendering or company performance."
+}

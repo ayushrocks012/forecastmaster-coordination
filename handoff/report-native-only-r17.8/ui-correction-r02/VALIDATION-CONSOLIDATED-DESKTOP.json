@@ -1,0 +1,61 @@
+{
+  "Stage": "LOCAL_SAMPLE04_DESKTOP_PARTIAL",
+  "FabricatedOnly": true,
+  "BoundBuildSHA256": "4219c913564e011e6d8044d297b64e0ee29df9206e7f950bd5454bbf2a0ba397",
+  "SchemaDocuments": 40,
+  "SchemaFailures": 0,
+  "Observed": {
+    "ReviewThreeRowsNoOverlap": true,
+    "InitialFiveExecutiveDrivers": true,
+    "ExpandedDriver05SectorRows": true,
+    "VarianceTotalsColoredPlanUncolored": true,
+    "ShareBothMatricesCompleteWithoutDenseSpool": true,
+    "ShareAxisPercent": true,
+    "AllSectorOverlayCount": 150,
+    "WholeDriverHighlight": true,
+    "ExFactoryCompatibleBookmark": true,
+    "ExFactoryMeasureListOnlyCompatible": true,
+    "ExFactoryCutoffSeptember": true,
+    "CutoffAndReviewShading": true,
+    "SingleFileListImportedUTC": true,
+    "OneDriverThirtySectorOverlay": true,
+    "DriverScopesFileListToTwoOwnVersions": true,
+    "ExFactoryValueGBPAxis": true,
+    "GreenAndAmberNativeTotals": true,
+    "CompatibleSectionKeyboardActivation": "Select native button then Ctrl+Enter in Desktop edit mode",
+    "TwoExecutiveTrends6And12GraphStays12": true,
+    "ExFactoryValueGBPBothMatrices": true,
+    "ClearedInScopeFileBlanksExecutiveAndGraph": true,
+    "ClearedFileHeadersRemainWithoutNumbers": true,
+    "RestoringFileRestoresOverlay": true,
+    "RestoringFileRestoresBothSummaries": true
+  },
+  "SharePerformanceSingleObservation": {
+    "Graph": {
+      "DAXMs": 2436,
+      "TotalMs": 2664
+    },
+    "Review": {
+      "DAXMs": 11430,
+      "TotalMs": 11639
+    },
+    "ExecutiveDriver05Expanded": {
+      "DAXMs": 39764,
+      "TotalMs": 40005
+    }
+  },
+  "PerformanceAcceptance": false,
+  "CompanyAcceptance": false,
+  "Remaining": [
+    "Restored summary/reopen/export",
+    "Exact query optimization",
+    "Company adapter/release qualification"
+  ],
+  "PerformanceExportSHA256": "967e56e763d67323408277d12aa986f43b5d4cd28f0dbdd4ca06aa4bc6f7135c",
+  "QueriesSHA256": {
+    "native_chart-share.dax": "148acbf081df423557bfdd9b048d6c0af204afa55b0ddc2ddf4429ddd1168b89",
+    "headline-share.dax": "78bb5f8bda043d8601be5eab67720dd3e6523dc65922187a9c9c8c15f4851294",
+    "executive_summary-share.dax": "7ed638b5efd803a7bc6ddf01d4456752fb36d86d0304f990a9fbecd9d3138dc8"
+  },
+  "CompletePerformanceTraceSHA256": "ae26be07d9df5218404de355619a2598b006ab2c6607c73fb94c2fdc76b270d0"
+}

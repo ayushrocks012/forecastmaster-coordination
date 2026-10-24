@@ -1,0 +1,37 @@
+{
+  "Stage": "LOCAL_R178_R02_LARGE_NATIVE_CHECKS",
+  "FabricatedOnly": true,
+  "Queries": 12,
+  "Population": [
+    {
+      "[Files]": 20,
+      "[Cycles]": 2,
+      "[Drivers]": 5,
+      "[FileSectors]": 500,
+      "[Months]": 84,
+      "[Facts]": 420000
+    }
+  ],
+  "Failures": [],
+  "QueryElapsedMs": {
+    "population": 99,
+    "monthly/2026-07/market": 84,
+    "monthly/2026-07/ef": 68,
+    "monthly/2026-07/share": 70,
+    "plan/2026-07": 90,
+    "clear/2026-07": 13,
+    "monthly/2026-10/market": 74,
+    "monthly/2026-10/ef": 76,
+    "monthly/2026-10/share": 71,
+    "plan/2026-10": 93,
+    "clear/2026-10": 13,
+    "labels": 3
+  },
+  "InputSHA256": {
+    "baseline.json": "2c9764610440436b233df23fa88c0f4799ceabb8e59dc24d9d1ff9bb68d78a43",
+    "candidate.json": "5f607dc0f2f349aaf04ef9e10dd65956553bb87c20a39a2e9324314b4e586c34",
+    "queries.json": "faec8d12c68cc86920d3131d1edac44db0aea7a17d81fc5586492edf7bdb1842",
+    "expected.json": "ee2aa838b7c8f0406c427946df1f7b143361c956134de37bd26ee716e71ae35c"
+  },
+  "CompanyFabricSpeedOrBusinessAcceptance": false
+}

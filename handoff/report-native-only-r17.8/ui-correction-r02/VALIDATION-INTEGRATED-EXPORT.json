@@ -1,0 +1,139 @@
+{
+  "Stage": "LOCAL_SAMPLE05_NATIVE_EXPORT_AND_REOPEN_VERIFIED",
+  "FabricatedOnly": true,
+  "SchemaDocuments": 40,
+  "ReviewRows": 10,
+  "ExecutiveSectorRows": 1500,
+  "ExecutiveSectors": 150,
+  "Drivers": 5,
+  "MarketUnitsFormattedCellMismatches": 0,
+  "NumericExpressionsChangedFromSample04": 0,
+  "DisplayDefinitionsChanged": [
+    "N Summary Cell",
+    "N Headline Cell"
+  ],
+  "Observed": [
+    "Total overlay styles/cutoff/shading",
+    "Three Review rows no overlap",
+    "All five Executive drivers and expand all",
+    "Share Review and percent axis",
+    "Share fully expanded native matrix completes with percent/negative formats, no dense-spool error",
+    "Compatible Ex-factory action and September cutoff",
+    "GBP Review and expanded Executive, green/amber fills and Plan uncolored",
+    "Native save/reopen restores compatible Ex-factory Value, explicit file selection, GBP Review and overlay, no manual refresh",
+    "Reopened expanded hierarchy, native green/amber fills, one checkbox file list and imported UTC labels"
+  ],
+  "Remaining": [
+    "Receiving adapter/package qualification",
+    "Company performance and independent business acceptance"
+  ],
+  "SHA256": {
+    "FROZEN-BUILD.json": "78f8855d93e463cfe2b563a72d1b3aba851817ee090f86f5507401234ca9885c",
+    "a.csv": "19f145dd560eed3c0c90dad8ae7bac2e4df7eeca632ab7f784896bff0e377db1",
+    "b.csv": "0df05b815d6de713d1ac6531499fdc31508086046cee74881ce9ab4c9aeb1fab",
+    "c.csv": "0e67ba32338e5223bb187b67012feb867ed4837f9cd6eee85e5ff10bf7ea275b",
+    "d.csv": "8e997586c1fe0521864b9d08629a320c06b326a0aa1a78dc8cced72fb9fbe57d",
+    "ez.json": "68331de609055f642f5477c8848d67ceb47f21115350bd5711df80228df058ed"
+  },
+  "ShareUnitsFormattedCellMismatches": 0,
+  "ShareUnitsFormattedCells": 1500,
+  "ExFactoryGBPFormattedCells": 1500,
+  "ExFactoryGBPFormattedCellMismatches": 0,
+  "CheckerCorrection": {
+    "OriginalAttempt": "GBP export: one display mismatch out of 1500; CSV/source/candidate unchanged",
+    "Case": "Driver04/Sector04.10, 2026 YTD Plan = 371250",
+    "Cause": "Checker Python round-to-even emitted \u00a3371.2k; native FORMAT correctly emits \u00a3371.3k",
+    "Correction": "Explicit Decimal ROUND_HALF_UP; no tolerance or required-population change; all three existing exports rechecked"
+  },
+  "NativeTimingObservations": [
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T03:55:02.844Z",
+      "DAXMs": 2130,
+      "TotalMs": 2324
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T03:55:02.868Z",
+      "DAXMs": 9909,
+      "TotalMs": 10094
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T03:55:02.874Z",
+      "DAXMs": 4523,
+      "TotalMs": 4694
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T03:56:49.804Z",
+      "DAXMs": 12205,
+      "TotalMs": 13707
+    },
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T03:58:38.477Z",
+      "DAXMs": 2240,
+      "TotalMs": 2419
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T03:58:38.503Z",
+      "DAXMs": 16289,
+      "TotalMs": 18384
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T03:58:38.507Z",
+      "DAXMs": 4886,
+      "TotalMs": 5048
+    },
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T04:01:39.793Z",
+      "DAXMs": 2136,
+      "TotalMs": 2294
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T04:01:39.817Z",
+      "DAXMs": 13360,
+      "TotalMs": 15357
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T04:01:39.822Z",
+      "DAXMs": 4405,
+      "TotalMs": 4548
+    },
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T04:02:23.988Z",
+      "DAXMs": 2194,
+      "TotalMs": 2369
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T04:02:24.018Z",
+      "DAXMs": 13036,
+      "TotalMs": 15012
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T04:02:24.022Z",
+      "DAXMs": 4263,
+      "TotalMs": 4416
+    }
+  ],
+  "TimingContextsInOrder": [
+    "Market Units initial Total/five drivers",
+    "Expand all 150 Market sectors (Executive only)",
+    "Share all 150 sectors",
+    "Ex-factory Units all 150 sectors",
+    "Ex-factory GBP Value all 150 sectors"
+  ],
+  "TimingAcceptance": false,
+  "NativeSavedStateSHA256": "ca2d001f6bb79c70c98dcf1c435210349556363f3684a7214a80cae05f3a97dd",
+  "CompanyAcceptance": false,
+  "DesktopWindowsClosed": true
+}

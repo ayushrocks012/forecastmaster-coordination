@@ -1,0 +1,17 @@
+{
+  "Stage": "LOCAL_DESKTOP_HIERARCHY_INSPECTED",
+  "FabricatedOnly": true,
+  "FiveInitialDriverTotals": true,
+  "InitiallyInactiveSectorExpands": true,
+  "LastDriverExpandsAfterDrillUp": true,
+  "Sector0530ReachedByNativeScroll": true,
+  "FullLevelsPinnedCollapsedRootEmpty": true,
+  "InitiallyActiveAllDescendantsRejected": "Initial query window omitted Driver05; native drill-up restored all drivers.",
+  "FullSummaryCellReinspection": "PENDING",
+  "DesktopClosed": true,
+  "CompanyAcceptance": false,
+  "SavedVisualSHA256": {
+    "matrix_0": "094fb3329739a6622aa736fe40a1cea065403425f3d46792ada11529b5e4b6e4",
+    "matrix_1": "cab6515e1cc70f4a6e255f7c7bec2d57107c4985a1098ecb15756a91f2569dfc"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Stage": "LOCAL_R178_R02_NATIVE_CHECKS",
+  "Queries": 212,
+  "Assertions": 1865,
+  "Failures": [],
+  "InputSHA256": {
+    "baseline.json": "e5f17fcb90ad1b65cfbb2eb27c72562dad4a7d31cf34154aaf2c5217b5c373c9",
+    "candidate.json": "01c0a606e7fb4d802483aafbc6e65909d6b199d2c6cfee868415a27358645a8d",
+    "expected.json": "5353b9a2ffc300ad81ace2abd5d48937187cf706c859508f3a92ccc1527c5dd5",
+    "launch.json": "423e9319d977299716e7a174f996dfc03fa5c725ec19c7bc9941dff092295e48",
+    "queries.json": "09d4f5c2caebe933279bf36a1f0919e3cf127779688f77eb26d28d98d3aefc80",
+    "results.partial.json": "c5f56acf22c4264d577c50cc60b445a56a4fbfef0e1dc5b29d7c52c32c994845"
+  },
+  "FabricatedOnly": true,
+  "CompanyNumericalUIAndSpeedAcceptance": false,
+  "CheckerCorrection": {
+    "OriginalCheckerCompilationFailures": [
+      "selection/empty",
+      "summary/empty"
+    ],
+    "AdditionalExecutedQueries": 2,
+    "OnlyChange": "Typed one-column empty filter",
+    "SHA256": {
+      "candidate.json": "01c0a606e7fb4d802483aafbc6e65909d6b199d2c6cfee868415a27358645a8d",
+      "queries.json": "350293ab3a97ec061cd89d3b50a29aa1450af210308d1ba7ba4f3d700b353a84",
+      "results.json": "dece2b3220c2077b6fbe0abc4690653edc76605b12a7602bfd7e83e0c17143d5"
+    }
+  }
+}

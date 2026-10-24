@@ -1,0 +1,39 @@
+{
+  "Stage": "LOCAL_CUSTOM_CHART_VALUES_AND_CONTEXT",
+  "FabricatedOnly": true,
+  "Contexts": 72,
+  "AdmissionEdges": 3,
+  "Failures": [],
+  "CompanyAcceptance": false,
+  "Binding": {
+    "NativeRead": {
+      "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+      "queries.json": "6e4f099d8a4320069493b84eafc5f917648a902ab1f80bdb265f3e24dae97b56",
+      "results.json": "d2d72d668f4eb61348ebe6f5239ef602e3ddb004d3f980b9b429947143f034f4"
+    },
+    "CorrectedOracle": "260710b7e0e2741cf7ddafab40e57584e9683acf028a637e8cd7ed1d667d6f51",
+    "CheckerSource": "84c26fa6475c875851386dfec8c5e6ebd0a845f2ad88c561089cc01ebd664028"
+  },
+  "PriorAttempts": [
+    {
+      "Stage": "CHECKER_FILE_LABEL_ESCAPING_FAILED",
+      "Reason": "Literal JSON Unicode escapes in DAX labels; 72 contexts blank.",
+      "SHA256": {
+        "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+        "queries.json": "9775f818a9180b27506103296d6cd8f51886309b025d61a7a64840f9d4998139",
+        "expected.json": "b5afb05b323daad659f5c0aac6a78c1b7abfe9018c9cd32e8f98eed2bf477328",
+        "results.json": "9a048cdabeed8000910083063d401b537a6fc31842d302f9e31febe07a7dbdc7"
+      }
+    },
+    {
+      "Stage": "CHECKER_EXPECTED_MONTH_OFF_BY_ONE",
+      "Reason": "November 2026 is zero-based month 46; first oracle used 45. Native reads unchanged.",
+      "OldExpectedSHA256": "b5afb05b323daad659f5c0aac6a78c1b7abfe9018c9cd32e8f98eed2bf477328"
+    }
+  ],
+  "Reuse": {
+    "ExactCandidateAndQueryBytesCompared": true,
+    "NoNativeReadRepeatedForOracleMonthCorrection": true,
+    "TolerancesUnchanged": true
+  }
+}

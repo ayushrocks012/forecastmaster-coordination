@@ -1,0 +1,107 @@
+{
+  "dataRoles": [
+    {
+      "name": "Month",
+      "displayName": "Month",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Series",
+      "displayName": "Series",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Scope",
+      "displayName": "Scope",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Kind",
+      "displayName": "Kind",
+      "kind": "Grouping"
+    },
+    {
+      "name": "Value",
+      "displayName": "Value",
+      "kind": "Measure"
+    },
+    {
+      "name": "Context",
+      "displayName": "Chart context",
+      "kind": "Measure"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "Month": {
+            "max": 1
+          },
+          "Series": {
+            "max": 1
+          },
+          "Scope": {
+            "max": 1
+          },
+          "Kind": {
+            "max": 1
+          },
+          "Value": {
+            "max": 1
+          },
+          "Context": {
+            "max": 1
+          }
+        }
+      ],
+      "table": {
+        "rows": {
+          "select": [
+            {
+              "for": {
+                "in": "Month"
+              }
+            },
+            {
+              "for": {
+                "in": "Series"
+              }
+            },
+            {
+              "for": {
+                "in": "Scope"
+              }
+            },
+            {
+              "for": {
+                "in": "Kind"
+              }
+            },
+            {
+              "for": {
+                "in": "Value"
+              }
+            },
+            {
+              "for": {
+                "in": "Context"
+              }
+            }
+          ],
+          "dataReductionAlgorithm": {
+            "window": {
+              "count": 10000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "privileges": [],
+  "supportsKeyboardFocus": true,
+  "objects": {},
+  "sorting": {
+    "default": {}
+  }
+}

@@ -1,0 +1,55 @@
+R17.8 R02 — company TEST receiving check (production R16.6 unchanged)
+
+This replaces the rejected R17.8 TEST report/adapter. It is qualified locally,
+not yet on your company laptop. One custom overlay is included as approved;
+all other visuals remain built-in. Do not use an older installer or verifier.
+
+1. On the company laptop, pull the latest forecastmaster-coordination main.
+   Close the old TEST report. Use a quiet period: no TEST model editing or
+   ingestion/refresh running. Keep the existing private R17.8 backups.
+
+2. In this folder, open INSTALL AND PREPARE PRIVATE TEST R02.py.
+   Copy the WHOLE file into ONE NEW Python cell in ForecastMaster_GM_Setup.
+   Run ONLY that new cell ONCE. Do not choose Run all.
+   It checks the exact installed R01, compares values privately, makes a verified
+   private backup, applies the matching TEST adapter once and checks readback.
+   It does not request refresh, change source tables or production, or publish.
+
+3. Wait for the final JSON. Required success marker:
+   TEST_R178_R02_UPDATED_AND_BOUNDED_READBACK_VERIFIED
+   On STOPPED, cancellation, timeout or missing final JSON: stop and send the
+   output. Do not rerun, refresh, delete markers or use an old installer.
+   If success has DownloadLinkOffered=false, send the JSON; do not rerun.
+
+4. On success, click Download private R17.8 R02 TEST report below the cell.
+   Keep this ZIP PRIVATE: it contains company filenames/import times.
+   Extract ALL contents to a NEW folder. Open ForecastMaster R17.8 R02 TEST.pbip
+   with its Report folder beside it. Do not open REPORT TEMPLATE.zip: it is a
+   build template with placeholder defaults, not the company report.
+   Do not use Desktop model Refresh or publish. No Fabric refresh is required.
+   If the custom visual is blocked, send the visible message; do not change
+   security/tenant settings or repeatedly reinstall it.
+
+5. First inspect a small available slice: UK / 2026-10 / IMS / Market / Market /
+   Units / Total, one growth driver, 2026 FY and 12M review trend.
+   ADS files should already be ticked. Check the three Review rows, totals,
+   graph axis, actuals cutoff, shading, colours and UTC filename labels.
+   In Desktop edit mode, Section bookmark buttons use Ctrl+click.
+   Then check Ex-factory (compatible measure), Share, Value/currency, Start/End,
+   driver expansion to sectors, single-driver 30 sectors if available, and
+   independent 6M+12M Executive trends versus one Review/graph trend.
+   Selecting another driver must scope the file list. Clear all in-scope files:
+   business values and chart must be blank. Re-select files to restore.
+   Select multiple versions only as separate comparisons, never sum them as one.
+
+6. Send the FINAL JSON and screenshots of the controls, both summaries, graph
+   and files. In Optimize -> Performance Analyzer -> Start recording -> Refresh
+   visuals, record DAX and total milliseconds for graph, Review and Executive.
+   This is Refresh visuals only, not semantic-model Refresh. State filters,
+   Total/Sectors, expansion and first/repeated load. Do not post the private ZIP,
+   raw data exports or private file labels in the public repository.
+
+Known limits: explicit ADS defaults are the preparation-time snapshot; new
+imports need choosing their visible entries. Native matrix height stays fixed.
+Local expanded Executive still takes seconds, so company speed acceptance is
+open. This handoff does not authorize publication or replacing production.

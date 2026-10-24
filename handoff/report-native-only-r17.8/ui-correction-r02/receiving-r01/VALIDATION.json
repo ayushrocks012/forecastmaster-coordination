@@ -1,0 +1,71 @@
+{
+  "Stage": "LOCAL_CHECKER_QUALIFIED",
+  "Failures": 0,
+  "ArtifactSHA256": "c5b54d76f7084d4b1c76f5353eee9f4056dd92d100999baa5b0f627eb0a341eb",
+  "ArtifactBytes": 287735,
+  "Cases": [
+    "healthy",
+    "blank_zero",
+    "missing_date",
+    "malformed",
+    "cancelled",
+    "concurrent",
+    "failed_then_recovered",
+    "safe_errors",
+    "unknown_category"
+  ],
+  "ExactGeneratedCellExecuted": true,
+  "MockTests": 5,
+  "PrewriteFaultScenarios": 19,
+  "PostSubmissionFaultScenarios": 4,
+  "StickySecondRunRefusals": 4,
+  "MockScope": "One healthy install plus numeric-zero success, missing/invalid prerequisites, paired mismatch, blank guard, backup and concurrency refusals; no real Fabric execution",
+  "NativeQueries": {
+    "Evidence": "VALIDATION-NATIVE-QUERIES.json",
+    "Executed": 51,
+    "PairedComparisons": 24,
+    "NoFileBlankChecks": 3,
+    "Mismatches": 0,
+    "FabricatedOnly": true
+  },
+  "TemplateSHA256": "b1abef9ec0e4e9b0f51c4d2c731b2b259f06368d5c3d466a10c7a50180bfedf7",
+  "SchemaDocumentsValidated": 41,
+  "SchemaFailures": 0,
+  "DeclaredModelChange": {
+    "UniqueExpressionEdits": 15,
+    "DynamicFormatDefinitions": 2,
+    "AmountArithmeticChanged": false,
+    "TablesSourcesRelationshipsDatesChanged": false
+  },
+  "QualifiedNativeSample": "../VALIDATION-INTEGRATED-EXPORT.json",
+  "FailedAttemptPreserved": {
+    "Attempt": "Receiving-Queries-01",
+    "Phase": "Calculated-only engine database creation; before any receiving comparison query",
+    "Error": "MEngineHelper is not loaded",
+    "Cause": "Desktop-only model.defaultPowerBIDataSourceVersion=powerBI_V3 routing hint retained in standalone host",
+    "Correction": "Attempt02 removes only this host routing hint, as the existing calculated-only harness does; records original BIM hash and adaptation. No DAX, formats or thresholds changed",
+    "EngineClosed": true
+  },
+  "TaskOwnedDesktopWindowsClosed": true,
+  "TaskOwnedStandaloneEngineClosed": true,
+  "CompanyCallsMade": false,
+  "CompanyInstallVerified": false,
+  "CompanyUIAccepted": false,
+  "CompanyPerformanceAccepted": false,
+  "ProductionR166Changed": false,
+  "SourceSHA256": {
+    "build_cell.py": "e60360d277c30eb9684480723612c31486f84a317d07d4f9a331b5da35f08891",
+    "receiving.pyfrag": "4fe3fe92712ed5e7b14f6cb4354f635f50e434a47589e5467974b0c347919560",
+    "test_receiving.py": "e138b8349d99ae37606553afb3d96b3fa31ba92aa632e57d5d8d097935b06ee5",
+    "native_cases.py": "c2e743174a0fe5f81247ee7792bbe01bd12c601b0deb5011e133365aea6e5f02"
+  },
+  "Safety": "Pinned TEST only; exact private R01 receipt/current metadata; semantic dates, cloud/default/history stability; transient scalars; verified private backup; sticky attempt before one updateDefinition with allowPurgeData=False; complete readback; no refresh or publication",
+  "Limits": [
+    "One preferred ADS driver, market/ef/share, Units/Local, 12M FY/future receiving comparisons; broader generated-data cases are separate receipts",
+    "No new physical Lakehouse date reads; recovered physical/semantic parity is prior company evidence, current semantic validity/cohort stability checked",
+    "Local SAMPLE and mocks cannot prove company tenant custom-visual admission, Direct Lake execution or independent Excel/business parity",
+    "Native Executive DAX remained 9.9\u201316.3 seconds locally; company improvement is unqualified",
+    "Explicit ADS defaults snapshot preparation time. New imports need selecting their visible file entries. Clearing remains blank",
+    "Private report ZIP contains real filenames/import metadata; keep it outside this public repository"
+  ]
+}

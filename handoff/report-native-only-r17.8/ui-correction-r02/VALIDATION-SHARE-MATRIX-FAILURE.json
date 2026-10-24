@@ -1,0 +1,301 @@
+{
+  "Stage": "LOCAL_SHARE_MATRIX_QUERY_FAILURE_ISOLATED",
+  "FabricatedOnly": true,
+  "Queries": 10,
+  "AllFailedWithSameDenseSpoolError": true,
+  "Controls": [
+    "exact generated query",
+    "without colour",
+    "without dynamic format",
+    "values only",
+    "metadata-only colour admission"
+  ],
+  "Conclusion": "Failure persists without colour or dynamic-format evaluation. Cause not isolated to new GM colours; numerical kernel query planning remains under investigation.",
+  "SHA256": {
+    "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+    "queries.json": "c5f4c18b3353f7501bdd0f0fb7e48ef32ddded55a3fc256b2a4bc1c74948b8e0",
+    "results.json": "2e34defc43cec847b62f73d663d450714776e91977a89320d2c2c629169e1629"
+  },
+  "EngineClosed": true,
+  "CompanyAction": false,
+  "CalendarEnumerationProbe": {
+    "Queries": 6,
+    "AllSameDenseSpoolError": true,
+    "ChangesApplied": false,
+    "SHA256": {
+      "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+      "queries.json": "5ee87a9f5d9d7b7f10c9d416bc7daff05b0f008bceb659faabdb2bd724eadba5",
+      "results.json": "3cc1ee34f3e8fd41f1a5a282d234f699d410634f577228a2acafc3acf5632946",
+      "overrides.json": "33aca0c0b2e71606d42b614e5aa975923d9bf14ed39d441f0c7fe3d6155bdec8"
+    },
+    "Conclusion": "Replacing generated month lists with the physical calendar does not fix the failure; reject this proposed change."
+  },
+  "ShapeAndTypeProbes": [
+    {
+      "Folder": "ForecastMaster-R178-R02-GM-Share-Shape-01",
+      "Outcomes": [
+        {
+          "Name": "executive_summary/core-only",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/core-values-only",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/typed-cell",
+          "Status": "ERROR",
+          "Category": "FORMAT_HELPER_REMOVED_BY_QUERY_OVERRIDE",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/singleton-cell",
+          "Status": "ERROR",
+          "Category": "FORMAT_HELPER_REMOVED_BY_QUERY_OVERRIDE",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/core-only",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/core-values-only",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/typed-cell",
+          "Status": "ERROR",
+          "Category": "FORMAT_HELPER_REMOVED_BY_QUERY_OVERRIDE",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/singleton-cell",
+          "Status": "ERROR",
+          "Category": "FORMAT_HELPER_REMOVED_BY_QUERY_OVERRIDE",
+          "ElapsedMs": null
+        }
+      ],
+      "SHA256": {
+        "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+        "queries.json": "e9e441d64b49d68be0f9486ea566a237d695d9a379d646a06267011975b4bd5f",
+        "results.json": "e1642fc7b4db33849ce5a232dae5ff86bef876f0f3483c88d04142315cd50d58"
+      },
+      "EngineClosed": true
+    },
+    {
+      "Folder": "ForecastMaster-R178-R02-GM-Share-Shape-03",
+      "Outcomes": [
+        {
+          "Name": "executive_summary/typed-cell/format-helper-correction",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/singleton-cell/format-helper-correction",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/typed-cell/format-helper-correction",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/singleton-cell/format-helper-correction",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/single-period-values-only",
+          "Status": "COMPLETED",
+          "Category": "READ_COMPLETED",
+          "ElapsedMs": 3141
+        },
+        {
+          "Name": "executive_summary/plan-only",
+          "Status": "COMPLETED",
+          "Category": "READ_COMPLETED",
+          "ElapsedMs": 1388
+        },
+        {
+          "Name": "executive_summary/direct-plan",
+          "Status": "COMPLETED",
+          "Category": "READ_COMPLETED",
+          "ElapsedMs": 263
+        },
+        {
+          "Name": "headline/single-period-values-only",
+          "Status": "COMPLETED",
+          "Category": "READ_COMPLETED",
+          "ElapsedMs": 1491
+        },
+        {
+          "Name": "headline/plan-only",
+          "Status": "COMPLETED",
+          "Category": "READ_COMPLETED",
+          "ElapsedMs": 161
+        },
+        {
+          "Name": "headline/direct-plan",
+          "Status": "COMPLETED",
+          "Category": "READ_COMPLETED",
+          "ElapsedMs": 124
+        }
+      ],
+      "SHA256": {
+        "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+        "queries.json": "bb859366e9e9c8769d74ba2647f19034ff52455e3dfb7f67c99536e8ac236958",
+        "results.json": "a2521a4b5cfad43a36ed2bd24da6d3cc297c332c0b1c3bf2d25e882c9dbcccf2"
+      },
+      "EngineClosed": true
+    },
+    {
+      "Folder": "ForecastMaster-R178-R02-GM-Share-Benchmark-01",
+      "Outcomes": [
+        {
+          "Name": "executive_summary/flat-weight-columns",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/period-independent-fit",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "executive_summary/flat-and-period-independent-fit",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/flat-weight-columns",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/period-independent-fit",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "headline/flat-and-period-independent-fit",
+          "Status": "ERROR",
+          "Category": "DENSE_SPOOL",
+          "ElapsedMs": null
+        }
+      ],
+      "SHA256": {
+        "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+        "queries.json": "1b447d7ffe622f2b4946c42505a2cff30b464c873a10aaf05301ca3ff3a6d1e3",
+        "results.json": "15911ae90255985455e59b0e2eecd99c3c9199a879d31dd476e6290c6aba16a9"
+      },
+      "EngineClosed": true
+    }
+  ],
+  "CurrentFinding": "Plan across all periods succeeds; all comparison cells within a single period succeed. Combined multi-period comparison fails, including with flat weight-column and period-independent-fit virtual variants. No proposed numeric fix applied.",
+  "ActualOnlyAndEagerControls": {
+    "ForecastMaster-R178-R02-GM-Share-Fit-Isolation-01": {
+      "Outcomes": [
+        {
+          "Name": "constant-mean",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "constant-slope",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "constant-fit",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "plan-in-benchmark-slot",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        }
+      ],
+      "SHA256": {
+        "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+        "queries.json": "e7aeb908cf8e2828d957a9c392d1b5dc44328247755b3052f446fc775486255d",
+        "results.json": "66f4f5b69921259e50ce260aaff1c9198e3bd47b7b394669c30ceb0ad9553761"
+      },
+      "EngineClosed": true
+    },
+    "ForecastMaster-R178-R02-GM-Share-Admission-01": {
+      "Outcomes": [
+        {
+          "Name": "no-actual-only-period",
+          "Status": "COMPLETED",
+          "ElapsedMs": 1565
+        },
+        {
+          "Name": "actual-only-forced-off-DIAGNOSTIC",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "eager-variance-admission",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "eager-cell-choice",
+          "Status": "ERROR",
+          "ElapsedMs": null
+        },
+        {
+          "Name": "eager-both",
+          "Status": "COMPLETED",
+          "ElapsedMs": 1257
+        }
+      ],
+      "SHA256": {
+        "candidate.json": "9477e32e22b1712df0a6c6dc74b9d923eab07b8ccb9bff2a44107226546fab2c",
+        "queries.json": "4105f399bcf29f359315522d656ea4c205d758bae5fc6704f2e22c45a9875a4c",
+        "results.json": "36ed6b746ca6a0a5abace5c088dac03cb707b1d6160786e9abb20d294d7fa1d8"
+      },
+      "EngineClosed": true
+    },
+    "ForecastMaster-R178-R02-Eager-Matrix-01": {
+      "Outcomes": [
+        {
+          "Name": "executive_summary/exact-generated",
+          "Status": "COMPLETED",
+          "ElapsedMs": 18796
+        },
+        {
+          "Name": "headline/exact-generated",
+          "Status": "COMPLETED",
+          "ElapsedMs": 8644
+        }
+      ],
+      "SHA256": {
+        "candidate.json": "29ac7dbe8afcda1514c3cef5774b79d21779568eff8e49e46d45014ac8944f27",
+        "queries.json": "9cd66d3c107ab90c14eb05844891406eeee805f0aa046e8599e01a7807f8a341",
+        "results.json": "342d5204a95285e3024bc1225d5d9d16a727b4c2306ffaf5a85b79dcbf75a83d"
+      },
+      "EngineClosed": true
+    }
+  },
+  "CandidateFinding": "Eager evaluation at both the cell-choice and actual-only comparison guards permits both original Share matrix queries to complete, including their original dynamic formats and GM colours. Numerical measures/formats unchanged; four cell-evaluation expressions changed in a fabricated candidate only. Broad independent parity and Desktop reinspection pending."
+}

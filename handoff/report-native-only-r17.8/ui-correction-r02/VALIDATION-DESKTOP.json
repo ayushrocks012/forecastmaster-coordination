@@ -1,0 +1,116 @@
+{
+  "Stage": "LOCAL_R178_R02_EXPANDED_NATIVE_INSPECTION_IN_PROGRESS",
+  "FabricatedDataOnly": true,
+  "CompanyAccess": false,
+  "ProductionChanged": false,
+  "SampleBuild": "ForecastMaster-R178-R02-Large-Sample-05",
+  "GeneratedBimSHA256": "8a42927e8ad36a83ed1df52d6dc5cae9991ae998f7f49be9c85cc553b02d4777",
+  "PackageSHA256": "683a4f17bac347da17352add2c3d028efcf3e6afce8744597a2c2e8afc51325b",
+  "SchemaDocuments": 38,
+  "FocusedTests": 9,
+  "IdleDesktopTimings": {
+    "Sample03BeforeDrillCorrection": {
+      "ExportSHA256": "8fea8d168e593d97d397be3cbae267b800b75e5990fedab47468a5f080641693",
+      "Context": "UK / 2026-10 / Market / Units / Total / five explicit ADS files / Jan 2025-Dec 2027 / 2026 FY,YTD,YTG and 2027 FY / graph and table 12M / collapsed driver rows",
+      "NoOtherQualificationJobsRunning": true,
+      "ColdCacheClaim": false,
+      "Readings": {
+        "native_chart": {
+          "DaxMs": 1903,
+          "TotalMs": 2188
+        },
+        "executive_summary": {
+          "DaxMs": 12979,
+          "TotalMs": 14911,
+          "GroupsSectorLabelWhileCollapsed": true
+        },
+        "headline": {
+          "DaxMs": 4450,
+          "TotalMs": 4658
+        }
+      }
+    },
+    "Sample04AfterDrillCorrection": {
+      "ExportSHA256": "6197ce7232bab679e315c522926b2ba83e0b28f39b5a0df3eb1b6af162d2dc5f",
+      "Context": "UK / 2026-10 / Market / Units / Total / five explicit ADS files / Jan 2025-Dec 2027 / 2026 FY,YTD,YTG and 2027 FY / graph and table 12M / collapsed driver rows",
+      "NoOtherQualificationJobsRunning": true,
+      "ColdCacheClaim": false,
+      "Readings": {
+        "native_chart": {
+          "DaxMs": 1843,
+          "TotalMs": 2097
+        },
+        "executive_summary": {
+          "DaxMs": 8745,
+          "TotalMs": 8949,
+          "GroupsSectorLabelWhileCollapsed": false
+        },
+        "headline": {
+          "DaxMs": 4127,
+          "TotalMs": 4321
+        }
+      }
+    }
+  },
+  "TimingLimit": "One warm observation per build, local calculated fixture; not a controlled multi-run benchmark or company Fabric acceptance. Last build removes an optional bookmark only; its final query timing is pending.",
+  "FullRefreshObservationSample02": {
+    "StillRefreshingAtMs": 13136,
+    "CompletedByMs": 39915,
+    "ExactDurationKnown": false,
+    "Scope": "Local calculated model full refresh; not Direct Lake"
+  },
+  "ObservedCompleted": [
+    "Sample02: both cycles and valid cutoff captions",
+    "Sample02: driver-scoped file choices and imported UTC timestamps",
+    "Sample02: 25-sector driver drill including sector 25 and independent table trends",
+    "Sample02: valid nonblank Ex-factory and only compatible measure",
+    "Sample03: file search Driver_01 returns its two versions and clearing search restores scoped list",
+    "Sample03/04: native clear action blanks business values, with no automatic fallback",
+    "Sample04: all five collapsed growth drivers visible after SectorLabel marked inactive"
+  ],
+  "RejectedExperiments": [
+    {
+      "Build": "Sample03",
+      "Issue": "Active collapsed descendants entered native query; 102-row window omitted fifth driver. Desktop Drill up authored SectorLabel.active=false; current source uses that."
+    },
+    {
+      "Build": "Sample03/04",
+      "Issue": "Optional Reset files bookmark restored defaults but cleared the N File Available condition, exposing other cycles. Schema-valid byName filter attempt also failed actual Desktop inspection. Reset action removed from current source and Sample05."
+    }
+  ],
+  "Open": [
+    "Sample05 actual native export and save/reopen",
+    "High-density sector graph readability and actual native point/legend population",
+    "Summary-query cost still too high for a fast interaction claim",
+    "Company receiving TEST adapter/default-label package not released",
+    "Independent company Excel/R16.6 and Fabric performance acceptance"
+  ],
+  "NativeDenseChartProbe": {
+    "CandidateSameAsCompletedLargeWorkflow": true,
+    "ActualDesktopQueryReplayedOnTaskOwnedEngine": true,
+    "InputSHA256": {
+      "candidate.json": "79781d53e2f9e9754e250d8160a1362922bff99b2ccfc7a80b936567c19d269f",
+      "queries.json": "4b66b86e7085a206ae84a31771925b52d7d753406069add8fed5ce0298673373",
+      "results.json": "031fede1d1d6a7be61371e995f9c66853a83bd7ee7bae05f2d623ebf12ef3827"
+    },
+    "Rows": [
+      {
+        "[DS0IntersectionCount]": 6750,
+        "[DS0PrimaryDbCount]": 36,
+        "[DS0SecondaryDbCount]": 375,
+        "[DS0SecondaryCount]": 60
+      }
+    ],
+    "ElapsedMs": 1697,
+    "Result": "REJECTED: native sampling returns 60 of 375 requested series",
+    "UserSteering": "20-sector exception rejected after clarification about one driver with 25/30 sectors. Preserve all sectors; investigate sampling/native layout; no cap implemented."
+  },
+  "NativeCSVExportSample05": {
+    "SHA256": "a84ffc19c3f579c434f503158a2d6374314faa61fc9859805bbb8065384a48fc",
+    "Rows": 1250,
+    "Drivers": 5,
+    "Sectors": 125,
+    "Result": "POPULATION_COMPLETE; SCALED_FORMAT_EXPORT_REJECTED",
+    "Issue": "CSV exports unscaled amounts with k/m format suffixes; example generated 585900 rendered 585900.0k in CSV. Investigate native export/format behavior; numerical model/visible UI values remain separately verified."
+  }
+}
