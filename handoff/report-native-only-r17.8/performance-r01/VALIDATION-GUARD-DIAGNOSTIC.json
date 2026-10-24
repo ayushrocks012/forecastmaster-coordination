@@ -1,0 +1,52 @@
+{
+  "Stage": "LOCAL_GUARD_COST_DIAGNOSTIC_NOT_ACCEPTANCE",
+  "Queries": [
+    {
+      "Query": "market/original",
+      "ElapsedMs": 18415,
+      "KnownFakeScopeResultMatches": true,
+      "Failed": false
+    },
+    {
+      "Query": "market/constant-source-guards",
+      "ElapsedMs": 18356,
+      "KnownFakeScopeResultMatches": true,
+      "Failed": false
+    },
+    {
+      "Query": "market/constant-source-and-dispatch",
+      "ElapsedMs": 18044,
+      "KnownFakeScopeResultMatches": true,
+      "Failed": false
+    },
+    {
+      "Query": "share/original",
+      "ElapsedMs": 17328,
+      "KnownFakeScopeResultMatches": true,
+      "Failed": false
+    },
+    {
+      "Query": "share/constant-source-guards",
+      "ElapsedMs": 15870,
+      "KnownFakeScopeResultMatches": true,
+      "Failed": false
+    },
+    {
+      "Query": "share/constant-source-and-dispatch",
+      "ElapsedMs": 15829,
+      "KnownFakeScopeResultMatches": true,
+      "Failed": false
+    }
+  ],
+  "Interpretation": "Replacing source/cutoff/eligibility guards by constants did not provide a large latency reduction. Constants are not a selectable report design.",
+  "SourceHashes": {
+    "candidate.json": "d8676c1b5b52c290824fd336cb8b48e37d667913d8887378eb202d115ad77fce",
+    "guard_cost.py": "8a16409ae396d63ffcfd8de0bd9b4243d73e0de0d839be0b25d1648fcad23820",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "5799b188ad15b4be3bc39cccfee3683b5ae4b140a59d5908e9173887e61fdf21",
+    "run_profile.ps1": "b27f593839f03e835486afc528cf458a2521184a8965e310ab68a98c5a7ba987"
+  },
+  "ResultsSHA256": "4d941a09acb30d620219c21a80c569923c1d465257acbe14d3fa448db899f234",
+  "TaskOwnedEngineClosed": true,
+  "CompanyAcceptance": false
+}

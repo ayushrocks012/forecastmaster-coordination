@@ -1034,16 +1034,16 @@
       "SHA256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
     },
     "AGENTS.md": {
-      "Bytes": 84466,
-      "SHA256": "e81e242ee718127ea15c37e98e54a93f127d101ae82d76d14d57929ebc839e02"
+      "Bytes": 85402,
+      "SHA256": "ae87905b0ea5724fc55f1027c601bca37cf1db87959981841435494dff1d2e7b"
     },
     "README.md": {
-      "Bytes": 9056,
-      "SHA256": "80fa5e88b42fd40274a1cc0c8ed7b530e82351ccb11ee09cd455d0f1aed13c48"
+      "Bytes": 9151,
+      "SHA256": "8ed38007faab8aed331d376d2a4baf63a442b1c90c705492e20c26ecfb9de441"
     },
     "feedback/STATUS.md": {
-      "Bytes": 180132,
-      "SHA256": "9ff68dae7746c35adfed6a27faa58f0f5ecad8345fb4546f148c6469586b469e"
+      "Bytes": 183611,
+      "SHA256": "565a36b848a411369ee7afcd6c628705399dd13b7f264e3cbd9976c998b4f858"
     },
     "design/sop-side-panel-r02/README.md": {
       "Bytes": 3168,
@@ -3742,8 +3742,8 @@
       "SHA256": "872c68792789edc8e5be0d2b28b2ed19de9deea7cc69d837cd052b7800cc06d1"
     },
     "START-HERE.md": {
-      "Bytes": 9909,
-      "SHA256": "b7fbabebaf93737ac711f16a7b27efb389f8cd259801cf2bec7c673a7fb16361"
+      "Bytes": 10300,
+      "SHA256": "ff65a2094abf585604ad9b27a454757919a5d8a19a598ab6ef4e1481fd2433a1"
     },
     "feedback/logs/2026-10-22-native-r17-source-route.json": {
       "Bytes": 1043,
@@ -4518,8 +4518,8 @@
       "SHA256": "cce0ce1056d6281b1a854ca05e026b713ffc344acf603a9c683b2579f49ad2ab"
     },
     "handoff/report-native-only-r17.8/UNDERSTANDING.md": {
-      "Bytes": 232634,
-      "SHA256": "66dbd79f3ed381f9f7a6f876a31b96af0a84af8274e07b8fc12e8fc0d93172a0"
+      "Bytes": 244448,
+      "SHA256": "30037ce7217eab2846253d14baede32874bba03c3559e8f7116a295916716f57"
     },
     "feedback/logs/2026-10-23-native-r178-reset-r01-stopped.json": {
       "Bytes": 1440,
@@ -5040,6 +5040,190 @@
     "handoff/report-native-only-r17.8/ui-correction-r02/receiving-r01/test_receiving.py": {
       "Bytes": 12871,
       "SHA256": "e138b8349d99ae37606553afb3d96b3fa31ba92aa632e57d5d8d097935b06ee5"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/README.md": {
+      "Bytes": 4034,
+      "SHA256": "776ec30f10168900808297947345e14218c25eeb6ad546998477d9a198a53c73"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-BOUNDARY-DIAGNOSTIC.json": {
+      "Bytes": 1709,
+      "SHA256": "1169208732ce9f1c3d0e372907f78dede8180956f2aaec6d1953204b390e2643"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-CELLS-PROBE.json": {
+      "Bytes": 2869,
+      "SHA256": "961f247c5fbdebb73d84370faec16b6d5cc6cb6b5336cc17b5e0d994199a5128"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-COLOUR-REUSE-REJECTED.json": {
+      "Bytes": 1128,
+      "SHA256": "6d5c395810d38e886c3a13e77fa125c52afbb08fb6273d2e6743498e7cde585b"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-DESKTOP.json": {
+      "Bytes": 4867,
+      "SHA256": "a951ac547f5d23510a78f445ef9cc3a88bc820b8ed8a0a0697f5e8cd9e5f8f27"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-GUARD-DIAGNOSTIC.json": {
+      "Bytes": 1775,
+      "SHA256": "c96c0b0a36bea2430ec1d59f15b2e99198c7690747a991095331474122e484a2"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-MIXED-MATRICES.json": {
+      "Bytes": 640,
+      "SHA256": "c5e695a0583ec94f13d5e1c43b6997e492a03d24ad979bf5aa17a971d96db27a"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-MOMENTS-REJECTED.json": {
+      "Bytes": 3091,
+      "SHA256": "ecc7b032ec08e8eb0d5f7ee2222f021e438aa632555a586a1a1cdb231edffdf8"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-NATIVE-EXPORT.json": {
+      "Bytes": 452,
+      "SHA256": "ec711f63b9dc86d4e8c6fd5ea95a6bce0ee84b21b8edb72adc19fce4dd4774a5"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-PHYSICAL-REJECTED.json": {
+      "Bytes": 3012,
+      "SHA256": "661768b75a50f9a6453d8d811a2a7a9109367608f318d79099835cc06c2c9afe"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-PREPARED-REJECTED.json": {
+      "Bytes": 3961,
+      "SHA256": "fb7044572b37cb8576b152bcf92420b300d9938e3514f552249eb6cee9203a62"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-PUSHDOWN-REJECTED.json": {
+      "Bytes": 2852,
+      "SHA256": "45f58186371c07a4594b1394731e3041da3075de46d1154cbcc515f492b3aa75"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-STRICT-CELLS-PROBE.json": {
+      "Bytes": 2932,
+      "SHA256": "e4469256b2c5de6ba7f477ed9090d7f1529d675a3c5111af65b54f7f739563fa"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-TIMING-COMPONENT.json": {
+      "Bytes": 6482,
+      "SHA256": "00a461596a5fc0471ca7c256481747ca42a024f33bb7bfa634c0183162bdc9a6"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/VALIDATION-VECTORIZED-REJECTED.json": {
+      "Bytes": 3087,
+      "SHA256": "67049a9fd7ff31b6334844744a6d3511328279e59c23ebfe4f1cb92122dd442b"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/benchmark.py": {
+      "Bytes": 7748,
+      "SHA256": "ae5883e3f3c5d57ac0d840eef1b4c96c2fecf335dc313638e67e9b31ce6f2eb6"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/build_receiving.py": {
+      "Bytes": 5604,
+      "SHA256": "efc3f8bf28793b39cee376ca57b71087181f649690dc138c33de1915e5785899"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/cells.py": {
+      "Bytes": 2562,
+      "SHA256": "28bc9e854cd82f644a028601ce357bc4a19f0121f828f50b62f44f5cb9c64ccd"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/colors.py": {
+      "Bytes": 3944,
+      "SHA256": "b45e40af6d3a17cf44fefd3b073a88d18b4b51b52feb510c3c6f25c510292442"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/decompose.py": {
+      "Bytes": 3807,
+      "SHA256": "106e6e5ca8acd0c011c19a4f0d771f1642149c594fc2e9545b076fde3f4b5e9b"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/edge_cases.py": {
+      "Bytes": 2461,
+      "SHA256": "05d24ad8a23254c80bbe0679bfc9963963dd8cd07402bfef3909ea3ad0029e1f"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/edge_diagnostic.py": {
+      "Bytes": 2356,
+      "SHA256": "0c79a2ffc3fb5177b5de805c8396eb0a3ad4c721a6c7dfb0406fe544f119e6f2"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/guard_cost.py": {
+      "Bytes": 2928,
+      "SHA256": "8a16409ae396d63ffcfd8de0bd9b4243d73e0de0d839be0b25d1648fcad23820"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/moments.py": {
+      "Bytes": 5745,
+      "SHA256": "18e0ec11cb135f5f1983885b4c30caf8b2f0a3b597b72b3ee19496cb85eb7b13"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/physical.py": {
+      "Bytes": 6309,
+      "SHA256": "a4ab61520e39dd0b7ccbb2887db1ce8e222f827755c30eb0f9dec0eddd86a82a"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/prepare_desktop.py": {
+      "Bytes": 3027,
+      "SHA256": "52dd74a5149dab05d89100708be755e3a8de840657659679a3d29626e6680497"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/prepared.py": {
+      "Bytes": 5599,
+      "SHA256": "0b1a64466d29490b1097f53b011e631acd0457cbbd373d7a8d7f48b9c420f94a"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/probe.py": {
+      "Bytes": 11172,
+      "SHA256": "9ce725d105b458f426433d777158ea93b620960e4887c09b2fddfe7264ad56df"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/pushdown.py": {
+      "Bytes": 2720,
+      "SHA256": "6f7b1a1f68808158b9fae604db501c28d98a8c680676670923e527fe465871e9"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/qualify.py": {
+      "Bytes": 4559,
+      "SHA256": "b711e97847ee07120b4529adf9b768c269b4ea3a14c55b4c6a2c850e336878fb"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/INSTALL AND PREPARE PRIVATE TEST R03.py": {
+      "Bytes": 288598,
+      "SHA256": "6f66e53494e689f84644468ecda88d472a534ed85b8f046c23142ffa9e5e0664"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/OPEN FIRST.txt": {
+      "Bytes": 2422,
+      "SHA256": "5eab76262654bec0160aa5afde9f5dc6e8dcc3b89bfb76a47a1dc8ccd901fc31"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/README.md": {
+      "Bytes": 1442,
+      "SHA256": "6b6eae0a6e61622e9043ea9ebb2b40bf604574bb35da4c1d8cabc9e7c06ffcb6"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/REPORT TEMPLATE.zip": {
+      "Bytes": 61084,
+      "SHA256": "ea43ee9b4e3e7dab5f20cddd36359ca05b008bab299943ed6a5bf51a45a73cd0"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/VALIDATION-NATIVE-QUERIES.json": {
+      "Bytes": 2146,
+      "SHA256": "bb1ea909826c0b327a720f7d2e869fb93d32a91426c050883a953011daf8fe3c"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/VALIDATION-SCHEMA.json": {
+      "Bytes": 2936,
+      "SHA256": "c8ef5e46198f05475aba244b32f7c2dbf425c42913fc6d8c7a68e015c0bce67a"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/VALIDATION.json": {
+      "Bytes": 4979,
+      "SHA256": "8037db1be5a35cf67100b81ced43fe30ff3c32992f052ce0e9eabb6156e407bc"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/native_cases.py": {
+      "Bytes": 7061,
+      "SHA256": "90871e84922f3c659cd1a2215f6dcf9df9917bdeaf995b2ea112cae34e940696"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/receiving-r03/test_receiving.py": {
+      "Bytes": 12968,
+      "SHA256": "7039066fb253bd37156bed13c294ff2e0c4c73ddf5c46c99ffce770baa948e73"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/regression.py": {
+      "Bytes": 3357,
+      "SHA256": "d0d8905051f5ad26faff704a4940a8f011aeaccdd35a79e621f4affb877062aa"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/run_profile.ps1": {
+      "Bytes": 8568,
+      "SHA256": "83e07ca3ee23bcf74f5f391002f54038caf76b550eb29243ee8be4a94c9f1593"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/star.py": {
+      "Bytes": 9228,
+      "SHA256": "d8909a754ec832a8d43fdfd2fd7a9e5ac17eac5f34e7539e4f3c687768d65f47"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/strictcells.py": {
+      "Bytes": 722,
+      "SHA256": "1c3a51b053d4bdcf181ae471b21f4a1713a00846acadc13b681fad6214e62d72"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/test_prepared.py": {
+      "Bytes": 8359,
+      "SHA256": "a1705e79da78deb0f774a49b512966cfe99d0c1e1a25caa0cfc6f3814f7a28b5"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/validate_template.py": {
+      "Bytes": 1972,
+      "SHA256": "75cf29a10f0f34a70c3d0b1f43e842a3bcf577793c30db4db81070a9a68635ee"
+    },
+    "handoff/report-native-only-r17.8/performance-r01/vectorized.py": {
+      "Bytes": 3679,
+      "SHA256": "3d7d943d99e2075ce9c6b3ff2bac7f3448d4fee2042ee13e23bc51d52a7fbbda"
     }
   },
   "ReceivingQualification": {
@@ -5113,6 +5297,16 @@
           "Pointer": "/Stage",
           "Equals": "LOCAL_CHECKER_QUALIFIED"
         }
+      },
+      "r178_r03_local_performance_handoff_qualified": {
+        "Classification": "VERIFIED",
+        "EvidenceKind": "LOCAL_SYNTHETIC",
+        "Scope": "Exact R03 cell mocked; 41 template schemas; 75 mixed matrices, 93 receiving/boundary queries and fabricated Desktop/export/reopen. Controlled isolated improvement is bounded; company R03 install/UI/speed and near-instant objective remain open.",
+        "Evidence": {
+          "Path": "handoff/report-native-only-r17.8/performance-r01/receiving-r03/VALIDATION.json",
+          "Pointer": "/Stage",
+          "Equals": "LOCAL_CHECKER_QUALIFIED"
+        }
       }
     },
     "Gates": {
@@ -5145,13 +5339,24 @@
       "compact-r178-r02": {
         "Artifact": "handoff/report-native-only-r17.8/ui-correction-r02/receiving-r01/INSTALL AND PREPARE PRIVATE TEST R02.py",
         "LocalQualification": "handoff/report-native-only-r17.8/ui-correction-r02/receiving-r01/VALIDATION.json",
-        "OperatorEnabled": true,
+        "OperatorEnabled": false,
         "Where": "ONE NEW company ForecastMaster_GM_Setup Python cell; copy the WHOLE selected file, run only that cell ONCE; never Run all",
         "ReadWriteScope": "Exact existing TEST R01 only: metadata/date and transient paired scalars; verified private backup/report ZIP with actual ADS defaults; one guarded definition update/readback. No source/production write, refresh, printed/stored amounts or publication",
         "ExpectedMarker": "TEST_R178_R02_UPDATED_AND_BOUNDED_READBACK_VERIFIED; Revision R02; then private downloaded report",
         "StopCondition": "STOPPED, cancellation, missing final JSON, unknown write outcome or missing download: return safe output; no retry, refresh, marker deletion or old installer",
-        "NextAction": "On success, private download -> extract ALL to NEW folder -> open R02 TEST PBIP -> representative company Desktop checks and same-context timings. Keep private ZIP/labels out of public repository.",
+        "NextAction": "Superseded for the next operator by locally qualified R03. Retain frozen R02 bytes/receipts; do not run R02 before R03.",
         "RetryBasis": "New locally qualified R02 fixes reviewed R01 UI/admission defects; earlier bounded R01 pass retained. Not a retry of failed recovery. Subsequent stopped R02 requires exact receipt/external-state review."
+      },
+      "compact-r178-r03": {
+        "Artifact": "handoff/report-native-only-r17.8/performance-r01/receiving-r03/INSTALL AND PREPARE PRIVATE TEST R03.py",
+        "LocalQualification": "handoff/report-native-only-r17.8/performance-r01/receiving-r03/VALIDATION.json",
+        "OperatorEnabled": true,
+        "Where": "ONE NEW company ForecastMaster_GM_Setup Python cell; copy WHOLE R03 file, run ONLY that cell ONCE. Never Run all; do not install R02 first.",
+        "ReadWriteScope": "Exact existing TEST R01 only: semantic/date/default/cloud guards, 30 transient paired scalars and three no-file cases; verified private backup; one definition update/readback; private report ZIP. No source/production write, refresh, printed/stored amounts or publication.",
+        "ExpectedMarker": "TEST_R178_R03_UPDATED_AND_BOUNDED_READBACK_VERIFIED; Revision R03; then private downloaded report.",
+        "StopCondition": "STOPPED, cancellation, missing final JSON/download or unknown write outcome: return safe output; no retry, refresh, marker deletion or old installer.",
+        "NextAction": "On success, download PRIVATE ZIP, extract ALL to NEW folder, open R03 TEST PBIP; representative company UI/export and same-context Performance Analyzer timings. Keep private filenames/ZIP out of public repo.",
+        "RetryBasis": "New locally qualified two-expression calculation improvement combined with prior qualified R02 UI corrections, targeting still-exact installed R01. Prior R02 remains unexecuted. Any changed/already-updated TEST or subsequent STOPPED requires receipt/state review."
       }
     }
   }

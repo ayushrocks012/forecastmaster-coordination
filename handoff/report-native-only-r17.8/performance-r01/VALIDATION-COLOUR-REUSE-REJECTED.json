@@ -1,0 +1,32 @@
+{
+  "Stage": "LOCAL_COLOUR_REUSE_REJECTED_FOR_SPEED",
+  "Pairs": [
+    {
+      "Context": "market",
+      "OldMs": 8040,
+      "ReuseMs": 8206
+    },
+    {
+      "Context": "share",
+      "OldMs": 10620,
+      "ReuseMs": 11738
+    },
+    {
+      "Context": "review",
+      "OldMs": 1964,
+      "ReuseMs": 2027
+    }
+  ],
+  "Mismatches": 0,
+  "SourceHashes": {
+    "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "colors.py": "b45e40af6d3a17cf44fefd3b073a88d18b4b51b52feb510c3c6f25c510292442",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "087c4d28d1e4375be77b04eedc6e89dc9bdb0aac0d44eafb59defc891769ff66",
+    "run_profile.ps1": "8f9147c8b5ebac29ac7d68a9489e74c80bc548a52e4adedbdaf8472587c8e3bc"
+  },
+  "CompanyAcceptance": false,
+  "TaskOwnedEngineClosed": true,
+  "Selected": false,
+  "Decision": "Checked values, formats, colours and complete populations match, but all three timings worsen; retain original R02 colour helpers in R03. One ordered pair per context is a pilot, not a repeated benchmark."
+}

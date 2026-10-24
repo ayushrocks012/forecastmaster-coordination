@@ -1,5 +1,60 @@
 # Company setup status
 
+## 24 October 2026 — faster R03 TEST handoff locally qualified; company run pending
+
+R03 is selected directly; do not run R02 first. Follow
+handoff/report-native-only-r17.8/performance-r01/receiving-r03/OPEN FIRST.txt.
+One new setup cell once, 30 private numeric pairs and three no-file cases,
+verified private backup, one TEST definition update/readback, private report
+download. No refresh/source/production write/publication. STOPPED or unknown
+means return output and retain backups; no installer/refresh retry.
+
+Only two cell expressions differ from frozen R02: share Plan/Benchmark work,
+derive variance/percentage with the existing admission/blank semantics.
+Local 75-query / 11,592-cell mixed regression, 93 exact receiving/boundary
+queries, five fake-client tests and 41 schema documents pass. Actual fabricated
+Desktop, all-150-sector Share CSV (1,500 formatted cells), file clear and native
+save/reopen pass. Three alternated pairs per context improve isolated median
+server time about 41–45%: full Market 10.1→6.0s, Share 13.8→7.9s, five-driver
+Executive 6.4→3.5s, Review 2.8→1.6s. Initial boundary test setup failed and is
+retained; corrected boundary evidence is separate. Colour reuse and the other
+slower prototypes are rejected. Details/source-bound receipts are in the same
+maintained understanding and performance-r01 folder.
+
+Native concurrent-visual expanded Share remains about 9.7s DAX / 11.0s total;
+near-instant performance, p95 and company improvement are NOT qualified. No
+company call was made. R16.6 and old released R02 bytes unchanged. Task-owned
+Desktop windows and standalone engines are closed; unrelated Excel untouched.
+Company R03 installation, custom visual admission, UI/business parity and
+same-context performance comparison remain open.
+
+## 24 October 2026 — performance prototypes rejected; narrower source-filter test
+
+Prepared and vectorized variants matched the checked values but were slower.
+The subsequent regression-moment variant also passes all 21 queries/ten paired
+result-set comparisons, including formats, colours and all 150 sectors; full
+Market was 10.6->15.1s and Share 13.5->15.5s. It is rejected, not released.
+Cost decomposition rules out fallback routing as the main cost and identifies
+repeated metadata membership callbacks. A separate seven-expression storage
+filter rewrite is now running against frozen R02, without new tables or changes
+to arithmetic or selection policy. Correctness and speed are pending. Previous
+engines closed; one isolated test engine, no Desktop/company call. The released
+R02 receiving handoff and production remain byte-identical. Details and rejected
+candidate receipts are in the maintained understanding/performance-r01.
+
+## 24 October 2026 — first prepared-component performance candidate rejected
+
+User authorized a separate local speed prototype. The first valid 504,000-fact
+comparison passes all 21 query/result-population checks but is slower: full
+150-sector Market 10.9->16.2s, Share 13.8->17.9s. It is not selected. Earlier
+trace/UTF8 harness failures are retained, with no empty result admitted as a
+speed pass. Next candidate batches period/training calculations and is running
+locally. Exact independent parity, complete population and controlled timing
+remain required. R02 release and production bytes unchanged; no company call,
+new installer or refresh. See maintained understanding and the new rejected
+candidate receipt for source-bound details.
+
+
 ## 24 October 2026 — senior-management latency objective reviewed; architecture proposal only
 
 The user wants near-immediate responses after filter changes. Source tracing

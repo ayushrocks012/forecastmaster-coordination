@@ -1,0 +1,17 @@
+{
+  "Stage": "LOCAL_MIXED_PERIOD_MATRICES",
+  "Contexts": 72,
+  "AdmissionEdges": 3,
+  "IndependentValueAndColorCells": 11592,
+  "Failures": [],
+  "CompanyAcceptance": false,
+  "SHA256": {
+    "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "queries.json": "79fa394c12d75c0bf01a5f85b822df702a9cb81fa4cf2ad8f05c7763d1c0f83f",
+    "expected.json": "ef1a702f6b2039e92cf0f585cade86c8160a211fff99441acff384034fb7f676",
+    "results.json": "eb11219e1756d0e286be53b140226c2e27a4ae29e2cba9414739d44d27b14dfc"
+  },
+  "FrozenInputsMatch": true,
+  "TaskOwnedEngineClosed": true,
+  "NewServingTables": false
+}

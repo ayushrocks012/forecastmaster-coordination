@@ -1,0 +1,225 @@
+{
+  "Stage": "LOCAL_ALTERNATED_SHARED_CELL_TIMING_COMPONENT",
+  "Prototype": "strictcells",
+  "Queries": 54,
+  "ExactFullMatrixPairs": 6,
+  "ExactCommonManagementPairs": 6,
+  "TimingQueries": 24,
+  "ScalarBoundaryQueries": 30,
+  "Sectors": 150,
+  "TimingMismatches": 0,
+  "InitialScalarBoundaryFailures": [
+    "scalar-edge/positive/plan",
+    "scalar-edge/positive/variance",
+    "scalar-edge/positive/pct",
+    "scalar-edge/negative-plan/plan",
+    "scalar-edge/negative-plan/variance",
+    "scalar-edge/negative-plan/pct",
+    "scalar-edge/negative-benchmark/plan",
+    "scalar-edge/negative-benchmark/variance",
+    "scalar-edge/negative-benchmark/pct",
+    "scalar-edge/both-negative/plan",
+    "scalar-edge/both-negative/variance",
+    "scalar-edge/both-negative/pct",
+    "scalar-edge/zero-plan/plan",
+    "scalar-edge/zero-plan/variance",
+    "scalar-edge/zero-plan/pct",
+    "scalar-edge/zero-benchmark/plan",
+    "scalar-edge/zero-benchmark/variance",
+    "scalar-edge/both-zero/plan",
+    "scalar-edge/both-zero/variance",
+    "scalar-edge/blank-benchmark/plan"
+  ],
+  "BoundaryGatePassed": false,
+  "Mismatches": 20,
+  "InitialQueryCacheState": "Unmeasured; no explicit cache clearing or warmup. Three pairs include each model first observed query execution.",
+  "Context": {
+    "CacheState": "repeated_same_selection",
+    "CacheCleared": false,
+    "Order": "AB then BA then AB for each metric, one isolated process, serial",
+    "Population": "same 504000 facts / 20 files / 2 cycles / 5 drivers / all 150 sectors",
+    "Limit": "Three pairs per metric; not a p95 result or company/Desktop timing acceptance"
+  },
+  "Metrics": {
+    "market": {
+      "Runs": {
+        "baseline": [
+          {
+            "ServerMs": 10794,
+            "ReaderMs": 10840,
+            "ServerCPUMs": 9891
+          },
+          {
+            "ServerMs": 10114,
+            "ReaderMs": 10126,
+            "ServerCPUMs": 9203
+          },
+          {
+            "ServerMs": 10133,
+            "ReaderMs": 10158,
+            "ServerCPUMs": 9391
+          }
+        ],
+        "candidate": [
+          {
+            "ServerMs": 5994,
+            "ReaderMs": 6010,
+            "ServerCPUMs": 5297
+          },
+          {
+            "ServerMs": 5897,
+            "ReaderMs": 5909,
+            "ServerCPUMs": 5391
+          },
+          {
+            "ServerMs": 6398,
+            "ReaderMs": 6416,
+            "ServerCPUMs": 5906
+          }
+        ]
+      },
+      "MedianBaselineServerMs": 10133,
+      "MedianCandidateServerMs": 5994,
+      "MedianReductionPercent": 40.8
+    },
+    "share": {
+      "Runs": {
+        "baseline": [
+          {
+            "ServerMs": 14577,
+            "ReaderMs": 14596,
+            "ServerCPUMs": 13078
+          },
+          {
+            "ServerMs": 13763,
+            "ReaderMs": 13777,
+            "ServerCPUMs": 12500
+          },
+          {
+            "ServerMs": 13791,
+            "ReaderMs": 13789,
+            "ServerCPUMs": 12672
+          }
+        ],
+        "candidate": [
+          {
+            "ServerMs": 7854,
+            "ReaderMs": 7867,
+            "ServerCPUMs": 7281
+          },
+          {
+            "ServerMs": 7863,
+            "ReaderMs": 7874,
+            "ServerCPUMs": 7063
+          },
+          {
+            "ServerMs": 7657,
+            "ReaderMs": 7675,
+            "ServerCPUMs": 6734
+          }
+        ]
+      },
+      "MedianBaselineServerMs": 13791,
+      "MedianCandidateServerMs": 7854,
+      "MedianReductionPercent": 43.0
+    },
+    "drivers": {
+      "Runs": {
+        "baseline": [
+          {
+            "ServerMs": 6326,
+            "ReaderMs": 6325,
+            "ServerCPUMs": 5422
+          },
+          {
+            "ServerMs": 6388,
+            "ReaderMs": 6390,
+            "ServerCPUMs": 5859
+          },
+          {
+            "ServerMs": 6471,
+            "ReaderMs": 6474,
+            "ServerCPUMs": 5844
+          }
+        ],
+        "candidate": [
+          {
+            "ServerMs": 3566,
+            "ReaderMs": 3567,
+            "ServerCPUMs": 3172
+          },
+          {
+            "ServerMs": 3493,
+            "ReaderMs": 3497,
+            "ServerCPUMs": 3000
+          },
+          {
+            "ServerMs": 3490,
+            "ReaderMs": 3493,
+            "ServerCPUMs": 3188
+          }
+        ]
+      },
+      "MedianBaselineServerMs": 6388,
+      "MedianCandidateServerMs": 3493,
+      "MedianReductionPercent": 45.3
+    },
+    "review": {
+      "Runs": {
+        "baseline": [
+          {
+            "ServerMs": 2817,
+            "ReaderMs": 2816,
+            "ServerCPUMs": 2422
+          },
+          {
+            "ServerMs": 2864,
+            "ReaderMs": 2866,
+            "ServerCPUMs": 2563
+          },
+          {
+            "ServerMs": 2807,
+            "ReaderMs": 2808,
+            "ServerCPUMs": 2453
+          }
+        ],
+        "candidate": [
+          {
+            "ServerMs": 1606,
+            "ReaderMs": 1607,
+            "ServerCPUMs": 1328
+          },
+          {
+            "ServerMs": 1574,
+            "ReaderMs": 1577,
+            "ServerCPUMs": 1359
+          },
+          {
+            "ServerMs": 1588,
+            "ReaderMs": 1581,
+            "ServerCPUMs": 1391
+          }
+        ]
+      },
+      "MedianBaselineServerMs": 2817,
+      "MedianCandidateServerMs": 1588,
+      "MedianReductionPercent": 43.6
+    }
+  },
+  "SourceHashes": {
+    "baseline.json": "3c7a9fa8772a092bca03b2eeb03adc945e3027fcd90c91fc921b23be6c66d2b1",
+    "benchmark.py": "131d12f3ea6e5e3ca95bcf4618778a0b60f12242cf2233fac46fdcddb0f2af14",
+    "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "edge-expected.json": "6ea06bc1ee7aec113231d2866257b79dc08e9543f1f96bcc14565c8482f6852f",
+    "edge_cases.py": "36684307b6b5315e9a42f4734fd51f4a8e754a67170c86b7d10197867210e23c",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "4d43f227b51e1d36e0405acfc0f244601d9406d5692af3e658584b84f31f8596",
+    "run_profile.ps1": "35eee218d612620fe9b5541d50dd0e54ebbd1b4fa8d1f0fe07d383ed2498433b"
+  },
+  "ResultsSHA256": "e94d959c59c82d556a5202e8c508a1c96981d77b1531489ccf8a4ba4c4977ecc",
+  "TraceSHA256": "5b0c4317beb5625aeb72a66e6ad9d7d730a7d145ebca5befa71172a0b6cb2e30",
+  "CompanyPerformanceAcceptance": false,
+  "P95TargetVerified": false,
+  "TaskOwnedEngineClosed": true,
+  "BoundaryCorrectionEvidence": "VALIDATION-BOUNDARY-DIAGNOSTIC.json"
+}

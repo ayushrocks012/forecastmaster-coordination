@@ -1,0 +1,45 @@
+R17.8 R03 TEST — compact report fixes and faster summary calculations
+
+TEST ONLY. Production R16.6 stays unchanged.
+Use R03 directly. Do not run the previous compact-report R02 installer first.
+This is a new TEST handoff, not another date recovery or refresh.
+
+1. On the company laptop, pull the latest forecastmaster-coordination main.
+
+2. Open this WHOLE file and copy all its text:
+   handoff/report-native-only-r17.8/performance-r01/receiving-r03/
+   INSTALL AND PREPARE PRIVATE TEST R03.py
+
+3. In UK-ANI-Demand, open ForecastMaster_GM_Setup.
+   Add ONE NEW Python cell, paste the whole file and run ONLY that cell ONCE.
+   Do not choose Run all. No separate refresh or verifier is needed.
+
+   The cell checks your exact verified R17.8 TEST/private R01 backup, compares
+   30 private numeric pairs and three empty-file cases, makes a verified private
+   backup, updates TEST once, and checks the full readback. Amounts stay private.
+   It preserves the source tables, dates, relationships, cloud mapping and
+   production model. It does not submit a refresh or publish a report.
+
+4. Continue only if the final JSON says:
+   TEST_R178_R03_UPDATED_AND_BOUNDED_READBACK_VERIFIED
+
+   Download the PRIVATE report ZIP offered by that cell. Extract ALL contents
+   into a NEW folder and open its R03 TEST .pbip in Power BI Desktop.
+   REPORT TEMPLATE.zip here is a maintainer input with placeholder file choices;
+   do not open it as the company report. Keep the private ZIP/names private.
+
+5. Send the final JSON. In the report, check a small Total view, Share,
+   driver-to-sector expansion, file selection/clear and independent trend
+   choices. Use Performance Analyzer to return DAX/total times for the graph,
+   Review Summary and Executive Summary, identifying selections and expansion.
+   No publish or production replacement.
+
+If STOPPED, cancelled, no final JSON, or no private download: stop and send the
+safe output. Keep backups. Do not rerun an installer, delete markers, reset
+loaded values or refresh as a workaround. A changed/already-updated TEST is
+refused rather than merged blindly.
+
+Local evidence: generated-data mixed matrices, native scalar/blank boundaries,
+actual Desktop Share export, file clear and save/reopen pass. Local comparisons
+show a material speed improvement, but the report is still not near-instant.
+Company speed, independent business parity and production acceptance remain open.

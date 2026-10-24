@@ -1,0 +1,115 @@
+{
+  "Stage": "LOCAL_PREPARED_COMPONENT_PROBE",
+  "Queries": 21,
+  "ExactResultSetPairs": 10,
+  "Mismatches": 0,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "BaselineMs": 984,
+      "CandidateMs": 1085,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "market/Value",
+      "BaselineMs": 1029,
+      "CandidateMs": 998,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "share/Units",
+      "BaselineMs": 1087,
+      "CandidateMs": 1060,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "share/Value",
+      "BaselineMs": 1065,
+      "CandidateMs": 1127,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "ef/Units",
+      "BaselineMs": 939,
+      "CandidateMs": 1051,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "ef/Value",
+      "BaselineMs": 1024,
+      "CandidateMs": 1065,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "BaselineMs": 11685,
+      "CandidateMs": 11532,
+      "ResultSetRows": [
+        10,
+        1020
+      ]
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "BaselineMs": 10593,
+      "CandidateMs": 11437,
+      "ResultSetRows": [
+        1560
+      ]
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "BaselineMs": 13435,
+      "CandidateMs": 14062,
+      "ResultSetRows": [
+        10,
+        1020
+      ]
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "BaselineMs": 13250,
+      "CandidateMs": 13936,
+      "ResultSetRows": [
+        1560
+      ]
+    }
+  ],
+  "Population": [
+    {
+      "[Facts]": 504000,
+      "[Files]": 20,
+      "[Scope]": 600,
+      "[Sectors]": 150
+    }
+  ],
+  "FrozenInputsMatch": true,
+  "CompanyPerformanceAcceptance": false,
+  "ResultsSHA256": "f459661014f8ed78646a39e358aa55b5f7d68091f60b1d7393d254dde40d5165",
+  "PerformanceAccepted": false,
+  "Decision": "NOT_SELECTED_NO_MATERIAL_SPEED_GAIN",
+  "TaskOwnedEngineClosed": true,
+  "SourceHashes": {
+    "baseline.json": "3c7a9fa8772a092bca03b2eeb03adc945e3027fcd90c91fc921b23be6c66d2b1",
+    "candidate.json": "2445471b773c6ee8074af4dbc338f91b66b15758c183cf45196a95d0ae6cf5bb",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "prepared.py": "0b1a64466d29490b1097f53b011e631acd0457cbbd373d7a8d7f48b9c420f94a",
+    "probe.py": "3b9aa183c6e52f9fd658abd88ffce6508a862624ff8c28bc2e3c165121f9e39c",
+    "pushdown.py": "6f7b1a1f68808158b9fae604db501c28d98a8c680676670923e527fe465871e9",
+    "queries.json": "55590ba4f68e6b030a423ca61b6b6eb2c09225fa92a17ba243c1aaffac607a31",
+    "run_profile.ps1": "83e07ca3ee23bcf74f5f391002f54038caf76b550eb29243ee8be4a94c9f1593"
+  }
+}

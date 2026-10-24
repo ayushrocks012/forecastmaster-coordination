@@ -15,18 +15,23 @@ company observations are not copied here. New results update this reference;
 
 ## Resume in one minute
 
-**Current stage:** the R17.8 R02 TEST receiving handoff is locally qualified and
-selected for the next company-laptop check. It has NOT been run in company
-Fabric. Production R16.6 and all older release bytes remain unchanged. Company
-R17.8 R01 passed bounded model verification, but its UI was rejected.
+**Current stage:** performance R03 is locally qualified for its declared scope
+and selected as the next TEST receiving handoff. It includes the R02 compact
+UI/selection corrections plus two faster summary-cell expressions. R02 and R03
+have NOT been run in company Fabric. Production R16.6 and every older release's
+bytes remain unchanged. Company R17.8 R01 passed bounded model verification,
+but its UI was rejected. Near-instant performance is NOT achieved.
 
-**Next bounded action:** follow [receiving-r01/OPEN FIRST.txt](ui-correction-r02/receiving-r01/OPEN%20FIRST.txt):
-one new ForecastMaster_GM_Setup cell, whole `INSTALL AND PREPARE PRIVATE TEST R02.py`,
-run only that cell once. It checks exact installed/private R01 metadata, makes a
-verified private backup, applies 15 expression edits plus two summary display
-definitions to TEST, checks full readback and offers a PRIVATE report ZIP with
-actual ADS file choices. Success is
-`TEST_R178_R02_UPDATED_AND_BOUNDED_READBACK_VERIFIED`. No refresh or publication.
+**Next receiving action:** follow
+[R03 OPEN FIRST.txt](performance-r01/receiving-r03/OPEN%20FIRST.txt) directly;
+do not run the R02 installer first. In one new ForecastMaster_GM_Setup cell,
+paste the whole `INSTALL AND PREPARE PRIVATE TEST R03.py`, run only that cell
+once. It checks exact installed/private R01 metadata, compares 30 private
+numeric pairs and three empty-file cases, makes a verified private backup,
+applies 15 expression edits plus two summary display definitions to TEST,
+checks full readback and offers a PRIVATE report ZIP with actual ADS choices.
+Success is `TEST_R178_R03_UPDATED_AND_BOUNDED_READBACK_VERIFIED`.
+No refresh or publication.
 STOPPED/unknown outcomes require receipt review; no retry or marker deletion.
 The public REPORT TEMPLATE.zip contains placeholder defaults and is not runnable
 as the company report. Downloaded ZIP/actual filenames stay private.
@@ -43,7 +48,11 @@ Actuals cutoff markers and selected-period shading remain. Navy/teal/neutrals;
 alerts use ABS(relative variance): ≤5% green, >5–10% amber, >10% red. Plan and
 missing values remain uncoloured. Native matrix height is fixed, not auto-reflow.
 
-**Exact local candidate/evidence:** `ui-correction-r02` composes 12
+**Exact local candidate/evidence:** R03 `performance-r01/strictcells.py` over
+`cells.py` shares Plan/Benchmark evaluation in `N Summary Cell` and
+`N Headline Cell`, then derives variance/percentage while retaining the guards.
+These are the only two expression differences from frozen R02. The underlying
+`ui-correction-r02` composes 12
 selection/admission fixes and four matrix IF.EAGER cell edits (15 unique
 expressions), plus two native CSV-safe dynamic-format definitions. Amount
 kernels, numeric values, sources, tables, dates and relationships are preserved.
@@ -79,26 +88,48 @@ workaround, not a provider/engine root-cause claim.
   routing hint; second removes only that hint, with frozen adaptation receipt.
   See `receiving-r01/VALIDATION.json` and `VALIDATION-NATIVE-QUERIES.json`.
 
-**Performance is still open:** SAMPLE05 native DAX observations are graph
+**Historical R02 performance:** SAMPLE05 native DAX observations are graph
 2.1–2.2s, Review 4.3–4.9s, Executive 9.9–16.3s, depending on context/expansion.
 Expanded Executive remains slow. Ordered isolated colour tests improved those
 specific Share queries, but are not comparable company speed acceptance.
 `VALIDATION-INTEGRATED-EXPORT.json` binds actual export/timing/reopen observations;
 `VALIDATION-MIXED-MATRICES-OPTIMIZED.json` binds the closed mixed population.
 
-**Latest speed steering:** user wants near-immediate management filter changes.
-The optimization recommendation below is a proposal, not an implemented or
-company-qualified architecture. Keep the released R02 cell/report bytes frozen;
-any further performance prototype must be separate and preserve the same values,
-blank/file/Share/FX/cutoff semantics. No new company cell or capacity purchase is
-requested by this assessment.
+**Latest performance evidence:** the selected strict shared-cell candidate
+passes 75 mixed queries / 11,592 independent value/colour cells and 93 exact
+receiving/boundary queries. Same 504,000 facts and all 150 sectors. Three serial
+alternated pairs per context produce median native server milliseconds:
+Market full matrix 10,133→5,994; Share full matrix 13,791→7,854;
+five-driver Executive 6,388→3,493; Review 2,817→1,588 (41–45% reduction).
+The timing component has zero differences in 12 complete paired result sets.
+Its initial scalar-boundary harness failed; the failure is retained, diagnosed
+and superseded only for that boundary gate by the separately frozen 93-query
+pass. No p95, controlled Desktop A/B or company speed claim is made.
+
+Actual Performance-Sample-01 Desktop inspection, Share export of all 150
+sectors / 1,500 formatted cells, file-clear blanking and native save/reopen
+pass. Saved model expressions match the qualified candidate. Native concurrent
+visual observations remain slower than the isolated benchmark: five-driver
+Executive 5.5–6.1s DAX, expanded Share Executive 9.7s, Review 2.6–2.9s and graph
+2.2–3.8s. These are observations, not comparable before/after acceptance.
+See `performance-r01/VALIDATION-DESKTOP.json`, `VALIDATION-NATIVE-EXPORT.json`,
+`VALIDATION-TIMING-COMPONENT.json` and `receiving-r03/VALIDATION.json`.
+
+Prepared grouping, vectorized periods, physical/star serving tables, regression
+moments, narrow filter pushdown and the final colour-reuse pilot were not
+selected: checked results matched but speed did not improve. Colour reuse was
+8,040→8,206ms Market, 10,620→11,738ms Share, 1,964→2,027ms Review. Preserve
+their failures/rejections; none is installed by R03. QueryEnd tracing establishes
+server execution dominates these isolated reads, but exact FE/SE attribution
+and company Direct Lake bottlenecks remain unknown. No source/Fabric architecture
+change, capacity purchase or Import-vs-Direct Lake speed conclusion is qualified.
 
 **Remaining gates:** company adapter execution/readback, custom-visual tenant
 admission, representative company UI/export/selection workflow, comparable
 performance and independent business parity. Full R16.6/S&OP/FX feature parity
 is not claimed. The existing manifest's installed-verification pass refers to
-R01; CurrentReport remains that installed historical ZIP until a private R02
-company receipt identifies the new package. New R02 handoff admission does not
+R01; CurrentReport remains that installed historical ZIP until a private R03
+company receipt identifies the new package. New R03 handoff admission does not
 close those receiving gates or authorize production publication.
 
 **Resources/continuity:** use Computer Use `@oai/sky` through node_repl_wsl,
@@ -106,7 +137,9 @@ rediscover windows each session. No Document Control session needed. One
 Desktop window; serialize heavy checks and close task-owned leftovers. All
 qualification engines and Desktop windows were closed at handoff preparation.
 GitNexus impact remains UNKNOWN (`AUTHORITY_DRIFT_BLOCKS_CONCLUSION`, unregistered
-repository); direct tracing/focused tests are the bounded fallback. Keep company
+repository); the latest detect_changes returned an empty inventory with an
+inactive-repository-selector warning, which is not a zero-impact proof. Direct
+tracing/focused tests are the bounded fallback. Keep company
 amounts/raw definitions private. Update this same reference and STATUS at each
 meaningful boundary. Investigation details below are dated history, not new
 instructions to rerun closed work.
@@ -950,7 +983,7 @@ python tools/verify_handoff.py
 python tools/receiving_contract.py --purpose maintenance
 python tools/receiving_contract.py --purpose expand-report
 python tools/receiving_contract.py --purpose claim-performance
-python tools/receiving_contract.py --purpose operator-handoff --handoff verifier-r03
+python tools/receiving_contract.py --purpose operator-handoff --handoff compact-r178-r03
 ```
 
 The first command now validates hashes AND the receiving contract. Maintenance
@@ -958,7 +991,8 @@ reports pending gates without claiming completion. Broad expansion requires the
 bounded installed check plus the representative company flow. A speed claim
 requires reproducible comparable company timing evidence for the current report.
 Operator admission requires exact cell qualification, complete instructions and
-explicit selection. The last three commands currently refuse, as expected.
+explicit selection. Broad expansion and company performance claims currently
+refuse; the selected locally qualified compact-r178-r03 operator handoff passes.
 These checks apply to those purposes; they do not block routine diagnosis or
 corrections needed to complete the slice, or create production authorization.
 
@@ -1096,9 +1130,148 @@ future trend 1,939ms. Different queries/cache order/population prevent a valid
 before/after report-speed claim. Full visual-query timings and capacity/storage
 profiling remain needed before another physical/database optimization.
 
+### 24 October — performance investigation and R03 local qualification
+
+User explicitly approved implementation of the proposed separate performance
+candidate. R02 release bytes and production remain frozen. The first valid
+prepared-monthly experiment (Prepared-Probe-04) compares 21 queries/ten result
+pairs, independent numeric scalars, native windows and full 150-sector cores
+(1,560 rows), zero result/format/colour/population mismatches. It is REJECTED for
+speed: full Market 10,945->16,235ms, Share 13,821->17,931ms. Native processing was
+11,069ms baseline vs 11,768ms candidate. See performance-r01/VALIDATION-PREPARED-REJECTED.json.
+
+Three earlier attempts are preserved: two trace setup failures before queries,
+then a Windows UTF8-decoding fault yielding empty results. No empty population
+was admitted as a speed pass. The corrected harness reads UTF8, checks known
+nonblank scalar values independently, every result set, and all 150 sectors.
+QueryEnd/SE tracing works; DAXQueryPlan/ExecutionMetrics events were not delivered,
+so exact FE/SE CPU split remains unknown. The next trace harness also waits for
+last QueryEnd delivery. All four task-owned engines closed.
+
+Vectorized-Probe-01 also passes all 21 result comparisons after a checker-only
+correction: its full-core query has no ORDER BY, so complete uniquely identified
+cells must be sorted before comparison. Saved inputs/results were unchanged.
+It is REJECTED for speed: Market full core 10,259->26,696ms, Share
+14,911->36,033ms. Trace showed Market storage requests 4,825->20,652 and Share
+6,597->38,077. Do not treat a sum of overlapping storage durations as exact
+Formula Engine time. See VALIDATION-VECTORIZED-REJECTED.json.
+
+The star-model attempt separates a 150-sector dimension, prepared fact and
+fully rewired fast/legacy kernels. An initial builder loop-name error caused a
+failed source freeze followed by an unintended launch; that unbound run is not
+admitted. It failed processing on an invalid XML control-character key and its
+finally closed the engine before the guarded cleanup found a live runner. The
+key now uses a length-prefixed printable string. Star-Probe-02 was built but
+never launched. Star-Probe-03 processed with matching representative scalars,
+but was still slower and stopped during result checkpointing due to Windows
+file sharing against a read. Its incomplete run is not a pass. The runner now
+verifies every frozen input before starting an engine and writes each query to
+a new, immutable checkpoint filename; no live reader shares an overwritten file.
+
+Cost-Decomposition-01 completed and closed. Admission/plan was 254ms; full
+dispatch 21,849ms vs constant eligibility 21,446ms, so routing was not the main
+cost. Binding the physical dimension reduced this diagnostic to 13,433ms;
+removing colours/formats reduced a different simplified diagnostic to 8,790ms.
+These are NOT acceptance variants. The virtual strict-cell diagnostic failed
+because DEFINE removed the automatic format-string measure; it did not test
+strict evaluation successfully. Storage traces include roughly 1,900 repeated
+source-Country membership callback requests in the full matrix.
+
+Moments-Probe-01 then completed 21 queries/ten exact result-set pairs, zero
+value/format/colour/population mismatches, with all 150 sectors. Its prepared
+regression contributions and leaf-share cache still lost on speed: full Market
+10,565->15,067ms; Share 13,450->15,529ms. It is REJECTED; see
+performance-r01/VALIDATION-MOMENTS-REJECTED.json. The engine closed.
+
+Pushdown-Probe-01 completed all 21 queries/ten exact pairs and closed. It changes
+only seven R02 source-admission expressions from row-iterator membership
+filters to CALCULATETABLE/TREATAS filters, under the exact Selected-files
+policy. It adds no table/relationship and changes no amount, period, fit,
+format or colour formula. Eight cheap preservation/refusal contracts pass.
+It is NOT SELECTED: full Market 10,593->11,437ms, Share 13,250->13,936ms;
+the callback rewrite did not produce material latency savings. See its rejected
+receipt. This rules out that rewrite as a sufficient fix.
+
+Physical-Probe-01 completed and closed. This supported test uses real
+source-selection relationships to both prepared tables and the
+150-sector dimension, so fast kernels no longer rebuild virtual source pools.
+Original source/cutoff guards and a complete legacy graph remain. Additive
+regression moments use an absolute month ordinal, centered at the admitted
+query cutoff; the earlier source-cutoff-centered approach is not reused. Share
+totals still fit aggregate monthly ratios, with a prepared ratio only for one
+source/sector leaf. Legacy line/scenario contexts refuse the fast route. This
+candidate passes all 21 queries/ten pairs but is also REJECTED for speed; see
+VALIDATION-PHYSICAL-REJECTED.json. QueryEnd server duration agrees with reader
+elapsed time to within tens of milliseconds: the seconds of delay are in the
+engine, not PowerShell result enumeration. The physical full Market trace has
+3,969 storage events, mostly repeated metadata requests; 1,826 have callbacks.
+
+Shared-Cells-Probe-01 is the first useful speed candidate. It changes only
+N Summary Cell and N Headline Cell: each computes Plan and Benchmark once and
+reuses their pair for variance/percentage. All admission/actual-only/subtotal,
+eager-output, blank, numeric and colour rules remain. All 21 queries/ten result
+pairs pass, including independent known nonblank scalars and every matrix
+value/format/colour/150-sector population. Initial ordered full Market is
+10,535->5,827ms; Share's native window is 13,736->8,579ms. This is promising,
+not a repeated benchmark or company pass. See VALIDATION-CELLS-PROBE.json.
+Guard-Cost-01 completed/closed. Constants did not remove the main cost; they
+are not a deployment option. The next strict shared-cell dependency graph passes
+all 75 prior mixed queries/11,592 independent value/colour cells, with the
+identical previous query/oracle hashes and unchanged tolerances. Its separate
+93-query run also passes all 63 exact generated receiving queries (30 paired
+scalars plus three no-file blanks) and 30 zero/negative/blank boundary cases
+(60 Review/Executive cells), zero mismatches.
+
+An initial boundary setup failed: the fake leaf overrides were visible directly
+but stored cells stayed blank. A two-query native diagnostic showed declaring
+the exact cell bodies in the same query produces the expected 110. The corrected
+boundary run binds those bodies; no product formula or threshold changed. The
+original 54-query timing run retains its failed boundary results. Its independent
+24 timing queries/12 exact matrix pairs are reused, with that failed component
+explicitly labelled. See VALIDATION-TIMING-COMPONENT.json and
+VALIDATION-BOUNDARY-DIAGNOSTIC.json. The mock's first expected-model assertion
+also still used the old R02 formula; correcting the oracle to the declared R03
+composition gives five passing exact-cell fake-client tests. Prior failures
+remain recorded, not retroactively called passes.
+
+Three alternated AB/BA/AB pairs, same 504,000 facts and 150 sectors, give median
+server QueryEnd Market full 10,133->5,994ms; Share full 13,791->7,854ms; five-driver
+Executive 6,388->3,493ms; Review 2,817->1,588ms. Cache was not cleared or warmed
+explicitly; initial state is unmeasured, and three pairs do not prove p95. No
+company speed claim or near-immediate target pass. Amount/date/period/Share/FX,
+tables and relationships remain unchanged; only two cell expressions differ
+from R02. Performance-Sample-01 native inspection then closed: Market Total,
+three Review rows, relative alerts, Share signs, all-driver sector expansion,
+150-scope overlay, actuals marker/shading and explicit imported-time choices
+render correctly. Clearing files blanks business values. The actual Share CSV
+has all 150 sectors/five drivers and 1,500 formatted cells, zero independent
+oracle mismatches. Save/reopen restores Share, Sectors and five selected current
+ADS files. All saved measure expressions match the qualified candidate.
+Concurrent native PA is observational: expanded Share 9,715ms DAX / 11,011ms
+total. No near-instant claim follows from the isolated improvement.
+
+Colour-Reuse-Probe-01 completed six queries/three full value/colour/format
+pairs, zero mismatch, but 8,040→8,206ms Market, 10,620→11,738ms Share and
+1,964→2,027ms Review. It is rejected; R03 retains R02's colour helpers. Both
+its engine and every task-owned Desktop window are closed (backend PBIDesktop /
+msmdsrv count zero); unrelated Excel remains untouched.
+
+The R03 private TEST handoff is now selected after local qualification. It
+retains R02's exact R01/private-backup guard, one update/readback and no
+refresh/production/source write. It adds two percentage comparisons per metric
+(30 pairs), with five mock tests and 41 official schema documents passing.
+Rebuilding in a fresh temporary destination reproduces all four generated files
+byte for byte (cell, template, test and native-case builder). Source parses under
+Python 3.10; Ruff F and Bandit checks pass. The exact R03 script hash is
+`6f66e53494e689f84644468ecda88d472a534ed85b8f046c23142ffa9e5e0664`;
+template `ea43ee9b4e3e7dab5f20cddd36359ca05b008bab299943ed6a5bf51a45a73cd0`.
+No company call, source write, refresh or production/R02 release edit occurred.
+Preserve every failed/rejected attempt separately.
+
 ### 24 October — recommendation for near-immediate management interactions
 
-Status: source/receipt review and official-documentation assessment only. No
+Historical assessment before the implementation above: source/receipt review
+and official-documentation assessment only. At that stage there was no
 company call, model/source change, refresh, capacity resize or Desktop launch.
 The R02 receiving handoff remains byte-identical. User has expressed a speed
 objective; the following numeric targets and design are proposed, not agreed

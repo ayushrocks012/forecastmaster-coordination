@@ -1,0 +1,48 @@
+{
+  "Stage": "LOCAL_VIRTUAL_BOUNDARY_SETUP_DIAGNOSED",
+  "Observations": [
+    {
+      "Query": "stored-cell-overrides",
+      "Values": [
+        {
+          "[H]": null,
+          "[S]": null,
+          "[Plan]": 110,
+          "[Benchmark]": 100,
+          "[SourceOK]": 1,
+          "[PeriodOK]": 1,
+          "[Actual]": 0,
+          "[MetricCount]": 1,
+          "[Column]": "plan"
+        }
+      ]
+    },
+    {
+      "Query": "query-cell-overrides",
+      "Values": [
+        {
+          "[H]": 110,
+          "[S]": 110,
+          "[Plan]": 110,
+          "[Benchmark]": 100,
+          "[SourceOK]": 1,
+          "[PeriodOK]": 1,
+          "[Actual]": 0,
+          "[MetricCount]": 1,
+          "[Column]": "plan"
+        }
+      ]
+    }
+  ],
+  "Interpretation": "Fake leaf overrides are visible directly, but the stored cells stay blank in this harness. Defining the exact candidate cell bodies in the same query returns 110 correctly. Corrected boundary runs must bind those bodies too. This is a scoped harness observation, not a universal claim about DAX.",
+  "SourceHashes": {
+    "candidate.json": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+    "edge_diagnostic.py": "0c79a2ffc3fb5177b5de805c8396eb0a3ad4c721a6c7dfb0406fe544f119e6f2",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "queries.json": "b2ca5295da5f15a8826652074e4971732d56853077073c0e16bf6ce50d08bcec",
+    "run_profile.ps1": "8f9147c8b5ebac29ac7d68a9489e74c80bc548a52e4adedbdaf8472587c8e3bc"
+  },
+  "ResultsSHA256": "22494c40eecf63082fef2062e13257a109dbee3bc101abdd5e5eb877bebe7af4",
+  "ProductChanged": false,
+  "TaskOwnedEngineClosed": true
+}

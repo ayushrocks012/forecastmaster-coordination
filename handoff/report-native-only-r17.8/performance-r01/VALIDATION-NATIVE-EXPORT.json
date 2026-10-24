@@ -1,0 +1,14 @@
+{
+  "Stage": "LOCAL_FABRICATED_NATIVE_SECTOR_EXPORT_VERIFIED",
+  "Metric": "share",
+  "Display": "Units",
+  "Drivers": 5,
+  "Sectors": 150,
+  "FormattedCells": 1500,
+  "Mismatches": 0,
+  "Scope": "2026-10; 12M; 2026 FY/YTD/YTG and 2027 FY",
+  "IndependentExcelParity": false,
+  "CSVSHA256": "0e67ba32338e5223bb187b67012feb867ed4837f9cd6eee85e5ff10bf7ea275b",
+  "Candidate": "R17.8 shared-cell performance / strictcells",
+  "CompanyAcceptance": false
+}

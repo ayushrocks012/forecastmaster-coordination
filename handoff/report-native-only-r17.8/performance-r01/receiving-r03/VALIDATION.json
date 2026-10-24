@@ -1,0 +1,107 @@
+{
+  "Stage": "LOCAL_CHECKER_QUALIFIED",
+  "Failures": 0,
+  "ArtifactSHA256": "6f66e53494e689f84644468ecda88d472a534ed85b8f046c23142ffa9e5e0664",
+  "ArtifactBytes": 288598,
+  "Cases": [
+    "healthy",
+    "blank_zero",
+    "missing_date",
+    "malformed",
+    "cancelled",
+    "concurrent",
+    "failed_then_recovered",
+    "safe_errors",
+    "unknown_category"
+  ],
+  "ExactGeneratedCellExecuted": true,
+  "MockTests": 5,
+  "PrewriteFaultScenarios": 19,
+  "PostSubmissionFaultScenarios": 4,
+  "StickySecondRunRefusals": 4,
+  "MockScope": "Exact generated R03 cell; healthy, numeric zero, prerequisite/blank/paired mismatch, backup and concurrency failures. No real Fabric execution.",
+  "NativeQueries": {
+    "Evidence": "VALIDATION-NATIVE-QUERIES.json",
+    "Executed": 93,
+    "ExactReceivingQueries": 63,
+    "PairedComparisons": 30,
+    "NoFileBlankChecks": 3,
+    "ScalarBoundaryQueries": 30,
+    "BoundaryCells": 60,
+    "Mismatches": 0,
+    "FabricatedOnly": true
+  },
+  "MixedRegression": {
+    "Evidence": "../VALIDATION-MIXED-MATRICES.json",
+    "Queries": 75,
+    "IndependentValueAndColourCells": 11592,
+    "Failures": 0
+  },
+  "TemplateSHA256": "ea43ee9b4e3e7dab5f20cddd36359ca05b008bab299943ed6a5bf51a45a73cd0",
+  "SchemaDocumentsValidated": 41,
+  "SchemaFailures": 0,
+  "DeclaredModelChange": {
+    "UniqueExpressionEditsFromInstalledR01": 15,
+    "DynamicFormatDefinitionsFromInstalledR01": 2,
+    "ExpressionEditsFromFrozenR02": 2,
+    "Names": [
+      "N Summary Cell",
+      "N Headline Cell"
+    ],
+    "AmountKernelsChanged": false,
+    "TablesSourcesRelationshipsDatesChanged": false
+  },
+  "QualifiedNativeSample": "../VALIDATION-DESKTOP.json",
+  "NativeFormattedShareExport": "../VALIDATION-NATIVE-EXPORT.json",
+  "TimingEvidence": "../VALIDATION-TIMING-COMPONENT.json",
+  "TimingLimit": "Only the independent 24 timing queries / 12 complete paired result sets pass in the initial 54-query run; failed scalar boundary component retained and separately corrected/qualified. Three alternated pairs per context do not prove p95.",
+  "FailedAttemptsPreserved": [
+    {
+      "Attempt": "Strict-Cells-Benchmark-01 scalar boundaries",
+      "Diagnosis": "Fake leaf overrides were visible directly but stored cells stayed blank. Exact cell bodies bound in query scope resolve this test setup; original 20 failures retained. Separate diagnostic receipt and 93-query corrected native qualification; no product formula/tolerance changed."
+    },
+    {
+      "Attempt": "Initial R03 healthy mock expected model",
+      "Diagnosis": "Stale R02 expected-model oracle, corrected to declared strict-cell composition. Exact generated cell unchanged; five tests then pass."
+    }
+  ],
+  "ReproducibleBuild": {
+    "FreshTemporaryDirectory": true,
+    "FilesByteIdentical": [
+      "INSTALL AND PREPARE PRIVATE TEST R03.py",
+      "REPORT TEMPLATE.zip",
+      "test_receiving.py",
+      "native_cases.py"
+    ]
+  },
+  "StaticChecks": {
+    "Python310ParsedFiles": 24,
+    "RuffF": "PASS",
+    "BanditNonTestPython": "PASS",
+    "PurePreservationAndRefusalTests": 11
+  },
+  "TaskOwnedDesktopWindowsClosed": true,
+  "TaskOwnedStandaloneEngineClosed": true,
+  "UnrelatedExcelLeftUntouched": true,
+  "CompanyCallsMade": false,
+  "CompanyInstallVerified": false,
+  "CompanyUIAccepted": false,
+  "CompanyPerformanceAccepted": false,
+  "ProductionR166Changed": false,
+  "SourceSHA256": {
+    "build_receiving.py": "efc3f8bf28793b39cee376ca57b71087181f649690dc138c33de1915e5785899",
+    "cells.py": "28bc9e854cd82f644a028601ce357bc4a19f0121f828f50b62f44f5cb9c64ccd",
+    "strictcells.py": "1c3a51b053d4bdcf181ae471b21f4a1713a00846acadc13b681fad6214e62d72",
+    "receiving-r03/test_receiving.py": "7039066fb253bd37156bed13c294ff2e0c4c73ddf5c46c99ffce770baa948e73",
+    "receiving-r03/native_cases.py": "90871e84922f3c659cd1a2215f6dcf9df9917bdeaf995b2ea112cae34e940696"
+  },
+  "Safety": "Pinned TEST; exact installed/private R01 definitions and cloud/date/default/history guards; private verified backup; sticky attempt before one updateDefinition with allowPurgeData=False; full readback; no refresh/source/production write or publication.",
+  "Limits": [
+    "30 receiving paired scalars use one preferred ADS driver, market/ef/share, Units/Local, 12M FY/future context; broader generated mixed cases are separate proof.",
+    "No fresh physical Lakehouse reads. Recovered physical/semantic parity is prior company evidence; current semantic validity/cohort stability is checked.",
+    "Local mocks/calculated samples do not prove Direct Lake, tenant custom-visual admission, company business parity or speed.",
+    "Expanded Share remains about 9.7s DAX in actual Desktop; near-instant target and company p95 are open.",
+    "Explicit ADS defaults snapshot preparation time. New imports need selecting visible entries. Clearing files blanks business results.",
+    "Private downloaded report ZIP contains actual filenames/import metadata; keep outside public repository."
+  ]
+}

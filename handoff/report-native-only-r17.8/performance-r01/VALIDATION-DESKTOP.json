@@ -1,0 +1,133 @@
+{
+  "Stage": "LOCAL_FABRICATED_DESKTOP_PERFORMANCE_CANDIDATE_VERIFIED",
+  "Sample": "Performance-Sample-01",
+  "Fixture": {
+    "Files": 20,
+    "Cycles": 2,
+    "Drivers": 5,
+    "SectorsPerFile": 30,
+    "Sectors": 150,
+    "Facts": 504000
+  },
+  "Method": "Actual Windows Power BI Desktop through node_repl_wsl @oai/sky; screenshot and accessibility inspection; native CSV and Performance Analyzer exports.",
+  "ObservedChecks": {
+    "MarketTotalAndThreeReviewRowsWithoutOverlap": true,
+    "SharePercentagesAndNegativeVarianceSigns": true,
+    "ExpandAllDriversToSectors": true,
+    "SingleOverlayAll150Scopes": true,
+    "ActualsVerticalMarkerAndPeriodShading": true,
+    "SolidActualAndForecastDistinctColoursDashedTrend": true,
+    "ExplicitADSFileChoicesAndImportedUTCLabels": true,
+    "ClearFilesBlanksBusinessValuesWithoutAutomaticFallback": true,
+    "SaveWithoutTMDLConversion": true,
+    "ReopenRestoresShareSectors150AndFiveCurrentCycleFileChoices": true,
+    "NoResourceErrorObserved": true
+  },
+  "NativeFormattedShareExport": {
+    "Receipt": "VALIDATION-NATIVE-EXPORT.json",
+    "Cells": 1500,
+    "Mismatches": 0
+  },
+  "SavedNativeMeasureExpressionsMatchQualifiedCandidate": true,
+  "QualifiedCandidateSHA256": "97d91011a4b880dbfd06ae93bb04c912c41eace73a6f5edc68adda68ca0ada16",
+  "InitialDesktopBindingSHA256": "5ecbea301a7104d6e17ba71d64a0b99536f6240caac968812b7ecf8f539692f4",
+  "NativePerformanceAnalyzerSHA256": "6133caddbc06ce62ee4fa38f4398d7a07b3219c1221c26999dc4bc2be38e189d",
+  "NativeTimingObservations": [
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T12:07:29.323Z",
+      "DAXms": 2220,
+      "TotalMs": 2428,
+      "Metric": "market",
+      "RowsReturnedToVisual": 55,
+      "QuerySHA256": "cb9a4d0d609aca01aff1e037d74072e3b1d230530ba4fee4602d8251e6270d18"
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T12:07:29.323Z",
+      "DAXms": 5485,
+      "TotalMs": 5689,
+      "Metric": "market",
+      "RowsReturnedToVisual": 70,
+      "QuerySHA256": "bd9a3f1f55669e6ed62e0aacea6287431832c41a44cf123c638013219b27c8a7"
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T12:07:29.323Z",
+      "DAXms": 2573,
+      "TotalMs": 2767,
+      "Metric": "market",
+      "RowsReturnedToVisual": 14,
+      "QuerySHA256": "d1e9c6a782278b97fe0c335830ba2a85ff493f9908b61a1320415f86c2a5e06d"
+    },
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T12:08:14.075Z",
+      "DAXms": 2343,
+      "TotalMs": 2516,
+      "Metric": "share",
+      "RowsReturnedToVisual": 55,
+      "QuerySHA256": "148acbf081df423557bfdd9b048d6c0af204afa55b0ddc2ddf4429ddd1168b89"
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T12:08:14.075Z",
+      "DAXms": 6116,
+      "TotalMs": 6290,
+      "Metric": "share",
+      "RowsReturnedToVisual": 70,
+      "QuerySHA256": "4d2350c642d80a690f0788d5c2e937c94de49e7085ac5f5085737092998abecc"
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T12:08:14.076Z",
+      "DAXms": 2776,
+      "TotalMs": 2938,
+      "Metric": "share",
+      "RowsReturnedToVisual": 14,
+      "QuerySHA256": "48bc547fbc09942466f51299b42a95fd36d10f2533cd49168d7fe03f5c1a6e11"
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T12:09:03.637Z",
+      "DAXms": 9650,
+      "TotalMs": 10558,
+      "Metric": "share",
+      "RowsReturnedToVisual": 1012,
+      "QuerySHA256": "bfb8c6630d5290fd5090e61323a3d86158610ed0815e389fa5387c3436591d98"
+    },
+    {
+      "Visual": "native_chart",
+      "StartUTC": "2026-10-24T12:10:13.659Z",
+      "DAXms": 3826,
+      "TotalMs": 4361,
+      "Metric": "share",
+      "RowsReturnedToVisual": 8101,
+      "QuerySHA256": "e732801fe044dabe558c596f3210211f2657eb6478fdd349fedd7239da9f3e46"
+    },
+    {
+      "Visual": "executive_summary",
+      "StartUTC": "2026-10-24T12:10:13.663Z",
+      "DAXms": 9715,
+      "TotalMs": 11011,
+      "Metric": "share",
+      "RowsReturnedToVisual": 1012,
+      "QuerySHA256": "d05e2a1416e2f92db78063eebd16680ee0f82ff08997e710022e209f5dc96086"
+    },
+    {
+      "Visual": "headline",
+      "StartUTC": "2026-10-24T12:10:13.667Z",
+      "DAXms": 2882,
+      "TotalMs": 3115,
+      "Metric": "share",
+      "RowsReturnedToVisual": 14,
+      "QuerySHA256": "10fa9a7f0825780db1878e72f962915bfd58de78bb4db818bdda89773c55c8fa"
+    }
+  ],
+  "PerformanceLimits": "Single observational Desktop session with concurrent visual queries and different viewport windows. Not the isolated alternated server benchmark, a controlled Desktop before/after, p95 proof or company performance acceptance. Expanded Share DAX remains about 9.7 seconds.",
+  "TaskOwnedDesktopWindowsClosed": true,
+  "StandaloneEnginesClosed": true,
+  "UnrelatedExcelWindowLeftUntouched": true,
+  "CompanyAcceptance": false,
+  "IndependentExcelParity": false
+}

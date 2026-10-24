@@ -1,0 +1,118 @@
+{
+  "Stage": "LOCAL_PREPARED_COMPONENT_PROBE",
+  "Queries": 21,
+  "ExactResultSetPairs": 10,
+  "Mismatches": 0,
+  "Pairs": [
+    {
+      "Query": "market/Units",
+      "BaselineMs": 1005,
+      "CandidateMs": 1741,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "market/Value",
+      "BaselineMs": 901,
+      "CandidateMs": 1631,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "share/Units",
+      "BaselineMs": 977,
+      "CandidateMs": 1502,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "share/Value",
+      "BaselineMs": 1023,
+      "CandidateMs": 1559,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "ef/Units",
+      "BaselineMs": 820,
+      "CandidateMs": 1515,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "ef/Value",
+      "BaselineMs": 862,
+      "CandidateMs": 1580,
+      "ResultSetRows": [
+        1
+      ]
+    },
+    {
+      "Query": "market-expanded/native-window",
+      "BaselineMs": 10777,
+      "CandidateMs": 26920,
+      "ResultSetRows": [
+        10,
+        1020
+      ]
+    },
+    {
+      "Query": "market-expanded/full-core",
+      "BaselineMs": 10259,
+      "CandidateMs": 26696,
+      "ResultSetRows": [
+        1560
+      ]
+    },
+    {
+      "Query": "share-expanded/native-window",
+      "BaselineMs": 13225,
+      "CandidateMs": 35669,
+      "ResultSetRows": [
+        10,
+        1020
+      ]
+    },
+    {
+      "Query": "share-expanded/full-core",
+      "BaselineMs": 14911,
+      "CandidateMs": 36033,
+      "ResultSetRows": [
+        1560
+      ]
+    }
+  ],
+  "Population": [
+    {
+      "[Facts]": 504000,
+      "[Prepared]": 504000
+    }
+  ],
+  "FrozenInputsMatch": true,
+  "CompanyPerformanceAcceptance": false,
+  "ResultsSHA256": "4b54d9f19344229bd9fef17c485bcaa20d182628720941427f30e9957b27baf9",
+  "PerformanceAccepted": false,
+  "Decision": "REJECTED_FOR_SPEED",
+  "TaskOwnedEngineClosed": true,
+  "CheckerCorrection": "Full-core EVALUATE has no ORDER BY. Rechecked identical saved results using unique full cell identities and stable sorting only; no value/colour/format/population threshold changed.",
+  "SourceHashes": {
+    "baseline.json": "3c7a9fa8772a092bca03b2eeb03adc945e3027fcd90c91fc921b23be6c66d2b1",
+    "candidate.json": "3dabbb645c121e4227fc96f282a92a75ca1b6a571a8eec925d4638258ffe979e",
+    "expected.json": "1b1324512d8be064e94f6a744d34d77b79dd4c58755ff20599d30493aa53585e",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "prepared.py": "0b1a64466d29490b1097f53b011e631acd0457cbbd373d7a8d7f48b9c420f94a",
+    "probe.py": "c547db450947b839ff063f391884654b8c6a8d6d651edc1ce8bbd2c02f8ba37d",
+    "queries.json": "ad15ebc54e2a174b36c60c5a5795da6576a1dffdf0d574c4f1146b970bd9de96",
+    "run_profile.ps1": "96fd2e5858adb71c2142960e4de80f098d41c081ecf4ce45f1062963bda679c0",
+    "vectorized.py": "3d7d943d99e2075ce9c6b3ff2bac7f3448d4fee2042ee13e23bc51d52a7fbbda"
+  },
+  "TraceEventCounts": {
+    "VertiPaqSEQueryEnd": 149961,
+    "QueryEnd": 21
+  }
+}

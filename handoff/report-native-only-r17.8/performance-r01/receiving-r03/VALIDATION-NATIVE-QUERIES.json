@@ -1,0 +1,37 @@
+{
+  "Stage": "LOCAL_EXACT_RECEIVING_AND_BOUNDARY_QUERIES_VERIFIED",
+  "Queries": 93,
+  "ExactReceivingQueries": 63,
+  "PairedComparisons": 30,
+  "NoFileBlankCases": 3,
+  "ScalarBoundaryQueries": 30,
+  "BoundaryCells": 60,
+  "Mismatches": 0,
+  "FrozenInputsMatch": true,
+  "SameParsedModelAsBenchmark": true,
+  "SourceHashes": {
+    "candidate.json": "9c60baa053ddb4300c66e2e002c41053d6d7957e700a44d3032ba0113d4a123e",
+    "edge_cases.py": "05d24ad8a23254c80bbe0679bfc9963963dd8cd07402bfef3909ea3ad0029e1f",
+    "expected.json": "0387312de9786b3a299b5e40847b98954b9a2a7cabd3297a028a388e6ccdcd84",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "qualify.py": "b711e97847ee07120b4529adf9b768c269b4ea3a14c55b4c6a2c850e336878fb",
+    "queries.json": "ac72a7b5a08f413ea5f025d8cb3074e839fe0006b8dafb935380e22f5a0abd21",
+    "run_profile.ps1": "8f9147c8b5ebac29ac7d68a9489e74c80bc548a52e4adedbdaf8472587c8e3bc"
+  },
+  "ReceivingInputHashes": {
+    "INSTALL AND PREPARE PRIVATE TEST R03.py": "6f66e53494e689f84644468ecda88d472a534ed85b8f046c23142ffa9e5e0664",
+    "native_cases.py": "90871e84922f3c659cd1a2215f6dcf9df9917bdeaf995b2ea112cae34e940696",
+    "matrix_cases.py": "566de98fb8f09c259ca2cca0e18edd2cfb940e50397aad9e7a097bd181de8e5d",
+    "large_fixture.py": "25dfa46c7fcb75dd72688c91b3de917138fc1ca220c60903143b436ee155a8c6",
+    "run_large_engine.ps1": "25b0d16a951d702d3393883b41c27e719cdc2c08d978ae74dad618d785fe4901",
+    "launch_synthetic_engine.ps1": "e45ab4cc1f80a35ff6d6f84e51df80d70fccb84b675d08297a54c02299dec68a",
+    "candidate.json": "9c60baa053ddb4300c66e2e002c41053d6d7957e700a44d3032ba0113d4a123e",
+    "queries.json": "4dd20e1a15bad2db8920d985706efaec80f19b129abe739b70dc374009e3adf2",
+    "expected.json": "afcd39413528b8e15727acab74de41f9a523a92b1918d208fd687917d319075d",
+    "HOST-METADATA-ADAPTATION.json": "773859d06f226208abb9ec77261f266d6ac21d0e23dbee0190374ec34b6f3138"
+  },
+  "ResultsSHA256": "7c97b22799d481d3691abda553a2918ca8f1e3c92b44888207aaaa218f3da57d",
+  "TaskOwnedEngineClosed": true,
+  "CompanyNumericalAcceptance": false,
+  "FabricatedOnly": true
+}

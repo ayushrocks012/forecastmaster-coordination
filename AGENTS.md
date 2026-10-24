@@ -1,5 +1,18 @@
 # ForecastMaster coordination repository
 
+Current superseding handoff, 24 October — performance R03: select
+performance-r01/receiving-r03/INSTALL AND PREPARE PRIVATE TEST R03.py directly,
+following its OPEN FIRST.txt. Do not run R02 first. R03 includes the qualified
+R02 UI/selection corrections and changes two summary-cell expressions to share
+Plan/Benchmark work. Local mixed-matrix, edge, exact receiving-query, schema,
+mock and actual Desktop/export/reopen checks are closed for the declared scope.
+Controlled isolated medians improved 41–45%; actual expanded Share Desktop DAX
+is still about 9.7s, so near-instant/company speed acceptance remains OPEN.
+One new setup cell once; private report download; no refresh or publication.
+STOPPED/unknown means return the safe output, no retry. Production R16.6 and
+the R02 released bytes remain unchanged. All task-owned Desktop/engines closed.
+Read UNDERSTANDING's current resume; the following R02 selection is historical.
+
 Current superseding handoff, 24 October: R17.8 R02 local qualification is CLOSED
 for its declared fabricated scope. The selected next receiving cell is
 ui-correction-r02/receiving-r01/INSTALL AND PREPARE PRIVATE TEST R02.py; follow its
